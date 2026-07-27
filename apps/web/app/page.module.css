@@ -127,6 +127,13 @@
   vertical-align: -0.125em;
 }
 
+.socialIconForge {
+  width: auto;
+  height: 14px;
+  flex-basis: auto;
+  filter: brightness(0);
+}
+
 .section {
   margin-top: 128px;
 }
@@ -288,6 +295,11 @@
   height: 21px;
 }
 
+.educationLogoSoochow {
+  width: auto;
+  height: 21px;
+}
+
 .educationLogoIbm {
   width: 50px;
   height: 21px;
@@ -393,28 +405,75 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 32px;
   margin-top: 128px;
   padding-bottom: 16px;
 }
 
-.footer span {
-  border: 1px solid var(--faint);
-  border-radius: 999px;
-  box-shadow:
-    0 0 0 1px rgb(0 0 0 / 3%),
-    0 1px 2px -1px rgb(0 0 0 / 4%);
-  color: var(--muted);
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 12px;
-  padding: 7px 12px;
+.footerSocials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
 }
 
-.footer strong {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 34px;
-  font-style: italic;
-  font-weight: 400;
-  transform: rotate(-10deg);
+.footerSocials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition:
+    color 160ms ease,
+    text-decoration-color 160ms ease;
+}
+
+.footerSocials a:hover {
+  color: #000;
+  text-decoration-color: currentColor;
+}
+
+.footerSocialIcon,
+.footerSocialIconCrop {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+}
+
+.footerSocialIcon {
+  object-fit: contain;
+}
+
+.footerSocialIconCrop {
+  position: relative;
+  overflow: hidden;
+}
+
+.footerSocialIconMedium {
+  position: absolute;
+  top: -3.5px;
+  left: -7px;
+  width: 28px;
+  height: 21px;
+  max-width: none;
+}
+
+.footerSignatureFrame {
+  position: relative;
+  width: 180px;
+  height: 56px;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.footerSignatureImage {
+  position: absolute;
+  top: -106px;
+  left: -20px;
+  width: 220px;
+  height: auto;
+  max-width: none;
 }
 
 @media (max-width: 680px) {
@@ -448,6 +507,25 @@
 
   .contactBar a {
     text-align: center;
+  }
+
+  .footer {
+    align-items: flex-start;
+  }
+
+  .footerSocials {
+    gap: 8px 14px;
+  }
+
+  .footerSignatureFrame {
+    width: 132px;
+    height: 48px;
+  }
+
+  .footerSignatureImage {
+    top: -83px;
+    left: -19px;
+    width: 170px;
   }
 }
 

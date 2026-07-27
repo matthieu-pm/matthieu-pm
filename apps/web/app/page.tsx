@@ -82,7 +82,7 @@ const outcomes = [
 
 const education = [
   {
-    title: "MSc Product Management & UX Design",
+    title: "2Y MSc Double diploma in Product Management & UX Design",
     detail: "SKEMA × Politecnico di Milano × POLIMI.design · 2025–2027",
     logos: [
       {
@@ -96,6 +96,25 @@ const education = [
         width: 447,
         height: 447,
         className: styles.educationLogoPolimi,
+      },
+    ],
+  },
+  {
+    title: "Exchange student in International Management and Marketing",
+    detail:
+      "SKEMA Suzhou x 苏州大学 (Soochow University) • 2026 Spring semester",
+    logos: [
+      {
+        src: "/logos/skema.png",
+        width: 447,
+        height: 447,
+        className: styles.educationLogoSkema,
+      },
+      {
+        src: "/logos/soochow.png",
+        width: 328,
+        height: 309,
+        className: styles.educationLogoSoochow,
       },
     ],
   },
@@ -147,7 +166,7 @@ export default function Page() {
 
       <section className={styles.intro} aria-label="Introduction">
         <p>
-          I&apos;m a Product Management & UX Design student at{" "}
+          I&apos;m a Product Management & UX Design MSc student at{" "}
           <a
             className={styles.socialLink}
             href="https://skema.eu/"
@@ -180,7 +199,7 @@ export default function Page() {
               aria-hidden="true"
             />
             Politecnico di Milano
-          </a>, and also the founding product engineer at{" "}
+          </a>, and the founding product engineer at{" "}
           <a
             className={styles.socialLink}
             href="https://forgeapp.sh"
@@ -188,24 +207,24 @@ export default function Page() {
             rel="noreferrer"
           >
             <Image
-              className={styles.socialIcon}
-              src="/logos/forge.png"
+              className={`${styles.socialIcon} ${styles.socialIconForge}`}
+              src="/logos/forge.svg"
               alt=""
-              width={14}
-              height={14}
+              width={864}
+              height={640}
               aria-hidden="true"
             />
             Forge
-          </a>, where we are engineering the tool that operates self-building
-          software.
+          </a>, where we&apos;re building the infrastructure that operates
+          self-building software.
         </p>
         <p>
-          I care <em>deeply</em> about craft and quality and I like to make
-          people enjoy my work, by bringing together user insights, business
-          outcomes and AI-enabled execution.
+          I care <em>deeply</em> about craft and building products people enjoy
+          using. My work connects user insight, business goals, and AI-enabled
+          execution.
         </p>
         <p>
-          Previously, I led growth and marketing work at{" "}
+          Previously, I led growth and marketing at{" "}
           <a
             className={styles.socialLink}
             href="https://www.xllence.fr/fr/"
@@ -254,8 +273,11 @@ export default function Page() {
               aria-hidden="true"
             />
             Wondertale
-          </a>. I&apos;m open for a PM/PO internship from May 2027. You can reach
-          me on{" "}
+          </a>. I&apos;m looking for an end-of-study PM internship starting May
+          2027.
+        </p>
+        <p>
+          You can reach me on{" "}
           <a
             className={styles.socialLink}
             href="https://www.linkedin.com/in/matthieu-duchatellier/"
@@ -271,7 +293,8 @@ export default function Page() {
               aria-hidden="true"
             />
             LinkedIn
-          </a>, via{" "}
+          </a>{" "}
+          or via{" "}
           <a
             className={styles.socialLink}
             href="mailto:matthieu.duchatellier@gmail.com"
@@ -285,7 +308,7 @@ export default function Page() {
               aria-hidden="true"
             />
             email
-          </a>, or see my code on{" "}
+          </a>, and explore my code on{" "}
           <a
             className={styles.socialLink}
             href="https://gitlab.com/wondertale-dev"
@@ -300,7 +323,7 @@ export default function Page() {
               height={14}
               aria-hidden="true"
             />
-            Gitlab
+            GitLab
           </a>.
         </p>
       </section>
@@ -470,8 +493,78 @@ export default function Page() {
       </section>
 
       <footer className={styles.footer}>
-        <span>Paris ↔ Milan</span>
-        <strong aria-label="Matthieu Duchatellier">M</strong>
+        <nav className={styles.footerSocials} aria-label="Social profiles">
+          <a
+            href="https://x.com/matthieu_pm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              className={styles.footerSocialIcon}
+              src="/logos/x.png"
+              alt=""
+              width={300}
+              height={300}
+              aria-hidden="true"
+            />
+            X
+          </a>
+          <a
+            href="https://www.producthunt.com/@mengde"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              className={styles.footerSocialIcon}
+              src="/logos/product-hunt.png"
+              alt=""
+              width={512}
+              height={512}
+              aria-hidden="true"
+            />
+            ProductHunt
+          </a>
+          <a
+            href="https://www.linkedin.com/in/matthieu-duchatellier/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              className={styles.footerSocialIcon}
+              src="/logos/linkedin.png"
+              alt=""
+              width={3840}
+              height={3840}
+              aria-hidden="true"
+            />
+            LinkedIn
+          </a>
+          <a
+            href="https://medium.com/@mengde-pm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className={styles.footerSocialIconCrop} aria-hidden="true">
+              <Image
+                className={styles.footerSocialIconMedium}
+                src="/logos/medium.png"
+                alt=""
+                width={866}
+                height={650}
+              />
+            </span>
+            Medium
+          </a>
+        </nav>
+        <span className={styles.footerSignatureFrame}>
+          <Image
+            className={styles.footerSignatureImage}
+            src="/images/signature-matthieu.png"
+            alt="Matthieu Duchatellier signature"
+            width={297}
+            height={287}
+          />
+        </span>
       </footer>
     </main>
   )

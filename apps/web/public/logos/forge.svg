@@ -1,0 +1,16 @@
+<svg width="864" height="640" viewBox="0 0 864 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" rx="4" transform="matrix(-1 0 0 1 128 256)" fill="white"/>
+  <rect width="128" height="128" rx="4" transform="matrix(-1 0 0 1 384 0)" fill="white"/>
+  <rect width="128" height="128" rx="4" transform="matrix(-1 0 0 1 256 128)" fill="white"/>
+  <rect width="128" height="128" rx="4" transform="matrix(-1 0 0 1 256 384)" fill="white"/>
+  <rect width="128" height="128" rx="4" transform="matrix(-1 0 0 1 384 512)" fill="white"/>
+  <rect width="112" height="112" rx="4" transform="matrix(-1 0 0 1 376 264)" fill="white"/>
+  <rect width="112" height="112" rx="4" transform="matrix(-1 0 0 1 632 8)" fill="white"/>
+  <rect width="112" height="112" rx="4" transform="matrix(-1 0 0 1 504 136)" fill="white"/>
+  <rect width="112" height="112" rx="4" transform="matrix(-1 0 0 1 504 392)" fill="white"/>
+  <rect width="112" height="112" rx="4" transform="matrix(-1 0 0 1 632 520)" fill="white"/>
+  <rect width="90" height="90" rx="4" transform="matrix(-1 0 0 1 621 275)" fill="white"/>
+  <rect width="90" height="90" rx="4" transform="matrix(-1 0 0 1 749 147)" fill="white"/>
+  <rect width="90" height="90" rx="4" transform="matrix(-1 0 0 1 749 403)" fill="white"/>
+  <rect width="64" height="64" rx="4" transform="matrix(-1 0 0 1 864 288)" fill="white"/>
+</svg>
