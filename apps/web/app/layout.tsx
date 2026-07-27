@@ -1,15 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import type { Metadata } from "next"
+import { GeistPixelSquare } from "geist/font/pixel"
+import { Inter } from "next/font/google"
 
 import "@workspace/ui/globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@workspace/ui/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-sans",
 })
+
+export const metadata: Metadata = {
+  title: "Matthieu Duchatellier — Product Manager",
+  description:
+    "Product Manager working across strategy, growth, UX, and AI-enabled product delivery.",
+}
 
 export default function RootLayout({
   children,
@@ -19,12 +23,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", geist.variable)}
+      className={`${inter.variable} ${GeistPixelSquare.variable}`}
     >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
