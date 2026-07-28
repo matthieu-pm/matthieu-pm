@@ -1,8 +1,7 @@
 import type { Metadata } from "next"
-import { GeistPixelSquare } from "geist/font/pixel"
 import { Inter } from "next/font/google"
 
-import "@workspace/ui/globals.css"
+import "./globals.css"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,10 +20,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${GeistPixelSquare.variable}`}
-    >
+    <html lang="en" className={inter.variable}>
       <body>{children}</body>
     </html>
   )

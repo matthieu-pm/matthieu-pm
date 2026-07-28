@@ -10,8 +10,8 @@ const experiences = [
     description:
       "Conversion-focused websites, product experiences, and client delivery.",
     logo: "/logos/wondertale.png",
-    logoWidth: 500,
-    logoHeight: 500,
+    logoWidth: 31,
+    logoHeight: 31,
     logoClassName: styles.experienceLogoWondertale,
   },
   {
@@ -21,8 +21,8 @@ const experiences = [
     description:
       "Growth systems, AI-enabled content workflows, and UX research.",
     logo: "/logos/xllence.png",
-    logoWidth: 176,
-    logoHeight: 88,
+    logoWidth: 43,
+    logoHeight: 22,
     logoClassName: styles.experienceLogoXllence,
   },
   {
@@ -32,8 +32,8 @@ const experiences = [
     description:
       "Data-led content, brand positioning, and digital product launches.",
     logo: "/logos/avico.png",
-    logoWidth: 1920,
-    logoHeight: 630,
+    logoWidth: 43,
+    logoHeight: 14,
     logoClassName: styles.experienceLogoAvico,
   },
 ]
@@ -87,14 +87,14 @@ const education = [
     logos: [
       {
         src: "/logos/skema.png",
-        width: 447,
-        height: 447,
+        width: 21,
+        height: 21,
         className: styles.educationLogoSkema,
       },
       {
         src: "/logos/polimi.png",
-        width: 447,
-        height: 447,
+        width: 21,
+        height: 21,
         className: styles.educationLogoPolimi,
       },
     ],
@@ -106,14 +106,14 @@ const education = [
     logos: [
       {
         src: "/logos/skema.png",
-        width: 447,
-        height: 447,
+        width: 21,
+        height: 21,
         className: styles.educationLogoSkema,
       },
       {
         src: "/logos/soochow.png",
-        width: 328,
-        height: 309,
+        width: 22,
+        height: 21,
         className: styles.educationLogoSoochow,
       },
     ],
@@ -136,8 +136,8 @@ const education = [
     logos: [
       {
         src: "/logos/iim.png",
-        width: 91,
-        height: 101,
+        width: 19,
+        height: 21,
         className: styles.educationLogoIim,
       },
     ],
@@ -153,8 +153,8 @@ export default function Page() {
             className={styles.avatarImage}
             src="/images/matthieu-picture.png"
             alt=""
-            width={300}
-            height={300}
+            width={44}
+            height={44}
             aria-hidden="true"
           />
         </div>
@@ -210,8 +210,8 @@ export default function Page() {
               className={`${styles.socialIcon} ${styles.socialIconForge}`}
               src="/logos/forge.svg"
               alt=""
-              width={864}
-              height={640}
+              width={19}
+              height={14}
               aria-hidden="true"
             />
             Forge
@@ -224,7 +224,7 @@ export default function Page() {
           execution.
         </p>
         <p>
-          Previously, I led growth and marketing at{" "}
+          Previously, I worked on growth and marketing at{" "}
           <a
             className={styles.socialLink}
             href="https://www.xllence.fr/fr/"
@@ -273,8 +273,8 @@ export default function Page() {
               aria-hidden="true"
             />
             Wondertale
-          </a>. I&apos;m looking for an end-of-study PM internship starting May
-          2027.
+          </a>. I&apos;m looking for an end-of-study PM or Design Engineer
+          internship starting May 2027.
         </p>
         <p>
           You can reach me on{" "}
@@ -329,31 +329,41 @@ export default function Page() {
       </section>
 
       <section className={styles.section} aria-labelledby="work-title">
-        <h2 id="work-title">Selected work</h2>
+        <h2 id="work-title">Projects</h2>
         <div className={styles.projectGrid}>
-          <a className={styles.projectCard} href="#wondertale">
+          <a
+            className={styles.projectCard}
+            href="https://atlasapp.fr"
+            target="_blank"
+            rel="noreferrer"
+          >
             <span className={styles.projectMark} aria-hidden="true">
-              W
+              A
             </span>
             <span>
-              <strong>Wondertale</strong>
-              <small>Conversion-led websites and product experiences.</small>
+              <strong>Atlas</strong>
+              <small>AI powered MCQs for students</small>
             </span>
           </a>
-          <a className={styles.projectCard} href="#xllence">
+          <a
+            className={styles.projectCard}
+            href="https://oklch.sh"
+            target="_blank"
+            rel="noreferrer"
+          >
             <span className={styles.projectMark} aria-hidden="true">
-              AI
+              OK
             </span>
             <span>
-              <strong>AI content workflows</strong>
-              <small>Agentic planning and generation, saving 6h/week.</small>
+              <strong>oklch.sh</strong>
+              <small>A guide to OKLCH colors.</small>
             </span>
           </a>
         </div>
       </section>
 
       <section
-        className={`${styles.section} ${styles.standardGap}`}
+        className={styles.section}
         aria-labelledby="experience-title"
         id="experience"
       >
@@ -388,7 +398,7 @@ export default function Page() {
       </section>
 
       <section
-        className={`${styles.section} ${styles.standardGap}`}
+        className={styles.section}
         aria-labelledby="capabilities-title"
       >
         <h2 id="capabilities-title">Capabilities</h2>
@@ -408,7 +418,7 @@ export default function Page() {
       </section>
 
       <section
-        className={`${styles.section} ${styles.standardGap}`}
+        className={styles.section}
         aria-labelledby="impact-title"
       >
         <h2 id="impact-title">Selected impact</h2>
@@ -428,7 +438,7 @@ export default function Page() {
       </section>
 
       <section
-        className={`${styles.section} ${styles.standardGap}`}
+        className={styles.section}
         aria-labelledby="education-title"
       >
         <h2 id="education-title">Education</h2>
@@ -503,8 +513,8 @@ export default function Page() {
               className={styles.footerSocialIcon}
               src="/logos/x.png"
               alt=""
-              width={300}
-              height={300}
+              width={14}
+              height={14}
               aria-hidden="true"
             />
             X
@@ -518,8 +528,8 @@ export default function Page() {
               className={styles.footerSocialIcon}
               src="/logos/product-hunt.png"
               alt=""
-              width={512}
-              height={512}
+              width={14}
+              height={14}
               aria-hidden="true"
             />
             ProductHunt
@@ -533,8 +543,8 @@ export default function Page() {
               className={styles.footerSocialIcon}
               src="/logos/linkedin.png"
               alt=""
-              width={3840}
-              height={3840}
+              width={14}
+              height={14}
               aria-hidden="true"
             />
             LinkedIn
@@ -549,8 +559,8 @@ export default function Page() {
                 className={styles.footerSocialIconMedium}
                 src="/logos/medium.png"
                 alt=""
-                width={866}
-                height={650}
+                width={28}
+                height={21}
               />
             </span>
             Medium
@@ -561,8 +571,8 @@ export default function Page() {
             className={styles.footerSignatureImage}
             src="/images/signature-matthieu.png"
             alt="Matthieu Duchatellier signature"
-            width={297}
-            height={287}
+            width={220}
+            height={213}
           />
         </span>
       </footer>
