@@ -177,9 +177,9 @@
 .projectCard::before {
   position: absolute;
   z-index: -1;
-  inset: 5px;
+  inset: 4px;
   border: 1px solid #dfdfdc;
-  border-radius: 12px;
+  border-radius: 14px;
   background: #fff;
   box-shadow: 0 1px 1px rgb(0 0 0 / 2%);
   content: "";
@@ -285,9 +285,9 @@
 .rowIndex::before {
   position: absolute;
   z-index: -1;
-  inset: 3px;
+  inset: 2px;
   border: 1px solid #dfdfdc;
-  border-radius: 8px;
+  border-radius: 10px;
   background: #fff;
   box-shadow: 0 1px 1px rgb(0 0 0 / 2%);
   content: "";
