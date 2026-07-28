@@ -280,18 +280,18 @@ export default function Page() {
               aria-hidden="true"
             />
             Wondertale
-          </a>. I&apos;m looking for an end-of-study PM or Design Engineer
-          internship starting May 2027.
+          </a>.
         </p>
         <p>
-          You can reach me at{" "}
+          I&apos;m looking for an end-of-study PM or Design Engineer internship
+          starting May 2027. You can reach me at{" "}
           <a
             className={styles.socialLink}
             href="https://x.com/matthieu_pm"
             target="_blank"
             rel="noreferrer"
           >
-            @matthieu-pm
+            @matthieu_pm
           </a>{" "}
           or via{" "}
           <a
