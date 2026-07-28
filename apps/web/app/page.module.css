@@ -218,7 +218,7 @@
   letter-spacing: -0.06em;
 }
 
-.atlasProjectMark {
+.projectVisualMark {
   width: 100%;
   flex: 1;
 }
@@ -227,6 +227,11 @@
   display: block;
   width: 80px;
   height: 80px;
+}
+
+.oklchProjectMarkImage {
+  width: 96px;
+  height: 96px;
 }
 
 .projectCard strong,
@@ -438,6 +443,35 @@
   width: 16px;
   height: 16px;
   flex: 0 0 16px;
+}
+
+.contactButtonLabel {
+  display: inline-flex;
+  height: 22px;
+  overflow: hidden;
+}
+
+.contactButtonLetter {
+  position: relative;
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  transform: translateY(0);
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--letter-delay-out);
+  will-change: transform;
+}
+
+.contactButtonLetter::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: attr(data-letter);
+}
+
+.contactBar a:hover .contactButtonLetter {
+  transform: translateY(-100%);
+  transition-delay: var(--letter-delay-in);
 }
 
 .contactBar a:hover {

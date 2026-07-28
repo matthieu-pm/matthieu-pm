@@ -1,6 +1,10 @@
 import Image from "next/image"
+import type { CSSProperties } from "react"
 
 import styles from "./page.module.css"
+
+const contactButtonLabel = "Get in touch"
+const contactButtonStaggerMs = 28
 
 const experiences = [
   {
@@ -338,7 +342,7 @@ export default function Page() {
             rel="noreferrer"
           >
             <span
-              className={`${styles.projectMark} ${styles.atlasProjectMark}`}
+              className={`${styles.projectMark} ${styles.projectVisualMark}`}
               aria-hidden="true"
             >
               <Image
@@ -360,8 +364,17 @@ export default function Page() {
             target="_blank"
             rel="noreferrer"
           >
-            <span className={styles.projectMark} aria-hidden="true">
-              OK
+            <span
+              className={`${styles.projectMark} ${styles.projectVisualMark}`}
+              aria-hidden="true"
+            >
+              <Image
+                className={`${styles.projectMarkImage} ${styles.oklchProjectMarkImage}`}
+                src="/logos/oklch-icon.webp"
+                alt=""
+                width={96}
+                height={96}
+              />
             </span>
             <span>
               <strong>oklch.sh</strong>
@@ -496,7 +509,10 @@ export default function Page() {
             />
             <span>matthieu.duchatellier@gmail.com</span>
           </span>
-          <a href="mailto:matthieu.duchatellier@gmail.com">
+          <a
+            href="mailto:matthieu.duchatellier@gmail.com"
+            aria-label={contactButtonLabel}
+          >
             <Image
               className={styles.contactButtonIcon}
               src="/icons/paper-plane-fast.svg"
@@ -505,7 +521,36 @@ export default function Page() {
               height={16}
               aria-hidden="true"
             />
-            Get in touch
+            <span
+              className={styles.contactButtonLabel}
+              aria-hidden="true"
+            >
+              {Array.from(contactButtonLabel).map((character, index) => {
+                const visibleCharacter =
+                  character === " " ? "\u00A0" : character
+
+                return (
+                  <span
+                    className={styles.contactButtonLetter}
+                    data-letter={visibleCharacter}
+                    style={
+                      {
+                        "--letter-delay-in": `${
+                          index * contactButtonStaggerMs
+                        }ms`,
+                        "--letter-delay-out": `${
+                          (contactButtonLabel.length - index - 1) *
+                          contactButtonStaggerMs
+                        }ms`,
+                      } as CSSProperties
+                    }
+                    key={`${character}-${index}`}
+                  >
+                    {visibleCharacter}
+                  </span>
+                )
+              })}
+            </span>
           </a>
         </div>
         <p className={styles.contactNote}>
