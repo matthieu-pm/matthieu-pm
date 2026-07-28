@@ -102,7 +102,7 @@ const education = [
   {
     title: "Exchange student in International Management and Marketing",
     detail:
-      "SKEMA Suzhou x 苏州大学 (Soochow University) • 2026 Spring semester",
+      "SKEMA Suzhou x 苏州大学 (Soochow University) · 2026 Spring semester",
     logos: [
       {
         src: "/logos/skema.png",
