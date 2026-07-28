@@ -218,6 +218,17 @@
   letter-spacing: -0.06em;
 }
 
+.atlasProjectMark {
+  width: 100%;
+  flex: 1;
+}
+
+.projectMarkImage {
+  display: block;
+  width: 80px;
+  height: 80px;
+}
+
 .projectCard strong,
 .projectCard small {
   display: block;

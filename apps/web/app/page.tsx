@@ -337,8 +337,17 @@ export default function Page() {
             target="_blank"
             rel="noreferrer"
           >
-            <span className={styles.projectMark} aria-hidden="true">
-              A
+            <span
+              className={`${styles.projectMark} ${styles.atlasProjectMark}`}
+              aria-hidden="true"
+            >
+              <Image
+                className={styles.projectMarkImage}
+                src="/logos/atlas.svg"
+                alt=""
+                width={80}
+                height={80}
+              />
             </span>
             <span>
               <strong>Atlas</strong>
