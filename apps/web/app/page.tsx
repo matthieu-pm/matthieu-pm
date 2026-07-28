@@ -44,20 +44,16 @@ const experiences = [
 
 const capabilities = [
   {
-    path: "/product",
-    description: "Strategy, roadmaps, discovery, OKRs & prioritization",
+    path: "/skills",
+    description: "UI, accessibility, typography, layout, colors & more",
   },
   {
-    path: "/ux",
-    description: "Research, wireframes, prototyping & design thinking",
+    path: "/better-interfaces",
+    description: "UI skill for improving interfaces",
   },
   {
-    path: "/growth",
-    description: "Go-to-market, content, SEO & experimentation",
-  },
-  {
-    path: "/ai",
-    description: "Agentic workflows, LLMs, automation & APIs",
+    path: "/oklch",
+    description: "Skill for using OKLCH colors",
   },
 ]
 
@@ -148,6 +144,19 @@ const education = [
   },
 ]
 
+function PageSkeleton() {
+  return (
+    <span className={styles.skillPageSkeleton}>
+      <span className={styles.skillSkeletonTitle} />
+      <span className={styles.skillSkeletonHero} />
+      <span className={styles.skillSkeletonLine} />
+      <span
+        className={`${styles.skillSkeletonLine} ${styles.skillSkeletonLineShort}`}
+      />
+    </span>
+  )
+}
+
 export default function Page() {
   return (
     <main className={styles.page}>
@@ -164,7 +173,7 @@ export default function Page() {
         </div>
         <div>
           <h1>Matthieu Duchatellier</h1>
-          <p>Product Manager · Growth & UX</p>
+          <p>Product Manager · Design Engineer</p>
         </div>
       </header>
 
@@ -224,8 +233,9 @@ export default function Page() {
         </p>
         <p>
           I care <em>deeply</em> about craft and building products people enjoy
-          using. My work connects user insight, business goals, and AI-enabled
-          execution.
+          using. I work at the intersection of product management and design
+          engineering, turning user insight into AI products, from discovery
+          and UX to shipped software.
         </p>
         <p>
           Previously, I worked on growth and marketing at{" "}
@@ -355,7 +365,7 @@ export default function Page() {
             </span>
             <span>
               <strong>Atlas</strong>
-              <small>AI powered MCQs for students</small>
+              <small>AI-powered MCQ exam practice</small>
             </span>
           </a>
           <a
@@ -381,6 +391,46 @@ export default function Page() {
               <small>A guide to OKLCH colors.</small>
             </span>
           </a>
+        </div>
+      </section>
+
+      <section
+        className={styles.section}
+        aria-labelledby="capabilities-title"
+      >
+        <h2 id="capabilities-title">Skills for agents</h2>
+        <div className={styles.rowList}>
+          {capabilities.map((capability) => (
+            <article className={styles.detailRow} key={capability.path}>
+              <span className={styles.rowIndex} aria-hidden="true">
+                <PageSkeleton />
+              </span>
+              <div>
+                <h3>{capability.path}</h3>
+                <p>{capability.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section
+        className={styles.section}
+        aria-labelledby="impact-title"
+      >
+        <h2 id="impact-title">Selected impact</h2>
+        <div className={styles.rowList}>
+          {outcomes.map((outcome) => (
+            <article className={styles.detailRow} key={outcome.title}>
+              <span className={styles.rowIndex} aria-hidden="true">
+                <PageSkeleton />
+              </span>
+              <div>
+                <h3>{outcome.title}</h3>
+                <p>{outcome.detail}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -413,46 +463,6 @@ export default function Page() {
                 <p className={styles.rowDescription}>
                   {experience.description}
                 </p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section
-        className={styles.section}
-        aria-labelledby="capabilities-title"
-      >
-        <h2 id="capabilities-title">Capabilities</h2>
-        <div className={styles.rowList}>
-          {capabilities.map((capability, index) => (
-            <article className={styles.detailRow} key={capability.path}>
-              <span className={styles.rowIndex} aria-hidden="true">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <h3>{capability.path}</h3>
-                <p>{capability.description}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section
-        className={styles.section}
-        aria-labelledby="impact-title"
-      >
-        <h2 id="impact-title">Selected impact</h2>
-        <div className={styles.rowList}>
-          {outcomes.map((outcome, index) => (
-            <article className={styles.detailRow} key={outcome.title}>
-              <span className={styles.rowIndex} aria-hidden="true">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <h3>{outcome.title}</h3>
-                <p>{outcome.detail}</p>
               </div>
             </article>
           ))}

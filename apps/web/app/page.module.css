@@ -294,6 +294,41 @@
   pointer-events: none;
 }
 
+.skillPageSkeleton {
+  display: grid;
+  width: 28px;
+  gap: 3px;
+}
+
+.skillPageSkeleton > span {
+  display: block;
+  background: #d9d9d6;
+}
+
+.skillSkeletonTitle {
+  width: 12px;
+  height: 3px;
+  border-radius: 999px;
+}
+
+.skillPageSkeleton > .skillSkeletonHero {
+  width: 28px;
+  height: 10px;
+  border: 1px solid #e1e1de;
+  border-radius: 3px;
+  background: #eeeeec;
+}
+
+.skillSkeletonLine {
+  width: 24px;
+  height: 3px;
+  border-radius: 999px;
+}
+
+.skillPageSkeleton > .skillSkeletonLineShort {
+  width: 17px;
+}
+
 .experienceLogo {
   display: grid;
   width: 50px;
