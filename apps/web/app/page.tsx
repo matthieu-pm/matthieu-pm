@@ -496,7 +496,17 @@ export default function Page() {
             />
             <span>matthieu.duchatellier@gmail.com</span>
           </span>
-          <a href="mailto:matthieu.duchatellier@gmail.com">Get in touch</a>
+          <a href="mailto:matthieu.duchatellier@gmail.com">
+            <Image
+              className={styles.contactButtonIcon}
+              src="/icons/paper-plane-fast.svg"
+              alt=""
+              width={16}
+              height={16}
+              aria-hidden="true"
+            />
+            Get in touch
+          </a>
         </div>
         <p className={styles.contactNote}>
           Or{" "}

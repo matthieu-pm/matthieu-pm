@@ -390,7 +390,8 @@
   box-shadow:
     0 1px 2px rgb(0 0 0 / 3%),
     inset 0 0 0 1px rgb(0 0 0 / 1%);
-  padding: 4px 4px 4px 18px;
+  line-height: 22px;
+  padding: 3px 3px 3px 14px;
 }
 
 .contactBar > span {
@@ -421,13 +422,22 @@
 }
 
 .contactBar a {
+  display: inline-flex;
   flex: 0 0 auto;
+  align-items: center;
+  gap: 6px;
   border-radius: 999px;
   background: #242424;
   color: #fff;
-  padding: 11px 20px;
+  padding: 4px 14px;
   text-decoration: none;
   transition: background-color 160ms ease;
+}
+
+.contactButtonIcon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
 }
 
 .contactBar a:hover {
@@ -533,7 +543,7 @@
     align-items: stretch;
     border-radius: 18px;
     flex-direction: column;
-    padding: 14px;
+    padding: 6px;
   }
 
   .contactBar > span {
