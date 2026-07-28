@@ -233,9 +233,8 @@ export default function Page() {
         </p>
         <p>
           I care <em>deeply</em> about craft and building products people enjoy
-          using. I work at the intersection of product management and design
-          engineering, turning user insight into AI products, from discovery
-          and UX to shipped software.
+          using. I like figuring out what to build, designing how it should
+          work, and bringing it to life in code.
         </p>
         <p>
           Previously, I worked on growth and marketing at{" "}
