@@ -241,23 +241,6 @@ export default function Page() {
           Previously, I worked on growth and marketing at{" "}
           <a
             className={styles.socialLink}
-            href="https://www.xllence.fr/fr/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              className={styles.socialIcon}
-              src="/logos/xllence-icon.png"
-              alt=""
-              width={14}
-              height={14}
-              aria-hidden="true"
-            />
-            Xllence
-          </a>{" "}
-          and{" "}
-          <a
-            className={styles.socialLink}
             href="https://www.avico.com/"
             target="_blank"
             rel="noreferrer"
@@ -271,7 +254,17 @@ export default function Page() {
               aria-hidden="true"
             />
             Avico
-          </a>, and co-founded{" "}
+          </a>{" "}
+          and{" "}
+          <a
+            className={styles.socialLink}
+            href="https://www.linkedin.com/in/matthieu-duchatellier/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            other
+          </a>{" "}
+          companies, and co-founded{" "}
           <a
             className={styles.socialLink}
             href="https://wondertale.xyz"
@@ -291,22 +284,14 @@ export default function Page() {
           internship starting May 2027.
         </p>
         <p>
-          You can reach me on{" "}
+          You can reach me at{" "}
           <a
             className={styles.socialLink}
-            href="https://www.linkedin.com/in/matthieu-duchatellier/"
+            href="https://x.com/matthieu_pm"
             target="_blank"
             rel="noreferrer"
           >
-            <Image
-              className={styles.socialIcon}
-              src="/logos/linkedin.png"
-              alt=""
-              width={14}
-              height={14}
-              aria-hidden="true"
-            />
-            LinkedIn
+            @matthieu-pm
           </a>{" "}
           or via{" "}
           <a
@@ -437,6 +422,7 @@ export default function Page() {
       <section
         className={styles.section}
         aria-labelledby="experience-title"
+        hidden
         id="experience"
       >
         <h2 id="experience-title">Experience</h2>
@@ -474,6 +460,7 @@ export default function Page() {
       <section
         className={styles.section}
         aria-labelledby="education-title"
+        hidden
       >
         <h2 id="education-title">Education</h2>
         <div className={styles.rowList}>
