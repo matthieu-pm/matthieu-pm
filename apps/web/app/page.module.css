@@ -413,6 +413,23 @@
   margin-top: 5px;
 }
 
+.experienceHeader {
+  display: flex;
+  min-width: 0;
+  align-items: baseline;
+  gap: 8px 14px;
+}
+
+.experienceHeader > p:first-of-type {
+  min-width: 0;
+}
+
+.experienceHeader .rowMeta {
+  flex: 0 0 auto;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
 .contactSection > p {
   margin: 0;
   color: var(--muted);
@@ -606,6 +623,15 @@
 
   .projectCard {
     min-height: 250px;
+  }
+
+  .experienceHeader {
+    flex-wrap: wrap;
+    gap: 0 10px;
+  }
+
+  .experienceHeader .rowMeta {
+    margin-left: 0;
   }
 
   .contactBar {

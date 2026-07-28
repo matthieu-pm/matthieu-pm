@@ -457,9 +457,11 @@ export default function Page() {
                 />
               </span>
               <div>
-                <h3>{experience.company}</h3>
-                <p>{experience.role}</p>
-                <p className={styles.rowMeta}>{experience.period}</p>
+                <div className={styles.experienceHeader}>
+                  <h3>{experience.company}</h3>
+                  <p>{experience.role}</p>
+                  <p className={styles.rowMeta}>{experience.period}</p>
+                </div>
                 <p className={styles.rowDescription}>
                   {experience.description}
                 </p>
