@@ -154,6 +154,9 @@
 }
 
 .projectCard {
+  --card-radius: 18px;
+  --card-shell-offset: 4px;
+
   position: relative;
   isolation: isolate;
   display: flex;
@@ -161,7 +164,7 @@
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid #e5e5e2;
-  border-radius: 18px;
+  border-radius: var(--card-radius);
   background: #f6f6f4;
   box-shadow:
     0 1px 2px rgb(0 0 0 / 4%),
@@ -177,9 +180,9 @@
 .projectCard::before {
   position: absolute;
   z-index: -1;
-  inset: 4px;
+  inset: var(--card-shell-offset);
   border: 1px solid #dfdfdc;
-  border-radius: 14px;
+  border-radius: calc(var(--card-radius) - var(--card-shell-offset));
   background: #fff;
   box-shadow: 0 1px 1px rgb(0 0 0 / 2%);
   content: "";
@@ -265,6 +268,9 @@
 }
 
 .rowIndex {
+  --card-radius: 12px;
+  --card-shell-offset: 2px;
+
   position: relative;
   isolation: isolate;
   display: grid;
@@ -272,7 +278,7 @@
   height: 58px;
   place-items: center;
   border: 1px solid #e5e5e2;
-  border-radius: 12px;
+  border-radius: var(--card-radius);
   background: #f6f6f4;
   box-shadow:
     0 1px 2px rgb(0 0 0 / 4%),
@@ -285,9 +291,9 @@
 .rowIndex::before {
   position: absolute;
   z-index: -1;
-  inset: 2px;
+  inset: var(--card-shell-offset);
   border: 1px solid #dfdfdc;
-  border-radius: 10px;
+  border-radius: calc(var(--card-radius) - var(--card-shell-offset));
   background: #fff;
   box-shadow: 0 1px 1px rgb(0 0 0 / 2%);
   content: "";
