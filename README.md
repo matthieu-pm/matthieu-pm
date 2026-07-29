@@ -3,6 +3,8 @@
 This is the source code for the matthieu.pm website, built as a Next.js
 monorepo with shadcn/ui.
 
+![Site quality scores: 100 for performance, accessibility, best practices, and SEO, plus 2/2 for agentic browsing](docs/site-quality-scores.png)
+
 ## Use it as a template
 
 This website is free to access, copy, modify, and use as a template for your
