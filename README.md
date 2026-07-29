@@ -1,6 +1,12 @@
-# shadcn/ui monorepo template
+# matthieu.pm
 
-This is a Next.js monorepo template with shadcn/ui.
+This is the source code for the matthieu.pm website, built as a Next.js
+monorepo with shadcn/ui.
+
+## Use it as a template
+
+This website is free to access, copy, modify, and use as a template for your
+own website. See the [MIT License](LICENSE) for the full license terms.
 
 ## Package manager
 
