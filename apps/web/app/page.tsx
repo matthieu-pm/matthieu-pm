@@ -6,42 +6,6 @@ import styles from "./page.module.css"
 const contactButtonLabel = "Get in touch"
 const contactButtonStaggerMs = 28
 
-const experiences = [
-  {
-    company: "Wondertale",
-    role: "Co-founder · Growth Designer",
-    period: "Oct 2024 — Present",
-    description:
-      "Conversion-focused websites, product experiences, and client delivery.",
-    logo: "/logos/wondertale.png",
-    logoWidth: 31,
-    logoHeight: 31,
-    logoClassName: styles.experienceLogoWondertale,
-  },
-  {
-    company: "Xllence",
-    role: "Marketing Manager",
-    period: "Sep 2024 — Aug 2025",
-    description:
-      "Growth systems, AI-enabled content workflows, and UX research.",
-    logo: "/logos/xllence.png",
-    logoWidth: 43,
-    logoHeight: 22,
-    logoClassName: styles.experienceLogoXllence,
-  },
-  {
-    company: "Avico",
-    role: "Marketing Manager",
-    period: "May 2023 — Sep 2024",
-    description:
-      "Data-led content, brand positioning, and digital product launches.",
-    logo: "/logos/avico.png",
-    logoWidth: 43,
-    logoHeight: 14,
-    logoClassName: styles.experienceLogoAvico,
-  },
-]
-
 const capabilities = [
   {
     path: "/skills",
@@ -80,70 +44,6 @@ const outcomes = [
   },
 ]
 
-const education = [
-  {
-    title: "2Y MSc Double diploma in Product Management & UX Design",
-    detail: "SKEMA × Politecnico di Milano × POLIMI.design · 2025–2027",
-    logos: [
-      {
-        src: "/logos/skema.png",
-        width: 21,
-        height: 21,
-        className: styles.educationLogoSkema,
-      },
-      {
-        src: "/logos/polimi.png",
-        width: 21,
-        height: 21,
-        className: styles.educationLogoPolimi,
-      },
-    ],
-  },
-  {
-    title: "Exchange student in International Management and Marketing",
-    detail:
-      "SKEMA Suzhou x 苏州大学 (Soochow University) · 2026 Spring semester",
-    logos: [
-      {
-        src: "/logos/skema.png",
-        width: 21,
-        height: 21,
-        className: styles.educationLogoSkema,
-      },
-      {
-        src: "/logos/soochow.png",
-        width: 22,
-        height: 21,
-        className: styles.educationLogoSoochow,
-      },
-    ],
-  },
-  {
-    title: "AI Product Manager Professional Certificate",
-    detail: "IBM · 2025",
-    logos: [
-      {
-        src: "/logos/ibm.svg",
-        width: 50,
-        height: 21,
-        className: styles.educationLogoIbm,
-      },
-    ],
-  },
-  {
-    title: "Bachelor, Digital Project Management",
-    detail: "IIM Digital School · 2021–2024",
-    logos: [
-      {
-        src: "/logos/iim.png",
-        width: 19,
-        height: 21,
-        className: styles.educationLogoIim,
-      },
-    ],
-  },
-]
-
 function PageSkeleton() {
   return (
     <span className={styles.skillPageSkeleton}>
@@ -164,7 +64,7 @@ export default function Page() {
         <div className={styles.avatar}>
           <Image
             className={styles.avatarImage}
-            src="/images/matthieu-picture.png"
+            src="/images/matthieu-picture.webp"
             alt=""
             width={44}
             height={44}
@@ -188,7 +88,7 @@ export default function Page() {
           >
             <Image
               className={styles.socialIcon}
-              src="/logos/skema.png"
+              src="/logos/skema.webp"
               alt=""
               width={14}
               height={14}
@@ -205,7 +105,7 @@ export default function Page() {
           >
             <Image
               className={styles.socialIcon}
-              src="/logos/polimi.png"
+              src="/logos/polimi.webp"
               alt=""
               width={14}
               height={14}
@@ -246,7 +146,7 @@ export default function Page() {
           >
             <Image
               className={styles.socialIcon}
-              src="/logos/avico-icon.png"
+              src="/logos/avico-icon.webp"
               alt=""
               width={14}
               height={14}
@@ -272,7 +172,7 @@ export default function Page() {
           >
             <Image
               className={styles.socialIcon}
-              src="/logos/wondertale.png"
+              src="/logos/wondertale.webp"
               alt=""
               width={14}
               height={14}
@@ -299,7 +199,7 @@ export default function Page() {
           >
             <Image
               className={styles.socialIcon}
-              src="/logos/gmail.png"
+              src="/logos/gmail.webp"
               alt=""
               width={14}
               height={14}
@@ -419,74 +319,6 @@ export default function Page() {
       </section>
 
       <section
-        className={styles.section}
-        aria-labelledby="experience-title"
-        hidden
-        id="experience"
-      >
-        <h2 id="experience-title">Experience</h2>
-        <div className={styles.rowList}>
-          {experiences.map((experience) => (
-            <article
-              className={styles.detailRow}
-              id={experience.company.toLowerCase()}
-              key={experience.company}
-            >
-              <span className={styles.experienceLogo} aria-hidden="true">
-                <Image
-                  className={`${styles.experienceLogoImage} ${experience.logoClassName}`}
-                  src={experience.logo}
-                  alt=""
-                  width={experience.logoWidth}
-                  height={experience.logoHeight}
-                />
-              </span>
-              <div>
-                <div className={styles.experienceHeader}>
-                  <h3>{experience.company}</h3>
-                  <p>{experience.role}</p>
-                  <p className={styles.rowMeta}>{experience.period}</p>
-                </div>
-                <p className={styles.rowDescription}>
-                  {experience.description}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section
-        className={styles.section}
-        aria-labelledby="education-title"
-        hidden
-      >
-        <h2 id="education-title">Education</h2>
-        <div className={styles.rowList}>
-          {education.map((item) => (
-            <article className={styles.detailRow} key={item.title}>
-              <span className={styles.educationLogos} aria-hidden="true">
-                {item.logos.map((logo) => (
-                  <Image
-                    className={`${styles.experienceLogoImage} ${logo.className}`}
-                    src={logo.src}
-                    alt=""
-                    width={logo.width}
-                    height={logo.height}
-                    key={logo.src}
-                  />
-                ))}
-              </span>
-              <div>
-                <h3>{item.title}</h3>
-                <p>{item.detail}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section
         className={`${styles.section} ${styles.contactSection}`}
         aria-labelledby="contact-title"
       >
@@ -499,7 +331,7 @@ export default function Page() {
           <span className={styles.emailIdentity}>
             <Image
               className={styles.contactIcon}
-              src="/logos/gmail.png"
+              src="/logos/gmail.webp"
               alt=""
               width={16}
               height={16}
@@ -573,7 +405,7 @@ export default function Page() {
           >
             <Image
               className={styles.footerSocialIcon}
-              src="/logos/x.png"
+              src="/logos/x.webp"
               alt=""
               width={14}
               height={14}
@@ -588,7 +420,7 @@ export default function Page() {
           >
             <Image
               className={styles.footerSocialIcon}
-              src="/logos/product-hunt.png"
+              src="/logos/product-hunt.webp"
               alt=""
               width={14}
               height={14}
@@ -603,7 +435,7 @@ export default function Page() {
           >
             <Image
               className={styles.footerSocialIcon}
-              src="/logos/linkedin.png"
+              src="/logos/linkedin.webp"
               alt=""
               width={14}
               height={14}
@@ -619,7 +451,7 @@ export default function Page() {
             <span className={styles.footerSocialIconCrop} aria-hidden="true">
               <Image
                 className={styles.footerSocialIconMedium}
-                src="/logos/medium.png"
+                src="/logos/medium.webp"
                 alt=""
                 width={28}
                 height={21}
@@ -631,7 +463,7 @@ export default function Page() {
         <span className={styles.footerSignatureFrame}>
           <Image
             className={styles.footerSignatureImage}
-            src="/images/signature-matthieu.png"
+            src="/images/signature-matthieu.webp"
             alt="Matthieu Duchatellier signature"
             width={220}
             height={213}

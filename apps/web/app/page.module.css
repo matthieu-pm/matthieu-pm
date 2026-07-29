@@ -335,69 +335,6 @@
   width: 17px;
 }
 
-.experienceLogo {
-  display: grid;
-  width: 50px;
-  height: 24px;
-  place-items: center;
-}
-
-.experienceLogoImage {
-  display: block;
-  object-fit: contain;
-}
-
-.educationLogos {
-  display: flex;
-  width: 50px;
-  height: 21px;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  overflow: visible;
-}
-
-.experienceLogoWondertale {
-  width: 31px;
-  height: 31px;
-  transform: translateY(-4px);
-}
-
-.experienceLogoXllence {
-  width: 43px;
-  height: auto;
-}
-
-.experienceLogoAvico {
-  width: 43px;
-  height: auto;
-}
-
-.educationLogoSkema {
-  width: 21px;
-  height: 21px;
-}
-
-.educationLogoPolimi {
-  width: 21px;
-  height: 21px;
-}
-
-.educationLogoSoochow {
-  width: auto;
-  height: 21px;
-}
-
-.educationLogoIbm {
-  width: 50px;
-  height: 21px;
-}
-
-.educationLogoIim {
-  width: auto;
-  height: 21px;
-}
-
 .detailRow h3 {
   font-size: 16px;
   font-weight: 500;
@@ -407,33 +344,6 @@
 .detailRow p {
   color: var(--muted);
   line-height: 24px;
-}
-
-.detailRow .rowMeta {
-  color: #949494;
-  font-size: 14px;
-  line-height: 21px;
-}
-
-.detailRow .rowDescription {
-  margin-top: 5px;
-}
-
-.experienceHeader {
-  display: flex;
-  min-width: 0;
-  align-items: baseline;
-  gap: 8px 14px;
-}
-
-.experienceHeader > p:first-of-type {
-  min-width: 0;
-}
-
-.experienceHeader .rowMeta {
-  flex: 0 0 auto;
-  margin-left: auto;
-  white-space: nowrap;
 }
 
 .contactSection > p {
@@ -629,15 +539,6 @@
 
   .projectCard {
     min-height: 250px;
-  }
-
-  .experienceHeader {
-    flex-wrap: wrap;
-    gap: 0 10px;
-  }
-
-  .experienceHeader .rowMeta {
-    margin-left: 0;
   }
 
   .contactBar {
