@@ -11,7 +11,7 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: "Matthieu Duchatellier — Product Manager",
+  title: "Matthieu Duchatellier",
   description:
     "Product Manager working across strategy, growth, UX, and AI-enabled product delivery.",
 }
