@@ -128,8 +128,8 @@ export default function Page() {
               aria-hidden="true"
             />
             Forge
-          </a>, where we&apos;re building the infrastructure that operates
-          self-building software.
+          </a>, where we&apos;re building the workspace for self-building
+          software.
         </p>
         <p>
           I care <em>deeply</em> about craft and building products people enjoy
