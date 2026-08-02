@@ -107,6 +107,12 @@
   font-weight: 500;
 }
 
+.intro a {
+  text-decoration-color: #c2c2c2;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
+
 .intro a:hover,
 .contactNote a:hover {
   color: #000;
