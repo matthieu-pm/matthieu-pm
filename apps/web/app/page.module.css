@@ -109,8 +109,8 @@
 
 .intro a {
   text-decoration-color: #c2c2c2;
-  text-decoration-thickness: 4px;
-  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 .intro a:hover,
