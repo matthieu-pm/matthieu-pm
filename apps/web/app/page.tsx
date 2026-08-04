@@ -82,7 +82,7 @@ export default function Page() {
           I&apos;m a Product Management & UX Design MSc student at{" "}
           <a
             className={styles.socialLink}
-            href="https://skema.eu/"
+            href="https://www.skema.edu/en/programmes/msc-product-management-ux-design"
             target="_blank"
             rel="noreferrer"
           >
