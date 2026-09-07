@@ -559,6 +559,8 @@
   }
 
   .contactBar a {
+    min-height: 44px;
+    justify-content: center;
     text-align: center;
   }
 
