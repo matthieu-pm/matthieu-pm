@@ -384,15 +384,15 @@ export default function Page() {
           </a>
         </div>
         <p className={styles.contactNote}>
-          Or{" "}
+          Or download my résumé. (
           <a
             href="/matthieu-duchatellier-resume.pdf"
             target="_blank"
             rel="noreferrer"
           >
-            download my résumé
+            french version
           </a>
-          .
+          {" / english version)"}
         </p>
       </section>
 
