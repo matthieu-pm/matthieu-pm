@@ -128,7 +128,7 @@ export default function Page() {
               aria-hidden="true"
             />
             Forge
-          </a>, where we&apos;re building the workspace for self-building
+          </a>, where we&apos;re creating the workspace for self-building
           software.
         </p>
         <p>
