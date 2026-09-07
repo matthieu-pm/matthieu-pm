@@ -392,7 +392,15 @@ export default function Page() {
           >
             french version
           </a>
-          {" / english version)"}
+          {" / "}
+          <a
+            href="/english-resume-matthieu-duchatellier.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            english version
+          </a>
+          )
         </p>
       </section>
 
