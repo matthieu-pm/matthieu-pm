@@ -132,6 +132,12 @@ export function InstallCommand() {
               strokeWidth={1.7}
               aria-hidden="true"
             />
+            <span
+              className={`${styles.headerTooltip} ${styles.copyTooltip}`}
+              aria-hidden="true"
+            >
+              {status === "copied" ? "Command copied" : "Copy install command"}
+            </span>
           </button>
         </div>
         <nav className={styles.installLinks} aria-label="Install resources">

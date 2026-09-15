@@ -97,9 +97,22 @@
   right: 15px;
 }
 .headerButton:focus-visible .headerTooltip,
-.headerButton:hover .headerTooltip {
+.headerButton:hover .headerTooltip,
+.install button:focus-visible .headerTooltip,
+.install button:hover .headerTooltip {
   opacity: 1;
   transform: translateY(0);
+}
+.copyTooltip {
+  top: auto;
+  right: -4px;
+  bottom: calc(100% + 8px);
+  transform: translateY(2px);
+}
+.copyTooltip::before {
+  top: auto;
+  right: 16px;
+  bottom: -3px;
 }
 .headerStatus {
   position: absolute;
@@ -162,6 +175,7 @@
   color: #8051af;
 }
 .install button {
+  position: relative;
   display: grid;
   place-items: center;
   flex-shrink: 0;
