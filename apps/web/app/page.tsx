@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import type { CSSProperties } from "react"
 
+import { EmailCopy } from "./email-copy"
 import styles from "./page.module.css"
 
 const contactButtonLabel = "Get in touch"
@@ -192,20 +193,7 @@ export default function Page() {
             @matthieu_pm
           </a>{" "}
           or via{" "}
-          <a
-            className={styles.socialLink}
-            href="mailto:matthieu.duchatellier@gmail.com"
-          >
-            <Image
-              className={styles.socialIcon}
-              src="/logos/gmail.webp"
-              alt=""
-              width={14}
-              height={14}
-              aria-hidden="true"
-            />
-            email
-          </a>, and explore my code on{" "}
+          <EmailCopy />, and explore my code on{" "}
           <a
             className={styles.socialLink}
             href="https://gitlab.com/wondertale-dev"

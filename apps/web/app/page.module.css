@@ -78,7 +78,8 @@
 }
 
 .intro em,
-.intro a {
+.intro a,
+.emailButton {
   font-family: inherit;
   font-synthesis: none;
   font-weight: 500;
@@ -91,6 +92,7 @@
 }
 
 .intro a,
+.emailButton,
 .contactNote a {
   color: var(--ink);
   text-decoration-line: underline;
@@ -113,7 +115,66 @@
   text-underline-offset: 3px;
 }
 
+.emailTooltipRoot {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.emailButton {
+  display: inline;
+  margin: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0;
+  text-decoration-color: #c2c2c2;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+
+.emailTooltip {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 8px);
+  left: 50%;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: #242424;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 450;
+  line-height: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -3px);
+  transition:
+    opacity 120ms cubic-bezier(0.2, 0, 0, 1),
+    transform 120ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.emailTooltip::after {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: #242424;
+  content: "";
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.emailTooltipRoot:hover .emailTooltip,
+.emailTooltipRoot:focus-within .emailTooltip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
 .intro a:hover,
+.emailButton:hover,
 .contactNote a:hover {
   color: #000;
   text-decoration-color: #1f1f1f;
@@ -188,6 +249,7 @@
 .projectCard:focus-visible,
 .contactBar a:focus-visible,
 .intro a:focus-visible,
+.emailButton:focus-visible,
 .contactNote a:focus-visible {
   outline: 2px solid #222;
   outline-offset: 4px;
