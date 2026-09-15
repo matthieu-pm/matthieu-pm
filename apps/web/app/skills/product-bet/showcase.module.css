@@ -32,26 +32,86 @@
   outline: 2px solid #222;
   outline-offset: 4px;
 }
-.back {
-  color: #6b6b6b !important;
-  font-size: 14px;
+.headerControls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.headerButton {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #f0f0ee;
+  color: #737373 !important;
   text-decoration: none;
 }
-.back:hover {
+.headerButton:hover {
+  background: #e8e8e5;
   color: #1f1f1f !important;
+}
+.headerTooltip {
+  position: absolute;
+  top: calc(100% + 10px);
+  z-index: 1;
+  width: max-content;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: #1f1f1f;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-2px);
+  transition:
+    opacity 120ms ease,
+    transform 120ms ease;
+}
+.headerTooltip::before {
+  position: absolute;
+  top: -3px;
+  width: 7px;
+  height: 7px;
+  background: #1f1f1f;
+  content: "";
+  transform: rotate(45deg);
+}
+.headerTooltipStart {
+  left: 0;
+}
+.headerTooltipStart::before {
+  left: 15px;
+}
+.headerTooltipEnd {
+  right: 0;
+}
+.headerTooltipEnd::before {
+  right: 15px;
+}
+.headerButton:focus-visible .headerTooltip,
+.headerButton:hover .headerTooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+.headerStatus {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  font-size: 12px;
+  color: #6b6b6b;
 }
 .hero {
   margin-top: 56px;
 }
-.eyebrow,
-.sectionNumber {
-  color: #737373;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.035em;
-}
 .hero h1 {
-  margin-top: 10px;
   font-size: 36px;
   line-height: 1.2;
   font-weight: 500;
@@ -73,13 +133,22 @@
   margin-top: 28px;
 }
 .install {
-  composes: card from "../../card.module.css";
-  --card-radius: 12px;
-  --card-shell-offset: 2px;
+  padding: 3px;
+  border: 1px solid #e5e5e2;
+  border-radius: 18px;
+  background: #f6f6f4;
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 4%),
+    0 5px 12px -7px rgb(0 0 0 / 16%);
+}
+.commandRow {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 6px 6px 6px 16px;
+  padding: 7px 10px 7px 16px;
+  border: 1px solid #dfdfdc;
+  border-radius: 14px;
+  background: #fff;
 }
 .install code {
   flex: 1;
@@ -87,21 +156,52 @@
   font-size: 13px;
   overflow-wrap: anywhere;
   user-select: text;
+  color: #28723b;
+}
+.install code span {
+  color: #8051af;
 }
 .install button {
+  display: grid;
+  place-items: center;
   flex-shrink: 0;
-  min-height: 44px;
-  min-width: 72px;
-  border: 1px solid #e0e0dd;
-  border-radius: 8px;
-  background: #fff;
-  font-size: 13px;
-  color: #444;
-  box-shadow: 0 1px 2px #00000008;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #737373;
 }
 .install button:hover {
-  background: #fafafa;
-  border-color: #bdbdb9;
+  background: #f3f3f1;
+  color: #222;
+}
+.installLinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  margin-top: 3px;
+}
+.installLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 7px 14px;
+  min-height: 44px;
+  border: 1px solid #dfdfdc;
+  border-radius: 14px;
+  background: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+.installLinks a:hover {
+  background: #fafaf8;
+}
+.page .install :is(a, button):focus-visible {
+  outline-offset: -2px;
 }
 .copyStatus {
   display: block;
@@ -129,24 +229,25 @@
 }
 .demoToolbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 12px;
-  padding: 10px 10px 14px;
+  padding: 16px 10px 0;
 }
 .toggle {
   display: flex;
   background: #e9e9e6;
   border: 1px solid #e2e2de;
-  border-radius: 9px;
+  border-radius: 999px;
   padding: 3px;
 }
 .toggle button {
-  min-height: 40px;
-  padding: 0 12px;
+  min-height: 30px;
+  padding: 4px 14px;
+  line-height: 22px;
   font-size: 12px;
   border: 0;
-  border-radius: 6px;
+  border-radius: 999px;
   background: transparent;
   color: #656561;
 }
@@ -204,7 +305,7 @@
 .artifactHeader {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -257,7 +358,6 @@
   margin-top: 88px;
 }
 .section h2 {
-  margin-top: 8px;
   font-size: 23px;
   font-weight: 500;
   line-height: 1.3;
@@ -304,24 +404,6 @@
 .claim p {
   font-size: 14px;
 }
-.legend {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px 24px;
-  margin-top: 20px !important;
-  font-size: 12px;
-  color: #737373;
-}
-.legend dt {
-  font-weight: 500;
-  margin-bottom: 2px;
-}
-.blueText {
-  color: #416b96;
-}
-.amberText {
-  color: #856019;
-}
 .option {
   display: flex;
   align-items: start;
@@ -355,7 +437,7 @@
 .selected .optionIndicator {
   color: #386242;
 }
-.selected p, .demoToolbar .eyebrow {
+.selected p {
   color: #6b6b6b;
 }
 .selectedLabel {
@@ -425,10 +507,12 @@
   width: 1px;
   background: #e4e4e1;
   left: 5px;
-  top: 14px;
-  bottom: 0;
+  top: 17px;
+  bottom: -6px;
 }
 .stepDot {
+  position: relative;
+  z-index: 1;
   flex: 0 0 11px;
   height: 11px;
   margin-top: 6px;
@@ -458,6 +542,7 @@
   margin-bottom: 8px;
 }
 .prompts code {
+  font-family: inherit;
   font-size: 13px;
   line-height: 1.7;
   color: #6b6b6b;
@@ -507,18 +592,6 @@
   .section h2 {
     font-size: 21px;
   }
-  .demoToolbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .toggle {
-    width: 100%;
-  }
-  .toggle button {
-    flex: 1;
-    min-height: 44px;
-  }
   .preview {
     min-height: 560px;
   }
@@ -554,10 +627,7 @@
     gap: 6px;
     padding: 16px 12px;
   }
-  .legend {
-    gap: 16px;
-  }
-  .install {
+  .commandRow {
     padding-left: 12px;
     gap: 8px;
   }
@@ -566,6 +636,9 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
+  .headerTooltip {
+    transition: none;
+  }
   .previewContent {
     animation: none;
   }

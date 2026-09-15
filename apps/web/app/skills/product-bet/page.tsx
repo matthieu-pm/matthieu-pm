@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { siteConfig } from "../../site-config"
-import { BetDemo, InstallCommand } from "./controls"
+import { BetDemo, HeaderControls, InstallCommand } from "./controls"
 import styles from "./showcase.module.css"
 
 const title = "Product Bet — Matthieu Duchatellier"
@@ -92,11 +92,8 @@ export default function ProductBetPage() {
   return (
     <main className={styles.page}>
       <div className={styles.column}>
-        <Link href="/" className={styles.back}>
-          ← Back to home
-        </Link>
+        <HeaderControls pageUrl={`${siteConfig.url}${path}`} />
         <header className={styles.hero}>
-          <span className={styles.eyebrow}>A skill for agents</span>
           <h1>/product-bet</h1>
           <p className={styles.lead}>
             Turn a promising idea into a bounded, testable investment decision.
@@ -107,9 +104,6 @@ export default function ProductBetPage() {
           </p>
           <InstallCommand />
           <nav className={styles.links} aria-label="Skill resources">
-            <a href={source} target="_blank" rel="noreferrer">
-              View on GitHub <span aria-hidden="true">↗</span>
-            </a>
             <a href="#example">
               See an example <span aria-hidden="true">↓</span>
             </a>
@@ -127,7 +121,6 @@ export default function ProductBetPage() {
                 <span className={styles.documentMark} aria-hidden="true">
                   ↳
                 </span>
-                <span className={styles.eyebrow}>The starting point</span>
                 <p>“We should add AI-generated weekly summaries.”</p>
                 <span className={styles.rawNote}>
                   Who needs this? What do we know? How much should we invest?
@@ -137,7 +130,6 @@ export default function ProductBetPage() {
             shaped={
               <div className={styles.shapedBet}>
                 <div className={styles.artifactHeader}>
-                  <span className={styles.eyebrow}>Product bet / 001</span>
                   <span className={styles.badge}>Exploratory</span>
                 </div>
                 <h2>Test useful weekly summaries</h2>
@@ -175,57 +167,37 @@ export default function ProductBetPage() {
         </section>
 
         <section className={styles.section} aria-labelledby="evidence-title">
-          <span className={styles.sectionNumber}>01 / Confidence</span>
           <h2 id="evidence-title">Know what you know.</h2>
           <p>
-            Make the reasoning inspectable. A plausible story still needs
-            evidence.
+            Before building summaries, check whether managers need them and
+            whether the available project data can make them useful.
           </p>
           <div className={styles.surface}>
             <div className={styles.claim}>
               <span className={`${styles.badge} ${styles.amber}`}>
-                Assumption
+                Needs testing
               </span>
               <p>Managers spend meaningful time assembling weekly status.</p>
             </div>
             <div className={styles.claim}>
               <span className={`${styles.badge} ${styles.amber}`}>
-                Assumption
+                Needs testing
               </span>
               <p>
                 Tasks and comments contain enough context for a useful summary.
               </p>
             </div>
             <div className={styles.claim}>
-              <span className={styles.badge}>Unknown</span>
+              <span className={styles.badge}>Not yet measured</span>
               <p>Current preparation time and the cost of missing an update.</p>
             </div>
           </div>
-          <dl className={styles.legend}>
-            <div>
-              <dt className={styles.blueText}>Evidence</dt>
-              <dd>Directly supported by a source.</dd>
-            </div>
-            <div>
-              <dt className={styles.blueText}>Inference</dt>
-              <dd>Reasoned from evidence.</dd>
-            </div>
-            <div>
-              <dt className={styles.amberText}>Assumption</dt>
-              <dd>A belief that needs testing.</dd>
-            </div>
-            <div>
-              <dt>Unknown</dt>
-              <dd>A fact we still need to establish.</dd>
-            </div>
-          </dl>
         </section>
 
         <section
           className={styles.section}
           aria-labelledby="alternatives-title"
         >
-          <span className={styles.sectionNumber}>02 / Alternatives</span>
           <h2 id="alternatives-title">Give the idea some competition.</h2>
           <p>
             Compare different ways to solve the problem, including doing
@@ -257,7 +229,6 @@ export default function ProductBetPage() {
         </section>
 
         <section className={styles.section} aria-labelledby="scope-title">
-          <span className={styles.sectionNumber}>03 / Appetite</span>
           <h2 id="scope-title">Make the investment finite.</h2>
           <p>
             Define the smallest intervention that can deliver value and test the
@@ -300,7 +271,6 @@ export default function ProductBetPage() {
         </section>
 
         <section className={styles.section} aria-labelledby="rules-title">
-          <span className={styles.sectionNumber}>04 / Decision rules</span>
           <h2 id="rules-title">Decide what each result means.</h2>
           <p>
             Agree on the next move before running the test. Establish the
@@ -320,7 +290,6 @@ export default function ProductBetPage() {
         </section>
 
         <section className={styles.section} aria-labelledby="maturity-title">
-          <span className={styles.sectionNumber}>05 / Maturity</span>
           <h2 id="maturity-title">Confidence has to be earned.</h2>
           <p>
             This bet stays Exploratory. Defining a test doesn’t validate the
@@ -373,7 +342,6 @@ export default function ProductBetPage() {
         </section>
 
         <section className={styles.section} aria-labelledby="use-title">
-          <span className={styles.sectionNumber}>Put it to work</span>
           <h2 id="use-title">Create. Critique. Revise.</h2>
           <div className={styles.prompts}>
             <div>

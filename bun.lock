@@ -20,6 +20,8 @@
       "name": "web",
       "version": "0.0.1",
       "dependencies": {
+        "@hugeicons/core-free-icons": "^4.2.3",
+        "@hugeicons/react": "^1.1.9",
         "@vercel/analytics": "^2.0.1",
         "@vercel/speed-insights": "^2.0.0",
         "@workspace/ui": "workspace:*",
