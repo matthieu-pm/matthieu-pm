@@ -73,14 +73,13 @@
   margin-top: 28px;
 }
 .install {
+  composes: card from "../../card.module.css";
+  --card-radius: 12px;
+  --card-shell-offset: 2px;
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 6px 6px 6px 16px;
-  border: 1px solid #e4e4e1;
-  border-radius: 12px;
-  background: #f6f6f4;
-  box-shadow: 0 1px 2px #00000005;
 }
 .install code {
   flex: 1;
@@ -125,13 +124,8 @@
   scroll-margin-top: 28px;
 }
 .demo {
-  border: 1px solid #e2e2df;
-  border-radius: 18px;
-  padding: 5px;
-  background: #f3f3f1;
-  box-shadow:
-    0 2px 3px #00000004,
-    0 12px 30px -24px #00000038;
+  composes: card from "../../card.module.css";
+  padding: 10px;
 }
 .demoToolbar {
   display: flex;
@@ -162,9 +156,9 @@
   box-shadow: 0 1px 3px #00000013;
 }
 .preview {
-  background: #fff;
-  border: 1px solid #dededb;
-  border-radius: 12px;
+  background: #fafaf8;
+  border: 1px solid #e9e9e6;
+  border-radius: 8px;
   min-height: 410px;
   display: grid;
 }
@@ -180,14 +174,14 @@
   padding: 36px;
 }
 .documentMark {
+  composes: card from "../../card.module.css";
+  --card-radius: 8px;
+  --card-shell-offset: 2px;
   display: grid;
   place-items: center;
   width: 40px;
   height: 46px;
-  border: 1px solid #e6e6e1;
-  border-radius: 8px;
   color: #90908a;
-  background: #fafaf8;
   font-size: 22px;
   margin-bottom: 24px;
 }
@@ -274,12 +268,9 @@
   color: #6b6b6b;
 }
 .surface {
+  composes: card from "../../card.module.css";
   margin-top: 24px !important;
-  padding: 6px;
-  border: 1px solid #e5e5e2;
-  border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 1px 2px #00000004;
+  padding: 10px;
 }
 .badge {
   display: inline-flex;
@@ -359,7 +350,7 @@
 }
 .selected {
   background: #f0f6f0;
-  border-radius: 9px;
+  border-radius: 8px;
 }
 .selected .optionIndicator {
   color: #386242;
