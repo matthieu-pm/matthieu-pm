@@ -165,6 +165,10 @@ export default function GreatUiPage() {
           </div>
         </section>
 
+        <section className={styles.section} aria-label="Install Great UI">
+          <InstallCommand />
+        </section>
+
         <footer className={styles.footer}>
           <Link href="/">Matthieu Duchatellier</Link>
           <span>Better UI × Emil Design Engineering</span>

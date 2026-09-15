@@ -335,6 +335,10 @@ export default function ProductBetPage() {
           </ol>
         </section>
 
+        <section className={styles.section} aria-label="Install Product Bet">
+          <InstallCommand />
+        </section>
+
         <footer className={styles.footer}>
           <Link href="/">Matthieu Duchatellier</Link>
           <a href={source} target="_blank" rel="noreferrer">
