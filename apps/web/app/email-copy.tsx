@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 import styles from "./page.module.css"
 
@@ -24,28 +24,42 @@ async function copyEmail() {
 
 export function EmailCopy() {
   const [copied, setCopied] = useState(false)
+  const [tooltipVisible, setTooltipVisible] = useState(false)
+  const hideTimer = useRef<number | null>(null)
 
   useEffect(() => {
-    if (!copied) return
-
-    const resetTimer = window.setTimeout(() => setCopied(false), 1800)
-
-    return () => window.clearTimeout(resetTimer)
-  }, [copied])
+    return () => {
+      if (hideTimer.current !== null) window.clearTimeout(hideTimer.current)
+    }
+  }, [])
 
   async function handleCopy() {
     await copyEmail()
+
+    if (hideTimer.current !== null) window.clearTimeout(hideTimer.current)
+
     setCopied(true)
+    setTooltipVisible(true)
+    hideTimer.current = window.setTimeout(() => {
+      setCopied(false)
+      setTooltipVisible(false)
+    }, 1800)
   }
 
   return (
-    <span className={styles.emailTooltipRoot}>
+    <span
+      className={styles.emailTooltipRoot}
+      onPointerEnter={() => setTooltipVisible(true)}
+      onPointerLeave={() => setTooltipVisible(false)}
+    >
       <button
         className={`${styles.socialLink} ${styles.emailButton}`}
         type="button"
         aria-label="Copy email address"
         aria-describedby="email-tooltip"
+        onBlur={() => setTooltipVisible(false)}
         onClick={handleCopy}
+        onFocus={() => setTooltipVisible(true)}
       >
         <Image
           className={styles.socialIcon}
@@ -58,7 +72,7 @@ export function EmailCopy() {
         email
       </button>
       <span
-        className={styles.emailTooltip}
+        className={`${styles.emailTooltip} ${tooltipVisible ? styles.emailTooltipVisible : ""}`}
         id="email-tooltip"
         role="tooltip"
         aria-live="polite"

@@ -167,8 +167,7 @@
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.emailTooltipRoot:hover .emailTooltip,
-.emailTooltipRoot:focus-within .emailTooltip {
+.emailTooltipVisible {
   opacity: 1;
   transform: translate(-50%, 0);
 }
