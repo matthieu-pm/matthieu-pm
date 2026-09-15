@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react"
 
 import styles from "./page.module.css"
 
-const emailAddress = "matthieu.duchatellier@gmail.com"
+const emailAddress = "mattduchatellier@gmail.com"
 
 async function copyEmail() {
   try {

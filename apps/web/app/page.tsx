@@ -328,10 +328,10 @@ export default function Page() {
               height={16}
               aria-hidden="true"
             />
-            <span>matthieu.duchatellier@gmail.com</span>
+            <span>mattduchatellier@gmail.com</span>
           </span>
           <a
-            href="mailto:matthieu.duchatellier@gmail.com"
+            href="mailto:mattduchatellier@gmail.com"
             aria-label={contactButtonLabel}
           >
             <Image
