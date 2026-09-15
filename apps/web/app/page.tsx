@@ -11,6 +11,12 @@ const capabilities = [
   {
     path: "/product-bet",
     description: "Shape product ideas into bounded, testable decisions.",
+    href: "/skills/product-bet",
+  },
+  {
+    path: "/great-ui",
+    description: "Build and polish interfaces where every detail compounds.",
+    href: "/skills/great-ui",
   },
 ]
 
@@ -278,7 +284,11 @@ export default function Page() {
         <h2 id="capabilities-title">Skills for agents</h2>
         <div className={styles.rowList}>
           {capabilities.map((capability) => (
-            <Link href="/skills/product-bet" className={`${styles.detailRow} ${styles.skillLink}`} key={capability.path}>
+            <Link
+              href={capability.href}
+              className={`${styles.detailRow} ${styles.skillLink}`}
+              key={capability.path}
+            >
               <span className={styles.rowIndex} aria-hidden="true">
                 <PageSkeleton />
               </span>
