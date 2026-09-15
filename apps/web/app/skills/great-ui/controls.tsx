@@ -2,11 +2,15 @@
 
 import { useEffect, useRef, useState } from "react"
 import type { CSSProperties } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { HugeiconsIcon } from "@hugeicons/react"
+import { SlotText } from "slot-text/react"
+import "slot-text/style.css"
 import {
   ArrowTurnBackwardIcon,
   Copy01Icon,
+  GithubIcon,
   Link01Icon,
   Message02Icon,
   Notification02Icon,
@@ -18,6 +22,9 @@ import {
 import styles from "./showcase.module.css"
 
 const command = "npx skills add matthieu-pm/great-ui"
+const countStart = 1201
+const countEnd = 1250
+const countStepDuration = 120
 type IconData = typeof Copy01Icon
 
 function SwapIcon({
@@ -137,10 +144,35 @@ export function InstallCommand() {
           />
         </button>
       </div>
-      <div className={styles.installCaption}>
-        <span>Faithful two-skill merge</span>
-        <span>1,721 lines of source guidance</span>
-      </div>
+      <nav className={styles.installLinks} aria-label="Install resources">
+        <a
+          href="https://skills.sh/matthieu-pm/great-ui/great-ui"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image
+            src="/logos/skills.png"
+            width={18}
+            height={18}
+            alt=""
+            aria-hidden="true"
+          />
+          Skills
+        </a>
+        <a
+          href="https://github.com/matthieu-pm/great-ui"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <HugeiconsIcon
+            icon={GithubIcon}
+            size={18}
+            strokeWidth={2}
+            aria-hidden="true"
+          />
+          GitHub
+        </a>
+      </nav>
       <span className={styles.srOnly} role="status">
         {copied ? "Install command copied" : ""}
       </span>
@@ -149,54 +181,12 @@ export function InstallCommand() {
 }
 
 export function InterfaceLab() {
-  const [polished, setPolished] = useState(false)
-  const [period, setPeriod] = useState("Day")
-  const [playing, setPlaying] = useState(false)
-  const [following, setFollowing] = useState(false)
-  const [notifications, setNotifications] = useState(false)
-  const [copied, markCopied] = useTemporaryState(1600)
-
-  const sharedProps = {
-    period,
-    setPeriod,
-    playing,
-    setPlaying,
-    following,
-    setFollowing,
-    notifications,
-    setNotifications,
-    copied,
-    copy: markCopied,
-  }
-
   return (
     <div className={styles.demo}>
-      <div className={styles.preview} aria-live="polite">
-        <div className={styles.previewStage}>
-          <DemoCanvas polished={false} hidden={polished} {...sharedProps} />
-          <DemoCanvas polished hidden={!polished} {...sharedProps} />
-        </div>
-      </div>
-      <div className={styles.demoToolbar}>
-        <div
-          className={styles.toggle}
-          role="group"
-          aria-label="Interface state"
-        >
-          <button
-            type="button"
-            aria-pressed={!polished}
-            onClick={() => setPolished(false)}
-          >
-            Before
-          </button>
-          <button
-            type="button"
-            aria-pressed={polished}
-            onClick={() => setPolished(true)}
-          >
-            After
-          </button>
+      <div className={styles.preview}>
+        <div className={styles.comparisonGrid}>
+          <DemoCanvas motion={false} />
+          <DemoCanvas motion />
         </div>
       </div>
     </div>
@@ -204,60 +194,52 @@ export function InterfaceLab() {
 }
 
 type DemoCanvasProps = {
-  polished: boolean
-  hidden: boolean
-  period: string
-  setPeriod: (value: string) => void
-  playing: boolean
-  setPlaying: (value: boolean) => void
-  following: boolean
-  setFollowing: (value: boolean) => void
-  notifications: boolean
-  setNotifications: (value: boolean) => void
-  copied: boolean
-  copy: () => void
+  motion: boolean
 }
 
-function DemoCanvas(props: DemoCanvasProps) {
-  const {
-    polished,
-    hidden,
-    period,
-    setPeriod,
-    playing,
-    setPlaying,
-    following,
-    setFollowing,
-    notifications,
-    setNotifications,
-    copied,
-    copy,
-  } = props
+function DemoCanvas({ motion }: DemoCanvasProps) {
+  const [period, setPeriod] = useState("Day")
+  const [playing, setPlaying] = useState(false)
+  const [count, setCount] = useState(countStart)
+  const [following, setFollowing] = useState(false)
+  const [notifications, setNotifications] = useState(false)
+  const [copied, markCopied] = useTemporaryState(1600)
+  const formattedCount = count.toLocaleString("en-US")
+
+  useEffect(() => {
+    if (!playing) return
+
+    const timer = window.setTimeout(() => {
+      const nextCount = Math.min(count + 1, countEnd)
+      setCount(nextCount)
+
+      if (nextCount === countEnd) setPlaying(false)
+    }, countStepDuration)
+
+    return () => window.clearTimeout(timer)
+  }, [count, playing])
+
+  function toggleCount() {
+    if (playing) {
+      setPlaying(false)
+      return
+    }
+
+    if (count === countEnd) setCount(countStart)
+    setPlaying(true)
+  }
 
   return (
     <div
-      className={`${styles.demoCanvas} ${polished ? styles.polished : styles.before} ${hidden ? "" : styles.demoCanvasActive}`}
-      aria-hidden={hidden}
+      className={`${styles.demoCanvas} ${styles.polished} ${motion ? styles.motionPanel : styles.staticPanel}`}
     >
-      <div className={styles.demoLabel}>
-        <span>{polished ? "Crafted system" : "Working interface"}</span>
-        <span>{polished ? "Details aligned" : "Details unresolved"}</span>
-      </div>
       <div className={styles.controlStack}>
         <div className={styles.profileRow}>
           <span className={styles.avatar} aria-hidden="true">
             M
           </span>
-          <button
-            type="button"
-            className={styles.messageButton}
-            tabIndex={hidden ? -1 : 0}
-          >
-            <HugeiconsIcon
-              icon={Message02Icon}
-              size={18}
-              strokeWidth={polished ? 2 : 1.3}
-            />
+          <button type="button" className={styles.messageButton}>
+            <HugeiconsIcon icon={Message02Icon} size={18} strokeWidth={2} />
             Message
           </button>
           <button
@@ -268,12 +250,11 @@ function DemoCanvas(props: DemoCanvasProps) {
             }
             aria-pressed={notifications}
             onClick={() => setNotifications(!notifications)}
-            tabIndex={hidden ? -1 : 0}
           >
             <HugeiconsIcon
               icon={Notification02Icon}
               size={18}
-              strokeWidth={polished ? 1.7 : 1.3}
+              strokeWidth={1.7}
             />
             {notifications && <span className={styles.notificationDot} />}
           </button>
@@ -282,7 +263,7 @@ function DemoCanvas(props: DemoCanvasProps) {
         <div
           className={styles.segmented}
           role="group"
-          aria-label={`${polished ? "Crafted" : "Basic"} period`}
+          aria-label={`${motion ? "Motion" : "Static"} period`}
         >
           {["Day", "Week", "Month"].map((item) => (
             <button
@@ -290,70 +271,126 @@ function DemoCanvas(props: DemoCanvasProps) {
               key={item}
               aria-pressed={period === item}
               onClick={() => setPeriod(item)}
-              tabIndex={hidden ? -1 : 0}
             >
               {item}
             </button>
           ))}
         </div>
 
-        <div className={styles.actionRow}>
-          <button
-            type="button"
-            className={styles.iconButton}
-            aria-label={playing ? "Pause count" : "Play count"}
-            aria-pressed={playing}
-            onClick={() => setPlaying(!playing)}
-            tabIndex={hidden ? -1 : 0}
-          >
-            {polished ? (
-              <SwapIcon
-                active={playing}
-                activeIcon={PauseIcon}
-                idleIcon={PlayIcon}
-              />
-            ) : (
-              <HugeiconsIcon
-                icon={playing ? PauseIcon : PlayIcon}
-                size={18}
-                strokeWidth={1.4}
-              />
-            )}
-          </button>
-          <span className={styles.metric}>{playing ? "1,251" : "1,250"}</span>
-          <button
-            type="button"
-            className={styles.iconButton}
-            onClick={copy}
-            aria-label={copied ? "Copied" : "Copy profile"}
-            tabIndex={hidden ? -1 : 0}
-          >
-            {polished ? (
-              <SwapIcon
-                active={copied}
-                activeIcon={Tick02Icon}
-                idleIcon={Copy01Icon}
-              />
-            ) : (
-              <HugeiconsIcon
-                icon={copied ? Tick02Icon : Copy01Icon}
-                size={18}
-                strokeWidth={1.4}
-              />
-            )}
-          </button>
-          <button
-            type="button"
-            className={styles.followButton}
-            aria-pressed={following}
-            onClick={() => setFollowing(!following)}
-            tabIndex={hidden ? -1 : 0}
-          >
-            {following ? "Following" : "Follow"}
-          </button>
+        <div className={styles.actionGroup}>
+          <div className={styles.actionRow}>
+            <button
+              type="button"
+              className={styles.iconButton}
+              aria-label={playing ? "Pause count" : "Play count"}
+              aria-pressed={playing}
+              onClick={toggleCount}
+            >
+              {motion ? (
+                <SwapIcon
+                  active={playing}
+                  activeIcon={PauseIcon}
+                  idleIcon={PlayIcon}
+                />
+              ) : (
+                <HugeiconsIcon
+                  icon={playing ? PauseIcon : PlayIcon}
+                  size={18}
+                  strokeWidth={1.4}
+                />
+              )}
+            </button>
+            <span className={styles.metric}>
+              {motion && (
+                <span className={styles.srOnly}>{formattedCount}</span>
+              )}
+              {motion ? (
+                <SlotText
+                  aria-hidden="true"
+                  text={formattedCount}
+                  options={{
+                    direction: "up",
+                    duration: countStepDuration,
+                    stagger: 8,
+                    exitOffset: 18,
+                    easing: "cubic-bezier(0.2, 0, 0, 1)",
+                    bounce: 0,
+                  }}
+                />
+              ) : (
+                formattedCount
+              )}
+            </span>
+          </div>
+          <div className={styles.actionRow}>
+            <button
+              type="button"
+              className={styles.iconButton}
+              onClick={markCopied}
+              aria-label={copied ? "Copied" : "Copy profile"}
+            >
+              {motion ? (
+                <SwapIcon
+                  active={copied}
+                  activeIcon={Tick02Icon}
+                  idleIcon={Copy01Icon}
+                />
+              ) : (
+                <HugeiconsIcon
+                  icon={copied ? Tick02Icon : Copy01Icon}
+                  size={18}
+                  strokeWidth={1.4}
+                />
+              )}
+            </button>
+            <button
+              type="button"
+              className={styles.followButton}
+              aria-pressed={following}
+              aria-label={following ? "Following" : "Follow"}
+              onClick={() => setFollowing(!following)}
+            >
+              {motion ? (
+                <StateText
+                  active={following}
+                  activeText="Following"
+                  idleText="Follow"
+                />
+              ) : following ? (
+                "Following"
+              ) : (
+                "Follow"
+              )}
+            </button>
+          </div>
         </div>
       </div>
     </div>
+  )
+}
+
+function StateText({
+  active,
+  activeText,
+  idleText,
+}: {
+  active: boolean
+  activeText: string
+  idleText: string
+}) {
+  return (
+    <span className={styles.stateSwap} aria-hidden="true">
+      <span
+        className={`${styles.stateText} ${active ? styles.stateTextActive : ""}`}
+      >
+        {activeText}
+      </span>
+      <span
+        className={`${styles.stateText} ${!active ? styles.stateTextActive : ""}`}
+      >
+        {idleText}
+      </span>
+    </span>
   )
 }
 

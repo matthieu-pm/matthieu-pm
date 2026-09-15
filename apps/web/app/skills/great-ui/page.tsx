@@ -74,11 +74,6 @@ export default function GreatUiPage() {
             motion, and the invisible details that make software feel right.
           </p>
           <InstallCommand />
-          <nav className={styles.links} aria-label="Page sections">
-            <a href="#example">
-              Try the playground <span aria-hidden="true">↓</span>
-            </a>
-          </nav>
         </header>
 
         <section
@@ -87,13 +82,16 @@ export default function GreatUiPage() {
           aria-labelledby="example-title"
         >
           <div className={styles.exampleIntro}>
-            <span className={styles.kicker}>Interactive example</span>
             <h2 id="example-title">
               Correct is the start. Crafted is the goal.
             </h2>
             <p>
-              Switch between states, then use the controls. The behavior stays
-              familiar while the details become more coherent.
+              Great UI combines Better UI&apos;s exact recipes with Emil
+              Kowalski&apos;s design-engineering judgment. It helps you build,
+              polish, and review surfaces, icons, interaction states, and
+              motion—choosing when an interface should animate, how it should
+              respond, and which invisible details make the whole experience
+              feel coherent.
             </p>
           </div>
           <InterfaceLab />

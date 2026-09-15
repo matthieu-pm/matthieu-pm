@@ -30,6 +30,7 @@
         "next-themes": "^0.4.6",
         "react": "19.2.4",
         "react-dom": "19.2.4",
+        "slot-text": "^0.3.4",
       },
       "devDependencies": {
         "@tailwindcss/postcss": "^4",
@@ -1646,6 +1647,8 @@
     "signal-exit": ["signal-exit@4.1.0", "", {}, "sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw=="],
 
     "sisteransi": ["sisteransi@1.0.5", "", {}, "sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg=="],
+
+    "slot-text": ["slot-text@0.3.4", "", { "peerDependencies": { "react": ">=18 <20", "solid-js": ">=1.8 <2", "svelte": ">=4 <6", "vue": ">=3.4 <4" }, "optionalPeers": ["react", "solid-js", "svelte", "vue"] }, "sha512-C3FTc0cAx/6FywK9yvE93FdEc3hQXfzeQSvJH8SioWHyHcxLfU9tgkoqnUChPR2Q4Kh9j/sHgkpcNe2m5UCpnA=="],
 
     "smol-toml": ["smol-toml@1.5.2", "", {}, "sha512-QlaZEqcAH3/RtNyet1IPIYPsEWAaYyXXv1Krsi+1L/QHppjX4Ifm8MQsBISz9vE8cHicIq3clogsheili5vhaQ=="],
 
