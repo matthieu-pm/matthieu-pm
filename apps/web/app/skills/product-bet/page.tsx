@@ -335,33 +335,6 @@ export default function ProductBetPage() {
           </ol>
         </section>
 
-        <section className={styles.section} aria-labelledby="use-title">
-          <h2 id="use-title">Create. Critique. Revise.</h2>
-          <div className={styles.prompts}>
-            <div>
-              <h3>Create</h3>
-              <code>
-                /product-bet Shape this idea into an assumption-led bet. Make
-                the unknowns explicit.
-              </code>
-            </div>
-            <div>
-              <h3>Critique</h3>
-              <code>
-                /product-bet Critique this bet without rewriting it. What blocks
-                the next decision?
-              </code>
-            </div>
-            <div>
-              <h3>Revise</h3>
-              <code>
-                /product-bet Revise this bet using the new interview notes.
-                Explain what changed.
-              </code>
-            </div>
-          </div>
-          <InstallCommand />
-        </section>
         <footer className={styles.footer}>
           <Link href="/">Matthieu Duchatellier</Link>
           <a href={source} target="_blank" rel="noreferrer">

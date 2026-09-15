@@ -11,7 +11,7 @@ import {
 import styles from "./showcase.module.css"
 
 const path = "/skills/great-ui"
-const title = "Great UI — Matthieu Duchatellier"
+const title = "Great UI"
 const description =
   "A single design-engineering skill for interfaces that feel right, merging Better UI's precision with Emil Kowalski's interaction craft."
 
@@ -69,9 +69,25 @@ export default function GreatUiPage() {
             Build interfaces where every small detail sings in tune.
           </p>
           <p>
-            A faithful merge of Jakub Krehel&apos;s interface precision and Emil
-            Kowalski&apos;s design-engineering philosophy—for surfaces, icons,
-            motion, and the invisible details that make software feel right.
+            A faithful merge of{" "}
+            <a
+              href="https://github.com/jakubkrehel/skills/tree/main/skills/better-ui"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Better UI
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://github.com/emilkowalski/skills/tree/main/skills/emil-design-eng"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Emil Design Engineering
+            </a>
+            {
+              ". It brings together surfaces, icons, and motion that feel right."
+            }
           </p>
           <InstallCommand />
         </header>
@@ -86,12 +102,9 @@ export default function GreatUiPage() {
               Correct is the start. Crafted is the goal.
             </h2>
             <p>
-              Great UI combines Better UI&apos;s exact recipes with Emil
-              Kowalski&apos;s design-engineering judgment. It helps you build,
-              polish, and review surfaces, icons, interaction states, and
-              motion—choosing when an interface should animate, how it should
-              respond, and which invisible details make the whole experience
-              feel coherent.
+              Refine the details that make an interface feel intentional.
+              Improve geometry, optical balance, and surface depth. Add
+              contextual icons, generous hit areas, and subtle motion.
             </p>
           </div>
           <InterfaceLab />
@@ -101,7 +114,7 @@ export default function GreatUiPage() {
           <h2 id="geometry-title">Make the geometry feel inevitable.</h2>
           <p>
             Nested surfaces feel related when their radii share the same center.
-            Adjust the inset to see the outer radius follow the inner one.
+            Adjust each value to see the geometry respond in real time.
           </p>
           <RadiusLab />
         </section>
@@ -126,7 +139,7 @@ export default function GreatUiPage() {
           <h2 id="sources-title">Two perspectives. One working method.</h2>
           <p>
             Better UI supplies exact recipes. Emil Design Engineering supplies
-            the judgment for when—and why—to use them.
+            the judgment for when and why to use them.
           </p>
           <div className={styles.sourceGrid}>
             <a
@@ -150,34 +163,6 @@ export default function GreatUiPage() {
               <small>Craft judgment, interaction purpose, and restraint.</small>
             </a>
           </div>
-        </section>
-
-        <section className={styles.section} aria-labelledby="use-title">
-          <h2 id="use-title">Build. Polish. Review.</h2>
-          <div className={styles.prompts}>
-            <div>
-              <h3>Build</h3>
-              <code>
-                /great-ui Build this interaction with considered defaults and
-                accessible state feedback.
-              </code>
-            </div>
-            <div>
-              <h3>Polish</h3>
-              <code>
-                /great-ui Polish this page without changing its product or
-                visual language.
-              </code>
-            </div>
-            <div>
-              <h3>Review</h3>
-              <code>
-                /great-ui Review every surface, icon, and motion state. Report
-                what still feels off.
-              </code>
-            </div>
-          </div>
-          <InstallCommand />
         </section>
 
         <footer className={styles.footer}>

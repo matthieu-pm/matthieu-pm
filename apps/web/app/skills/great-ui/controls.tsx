@@ -25,6 +25,7 @@ const command = "npx skills add matthieu-pm/great-ui"
 const countStart = 1201
 const countEnd = 1250
 const countStepDuration = 120
+const periods = ["Day", "Week", "Month"] as const
 type IconData = typeof Copy01Icon
 
 function SwapIcon({
@@ -198,7 +199,7 @@ type DemoCanvasProps = {
 }
 
 function DemoCanvas({ motion }: DemoCanvasProps) {
-  const [period, setPeriod] = useState("Day")
+  const [period, setPeriod] = useState<(typeof periods)[number]>("Day")
   const [playing, setPlaying] = useState(false)
   const [count, setCount] = useState(countStart)
   const [following, setFollowing] = useState(false)
@@ -244,19 +245,25 @@ function DemoCanvas({ motion }: DemoCanvasProps) {
           </button>
           <button
             type="button"
-            className={styles.iconButton}
+            className={motion ? styles.hitAreaButton : styles.iconButton}
             aria-label={
               notifications ? "Turn notifications off" : "Turn notifications on"
             }
             aria-pressed={notifications}
             onClick={() => setNotifications(!notifications)}
           >
-            <HugeiconsIcon
-              icon={Notification02Icon}
-              size={18}
-              strokeWidth={1.7}
-            />
-            {notifications && <span className={styles.notificationDot} />}
+            <span
+              className={
+                motion ? styles.hitAreaSurface : styles.notificationSurface
+              }
+            >
+              <HugeiconsIcon
+                icon={Notification02Icon}
+                size={18}
+                strokeWidth={1.7}
+              />
+              {notifications && <span className={styles.notificationDot} />}
+            </span>
           </button>
         </div>
 
@@ -264,8 +271,12 @@ function DemoCanvas({ motion }: DemoCanvasProps) {
           className={styles.segmented}
           role="group"
           aria-label={`${motion ? "Motion" : "Static"} period`}
+          data-selected-index={motion ? periods.indexOf(period) : undefined}
         >
-          {["Day", "Week", "Month"].map((item) => (
+          {motion && (
+            <span className={styles.segmentedIndicator} aria-hidden="true" />
+          )}
+          {periods.map((item) => (
             <button
               type="button"
               key={item}
@@ -395,51 +406,112 @@ function StateText({
 }
 
 export function RadiusLab() {
-  const [padding, setPadding] = useState(10)
-  const innerRadius = 10
+  const [innerRadius, setInnerRadius] = useState(12)
+  const [padding, setPadding] = useState(8)
   const outerRadius = innerRadius + padding
   const style = {
     "--lab-padding": `${padding}px`,
     "--inner-radius": `${innerRadius}px`,
     "--outer-radius": `${outerRadius}px`,
+    "--outer-progress": `${((outerRadius - 4) / 36) * 100}%`,
+    "--inner-progress": `${(innerRadius / 24) * 100}%`,
+    "--padding-progress": `${((padding - 4) / 12) * 100}%`,
   } as CSSProperties
+
+  function updateOuterRadius(nextOuterRadius: number) {
+    const minimumPadding = Math.max(4, nextOuterRadius - 24)
+    const maximumPadding = Math.min(16, nextOuterRadius)
+    const nextPadding = Math.min(
+      Math.max(padding, minimumPadding),
+      maximumPadding
+    )
+
+    setPadding(nextPadding)
+    setInnerRadius(nextOuterRadius - nextPadding)
+  }
 
   return (
     <div className={styles.radiusLab} style={style}>
-      <div className={styles.radiusPreview}>
-        <div>
-          <span>Inner radius</span>
-          <strong>{innerRadius}px</strong>
+      <div className={styles.radiusShell}>
+        <div className={styles.radiusCard}>
+          <div className={styles.radiusStage}>
+            <div className={styles.radiusPreview} aria-hidden="true">
+              <div />
+            </div>
+          </div>
+          <div className={styles.radiusControls}>
+            <RadiusControl
+              id="outer-radius"
+              label="Outer radius"
+              value={outerRadius}
+              min={4}
+              max={40}
+              progress="outer"
+              onChange={updateOuterRadius}
+            />
+            <RadiusControl
+              id="inner-radius"
+              label="Inner radius"
+              value={innerRadius}
+              min={0}
+              max={24}
+              progress="inner"
+              onChange={setInnerRadius}
+            />
+            <RadiusControl
+              id="surface-padding"
+              label="Padding"
+              value={padding}
+              min={4}
+              max={16}
+              progress="padding"
+              onChange={setPadding}
+            />
+          </div>
         </div>
       </div>
-      <div className={styles.radiusControls}>
-        <dl className={styles.formula}>
-          <div>
-            <dt>Inner</dt>
-            <dd>{innerRadius}px</dd>
-          </div>
-          <div>
-            <dt>Inset</dt>
-            <dd>{padding}px</dd>
-          </div>
-          <div>
-            <dt>Outer</dt>
-            <dd>{outerRadius}px</dd>
-          </div>
-        </dl>
-        <label htmlFor="surface-inset">
-          Surface inset
-          <output htmlFor="surface-inset">{padding}px</output>
-        </label>
-        <input
-          id="surface-inset"
-          type="range"
-          min="6"
-          max="18"
-          value={padding}
-          onChange={(event) => setPadding(Number(event.target.value))}
-        />
-      </div>
+      <p>Change the values to see how the border radius adapts.</p>
+    </div>
+  )
+}
+
+function RadiusControl({
+  id,
+  label,
+  value,
+  min,
+  max,
+  progress,
+  onChange,
+}: {
+  id: string
+  label: string
+  value: number
+  min: number
+  max: number
+  progress: "outer" | "inner" | "padding"
+  onChange: (value: number) => void
+}) {
+  return (
+    <div className={styles.radiusControl}>
+      <label htmlFor={id}>
+        <span>{label}</span>
+        <output htmlFor={id}>{value}px</output>
+      </label>
+      <input
+        id={id}
+        className={styles.radiusRange}
+        style={
+          {
+            "--range-progress": `var(--${progress}-progress)`,
+          } as CSSProperties
+        }
+        type="range"
+        min={min}
+        max={max}
+        value={value}
+        onChange={(event) => onChange(Number(event.target.value))}
+      />
     </div>
   )
 }
