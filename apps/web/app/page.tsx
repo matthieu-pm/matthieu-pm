@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import type { CSSProperties } from "react"
 
 import styles from "./page.module.css"
@@ -8,16 +9,8 @@ const contactButtonStaggerMs = 28
 
 const capabilities = [
   {
-    path: "/skills",
-    description: "UI, accessibility, typography, layout, colors & more",
-  },
-  {
-    path: "/better-interfaces",
-    description: "UI skill for improving interfaces",
-  },
-  {
-    path: "/oklch",
-    description: "Skill for using OKLCH colors",
+    path: "/product-bet",
+    description: "Shape product ideas into bounded, testable decisions.",
   },
 ]
 
@@ -285,7 +278,7 @@ export default function Page() {
         <h2 id="capabilities-title">Skills for agents</h2>
         <div className={styles.rowList}>
           {capabilities.map((capability) => (
-            <article className={styles.detailRow} key={capability.path}>
+            <Link href="/skills/product-bet" className={`${styles.detailRow} ${styles.skillLink}`} key={capability.path}>
               <span className={styles.rowIndex} aria-hidden="true">
                 <PageSkeleton />
               </span>
@@ -293,7 +286,7 @@ export default function Page() {
                 <h3>{capability.path}</h3>
                 <p>{capability.description}</p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>

@@ -347,6 +347,21 @@
   line-height: 24px;
 }
 
+.skillLink {
+  text-decoration: none;
+  border-radius: 12px;
+}
+
+.skillLink:hover h3 {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.skillLink:focus-visible {
+  outline: 2px solid #222;
+  outline-offset: 6px;
+}
+
 .detailRow p {
   color: var(--muted);
   line-height: 24px;
