@@ -212,7 +212,6 @@ export function BetDemo({
           </button>
         </div>
       </div>
-      <div className={styles.demoCaption}>Illustrative example · No research supplied</div>
     </div>
   )
 }

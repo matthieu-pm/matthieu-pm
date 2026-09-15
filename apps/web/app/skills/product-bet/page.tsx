@@ -155,9 +155,6 @@ export default function ProductBetPage() {
                 <div className={styles.recommendation}>
                   ↳ Proceed to the concierge test
                 </div>
-                <small>
-                  A proposed test, with assumptions still to validate.
-                </small>
               </div>
             }
           />

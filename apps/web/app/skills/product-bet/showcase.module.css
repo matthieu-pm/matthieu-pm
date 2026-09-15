@@ -344,18 +344,6 @@
   font-size: 13px;
   font-weight: 500;
 }
-.shapedBet small {
-  display: block;
-  margin-top: 8px;
-  color: #6b6b6b;
-  font-size: 11px;
-}
-.demoCaption {
-  padding: 12px 16px 8px;
-  text-align: center;
-  color: #6b6b6b;
-  font-size: 12px;
-}
 .section {
   margin-top: 88px;
 }
