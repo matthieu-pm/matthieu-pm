@@ -118,9 +118,6 @@ export default function ProductBetPage() {
           <BetDemo
             raw={
               <div className={styles.rawIdea}>
-                <span className={styles.documentMark} aria-hidden="true">
-                  ↳
-                </span>
                 <p>“We should add AI-generated weekly summaries.”</p>
                 <span className={styles.rawNote}>
                   Who needs this? What do we know? How much should we invest?

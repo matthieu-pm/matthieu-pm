@@ -274,18 +274,6 @@
   align-items: flex-start;
   padding: 36px;
 }
-.documentMark {
-  composes: card from "../../card.module.css";
-  --card-radius: 8px;
-  --card-shell-offset: 2px;
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 46px;
-  color: #90908a;
-  font-size: 22px;
-  margin-bottom: 24px;
-}
 .rawIdea > p {
   max-width: 460px;
   margin-top: 14px;
