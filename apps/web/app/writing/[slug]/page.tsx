@@ -173,9 +173,9 @@ function UxWritingArticle() {
           cycle—not as a final proofreading step.
         </p>
         <div className={styles.lifecycle}>
-          <article><span>Discover</span><p>User interviews, verbatim analysis, UX audits.</p></article>
-          <article><span>Build</span><p>Prototypes, microcopy, glossary, voice and tone.</p></article>
-          <article><span>Deliver</span><p>User testing, A/B tests, measurement, iteration.</p></article>
+          <article className={styles.infoCard}><span>Discover</span><p>User interviews, verbatim analysis, UX audits.</p></article>
+          <article className={styles.infoCard}><span>Build</span><p>Prototypes, microcopy, glossary, voice and tone.</p></article>
+          <article className={styles.infoCard}><span>Deliver</span><p>User testing, A/B tests, measurement, iteration.</p></article>
         </div>
       </section>
 
@@ -186,9 +186,9 @@ function UxWritingArticle() {
           If the words fail one of them, the experience creates friction.
         </p>
         <div className={styles.principles}>
-          <div className={styles.principleCard}><strong>Clear</strong><small>Use familiar language. Avoid jargon and ambiguity.</small></div>
-          <div className={styles.principleCard}><strong>Concise</strong><small>Remove filler without removing necessary context.</small></div>
-          <div className={styles.principleCard}><strong>Useful</strong><small>Anticipate the next question and show the way forward.</small></div>
+          <div className={styles.infoCard}><strong>Clear</strong><small>Use familiar language. Avoid jargon and ambiguity.</small></div>
+          <div className={styles.infoCard}><strong>Concise</strong><small>Remove filler without removing necessary context.</small></div>
+          <div className={styles.infoCard}><strong>Useful</strong><small>Anticipate the next question and show the way forward.</small></div>
         </div>
         <div className={styles.ruleList}>
           <p><span>Use active voice</span> Name who does what.</p>
@@ -270,16 +270,6 @@ function UxWritingArticle() {
           component guidelines. This keeps the experience consistent across
           teams and channels.
         </p>
-        <div className={styles.aiNote}>
-          <span>Using AI wisely</span>
-          <p>
-            AI is useful for alternatives, tone exploration, plain-language
-            checks, research synthesis, and audits. Give it the user, context,
-            goal, constraints, and desired format. Then verify every suggestion
-            against the interface and your content standards.
-          </p>
-          <strong>Generate options. Keep the judgment.</strong>
-        </div>
       </section>
 
       <section className={styles.takeaway} aria-labelledby="takeaway-title">

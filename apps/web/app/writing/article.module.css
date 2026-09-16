@@ -67,28 +67,28 @@
 .componentCloud { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 24px; }
 .componentCloud span { padding: 6px 10px; border: 1px solid #dededb; border-radius: 999px; background: #fff; color: #555; font-size: 13px; }
 .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 28px; }
-.principleCard {
+.infoCard {
   composes: card from "../card.module.css";
 
   min-height: 148px;
   padding: 22px;
 }
 .principles strong, .principles small { display: block; }
-.principles strong { font-weight: 550; }
-.principles small { margin-top: 4px; color: var(--muted); font-size: 13px; line-height: 1.4; }
+.principles strong,
+.lifecycle span,
+.componentRules strong { font-size: 14px; font-weight: 600; line-height: 1.35; }
+.principles small,
+.lifecycle p,
+.componentRules p { color: var(--muted); font-size: 13px; line-height: 1.45; }
+.principles small { margin-top: 4px; }
 .lifecycle {
-  composes: card from "../card.module.css";
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 26px;
-  overflow: hidden;
-  padding: 5px;
+  gap: 10px;
+  margin-top: 28px;
 }
-.lifecycle article { min-height: 136px; padding: 18px; }
-.lifecycle article + article { border-left: 1px solid var(--line); }
-.lifecycle span { color: #454545; font-size: 13px; font-weight: 600; }
-.lifecycle p { margin-top: 25px; color: var(--muted); font-size: 13px; }
+.lifecycle span { color: #454545; }
+.lifecycle p { margin-top: 4px; }
 .ruleList { display: grid; gap: 0; margin-top: 24px; border-top: 1px solid var(--line); }
 .ruleList p { display: grid; grid-template-columns: 152px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 .ruleList span { color: #343434; font-weight: 550; }
@@ -99,18 +99,8 @@
   min-height: 116px;
   padding: 20px;
 }
-.componentRules strong { font-size: 14px; font-weight: 600; }
-.componentRules p { margin-top: 26px; color: var(--muted); font-size: 13px; }
+.componentRules p { margin-top: 26px; }
 .prose blockquote { margin: 26px 0 0; padding: 22px 24px; border-left: 3px solid #c8c8c4; background: #f5f5f3; color: #3f3f3f; font-size: 19px; letter-spacing: -0.015em; }
-.aiNote {
-  composes: card from "../card.module.css";
-
-  margin-top: 26px;
-  padding: 26px;
-}
-.aiNote span { color: #777; font-size: 11px; font-weight: 650; letter-spacing: 0.05em; text-transform: uppercase; }
-.aiNote p { margin-top: 10px; color: #5f5f5f; }
-.aiNote strong { display: block; margin-top: 18px; color: #303030; font-weight: 600; }
 
 .exercise { margin-top: 80px; scroll-margin-top: 24px; }
 .exerciseHeading p { margin-top: 8px; color: var(--muted); }
@@ -315,12 +305,9 @@
   .hero h1 { font-size: 42px; }
   .hero .lead { font-size: 19px; }
   .principles { grid-template-columns: 1fr; }
-  .principles > div { min-height: 112px; }
+  .infoCard { min-height: 112px; }
   .comparison { grid-template-columns: 1fr; }
   .lifecycle { grid-template-columns: 1fr; }
-  .lifecycle article { min-height: 110px; }
-  .lifecycle article + article { border-top: 1px solid var(--line); border-left: 0; }
-  .lifecycle p { margin-top: 14px; }
   .ruleList p { grid-template-columns: 1fr; gap: 3px; }
   .componentRules { grid-template-columns: 1fr; }
   .selectGrid { grid-template-columns: 1fr; }
