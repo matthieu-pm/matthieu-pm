@@ -624,7 +624,6 @@ function UxWritingArticle() {
       </section>
 
       <section className={styles.takeaway} aria-labelledby="takeaway-title">
-        <span>Keep this</span>
         <h2 id="takeaway-title">The right words. The right moment.</h2>
         <p>
           Know the user, the component, the context, and the next action. Write

@@ -835,16 +835,8 @@
   padding: 36px;
   color: var(--ink);
 }
-.takeaway > span {
-  color: #888;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
 .takeaway h2 {
   max-width: 440px;
-  margin-top: 22px;
   font-size: 28px;
 }
 .takeaway p {
