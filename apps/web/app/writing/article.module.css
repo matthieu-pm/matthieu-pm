@@ -244,24 +244,37 @@
 .choiceRow button > .selectionMark { width: 18px; height: 18px; flex-basis: 18px; }
 .choiceRow button.choiceSelected { background: #f0f0ee; box-shadow: 0 0 0 1px rgb(0 0 0 / 12%), 0 1px 3px rgb(0 0 0 / 10%); color: #1f1f1f; }
 .situationTabs { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; padding: 3px; border-radius: 14px; background: #efefec; box-shadow: inset 0 0 0 1px rgb(0 0 0 / 5%); }
-.situationTabs button { position: relative; z-index: 1; min-height: 34px; padding: 0 10px; border: 0; border-radius: 11px; background: transparent; color: #71716d; font-size: 13px; }
-.situationTabs button[aria-selected="true"] { color: #272726; }
+.situationTabs button { position: relative; z-index: 1; min-height: 34px; padding: 0 10px; border: 0; border-radius: 11px; background: transparent; color: #71716d; font-size: 13px; transition: none; }
 .situationTabs button:active { scale: 1; }
-.tabIndicator { position: absolute; top: 3px; bottom: 3px; left: 3px; width: calc((100% - 6px) / 2); border-radius: 11px; background: #fff; box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 1px 3px rgb(0 0 0 / 12%); pointer-events: none; transform: translateX(0); transition: transform 200ms cubic-bezier(0.2, 0, 0, 1); }
+.tabIndicator { position: absolute; z-index: 0; top: 3px; bottom: 3px; left: 3px; width: calc((100% - 6px) / 2); border-radius: 11px; background: #fff; box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 1px 3px rgb(0 0 0 / 12%); pointer-events: none; transform: translateX(0); transition: transform 200ms cubic-bezier(0.2, 0, 0, 1); }
 .situationTabs[data-selected-index="1"] .tabIndicator { transform: translateX(100%); }
+.activeTabLabels {
+  position: absolute;
+  z-index: 2;
+  inset: 3px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  color: #272726;
+  clip-path: inset(0 50% 0 0);
+  pointer-events: none;
+  transition: clip-path 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+.activeTabLabels > span { display: grid; place-items: center; font-size: 13px; }
+.situationTabs[data-selected-index="1"] .activeTabLabels { clip-path: inset(0 0 0 50%); }
 .toneScene {
+  padding-top: var(--lab-space-lg);
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
-  transition: opacity 180ms cubic-bezier(0.2, 0, 0, 1), transform 180ms cubic-bezier(0.2, 0, 0, 1), filter 180ms cubic-bezier(0.2, 0, 0, 1);
+  transition: opacity 200ms cubic-bezier(0.2, 0, 0, 1), transform 200ms cubic-bezier(0.2, 0, 0, 1), filter 200ms cubic-bezier(0.2, 0, 0, 1);
 
   @starting-style {
     opacity: 0;
-    transform: translateY(3px);
-    filter: blur(2px);
+    transform: translateY(2px);
+    filter: blur(1px);
   }
 }
-.situationPrompt { margin-top: var(--lab-space-lg); color: #444; font-weight: 500; }
+.situationPrompt { color: #444; font-weight: 500; }
 .toneChoices { display: grid; gap: var(--lab-space-sm); margin-top: var(--lab-space-md); }
 .toneChoices button { display: grid; grid-template-columns: 26px minmax(0, 1fr) 22px; align-items: center; gap: 10px; min-height: 48px; padding: 8px 12px; border: 0; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 1px 2px rgb(0 0 0 / 7%), 0 4px 10px -7px rgb(0 0 0 / 28%); color: #444; text-align: left; }
 .toneChoices button.choiceSelected { background: #f0f0ee; box-shadow: 0 0 0 1px rgb(0 0 0 / 12%), 0 1px 3px rgb(0 0 0 / 10%); color: #1f1f1f; }

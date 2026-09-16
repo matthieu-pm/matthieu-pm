@@ -300,11 +300,17 @@ export function ToneInContext() {
           data-selected-index={situationIndex}
         >
           <span className={styles.tabIndicator} aria-hidden="true" />
+          <span className={styles.activeTabLabels} aria-hidden="true">
+            {toneSituations.map((item) => (
+              <span key={item.id}>{item.label}</span>
+            ))}
+          </span>
           {toneSituations.map((item, index) => (
             <button
               type="button"
               role="tab"
               aria-selected={situationIndex === index}
+              aria-controls="tone-situation-panel"
               onClick={() => changeSituation(index)}
               key={item.id}
             >
@@ -312,7 +318,12 @@ export function ToneInContext() {
             </button>
           ))}
         </div>
-        <div className={styles.toneScene} key={situation.id}>
+        <div
+          className={styles.toneScene}
+          id="tone-situation-panel"
+          role="tabpanel"
+          key={situation.id}
+        >
           <p className={styles.situationPrompt}>{situation.prompt}</p>
           <div className={styles.toneChoices}>
             {situation.choices.map((option, index) => (
