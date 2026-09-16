@@ -230,43 +230,6 @@
   letter-spacing: -0.015em;
 }
 
-.workflow {
-  display: grid;
-  gap: 0;
-  margin: 24px 0 0;
-  padding: 0;
-  border-top: 1px solid var(--line);
-  list-style: none;
-}
-.workflow li {
-  display: grid;
-  grid-template-columns: 28px minmax(0, 1fr);
-  gap: 14px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line);
-}
-.workflow li > span {
-  display: grid;
-  width: 24px;
-  height: 24px;
-  place-items: center;
-  border-radius: 8px;
-  background: #efefed;
-  color: #777;
-  font-family: ui-monospace, monospace;
-  font-size: 11px;
-}
-.workflow strong {
-  color: #343434;
-  font-size: 14px;
-  font-weight: 600;
-}
-.workflow p {
-  margin-top: 3px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
 .exercise {
   margin-top: 80px;
   scroll-margin-top: 24px;
