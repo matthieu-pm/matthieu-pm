@@ -66,7 +66,7 @@ export default function GreatUiPage() {
         <header className={styles.hero}>
           <h1>/great-ui</h1>
           <p className={styles.lead}>
-            Build interfaces where every small detail sings in tune.
+            Make every interface detail feel right.
           </p>
           <p>
             A faithful merge of{" "}
