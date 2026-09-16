@@ -4,7 +4,6 @@
   --muted: #6b6b6b;
   --line: #e3e3e0;
   --surface: #f6f6f4;
-  --green: #28723b;
 
   min-height: 100svh;
   padding: 64px 24px;
@@ -56,8 +55,7 @@
 .headerButton:active { transform: scale(0.96); }
 
 .hero { margin-top: 56px; padding-bottom: 44px; border-bottom: 1px solid var(--line); }
-.eyebrow { color: var(--green); font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
-.hero h1 { margin-top: 14px; font-size: clamp(38px, 8vw, 58px); font-weight: 500; letter-spacing: -0.06em; line-height: 1.02; }
+.hero h1 { font-size: clamp(38px, 8vw, 58px); font-weight: 500; letter-spacing: -0.06em; line-height: 1.02; }
 .hero .lead { max-width: 590px; margin-top: 20px; color: #3a3a3a; font-size: 21px; letter-spacing: -0.02em; line-height: 1.45; }
 .byline { display: flex; justify-content: space-between; gap: 24px; margin-top: 28px; color: #858585; font-size: 13px; }
 
@@ -65,49 +63,72 @@
 .prose h2, .exercise h2, .takeaway h2, .steps h2 { font-size: 23px; font-weight: 500; letter-spacing: -0.025em; line-height: 1.3; }
 .prose > p { margin-top: 14px; color: var(--muted); }
 .prose > p strong { color: #3a3a3a; font-weight: 550; }
-.sectionLabel { margin-bottom: 9px !important; color: var(--green) !important; font-family: ui-monospace, monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
-.contents { display: grid; margin-top: 32px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.contents {
+  composes: card from "../card.module.css";
+
+  display: grid;
+  margin-top: 32px;
+  padding: 22px;
+}
 .contents > span { margin-bottom: 8px; color: #999; font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
 .contents a { padding-block: 4px; color: #4d4d4d; font-size: 14px; text-decoration-color: transparent; }
 .contents a:hover { color: #111; text-decoration-color: #aaa; }
 .componentCloud { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 24px; }
 .componentCloud span { padding: 6px 10px; border: 1px solid #dededb; border-radius: 999px; background: #fff; color: #555; font-size: 13px; }
 .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 28px; }
-.principles > div { min-height: 148px; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
-.principles span, .principles strong, .principles small { display: block; }
-.principles span { color: #a0a0a0; font-family: ui-monospace, monospace; font-size: 11px; }
-.principles strong { margin-top: 28px; font-weight: 550; }
+.principleCard {
+  composes: card from "../card.module.css";
+
+  min-height: 148px;
+  padding: 22px;
+}
+.principles strong, .principles small { display: block; }
+.principles strong { font-weight: 550; }
 .principles small { margin-top: 4px; color: var(--muted); font-size: 13px; line-height: 1.4; }
-.lifecycle { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 26px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.lifecycle {
+  composes: card from "../card.module.css";
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 26px;
+  overflow: hidden;
+  padding: 5px;
+}
 .lifecycle article { min-height: 136px; padding: 18px; }
 .lifecycle article + article { border-left: 1px solid var(--line); }
-.lifecycle span { color: var(--green); font-size: 13px; font-weight: 600; }
+.lifecycle span { color: #454545; font-size: 13px; font-weight: 600; }
 .lifecycle p { margin-top: 25px; color: var(--muted); font-size: 13px; }
 .ruleList { display: grid; gap: 0; margin-top: 24px; border-top: 1px solid var(--line); }
 .ruleList p { display: grid; grid-template-columns: 152px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 .ruleList span { color: #343434; font-weight: 550; }
 .componentRules { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 25px; }
-.componentRules article { min-height: 116px; padding: 16px; border: 1px solid var(--line); border-radius: 13px; background: #fff; }
+.componentRule {
+  composes: card from "../card.module.css";
+
+  min-height: 116px;
+  padding: 20px;
+}
 .componentRules strong { font-size: 14px; font-weight: 600; }
 .componentRules p { margin-top: 26px; color: var(--muted); font-size: 13px; }
-.prose blockquote { margin: 26px 0 0; padding: 22px 24px; border-left: 3px solid #8bb694; background: #f3f7f3; color: #34503a; font-size: 19px; letter-spacing: -0.015em; }
-.aiNote { margin-top: 26px; padding: 22px; border: 1px solid #d8e7da; border-radius: 14px; background: #f7fbf7; }
-.aiNote span { color: var(--green); font-size: 11px; font-weight: 650; letter-spacing: 0.05em; text-transform: uppercase; }
-.aiNote p { margin-top: 10px; color: #536b58; }
-.aiNote strong { display: block; margin-top: 18px; color: #2f5237; font-weight: 600; }
+.prose blockquote { margin: 26px 0 0; padding: 22px 24px; border-left: 3px solid #c8c8c4; background: #f5f5f3; color: #3f3f3f; font-size: 19px; letter-spacing: -0.015em; }
+.aiNote {
+  composes: card from "../card.module.css";
+
+  margin-top: 26px;
+  padding: 26px;
+}
+.aiNote span { color: #777; font-size: 11px; font-weight: 650; letter-spacing: 0.05em; text-transform: uppercase; }
+.aiNote p { margin-top: 10px; color: #5f5f5f; }
+.aiNote strong { display: block; margin-top: 18px; color: #303030; font-weight: 600; }
 
 .exercise { margin-top: 88px; scroll-margin-top: 24px; }
-.exerciseHeading { display: grid; grid-template-columns: 36px 1fr; gap: 12px; }
-.exerciseHeading > span { display: grid; width: 28px; height: 28px; place-items: center; border-radius: 50%; background: #eeeeec; color: #777; font-family: ui-monospace, monospace; font-size: 11px; }
 .exerciseHeading p { margin-top: 8px; color: var(--muted); }
 
 .lab {
+  composes: card from "../card.module.css";
+
   margin-top: 24px;
-  padding: 20px;
-  border: 1px solid #e5e5e2;
-  border-radius: 18px;
-  background: var(--surface);
-  box-shadow: 0 1px 2px rgb(0 0 0 / 4%), 0 6px 14px -10px rgb(0 0 0 / 18%);
+  padding: 24px;
 }
 .prompt { color: #424242; font-weight: 500; }
 .sentenceChoices { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; padding: 18px; border: 1px solid var(--line); border-radius: 13px; background: #fff; }
@@ -116,15 +137,23 @@
 .selectGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
 .selectGrid button { display: flex; min-height: 46px; align-items: center; gap: 9px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: #454545; text-align: left; }
 .selectGrid button span { display: grid; width: 22px; height: 22px; flex: 0 0 22px; place-items: center; border-radius: 6px; background: #f0f0ee; color: #777; font-size: 13px; }
-.selectGrid button.selectedChoice { border-color: #9dbca3; background: #f7fbf7; color: #31543a; }
-.selectGrid button.selectedChoice span { background: #dcecdf; color: #286036; }
+.selectGrid button.selectedChoice { border-color: #9d9d98; background: #f0f0ee; color: #242424; }
+.selectGrid button.selectedChoice span { background: #242424; color: #fff; }
 .feedback { margin-top: 14px; padding: 10px 12px; border-radius: 9px; font-size: 14px; }
-.feedbackGood { background: #eaf4eb; color: #286036; }
-.feedbackTry { background: #f4eee4; color: #755321; }
+.feedbackGood { background: #ececea; color: #343434; }
+.feedbackTry { background: #f1efeb; color: #5f5546; }
 
 .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
-.comparison button { min-height: 152px; padding: 16px; border: 1px solid var(--line); border-radius: 13px; background: #fff; color: var(--ink); text-align: left; transition: border-color 150ms ease, transform 150ms ease; }
-.comparison button:hover { border-color: #bdbdb8; transform: translateY(-1px); }
+.optionCard {
+  composes: card from "../card.module.css";
+
+  min-height: 152px;
+  padding: 20px;
+  color: var(--ink);
+  text-align: left;
+  transition: box-shadow 150ms ease-out, transform 150ms ease-out;
+}
+.optionCard:hover { box-shadow: 0 0 0 1px rgb(0 0 0 / 8%), 0 2px 5px rgb(0 0 0 / 6%); transform: translateY(-1px); }
 .comparison span, .comparison strong, .comparison small { display: block; }
 .comparison span { color: #9a9a9a; font-family: ui-monospace, monospace; font-size: 11px; text-transform: uppercase; }
 .comparison strong { margin-top: 28px; font-weight: 550; }
@@ -141,12 +170,16 @@
 .labActions button, .choiceRow button { display: inline-flex; min-height: 36px; align-items: center; justify-content: center; gap: 6px; padding: 7px 13px; border: 0; border-radius: 9px; background: #242424; color: #fff; font-size: 14px; font-weight: 500; }
 .labActions button:disabled { cursor: default; opacity: 0.4; }
 .labActions .secondaryButton { border: 1px solid #dadad6; background: #fff; color: #555; }
-.scoreResult { display: flex; align-items: center; gap: 16px; margin-top: 16px; padding: 16px; border: 1px solid #d8e7da; border-radius: 12px; background: #f7fbf7; }
-.scoreResult strong { color: var(--green); font-size: 28px; font-weight: 500; letter-spacing: -0.04em; }
-.scoreResult strong span { color: #8ca292; font-size: 13px; letter-spacing: 0; }
-.scoreResult p { color: #536b58; font-size: 14px; }
+.scoreResult { display: flex; align-items: center; gap: 16px; margin-top: 16px; padding: 16px; border: 1px solid #d8d8d4; border-radius: 12px; background: #f5f5f3; }
+.scoreResult strong { color: #2f2f2f; font-size: 28px; font-weight: 500; letter-spacing: -0.04em; }
+.scoreResult strong span { color: #999; font-size: 13px; letter-spacing: 0; }
+.scoreResult p { color: #666; font-size: 14px; }
 
-.miniDialog { padding: 20px; border: 1px solid var(--line); border-radius: 13px; background: #fff; }
+.miniDialog {
+  composes: card from "../card.module.css";
+
+  padding: 24px;
+}
 .miniDialog span { font-weight: 550; }
 .miniDialog p { margin-top: 5px; color: var(--muted); font-size: 14px; }
 .miniDialog + .prompt { margin-top: 18px; }
@@ -171,18 +204,23 @@
 .toneChoices button:hover { border-color: #bdbdb8; }
 .toneChoices span { display: grid; width: 24px; height: 24px; place-items: center; border-radius: 7px; background: #f0f0ee; color: #777; font-family: ui-monospace, monospace; font-size: 11px; }
 
-.takeaway { margin-top: 96px; padding: 32px; border-radius: 18px; background: #20201f; color: #fff; }
-.takeaway > span { color: #a8c8ae; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.takeaway {
+  composes: card from "../card.module.css";
+
+  margin-top: 96px;
+  padding: 36px;
+  color: var(--ink);
+}
+.takeaway > span { color: #888; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
 .takeaway h2 { max-width: 440px; margin-top: 22px; font-size: 28px; }
-.takeaway p { max-width: 500px; margin-top: 12px; color: #bdbdb7; }
+.takeaway p { max-width: 500px; margin-top: 12px; color: var(--muted); }
 .sourceNote { margin-top: 18px; color: #999; font-size: 12px; text-align: center; }
 .sourceNote a { color: #666; }
 
 .guideBody { margin-top: 56px; }
 .guideBody .prose { margin-top: 0; }
 .steps { display: grid; gap: 0; margin-top: 52px; border-top: 1px solid var(--line); }
-.steps article { display: grid; grid-template-columns: 54px 1fr; gap: 16px; padding: 28px 0; border-bottom: 1px solid var(--line); }
-.steps article > span { color: #9b9b9b; font-family: ui-monospace, monospace; font-size: 12px; }
+.steps article { padding: 28px 0; border-bottom: 1px solid var(--line); }
 .steps p { margin-top: 8px; color: var(--muted); }
 
 .footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 96px; padding: 24px 0 16px; border-top: 1px solid var(--line); color: #8a8a8a; font-size: 13px; }
@@ -195,7 +233,6 @@
   .hero .lead { font-size: 19px; }
   .principles { grid-template-columns: 1fr; }
   .principles > div { min-height: 112px; }
-  .principles strong { margin-top: 18px; }
   .comparison { grid-template-columns: 1fr; }
   .lifecycle { grid-template-columns: 1fr; }
   .lifecycle article { min-height: 110px; }
@@ -206,7 +243,6 @@
   .selectGrid { grid-template-columns: 1fr; }
   .comparison button { min-height: 132px; }
   .exercise { margin-top: 68px; }
-  .exerciseHeading { grid-template-columns: 30px 1fr; }
   .lab { padding: 14px; border-radius: 15px; }
   .orderList li { grid-template-columns: 26px 1fr; }
   .orderButtons { grid-column: 2; justify-self: end; }

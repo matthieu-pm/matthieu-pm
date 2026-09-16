@@ -80,12 +80,12 @@ export function GoodOrBad() {
     <div className={styles.lab}>
       <p className={styles.prompt}>A file upload stopped at 92%. Which message helps the user recover?</p>
       <div className={styles.comparison}>
-        <button type="button" onClick={() => setChoice("bad")}>
+        <button className={styles.optionCard} type="button" onClick={() => setChoice("bad")}>
           <span>Option A</span>
           <strong>Something went wrong.</strong>
           <small>Please try again later.</small>
         </button>
-        <button type="button" onClick={() => setChoice("good")}>
+        <button className={styles.optionCard} type="button" onClick={() => setChoice("good")}>
           <span>Option B</span>
           <strong>Upload paused</strong>
           <small>Reconnect to the internet, then resume your upload.</small>

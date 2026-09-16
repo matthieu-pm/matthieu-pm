@@ -18,19 +18,16 @@ const articles = {
     title: "Write the Interface",
     description:
       "A beginner’s guide to UX writing, with five interactive exercises for clearer product experiences.",
-    eyebrow: "UX writing · Beginner’s guide",
   },
   "ai-design-engineer": {
     title: "From Prompt to Product",
     description:
       "A beginner’s guide to using AI as a design engineer—from first sketch to polished interface.",
-    eyebrow: "AI + design engineering · Beginner’s guide",
   },
   "ai-product-manager": {
     title: "The AI-Augmented Product Manager",
     description:
       "A beginner’s guide to using AI for product discovery, clearer decisions, and faster delivery.",
-    eyebrow: "AI + product management · Beginner’s guide",
   },
 } as const
 
@@ -83,7 +80,6 @@ function ArticleHeader({ slug }: { slug: ArticleSlug }) {
     <>
       <ArticleControls pageUrl={`${siteConfig.url}/writing/${slug}`} />
       <header className={styles.hero}>
-        <p className={styles.eyebrow}>{article.eyebrow}</p>
         <h1>{article.title}</h1>
         <p className={styles.lead}>{article.description}</p>
         <div className={styles.byline}>
@@ -96,22 +92,21 @@ function ArticleHeader({ slug }: { slug: ArticleSlug }) {
 }
 
 function Exercise({
-  number,
+  id,
   title,
   introduction,
   children,
 }: {
-  number: string
+  id: string
   title: string
   introduction: string
   children: React.ReactNode
 }) {
   return (
-    <section className={styles.exercise} aria-labelledby={`exercise-${number}`}>
+    <section className={styles.exercise} aria-labelledby={id}>
       <div className={styles.exerciseHeading}>
-        <span>{number}</span>
         <div>
-          <h2 id={`exercise-${number}`}>{title}</h2>
+          <h2 id={id}>{title}</h2>
           <p>{introduction}</p>
         </div>
       </div>
@@ -139,16 +134,15 @@ function UxWritingArticle() {
 
       <nav className={styles.contents} aria-label="Article contents">
         <span>In this guide</span>
-        <a href="#microcopy">01 · Find the microcopy</a>
-        <a href="#product-team">02 · Work with the product team</a>
-        <a href="#principles">03 · Write clear, concise, useful copy</a>
-        <a href="#components">04 · Write for the component</a>
-        <a href="#voice">05 · Adapt voice and tone</a>
-        <a href="#inclusive-ai">06 · Stay inclusive and use AI wisely</a>
+        <a href="#microcopy">Find the microcopy</a>
+        <a href="#product-team">Work with the product team</a>
+        <a href="#principles">Write clear, concise, useful copy</a>
+        <a href="#components">Write for the component</a>
+        <a href="#voice">Adapt voice and tone</a>
+        <a href="#inclusive-ai">Stay inclusive and use AI wisely</a>
       </nav>
 
       <section id="microcopy" className={styles.prose} aria-labelledby="microcopy-title">
-        <p className={styles.sectionLabel}>01 · The field</p>
         <h2 id="microcopy-title">UX writing lives where people act.</h2>
         <p>
           Marketing copy earns attention. Editorial content informs. UX writing
@@ -174,7 +168,7 @@ function UxWritingArticle() {
       </section>
 
       <Exercise
-        number="01"
+        id="find-the-microcopy"
         title="Find the microcopy"
         introduction="UX writing is defined by where the words live and the job they do."
       >
@@ -182,7 +176,6 @@ function UxWritingArticle() {
       </Exercise>
 
       <section id="product-team" className={styles.prose} aria-labelledby="team-title">
-        <p className={styles.sectionLabel}>02 · The product team</p>
         <h2 id="team-title">Do not wait for the final screen.</h2>
         <p>
           UX writers work closely with designers, product managers, researchers,
@@ -197,16 +190,15 @@ function UxWritingArticle() {
       </section>
 
       <section id="principles" className={styles.prose} aria-labelledby="principles-title">
-        <p className={styles.sectionLabel}>03 · The golden rule</p>
         <h2 id="principles-title">Clear. Concise. Useful.</h2>
         <p>
           These three principles are the fastest way to assess interface copy.
           If the words fail one of them, the experience creates friction.
         </p>
         <div className={styles.principles}>
-          <div><span>01</span><strong>Clear</strong><small>Use familiar language. Avoid jargon and ambiguity.</small></div>
-          <div><span>02</span><strong>Concise</strong><small>Remove filler without removing necessary context.</small></div>
-          <div><span>03</span><strong>Useful</strong><small>Anticipate the next question and show the way forward.</small></div>
+          <div className={styles.principleCard}><strong>Clear</strong><small>Use familiar language. Avoid jargon and ambiguity.</small></div>
+          <div className={styles.principleCard}><strong>Concise</strong><small>Remove filler without removing necessary context.</small></div>
+          <div className={styles.principleCard}><strong>Useful</strong><small>Anticipate the next question and show the way forward.</small></div>
         </div>
         <div className={styles.ruleList}>
           <p><span>Use active voice</span> Name who does what.</p>
@@ -217,7 +209,7 @@ function UxWritingArticle() {
       </section>
 
       <Exercise
-        number="02"
+        id="choose-good-over-vague"
         title="Choose good over vague"
         introduction="Specific copy reduces uncertainty and makes recovery feel possible."
       >
@@ -225,7 +217,7 @@ function UxWritingArticle() {
       </Exercise>
 
       <Exercise
-        number="03"
+        id="replace-the-jargon"
         title="Replace the jargon"
         introduction="Rewrite the message. Your score rewards plain language, brevity, and a concrete next step."
       >
@@ -233,7 +225,6 @@ function UxWritingArticle() {
       </Exercise>
 
       <section id="components" className={styles.prose} aria-labelledby="components-title">
-        <p className={styles.sectionLabel}>04 · Copy by component</p>
         <h2 id="components-title">Every component asks a different question.</h2>
         <p>
           A CTA predicts an action. An error helps someone recover. An empty
@@ -241,15 +232,15 @@ function UxWritingArticle() {
           UX writing begins with the component’s job, not a clever sentence.
         </p>
         <div className={styles.componentRules}>
-          <article><strong>CTA</strong><p>What will happen when I select this?</p></article>
-          <article><strong>Error</strong><p>What happened, and how can I recover?</p></article>
-          <article><strong>Empty state</strong><p>Why is this empty, and how do I begin?</p></article>
-          <article><strong>Loading</strong><p>What is happening, and should I wait?</p></article>
+          <article className={styles.componentRule}><strong>CTA</strong><p>What will happen when I select this?</p></article>
+          <article className={styles.componentRule}><strong>Error</strong><p>What happened, and how can I recover?</p></article>
+          <article className={styles.componentRule}><strong>Empty state</strong><p>Why is this empty, and how do I begin?</p></article>
+          <article className={styles.componentRule}><strong>Loading</strong><p>What is happening, and should I wait?</p></article>
         </div>
       </section>
 
       <Exercise
-        number="04"
+        id="make-the-cta-tell-the-truth"
         title="Make the CTA tell the truth"
         introduction="A button label is a promise about what will happen after the click."
       >
@@ -257,7 +248,6 @@ function UxWritingArticle() {
       </Exercise>
 
       <section id="voice" className={styles.prose} aria-labelledby="voice-title">
-        <p className={styles.sectionLabel}>05 · Voice and tone</p>
         <h2 id="voice-title">Your voice stays. Your tone moves.</h2>
         <p>
           Voice is the product’s consistent personality. Tone adapts that voice
@@ -270,7 +260,7 @@ function UxWritingArticle() {
       </section>
 
       <Exercise
-        number="05"
+        id="tune-the-tone-to-the-moment"
         title="Tune the tone to the moment"
         introduction="Keep the same clear, human voice while adjusting the energy to fit the situation."
       >
@@ -278,7 +268,6 @@ function UxWritingArticle() {
       </Exercise>
 
       <section id="inclusive-ai" className={styles.prose} aria-labelledby="inclusive-title">
-        <p className={styles.sectionLabel}>06 · Scale with care</p>
         <h2 id="inclusive-title">Make the system clearer for everyone.</h2>
         <p>
           Accessible UX writing uses plain language, descriptive labels, short
@@ -337,11 +326,11 @@ function AiDesignEngineerArticle() {
         </p>
       </section>
       <section className={styles.steps} aria-label="AI design engineering workflow">
-        <article><span>01</span><div><h2>Start with a visual brief</h2><p>Name the user, the job, the mood, the hierarchy, and the constraints. A precise brief beats a long prompt.</p></div></article>
-        <article><span>02</span><div><h2>Ask for different directions</h2><p>Generate three meaningfully different approaches before polishing one. Compare structure, not decoration.</p></div></article>
-        <article><span>03</span><div><h2>Build in small slices</h2><p>Move from layout to components to states. Review each slice in the browser before adding more.</p></div></article>
-        <article><span>04</span><div><h2>Critique with evidence</h2><p>Check screenshots at real breakpoints. Ask what is unclear, inconsistent, inaccessible, or visually weak.</p></div></article>
-        <article><span>05</span><div><h2>Polish by hand</h2><p>Fix spacing, type, motion, focus states, and edge cases. AI gets you to a draft; craft gets you to done.</p></div></article>
+        <article><h2>Start with a visual brief</h2><p>Name the user, the job, the mood, the hierarchy, and the constraints. A precise brief beats a long prompt.</p></article>
+        <article><h2>Ask for different directions</h2><p>Generate three meaningfully different approaches before polishing one. Compare structure, not decoration.</p></article>
+        <article><h2>Build in small slices</h2><p>Move from layout to components to states. Review each slice in the browser before adding more.</p></article>
+        <article><h2>Critique with evidence</h2><p>Check screenshots at real breakpoints. Ask what is unclear, inconsistent, inaccessible, or visually weak.</p></article>
+        <article><h2>Polish by hand</h2><p>Fix spacing, type, motion, focus states, and edge cases. AI gets you to a draft; craft gets you to done.</p></article>
       </section>
     </div>
   )
@@ -358,11 +347,11 @@ function AiProductManagerArticle() {
         </p>
       </section>
       <section className={styles.steps} aria-label="AI product management workflow">
-        <article><span>01</span><div><h2>Give it the real context</h2><p>Share the goal, user, constraints, evidence, and open questions. Generic context creates generic advice.</p></div></article>
-        <article><span>02</span><div><h2>Synthesize, then verify</h2><p>Use AI to cluster interviews or feedback, but trace every important claim back to the source.</p></div></article>
-        <article><span>03</span><div><h2>Generate counterarguments</h2><p>Ask what would make the idea fail, which assumption is weakest, and what cheaper test could prove it.</p></div></article>
-        <article><span>04</span><div><h2>Draft sharper artifacts</h2><p>Turn decisions into briefs, specs, test plans, and release notes. Edit for product truth and team clarity.</p></div></article>
-        <article><span>05</span><div><h2>Keep a decision log</h2><p>Record the evidence, tradeoff, owner, and revisit date. AI is most useful when the reasoning stays visible.</p></div></article>
+        <article><h2>Give it the real context</h2><p>Share the goal, user, constraints, evidence, and open questions. Generic context creates generic advice.</p></article>
+        <article><h2>Synthesize, then verify</h2><p>Use AI to cluster interviews or feedback, but trace every important claim back to the source.</p></article>
+        <article><h2>Generate counterarguments</h2><p>Ask what would make the idea fail, which assumption is weakest, and what cheaper test could prove it.</p></article>
+        <article><h2>Draft sharper artifacts</h2><p>Turn decisions into briefs, specs, test plans, and release notes. Edit for product truth and team clarity.</p></article>
+        <article><h2>Keep a decision log</h2><p>Record the evidence, tradeoff, owner, and revisit date. AI is most useful when the reasoning stays visible.</p></article>
       </section>
     </div>
   )
