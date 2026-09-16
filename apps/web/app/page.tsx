@@ -21,26 +21,24 @@ const capabilities = [
   },
 ]
 
-const outcomes = [
+const articles = [
   {
-    title: "210% average organic traffic growth",
-    detail: "Xllence · 2024–2025",
+    title: "Write the Interface",
+    detail:
+      "A beginner’s guide to UX writing, with five interactive exercises.",
+    href: "/writing/ux-writing",
   },
   {
-    title: "6 hours saved every week with AI workflows",
-    detail: "Xllence · 2025",
+    title: "From Prompt to Product",
+    detail:
+      "A beginner’s guide to using AI as a design engineer.",
+    href: "/writing/ai-design-engineer",
   },
   {
-    title: "29% conversion uplift across client websites",
-    detail: "Wondertale · 2024–Present",
-  },
-  {
-    title: "14 projects delivered with 98% on-time delivery",
-    detail: "Wondertale · 2024–Present",
-  },
-  {
-    title: "240,000 impressions from product-led content",
-    detail: "Avico · 2023–2024",
+    title: "The AI-Augmented Product Manager",
+    detail:
+      "A beginner’s guide to using AI for discovery, decisions, and delivery.",
+    href: "/writing/ai-product-manager",
   },
 ]
 
@@ -291,20 +289,24 @@ export default function Page() {
 
       <section
         className={styles.section}
-        aria-labelledby="impact-title"
+        aria-labelledby="writing-title"
       >
-        <h2 id="impact-title">Selected impact</h2>
+        <h2 id="writing-title">Writing</h2>
         <div className={styles.rowList}>
-          {outcomes.map((outcome) => (
-            <article className={styles.detailRow} key={outcome.title}>
+          {articles.map((article) => (
+            <Link
+              className={`${styles.detailRow} ${styles.skillLink}`}
+              href={article.href}
+              key={article.title}
+            >
               <span className={styles.rowIndex} aria-hidden="true">
                 <PageSkeleton />
               </span>
               <div>
-                <h3>{outcome.title}</h3>
-                <p>{outcome.detail}</p>
+                <h3>{article.title}</h3>
+                <p>{article.detail}</p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>

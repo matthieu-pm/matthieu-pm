@@ -14,6 +14,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    ...[
+      "ux-writing",
+      "ai-design-engineer",
+      "ai-product-manager",
+    ].map((slug) => ({
+      url: `${siteConfig.url}/writing/${slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
     {
       url: siteConfig.url,
       changeFrequency: "monthly",
