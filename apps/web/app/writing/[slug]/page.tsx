@@ -132,16 +132,6 @@ function UxWritingArticle() {
         </p>
       </section>
 
-      <nav className={styles.contents} aria-label="Article contents">
-        <span>In this guide</span>
-        <a href="#microcopy">Find the microcopy</a>
-        <a href="#product-team">Work with the product team</a>
-        <a href="#principles">Write clear, concise, useful copy</a>
-        <a href="#components">Write for the component</a>
-        <a href="#voice">Adapt voice and tone</a>
-        <a href="#inclusive-ai">Stay inclusive and use AI wisely</a>
-      </nav>
-
       <section id="microcopy" className={styles.prose} aria-labelledby="microcopy-title">
         <h2 id="microcopy-title">UX writing lives where people act.</h2>
         <p>
@@ -301,16 +291,6 @@ function UxWritingArticle() {
         </p>
       </section>
 
-      <p className={styles.sourceNote}>
-        Adapted from the course presentation{" "}
-        <a
-          href="https://canva.link/cours-ux-writing-25-26-en"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Introduction to User Experience Writing
-        </a>.
-      </p>
     </>
   )
 }

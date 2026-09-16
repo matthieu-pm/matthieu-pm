@@ -63,16 +63,6 @@
 .prose h2, .exercise h2, .takeaway h2, .steps h2 { font-size: 23px; font-weight: 500; letter-spacing: -0.025em; line-height: 1.3; }
 .prose > p { margin-top: 14px; color: var(--muted); }
 .prose > p strong { color: #3a3a3a; font-weight: 550; }
-.contents {
-  composes: card from "../card.module.css";
-
-  display: grid;
-  margin-top: 32px;
-  padding: 22px;
-}
-.contents > span { margin-bottom: 8px; color: #999; font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
-.contents a { padding-block: 4px; color: #4d4d4d; font-size: 14px; text-decoration-color: transparent; }
-.contents a:hover { color: #111; text-decoration-color: #aaa; }
 .componentCloud { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 24px; }
 .componentCloud span { padding: 6px 10px; border: 1px solid #dededb; border-radius: 999px; background: #fff; color: #555; font-size: 13px; }
 .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 28px; }
@@ -214,9 +204,6 @@
 .takeaway > span { color: #888; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
 .takeaway h2 { max-width: 440px; margin-top: 22px; font-size: 28px; }
 .takeaway p { max-width: 500px; margin-top: 12px; color: var(--muted); }
-.sourceNote { margin-top: 18px; color: #999; font-size: 12px; text-align: center; }
-.sourceNote a { color: #666; }
-
 .guideBody { margin-top: 56px; }
 .guideBody .prose { margin-top: 0; }
 .steps { display: grid; gap: 0; margin-top: 52px; border-top: 1px solid var(--line); }
