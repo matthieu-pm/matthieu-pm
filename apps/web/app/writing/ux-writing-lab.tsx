@@ -33,6 +33,18 @@ function Feedback({ correct, children }: { correct: boolean; children: React.Rea
   )
 }
 
+function SelectionMark({ visible }: { visible: boolean }) {
+  return (
+    <span
+      className={styles.selectionMark}
+      data-visible={visible}
+      aria-hidden="true"
+    >
+      <HugeiconsIcon icon={Tick02Icon} size={14} strokeWidth={2.2} />
+    </span>
+  )
+}
+
 function FeedbackSlot({
   visible,
   correct,
@@ -42,9 +54,11 @@ function FeedbackSlot({
   correct: boolean
   children: React.ReactNode
 }) {
+  if (!visible) return null
+
   return (
     <div className={styles.feedbackSlot}>
-      {visible ? <Feedback correct={correct}>{children}</Feedback> : null}
+      <Feedback correct={correct}>{children}</Feedback>
     </div>
   )
 }
@@ -113,6 +127,7 @@ export function GoodOrBad() {
             onClick={() => setChoice("bad")}
           >
             <span>Option A</span>
+            <SelectionMark visible={choice === "bad"} />
             <strong>Something went wrong.</strong>
             <small>Please try again later.</small>
           </button>
@@ -123,6 +138,7 @@ export function GoodOrBad() {
             onClick={() => setChoice("good")}
           >
             <span>Option B</span>
+            <SelectionMark visible={choice === "good"} />
             <strong>Upload paused</strong>
             <small>Reconnect to the internet, then resume your upload.</small>
           </button>
@@ -224,6 +240,7 @@ export function MatchTheAction() {
               key={id}
             >
               {label}
+              <SelectionMark visible={choice === id} />
             </button>
           ))}
         </div>
@@ -306,7 +323,9 @@ export function ToneInContext() {
                 onClick={() => setChoice(index)}
                 key={option}
               >
-                <span>{String.fromCharCode(65 + index)}</span>{option}
+                <span>{String.fromCharCode(65 + index)}</span>
+                <span className={styles.toneChoiceLabel}>{option}</span>
+                <SelectionMark visible={choice === index} />
               </button>
             ))}
           </div>

@@ -59,7 +59,8 @@
 .hero .lead { max-width: 590px; margin-top: 20px; color: #3a3a3a; font-size: 21px; letter-spacing: -0.02em; line-height: 1.45; }
 .byline { display: flex; justify-content: space-between; gap: 24px; margin-top: 28px; color: #858585; font-size: 13px; }
 
-.prose { margin-top: 56px; }
+.prose { margin-top: 80px; }
+.hero + .prose { margin-top: 56px; }
 .prose h2, .exercise h2, .takeaway h2, .steps h2 { font-size: 23px; font-weight: 500; letter-spacing: -0.025em; line-height: 1.3; }
 .prose > p { margin-top: 14px; color: var(--muted); }
 .prose > p strong { color: #3a3a3a; font-weight: 550; }
@@ -111,16 +112,20 @@
 .aiNote p { margin-top: 10px; color: #5f5f5f; }
 .aiNote strong { display: block; margin-top: 18px; color: #303030; font-weight: 600; }
 
-.exercise { margin-top: 88px; scroll-margin-top: 24px; }
+.exercise { margin-top: 80px; scroll-margin-top: 24px; }
 .exerciseHeading p { margin-top: 8px; color: var(--muted); }
 
 .lab {
   composes: card from "../card.module.css";
 
+  --lab-space-sm: 8px;
+  --lab-space-md: 12px;
+  --lab-space-lg: 16px;
+
   margin-top: 24px;
   padding: 4px 10px;
 }
-.labBody { padding: 26px 8px 14px; }
+.labBody { padding: 20px 8px 12px; }
 .lab button {
   transition-property: scale, color, background-color, box-shadow;
   transition-duration: 150ms;
@@ -128,12 +133,12 @@
 }
 .lab button:active:not(:disabled) { scale: 0.96; }
 .prompt { color: #424242; font-weight: 500; line-height: 1.45; }
-.selectGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
+.selectGrid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--lab-space-sm); margin-top: var(--lab-space-lg); }
 .selectGrid button { display: flex; min-height: 46px; align-items: center; gap: 9px; padding: 9px 11px; border: 0; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 1px 2px rgb(0 0 0 / 7%), 0 4px 10px -7px rgb(0 0 0 / 28%); color: #454545; text-align: left; }
 .selectGrid button span { display: grid; width: 22px; height: 22px; flex: 0 0 22px; place-items: center; border-radius: 6px; background: #f0f0ee; color: #777; font-size: 13px; }
 .selectGrid button.selectedChoice { background: #f0f0ee; box-shadow: 0 0 0 1px rgb(0 0 0 / 12%), 0 1px 3px rgb(0 0 0 / 10%); color: #242424; }
 .selectGrid button.selectedChoice span { background: #242424; color: #fff; }
-.feedbackSlot { min-height: 44px; margin-top: 12px; }
+.feedbackSlot { margin-top: var(--lab-space-md); }
 .feedback {
   display: grid;
   grid-template-columns: 24px minmax(0, 1fr);
@@ -157,9 +162,25 @@
 .feedbackGood { background: #ececea; color: #343434; }
 .feedbackTry { background: #f1efeb; color: #5f5546; }
 .feedbackIcon { display: grid; width: 24px; height: 24px; place-items: center; border-radius: 7px; background: rgb(255 255 255 / 68%); }
+.selectionMark {
+  display: grid !important;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  place-items: center;
+  border-radius: 999px;
+  background: #242424;
+  color: #fff !important;
+  opacity: 0;
+  transform: scale(0.25);
+  filter: blur(2px);
+  transition: opacity 200ms cubic-bezier(0.2, 0, 0, 1), transform 200ms cubic-bezier(0.2, 0, 0, 1), filter 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+.selectionMark[data-visible="true"] { opacity: 1; transform: scale(1); filter: blur(0); }
 
-.comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+.comparison { display: grid; grid-template-columns: 1fr 1fr; gap: var(--lab-space-md); margin-top: var(--lab-space-lg); }
 .optionCard {
+  position: relative;
   min-height: 138px;
   padding: 18px;
   border: 0;
@@ -169,6 +190,7 @@
   color: var(--ink);
   text-align: left;
 }
+.optionCard > .selectionMark { position: absolute; top: 14px; right: 14px; }
 .optionCard.optionSelected { background: #f5f5f3; box-shadow: 0 0 0 1px rgb(0 0 0 / 12%), 0 1px 3px rgb(0 0 0 / 11%); }
 .comparison span, .comparison strong, .comparison small { display: block; }
 .comparison span { color: #9a9a9a; font-family: ui-monospace, monospace; font-size: 11px; text-transform: uppercase; }
@@ -178,10 +200,10 @@
 .beforeCopy { padding: 11px 14px; border-left: 2px solid #c8c8c3; color: var(--muted); }
 .beforeCopy span { color: #999; font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
 .beforeCopy p { margin-top: 4px; }
-.fieldLabel { display: block; margin-top: 16px; color: #555; font-size: 13px; font-weight: 550; }
-.lab textarea { display: block; width: 100%; min-height: 112px; margin-top: 7px; resize: vertical; border: 1px solid #dcdcd8; border-radius: 12px; background: #fff; color: var(--ink); line-height: 1.5; padding: 13px 14px; }
+.fieldLabel { display: block; margin-top: var(--lab-space-lg); color: #555; font-size: 13px; font-weight: 550; }
+.lab textarea { display: block; width: 100%; min-height: 112px; margin-top: var(--lab-space-sm); resize: vertical; border: 1px solid #dcdcd8; border-radius: 12px; background: #fff; color: var(--ink); line-height: 1.5; padding: 13px 14px; }
 .lab textarea::placeholder { color: #aaa; }
-.labActions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; }
+.labActions { display: flex; align-items: center; justify-content: space-between; gap: var(--lab-space-md); margin-top: var(--lab-space-md); }
 .labActions > span { color: #999; font-size: 12px; }
 .labActions button { display: inline-flex; min-height: 36px; align-items: center; justify-content: center; gap: 6px; padding: 7px 13px; border: 0; border-radius: 10px; background: #242424; box-shadow: inset 0 0 0 1px rgb(255 255 255 / 8%), 0 1px 2px rgb(0 0 0 / 18%), 0 5px 10px -7px rgb(0 0 0 / 45%); color: #fff; font-size: 14px; font-weight: 500; }
 .labActions button:disabled { cursor: default; opacity: 0.4; }
@@ -190,7 +212,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-top: 14px;
+  margin-top: var(--lab-space-md);
   padding: 14px;
   border-radius: 11px;
   background: #f0f0ee;
@@ -216,9 +238,10 @@
 }
 .miniDialog span { font-weight: 550; }
 .miniDialog p { margin-top: 5px; color: var(--muted); font-size: 14px; }
-.miniDialog + .prompt { margin-top: 20px; }
-.choiceRow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-.choiceRow button { display: inline-flex; min-height: 38px; align-items: center; justify-content: center; padding: 7px 13px; border: 0; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 1px 2px rgb(0 0 0 / 7%), 0 4px 10px -7px rgb(0 0 0 / 28%); color: #343434; font-size: 14px; font-weight: 500; }
+.miniDialog + .prompt { margin-top: var(--lab-space-lg); }
+.choiceRow { display: flex; flex-wrap: wrap; gap: var(--lab-space-sm); margin-top: var(--lab-space-md); }
+.choiceRow button { display: inline-flex; min-height: 38px; align-items: center; justify-content: center; gap: 8px; padding: 7px 10px 7px 13px; border: 0; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 1px 2px rgb(0 0 0 / 7%), 0 4px 10px -7px rgb(0 0 0 / 28%); color: #343434; font-size: 14px; font-weight: 500; }
+.choiceRow button > .selectionMark { width: 18px; height: 18px; flex-basis: 18px; }
 .choiceRow button.choiceSelected { background: #f0f0ee; box-shadow: 0 0 0 1px rgb(0 0 0 / 12%), 0 1px 3px rgb(0 0 0 / 10%); color: #1f1f1f; }
 .situationTabs { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; padding: 3px; border-radius: 14px; background: #efefec; box-shadow: inset 0 0 0 1px rgb(0 0 0 / 5%); }
 .situationTabs button { position: relative; z-index: 1; min-height: 34px; padding: 0 10px; border: 0; border-radius: 11px; background: transparent; color: #71716d; font-size: 13px; }
@@ -238,11 +261,13 @@
     filter: blur(2px);
   }
 }
-.situationPrompt { margin-top: 18px; color: #444; font-weight: 500; }
-.toneChoices { display: grid; gap: 7px; margin-top: 12px; }
-.toneChoices button { display: grid; grid-template-columns: 26px 1fr; align-items: center; gap: 10px; min-height: 52px; padding: 9px 12px; border: 0; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 1px 2px rgb(0 0 0 / 7%), 0 4px 10px -7px rgb(0 0 0 / 28%); color: #444; text-align: left; }
+.situationPrompt { margin-top: var(--lab-space-lg); color: #444; font-weight: 500; }
+.toneChoices { display: grid; gap: var(--lab-space-sm); margin-top: var(--lab-space-md); }
+.toneChoices button { display: grid; grid-template-columns: 26px minmax(0, 1fr) 22px; align-items: center; gap: 10px; min-height: 48px; padding: 8px 12px; border: 0; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 1px 2px rgb(0 0 0 / 7%), 0 4px 10px -7px rgb(0 0 0 / 28%); color: #444; text-align: left; }
 .toneChoices button.choiceSelected { background: #f0f0ee; box-shadow: 0 0 0 1px rgb(0 0 0 / 12%), 0 1px 3px rgb(0 0 0 / 10%); color: #1f1f1f; }
 .toneChoices span { display: grid; width: 24px; height: 24px; place-items: center; border-radius: 7px; background: #f0f0ee; color: #777; font-family: ui-monospace, monospace; font-size: 11px; }
+.toneChoices .toneChoiceLabel { display: block; width: auto; height: auto; border-radius: 0; background: transparent; color: inherit; font-family: inherit; font-size: 14px; }
+.toneChoices .selectionMark { width: 22px; height: 22px; border-radius: 999px; background: #242424; color: #fff; }
 
 @media (hover: hover) and (pointer: fine) {
   .selectGrid button:hover,
@@ -256,7 +281,7 @@
 .takeaway {
   composes: card from "../card.module.css";
 
-  margin-top: 96px;
+  margin-top: 80px;
   padding: 36px;
   color: var(--ink);
 }
@@ -288,17 +313,20 @@
   .componentRules { grid-template-columns: 1fr; }
   .selectGrid { grid-template-columns: 1fr; }
   .comparison button { min-height: 132px; }
-  .exercise { margin-top: 68px; }
+  .prose { margin-top: 64px; }
+  .hero + .prose { margin-top: 48px; }
+  .exercise { margin-top: 64px; }
   .lab { padding: 4px 6px; }
-  .labBody { padding: 22px 6px 10px; }
+  .labBody { padding: 18px 6px 10px; }
   .choiceRow button { flex: 1 1 auto; }
-  .takeaway { margin-top: 72px; padding: 24px; }
+  .takeaway { margin-top: 64px; padding: 24px; }
   .footer { align-items: flex-start; flex-direction: column; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .page *, .page *::before, .page *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
   .feedback,
+  .selectionMark,
   .scoreResult,
   .toneScene { transform: none !important; filter: none !important; }
 }
