@@ -118,81 +118,140 @@
   composes: card from "../card.module.css";
 
   margin-top: 24px;
-  padding: 24px;
+  padding: 4px 10px;
 }
-.prompt { color: #424242; font-weight: 500; }
-.sentenceChoices { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; padding: 18px; border: 1px solid var(--line); border-radius: 13px; background: #fff; }
-.sentenceChoices button { padding: 5px 8px; border: 1px solid transparent; border-radius: 7px; background: #f3f3f1; color: #303030; }
-.sentenceChoices button:hover { border-color: #c9c9c5; background: #ededeb; }
+.labBody { padding: 26px 8px 14px; }
+.lab button {
+  transition-property: scale, color, background-color, box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+}
+.lab button:active:not(:disabled) { scale: 0.96; }
+.prompt { color: #424242; font-weight: 500; line-height: 1.45; }
 .selectGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
-.selectGrid button { display: flex; min-height: 46px; align-items: center; gap: 9px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: #454545; text-align: left; }
+.selectGrid button { display: flex; min-height: 46px; align-items: center; gap: 9px; padding: 9px 11px; border: 0; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 1px 2px rgb(0 0 0 / 7%), 0 4px 10px -7px rgb(0 0 0 / 28%); color: #454545; text-align: left; }
 .selectGrid button span { display: grid; width: 22px; height: 22px; flex: 0 0 22px; place-items: center; border-radius: 6px; background: #f0f0ee; color: #777; font-size: 13px; }
-.selectGrid button.selectedChoice { border-color: #9d9d98; background: #f0f0ee; color: #242424; }
+.selectGrid button.selectedChoice { background: #f0f0ee; box-shadow: 0 0 0 1px rgb(0 0 0 / 12%), 0 1px 3px rgb(0 0 0 / 10%); color: #242424; }
 .selectGrid button.selectedChoice span { background: #242424; color: #fff; }
-.feedback { margin-top: 14px; padding: 10px 12px; border-radius: 9px; font-size: 14px; }
+.feedbackSlot { min-height: 44px; margin-top: 12px; }
+.feedback {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 8px 11px;
+  border-radius: 11px;
+  font-size: 14px;
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  transition: opacity 220ms cubic-bezier(0.2, 0, 0, 1), transform 220ms cubic-bezier(0.2, 0, 0, 1), filter 220ms cubic-bezier(0.2, 0, 0, 1);
+
+  @starting-style {
+    opacity: 0;
+    transform: translateY(3px);
+    filter: blur(2px);
+  }
+}
 .feedbackGood { background: #ececea; color: #343434; }
 .feedbackTry { background: #f1efeb; color: #5f5546; }
+.feedbackIcon { display: grid; width: 24px; height: 24px; place-items: center; border-radius: 7px; background: rgb(255 255 255 / 68%); }
 
 .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
 .optionCard {
-  composes: card from "../card.module.css";
-
-  min-height: 152px;
-  padding: 20px;
+  min-height: 138px;
+  padding: 18px;
+  border: 0;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 1px 2px rgb(0 0 0 / 7%), 0 4px 10px -7px rgb(0 0 0 / 28%);
   color: var(--ink);
   text-align: left;
-  transition: box-shadow 150ms ease-out, transform 150ms ease-out;
 }
-.optionCard:hover { box-shadow: 0 0 0 1px rgb(0 0 0 / 8%), 0 2px 5px rgb(0 0 0 / 6%); transform: translateY(-1px); }
+.optionCard.optionSelected { background: #f5f5f3; box-shadow: 0 0 0 1px rgb(0 0 0 / 12%), 0 1px 3px rgb(0 0 0 / 11%); }
 .comparison span, .comparison strong, .comparison small { display: block; }
 .comparison span { color: #9a9a9a; font-family: ui-monospace, monospace; font-size: 11px; text-transform: uppercase; }
-.comparison strong { margin-top: 28px; font-weight: 550; }
+.comparison strong { margin-top: 22px; font-weight: 550; }
 .comparison small { margin-top: 4px; color: var(--muted); font-size: 14px; line-height: 1.4; }
 
-.beforeCopy { padding: 14px 16px; border-left: 2px solid #c8c8c3; color: var(--muted); }
+.beforeCopy { padding: 11px 14px; border-left: 2px solid #c8c8c3; color: var(--muted); }
 .beforeCopy span { color: #999; font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
 .beforeCopy p { margin-top: 4px; }
-.fieldLabel { display: block; margin-top: 18px; color: #555; font-size: 13px; font-weight: 550; }
+.fieldLabel { display: block; margin-top: 16px; color: #555; font-size: 13px; font-weight: 550; }
 .lab textarea { display: block; width: 100%; min-height: 112px; margin-top: 7px; resize: vertical; border: 1px solid #dcdcd8; border-radius: 12px; background: #fff; color: var(--ink); line-height: 1.5; padding: 13px 14px; }
 .lab textarea::placeholder { color: #aaa; }
 .labActions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; }
 .labActions > span { color: #999; font-size: 12px; }
-.labActions button, .choiceRow button { display: inline-flex; min-height: 36px; align-items: center; justify-content: center; gap: 6px; padding: 7px 13px; border: 0; border-radius: 9px; background: #242424; color: #fff; font-size: 14px; font-weight: 500; }
+.labActions button { display: inline-flex; min-height: 36px; align-items: center; justify-content: center; gap: 6px; padding: 7px 13px; border: 0; border-radius: 10px; background: #242424; box-shadow: inset 0 0 0 1px rgb(255 255 255 / 8%), 0 1px 2px rgb(0 0 0 / 18%), 0 5px 10px -7px rgb(0 0 0 / 45%); color: #fff; font-size: 14px; font-weight: 500; }
 .labActions button:disabled { cursor: default; opacity: 0.4; }
-.labActions .secondaryButton { border: 1px solid #dadad6; background: #fff; color: #555; }
-.scoreResult { display: flex; align-items: center; gap: 16px; margin-top: 16px; padding: 16px; border: 1px solid #d8d8d4; border-radius: 12px; background: #f5f5f3; }
+.scoreSlot:empty { display: none; }
+.scoreResult {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 11px;
+  background: #f0f0ee;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 5%);
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 220ms cubic-bezier(0.2, 0, 0, 1), transform 220ms cubic-bezier(0.2, 0, 0, 1);
+
+  @starting-style {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+}
 .scoreResult strong { color: #2f2f2f; font-size: 28px; font-weight: 500; letter-spacing: -0.04em; }
 .scoreResult strong span { color: #999; font-size: 13px; letter-spacing: 0; }
 .scoreResult p { color: #666; font-size: 14px; }
 
 .miniDialog {
-  composes: card from "../card.module.css";
-
-  padding: 24px;
+  padding: 17px 18px;
+  border-radius: 14px;
+  background: #f0f0ee;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 5%);
 }
 .miniDialog span { font-weight: 550; }
 .miniDialog p { margin-top: 5px; color: var(--muted); font-size: 14px; }
-.miniDialog + .prompt { margin-top: 18px; }
+.miniDialog + .prompt { margin-top: 20px; }
 .choiceRow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-.choiceRow button { border: 1px solid #d6d6d2; background: #fff; color: #343434; }
-.choiceRow button:hover { border-color: #aaa; }
+.choiceRow button { display: inline-flex; min-height: 38px; align-items: center; justify-content: center; padding: 7px 13px; border: 0; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 1px 2px rgb(0 0 0 / 7%), 0 4px 10px -7px rgb(0 0 0 / 28%); color: #343434; font-size: 14px; font-weight: 500; }
+.choiceRow button.choiceSelected { background: #f0f0ee; box-shadow: 0 0 0 1px rgb(0 0 0 / 12%), 0 1px 3px rgb(0 0 0 / 10%); color: #1f1f1f; }
+.situationTabs { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; padding: 3px; border-radius: 14px; background: #efefec; box-shadow: inset 0 0 0 1px rgb(0 0 0 / 5%); }
+.situationTabs button { position: relative; z-index: 1; min-height: 34px; padding: 0 10px; border: 0; border-radius: 11px; background: transparent; color: #71716d; font-size: 13px; }
+.situationTabs button[aria-selected="true"] { color: #272726; }
+.situationTabs button:active { scale: 1; }
+.tabIndicator { position: absolute; top: 3px; bottom: 3px; left: 3px; width: calc((100% - 6px) / 2); border-radius: 11px; background: #fff; box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 1px 3px rgb(0 0 0 / 12%); pointer-events: none; transform: translateX(0); transition: transform 200ms cubic-bezier(0.2, 0, 0, 1); }
+.situationTabs[data-selected-index="1"] .tabIndicator { transform: translateX(100%); }
+.toneScene {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  transition: opacity 180ms cubic-bezier(0.2, 0, 0, 1), transform 180ms cubic-bezier(0.2, 0, 0, 1), filter 180ms cubic-bezier(0.2, 0, 0, 1);
 
-.orderList { display: grid; gap: 7px; margin: 16px 0 0; padding: 0; list-style: none; }
-.orderList li { display: grid; grid-template-columns: 28px 1fr auto; align-items: center; gap: 10px; padding: 10px; border: 1px solid var(--line); border-radius: 11px; background: #fff; }
-.orderNumber { display: grid; width: 26px; height: 26px; place-items: center; border-radius: 7px; background: #f1f1ef; color: #777; font-family: ui-monospace, monospace; font-size: 11px; }
-.orderCopy { color: #333; font-size: 14px; }
-.orderCopy small { display: block; color: #999; font-size: 11px; }
-.orderButtons { display: flex; gap: 3px; }
-.orderButtons button { display: grid; width: 30px; height: 30px; padding: 0; place-items: center; border: 0; border-radius: 7px; background: #f1f1ef; color: #666; }
-.orderButtons button:disabled { cursor: default; opacity: 0.3; }
-.situationTabs { display: flex; gap: 4px; padding: 4px; border-radius: 11px; background: #eaeae7; }
-.situationTabs button { flex: 1; min-height: 34px; border: 0; border-radius: 8px; background: transparent; color: #6b6b6b; font-size: 13px; }
-.situationTabs button.activeTab { background: #fff; box-shadow: 0 1px 2px rgb(0 0 0 / 8%); color: #242424; font-weight: 550; }
+  @starting-style {
+    opacity: 0;
+    transform: translateY(3px);
+    filter: blur(2px);
+  }
+}
 .situationPrompt { margin-top: 18px; color: #444; font-weight: 500; }
 .toneChoices { display: grid; gap: 7px; margin-top: 12px; }
-.toneChoices button { display: grid; grid-template-columns: 26px 1fr; align-items: center; gap: 10px; min-height: 52px; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: #444; text-align: left; }
-.toneChoices button:hover { border-color: #bdbdb8; }
+.toneChoices button { display: grid; grid-template-columns: 26px 1fr; align-items: center; gap: 10px; min-height: 52px; padding: 9px 12px; border: 0; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 1px 2px rgb(0 0 0 / 7%), 0 4px 10px -7px rgb(0 0 0 / 28%); color: #444; text-align: left; }
+.toneChoices button.choiceSelected { background: #f0f0ee; box-shadow: 0 0 0 1px rgb(0 0 0 / 12%), 0 1px 3px rgb(0 0 0 / 10%); color: #1f1f1f; }
 .toneChoices span { display: grid; width: 24px; height: 24px; place-items: center; border-radius: 7px; background: #f0f0ee; color: #777; font-family: ui-monospace, monospace; font-size: 11px; }
+
+@media (hover: hover) and (pointer: fine) {
+  .selectGrid button:hover,
+  .optionCard:hover,
+  .choiceRow button:hover,
+  .toneChoices button:hover {
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 10%), 0 1px 2px rgb(0 0 0 / 8%), 0 5px 12px -7px rgb(0 0 0 / 32%);
+  }
+}
 
 .takeaway {
   composes: card from "../card.module.css";
@@ -230,13 +289,16 @@
   .selectGrid { grid-template-columns: 1fr; }
   .comparison button { min-height: 132px; }
   .exercise { margin-top: 68px; }
-  .lab { padding: 14px; border-radius: 15px; }
-  .orderList li { grid-template-columns: 26px 1fr; }
-  .orderButtons { grid-column: 2; justify-self: end; }
+  .lab { padding: 4px 6px; }
+  .labBody { padding: 22px 6px 10px; }
+  .choiceRow button { flex: 1 1 auto; }
   .takeaway { margin-top: 72px; padding: 24px; }
   .footer { align-items: flex-start; flex-direction: column; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .page *, .page *::before, .page *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+  .feedback,
+  .scoreResult,
+  .toneScene { transform: none !important; filter: none !important; }
 }

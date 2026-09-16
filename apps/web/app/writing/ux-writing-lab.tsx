@@ -1,6 +1,8 @@
 "use client"
 
 import { useMemo, useState } from "react"
+import { Alert02Icon, Tick02Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 
 import styles from "./article.module.css"
 
@@ -15,12 +17,35 @@ const microcopyItems = [
 
 function Feedback({ correct, children }: { correct: boolean; children: React.ReactNode }) {
   return (
-    <p
+    <div
       className={`${styles.feedback} ${correct ? styles.feedbackGood : styles.feedbackTry}`}
       role="status"
     >
-      {children}
-    </p>
+      <span className={styles.feedbackIcon} aria-hidden="true">
+        <HugeiconsIcon
+          icon={correct ? Tick02Icon : Alert02Icon}
+          size={16}
+          strokeWidth={2}
+        />
+      </span>
+      <span>{children}</span>
+    </div>
+  )
+}
+
+function FeedbackSlot({
+  visible,
+  correct,
+  children,
+}: {
+  visible: boolean
+  correct: boolean
+  children: React.ReactNode
+}) {
+  return (
+    <div className={styles.feedbackSlot}>
+      {visible ? <Feedback correct={correct}>{children}</Feedback> : null}
+    </div>
   )
 }
 
@@ -42,32 +67,32 @@ export function MicrocopyMap() {
 
   return (
     <div className={styles.lab}>
-      <p className={styles.prompt}>Select everything a UX writer would shape inside a product.</p>
-      <div className={styles.selectGrid} aria-label="Choose the UX writing examples">
-        {microcopyItems.map(([id, label]) => (
-          <button
-            type="button"
-            className={selected.includes(id) ? styles.selectedChoice : ""}
-            aria-pressed={selected.includes(id)}
-            onClick={() => toggle(id)}
-            key={id}
-          >
-            <span aria-hidden="true">{selected.includes(id) ? "✓" : "+"}</span>
-            {label}
-          </button>
-        ))}
-      </div>
-      <div className={styles.labActions}>
-        <span>{selected.length} selected</span>
-        <button type="button" onClick={() => setChecked(true)}>Check answer</button>
-      </div>
-      {checked && (
-        <Feedback correct={correct}>
+      <div className={styles.labBody}>
+        <p className={styles.prompt}>Select everything a UX writer would shape inside a product.</p>
+        <div className={styles.selectGrid} aria-label="Choose the UX writing examples">
+          {microcopyItems.map(([id, label]) => (
+            <button
+              type="button"
+              className={selected.includes(id) ? styles.selectedChoice : ""}
+              aria-pressed={selected.includes(id)}
+              onClick={() => toggle(id)}
+              key={id}
+            >
+              <span aria-hidden="true">{selected.includes(id) ? "✓" : "+"}</span>
+              {label}
+            </button>
+          ))}
+        </div>
+        <div className={styles.labActions}>
+          <span>{selected.length} selected</span>
+          <button type="button" onClick={() => setChecked(true)}>Check answer</button>
+        </div>
+        <FeedbackSlot visible={checked} correct={correct}>
           {correct
             ? "Exactly. UX writing lives in the interface and supports a user action."
             : "Look for words that guide an interaction. Blog posts and ad slogans have different jobs."}
-        </Feedback>
-      )}
+        </FeedbackSlot>
+      </div>
     </div>
   )
 }
@@ -78,26 +103,36 @@ export function GoodOrBad() {
 
   return (
     <div className={styles.lab}>
-      <p className={styles.prompt}>A file upload stopped at 92%. Which message helps the user recover?</p>
-      <div className={styles.comparison}>
-        <button className={styles.optionCard} type="button" onClick={() => setChoice("bad")}>
-          <span>Option A</span>
-          <strong>Something went wrong.</strong>
-          <small>Please try again later.</small>
-        </button>
-        <button className={styles.optionCard} type="button" onClick={() => setChoice("good")}>
-          <span>Option B</span>
-          <strong>Upload paused</strong>
-          <small>Reconnect to the internet, then resume your upload.</small>
-        </button>
-      </div>
-      {choice && (
-        <Feedback correct={correct}>
+      <div className={styles.labBody}>
+        <p className={styles.prompt}>A file upload stopped at 92%. Which message helps the user recover?</p>
+        <div className={styles.comparison}>
+          <button
+            className={`${styles.optionCard} ${choice === "bad" ? styles.optionSelected : ""}`}
+            type="button"
+            aria-pressed={choice === "bad"}
+            onClick={() => setChoice("bad")}
+          >
+            <span>Option A</span>
+            <strong>Something went wrong.</strong>
+            <small>Please try again later.</small>
+          </button>
+          <button
+            className={`${styles.optionCard} ${choice === "good" ? styles.optionSelected : ""}`}
+            type="button"
+            aria-pressed={choice === "good"}
+            onClick={() => setChoice("good")}
+          >
+            <span>Option B</span>
+            <strong>Upload paused</strong>
+            <small>Reconnect to the internet, then resume your upload.</small>
+          </button>
+        </div>
+        <FeedbackSlot visible={choice !== null} correct={correct}>
           {correct
             ? "Right. It names the state, the cause, and the next step."
             : "Option A is vague: it hides both the cause and the way forward."}
-        </Feedback>
-      )}
+        </FeedbackSlot>
+      </div>
     </div>
   )
 }
@@ -122,37 +157,41 @@ export function RewriteScore() {
 
   return (
     <div className={styles.lab}>
-      <div className={styles.beforeCopy}>
-        <span>Replace this</span>
-        <p>Authentication was unsuccessful due to invalid credentials.</p>
-      </div>
-      <label className={styles.fieldLabel} htmlFor="rewrite">Your version</label>
-      <textarea
-        id="rewrite"
-        value={value}
-        onChange={(event) => {
-          setValue(event.target.value)
-          setSubmitted(false)
-        }}
-        placeholder="Write a shorter, more useful message…"
-        maxLength={180}
-      />
-      <div className={styles.labActions}>
-        <span>{value.length}/180</span>
-        <button type="button" onClick={() => setSubmitted(true)} disabled={!value.trim()}>
-          Score my copy
-        </button>
-      </div>
-      {submitted && (
-        <div className={styles.scoreResult} role="status">
-          <strong>{score}<span>/100</span></strong>
-          <p>
-            {score >= 85
-              ? "Clear, concise, and actionable."
-              : "Replace technical terms, name the problem, and give one next step."}
-          </p>
+      <div className={styles.labBody}>
+        <div className={styles.beforeCopy}>
+          <span>Replace this</span>
+          <p>Authentication was unsuccessful due to invalid credentials.</p>
         </div>
-      )}
+        <label className={styles.fieldLabel} htmlFor="rewrite">Your version</label>
+        <textarea
+          id="rewrite"
+          value={value}
+          onChange={(event) => {
+            setValue(event.target.value)
+            setSubmitted(false)
+          }}
+          placeholder="Write a shorter, more useful message…"
+          maxLength={180}
+        />
+        <div className={styles.labActions}>
+          <span>{value.length}/180</span>
+          <button type="button" onClick={() => setSubmitted(true)} disabled={!value.trim()}>
+            Score my copy
+          </button>
+        </div>
+        <div className={styles.scoreSlot}>
+          {submitted && (
+            <div className={styles.scoreResult} role="status">
+              <strong>{score}<span>/100</span></strong>
+              <p>
+                {score >= 85
+                  ? "Clear, concise, and actionable."
+                  : "Replace technical terms, name the problem, and give one next step."}
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   )
 }
@@ -163,23 +202,37 @@ export function MatchTheAction() {
 
   return (
     <div className={styles.lab}>
-      <div className={styles.miniDialog}>
-        <span>Hotel search</span>
-        <p>The button only checks whether rooms are available. It does not make a booking.</p>
-      </div>
-      <p className={styles.prompt}>What should the button say?</p>
-      <div className={styles.choiceRow}>
-        <button type="button" onClick={() => setChoice("book")}>Book a room</button>
-        <button type="button" onClick={() => setChoice("checkout")}>Check availability</button>
-        <button type="button" onClick={() => setChoice("continue")}>Continue</button>
-      </div>
-      {choice && (
-        <Feedback correct={correct}>
+      <div className={styles.labBody}>
+        <div className={styles.miniDialog}>
+          <span>Hotel search</span>
+          <p>The button only checks whether rooms are available. It does not make a booking.</p>
+        </div>
+        <p className={styles.prompt}>What should the button say?</p>
+        <div className={styles.choiceRow}>
+          {(
+            [
+              ["book", "Book a room"],
+              ["checkout", "Check availability"],
+              ["continue", "Continue"],
+            ] as const
+          ).map(([id, label]) => (
+            <button
+              type="button"
+              className={choice === id ? styles.choiceSelected : ""}
+              aria-pressed={choice === id}
+              onClick={() => setChoice(id)}
+              key={id}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        <FeedbackSlot visible={choice !== null} correct={correct}>
           {correct
             ? "Correct. The label lowers pressure and describes what actually happens."
             : "The label should predict the button’s actual behavior."}
-        </Feedback>
-      )}
+        </FeedbackSlot>
+      </div>
     </div>
   )
 }
@@ -222,35 +275,48 @@ export function ToneInContext() {
 
   return (
     <div className={styles.lab}>
-      <div className={styles.situationTabs} role="tablist" aria-label="Choose a situation">
-        {toneSituations.map((item, index) => (
-          <button
-            type="button"
-            role="tab"
-            aria-selected={situationIndex === index}
-            className={situationIndex === index ? styles.activeTab : ""}
-            onClick={() => changeSituation(index)}
-            key={item.id}
-          >
-            {item.label}
-          </button>
-        ))}
-      </div>
-      <p className={styles.situationPrompt}>{situation.prompt}</p>
-      <div className={styles.toneChoices}>
-        {situation.choices.map((option, index) => (
-          <button type="button" onClick={() => setChoice(index)} key={option}>
-            <span>{String.fromCharCode(65 + index)}</span>{option}
-          </button>
-        ))}
-      </div>
-      {choice !== null && (
-        <Feedback correct={correct}>
+      <div className={styles.labBody}>
+        <div
+          className={styles.situationTabs}
+          role="tablist"
+          aria-label="Choose a situation"
+          data-selected-index={situationIndex}
+        >
+          <span className={styles.tabIndicator} aria-hidden="true" />
+          {toneSituations.map((item, index) => (
+            <button
+              type="button"
+              role="tab"
+              aria-selected={situationIndex === index}
+              onClick={() => changeSituation(index)}
+              key={item.id}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+        <div className={styles.toneScene} key={situation.id}>
+          <p className={styles.situationPrompt}>{situation.prompt}</p>
+          <div className={styles.toneChoices}>
+            {situation.choices.map((option, index) => (
+              <button
+                type="button"
+                className={choice === index ? styles.choiceSelected : ""}
+                aria-pressed={choice === index}
+                onClick={() => setChoice(index)}
+                key={option}
+              >
+                <span>{String.fromCharCode(65 + index)}</span>{option}
+              </button>
+            ))}
+          </div>
+        </div>
+        <FeedbackSlot visible={choice !== null} correct={correct}>
           {correct
             ? "That tone fits the user’s emotional state while keeping the brand clear and human."
             : "Keep the brand voice, but adjust the energy to fit the moment."}
-        </Feedback>
-      )}
+        </FeedbackSlot>
+      </div>
     </div>
   )
 }
