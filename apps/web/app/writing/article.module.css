@@ -240,8 +240,7 @@
 .miniDialog p { margin-top: 5px; color: var(--muted); font-size: 14px; }
 .miniDialog + .prompt { margin-top: var(--lab-space-lg); }
 .choiceRow { display: flex; flex-wrap: wrap; gap: var(--lab-space-sm); margin-top: var(--lab-space-md); }
-.choiceRow button { display: inline-flex; min-height: 38px; align-items: center; justify-content: center; gap: 8px; padding: 7px 10px 7px 13px; border: 0; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 1px 2px rgb(0 0 0 / 7%), 0 4px 10px -7px rgb(0 0 0 / 28%); color: #343434; font-size: 14px; font-weight: 500; }
-.choiceRow button > .selectionMark { width: 18px; height: 18px; flex-basis: 18px; }
+.choiceRow button { display: inline-flex; min-height: 38px; align-items: center; justify-content: center; padding: 7px 13px; border: 0; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 1px 2px rgb(0 0 0 / 7%), 0 4px 10px -7px rgb(0 0 0 / 28%); color: #343434; font-size: 14px; font-weight: 500; }
 .choiceRow button.choiceSelected { background: #f0f0ee; box-shadow: 0 0 0 1px rgb(0 0 0 / 12%), 0 1px 3px rgb(0 0 0 / 10%); color: #1f1f1f; }
 .situationTabs { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; padding: 3px; border-radius: 14px; background: #efefec; box-shadow: inset 0 0 0 1px rgb(0 0 0 / 5%); }
 .situationTabs button { position: relative; z-index: 1; min-height: 34px; padding: 0 10px; border: 0; border-radius: 11px; background: transparent; color: #71716d; font-size: 13px; transition: none; }
@@ -331,7 +330,6 @@
   .exercise { margin-top: 64px; }
   .lab { padding: 4px 6px; }
   .labBody { padding: 18px 6px 10px; }
-  .choiceRow button { flex: 1 1 auto; }
   .takeaway { margin-top: 64px; padding: 24px; }
   .footer { align-items: flex-start; flex-direction: column; }
 }

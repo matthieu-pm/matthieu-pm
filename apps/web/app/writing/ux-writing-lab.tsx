@@ -240,7 +240,6 @@ export function MatchTheAction() {
               key={id}
             >
               {label}
-              <SelectionMark visible={choice === id} />
             </button>
           ))}
         </div>
