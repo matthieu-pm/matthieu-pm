@@ -22,7 +22,7 @@ const articles = {
   "ux-writing": {
     title: "Write the Interface",
     description:
-      "Learn to write clear product copy through five hands-on exercises.",
+      "A practical guide to writing clear, useful, and consistent interface copy.",
   },
   "ai-design-engineer": {
     title: "From Prompt to Product",

@@ -24,7 +24,8 @@ const capabilities = [
 const articles = [
   {
     title: "Write the Interface",
-    detail: "Learn to write clear product copy through five hands-on exercises.",
+    detail:
+      "A practical guide to writing clear, useful, and consistent interface copy.",
     href: "/writing/ux-writing",
   },
   {
