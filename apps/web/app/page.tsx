@@ -24,20 +24,19 @@ const capabilities = [
 const articles = [
   {
     title: "Write the Interface",
-    detail:
-      "A beginner’s guide to UX writing, with five interactive exercises.",
+    detail: "Learn to write clear product copy through five hands-on exercises.",
     href: "/writing/ux-writing",
   },
   {
     title: "From Prompt to Product",
     detail:
-      "A beginner’s guide to using AI as a design engineer.",
+      "A hands-on introduction to prompting, building, and refining interfaces with AI.",
     href: "/writing/ai-design-engineer",
   },
   {
     title: "The AI-Augmented Product Manager",
     detail:
-      "A beginner’s guide to using AI for discovery, decisions, and delivery.",
+      "A practical guide for PMs using AI to sharpen discovery, decisions, and delivery.",
     href: "/writing/ai-product-manager",
   },
 ]

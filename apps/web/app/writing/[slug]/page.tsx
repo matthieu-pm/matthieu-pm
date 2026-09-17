@@ -22,17 +22,17 @@ const articles = {
   "ux-writing": {
     title: "Write the Interface",
     description:
-      "A complete beginner’s guide to UX writing—from microcopy and research to voice, accessibility, testing, and AI-assisted practice.",
+      "Learn to write clear product copy through five hands-on exercises.",
   },
   "ai-design-engineer": {
     title: "From Prompt to Product",
     description:
-      "A beginner’s guide to using AI as a design engineer—from first sketch to polished interface.",
+      "A hands-on introduction to prompting, building, and refining interfaces with AI.",
   },
   "ai-product-manager": {
     title: "The AI-Augmented Product Manager",
     description:
-      "A beginner’s guide to using AI for product discovery, clearer decisions, and faster delivery.",
+      "A practical guide for PMs using AI to sharpen discovery, decisions, and delivery.",
   },
 } as const
 
