@@ -403,45 +403,6 @@ export function Inspirations() {
             </div>
           </aside>
           <main className={styles.main}>
-            <div className={styles.toolbar}>
-              <div className={styles.toolbarGroup}>
-                <button
-                  type="button"
-                  onClick={() => setSavedOpen(true)}
-                  aria-label="Open bookmarks"
-                >
-                  <Icon index={6} />
-                  <kbd>Saved{saved.length > 0 ? ` ${saved.length}` : ""}</kbd>
-                </button>
-                <a
-                  href="https://www.designeer.xyz/"
-                  aria-label="Open Designeer to submit a tool"
-                  title="Submit a tool on Designeer"
-                >
-                  <Icon index={7} />
-                </a>
-              </div>
-              <div className={styles.toolbarGroup}>
-                <button type="button" onClick={openSearch} aria-label="Search">
-                  <Icon index={8} />
-                  <kbd>⌘</kbd>
-                  <kbd>K</kbd>
-                </button>
-                <span className={styles.divider} />
-                <button
-                  type="button"
-                  onClick={explore}
-                  aria-label="Explore a random resource"
-                >
-                  <Icon index={9} />
-                  <kbd>⌘</kbd>
-                  <kbd>E</kbd>
-                </button>
-                <span className={styles.divider} />
-                {viewButton}
-                {themeButton}
-              </div>
-            </div>
             {catalogue.map((section, index) => (
               <section
                 id={section.id}

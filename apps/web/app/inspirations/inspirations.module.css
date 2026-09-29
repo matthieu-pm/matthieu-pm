@@ -178,6 +178,8 @@
 }
 .sidebar nav a,
 .mobileMenu nav a {
+  position: relative;
+  isolation: isolate;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -185,21 +187,44 @@
   border-radius: 6px;
   color: var(--secondary);
   min-height: 30px;
+  transition: color 120ms ease-out;
 }
-.sidebar nav a:hover,
-.mobileMenu nav a:hover {
-  color: var(--ink);
-  background: var(--field);
-}
-.sidebar nav a.activeNav,
-.mobileMenu nav a.activeNav {
-  color: var(--ink);
-  font-weight: 500;
+.sidebar nav a::before,
+.mobileMenu nav a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
   background: linear-gradient(var(--field), var(--surface));
   box-shadow:
     inset 0 0 0 1px var(--line),
     inset 0 1px 1px color-mix(in srgb, var(--ink) 5%, transparent),
     0 2px 6px -4px #0005;
+  opacity: 0;
+  transition: opacity 120ms ease-out;
+}
+.sidebar nav a:is(.activeNav, :focus-visible),
+.mobileMenu nav a:is(.activeNav, :focus-visible) {
+  color: var(--ink);
+  font-weight: 500;
+}
+.sidebar nav a:is(.activeNav, :focus-visible)::before,
+.mobileMenu nav a:is(.activeNav, :focus-visible)::before {
+  opacity: 1;
+}
+@media (hover: hover) {
+  .sidebar nav a:hover,
+  .mobileMenu nav a:hover {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .sidebar nav a:hover::before,
+  .mobileMenu nav a:hover::before {
+    opacity: 1;
+    transition: opacity 180ms ease-out 120ms;
+  }
 }
 .sidebar nav small,
 .mobileMenu small {
@@ -241,37 +266,6 @@
 .main {
   min-width: 0;
 }
-.toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px var(--pad);
-  border-bottom: 1px dashed var(--line);
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: var(--paper);
-  height: 53px;
-}
-.toolbarGroup {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: var(--muted);
-}
-.toolbarGroup :where(button, a) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  padding: 5px 6px;
-  border-radius: 10px;
-  min-height: 32px;
-}
-.toolbarGroup :where(button, a):hover {
-  background: var(--field);
-  color: var(--ink);
-}
 .page kbd {
   display: inline-flex;
   align-items: center;
@@ -309,7 +303,7 @@
 .section {
   padding: var(--pad);
   border-bottom: 1px dashed var(--line);
-  scroll-margin-top: 53px;
+  scroll-margin-top: 0;
 }
 .sectionHeading {
   display: flex;
@@ -870,8 +864,7 @@
     margin-top: 20px;
   }
   .sidebarNavigation,
-  .sidebarFooter,
-  .toolbar {
+  .sidebarFooter {
     display: none;
   }
   .sidebarBottom {
