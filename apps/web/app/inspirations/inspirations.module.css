@@ -186,10 +186,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 8px;
+  padding: 4.8px 8px;
   border-radius: 6px;
   color: var(--secondary);
-  min-height: 30px;
+  min-height: 28px;
   transition: color 120ms ease-out;
 }
 .sidebar nav::before,
@@ -199,7 +199,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: var(--highlight-height, 30px);
+  height: var(--highlight-height, 28px);
   z-index: -1;
   border-radius: 6px;
   pointer-events: none;
@@ -275,6 +275,7 @@
   justify-content: space-between;
   padding: 10px var(--pad);
   border-bottom: 1px dashed var(--line);
+  border-right: 1px solid var(--strong-line);
   position: sticky;
   top: 0;
   z-index: 20;
@@ -471,8 +472,8 @@
   display: none;
   position: absolute;
   width: 300px;
-  right: -5px;
-  bottom: calc(100% + 12px);
+  left: calc(100% + 12px);
+  top: 0;
   padding: 6px;
   border-radius: 14px;
   background: var(--surface) !important;
@@ -484,21 +485,14 @@
 .hoverPreview::after {
   content: "";
   position: absolute;
-  inset: 100% 0 auto;
-  height: 13px;
+  inset: 0 100% 0 auto;
+  width: 13px;
 }
 .hoverPreview > * {
   height: auto;
   aspect-ratio: 16 / 9;
   border-radius: 8px;
   overflow: hidden;
-}
-.row[data-preview-below="true"] .hoverPreview {
-  top: calc(100% + 12px);
-  bottom: auto;
-}
-.row[data-preview-below="true"] .hoverPreview::after {
-  inset: auto 0 100%;
 }
 @media (hover: hover) and (min-width: 1024px) {
   .row:hover .hoverPreview,

@@ -281,7 +281,37 @@ export function Inspirations({
   const [savedOpen, setSavedOpen] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [selected, setSelected] = useState<Resource | null>(null)
-  const [previewBelow, setPreviewBelow] = useState<string | null>(null)
+  const [previewPosition, setPreviewPosition] = useState<{
+    href: string
+    left: number
+    top: number
+  } | null>(null)
+  const positionPreview = (row: HTMLDivElement, href: string) => {
+    const rect = row.getBoundingClientRect()
+    const width = 300
+    const height = 174
+    const gutter = 16
+    const topGutter = Math.max(
+      gutter,
+      (row.closest("main")?.firstElementChild?.getBoundingClientRect().bottom ??
+        0) + 12
+    )
+    setPreviewPosition({
+      href,
+      left: Math.min(
+        rect.width + 12,
+        window.innerWidth - rect.left - width - gutter
+      ),
+      top:
+        Math.max(
+          topGutter,
+          Math.min(
+            rect.top + (rect.height - height) / 2,
+            window.innerHeight - height - gutter
+          )
+        ) - rect.top,
+    })
+  }
   const [activeSection, setActiveSection] = useState(
     catalogue[0]?.id ?? category
   )
@@ -547,22 +577,11 @@ export function Inspirations({
                       <div
                         key={resource.href}
                         className={styles.row}
-                        data-preview-below={previewBelow === resource.href}
                         onMouseEnter={(event) =>
-                          setPreviewBelow(
-                            event.currentTarget.getBoundingClientRect().top <
-                              240
-                              ? resource.href
-                              : null
-                          )
+                          positionPreview(event.currentTarget, resource.href)
                         }
                         onFocusCapture={(event) =>
-                          setPreviewBelow(
-                            event.currentTarget.getBoundingClientRect().top <
-                              240
-                              ? resource.href
-                              : null
-                          )
+                          positionPreview(event.currentTarget, resource.href)
                         }
                       >
                         <a
@@ -581,6 +600,14 @@ export function Inspirations({
                         {saveButton(resource)}
                         <button
                           className={styles.hoverPreview}
+                          style={
+                            previewPosition?.href === resource.href
+                              ? {
+                                  left: previewPosition.left,
+                                  top: previewPosition.top,
+                                }
+                              : undefined
+                          }
                           aria-label={`Expand the preview of ${resource.name}`}
                           onClick={() => setSelected(resource)}
                         >
