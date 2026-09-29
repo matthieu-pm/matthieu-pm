@@ -10,6 +10,7 @@
   --accent: #477f91;
   --tint: #f5fbfd;
   --pad: 25.888px;
+  --item-radius: 10px;
   color-scheme: light;
   min-height: 100dvh;
   background: var(--paper);
@@ -187,7 +188,7 @@
   align-items: center;
   gap: 8px;
   padding: 4.8px 8px;
-  border-radius: 6px;
+  border-radius: var(--item-radius);
   color: var(--secondary);
   min-height: 28px;
   transition: color 120ms ease-out;
@@ -201,7 +202,7 @@
   right: 0;
   height: var(--highlight-height, 28px);
   z-index: -1;
-  border-radius: 6px;
+  border-radius: var(--item-radius);
   pointer-events: none;
   transform: translateY(var(--highlight-y, 0px));
   transition:
@@ -275,7 +276,6 @@
   justify-content: space-between;
   padding: 10px var(--pad);
   border-bottom: 1px dashed var(--line);
-  border-right: 1px solid var(--strong-line);
   position: sticky;
   top: 0;
   z-index: 20;
@@ -377,7 +377,7 @@
   min-width: 0;
   width: fit-content;
   max-width: 100%;
-  border-radius: 6px;
+  border-radius: var(--item-radius);
   transition: opacity 150ms;
 }
 .row::before {
@@ -385,7 +385,7 @@
   position: absolute;
   inset: 0 -8px;
   z-index: -1;
-  border-radius: 6px;
+  border-radius: var(--item-radius);
   pointer-events: none;
   opacity: 0;
   transition: opacity 120ms ease-out;
@@ -406,6 +406,7 @@
 }
 .resourceLink {
   display: flex;
+  border-radius: var(--item-radius);
   min-width: 0;
   align-items: center;
   gap: 10px;
