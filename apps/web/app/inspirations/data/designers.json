@@ -1,0 +1,933 @@
+[
+  {
+    "description": "Curated design engineers and creative developers to follow.",
+    "id": "people",
+    "items": [
+      {
+        "description": "Creator of Sonner, Vaul, and animations.",
+        "href": "https://emilkowal.ski/",
+        "icon": "/inspirations/catalogues/1f458292867cd0ac.webp",
+        "name": "Emil Kowalski",
+        "preview": "/inspirations/catalogues/e6cf16bf1a7150a8.webp"
+      },
+      {
+        "description": "Author of Interaction Guidelines at Vercel.",
+        "href": "https://rauno.me/",
+        "icon": "/inspirations/catalogues/4944023e66c331ae.webp",
+        "name": "Rauno Freiberg",
+        "preview": "/inspirations/catalogues/6b85bac42c4a477e.webp"
+      },
+      {
+        "description": "Creator of cmdk and next-themes.",
+        "href": "https://paco.me/",
+        "icon": "/inspirations/catalogues/d6b4e47dfcfa4d71.webp",
+        "name": "Paco Coursey",
+        "preview": "/inspirations/catalogues/79c185e6c2b911d3.webp"
+      },
+      {
+        "description": "Designer at OpenAI crafting tactile interfaces.",
+        "href": "https://nelson.co/",
+        "icon": "/inspirations/catalogues/1f6348142ca49c51.webp",
+        "name": "Gavin Nelson",
+        "preview": "/inspirations/catalogues/a6987b0aa8b6a3e8.webp"
+      },
+      {
+        "description": "Chrome DevRel keeping CSS modern.",
+        "href": "https://nerdy.dev/",
+        "icon": "/inspirations/catalogues/7dff006d955549bf.webp",
+        "name": "Adam Argyle",
+        "preview": "/inspirations/catalogues/85f9a517e6eac497.webp"
+      },
+      {
+        "description": "Engineering leader and web animation author.",
+        "href": "https://sarahdrasner.com/",
+        "icon": "/inspirations/catalogues/4fa21235b51fa3d8.webp",
+        "name": "Sarah Drasner",
+        "preview": "/inspirations/catalogues/1bdbe6bebc2bd825.webp"
+      },
+      {
+        "description": "Creative developer building playful CSS experiments.",
+        "href": "https://jhey.dev/",
+        "icon": "/inspirations/catalogues/541e27893a9a9c54.webp",
+        "name": "Jhey Tompkins",
+        "preview": "/inspirations/catalogues/2f9127b9e05d44cb.webp"
+      },
+      {
+        "description": "Designer behind the Single Div project.",
+        "href": "https://lynnandtonic.com/",
+        "icon": "/inspirations/catalogues/afd22e3c939ed503.webp",
+        "name": "Lynn Fisher",
+        "preview": "/inspirations/catalogues/9eac8ec9a38122a3.webp"
+      },
+      {
+        "description": "Founder behind Remote3, Promptmonitor, and Dray.",
+        "href": "https://yogesh.co/",
+        "icon": "/inspirations/catalogues/a25d0408846eb18a.webp",
+        "name": "Yogesh",
+        "preview": "/inspirations/catalogues/653d3f6316451d0b.webp"
+      },
+      {
+        "description": "Creator of shadcn/ui and component registries.",
+        "href": "https://shadcn.com/",
+        "icon": "/inspirations/catalogues/226b15a25cf72ffc.webp",
+        "name": "shadcn",
+        "preview": "/inspirations/catalogues/bd948e7bde5e0347.webp"
+      },
+      {
+        "description": "Designer building minimal personal software.",
+        "href": "https://aaali.xyz/",
+        "icon": "/inspirations/catalogues/df8d9906eb544dfd.webp",
+        "name": "Äli",
+        "preview": "/inspirations/catalogues/74e86c00701f7c61.webp"
+      },
+      {
+        "description": "Design engineer from Waymo and Yandex.",
+        "href": "https://www.arlan.me/",
+        "icon": "/inspirations/catalogues/59aa1a04e6f980b1.webp",
+        "name": "Arlan Marat",
+        "preview": "/inspirations/catalogues/ebeaf9eafa9e120c.webp"
+      },
+      {
+        "description": "Creator of Pikaicons iconography system.",
+        "href": "https://www.ashkashyap.me/",
+        "icon": "/inspirations/catalogues/598544d7eb02dfe2.webp",
+        "name": "Ashish Kashyap",
+        "preview": "/inspirations/catalogues/ec5ed4256e793ea1.webp"
+      },
+      {
+        "description": "Design engineer crafting tactile interfaces.",
+        "href": "https://www.bakemono.space/",
+        "icon": "/inspirations/catalogues/54f0585cbb2e2514.webp",
+        "name": "Bakemono",
+        "preview": "/inspirations/catalogues/a61172b58825b078.webp"
+      },
+      {
+        "description": "NYC designer crafting digital brand experiences.",
+        "href": "https://www.emmanuelhong.com/",
+        "icon": "/inspirations/catalogues/96571c2990d4b6de.webp",
+        "name": "Emmanuel Hong",
+        "preview": "/inspirations/catalogues/a2fe2f588514e53b.webp"
+      },
+      {
+        "description": "CMU designer crafting community interfaces.",
+        "href": "https://farayan.me/",
+        "icon": "/inspirations/catalogues/4278c2f7f0463e18.webp",
+        "name": "Fara Yan",
+        "preview": "/inspirations/catalogues/96aabd5e87ced575.webp"
+      },
+      {
+        "description": "Product designer at Ramp and Vercel.",
+        "href": "https://www.floguo.com/",
+        "icon": "/inspirations/catalogues/0dc3e4f23b611ca7.webp",
+        "name": "Flora Guo",
+        "preview": "/inspirations/catalogues/9836a860dc74c1eb.webp"
+      },
+      {
+        "description": "Design systems lead at Poolside.",
+        "href": "https://glenn.me/",
+        "icon": "/inspirations/catalogues/3c7320a4518d7b32.webp",
+        "name": "Glenn Hitchcock",
+        "preview": "/inspirations/catalogues/315f673c32417472.webp"
+      },
+      {
+        "description": "Building native macOS tools Hoy and Monocle.",
+        "href": "https://www.heyiam.dk/",
+        "icon": "/inspirations/catalogues/d7bc8d80c9bbce4f.webp",
+        "name": "Dominik Kandravý",
+        "preview": "/inspirations/catalogues/90c92c64e29cb42f.webp"
+      },
+      {
+        "description": "Design and AI leader at Google.",
+        "href": "https://hvpandya.com/",
+        "icon": "/inspirations/catalogues/ee653bb9ca6c75b7.webp",
+        "name": "Hardik Pandya",
+        "preview": "/inspirations/catalogues/a9fd959f88b96ae1.webp"
+      },
+      {
+        "description": "Frontend developer exploring pixel gradients.",
+        "href": "https://iamnoman.com/",
+        "icon": "/inspirations/catalogues/139b23ecebe2ecdd.webp",
+        "name": "Noman Ijaz",
+        "preview": "/inspirations/catalogues/293282e22deb75e6.webp"
+      },
+      {
+        "description": "Designer building animations for AI startups.",
+        "href": "https://ibelick.com/",
+        "icon": "/inspirations/catalogues/075817f02f88a35e.webp",
+        "name": "Julien Thibeaut",
+        "preview": "/inspirations/catalogues/1183bd5fe5a783c5.webp"
+      },
+      {
+        "description": "Creative engineer and prolific hackathon builder.",
+        "href": "https://www.jia.build/",
+        "icon": "/inspirations/catalogues/852df5b9f7ffca07.webp",
+        "name": "Jia Chen",
+        "preview": "/inspirations/catalogues/3cb6069406f01597.webp"
+      },
+      {
+        "description": "Designer crafting tools across Apple and NASA.",
+        "href": "https://www.liumichelle.com/",
+        "icon": "/inspirations/catalogues/7d7a658be629ae77.webp",
+        "name": "Michelle Liu",
+        "preview": "/inspirations/catalogues/2d21e3605a61a4f3.webp"
+      },
+      {
+        "description": "Interface designer from Nothing to xAI.",
+        "href": "https://www.luyuhang.net/",
+        "icon": "/inspirations/catalogues/5818194019cd021a.webp",
+        "name": "Yuhang Lu",
+        "preview": "/inspirations/catalogues/a41efc54186fcb4d.webp"
+      },
+      {
+        "description": "Technical interface designer at Perplexity.",
+        "href": "https://lyleklyne.com/",
+        "icon": "/inspirations/catalogues/765253ebdba06807.webp",
+        "name": "Lyle Klyne",
+        "preview": "/inspirations/catalogues/39023eab4bb07cc3.webp"
+      },
+      {
+        "description": "Infrastructure engineer building platform tools at Gumloop.",
+        "href": "https://marcelochaman.ca/",
+        "icon": "/inspirations/catalogues/e32ed04768ed2081.webp",
+        "name": "Marcelo Chaman Mallqui",
+        "preview": "/inspirations/catalogues/53d3a36d0d5c5138.webp"
+      },
+      {
+        "description": "Brand and devtools designer at Vercel.",
+        "href": "https://marijanapav.com/",
+        "icon": "/inspirations/catalogues/bc5fff498657ec3e.webp",
+        "name": "Marijana Pavlinić",
+        "preview": "/inspirations/catalogues/75af791e82725cee.webp"
+      },
+      {
+        "description": "Visual artist and typographer.",
+        "href": "https://www.mek.gallery/",
+        "icon": "/inspirations/catalogues/3b7bf235bf8b83a4.webp",
+        "name": "Michael Alexander",
+        "preview": "/inspirations/catalogues/c770b81d9cc622db.webp"
+      },
+      {
+        "description": "Experimental interface designer behind Stripe Press.",
+        "href": "https://www.narrowdesign.com/",
+        "icon": "/inspirations/catalogues/fba42fbe6920e49c.webp",
+        "name": "Nick Jones",
+        "preview": "/inspirations/catalogues/5fe2305832ec592d.webp"
+      },
+      {
+        "description": "Product designer crafting efficient software workflows.",
+        "href": "https://stuart.re/",
+        "icon": "/inspirations/catalogues/2dec7c346a76b27a.webp",
+        "name": "Stuart Regan",
+        "preview": "/inspirations/catalogues/c8efb6f37a21ce53.webp"
+      },
+      {
+        "description": "Indie game maker and studio founder.",
+        "href": "https://vjy.me/",
+        "icon": "/inspirations/catalogues/8ee6848c4ac855a0.webp",
+        "name": "Vijay Verma",
+        "preview": "/inspirations/catalogues/ad55d095bfcec206.webp"
+      },
+      {
+        "description": "Creator of Agentation and Honk.",
+        "href": "https://benji.org/",
+        "icon": "/inspirations/catalogues/38de2c0bad177e5a.webp",
+        "name": "Benji Taylor",
+        "preview": "/inspirations/catalogues/72e0b595476a407f.webp"
+      },
+      {
+        "description": "Frontend engineer in the shadcn ecosystem.",
+        "href": "https://www.aniketpawar.com/",
+        "icon": "/inspirations/catalogues/8756de149b52b2fb.webp",
+        "name": "Aniket Pawar",
+        "preview": "/inspirations/catalogues/8cc4fdb465abc303.webp"
+      },
+      {
+        "description": "Design engineer crafting tactile web experiments.",
+        "href": "https://www.mahlke.design/",
+        "icon": "/inspirations/catalogues/cf286ff15daf8b5a.webp",
+        "name": "Aaron Mahlke",
+        "preview": "/inspirations/catalogues/e0d3bcb7a2426461.webp"
+      },
+      {
+        "description": "Interaction designer building expressive web experiments.",
+        "href": "https://grizz.fyi/",
+        "icon": "/inspirations/catalogues/da2055a176fda902.webp",
+        "name": "Grizz",
+        "preview": "/inspirations/catalogues/cf246101b9c8aa7d.webp"
+      },
+      {
+        "description": "Software engineer at Anthropic on Claude Code.",
+        "href": "https://alistair.sh/",
+        "icon": "/inspirations/catalogues/280609335f92cb48.webp",
+        "name": "Alistair Smith",
+        "preview": "/inspirations/catalogues/db9e8ab4638f6ab8.webp"
+      },
+      {
+        "description": "Creative technologist building ASCII art tools.",
+        "href": "https://davidumoru.me/",
+        "icon": "/inspirations/catalogues/db37f870a7e3ef1b.webp",
+        "name": "David Umoru",
+        "preview": "/inspirations/catalogues/bb31ea4ecd49fd82.webp"
+      },
+      {
+        "description": "Creative director crafting distinct brand identities.",
+        "href": "https://fabianarbor.com/",
+        "icon": "/inspirations/catalogues/71a26c76f918be59.webp",
+        "name": "Fabian Arbor",
+        "preview": "/inspirations/catalogues/7161ce8c26460903.webp"
+      },
+      {
+        "description": "Designer writing on interface accessibility.",
+        "href": "https://praveenjuge.com/",
+        "icon": "/inspirations/catalogues/4ad86b0976367466.webp",
+        "name": "Praveen Juge",
+        "preview": "/inspirations/catalogues/4ec2a2132eb9cbb6.webp"
+      },
+      {
+        "description": "Frontend engineer building AI-driven interfaces.",
+        "href": "https://lokiii.me/",
+        "icon": "/inspirations/catalogues/1bc60f3e8ece5f50.webp",
+        "name": "Lokendra Kushwah",
+        "preview": "/inspirations/catalogues/b62855669b2ad188.webp"
+      },
+      {
+        "description": "Founding design engineer at Interfere.",
+        "href": "https://jakub.kr/",
+        "icon": "/inspirations/catalogues/31af1c610e9db920.webp",
+        "name": "Jakub Krehel",
+        "preview": "/inspirations/catalogues/21947a9874d6081a.webp"
+      },
+      {
+        "description": "Design engineer and creator of Shadow.",
+        "href": "https://www.ishaand.com/",
+        "icon": "/inspirations/catalogues/71bcb34a27f1fb0b.webp",
+        "name": "Ishaan Dey",
+        "preview": "/inspirations/catalogues/cdf6e9df806e1f1b.webp"
+      },
+      {
+        "description": "Creative director designing AI-first products.",
+        "href": "https://www.tushaarmehtaa.xyz/",
+        "icon": "/inspirations/catalogues/62f0c75c9e8fc9ee.webp",
+        "name": "Tushaar Mehta",
+        "preview": "/inspirations/catalogues/b1fd9767e6187b50.webp"
+      },
+      {
+        "description": "Creative technologist designing expressive brand systems.",
+        "href": "https://ikeacrisp.com/",
+        "icon": "/inspirations/catalogues/73c3c34bddcb8de7.webp",
+        "name": "Kai Nair",
+        "preview": "/inspirations/catalogues/553a6fdf7e73494b.webp"
+      },
+      {
+        "description": "Engineer building real-time systems and robotics.",
+        "href": "https://www.paolonessim.com/",
+        "icon": "/inspirations/catalogues/fa663969aed5d8a5.webp",
+        "name": "Paolo Nessim",
+        "preview": "/inspirations/catalogues/672ad6facc3775bb.webp"
+      },
+      {
+        "description": "Design engineer building Xenon.",
+        "href": "https://www.ashishgogula.in/",
+        "icon": "/inspirations/catalogues/4c9b4f9952854d25.webp",
+        "name": "Ashish Gogula",
+        "preview": "/inspirations/catalogues/2d145de443a0aa9d.webp"
+      },
+      {
+        "description": "Design engineer building Ruru UI.",
+        "href": "https://ruru.build/",
+        "icon": "/inspirations/catalogues/5ec1285ac17bc0b5.webp",
+        "name": "Ruru",
+        "preview": "/inspirations/catalogues/471c58ad07390c6e.webp"
+      },
+      {
+        "description": "Software engineer exploring minimalist design.",
+        "href": "https://www.harshsingh.me/",
+        "icon": "/inspirations/catalogues/afa114900a545c09.webp",
+        "name": "Harsh Singh",
+        "preview": "/inspirations/catalogues/213fcd89614a48f5.webp"
+      },
+      {
+        "description": "Full-stack engineer crafting SaaS products.",
+        "href": "https://rohitsinghrawat.com/",
+        "icon": "/inspirations/catalogues/8275eae91d5b315e.webp",
+        "name": "Rohit Singh Rawat",
+        "preview": "/inspirations/catalogues/202e7087a37e5382.webp"
+      },
+      {
+        "description": "Design engineer building open-source tools.",
+        "href": "https://preetsuthar.me/",
+        "icon": "/inspirations/catalogues/7bec5cdbeed619a2.webp",
+        "name": "Preet Suthar",
+        "preview": "/inspirations/catalogues/270751cf6cddaad6.webp"
+      },
+      {
+        "description": "Design engineer and creator of Moodist.",
+        "href": "https://remvze.com/",
+        "icon": "/inspirations/catalogues/e6df5cbc1f9869b2.webp",
+        "name": "Maze",
+        "preview": "/inspirations/catalogues/f2f5181183d70912.webp"
+      },
+      {
+        "description": "Full-stack engineer crafting interactive UI.",
+        "href": "https://siddz.com/",
+        "icon": "/inspirations/catalogues/1b748b11d62b50a3.webp",
+        "name": "Siddharth",
+        "preview": "/inspirations/catalogues/039c3fa5e8b6c1c0.webp"
+      },
+      {
+        "description": "Design engineer building motion-driven web apps.",
+        "href": "https://samworks.vercel.app/",
+        "icon": "/inspirations/catalogues/53a6f021581e176f.webp",
+        "name": "Sam",
+        "preview": null
+      },
+      {
+        "description": "Community Engineer at Raycast.",
+        "href": "https://dhrv.pw/",
+        "icon": "/inspirations/catalogues/7e9b0573402a9198.webp",
+        "name": "Dhruv Suthar",
+        "preview": "/inspirations/catalogues/6b13f09500c5276a.webp"
+      },
+      {
+        "description": "Visual designer and founder of Dacoit Design.",
+        "href": "https://rahulbhadoriya.com/",
+        "icon": "/inspirations/catalogues/bb9c4fbfb9843034.webp",
+        "name": "Rahul Singh Bhadoriya",
+        "preview": "/inspirations/catalogues/21147f0bece7bb56.webp"
+      },
+      {
+        "description": "Creator of Aceternity UI and TailwindMasterKit.",
+        "href": "https://manuarora.in/",
+        "icon": "/inspirations/catalogues/7f175b97628b4cae.webp",
+        "name": "Manu Arora",
+        "preview": "/inspirations/catalogues/234267bfb6082147.webp"
+      },
+      {
+        "description": "Design engineer building VidStudio and Rare UI.",
+        "href": "https://swamii.me/",
+        "icon": "/inspirations/catalogues/241d19339654d81e.webp",
+        "name": "Swami Malode",
+        "preview": "/inspirations/catalogues/321b16e5fc795202.webp"
+      },
+      {
+        "description": "Creator of Dot Matrix and Orbkit.",
+        "href": "https://www.shwn.design/",
+        "icon": "/inspirations/catalogues/9e09150894e581b2.webp",
+        "name": "Shawn Dsilva",
+        "preview": "/inspirations/catalogues/68e45bd0dc6e8f98.webp"
+      },
+      {
+        "description": "Full-stack developer building scalable web interfaces.",
+        "href": "https://www.10xshivam.dev/",
+        "icon": "/inspirations/catalogues/368b3b683c5eaab4.webp",
+        "name": "Shivam",
+        "preview": "/inspirations/catalogues/8de470b1a53c9959.webp"
+      },
+      {
+        "description": "Developer building Negativ UI.",
+        "href": "https://portfolio.negativ.in/",
+        "icon": "/inspirations/catalogues/226985064fe3b396.webp",
+        "name": "Rohit Mehta",
+        "preview": "/inspirations/catalogues/9559b48c218472a6.webp"
+      },
+      {
+        "description": "Design engineer building Draftlogo.",
+        "href": "https://ratneshc.com/",
+        "icon": "/inspirations/catalogues/6b7be681f6d1fd76.webp",
+        "name": "Ratnesh Chipre",
+        "preview": "/inspirations/catalogues/c25c8ac98d797e8b.webp"
+      },
+      {
+        "description": "Frontend engineer focused on micro-animations.",
+        "href": "https://www.shivrajroy.in/",
+        "icon": "/inspirations/catalogues/b8ea8f13c1a0b29b.webp",
+        "name": "Shivraj Roy",
+        "preview": "/inspirations/catalogues/6be6b4a1b3da9706.webp"
+      },
+      {
+        "description": "Creator of ASCII Studio and web tools.",
+        "href": "https://www.vanshnagar.com/",
+        "icon": "/inspirations/catalogues/c2aad65ec7e6ad0d.webp",
+        "name": "Vansh Nagar",
+        "preview": "/inspirations/catalogues/c4d3c40535e767ae.webp"
+      },
+      {
+        "description": "Design engineer and creator of Componentry.",
+        "href": "https://harshjdhv.com/",
+        "icon": "/inspirations/catalogues/db29fda4ac4d9d6a.webp",
+        "name": "Harsh Jadhav",
+        "preview": "/inspirations/catalogues/e260cadcd2fac8e5.webp"
+      },
+      {
+        "description": "Creator of Sileo physics-based toast components.",
+        "href": "https://aaryan.design/",
+        "icon": "/inspirations/catalogues/03e090ec97c6104c.webp",
+        "name": "Aaryan",
+        "preview": "/inspirations/catalogues/6ca5abfef5824804.webp"
+      },
+      {
+        "description": "Full-stack developer building ObsidianUI.",
+        "href": "https://athrix.me/",
+        "icon": "/inspirations/catalogues/677e0c3f962c04b2.webp",
+        "name": "Atharvsinh Jadav",
+        "preview": "/inspirations/catalogues/42c9658a993b78e6.webp"
+      },
+      {
+        "description": "Full-stack developer building performant web apps.",
+        "href": "https://divyanshh.tech/",
+        "icon": "/inspirations/catalogues/446b2f6800117da9.webp",
+        "name": "Divyansh Swarnkar",
+        "preview": "/inspirations/catalogues/b47ddeb21b70a417.webp"
+      },
+      {
+        "description": "Design engineer building Skiper UI and EvilCharts.",
+        "href": "https://gurbinder.dev/",
+        "icon": "/inspirations/catalogues/8b82973dfdfa551b.webp",
+        "name": "Gurbinder",
+        "preview": "/inspirations/catalogues/8c699435a543aa3e.webp"
+      },
+      {
+        "description": "Creator of Vengeance UI building AI interfaces.",
+        "href": "https://www.ashutoshx7.me/",
+        "icon": "/inspirations/catalogues/df29664497531a13.webp",
+        "name": "Ashutosh Singh",
+        "preview": "/inspirations/catalogues/3f01e515bf09cf76.webp"
+      },
+      {
+        "description": "Full-stack developer crafting 3D WebGL interfaces.",
+        "href": "https://palakonweb.in/",
+        "icon": "/inspirations/catalogues/23cd077856b512b2.webp",
+        "name": "Palak Sharma",
+        "preview": "/inspirations/catalogues/5ede1ed9b5174307.webp"
+      },
+      {
+        "description": "Design engineer building Forge UI and Statsio.",
+        "href": "https://amanshakya.in/",
+        "icon": "/inspirations/catalogues/bbc5ea9b8336153d.webp",
+        "name": "Aman Shakya",
+        "preview": "/inspirations/catalogues/e31d7fe89350fb2e.webp"
+      },
+      {
+        "description": "Creative developer building atomix/ui experiments.",
+        "href": "https://www.mihircodes.in/",
+        "icon": "/inspirations/catalogues/341ec5e6169c5c43.webp",
+        "name": "Mihir Aman Raj",
+        "preview": "/inspirations/catalogues/dad713456e0567c9.webp"
+      },
+      {
+        "description": "Design engineer and creator of Insposite.",
+        "href": "https://www.prasanjitdey.com/",
+        "icon": "/inspirations/catalogues/8f5bf8964209c2dc.webp",
+        "name": "Prasanjit Dey",
+        "preview": "/inspirations/catalogues/7f6a1a1e91239ca5.webp"
+      },
+      {
+        "description": "Design engineer building React Wheel Picker.",
+        "href": "https://chanhdai.com/",
+        "icon": "/inspirations/catalogues/c052b2f24a6b78ab.webp",
+        "name": "Chánh Đại",
+        "preview": "/inspirations/catalogues/9c29bd15efca0148.webp"
+      },
+      {
+        "description": "Creative developer building expressive web interfaces.",
+        "href": "https://www.sophiamanalo.com/",
+        "icon": "/inspirations/catalogues/e4dbbc9c0f932a21.webp",
+        "name": "Sophie Manalo",
+        "preview": "/inspirations/catalogues/8d1ab2bdb46e9a2e.webp"
+      },
+      {
+        "description": "Design engineer crafting minimal web experiments.",
+        "href": "https://abhi.at/",
+        "icon": "/inspirations/catalogues/d584bfce8a02ead9.webp",
+        "name": "Abhinav Kale",
+        "preview": "/inspirations/catalogues/37bbb170772b7cb4.webp"
+      },
+      {
+        "description": "Frontend engineer focusing on UI craft.",
+        "href": "https://www.karaan.me/",
+        "icon": "/inspirations/catalogues/a57d0f1c8eb09788.webp",
+        "name": "Karaan",
+        "preview": "/inspirations/catalogues/b3b08afc3e09d806.webp"
+      },
+      {
+        "description": "Frontend developer building interactive web products.",
+        "href": "https://ramx.in/",
+        "icon": "/inspirations/catalogues/0e37f5ee2bd8dec5.webp",
+        "name": "Ram",
+        "preview": "/inspirations/catalogues/065e90e6f582fa62.webp"
+      },
+      {
+        "description": "Design engineer crafting modern digital experiences.",
+        "href": "https://www.victorwilliams.me/",
+        "icon": "/inspirations/catalogues/a57e20d792146f08.webp",
+        "name": "Victor Williams",
+        "preview": "/inspirations/catalogues/864df494c88ab91a.webp"
+      },
+      {
+        "description": "Full-stack engineer building clean user interfaces.",
+        "href": "https://umeshnagare.com/",
+        "icon": "/inspirations/catalogues/d8723cd4e86f54cd.webp",
+        "name": "Umesh Nagare",
+        "preview": "/inspirations/catalogues/4e3b6a0469b185fe.webp"
+      },
+      {
+        "description": "Full-stack developer building open-source tools.",
+        "href": "https://www.heygautam.com/",
+        "icon": "/inspirations/catalogues/cb2c5ed2c8ba05af.webp",
+        "name": "Gautam",
+        "preview": "/inspirations/catalogues/75f1f000fdb14543.webp"
+      },
+      {
+        "description": "Frontend developer building creative web experiments.",
+        "href": "https://atharvaxdevs.xyz/",
+        "icon": null,
+        "name": "Atharva Mhaske",
+        "preview": "/inspirations/catalogues/b9b04a9f50209282.webp"
+      },
+      {
+        "description": "Product designer crafting interactive interfaces.",
+        "href": "https://janina.works/",
+        "icon": "/inspirations/catalogues/2a9e6248cfea2ae5.webp",
+        "name": "Janina",
+        "preview": "/inspirations/catalogues/8647ea51fa67c2b1.webp"
+      },
+      {
+        "description": "Independent studio crafting bespoke digital identities.",
+        "href": "https://unlimited.studio",
+        "icon": "/inspirations/catalogues/cc9fdec812ea535d.webp",
+        "name": "Unlimited Studio",
+        "preview": "/inspirations/catalogues/a83a72a2e0c1c94e.webp"
+      },
+      {
+        "description": "Frontend developer building sleek web interfaces.",
+        "href": "https://www.manixh.dev/",
+        "icon": "/inspirations/catalogues/e169066a1b679ae8.webp",
+        "name": "Manish Kumar",
+        "preview": "/inspirations/catalogues/18f80d25fb299bdc.webp"
+      },
+      {
+        "description": "Design engineer crafting interactive tactile software.",
+        "href": "https://jdhruv.dev/",
+        "icon": "/inspirations/catalogues/07e4bb931c1b7654.webp",
+        "name": "Dhruv",
+        "preview": "/inspirations/catalogues/91f23692190b28f1.webp"
+      },
+      {
+        "description": "Frontend developer crafting interactive React components.",
+        "href": "https://sahilcodex.vercel.app/",
+        "icon": "/inspirations/catalogues/f934c7f474b78b9a.webp",
+        "name": "Sahil Singh",
+        "preview": "/inspirations/catalogues/dbb38199cf6e33fc.webp"
+      },
+      {
+        "description": "Design engineer building nexvyn/ui components.",
+        "href": "https://nexvyn.dev/",
+        "icon": "/inspirations/catalogues/922ae33526caa6c3.webp",
+        "name": "Nexvyn",
+        "preview": "/inspirations/catalogues/5cb679a9ee6ba583.webp"
+      },
+      {
+        "description": "Creative developer crafting 3D shader experiments.",
+        "href": "https://www.syedsubhan.in/",
+        "icon": "/inspirations/catalogues/a67c5062eca61e1f.webp",
+        "name": "Syed Subhan",
+        "preview": "/inspirations/catalogues/9003080912be08e2.webp"
+      },
+      {
+        "description": "Design engineer building Evil Buttons and Mascot.",
+        "href": "https://www.radiumcoders.com/",
+        "icon": "/inspirations/catalogues/bef540520cb6289f.webp",
+        "name": "Jay",
+        "preview": "/inspirations/catalogues/e017bf56c3d67a33.webp"
+      },
+      {
+        "description": "Product designer crafting considered web interactions.",
+        "href": "https://chidu.me/",
+        "icon": "/inspirations/catalogues/9ad9a627ed0915a0.webp",
+        "name": "Chidu",
+        "preview": "/inspirations/catalogues/7616d88a28d8c0bc.webp"
+      },
+      {
+        "description": "Engineer developing Creed and web agents.",
+        "href": "https://hpbrn.cc/",
+        "icon": "/inspirations/catalogues/97b68df7740e1d53.webp",
+        "name": "Connor Hepburn",
+        "preview": "/inspirations/catalogues/c4ac04895c9cc7e4.webp"
+      },
+      {
+        "description": "Product designer crafting high-craft landing pages.",
+        "href": "https://www.pratham.me/",
+        "icon": "/inspirations/catalogues/c2b8ba4cfa2bc55e.webp",
+        "name": "Pratham",
+        "preview": "/inspirations/catalogues/8aa3dbaa2665aef4.webp"
+      },
+      {
+        "description": "Branding studio crafting identities for tech companies.",
+        "href": "https://offgrid.inc/",
+        "icon": "/inspirations/catalogues/59d3dc3a7168b12a.webp",
+        "name": "Offgrid",
+        "preview": "/inspirations/catalogues/76d25f40a2594e4a.webp"
+      },
+      {
+        "description": "Design engineer and founder of textmotion.",
+        "href": "https://www.danielwhite.uk/",
+        "icon": null,
+        "name": "Daniel White",
+        "preview": "/inspirations/catalogues/5ee985cba56b5ce3.webp"
+      },
+      {
+        "description": "Product designer crafting typography-focused interfaces.",
+        "href": "https://sashabalandina.com/",
+        "icon": "/inspirations/catalogues/80a82edb234597c4.webp",
+        "name": "Sasha Balandina",
+        "preview": "/inspirations/catalogues/4702f8ccf0e376a4.webp"
+      },
+      {
+        "description": "Product designer crafting 0-to-1 software experiences.",
+        "href": "https://www.timothymaarv.me/",
+        "icon": "/inspirations/catalogues/caca83bad0671bf2.webp",
+        "name": "Timothy Maarv",
+        "preview": "/inspirations/catalogues/03ebfde03f757d06.webp"
+      },
+      {
+        "description": "Design engineer crafting fluid micro-interactions.",
+        "href": "https://sorenblank.com/",
+        "icon": "/inspirations/catalogues/ded1ab7cc89e417d.webp",
+        "name": "Soren Blank",
+        "preview": "/inspirations/catalogues/8dc7f9e51dedafd7.webp"
+      },
+      {
+        "description": "Design engineer building interior.dev micro-interactions.",
+        "href": "https://www.ozzyx.xyz/",
+        "icon": "/inspirations/catalogues/596c0840d4552351.webp",
+        "name": "Ozzy",
+        "preview": "/inspirations/catalogues/10df5f8be066392c.webp"
+      },
+      {
+        "description": "Full-stack engineer building AI agents.",
+        "href": "https://www.utsavworks.in/",
+        "icon": "/inspirations/catalogues/61bdcf1d18a189f4.webp",
+        "name": "Utsav Gupta",
+        "preview": "/inspirations/catalogues/84181644dd86122e.webp"
+      },
+      {
+        "description": "Design engineer building Great UI components.",
+        "href": "https://www.srbh.site/",
+        "icon": "/inspirations/catalogues/74e2bf7e8be960f9.webp",
+        "name": "Saurabh Sharma",
+        "preview": "/inspirations/catalogues/2b93c11364207139.webp"
+      },
+      {
+        "description": "Design studio founded by Josh Puckett.",
+        "href": "https://iteration.design/",
+        "icon": "/inspirations/catalogues/eb893eb46d36ac07.webp",
+        "name": "Iteration",
+        "preview": "/inspirations/catalogues/82511e16a636ef5e.webp"
+      },
+      {
+        "description": "Founder of Iteration and DialKit.",
+        "href": "https://joshpuckett.me/",
+        "icon": "/inspirations/catalogues/3fbe2be279c3eba7.webp",
+        "name": "Josh Puckett",
+        "preview": "/inspirations/catalogues/225b4be836928deb.webp"
+      },
+      {
+        "description": "Design engineer at Vercel crafting AI interfaces.",
+        "href": "https://merycodes.com/",
+        "icon": "/inspirations/catalogues/1fe5c07ade1c84c8.webp",
+        "name": "Mery Kaftar",
+        "preview": "/inspirations/catalogues/50545c6e4e315d35.webp"
+      },
+      {
+        "description": "Product designer exploring thoughtful AI interfaces.",
+        "href": "https://lelezhang.design/",
+        "icon": "/inspirations/catalogues/7a230289375a7c13.webp",
+        "name": "Lele Zhang",
+        "preview": "/inspirations/catalogues/bee50590ff3993f2.webp"
+      },
+      {
+        "description": "Designer at Anthropic on Claude Code.",
+        "href": "https://pranathiperi.com/",
+        "icon": "/inspirations/catalogues/12974202cb3dc136.webp",
+        "name": "Pranathi Peri",
+        "preview": "/inspirations/catalogues/a77894c8120294ed.webp"
+      },
+      {
+        "description": "Digital designer at YouTube crafting visual systems.",
+        "href": "https://airladesigns.com/",
+        "icon": "/inspirations/catalogues/76765fb23431e626.webp",
+        "name": "Airla Fan",
+        "preview": "/inspirations/catalogues/4d42f5aeb5626ecf.webp"
+      },
+      {
+        "description": "Product designer and engineer at Profound.",
+        "href": "https://www.mrncst.computer/",
+        "icon": "/inspirations/catalogues/8fa3823c20b526bb.webp",
+        "name": "Mariana Castilho",
+        "preview": "/inspirations/catalogues/fce70242acd91b9f.webp"
+      },
+      {
+        "description": "Head of Design at Vercel.",
+        "href": "https://www.evilrabbit.com/",
+        "icon": "/inspirations/catalogues/adf8df9d9f367da9.webp",
+        "name": "Evil Rabbit",
+        "preview": "/inspirations/catalogues/15068bb00db78531.webp"
+      },
+      {
+        "description": "Product designer building modern digital products.",
+        "href": "https://dominikmart.in/",
+        "icon": "/inspirations/catalogues/586c04f1114fccc8.webp",
+        "name": "Dominik Martin",
+        "preview": "/inspirations/catalogues/02b9873110cd9b16.webp"
+      },
+      {
+        "description": "Creator of Spell UI crafting component kits.",
+        "href": "https://tomm.page/",
+        "icon": "/inspirations/catalogues/e6c67c87c0b659cd.webp",
+        "name": "Tom",
+        "preview": "/inspirations/catalogues/189a4207b8af4444.webp"
+      },
+      {
+        "description": "Design engineer at Cursor.",
+        "href": "https://old.alcohollick.com/",
+        "icon": null,
+        "name": "Dan Hollick",
+        "preview": "/inspirations/catalogues/4827035276674964.webp"
+      },
+      {
+        "description": "Open-source creator and Vue core team member.",
+        "href": "https://antfu.me/",
+        "icon": "/inspirations/catalogues/ad06ff87e7c94452.webp",
+        "name": "Anthony Fu",
+        "preview": "/inspirations/catalogues/498da3b496a04b8a.webp"
+      },
+      {
+        "description": "Creator of jQuery UI building AI tools.",
+        "href": "https://paulbakaus.com/",
+        "icon": "/inspirations/catalogues/e86f0e9256c45e33.webp",
+        "name": "Paul Bakaus",
+        "preview": "/inspirations/catalogues/42e3aa425e1b6916.webp"
+      },
+      {
+        "description": "Designer and developer crafting digital experiences.",
+        "href": "https://ample.studio/",
+        "icon": "/inspirations/catalogues/c0ccb280e0c2f28a.webp",
+        "name": "Aditya Sur",
+        "preview": "/inspirations/catalogues/ed6eece097b78457.webp"
+      },
+      {
+        "description": "Design engineer pushing boundaries in interface craft.",
+        "href": "https://www.raphaelsalaja.com/",
+        "icon": "/inspirations/catalogues/60ccdbd0293396a6.webp",
+        "name": "Raphael Salaja",
+        "preview": "/inspirations/catalogues/7a6e4eb54258613d.webp"
+      },
+      {
+        "description": "Design engineer in London crafting thoughtful interfaces.",
+        "href": "https://ana.sh/",
+        "icon": "/inspirations/catalogues/b1c4091be149495f.webp",
+        "name": "Ana Howard",
+        "preview": "/inspirations/catalogues/079a0c6409af7b8d.webp"
+      },
+      {
+        "description": "Product designer and Design Lead at Fun.xyz.",
+        "href": "https://jakubantalik.com/",
+        "icon": "/inspirations/catalogues/4488fb656323ea94.webp",
+        "name": "Jakub Antalík",
+        "preview": "/inspirations/catalogues/01b41b27d14e858f.webp"
+      },
+      {
+        "description": "Creative developer known for the OS portfolio.",
+        "href": "https://henryheffernan.com/",
+        "icon": "/inspirations/catalogues/76a906d73e82ca12.webp",
+        "name": "Henry Heffernan",
+        "preview": "/inspirations/catalogues/0e21ee47d97a5a9c.webp"
+      },
+      {
+        "description": "Staff UI engineer at Coinbase.",
+        "href": "https://wojtek.im/",
+        "icon": "/inspirations/catalogues/a88e73d9dd4fc290.webp",
+        "name": "Wojtek Witkowski",
+        "preview": "/inspirations/catalogues/46da742b84d275d9.webp"
+      },
+      {
+        "description": "Product designer and founder of Peerlist.",
+        "href": "https://designerdada.com/",
+        "icon": "/inspirations/catalogues/5ca322c8b40b17b8.webp",
+        "name": "Akash Bhadange",
+        "preview": "/inspirations/catalogues/904c4aa2b183f937.webp"
+      },
+      {
+        "description": "Founder of Million.js and React Scan.",
+        "href": "https://aidenybai.com/",
+        "icon": "/inspirations/catalogues/65c8ea3f2f360dc5.webp",
+        "name": "Aiden Bai",
+        "preview": "/inspirations/catalogues/7fb034b1d4dc980d.webp"
+      },
+      {
+        "description": "Designer and engineer at Vercel.",
+        "href": "https://shud.in/",
+        "icon": "/inspirations/catalogues/177697a28d20cbdb.webp",
+        "name": "Shu Ding",
+        "preview": "/inspirations/catalogues/56c1b4f4c7ef6870.webp"
+      },
+      {
+        "description": "Creator of react-content-loader component library.",
+        "href": "https://danilowoz.com/",
+        "icon": "/inspirations/catalogues/9593ea48d530f991.webp",
+        "name": "Danilo Woznica",
+        "preview": "/inspirations/catalogues/10b552ac54aca407.webp"
+      },
+      {
+        "description": "Founder of System Studio and Minimal Gallery.",
+        "href": "https://system.studio/",
+        "icon": "/inspirations/catalogues/674afbb374794e0f.webp",
+        "name": "Daryl Ginn",
+        "preview": "/inspirations/catalogues/aa21bf26036a01c3.webp"
+      },
+      {
+        "description": "Product Design Lead at Perplexity AI.",
+        "href": "https://gunnargray.com/",
+        "icon": null,
+        "name": "Gunnar Gray",
+        "preview": "/inspirations/catalogues/1143fc6c94d2016f.webp"
+      },
+      {
+        "description": "Product designer and developer building AIProxy.",
+        "href": "https://toddham.com/",
+        "icon": "/inspirations/catalogues/c0309d29c5d018a4.webp",
+        "name": "Todd Hamilton",
+        "preview": "/inspirations/catalogues/e7a7f5e63f7d3210.webp"
+      },
+      {
+        "description": "Creator of Scira AI conversational search.",
+        "href": "https://zaidmukaddam.com/",
+        "icon": "/inspirations/catalogues/879049511f163cdb.webp",
+        "name": "Zaid Mukaddam",
+        "preview": "/inspirations/catalogues/fde8a1c094f2bdb5.webp"
+      },
+      {
+        "description": "Software engineer building AI memory at Mem0.",
+        "href": "https://kartiklabhshetwar.com/",
+        "icon": "/inspirations/catalogues/4b2fd964177bfd26.webp",
+        "name": "Kartik Labhshetwar",
+        "preview": "/inspirations/catalogues/6d279a28cbde9229.webp"
+      },
+      {
+        "description": "Design engineer building beUI, a motion component library.",
+        "href": "https://saura3h.xyz/",
+        "icon": "/inspirations/catalogues/975291ef94cf5514.webp",
+        "name": "Saurabh",
+        "preview": "/inspirations/catalogues/3a3464f78faf1bce.webp"
+      },
+      {
+        "description": "Founding designer at Lottielab.",
+        "href": "https://imdaryl.com/",
+        "icon": null,
+        "name": "Daryl Patigas",
+        "preview": "/inspirations/catalogues/db466ec532f66c9b.webp"
+      }
+    ],
+    "title": "Design engineers to follow"
+  }
+]

@@ -1,0 +1,492 @@
+[
+  {
+    "description": "Modern code editors, runtimes, and local tooling.",
+    "id": "development",
+    "items": [
+      {
+        "description": "Agentic coding tool inside your terminal.",
+        "href": "https://claude.com/claude-code",
+        "icon": "/inspirations/catalogues/2ee20adecb7cf7ed.webp",
+        "name": "Claude Code",
+        "preview": "/inspirations/catalogues/b2230f49e73e1515.webp"
+      },
+      {
+        "description": "AI-first code editor for rapid development.",
+        "href": "https://cursor.com/",
+        "icon": "/inspirations/catalogues/8162672184c6cd7b.webp",
+        "name": "Cursor",
+        "preview": "/inspirations/catalogues/97e7d44d243e3228.webp"
+      },
+      {
+        "description": "High-performance code editor built for low latency.",
+        "href": "https://zed.dev/",
+        "icon": "/inspirations/catalogues/272fb313c56dc162.webp",
+        "name": "Zed",
+        "preview": "/inspirations/catalogues/530d09e6b0810724.webp"
+      },
+      {
+        "description": "Generative AI translating prompts into shadcn code.",
+        "href": "https://v0.app/",
+        "icon": "/inspirations/catalogues/9141d7ad2c82831e.webp",
+        "name": "v0",
+        "preview": "/inspirations/catalogues/574766d320b58b15.webp"
+      },
+      {
+        "description": "In-browser development sandbox for full-stack applications.",
+        "href": "https://bolt.new/",
+        "icon": "/inspirations/catalogues/d467981ebabed723.webp",
+        "name": "Bolt.new",
+        "preview": "/inspirations/catalogues/f39d99da2ec2e27e.webp"
+      },
+      {
+        "description": "Blazing fast frontend build and dev tool.",
+        "href": "https://vite.dev/",
+        "icon": "/inspirations/catalogues/6dab06d327f85b06.webp",
+        "name": "Vite",
+        "preview": "/inspirations/catalogues/5f1fd628ae08b20e.webp"
+      },
+      {
+        "description": "Fast Rust-based formatter and code linter.",
+        "href": "https://biomejs.dev/",
+        "icon": "/inspirations/catalogues/b19208b192b5805b.webp",
+        "name": "Biome",
+        "preview": "/inspirations/catalogues/c8483a828a64c78a.webp"
+      },
+      {
+        "description": "Reliable browser automation and end-to-end testing.",
+        "href": "https://playwright.dev/",
+        "icon": "/inspirations/catalogues/d029ec202cc736ce.webp",
+        "name": "Playwright",
+        "preview": "/inspirations/catalogues/e9d55c9cd1d19a2d.webp"
+      },
+      {
+        "description": "Focused developer tools for shipping software.",
+        "href": "https://www.buildertools.sh/",
+        "icon": "/inspirations/catalogues/67add0e63542aa8d.webp",
+        "name": "BuilderTools",
+        "preview": "/inspirations/catalogues/0fa381482633bd3b.webp"
+      },
+      {
+        "description": "Type-safe URL search params for React.",
+        "href": "https://nuqs.47ng.com/",
+        "icon": "/inspirations/catalogues/cf93b6f104e77b5c.webp",
+        "name": "nuqs",
+        "preview": "/inspirations/catalogues/111ac5072b2628fe.webp"
+      },
+      {
+        "description": "CLI scaffolding modern full-stack TypeScript setups.",
+        "href": "https://www.better-t-stack.dev/",
+        "icon": "/inspirations/catalogues/eb6b880d579fc81b.webp",
+        "name": "Better T Stack",
+        "preview": "/inspirations/catalogues/f1a8d7043c6fb0b0.webp"
+      },
+      {
+        "description": "Directory comparing modern AI tech stacks.",
+        "href": "https://github.com/alp82/aistack",
+        "icon": "/inspirations/catalogues/1427ce21151a6cae.webp",
+        "name": "AI Stack",
+        "preview": "/inspirations/catalogues/0db4705a58c25cb6.webp"
+      },
+      {
+        "description": "Natural-language end-to-end testing via MCP.",
+        "href": "https://alumnium.ai/",
+        "icon": "/inspirations/catalogues/459f35b41e70ac14.webp",
+        "name": "Alumnium",
+        "preview": "/inspirations/catalogues/7c03659bcd6f59b4.webp"
+      },
+      {
+        "description": "Diagnostic tool identifying Next.js performance bottlenecks.",
+        "href": "https://vercel-doctor.com/",
+        "icon": "/inspirations/catalogues/c0702a013bc6300a.webp",
+        "name": "Vercel Doctor",
+        "preview": "/inspirations/catalogues/2b28547a0b76e4a0.webp"
+      },
+      {
+        "description": "Free cloud credits for open-source maintainers.",
+        "href": "https://ossperks.com/",
+        "icon": "/inspirations/catalogues/0788731e66b459ce.webp",
+        "name": "OSS Perks",
+        "preview": "/inspirations/catalogues/4728b276ed088524.webp"
+      },
+      {
+        "description": "Vite plugin running Next.js on Cloudflare.",
+        "href": "https://vinext.dev/",
+        "icon": "/inspirations/catalogues/63bbb0c5a3b9bc1e.webp",
+        "name": "Vinext",
+        "preview": "/inspirations/catalogues/7624ec4165389795.webp"
+      },
+      {
+        "description": "Structured logging framework for web applications.",
+        "href": "https://www.evlog.dev/",
+        "icon": "/inspirations/catalogues/b7a05d3ac3a37e11.webp",
+        "name": "evlog",
+        "preview": "/inspirations/catalogues/eb5a937b30aa64f3.webp"
+      },
+      {
+        "description": "Declarative sound library for web apps.",
+        "href": "https://audio.raphaelsalaja.com/",
+        "icon": "/inspirations/catalogues/74baf940470a7513.webp",
+        "name": "@web-kits/audio",
+        "preview": "/inspirations/catalogues/91dd3daeaa237bfc.webp"
+      },
+      {
+        "description": "Lightweight web framework alternative to React.",
+        "href": "https://nuejs.org/",
+        "icon": "/inspirations/catalogues/13111f3f7f949afe.webp",
+        "name": "Nue",
+        "preview": "/inspirations/catalogues/77c53556298ead8c.webp"
+      },
+      {
+        "description": "Privacy-focused web analytics without cookie banners.",
+        "href": "https://umami.is/",
+        "icon": "/inspirations/catalogues/7261bb4919e9fadc.webp",
+        "name": "Umami",
+        "preview": "/inspirations/catalogues/1a4386ebb5dba182.webp"
+      },
+      {
+        "description": "Dependency-free text morphing animation library.",
+        "href": "https://torph.lochie.me/",
+        "icon": "/inspirations/catalogues/f61a2432fc6f0ebd.webp",
+        "name": "Torph",
+        "preview": "/inspirations/catalogues/1b2e0e7871e7fc69.webp"
+      },
+      {
+        "description": "Documentation detailing xAI web crawler specifications.",
+        "href": "https://x.ai/bot",
+        "icon": "/inspirations/catalogues/8ff979ee5ec2768e.webp",
+        "name": "x.ai/bot",
+        "preview": "/inspirations/catalogues/2623179f6783b956.webp"
+      },
+      {
+        "description": "Focused analytics tracking visitors and conversions.",
+        "href": "https://tracwell.app/",
+        "icon": "/inspirations/catalogues/634a1161ea2ae63c.webp",
+        "name": "Tracwell",
+        "preview": "/inspirations/catalogues/c64641bf4fc98cd9.webp"
+      },
+      {
+        "description": "Floating interface toolbar for parameter tuning.",
+        "href": "https://www.dialkit.dev/",
+        "icon": "/inspirations/catalogues/f09d3cd9b8bda586.webp",
+        "name": "DialKit",
+        "preview": "/inspirations/catalogues/79643d8a95631b16.webp"
+      },
+      {
+        "description": "Your personal AI Agent for job hunting ;)",
+        "href": "https://fetchrly.co.in",
+        "icon": "/inspirations/catalogues/c2837f2daa70f142.webp",
+        "name": "FetchrLy",
+        "preview": null
+      },
+      {
+        "description": "The App Store screenshots & ASO",
+        "href": "https://launchshots.com/",
+        "icon": "/inspirations/catalogues/777cbafb2707949d.webp",
+        "name": "Launch Shots",
+        "preview": null
+      }
+    ],
+    "title": "Development"
+  },
+  {
+    "description": "Coding agents, local MCP servers, and machine specs.",
+    "id": "agentic",
+    "items": [
+      {
+        "description": "Unified desktop workspace managing coding agents.",
+        "href": "https://www.drayhq.com/",
+        "icon": "/inspirations/catalogues/da2b0d3bff1730bd.webp",
+        "name": "Dray",
+        "preview": "/inspirations/catalogues/a299ac81197d82d9.webp"
+      },
+      {
+        "description": "Structured DESIGN.MD specifications for AI agents.",
+        "href": "https://styles.refero.design/",
+        "icon": "/inspirations/catalogues/6dc21a3405f06b4f.webp",
+        "name": "Refero",
+        "preview": "/inspirations/catalogues/68957262354a9623.webp"
+      },
+      {
+        "description": "Generator creating machine-readable design specifications.",
+        "href": "https://designmd.me/",
+        "icon": "/inspirations/catalogues/777ab36165515ab9.webp",
+        "name": "designmd.me",
+        "preview": "/inspirations/catalogues/d6733a43a89f8680.webp"
+      },
+      {
+        "description": "Standardized design systems formatted for agents.",
+        "href": "https://open-design.ai/",
+        "icon": "/inspirations/catalogues/e08036ba1a37331d.webp",
+        "name": "Open Design",
+        "preview": "/inspirations/catalogues/097efb4fe65974e9.webp"
+      },
+      {
+        "description": "DESIGN.MD templates to guide AI assistants.",
+        "href": "https://designmd.supply/",
+        "icon": "/inspirations/catalogues/055c6da6620069bc.webp",
+        "name": "designmd.supply",
+        "preview": "/inspirations/catalogues/b94141d53ab45a90.webp"
+      },
+      {
+        "description": "Interactive generator producing AI design rules.",
+        "href": "https://getdesign.md/",
+        "icon": "/inspirations/catalogues/dc90cc458c298309.webp",
+        "name": "getdesign.md",
+        "preview": "/inspirations/catalogues/5da6338af40255d5.webp"
+      },
+      {
+        "description": "DESIGN.MD generator extracting rules from websites.",
+        "href": "https://design-md.hyperbrowser.ai/",
+        "icon": "/inspirations/catalogues/c6d0f6c431fd2c61.webp",
+        "name": "Hyperbrowser Design.md",
+        "preview": "/inspirations/catalogues/3c80946ede406250.webp"
+      },
+      {
+        "description": "Design system generator structuring AI guidelines.",
+        "href": "https://aura.build/",
+        "icon": "/inspirations/catalogues/8ce5f2cd2e3f8272.webp",
+        "name": "Aura",
+        "preview": "/inspirations/catalogues/bb29f94bbaa698f7.webp"
+      },
+      {
+        "description": "AI-assisted interface design producing clean code.",
+        "href": "https://neuform.ai/",
+        "icon": "/inspirations/catalogues/332733b4393ff88a.webp",
+        "name": "Neuform",
+        "preview": "/inspirations/catalogues/b2df09915fe43b99.webp"
+      },
+      {
+        "description": "Command-line tool scaffolding typed UI components.",
+        "href": "https://typeui.sh/",
+        "icon": "/inspirations/catalogues/16a56b8a40594092.webp",
+        "name": "typeui.sh",
+        "preview": "/inspirations/catalogues/80c02b3a36e385c5.webp"
+      },
+      {
+        "description": "Converts any webpage into structured markdown.",
+        "href": "https://webclaw.io/",
+        "icon": "/inspirations/catalogues/a81de3635e312a30.webp",
+        "name": "Webclaw",
+        "preview": "/inspirations/catalogues/0ed9ceecfce1eb27.webp"
+      },
+      {
+        "description": "Orchestrates multiple background coding agent sessions.",
+        "href": "https://ghostex.dev/",
+        "icon": "/inspirations/catalogues/023bc2667a177cae.webp",
+        "name": "Ghostex",
+        "preview": "/inspirations/catalogues/48f8bc171490f8e2.webp"
+      },
+      {
+        "description": "Scores how effectively websites support crawlers.",
+        "href": "https://is-agentic.com/",
+        "icon": "/inspirations/catalogues/ac9ef5fa51288555.webp",
+        "name": "is-agentic.com",
+        "preview": "/inspirations/catalogues/e5c84190a3d1e688.webp"
+      },
+      {
+        "description": "Distributed runner managing coding agent jobs.",
+        "href": "https://herdr.dev/",
+        "icon": "/inspirations/catalogues/1c0e1b37a3c187e3.webp",
+        "name": "Herdr",
+        "preview": "/inspirations/catalogues/ae845eef232aed37.webp"
+      },
+      {
+        "description": "Compiler transforming agent skill definitions.",
+        "href": "https://soubi.vercel.app/",
+        "icon": "/inspirations/catalogues/779d1d72c2c81699.webp",
+        "name": "Soubi",
+        "preview": "/inspirations/catalogues/e202ed6cae125a91.webp"
+      },
+      {
+        "description": "Customizable and production-ready AI agent recipes for React.",
+        "href": "https://agentcn.run/",
+        "icon": "/inspirations/catalogues/01a5fee1f03e9a7e.webp",
+        "name": "agentcn",
+        "preview": "/inspirations/catalogues/393a7e37e2ed77ec.webp"
+      },
+      {
+        "description": "Agent skills for shadcn registries and developer workflows.",
+        "href": "https://www.skills.sh/shadcn-labs/skills",
+        "icon": "/inspirations/catalogues/aa073d24c64992d7.webp",
+        "name": "skills",
+        "preview": "/inspirations/catalogues/c2ccbe827f0425a3.webp"
+      },
+      {
+        "description": "ChatGPT, Claude, and MCP app UI components for React.",
+        "href": "https://mcpcn.dev/",
+        "icon": "/inspirations/catalogues/ecc1511306b61210.webp",
+        "name": "mcpcn",
+        "preview": "/inspirations/catalogues/38c931d5e36e1d92.webp"
+      },
+      {
+        "description": "Repository of API integration specifications for agents.",
+        "href": "https://integrations.sh/",
+        "icon": "/inspirations/catalogues/985f1ee953f6a878.webp",
+        "name": "integrations.sh",
+        "preview": "/inspirations/catalogues/231dcd50e74ba5b1.webp"
+      },
+      {
+        "description": "High-performance coding agent CLI in Zig.",
+        "href": "https://fx.sh/",
+        "icon": "/inspirations/catalogues/53a1288b4f08c4df.webp",
+        "name": "fx",
+        "preview": "/inspirations/catalogues/30db47a571d720bf.webp"
+      },
+      {
+        "description": "Headless HTML-to-MP4 video rendering engine.",
+        "href": "https://www.hyperframes.dev/",
+        "icon": "/inspirations/catalogues/bc8e36f804c5d241.webp",
+        "name": "HyperFrames",
+        "preview": "/inspirations/catalogues/d915e10471f11e81.webp"
+      },
+      {
+        "description": "Observability tool monitoring latency and costs.",
+        "href": "https://www.foglamp.dev/",
+        "icon": "/inspirations/catalogues/503a8810110fde77.webp",
+        "name": "Foglamp",
+        "preview": "/inspirations/catalogues/07326c68db2d30cb.webp"
+      },
+      {
+        "description": "Intelligent agent organizing scattered research notes.",
+        "href": "https://distill.id/",
+        "icon": "/inspirations/catalogues/2a8c90fb8ad494dd.webp",
+        "name": "Distill",
+        "preview": "/inspirations/catalogues/c471baffd69d6b5c.webp"
+      },
+      {
+        "description": "Converts on-screen UI annotations into context.",
+        "href": "https://www.agentation.com/",
+        "icon": "/inspirations/catalogues/c62ce9eeeb8fec25.webp",
+        "name": "Agentation",
+        "preview": "/inspirations/catalogues/d532f36fd131dc2e.webp"
+      },
+      {
+        "description": "Open-source terminal AI coding agent.",
+        "href": "https://opencode.ai/",
+        "icon": "/inspirations/catalogues/ff6a1e4e386ef76f.webp",
+        "name": "OpenCode",
+        "preview": "/inspirations/catalogues/499d969168f3c376.webp"
+      },
+      {
+        "description": "Design intelligence skill for AI agents.",
+        "href": "https://impeccable.style/",
+        "icon": "/inspirations/catalogues/acd3f3c510c3d452.webp",
+        "name": "Impeccable",
+        "preview": "/inspirations/catalogues/5f68a98f567afa42.webp"
+      },
+      {
+        "description": "Synchronizes agent context across code editors.",
+        "href": "https://skillsync.com/",
+        "icon": "/inspirations/catalogues/8f54f92855754f8d.webp",
+        "name": "SkillSync",
+        "preview": "/inspirations/catalogues/f807af5536c42e94.webp"
+      },
+      {
+        "description": "Open-source development environment for coding agents.",
+        "href": "https://getbb.app/",
+        "icon": "/inspirations/catalogues/453ec7a6f156ce8e.webp",
+        "name": "bb",
+        "preview": "/inspirations/catalogues/cf28b42bc633c79e.webp"
+      },
+      {
+        "description": "Natural language workspace generating full-stack apps.",
+        "href": "https://capacity.so/",
+        "icon": "/inspirations/catalogues/d9943adfb9bfb1f7.webp",
+        "name": "Capacity",
+        "preview": "/inspirations/catalogues/dcf3ccf16d702bf8.webp"
+      },
+      {
+        "description": "Prompt-driven UI component generator for builders.",
+        "href": "https://lafys.com/",
+        "icon": "/inspirations/catalogues/e14a70299b5f5cf7.webp",
+        "name": "Lafys",
+        "preview": "/inspirations/catalogues/e335a84df1639a73.webp"
+      },
+      {
+        "description": "Agent-first visual web canvas with MCP.",
+        "href": "https://efecto.app/",
+        "icon": "/inspirations/catalogues/087a6159f4dfd24b.webp",
+        "name": "Efecto",
+        "preview": "/inspirations/catalogues/891adca3f18d5856.webp"
+      },
+      {
+        "description": "AI career suite simulating technical interviews.",
+        "href": "https://www.arclabs.space/",
+        "icon": "/inspirations/catalogues/e72920b55230cee7.webp",
+        "name": "Arc labs",
+        "preview": "/inspirations/catalogues/c7471253e37a885a.webp"
+      },
+      {
+        "description": "Minimalist open-source AI search engine.",
+        "href": "https://scira.ai/",
+        "icon": "/inspirations/catalogues/c94d21fdec046bd4.webp",
+        "name": "Scira",
+        "preview": "/inspirations/catalogues/93d14c1e088c4dd5.webp"
+      },
+      {
+        "description": "AI design engineer that codes UI from context.",
+        "href": "https://kombai.com/",
+        "icon": "/inspirations/catalogues/3b0e987da1a7ea20.webp",
+        "name": "Kombai",
+        "preview": "/inspirations/catalogues/563b2b3aa59a6453.webp"
+      },
+      {
+        "description": "AI canvas workspace for notes and plans.",
+        "href": "https://causal.so/",
+        "icon": "/inspirations/catalogues/180c5529ca4aa4c6.webp",
+        "name": "Causal",
+        "preview": "/inspirations/catalogues/6e2b4f3f709d8df7.webp"
+      },
+      {
+        "description": "Build AI Teammates that answer from your knowledge",
+        "href": "https://ciele.app",
+        "icon": "/inspirations/catalogues/94617ca33bb87b3a.webp",
+        "name": "Ciele",
+        "preview": null
+      }
+    ],
+    "title": "Agents & MCP"
+  },
+  {
+    "description": "Hosting platforms, edge runtimes, and deployment infrastructure.",
+    "id": "deploy",
+    "items": [
+      {
+        "description": "Cloud platform for deploying Next.js applications.",
+        "href": "https://vercel.com/",
+        "icon": "/inspirations/catalogues/3c9d62d486a541a4.webp",
+        "name": "Vercel",
+        "preview": "/inspirations/catalogues/1f067801f1610abc.webp"
+      },
+      {
+        "description": "Global edge network running serverless Workers.",
+        "href": "https://developers.cloudflare.com/workers/",
+        "icon": "/inspirations/catalogues/43d5d3aeb62c275f.webp",
+        "name": "Cloudflare",
+        "preview": "/inspirations/catalogues/58a18ca076608bd5.webp"
+      },
+      {
+        "description": "Web platform providing continuous deployment pipelines.",
+        "href": "https://netlify.com/",
+        "icon": "/inspirations/catalogues/56776b557a7e1b5d.webp",
+        "name": "Netlify",
+        "preview": "/inspirations/catalogues/79b85782b2506547.webp"
+      },
+      {
+        "description": "Simplified infrastructure platform for deploying databases.",
+        "href": "https://railway.app/",
+        "icon": "/inspirations/catalogues/7c8dabd089c6e599.webp",
+        "name": "Railway",
+        "preview": "/inspirations/catalogues/e53feac66017d87b.webp"
+      },
+      {
+        "description": "Runs Docker containers close to users.",
+        "href": "https://fly.io/",
+        "icon": "/inspirations/catalogues/a9aac4f2f7d7f391.webp",
+        "name": "Fly.io",
+        "preview": "/inspirations/catalogues/7f082eb8a4d1afa4.webp"
+      }
+    ],
+    "title": "Deploy"
+  }
+]

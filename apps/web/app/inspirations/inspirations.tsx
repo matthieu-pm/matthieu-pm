@@ -11,6 +11,7 @@ import {
   FavouriteIcon,
   Menu01Icon,
   ListViewIcon,
+  Globe02Icon,
 } from "@hugeicons/core-free-icons"
 import {
   useCallback,
@@ -22,34 +23,17 @@ import {
   type CSSProperties,
   type ReactNode,
 } from "react"
-import catalogue from "./catalogue.json"
+import {
+  allResources,
+  catalogues,
+  navigation,
+  type CatalogueId,
+  type Resource,
+} from "./catalogues"
+import { Globe } from "./pixel-globe"
 import styles from "./inspirations.module.css"
 
-type Resource = (typeof catalogue)[number]["items"][number]
 type Theme = "auto" | "light" | "dark"
-const resources = catalogue.flatMap((section) =>
-  section.items.map((item) => ({ ...item, section: section.title }))
-)
-const navigation = [
-  { label: "Inspiration", href: "/inspirations", count: resources.length },
-  {
-    label: "Components",
-    href: "https://www.designeer.xyz/components",
-    count: 120,
-  },
-  { label: "Build", href: "https://www.designeer.xyz/build", count: 64 },
-  { label: "Visuals", href: "https://www.designeer.xyz/visuals", count: 55 },
-  {
-    label: "Utilities",
-    href: "https://www.designeer.xyz/utilities",
-    count: 61,
-  },
-  {
-    label: "Design Engineers",
-    href: "https://www.designeer.xyz/designers",
-    count: 132,
-  },
-]
 const description =
   "A curated collection of interface craft, component libraries, AI tools, and resources for builders."
 
@@ -100,18 +84,61 @@ function Icon({
     />
   )
 }
-function Globe({ small = false }: { small?: boolean }) {
+function SidebarNavigation({
+  children,
+  label,
+}: {
+  children: ReactNode
+  label: string
+}) {
+  const ref = useRef<HTMLElement>(null)
+  const moveHighlight = useCallback((link: Element | null) => {
+    const nav = ref.current
+    if (!nav || !(link instanceof HTMLElement)) return
+    nav.style.setProperty("--highlight-y", `${link.offsetTop}px`)
+    nav.style.setProperty("--highlight-height", `${link.offsetHeight}px`)
+  }, [])
+  const restoreHighlight = useCallback(() => {
+    const nav = ref.current
+    moveHighlight(
+      nav?.querySelector("a:focus-visible") ??
+        nav?.querySelector("a[aria-current]") ??
+        null
+    )
+  }, [moveHighlight])
+
+  useEffect(() => {
+    const nav = ref.current
+    if (!nav) return
+    restoreHighlight()
+    const observer = new ResizeObserver(restoreHighlight)
+    observer.observe(nav)
+    return () => observer.disconnect()
+  }, [children, restoreHighlight])
+
   return (
-    <Image
-      src="/inspirations/globe.png"
-      alt=""
-      width={100}
-      height={100}
-      priority
-      className={small ? styles.smallGlobe : styles.globe}
-    />
+    <nav
+      ref={ref}
+      aria-label={label}
+      onPointerOver={(event) => {
+        if (event.pointerType === "touch") return
+        if (event.target instanceof Element) {
+          moveHighlight(event.target.closest("a"))
+        }
+      }}
+      onPointerLeave={restoreHighlight}
+      onFocus={(event) => moveHighlight(event.target.closest("a"))}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) {
+          moveHighlight(event.currentTarget.querySelector("a[aria-current]"))
+        }
+      }}
+    >
+      {children}
+    </nav>
   )
 }
+
 function Modal({
   children,
   label,
@@ -168,6 +195,33 @@ function Modal({
     </dialog>
   )
 }
+function ResourceIcon({
+  resource,
+  size,
+}: {
+  resource: Resource
+  size: number
+}) {
+  const [failed, setFailed] = useState<string | null>(null)
+  return resource.icon && failed !== resource.icon ? (
+    <Image
+      src={resource.icon}
+      alt=""
+      width={size}
+      height={size}
+      onError={() => setFailed(resource.icon)}
+    />
+  ) : (
+    <HugeiconsIcon
+      icon={Globe02Icon}
+      size={size}
+      strokeWidth={1.4}
+      aria-hidden="true"
+      style={{ flexShrink: 0 }}
+    />
+  )
+}
+
 function ResourceArtwork({ resource }: { resource: Resource }) {
   const [failedPreview, setFailedPreview] = useState<string | null>(null)
   if (resource.preview && resource.preview !== failedPreview)
@@ -188,7 +242,7 @@ function ResourceArtwork({ resource }: { resource: Resource }) {
         <span>{new URL(resource.href).hostname.replace(/^www\./, "")}</span>
       </div>
       <div className={styles.artworkIdentity}>
-        <Image src={resource.icon!} alt="" width={42} height={42} />
+        <ResourceIcon resource={resource} size={42} />
         <strong>{resource.name}</strong>
         <span>{resource.description}</span>
       </div>
@@ -196,7 +250,19 @@ function ResourceArtwork({ resource }: { resource: Resource }) {
   )
 }
 
-export function Inspirations() {
+export function Inspirations({
+  category = "inspiration",
+}: {
+  category?: CatalogueId
+}) {
+  const catalogue = catalogues[category]
+  const resources = useMemo(
+    () =>
+      catalogue.flatMap((section) =>
+        section.items.map((item) => ({ ...item, section: section.title }))
+      ),
+    [catalogue]
+  )
   const [theme, setTheme] = usePreference("theme", "auto")
   const [view, setView] = usePreference("view", "list")
   const [savedJson, setSavedJson] = usePreference("saved", "[]")
@@ -216,7 +282,9 @@ export function Inspirations() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [selected, setSelected] = useState<Resource | null>(null)
   const [previewBelow, setPreviewBelow] = useState<string | null>(null)
-  const [activeSection, setActiveSection] = useState("inspiration")
+  const [activeSection, setActiveSection] = useState(
+    catalogue[0]?.id ?? category
+  )
   const [scrolled, setScrolled] = useState(false)
   const grid = view === "grid"
   const openSearch = useCallback(() => {
@@ -226,7 +294,7 @@ export function Inspirations() {
   }, [])
   const explore = useCallback(() => {
     setSelected(resources[Math.floor(Math.random() * resources.length)] ?? null)
-  }, [])
+  }, [resources])
   const toggleSaved = (resource: Resource) =>
     setSavedJson(
       JSON.stringify(
@@ -272,7 +340,7 @@ export function Inspirations() {
               Infinity) < 140
         )
         .at(-1)
-      setActiveSection(current?.id ?? "inspiration")
+      setActiveSection(current?.id ?? catalogue[0]?.id ?? category)
     }
     window.addEventListener("keydown", keydown)
     window.addEventListener("scroll", scroll, { passive: true })
@@ -281,7 +349,7 @@ export function Inspirations() {
       window.removeEventListener("keydown", keydown)
       window.removeEventListener("scroll", scroll)
     }
-  }, [openSearch, explore])
+  }, [openSearch, explore, catalogue, category])
   useEffect(() => {
     if (!menuOpen) return
     const close = (event: KeyboardEvent) => {
@@ -290,7 +358,7 @@ export function Inspirations() {
     window.addEventListener("keydown", close)
     return () => window.removeEventListener("keydown", close)
   }, [menuOpen])
-  const filtered = resources.filter((resource) =>
+  const filtered = allResources.filter((resource) =>
     `${resource.name} ${resource.description} ${resource.section} ${resource.href}`
       .toLowerCase()
       .includes(query.trim().toLowerCase())
@@ -341,16 +409,17 @@ export function Inspirations() {
     </button>
   )
   const navLinks = navigation.map((item, index) => (
-    <a
+    <Link
       key={item.label}
-      className={index === 0 ? styles.activeNav : undefined}
+      className={item.id === category ? styles.activeNav : undefined}
       href={item.href}
-      aria-current={index === 0 ? "page" : undefined}
+      aria-current={item.id === category ? "page" : undefined}
+      onClick={() => setMenuOpen(false)}
     >
       <Icon index={index} />
       <span>{item.label}</span>
       <small>{item.count}</small>
-    </a>
+    </Link>
   ))
   const sectionLinks = catalogue.map((section) => (
     <a
@@ -390,10 +459,14 @@ export function Inspirations() {
             </div>
             <div className={styles.sidebarNavigation}>
               <p className={styles.kicker}>Navigation</p>
-              <nav aria-label="Main navigation">{navLinks}</nav>
+              <SidebarNavigation label="Main navigation">
+                {navLinks}
+              </SidebarNavigation>
               <div className={styles.sectionNavigation}>
                 <p className={styles.kicker}>Sections</p>
-                <nav aria-label="Sections">{sectionLinks}</nav>
+                <SidebarNavigation label="Sections">
+                  {sectionLinks}
+                </SidebarNavigation>
               </div>
             </div>
             <div className={styles.sidebarBottom}>
@@ -456,12 +529,7 @@ export function Inspirations() {
                           rel="noreferrer"
                           className={styles.resourceLink}
                         >
-                          <Image
-                            src={resource.icon!}
-                            width={18}
-                            height={18}
-                            alt=""
-                          />
+                          <ResourceIcon resource={resource} size={18} />
                           <span className={styles.resourceText}>
                             <strong>{resource.name}</strong>
                             <span className={styles.dot} aria-hidden="true" />
@@ -508,9 +576,9 @@ export function Inspirations() {
               <p className={styles.kicker}>Navigate</p>
               <nav aria-label="Footer navigation">
                 {navigation.map((item) => (
-                  <a href={item.href} key={item.label}>
+                  <Link href={item.href} key={item.label}>
                     {item.label}
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </div>
@@ -553,8 +621,12 @@ export function Inspirations() {
         {viewButton}
         {menuOpen && (
           <div id="inspirations-menu" className={styles.mobileMenu}>
-            <nav aria-label="Mobile navigation">{navLinks}</nav>
-            <nav aria-label="Jump to section">{sectionLinks}</nav>
+            <SidebarNavigation label="Mobile navigation">
+              {navLinks}
+            </SidebarNavigation>
+            <SidebarNavigation label="Jump to section">
+              {sectionLinks}
+            </SidebarNavigation>
             <button
               onClick={() => {
                 setMenuOpen(false)
@@ -594,10 +666,14 @@ export function Inspirations() {
               <>
                 <p>Menu</p>
                 {navigation.map((item, index) => (
-                  <a key={item.label} href={item.href}>
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setSearchOpen(false)}
+                  >
                     <Icon index={index} />
                     <span>{item.label}</span>
-                  </a>
+                  </Link>
                 ))}
                 <p>Sections</p>
                 {catalogue.map((section) => (
@@ -623,7 +699,7 @@ export function Inspirations() {
                     rel="noreferrer"
                     key={resource.href}
                   >
-                    <Image src={resource.icon!} width={24} height={24} alt="" />
+                    <ResourceIcon resource={resource} size={24} />
                     <span>
                       <strong>{resource.name}</strong>
                       <small>
@@ -666,12 +742,12 @@ export function Inspirations() {
             </button>
           </div>
           <div className={styles.searchResults}>
-            {resources
+            {allResources
               .filter((resource) => saved.includes(resource.href))
               .map((resource) => (
                 <div className={styles.savedRow} key={resource.href}>
                   <a href={resource.href} target="_blank" rel="noreferrer">
-                    <Image src={resource.icon!} width={24} height={24} alt="" />
+                    <ResourceIcon resource={resource} size={24} />
                     <span>
                       <strong>{resource.name}</strong>
                       <small>{resource.description}</small>
@@ -736,7 +812,7 @@ export function Inspirations() {
             <ResourceArtwork resource={selected} />
           </div>
           <div className={styles.previewFooter}>
-            <Image src={selected.icon!} width={18} height={18} alt="" />
+            <ResourceIcon resource={selected} size={18} />
             <strong>{selected.name}</strong>
             <span>{selected.description}</span>
             {saveButton(selected, true)}

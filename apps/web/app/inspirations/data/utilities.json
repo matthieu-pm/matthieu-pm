@@ -1,0 +1,520 @@
+[
+  {
+    "description": "Developer utilities that accelerate frontend workflows.",
+    "id": "utilities",
+    "items": [
+      {
+        "description": "Web GUI to optimize and clean SVG files.",
+        "href": "https://svgomg.net/",
+        "icon": "/inspirations/catalogues/af86ce29f1b226b4.webp",
+        "name": "SVGOMG",
+        "preview": "/inspirations/catalogues/3905958379de2368.webp"
+      },
+      {
+        "description": "Interactive sandbox for testing regular expressions.",
+        "href": "https://regexr.com/",
+        "icon": "/inspirations/catalogues/9f7f3b87c23d9bc9.webp",
+        "name": "RegExr",
+        "preview": "/inspirations/catalogues/bca8406f6dee465c.webp"
+      },
+      {
+        "description": "Browser image compression with visual comparisons.",
+        "href": "https://squoosh.app/",
+        "icon": "/inspirations/catalogues/8815dbcb7121d6a8.webp",
+        "name": "Squoosh",
+        "preview": "/inspirations/catalogues/a7967c1ad9bfe628.webp"
+      },
+      {
+        "description": "Generative SVG textures, gradients, and patterns.",
+        "href": "https://fffuel.co/",
+        "icon": "/inspirations/catalogues/3ffe2307987ed09e.webp",
+        "name": "Fffuel",
+        "preview": "/inspirations/catalogues/369fac0265f58d45.webp"
+      },
+      {
+        "description": "3D mockups and scene staging for software.",
+        "href": "https://ui.camera/",
+        "icon": "/inspirations/catalogues/7aa2e0aef24aebb9.webp",
+        "name": "ui.camera",
+        "preview": "/inspirations/catalogues/a96a9bef353940a5.webp"
+      },
+      {
+        "description": "Turn code snippets into shareable screenshots.",
+        "href": "https://ray.so/",
+        "icon": "/inspirations/catalogues/9e6ff075798db773.webp",
+        "name": "Ray.so",
+        "preview": "/inspirations/catalogues/f9bf9e27d04fda4d.webp"
+      },
+      {
+        "description": "Polyglot code converter for JSON and types.",
+        "href": "https://transform.tools/",
+        "icon": "/inspirations/catalogues/d697e0c4087cfb7c.webp",
+        "name": "Transform",
+        "preview": "/inspirations/catalogues/2d791bc3b72ec510.webp"
+      },
+      {
+        "description": "Suite of browser-based offline creative tools.",
+        "href": "https://www.playgrnd.tools/",
+        "icon": "/inspirations/catalogues/2096ad84e93a0073.webp",
+        "name": "Playgrnd",
+        "preview": "/inspirations/catalogues/a84613431b8daa84.webp"
+      },
+      {
+        "description": "Convert MP4 recordings into animated SVG graphics.",
+        "href": "https://www.tryanim8.com/",
+        "icon": "/inspirations/catalogues/d6d02248b6d51e5a.webp",
+        "name": "Anim8",
+        "preview": "/inspirations/catalogues/9f14e476f4362ba5.webp"
+      },
+      {
+        "description": "Inspect and preview Open Graph social cards.",
+        "href": "https://www.ogfolio.com/",
+        "icon": "/inspirations/catalogues/d3abe4acf9ad5f3b.webp",
+        "name": "OGFolio",
+        "preview": "/inspirations/catalogues/51e3fb83ccf92616.webp"
+      },
+      {
+        "description": "Real-time dither effect generator for web.",
+        "href": "https://dotforge.vercel.app/",
+        "icon": "/inspirations/catalogues/68145cfcb5492039.webp",
+        "name": "DotForge",
+        "preview": "/inspirations/catalogues/05673fbef160e274.webp"
+      },
+      {
+        "description": "Browser utility converting images into ASCII art.",
+        "href": "https://asciinator.app/",
+        "icon": "/inspirations/catalogues/71bc8909965eb3eb.webp",
+        "name": "ASCIInator",
+        "preview": "/inspirations/catalogues/37649135c5d8ef71.webp"
+      },
+      {
+        "description": "Publish brand guidelines as live pages.",
+        "href": "https://vessa.design/",
+        "icon": "/inspirations/catalogues/6755acb67d1be988.webp",
+        "name": "Vessa",
+        "preview": "/inspirations/catalogues/d58c7a41c4fce816.webp"
+      },
+      {
+        "description": "AI tool generating custom 3D icons.",
+        "href": "https://icoon.co/",
+        "icon": "/inspirations/catalogues/c781da96dd704244.webp",
+        "name": "Icoon",
+        "preview": "/inspirations/catalogues/04f5d2f0699a6c92.webp"
+      },
+      {
+        "description": "Suite of micro design tools and scales.",
+        "href": "https://www.designminis.com/",
+        "icon": "/inspirations/catalogues/2cecb918c8fd2b9f.webp",
+        "name": "Design Minis",
+        "preview": "/inspirations/catalogues/2510e40101cbc448.webp"
+      },
+      {
+        "description": "Fast tool converting text into ASCII art.",
+        "href": "https://ascii.krackeddevs.com/",
+        "icon": "/inspirations/catalogues/73a49422b06c63a6.webp",
+        "name": "ASCII (Kracked Devs)",
+        "preview": "/inspirations/catalogues/d83cf194327d78a7.webp"
+      },
+      {
+        "description": "Applies vintage dithering filters to photographs.",
+        "href": "https://literate-enigma-snowy.vercel.app/",
+        "icon": "/inspirations/catalogues/2476da3d0fd7a755.webp",
+        "name": "Dither Lab",
+        "preview": "/inspirations/catalogues/90eb624644ac41d0.webp"
+      },
+      {
+        "description": "Landing page builder producing handcrafted designs.",
+        "href": "https://www.usehallmark.com/",
+        "icon": "/inspirations/catalogues/a0d6b38c3dd6a65a.webp",
+        "name": "Hallmark",
+        "preview": "/inspirations/catalogues/d61df7f2721043b2.webp"
+      },
+      {
+        "description": "In-browser utilities to dither and pixelate images.",
+        "href": "https://www.tooooools.app/",
+        "icon": "/inspirations/catalogues/2236cfd4ac3fe9ab.webp",
+        "name": "Tooooools",
+        "preview": "/inspirations/catalogues/4a9d3df03297e6aa.webp"
+      },
+      {
+        "description": "Create promotional App Store screenshot mockups.",
+        "href": "https://screan.app/",
+        "icon": "/inspirations/catalogues/d5f6fed44f7e35c4.webp",
+        "name": "Screan",
+        "preview": "/inspirations/catalogues/8d1c03a7e04d3090.webp"
+      },
+      {
+        "description": "Format screenshots with clean social backgrounds.",
+        "href": "https://postspark.app/",
+        "icon": "/inspirations/catalogues/2e06fd8ade7d38c2.webp",
+        "name": "PostSpark",
+        "preview": "/inspirations/catalogues/ca2080f4214d0132.webp"
+      },
+      {
+        "description": "Sketching tool generating hand-drawn UI shapes.",
+        "href": "https://www.drawably.dev/",
+        "icon": "/inspirations/catalogues/85776dfa4bd438b0.webp",
+        "name": "Drawably",
+        "preview": "/inspirations/catalogues/59a852b2a06cba46.webp"
+      },
+      {
+        "description": "On-screen tool checking website pixel spacing.",
+        "href": "https://mesurer.dev/",
+        "icon": "/inspirations/catalogues/3ae0267bdcb89adc.webp",
+        "name": "Mesurer",
+        "preview": "/inspirations/catalogues/b60b4292b7216fe4.webp"
+      },
+      {
+        "description": "Image rendering tool from evlog team.",
+        "href": "https://render-labs.evlog.cloud/",
+        "icon": "/inspirations/catalogues/1fd146dd06db3e55.webp",
+        "name": "Render Labs",
+        "preview": null
+      },
+      {
+        "description": "Minimalist landing page builder for validation.",
+        "href": "https://www.butterfly.so/",
+        "icon": "/inspirations/catalogues/fa8623d1e43512e8.webp",
+        "name": "Butterfly",
+        "preview": "/inspirations/catalogues/80b09a7dea689eec.webp"
+      },
+      {
+        "description": "Documentation for the Corne split keyboard.",
+        "href": "https://corne.rs/",
+        "icon": "/inspirations/catalogues/4fd3ffb96d3432f7.webp",
+        "name": "Corne",
+        "preview": "/inspirations/catalogues/652673b6a5bffc93.webp"
+      },
+      {
+        "description": "Bookmark manager with CLI and Raycast support.",
+        "href": "https://www.shiori.sh/",
+        "icon": "/inspirations/catalogues/15d5b69581b3387c.webp",
+        "name": "Shiori",
+        "preview": "/inspirations/catalogues/4f3d2fddba6994fd.webp"
+      },
+      {
+        "description": "Platform matching developers with open-source projects.",
+        "href": "https://opensource-together.com/",
+        "icon": "/inspirations/catalogues/333e29ac70aad555.webp",
+        "name": "Open Source Together",
+        "preview": "/inspirations/catalogues/d3c2097e6b5095d5.webp"
+      },
+      {
+        "description": "Transforms images and videos into ASCII art.",
+        "href": "https://www.asciistudio.space/",
+        "icon": "/inspirations/catalogues/06e73926260af2b4.webp",
+        "name": "ASCII Studio",
+        "preview": "/inspirations/catalogues/a19485057a902abe.webp"
+      },
+      {
+        "description": "Generative geometric pattern creator for SVG.",
+        "href": "https://tabbied.com/",
+        "icon": "/inspirations/catalogues/fc5735c56249dc53.webp",
+        "name": "Tabbied",
+        "preview": "/inspirations/catalogues/b77141db8a96c5c1.webp"
+      },
+      {
+        "description": "Playground for real-time video visual effects.",
+        "href": "https://studio.rynix.in/edit",
+        "icon": "/inspirations/catalogues/6106e1aa8cfd6e4e.webp",
+        "name": "Rynix Studio",
+        "preview": "/inspirations/catalogues/b9cb8caf500a9707.webp"
+      },
+      {
+        "description": "AI tool generating animated transparent 3D mascots.",
+        "href": "https://mascofast.com/",
+        "icon": "/inspirations/catalogues/38d93b48980e43a7.webp",
+        "name": "Mascofast",
+        "preview": "/inspirations/catalogues/e2c8d19309b3c266.webp"
+      },
+      {
+        "description": "Frames screenshots inside realistic 3D mockups.",
+        "href": "https://www.screenshot-studio.com/",
+        "icon": "/inspirations/catalogues/13a5e8173f534a5d.webp",
+        "name": "Screenshot Studio",
+        "preview": "/inspirations/catalogues/2f21719a120892d3.webp"
+      },
+      {
+        "description": "Session replay and visitor recording for websites.",
+        "href": "https://letsreplay.co/",
+        "icon": "/inspirations/catalogues/5fdfd141934e12fe.webp",
+        "name": "Replay",
+        "preview": "/inspirations/catalogues/e6495a433694444f.webp"
+      },
+      {
+        "description": "Tweak colors, typography, borders and radius in",
+        "href": "https://convergence.suryansu.in",
+        "icon": "/inspirations/catalogues/71c834320fffd742.webp",
+        "name": "Convergence UI",
+        "preview": null
+      },
+      {
+        "description": "Temporary encrypted space for secure file transfer",
+        "href": "https://space-bin.onrender.com",
+        "icon": "/inspirations/catalogues/e7d3039a89dc589b.webp",
+        "name": "Space-Bin",
+        "preview": null
+      },
+      {
+        "description": "No nonsense notes",
+        "href": "https://nute.app/",
+        "icon": "/inspirations/catalogues/30128253a9594883.webp",
+        "name": "Nute",
+        "preview": null
+      },
+      {
+        "description": "No nonsense tasks",
+        "href": "https://schedual.app/",
+        "icon": "/inspirations/catalogues/fb28cf7a5b53ba11.webp",
+        "name": "Schedual",
+        "preview": null
+      },
+      {
+        "description": "Practice IELTS reading, listening, and writing",
+        "href": "https://prepora.xyz",
+        "icon": "/inspirations/catalogues/491a16afb9447954.webp",
+        "name": "Home / Prepora",
+        "preview": null
+      },
+      {
+        "description": "PostHog automatically diagnoses problems, fixes",
+        "href": "https://posthog.com/",
+        "icon": "/inspirations/catalogues/a89cad4732e4b335.webp",
+        "name": "PostHog – We make your product self-driving",
+        "preview": null
+      }
+    ],
+    "title": "Utilities"
+  },
+  {
+    "description": "Native macOS and desktop utility apps for productivity.",
+    "id": "desktop",
+    "items": [
+      {
+        "description": "Extendable desktop launcher replacing Spotlight.",
+        "href": "https://raycast.com/",
+        "icon": "/inspirations/catalogues/35360aec5cf79af4.webp",
+        "name": "Raycast",
+        "preview": "/inspirations/catalogues/131fe00bf0521b7a.webp"
+      },
+      {
+        "description": "Fast GPU-accelerated terminal emulator for developers.",
+        "href": "https://ghostty.org/",
+        "icon": "/inspirations/catalogues/d8538581ec62ff73.webp",
+        "name": "Ghostty",
+        "preview": "/inspirations/catalogues/2ce8d32185df2fb7.webp"
+      },
+      {
+        "description": "Rust-based terminal with block outputs and AI.",
+        "href": "https://warp.dev/",
+        "icon": "/inspirations/catalogues/7d2ded11f586f5b5.webp",
+        "name": "Warp",
+        "preview": "/inspirations/catalogues/0abbd4fed569d0c7.webp"
+      },
+      {
+        "description": "Ultimate screen capture and recording utility.",
+        "href": "https://cleanshot.com/",
+        "icon": "/inspirations/catalogues/b71d2b4bcf95b65d.webp",
+        "name": "CleanShot X",
+        "preview": "/inspirations/catalogues/b41c80a22defc8ac.webp"
+      },
+      {
+        "description": "AI notepad generating meeting summaries without bots.",
+        "href": "https://granola.ai/",
+        "icon": "/inspirations/catalogues/3e66ccf918f165f6.webp",
+        "name": "Granola",
+        "preview": "/inspirations/catalogues/57112613293c7b8e.webp"
+      },
+      {
+        "description": "Share files securely across local Wi-Fi networks.",
+        "href": "https://localsend.org/",
+        "icon": "/inspirations/catalogues/958ac487830a64d7.webp",
+        "name": "LocalSend",
+        "preview": "/inspirations/catalogues/a34724fbb6e9d404.webp"
+      },
+      {
+        "description": "Terminal organizing CLI sessions into panes.",
+        "href": "https://rioterm.com/canario",
+        "icon": "/inspirations/catalogues/4f3942309361947d.webp",
+        "name": "Canario",
+        "preview": "/inspirations/catalogues/02485f04115c96ed.webp"
+      },
+      {
+        "description": "Secondary dock supporting desktop monitoring widgets.",
+        "href": "https://cooldock.app/",
+        "icon": "/inspirations/catalogues/09ac801124ce7af7.webp",
+        "name": "CoolDock",
+        "preview": "/inspirations/catalogues/7995783f6db85711.webp"
+      },
+      {
+        "description": "Clipboard manager and screenshot history for Mac.",
+        "href": "https://supaste.com/",
+        "icon": "/inspirations/catalogues/a474c762566ac8be.webp",
+        "name": "Supaste",
+        "preview": "/inspirations/catalogues/c8d19764b4a47b25.webp"
+      },
+      {
+        "description": "Invoicing and client tracking app for freelancers.",
+        "href": "https://runey.app/",
+        "icon": "/inspirations/catalogues/7c0cfd05f6af4a8a.webp",
+        "name": "Runey",
+        "preview": "/inspirations/catalogues/a4893db975a53e9c.webp"
+      },
+      {
+        "description": "Unified revenue dashboard aggregating payment metrics.",
+        "href": "https://revone.app/",
+        "icon": "/inspirations/catalogues/86f1609855ce0f90.webp",
+        "name": "Revone",
+        "preview": "/inspirations/catalogues/cea7492da84dbd78.webp"
+      },
+      {
+        "description": "Firefox fork with vertical tabs and focus.",
+        "href": "https://zen-browser.app/",
+        "icon": "/inspirations/catalogues/bfd6732f3de72335.webp",
+        "name": "Zen Browser",
+        "preview": "/inspirations/catalogues/d0146ffbba88c9ff.webp"
+      },
+      {
+        "description": "Modern database client for developers who ship",
+        "href": "https://rexadb.app",
+        "icon": "/inspirations/catalogues/3adeebfd9fb4db25.webp",
+        "name": "Rexa DB",
+        "preview": null
+      }
+    ],
+    "title": "Desktop"
+  },
+  {
+    "description": "Screen recording software, timeline editors, and demo tools.",
+    "id": "video",
+    "items": [
+      {
+        "description": "Screen recorder adding camera zooms automatically.",
+        "href": "https://screen.studio/",
+        "icon": "/inspirations/catalogues/d0be8517260d1ef0.webp",
+        "name": "Screen Studio",
+        "preview": "/inspirations/catalogues/c8bf64cf621f714a.webp"
+      },
+      {
+        "description": "Render high-definition videos programmatically with React.",
+        "href": "https://remotion.dev/",
+        "icon": "/inspirations/catalogues/494120ba7378c3b0.webp",
+        "name": "Remotion",
+        "preview": "/inspirations/catalogues/0e4ede0dbb9404a0.webp"
+      },
+      {
+        "description": "Professional video editing and color grading suite.",
+        "href": "https://www.blackmagicdesign.com/products/davinciresolve",
+        "icon": "/inspirations/catalogues/e77c79c00493a426.webp",
+        "name": "DaVinci Resolve",
+        "preview": "/inspirations/catalogues/2eb0c7f72a9ccbf3.webp"
+      },
+      {
+        "description": "AI video editor where you edit text.",
+        "href": "https://descript.com/",
+        "icon": "/inspirations/catalogues/0106d82b8995bbce.webp",
+        "name": "Descript",
+        "preview": "/inspirations/catalogues/d3681cce27fd9ca2.webp"
+      },
+      {
+        "description": "High-quality video-to-GIF converter preserving framerates.",
+        "href": "https://gif.ski/",
+        "icon": "/inspirations/catalogues/23c8b760c0232d84.webp",
+        "name": "Gifski",
+        "preview": "/inspirations/catalogues/db01c00f0df4c713.webp"
+      },
+      {
+        "description": "Transforms flat captures into 3D mockups.",
+        "href": "https://slantit.app/",
+        "icon": "/inspirations/catalogues/44562219e8a0e5d7.webp",
+        "name": "Slant It",
+        "preview": "/inspirations/catalogues/d86d30093c512729.webp"
+      },
+      {
+        "description": "Remotion animation components for video production.",
+        "href": "https://www.remocn.dev/",
+        "icon": "/inspirations/catalogues/d45654ea0b7eee14.webp",
+        "name": "Remocn",
+        "preview": "/inspirations/catalogues/65a767067ca013b8.webp"
+      },
+      {
+        "description": "Screen recorder featuring cursor zoom and captions.",
+        "href": "https://www.bettershot.site/",
+        "icon": "/inspirations/catalogues/27e8f8ae85d4353a.webp",
+        "name": "BetterShot",
+        "preview": "/inspirations/catalogues/c6300b47188ed38d.webp"
+      },
+      {
+        "description": "Screen recording tool for polished developer demos.",
+        "href": "https://recordly.dev/",
+        "icon": "/inspirations/catalogues/a0d5aa4f86d36fcf.webp",
+        "name": "Recordly",
+        "preview": "/inspirations/catalogues/93930c544dd40daf.webp"
+      },
+      {
+        "description": "Screen recorder that automatically tracks cursor.",
+        "href": "https://cursorful.com/",
+        "icon": "/inspirations/catalogues/29121008f3b894a1.webp",
+        "name": "Cursorful",
+        "preview": "/inspirations/catalogues/34a786affbb6f13e.webp"
+      },
+      {
+        "description": "In-browser editor for device framing and mockups.",
+        "href": "https://tokokino.com/",
+        "icon": "/inspirations/catalogues/7a8811537f85bacc.webp",
+        "name": "Tokokino",
+        "preview": "/inspirations/catalogues/81ae14de3e768946.webp"
+      },
+      {
+        "description": "Cinematic screen recorder for mac",
+        "href": "https://prequel.sh",
+        "icon": "/inspirations/catalogues/9a6b88deff66003b.webp",
+        "name": "Prequel",
+        "preview": null
+      },
+      {
+        "description": "AI launch videos and motion graphics editor",
+        "href": "https://genmotion.dev",
+        "icon": "/inspirations/catalogues/9f5cf9338c54450f.webp",
+        "name": "GenMotion",
+        "preview": null
+      }
+    ],
+    "title": "Video & Capture"
+  },
+  {
+    "description": "Infinite canvas workspaces for wireframing and systems architecture.",
+    "id": "whiteboard",
+    "items": [
+      {
+        "description": "Infinite whiteboard library offering React SDK.",
+        "href": "https://tldraw.com/",
+        "icon": "/inspirations/catalogues/3b086519d27f1d22.webp",
+        "name": "tldraw",
+        "preview": "/inspirations/catalogues/11005bafa7c91467.webp"
+      },
+      {
+        "description": "Collaborative whiteboard with hand-drawn sketch aesthetic.",
+        "href": "https://excalidraw.com/",
+        "icon": "/inspirations/catalogues/72498066c7db4ec0.webp",
+        "name": "Excalidraw",
+        "preview": "/inspirations/catalogues/ec35e89efabe9ef1.webp"
+      },
+      {
+        "description": "Local-first Markdown knowledge base with graphs.",
+        "href": "https://obsidian.md/",
+        "icon": "/inspirations/catalogues/0753d9047dcd8b57.webp",
+        "name": "Obsidian",
+        "preview": "/inspirations/catalogues/f7f6d2194e6e30aa.webp"
+      },
+      {
+        "description": "Project management software setting speed standards.",
+        "href": "https://linear.app/",
+        "icon": "/inspirations/catalogues/92dcbfdb72dbe69a.webp",
+        "name": "Linear",
+        "preview": "/inspirations/catalogues/cd158c9610f21373.webp"
+      }
+    ],
+    "title": "Whiteboard"
+  }
+]

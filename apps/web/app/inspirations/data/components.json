@@ -1,0 +1,947 @@
+[
+  {
+    "description": "Production UI primitives and accessible component libraries.",
+    "id": "components",
+    "items": [
+      {
+        "description": "Animated React and Tailwind components and templates.",
+        "href": "https://forgeui.in/",
+        "icon": "/inspirations/catalogues/dce82e2291d1caae.webp",
+        "name": "ForgeUI",
+        "preview": "/inspirations/catalogues/0546d6fdc32ef211.webp"
+      },
+      {
+        "description": "Component showcase dashboard of ready-made UI.",
+        "href": "https://www.rewampui.com/",
+        "icon": "/inspirations/catalogues/db790099d2582132.webp",
+        "name": "RewampUI",
+        "preview": "/inspirations/catalogues/436cca65290257ee.webp"
+      },
+      {
+        "description": "Components you copy directly into codebases.",
+        "href": "https://ui.shadcn.com/",
+        "icon": "/inspirations/catalogues/761852f20838893c.webp",
+        "name": "shadcn/ui",
+        "preview": "/inspirations/catalogues/c595dd81f1faf818.webp"
+      },
+      {
+        "description": "Unstyled component primitives from Radix and MUI.",
+        "href": "https://base-ui.com/",
+        "icon": "/inspirations/catalogues/3e743d1cb920b2e2.webp",
+        "name": "Base UI",
+        "preview": "/inspirations/catalogues/a3f9060257e121b1.webp"
+      },
+      {
+        "description": "Accessible unstyled UI primitives for React.",
+        "href": "https://www.radix-ui.com/",
+        "icon": "/inspirations/catalogues/73295662f8e4e847.webp",
+        "name": "Radix",
+        "preview": "/inspirations/catalogues/1cc986e60eb75c79.webp"
+      },
+      {
+        "description": "Community shadcn registry with interactive previews.",
+        "href": "https://21st.dev/",
+        "icon": "/inspirations/catalogues/008d314464e19a2c.webp",
+        "name": "21st.dev",
+        "preview": "/inspirations/catalogues/a161a344a1ae4ce5.webp"
+      },
+      {
+        "description": "Animated React components powered by Motion.",
+        "href": "https://motion-primitives.com/",
+        "icon": "/inspirations/catalogues/4599045adc467601.webp",
+        "name": "Motion Primitives",
+        "preview": "/inspirations/catalogues/108006748871df6a.webp"
+      },
+      {
+        "description": "Animated and creative components for React.",
+        "href": "https://reactbits.dev/",
+        "icon": "/inspirations/catalogues/b26df906fd1ba2d1.webp",
+        "name": "React Bits",
+        "preview": "/inspirations/catalogues/8ecc4e420a07fb50.webp"
+      },
+      {
+        "description": "Repository comparing design system components.",
+        "href": "https://component.gallery/",
+        "icon": "/inspirations/catalogues/37e601884ecfe94c.webp",
+        "name": "Component Gallery",
+        "preview": "/inspirations/catalogues/009bb3cf4f31003e.webp"
+      },
+      {
+        "description": "Smooth number transitions across modern frameworks.",
+        "href": "https://number-flow.barvian.me/",
+        "icon": "/inspirations/catalogues/7bdea5f954444504.webp",
+        "name": "NumberFlow",
+        "preview": "/inspirations/catalogues/ca4c721653708ddf.webp"
+      },
+      {
+        "description": "Playful React components with physics effects.",
+        "href": "https://www.fancycomponents.dev/",
+        "icon": "/inspirations/catalogues/efa3831d4f403653.webp",
+        "name": "Fancy Components",
+        "preview": "/inspirations/catalogues/c6c72a8c5cfd2393.webp"
+      },
+      {
+        "description": "Copy-paste React UI and device mockups.",
+        "href": "https://opensourceui.in/",
+        "icon": "/inspirations/catalogues/c3033d3ea7c34149.webp",
+        "name": "Opensource UI",
+        "preview": "/inspirations/catalogues/657907bd23450dc0.webp"
+      },
+      {
+        "description": "Polished components designed for SaaS websites.",
+        "href": "https://ui.spectrumhq.in/",
+        "icon": "/inspirations/catalogues/b1dac77aa5c3ff0a.webp",
+        "name": "Spectrum UI",
+        "preview": "/inspirations/catalogues/e7863edec8dbdc11.webp"
+      },
+      {
+        "description": "Lightweight drop-in React micro-animation primitives.",
+        "href": "https://amicro.vercel.app/",
+        "icon": "/inspirations/catalogues/8fda5151eb953e2b.webp",
+        "name": "Amicro",
+        "preview": "/inspirations/catalogues/33d78e8e891c121a.webp"
+      },
+      {
+        "description": "Artistic canvas loader components for React.",
+        "href": "https://painterly.design-tools.workers.dev/",
+        "icon": "/inspirations/catalogues/1519592ac7c179f1.webp",
+        "name": "Painterly",
+        "preview": "/inspirations/catalogues/0b02ccdd49f941bd.webp"
+      },
+      {
+        "description": "Interactive UI blocks with adjustable physics.",
+        "href": "https://bencho.dev/",
+        "icon": "/inspirations/catalogues/a89dbe6bcffe41bd.webp",
+        "name": "Bencho",
+        "preview": "/inspirations/catalogues/75d494fb48032942.webp"
+      },
+      {
+        "description": "Thousands of clean shadcn website blocks.",
+        "href": "https://www.shadcnblocks.com/",
+        "icon": "/inspirations/catalogues/ab886ca139008388.webp",
+        "name": "shadcnblocks",
+        "preview": "/inspirations/catalogues/b63daab24696ff34.webp"
+      },
+      {
+        "description": "Open-source website blocks installable via CLI.",
+        "href": "https://blocks.so/",
+        "icon": "/inspirations/catalogues/4473b2176aea18a4.webp",
+        "name": "blocks.so",
+        "preview": "/inspirations/catalogues/5d3aeec6eab650c8.webp"
+      },
+      {
+        "description": "Retro 8-bit components for shadcn projects.",
+        "href": "https://8bitcn.com/",
+        "icon": "/inspirations/catalogues/f3e6e2e471e9da9a.webp",
+        "name": "8bitcn",
+        "preview": "/inspirations/catalogues/fe81e6f5d410948e.webp"
+      },
+      {
+        "description": "Animated SVG charts designed for shadcn/ui.",
+        "href": "https://evilcharts.com/",
+        "icon": "/inspirations/catalogues/646619cd0f1e5a8c.webp",
+        "name": "Evil Charts",
+        "preview": "/inspirations/catalogues/c36b31e5228d2fc9.webp"
+      },
+      {
+        "description": "Copy-paste components built on Base UI.",
+        "href": "https://coss.com/ui",
+        "icon": "/inspirations/catalogues/6937b030064e495d.webp",
+        "name": "coss ui",
+        "preview": "/inspirations/catalogues/a5353082cddad371.webp"
+      },
+      {
+        "description": "Unique animated UI components for React.",
+        "href": "https://rareui.com/",
+        "icon": "/inspirations/catalogues/012b837232af1e79.webp",
+        "name": "Rare UI",
+        "preview": "/inspirations/catalogues/4a020ed2ab2c22ab.webp"
+      },
+      {
+        "description": "Animated React components with Tailwind CSS.",
+        "href": "https://beui.dev/",
+        "icon": "/inspirations/catalogues/64f2a39030886824.webp",
+        "name": "beUI",
+        "preview": "/inspirations/catalogues/871795486ad273ce.webp"
+      },
+      {
+        "description": "Mega-menu featuring fluid layout morphing transitions.",
+        "href": "https://butter-nav.vercel.app/",
+        "icon": "/inspirations/catalogues/6eaa04bb40335dd7.webp",
+        "name": "Butter Nav",
+        "preview": "/inspirations/catalogues/ed684b45c84feff1.webp"
+      },
+      {
+        "description": "Animated React components with Framer Motion.",
+        "href": "https://www.cult-ui.com/",
+        "icon": "/inspirations/catalogues/e3137545f4fe5243.webp",
+        "name": "Cult UI",
+        "preview": "/inspirations/catalogues/cbee58bbacb2e54c.webp"
+      },
+      {
+        "description": "Component class library for Tailwind CSS.",
+        "href": "https://daisyui.com/",
+        "icon": "/inspirations/catalogues/4dfb8eb72744ec25.webp",
+        "name": "daisyUI",
+        "preview": "/inspirations/catalogues/1c277141d0e03d42.webp"
+      },
+      {
+        "description": "Modern React UI library, formerly NextUI.",
+        "href": "https://www.heroui.com/",
+        "icon": "/inspirations/catalogues/29dc5d8af9402481.webp",
+        "name": "HeroUI",
+        "preview": "/inspirations/catalogues/d7b5d58b2b83be76.webp"
+      },
+      {
+        "description": "Component registry tailored for AI interfaces.",
+        "href": "https://www.kibo-ui.com/",
+        "icon": "/inspirations/catalogues/a0fe6a7ccd07c796.webp",
+        "name": "Kibo UI",
+        "preview": "/inspirations/catalogues/fb18b89b7ff6cfe4.webp"
+      },
+      {
+        "description": "Animated components crafted for landing pages.",
+        "href": "https://magicui.design/",
+        "icon": "/inspirations/catalogues/b65ba150b5c057de.webp",
+        "name": "Magic UI",
+        "preview": "/inspirations/catalogues/f7849c86361b7f8b.webp"
+      },
+      {
+        "description": "Trendy animated components and hero sections.",
+        "href": "https://ui.aceternity.com/",
+        "icon": "/inspirations/catalogues/19b070b9a1639c8f.webp",
+        "name": "Aceternity UI",
+        "preview": "/inspirations/catalogues/0664b45e52419ab2.webp"
+      },
+      {
+        "description": "Accessible shadcn components animated with Motion.",
+        "href": "https://animate-ui.com/",
+        "icon": "/inspirations/catalogues/efc94c4d2ef4f4b7.webp",
+        "name": "Animate UI",
+        "preview": "/inspirations/catalogues/66bf29ffffc57112.webp"
+      },
+      {
+        "description": "Semantic Tailwind CSS components ready for v4.",
+        "href": "https://flyonui.com/",
+        "icon": "/inspirations/catalogues/e88829022ad43dd4.webp",
+        "name": "FlyonUI",
+        "preview": "/inspirations/catalogues/8314366bc9857048.webp"
+      },
+      {
+        "description": "Responsive UI blocks designed for Tailwind.",
+        "href": "https://tailgrids.com/",
+        "icon": "/inspirations/catalogues/6a3b640c7fbb907c.webp",
+        "name": "TailGrids",
+        "preview": "/inspirations/catalogues/df3c193991ed4bdf.webp"
+      },
+      {
+        "description": "Extensive component library for Tailwind CSS.",
+        "href": "https://flowbite.com/",
+        "icon": "/inspirations/catalogues/654fb52eda6b96c7.webp",
+        "name": "Flowbite",
+        "preview": "/inspirations/catalogues/667bf24a1e172d16.webp"
+      },
+      {
+        "description": "Free open-source Tailwind CSS UI components.",
+        "href": "https://www.hyperui.dev/",
+        "icon": "/inspirations/catalogues/bf0c20a5886fc18e.webp",
+        "name": "HyperUI",
+        "preview": "/inspirations/catalogues/7ee5b1c7dbee81b2.webp"
+      },
+      {
+        "description": "Tailwind CSS components for complex dashboards.",
+        "href": "https://preline.co/",
+        "icon": "/inspirations/catalogues/03334ca16380db24.webp",
+        "name": "Preline UI",
+        "preview": "/inspirations/catalogues/b10af2a013f5d698.webp"
+      },
+      {
+        "description": "Tailwind components crafted for marketing websites.",
+        "href": "https://floatui.com/",
+        "icon": "/inspirations/catalogues/3fcb2012db15dbfd.webp",
+        "name": "Float UI",
+        "preview": "/inspirations/catalogues/452bc3221b649af6.webp"
+      },
+      {
+        "description": "Tailwind components with right-to-left language support.",
+        "href": "https://merakiui.com/",
+        "icon": "/inspirations/catalogues/0ba27690eacee7fc.webp",
+        "name": "Meraki UI",
+        "preview": "/inspirations/catalogues/ef72bcac5f13416a.webp"
+      },
+      {
+        "description": "Modular React library for building dashboards.",
+        "href": "https://tremor.so/",
+        "icon": "/inspirations/catalogues/2b43ed31c377cdfb.webp",
+        "name": "Tremor",
+        "preview": "/inspirations/catalogues/467a281a7b568dcb.webp"
+      },
+      {
+        "description": "Unstyled accessible components from Tailwind Labs.",
+        "href": "https://headlessui.com/",
+        "icon": "/inspirations/catalogues/edfb0f1ea3b33bba.webp",
+        "name": "Headless UI",
+        "preview": "/inspirations/catalogues/765aff6f8afe6cb4.webp"
+      },
+      {
+        "description": "Base UI primitives adapted for shadcn.",
+        "href": "https://basecn.dev/",
+        "icon": "/inspirations/catalogues/41e993c5299b1f4b.webp",
+        "name": "Base CN",
+        "preview": "/inspirations/catalogues/90ef740900536ec8.webp"
+      },
+      {
+        "description": "Copy-paste component library for rapid building.",
+        "href": "https://easyui.pro/",
+        "icon": "/inspirations/catalogues/5034c85d9982aaae.webp",
+        "name": "Easy UI",
+        "preview": "/inspirations/catalogues/eb9f619388bb51ec.webp"
+      },
+      {
+        "description": "Animated components tailored for web landings.",
+        "href": "https://eldoraui.site/",
+        "icon": "/inspirations/catalogues/9f9f6ee15597100f.webp",
+        "name": "Eldora UI",
+        "preview": "/inspirations/catalogues/3acabbeab201abd1.webp"
+      },
+      {
+        "description": "Free Tailwind CSS components and sections.",
+        "href": "https://velora.colorlib.com/",
+        "icon": "/inspirations/catalogues/54ee4c9b2315a389.webp",
+        "name": "Velora UI",
+        "preview": "/inspirations/catalogues/e7fc012646d633e1.webp"
+      },
+      {
+        "description": "React component library for shadcn ecosystem.",
+        "href": "https://watermelon.sh/",
+        "icon": "/inspirations/catalogues/bc825daa7cfc90d2.webp",
+        "name": "Watermelon UI",
+        "preview": "/inspirations/catalogues/ba9f7246c35f165a.webp"
+      },
+      {
+        "description": "Polished copy-paste components for web applications.",
+        "href": "https://beautifului.dev/",
+        "icon": "/inspirations/catalogues/4fa516bb7446feb3.webp",
+        "name": "Beautiful UI",
+        "preview": "/inspirations/catalogues/1bd12d79abd58729.webp"
+      },
+      {
+        "description": "Clean component collection for shadcn projects.",
+        "href": "https://hexter-ui.com/",
+        "icon": "/inspirations/catalogues/3d5ea1fac0d48812.webp",
+        "name": "Hexter UI",
+        "preview": null
+      },
+      {
+        "description": "Tailwind components featuring lighting and glows.",
+        "href": "https://lightswind.com/",
+        "icon": "/inspirations/catalogues/984af53477386530.webp",
+        "name": "Lightswind",
+        "preview": "/inspirations/catalogues/f6d3da39804184c9.webp"
+      },
+      {
+        "description": "Tailwind and React component library.",
+        "href": "https://reverseui.com/",
+        "icon": "/inspirations/catalogues/700f03edb78c60d5.webp",
+        "name": "Reverse UI",
+        "preview": "/inspirations/catalogues/c9f824482920e0aa.webp"
+      },
+      {
+        "description": "Motion-heavy React components ready to copy.",
+        "href": "https://smoothui.dev/",
+        "icon": "/inspirations/catalogues/4b8e165ad1288ba1.webp",
+        "name": "Smooth UI",
+        "preview": "/inspirations/catalogues/b98f5e64d2ec12e1.webp"
+      },
+      {
+        "description": "Tailwind sections and components for marketing.",
+        "href": "https://tailark.com/",
+        "icon": "/inspirations/catalogues/f21d9261def15368.webp",
+        "name": "Tailark",
+        "preview": "/inspirations/catalogues/8933a335a4d258ed.webp"
+      },
+      {
+        "description": "Full-page layouts and heroes for Tailwind.",
+        "href": "https://ui-layouts.com/",
+        "icon": "/inspirations/catalogues/6f72daaff9428c13.webp",
+        "name": "UI Layouts",
+        "preview": "/inspirations/catalogues/7470e8264fdfb720.webp"
+      },
+      {
+        "description": "Creative interactive components for shadcn format.",
+        "href": "https://kokonutui.com/",
+        "icon": "/inspirations/catalogues/4eb4f8a718e92a9b.webp",
+        "name": "Kokonut UI",
+        "preview": "/inspirations/catalogues/c0d7cdc5b2342a81.webp"
+      },
+      {
+        "description": "Extensible component library for modern startups.",
+        "href": "https://nexui.dev/",
+        "icon": "/inspirations/catalogues/ffb170eb3a1bb669.webp",
+        "name": "Nex UI",
+        "preview": "/inspirations/catalogues/c4830680fd74319e.webp"
+      },
+      {
+        "description": "Lightweight UI components for fast websites.",
+        "href": "https://ninna-ui.dev/",
+        "icon": "/inspirations/catalogues/a10b6da2dced27ee.webp",
+        "name": "Ninja UI",
+        "preview": "/inspirations/catalogues/2f023796ce036bea.webp"
+      },
+      {
+        "description": "React components designed for shadcn CLI.",
+        "href": "https://seraui.com/",
+        "icon": "/inspirations/catalogues/180054e4c03ae12d.webp",
+        "name": "Sera UI",
+        "preview": "/inspirations/catalogues/2f2ea2129a17d5ff.webp"
+      },
+      {
+        "description": "Accessible UI components using Base UI.",
+        "href": "https://reui.io/",
+        "icon": "/inspirations/catalogues/2cab387983a19833.webp",
+        "name": "Re UI",
+        "preview": "/inspirations/catalogues/82b656795a2a1e5b.webp"
+      },
+      {
+        "description": "Animated copy-paste components for landing pages.",
+        "href": "https://syntaxui.com/",
+        "icon": "/inspirations/catalogues/8ab2869773747900.webp",
+        "name": "Syntax UI",
+        "preview": "/inspirations/catalogues/27b4a19e35186f2a.webp"
+      },
+      {
+        "description": "shadcn components adapted for CSS-in-JS.",
+        "href": "https://www.shadcn-cssinjs.com/",
+        "icon": "/inspirations/catalogues/7b8a686c338b4aa9.webp",
+        "name": "shadcn-cssinjs",
+        "preview": "/inspirations/catalogues/1af72db22978296d.webp"
+      },
+      {
+        "description": "Curated CSS transition recipes and easings.",
+        "href": "https://transitions.dev/",
+        "icon": "/inspirations/catalogues/1bdc99ccb0a79d8f.webp",
+        "name": "Transitions",
+        "preview": "/inspirations/catalogues/33048506d1be1184.webp"
+      },
+      {
+        "description": "shadcn components for React and Svelte.",
+        "href": "https://23rd.dev/",
+        "icon": "/inspirations/catalogues/3af76cf24fd1ad25.webp",
+        "name": "23rd",
+        "preview": "/inspirations/catalogues/42e93b9345292e02.webp"
+      },
+      {
+        "description": "Pixel cat companion that chases cursor.",
+        "href": "https://oneko.dhrv.pw/",
+        "icon": "/inspirations/catalogues/0a6b88f90a9b04f6.webp",
+        "name": "Oneko",
+        "preview": "/inspirations/catalogues/ebea4c309b33c5c3.webp"
+      },
+      {
+        "description": "Smooth digit-rolling number counter for React.",
+        "href": "https://rolling.kitlangton.dev/",
+        "icon": "/inspirations/catalogues/064502747b079dac.webp",
+        "name": "Rolling Number",
+        "preview": "/inspirations/catalogues/9dcd0bd409a0c114.webp"
+      },
+      {
+        "description": "GSAP motion components ready for production.",
+        "href": "https://annnimate.com/",
+        "icon": "/inspirations/catalogues/dcf167f14d3bdc49.webp",
+        "name": "Annnimate",
+        "preview": "/inspirations/catalogues/ea9334429ba1911a.webp"
+      },
+      {
+        "description": "AI prompts for cinematic page sections.",
+        "href": "https://getlayers.ai/",
+        "icon": "/inspirations/catalogues/d4761a9e3989f8bd.webp",
+        "name": "GetLayers",
+        "preview": "/inspirations/catalogues/dfba34cdfff6832d.webp"
+      },
+      {
+        "description": "Rolling character text transition component library.",
+        "href": "https://scrit.to/",
+        "icon": "/inspirations/catalogues/6d9ff426f9fd6701.webp",
+        "name": "Scritto",
+        "preview": "/inspirations/catalogues/355a558570c63063.webp"
+      },
+      {
+        "description": "Open Graph image components using Satori.",
+        "href": "https://www.ogimagecn.com/",
+        "icon": "/inspirations/catalogues/a9a0e5e4692db8c3.webp",
+        "name": "ogimagecn",
+        "preview": "/inspirations/catalogues/e8224305f420da31.webp"
+      },
+      {
+        "description": "Dithered chart components with retro aesthetic.",
+        "href": "https://www.tripwire.sh/dither-kit",
+        "icon": "/inspirations/catalogues/0f8031e10a744f69.webp",
+        "name": "Dither Kit",
+        "preview": "/inspirations/catalogues/c9bd00fb7569fcbd.webp"
+      },
+      {
+        "description": "README badges styled with shadcn aesthetics.",
+        "href": "https://shieldcn.dev/",
+        "icon": "/inspirations/catalogues/1c849624570f7d7d.webp",
+        "name": "shieldcn",
+        "preview": "/inspirations/catalogues/024cf6aa598be482.webp"
+      },
+      {
+        "description": "Minimalist React component library with CLI.",
+        "href": "https://ui.unlumen.com/",
+        "icon": "/inspirations/catalogues/37ffd90e4e18c65a.webp",
+        "name": "unlumen UI",
+        "preview": "/inspirations/catalogues/3daa31225c7c4d1d.webp"
+      },
+      {
+        "description": "Astro and Tailwind component collection.",
+        "href": "https://bearnie.dev/",
+        "icon": "/inspirations/catalogues/6df61789575da375.webp",
+        "name": "Bearnie",
+        "preview": "/inspirations/catalogues/f038a6cf0948b7bc.webp"
+      },
+      {
+        "description": "Components designed with purposeful physical animation.",
+        "href": "https://www.fluidfunctionalism.com/",
+        "icon": "/inspirations/catalogues/cd1c21b2f7737351.webp",
+        "name": "Fluid Functionalism",
+        "preview": "/inspirations/catalogues/756ff2264bce2fdd.webp"
+      },
+      {
+        "description": "Terminal UI components for React, built on Ink and OpenTUI.",
+        "href": "https://termcn.dev/",
+        "icon": "/inspirations/catalogues/1d2e913e0d900a99.webp",
+        "name": "termcn",
+        "preview": "/inspirations/catalogues/e30f5bd2bba6cee3.webp"
+      },
+      {
+        "description": "Video rendering components for React, built on Editframe.",
+        "href": "https://framecn.dev/",
+        "icon": "/inspirations/catalogues/58c9d8d62c2e8a07.webp",
+        "name": "framecn",
+        "preview": "/inspirations/catalogues/2bfd9cb4dc3ea61d.webp"
+      },
+      {
+        "description": "Responsive email components for React Email, MJML, and JSX Email.",
+        "href": "https://emailcn.run/",
+        "icon": "/inspirations/catalogues/2f1de8c404737126.webp",
+        "name": "emailcn",
+        "preview": "/inspirations/catalogues/22fd44f4adb05cd7.webp"
+      },
+      {
+        "description": "shadcn/ui registry template with docs, landing page, and agent support.",
+        "href": "https://startercn.vercel.app/",
+        "icon": null,
+        "name": "startercn",
+        "preview": "/inspirations/catalogues/3d1efaf448299ee0.webp"
+      },
+      {
+        "description": "PDF components for React, built on Takumi and Forme.",
+        "href": "https://pdfcn.dev/",
+        "icon": "/inspirations/catalogues/49e19b706e843d30.webp",
+        "name": "pdfcn",
+        "preview": "/inspirations/catalogues/e5e26379669d4920.webp"
+      },
+      {
+        "description": "Rich text editor components for React, built on Tiptap.",
+        "href": "https://editorcn.vercel.app/",
+        "icon": null,
+        "name": "editorcn",
+        "preview": "/inspirations/catalogues/fe81dfdf9fbcb5e6.webp"
+      },
+      {
+        "description": "Open-source shadcn/ui component registries and tools ecosystem.",
+        "href": "https://www.shadcn-labs.com/",
+        "icon": "/inspirations/catalogues/45457793debff495.webp",
+        "name": "Shadcn Labs",
+        "preview": "/inspirations/catalogues/6532ff00f1b8ed36.webp"
+      },
+      {
+        "description": "Modular Framer sections and templates.",
+        "href": "https://frameblox.com/",
+        "icon": "/inspirations/catalogues/2b749aa7ba53ec89.webp",
+        "name": "Frameblox",
+        "preview": null
+      },
+      {
+        "description": "Polished drop-in components for digital interfaces.",
+        "href": "https://ui.nexvyn.dev/",
+        "icon": "/inspirations/catalogues/246499e28d69e5a6.webp",
+        "name": "Nexvyn UI",
+        "preview": null
+      },
+      {
+        "description": "Spinning gradient loading indicator for React.",
+        "href": "https://gradient-spin.vercel.app/",
+        "icon": "/inspirations/catalogues/d903710e71c745b7.webp",
+        "name": "Gradient Spin",
+        "preview": null
+      },
+      {
+        "description": "UI effects and components for agents.",
+        "href": "https://libraries.dev/",
+        "icon": "/inspirations/catalogues/a96b225afc363074.webp",
+        "name": "Libraries.dev",
+        "preview": "/inspirations/catalogues/5b8ab2b5d4da4de2.webp"
+      },
+      {
+        "description": "Animated React components you fully own.",
+        "href": "https://www.sonaui.com/",
+        "icon": "/inspirations/catalogues/7eae1f7707d7227b.webp",
+        "name": "Sona UI",
+        "preview": "/inspirations/catalogues/0f7ce7aebd5393fb.webp"
+      },
+      {
+        "description": "Animated text effects ready to copy.",
+        "href": "https://text-effects.colorion.co/",
+        "icon": "/inspirations/catalogues/134196c017152927.webp",
+        "name": "Colorion Text Effects",
+        "preview": "/inspirations/catalogues/cbc17395885fa1ef.webp"
+      },
+      {
+        "description": "Over fifty dot-matrix loaders for shadcn.",
+        "href": "https://dotmatrix.zzzzshawn.cloud/",
+        "icon": "/inspirations/catalogues/726385460a3b49c1.webp",
+        "name": "Dot Matrix",
+        "preview": "/inspirations/catalogues/fc28b06ba21e1797.webp"
+      },
+      {
+        "description": "Retro DOS-style terminal component kit.",
+        "href": "https://www.sacred.computer/",
+        "icon": "/inspirations/catalogues/72114e328e1369e9.webp",
+        "name": "SRCL",
+        "preview": "/inspirations/catalogues/5431f3afe9c9f962.webp"
+      },
+      {
+        "description": "Chat and AI interface component primitives.",
+        "href": "https://www.prompt-kit.com/",
+        "icon": "/inspirations/catalogues/77646028fb5cca4b.webp",
+        "name": "Prompt Kit",
+        "preview": "/inspirations/catalogues/7bde6a4957c481d2.webp"
+      },
+      {
+        "description": "Search engine spanning shadcn component registries.",
+        "href": "https://shoogle.dev/",
+        "icon": "/inspirations/catalogues/abe9db24f63266c7.webp",
+        "name": "Shoogle",
+        "preview": "/inspirations/catalogues/f9cbcf610e80e72e.webp"
+      },
+      {
+        "description": "Micro-interactions finely tuned for click responsiveness.",
+        "href": "https://www.interior.dev/",
+        "icon": "/inspirations/catalogues/9e2af4e0ce59daec.webp",
+        "name": "interior.dev",
+        "preview": "/inspirations/catalogues/ff6f6c1aee625b00.webp"
+      },
+      {
+        "description": "Collection of copy-paste UI sound effects.",
+        "href": "https://soundcn.xyz/",
+        "icon": "/inspirations/catalogues/8de3136bee12f5ac.webp",
+        "name": "soundcn",
+        "preview": "/inspirations/catalogues/f6b186065994b0dd.webp"
+      },
+      {
+        "description": "Micro interface sounds generated with Web Audio.",
+        "href": "https://cuelume.dev/",
+        "icon": "/inspirations/catalogues/965c026de34ee2b0.webp",
+        "name": "cuelume",
+        "preview": "/inspirations/catalogues/8d3a80ac1bae019f.webp"
+      },
+      {
+        "description": "GPU-accelerated liquid physics and canvas shaders.",
+        "href": "https://canvasui.dev/",
+        "icon": "/inspirations/catalogues/d25c6f7f92b1d84e.webp",
+        "name": "Canvas UI",
+        "preview": "/inspirations/catalogues/1e31158e7a14e1a0.webp"
+      },
+      {
+        "description": "Animated React components built on shadcn.",
+        "href": "https://www.odysseyui.com/",
+        "icon": "/inspirations/catalogues/4eb3c7ae94d630e5.webp",
+        "name": "Odyssey UI",
+        "preview": "/inspirations/catalogues/ee6f149d69dc583e.webp"
+      },
+      {
+        "description": "High-craft interactive components for modern apps.",
+        "href": "https://spell.sh/",
+        "icon": "/inspirations/catalogues/f7876cfc530f87e9.webp",
+        "name": "Spell UI",
+        "preview": "/inspirations/catalogues/52fde77fac7e2448.webp"
+      },
+      {
+        "description": "Animated UI primitives for Tailwind CSS.",
+        "href": "https://skiper-ui.com/",
+        "icon": "/inspirations/catalogues/a0267ede8ccecf8e.webp",
+        "name": "Skiper UI",
+        "preview": "/inspirations/catalogues/4bf5293b3e390025.webp"
+      },
+      {
+        "description": "Minimalist experimental UI components for web.",
+        "href": "https://www.devl.dev/",
+        "icon": "/inspirations/catalogues/c9041b3d040d776b.webp",
+        "name": "devl",
+        "preview": "/inspirations/catalogues/11b0081c93323e2f.webp"
+      },
+      {
+        "description": "AI workspace for organizing shadcn components.",
+        "href": "https://uiuno.com/",
+        "icon": "/inspirations/catalogues/6256522d6bc2b13b.webp",
+        "name": "Uiuno",
+        "preview": "/inspirations/catalogues/f031077b267a9b7d.webp"
+      },
+      {
+        "description": "Animated React components with scroll interactions.",
+        "href": "https://www.vengeanceui.com/",
+        "icon": "/inspirations/catalogues/334f1f68ee3d3de7.webp",
+        "name": "Vengeance UI",
+        "preview": "/inspirations/catalogues/b4b712b669e16eae.webp"
+      },
+      {
+        "description": "Sound design system for shadcn/ui components.",
+        "href": "https://www.sensory-ui.com/",
+        "icon": "/inspirations/catalogues/396896e5eecef976.webp",
+        "name": "sensory-ui",
+        "preview": "/inspirations/catalogues/a1aa0985b38dd371.webp"
+      },
+      {
+        "description": "Drop-in page reveal animations for React.",
+        "href": "https://amacro.vercel.app/",
+        "icon": null,
+        "name": "Amacro",
+        "preview": "/inspirations/catalogues/bae31d058ebac7e3.webp"
+      },
+      {
+        "description": "Interactive and tactile button components.",
+        "href": "https://www.evilbuttons.com/",
+        "icon": "/inspirations/catalogues/b6434151077ccd84.webp",
+        "name": "Evil Buttons",
+        "preview": "/inspirations/catalogues/d592f1147c5060b2.webp"
+      },
+      {
+        "description": "Customizable React UI primitives and components.",
+        "href": "https://componentry.dev/",
+        "icon": "/inspirations/catalogues/daba9207befb4f85.webp",
+        "name": "Componentry",
+        "preview": "/inspirations/catalogues/224258b63c641c72.webp"
+      },
+      {
+        "description": "Copy-paste React and Tailwind CSS components.",
+        "href": "https://www.great-ui.com/",
+        "icon": "/inspirations/catalogues/6853eee38318c6f9.webp",
+        "name": "Great UI",
+        "preview": "/inspirations/catalogues/113f9105ab99619c.webp"
+      },
+      {
+        "description": "Accessible customizable UI components for React.",
+        "href": "https://ui.ruru.build/",
+        "icon": null,
+        "name": "Ruru UI",
+        "preview": "/inspirations/catalogues/afb5dfeca0646a8a.webp"
+      },
+      {
+        "description": "shadcn/ui components, blocks, and templates.",
+        "href": "https://shadcnstudio.com/",
+        "icon": "/inspirations/catalogues/d97086dff95d4fea.webp",
+        "name": "Shadcn Studio",
+        "preview": "/inspirations/catalogues/bafe5b9b8a5b89f6.webp"
+      },
+      {
+        "description": "Motion-powered variants of shadcn/ui components.",
+        "href": "https://shadcn-animated.vercel.app/",
+        "icon": "/inspirations/catalogues/9ea8c8d6f30fec3c.webp",
+        "name": "Animated shadcn/ui",
+        "preview": "/inspirations/catalogues/0b9542353626a294.webp"
+      },
+      {
+        "description": "Distinctive copy-paste React and Tailwind components.",
+        "href": "https://www.pinui.xyz/",
+        "icon": "/inspirations/catalogues/a84e166a41f38e05.webp",
+        "name": "Pin UI",
+        "preview": "/inspirations/catalogues/54b77a310b80747d.webp"
+      },
+      {
+        "description": "Lightweight library of loading indicators for React.",
+        "href": "https://loading.dev/",
+        "icon": "/inspirations/catalogues/55f7a8f4a9b2b79e.webp",
+        "name": "loading.dev",
+        "preview": "/inspirations/catalogues/9963f2099c099235.webp"
+      },
+      {
+        "description": "A curated collection of components that spark joy",
+        "href": "https://www.uicapsule.com/",
+        "icon": "/inspirations/catalogues/17405219ccf47796.webp",
+        "name": "UICapsule",
+        "preview": null
+      },
+      {
+        "description": "Ship your ideas faster with better UI",
+        "href": "https://www.spaceui.one",
+        "icon": "/inspirations/catalogues/bdb1f135742c06ee.webp",
+        "name": "Space UI",
+        "preview": null
+      },
+      {
+        "description": "Production-ready React UI for React Apps",
+        "href": "https://paceui.com",
+        "icon": "/inspirations/catalogues/4d53cbcc9b77a0ba.webp",
+        "name": "PaceUI",
+        "preview": null
+      },
+      {
+        "description": "Build agentic products and data-rich dashboards",
+        "href": "https://www.boardui.com/",
+        "icon": "/inspirations/catalogues/aeb8aebdc97c0dda.webp",
+        "name": "BoardUI",
+        "preview": null
+      },
+      {
+        "description": "Build custom design apps with AI.",
+        "href": "https://toolcraft.sh/",
+        "icon": "/inspirations/catalogues/79465035e0c63fba.webp",
+        "name": "Toolcraft",
+        "preview": null
+      },
+      {
+        "description": "Ship stunning UI faster with Ship stunning UI",
+        "href": "https://animata.design",
+        "icon": "/inspirations/catalogues/c57ac107bcd275d2.webp",
+        "name": "Animata",
+        "preview": null
+      },
+      {
+        "description": "Create stunning, beautiful screenshot mockups",
+        "href": "https://noicess.fun",
+        "icon": "/inspirations/catalogues/4f0697f20b09d54f.webp",
+        "name": "NoiceSS",
+        "preview": null
+      },
+      {
+        "description": "A starter design system kit from your brand",
+        "href": "https://designsystem-generator-bbs.vercel.app/",
+        "icon": "/inspirations/catalogues/302cba979c65b961.webp",
+        "name": "Blueprint",
+        "preview": null
+      },
+      {
+        "description": "Software and AI Engineer",
+        "href": "https://chiraggadhvi.in/",
+        "icon": "/inspirations/catalogues/a756edfe0b42bc04.webp",
+        "name": "Chirag Gadhvi",
+        "preview": null
+      },
+      {
+        "description": "A growing collection of animated React components.",
+        "href": "https://1iad.com/",
+        "icon": "/inspirations/catalogues/341e742a3580c9b7.webp",
+        "name": "1iad - One Interaction a Day",
+        "preview": null
+      },
+      {
+        "description": "Ready-to-Customize Webflow & Framer Templates",
+        "href": "https://flowcub.com",
+        "icon": "/inspirations/catalogues/663bf13ade16ae66.webp",
+        "name": "Flowcub - Free & Premium Website Templates",
+        "preview": null
+      }
+    ],
+    "title": "Component Libraries"
+  },
+  {
+    "description": "Animation timing, spring physics, and motion libraries.",
+    "id": "motion",
+    "items": [
+      {
+        "description": "Production-ready animation library for React applications.",
+        "href": "https://motion.dev/",
+        "icon": "/inspirations/catalogues/8c7d36882d73f545.webp",
+        "name": "Motion",
+        "preview": "/inspirations/catalogues/e5718b7f6474cf6d.webp"
+      },
+      {
+        "description": "Industry-standard JavaScript timeline animation engine.",
+        "href": "https://gsap.com/",
+        "icon": "/inspirations/catalogues/89fbfdc111fb4f0d.webp",
+        "name": "GSAP",
+        "preview": "/inspirations/catalogues/410bcbdc5af4c7ff.webp"
+      },
+      {
+        "description": "Interactive state-machine vector animation tool.",
+        "href": "https://rive.app/",
+        "icon": "/inspirations/catalogues/12ab59f82225ead3.webp",
+        "name": "Rive",
+        "preview": "/inspirations/catalogues/227c0e5ef91fe88b.webp"
+      },
+      {
+        "description": "Lightweight JSON-based vector animation format.",
+        "href": "https://lottiefiles.com/",
+        "icon": "/inspirations/catalogues/f5ecd28c220f6387.webp",
+        "name": "Lottie",
+        "preview": "/inspirations/catalogues/b0b0c3eb0bc19fb1.webp"
+      },
+      {
+        "description": "Visual generator for custom CSS springs.",
+        "href": "https://easingwizard.com/",
+        "icon": "/inspirations/catalogues/70401a0fdd6040d0.webp",
+        "name": "Easing Wizard",
+        "preview": "/inspirations/catalogues/b0e4e3eb8b9cf17b.webp"
+      },
+      {
+        "description": "Interactive manual on how icon morphing works.",
+        "href": "https://morphrig.dev/",
+        "icon": "/inspirations/catalogues/5184abc6675cad24.webp",
+        "name": "Morphrig",
+        "preview": "/inspirations/catalogues/89a561521f06b9d3.webp"
+      },
+      {
+        "description": "Visual motion design sequencer for DOM.",
+        "href": "https://www.theatrejs.com/",
+        "icon": "/inspirations/catalogues/06a2d05a363350f8.webp",
+        "name": "Theatre.js",
+        "preview": "/inspirations/catalogues/3168ae4a24ab1be1.webp"
+      },
+      {
+        "description": "Spring-physics icon morphing animation library.",
+        "href": "https://www.morphicons.com/",
+        "icon": null,
+        "name": "morphicons",
+        "preview": "/inspirations/catalogues/9d88ed16db9fcc74.webp"
+      },
+      {
+        "description": "Shader-driven page transitions for Next.js.",
+        "href": "https://glimm.dev/",
+        "icon": "/inspirations/catalogues/5895ffec8af83611.webp",
+        "name": "glimm",
+        "preview": "/inspirations/catalogues/94d96022541db419.webp"
+      },
+      {
+        "description": "Interactive book teaching micro-interaction design.",
+        "href": "https://devouringdetails.com/",
+        "icon": "/inspirations/catalogues/efd1d396e5bc19b5.webp",
+        "name": "Devouring Details",
+        "preview": "/inspirations/catalogues/249d8ad27ecff2ec.webp"
+      },
+      {
+        "description": "Zero-dependency text roll animation primitive.",
+        "href": "https://textmotion.dev/",
+        "icon": "/inspirations/catalogues/5401b2b560bae1f1.webp",
+        "name": "textmotion",
+        "preview": "/inspirations/catalogues/69b9139cbe490db0.webp"
+      },
+      {
+        "description": "Bezel is a React component library for interface",
+        "href": "https://bezel-ui.vercel.app",
+        "icon": "/inspirations/catalogues/60ccf48b30c5e872.webp",
+        "name": "Bezel",
+        "preview": null
+      },
+      {
+        "description": "Free online Lottie editor and motion tool",
+        "href": "https://Lotiqlab.com",
+        "icon": "/inspirations/catalogues/b11699ed054f293f.webp",
+        "name": "Lotiqlab",
+        "preview": null
+      }
+    ],
+    "title": "Motion"
+  }
+]

@@ -1,0 +1,443 @@
+[
+  {
+    "description": "Curated web typefaces, pairings, and font optimization.",
+    "id": "type",
+    "items": [
+      {
+        "description": "High-quality professional fonts free for commercial use.",
+        "href": "https://fontshare.com/",
+        "icon": "/inspirations/catalogues/a56a38715f9fc2e2.webp",
+        "name": "Fontshare",
+        "preview": "/inspirations/catalogues/c6ea7d9c4b1bc1b3.webp"
+      },
+      {
+        "description": "Type foundry creating contemporary web typefaces.",
+        "href": "https://klim.co.nz/",
+        "icon": "/inspirations/catalogues/9e9c7c5cc662a7a4.webp",
+        "name": "Klim",
+        "preview": "/inspirations/catalogues/73aa70ff776cc7ee.webp"
+      },
+      {
+        "description": "Self-host open-source fonts via npm packages.",
+        "href": "https://fontsource.org/",
+        "icon": "/inspirations/catalogues/50f876d44d427102.webp",
+        "name": "Fontsource",
+        "preview": "/inspirations/catalogues/a1ec1f162ed66d4c.webp"
+      },
+      {
+        "description": "Tool inspecting font files and features.",
+        "href": "https://wakamaifondue.com/",
+        "icon": "/inspirations/catalogues/5329d7ce09144a8d.webp",
+        "name": "Wakamai Fondue",
+        "preview": "/inspirations/catalogues/81bbb0b5e8c10cb1.webp"
+      },
+      {
+        "description": "Fluid typography calculator generating CSS clamp.",
+        "href": "https://utopia.fyi/",
+        "icon": "/inspirations/catalogues/ef09cc3bdaa4a0b5.webp",
+        "name": "Utopia",
+        "preview": "/inspirations/catalogues/9d508d3367baba96.webp"
+      },
+      {
+        "description": "Open-source foundry distributing experimental typefaces.",
+        "href": "https://velvetyne.fr/",
+        "icon": "/inspirations/catalogues/7ff05e5661528f9a.webp",
+        "name": "Velvetyne",
+        "preview": "/inspirations/catalogues/a1be63071dd376d0.webp"
+      },
+      {
+        "description": "Pixel monospace typeface designed for terminals.",
+        "href": "https://departuremono.com/",
+        "icon": "/inspirations/catalogues/442c64d939529280.webp",
+        "name": "Departure Mono",
+        "preview": "/inspirations/catalogues/11e4f9d0146ab262.webp"
+      }
+    ],
+    "title": "Type"
+  },
+  {
+    "description": "Color palette generators, contrast checkers, and color math.",
+    "id": "color",
+    "items": [
+      {
+        "description": "Color picker using perceptually uniform space.",
+        "href": "https://oklch.com/",
+        "icon": "/inspirations/catalogues/258d20091465b51d.webp",
+        "name": "OKLCH",
+        "preview": "/inspirations/catalogues/1a342a5e104ce2b1.webp"
+      },
+      {
+        "description": "Contrast checker helping design accessible palettes.",
+        "href": "https://color.review/",
+        "icon": "/inspirations/catalogues/6734ac9b2c15675f.webp",
+        "name": "Color.review",
+        "preview": "/inspirations/catalogues/9fc0e705cf32bc01.webp"
+      },
+      {
+        "description": "Accessible palette generator balancing contrast ratios.",
+        "href": "https://huetone.ardov.me/",
+        "icon": "/inspirations/catalogues/ef18b37e1efd7f8a.webp",
+        "name": "Huetone",
+        "preview": "/inspirations/catalogues/07b3ab70724b14f3.webp"
+      },
+      {
+        "description": "Modern contrast algorithm matching visual perception.",
+        "href": "https://www.myndex.com/APCA/",
+        "icon": "/inspirations/catalogues/56e29c53e0c9548d.webp",
+        "name": "APCA",
+        "preview": "/inspirations/catalogues/428c27e84609fc0e.webp"
+      },
+      {
+        "description": "Design token tool generating OKLCH ramps.",
+        "href": "https://www.ramps.studio/",
+        "icon": "/inspirations/catalogues/2a36ca36b05651cf.webp",
+        "name": "Ramps",
+        "preview": "/inspirations/catalogues/2c6abc960fc780f0.webp"
+      },
+      {
+        "description": "A color palette generator built for UI designers",
+        "href": "https://atmos.style/",
+        "icon": "/inspirations/catalogues/f472388ad293e770.webp",
+        "name": "Atmos",
+        "preview": null
+      }
+    ],
+    "title": "Color"
+  },
+  {
+    "description": "3D modeling tools and WebGL rendering engines online.",
+    "id": "3d",
+    "items": [
+      {
+        "description": "JavaScript 3D library rendering WebGL scenes.",
+        "href": "https://threejs.org/",
+        "icon": "/inspirations/catalogues/548b263fcca2f575.webp",
+        "name": "Three.js",
+        "preview": "/inspirations/catalogues/11d7cb6d17ac46b2.webp"
+      },
+      {
+        "description": "Declarative React renderer for Three.js scenes.",
+        "href": "https://r3f.docs.pmnd.rs/",
+        "icon": "/inspirations/catalogues/9d6aa653e7cfc782.webp",
+        "name": "React Three Fiber",
+        "preview": "/inspirations/catalogues/ed3effabb28754ec.webp"
+      },
+      {
+        "description": "Helper components for React Three Fiber.",
+        "href": "https://drei.docs.pmnd.rs/",
+        "icon": "/inspirations/catalogues/969c362cb742cd48.webp",
+        "name": "Drei",
+        "preview": "/inspirations/catalogues/a671563ab459575d.webp"
+      },
+      {
+        "description": "Open-source 3D modeling and animation suite.",
+        "href": "https://blender.org/",
+        "icon": "/inspirations/catalogues/ddb295f7da5d7d83.webp",
+        "name": "Blender",
+        "preview": "/inspirations/catalogues/b01e72a90342c6e5.webp"
+      },
+      {
+        "description": "Web-based optimizer for 3D glTF files.",
+        "href": "https://gltf.report/",
+        "icon": "/inspirations/catalogues/4560f79393023e13.webp",
+        "name": "gltf.report",
+        "preview": "/inspirations/catalogues/3e6e224797587a8e.webp"
+      },
+      {
+        "description": "Public asset library offering CC0 textures.",
+        "href": "https://polyhaven.com/",
+        "icon": "/inspirations/catalogues/a2bd4d054b79a2bf.webp",
+        "name": "Poly Haven",
+        "preview": "/inspirations/catalogues/8a93465db66f666d.webp"
+      }
+    ],
+    "title": "3D"
+  },
+  {
+    "description": "Interactive fragment shaders, procedural noise, and canvas effects.",
+    "id": "shaders",
+    "items": [
+      {
+        "description": "Interactive guide to mastering fragment shaders.",
+        "href": "https://thebookofshaders.com/",
+        "icon": "/inspirations/catalogues/425687cc16b5e408.webp",
+        "name": "Book of Shaders",
+        "preview": "/inspirations/catalogues/44f071e3907a1272.webp"
+      },
+      {
+        "description": "Sandbox for authoring WGSL compute shaders.",
+        "href": "https://compute.toys/",
+        "icon": "/inspirations/catalogues/f9bfafc6695afba5.webp",
+        "name": "compute.toys",
+        "preview": "/inspirations/catalogues/11152a8113446d2c.webp"
+      },
+      {
+        "description": "Visual node-based editor for composing shaders.",
+        "href": "https://shaderfrog.com/",
+        "icon": "/inspirations/catalogues/ccedbdaecb65016f.webp",
+        "name": "Shaderfrog",
+        "preview": "/inspirations/catalogues/030ca1052eb90b60.webp"
+      },
+      {
+        "description": "Shader components for React, built on vgpu and TypeGPU.",
+        "href": "https://shadercn.run/",
+        "icon": "/inspirations/catalogues/6eaf6c73fb3ddee9.webp",
+        "name": "shadercn",
+        "preview": "/inspirations/catalogues/8725383bd7a1e114.webp"
+      },
+      {
+        "description": "Zero-dependency shaders ready to import.",
+        "href": "https://shaders.paper.design/",
+        "icon": "/inspirations/catalogues/4108e78c39acb274.webp",
+        "name": "Paper Shaders",
+        "preview": "/inspirations/catalogues/41a0f56e053fdb9c.webp"
+      },
+      {
+        "description": "Open-source shader collection for web projects.",
+        "href": "https://openshaders.com/",
+        "icon": "/inspirations/catalogues/9695e062a28d1ed4.webp",
+        "name": "OpenShaders",
+        "preview": "/inspirations/catalogues/1b80be27225ad3b3.webp"
+      },
+      {
+        "description": "WebGL shader renderer for orb animations.",
+        "href": "https://orbkit.zzzzshawn.cloud/",
+        "icon": "/inspirations/catalogues/b51eaf19cebee1da.webp",
+        "name": "Orbkit",
+        "preview": "/inspirations/catalogues/38f596fe78c5d164.webp"
+      }
+    ],
+    "title": "Shaders"
+  },
+  {
+    "description": "Crisp icon families and glyphs for modern interfaces.",
+    "id": "icons",
+    "items": [
+      {
+        "description": "Community-maintained Feather Icons fork with thousands of glyphs.",
+        "href": "https://lucide.dev/",
+        "icon": "/inspirations/catalogues/896d72d9bb56941f.webp",
+        "name": "Lucide",
+        "preview": "/inspirations/catalogues/bfef7b959313c342.webp"
+      },
+      {
+        "description": "Icon family providing six consistent weights.",
+        "href": "https://phosphoricons.com/",
+        "icon": "/inspirations/catalogues/53d861077e868d52.webp",
+        "name": "Phosphor",
+        "preview": "/inspirations/catalogues/d31fa00f9962eacb.webp"
+      },
+      {
+        "description": "Unified framework providing instant icon access.",
+        "href": "https://iconify.design/",
+        "icon": "/inspirations/catalogues/7f9a4c3cd6e6ecca.webp",
+        "name": "Iconify",
+        "preview": "/inspirations/catalogues/177742a9d0e41bb8.webp"
+      },
+      {
+        "description": "Minimalist icon set offering five styles.",
+        "href": "https://www.runeicons.com/",
+        "icon": "/inspirations/catalogues/7a8a21794f4dbd7c.webp",
+        "name": "Rune Icons",
+        "preview": "/inspirations/catalogues/30164912e353a6f6.webp"
+      },
+      {
+        "description": "Archive celebrating mobile app icon craftsmanship.",
+        "href": "https://icon.museum/",
+        "icon": "/inspirations/catalogues/0ee00da94e7e91a9.webp",
+        "name": "Icon Museum",
+        "preview": "/inspirations/catalogues/c7f3520ad65df8d4.webp"
+      },
+      {
+        "description": "Library of thousands of outline icons.",
+        "href": "https://tabler.io/icons",
+        "icon": "/inspirations/catalogues/30618b3f2a4c7cd9.webp",
+        "name": "Tabler Icons",
+        "preview": "/inspirations/catalogues/7f5d191f7a21b2eb.webp"
+      },
+      {
+        "description": "Handcrafted SVG icons from Tailwind creators.",
+        "href": "https://heroicons.com/",
+        "icon": "/inspirations/catalogues/678d6d75ada74636.webp",
+        "name": "Heroicons",
+        "preview": "/inspirations/catalogues/85f6858e571c3a62.webp"
+      },
+      {
+        "description": "Google variable icon font spanning three styles.",
+        "href": "https://fonts.google.com/icons",
+        "icon": "/inspirations/catalogues/b1d7480646937926.webp",
+        "name": "Material Symbols",
+        "preview": "/inspirations/catalogues/911d5822aee2af68.webp"
+      },
+      {
+        "description": "Official icon library designed for Bootstrap.",
+        "href": "https://icons.getbootstrap.com/",
+        "icon": "/inspirations/catalogues/90611fdc53b1b9a5.webp",
+        "name": "Bootstrap Icons",
+        "preview": "/inspirations/catalogues/343d19cc4fc1fa80.webp"
+      },
+      {
+        "description": "Neutral icon library in outline and fill.",
+        "href": "https://remixicon.com/",
+        "icon": "/inspirations/catalogues/0240edafb9d204f6.webp",
+        "name": "Remix Icon",
+        "preview": "/inspirations/catalogues/2df916aaa0052c16.webp"
+      },
+      {
+        "description": "Open-source SVG icons with consistent strokes.",
+        "href": "https://iconoir.com/",
+        "icon": "/inspirations/catalogues/9868ccd03966215b.webp",
+        "name": "Iconoir",
+        "preview": "/inspirations/catalogues/a9e921b2402969f1.webp"
+      },
+      {
+        "description": "Premium icon pack for web and mobile.",
+        "href": "https://ionic.io/ionicons/",
+        "icon": "/inspirations/catalogues/77a802f402fb93bf.webp",
+        "name": "Ionicons",
+        "preview": "/inspirations/catalogues/87467bedd4712787.webp"
+      },
+      {
+        "description": "Over three thousand SVG brand logos.",
+        "href": "https://simpleicons.org/",
+        "icon": "/inspirations/catalogues/2f9ed45bce9488d9.webp",
+        "name": "Simple Icons",
+        "preview": "/inspirations/catalogues/874c8705c6a13e39.webp"
+      },
+      {
+        "description": "Curated collection of clean brand SVGs.",
+        "href": "https://thesvg.org/",
+        "icon": "/inspirations/catalogues/a088c378c8ade4a9.webp",
+        "name": "theSVG",
+        "preview": "/inspirations/catalogues/316395ebc46fedf1.webp"
+      },
+      {
+        "description": "Minimalist open-source icon set on 24px grid.",
+        "href": "https://feathericons.com/",
+        "icon": "/inspirations/catalogues/e09d6450acc0f13d.webp",
+        "name": "Feather",
+        "preview": "/inspirations/catalogues/af05bfa0b0bb1f30.webp"
+      },
+      {
+        "description": "IBM official icon library for enterprise design.",
+        "href": "https://carbondesignsystem.com/",
+        "icon": "/inspirations/catalogues/b1403a0d3f47a024.webp",
+        "name": "Carbon Icons",
+        "preview": "/inspirations/catalogues/7abd2a83965b8fad.webp"
+      },
+      {
+        "description": "Vector icons crafted in three styles.",
+        "href": "https://boxicons.com/",
+        "icon": "/inspirations/catalogues/40f36968597e309a.webp",
+        "name": "Boxicons",
+        "preview": "/inspirations/catalogues/b104276413e8eff1.webp"
+      },
+      {
+        "description": "Large collection of customizable React icons.",
+        "href": "https://mx-icons.vercel.app/",
+        "icon": "/inspirations/catalogues/9377f7d9de960597.webp",
+        "name": "MX Icons",
+        "preview": "/inspirations/catalogues/08e7ab777dcc4083.webp"
+      },
+      {
+        "description": "Pack of 400 icons in outline and fill.",
+        "href": "https://akveo.github.io/eva-icons/",
+        "icon": "/inspirations/catalogues/fd9beb9c344ce08c.webp",
+        "name": "Eva Icons",
+        "preview": "/inspirations/catalogues/370d70822f10bb87.webp"
+      },
+      {
+        "description": "Developer-focused icon set for programming tools.",
+        "href": "https://devicon.dev/",
+        "icon": "/inspirations/catalogues/1473c3bb63d3198f.webp",
+        "name": "Devicon",
+        "preview": "/inspirations/catalogues/367aea3d7469e27a.webp"
+      },
+      {
+        "description": "700 lightweight icons rendered using pure CSS.",
+        "href": "https://css.gg/",
+        "icon": "/inspirations/catalogues/fa71a05bf88feb82.webp",
+        "name": "css.gg",
+        "preview": "/inspirations/catalogues/dde8612123216528.webp"
+      },
+      {
+        "description": "Comprehensive library of stroke and solid icons.",
+        "href": "https://hugeicons.com/",
+        "icon": "/inspirations/catalogues/d87b53685b35ddf3.webp",
+        "name": "HugeIcons",
+        "preview": "/inspirations/catalogues/a9ce13ecb485d692.webp"
+      },
+      {
+        "description": "Tree-shakeable React icon library with dual weights.",
+        "href": "https://reicon.dev/",
+        "icon": "/inspirations/catalogues/fd53acfc5679cd7b.webp",
+        "name": "Reicon",
+        "preview": "/inspirations/catalogues/ac290e8bab1d3326.webp"
+      },
+      {
+        "description": "Versatile icon set with six visual styles.",
+        "href": "https://app.iconsax.io/",
+        "icon": "/inspirations/catalogues/c3e2bae22af45971.webp",
+        "name": "Iconsax",
+        "preview": "/inspirations/catalogues/1ca99cad92762d51.webp"
+      },
+      {
+        "description": "Search engine covering over 200k icons.",
+        "href": "https://icons0.dev/",
+        "icon": "/inspirations/catalogues/5b7f782d2ecd78dd.webp",
+        "name": "icons0",
+        "preview": "/inspirations/catalogues/fab1b7c1ebbd9bc5.webp"
+      },
+      {
+        "description": "Heroicons enhanced with reactive hover animations.",
+        "href": "https://heroicons-animated.com/",
+        "icon": "/inspirations/catalogues/584377cea300363f.webp",
+        "name": "Heroicons Animated",
+        "preview": "/inspirations/catalogues/73cbab4e82ed09f5.webp"
+      },
+      {
+        "description": "Curated icon library in sixteen aesthetic styles.",
+        "href": "https://icons.download/",
+        "icon": "/inspirations/catalogues/ca343c2e3c9bf3ac.webp",
+        "name": "Icons.download",
+        "preview": "/inspirations/catalogues/9b0db236b43591d4.webp"
+      },
+      {
+        "description": "Lucide icons enhanced with micro-animations.",
+        "href": "https://lucide-animated.com/",
+        "icon": "/inspirations/catalogues/475eb93b805ce133.webp",
+        "name": "Lucide Animated",
+        "preview": "/inspirations/catalogues/8dcf4ff4418cbf2d.webp"
+      },
+      {
+        "description": "Searchable collection of icons from many families.",
+        "href": "https://iconfoundry.store/",
+        "icon": "/inspirations/catalogues/3f69e32bd1b53834.webp",
+        "name": "Icon Foundry",
+        "preview": "/inspirations/catalogues/44741ef6efebd36a.webp"
+      },
+      {
+        "description": "Turns a single word into a matching illustration.",
+        "href": "https://inkword.app/",
+        "icon": "/inspirations/catalogues/6854883096621e8b.webp",
+        "name": "Inkword",
+        "preview": "/inspirations/catalogues/007ee48ae8acbb99.webp"
+      },
+      {
+        "description": "Explore the Nucleo icons, 40,000+ premium SVG icon",
+        "href": "https://nucleoapp.com/?ref=21998",
+        "icon": "/inspirations/catalogues/dd360493e1dabfbb.webp",
+        "name": "Nucleo – The Ultimate Icon Bundle",
+        "preview": null
+      },
+      {
+        "description": "Instant, semantic search across 200K+ icons",
+        "href": "https://iconsdb.app",
+        "icon": "/inspirations/catalogues/9bf68473d3377baf.webp",
+        "name": "IconsDB",
+        "preview": null
+      }
+    ],
+    "title": "Icons"
+  }
+]

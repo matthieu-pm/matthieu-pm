@@ -1,3 +1,50 @@
+# Inspirations catalogue expansion — 2026-09-29
+
+**final result: passed**
+
+Implemented Components, Build, Visuals, Utilities, and Design Engineers at `/inspirations/{components,build,visuals,utilities,designers}`. Their sidebar, mobile-menu, search-menu, and footer links stay inside the project. The existing Inspiration page and the user's typography, sliding selection, fallback cards, and removal of sponsors and the desktop toolbar are preserved.
+
+## Current findings
+
+No actionable P0/P1/P2 findings in the requested scope. The new catalogues contain 460 entries: Components 133, Build 67, Visuals 58, Utilities 70, Design Engineers 132. Counts come from the actual rendered source lists rather than stale source navigation totals. All names, descriptions, sections, ordering, and destination URLs were captured from the source DOM.
+
+426 entries have locally stored source preview posters; 34 use the previously approved resource-card fallback. Ten unavailable favicons use an accessible, decorative Hugeicons globe fallback. No preview or icon is hotlinked. Preview posters remain static, consistent with the existing local implementation.
+
+## Visual comparison
+
+Source URLs: `https://www.designeer.xyz/components`, `/build`, `/visuals`, `/utilities`, `/designers`.
+Evidence directory: `/tmp/inspirations-next-pages/`.
+
+- Full desktop comparison: `comparison-desktop.png`, source left and implementation right, Components grid, light theme. Both original screenshots are 1280 × 720 at a 1280 × 720 CSS viewport; no density normalization.
+- Focused heading and preview-card comparison: `comparison-detail.png`, source left and implementation right. Source video frame differs from the local static poster intentionally; card proportions and image treatment remain consistent.
+- Full mobile comparison: `comparison-mobile.png`, Utilities list, light theme. The source full-page export `utilities-mobile.png` stored the content at half scale inside a larger raster, so its 195 × 422 top viewport region was normalized to 390 × 844. The implementation `local-utilities-mobile.jpg` is native 390 × 844. The source softness is a capture limitation.
+- All five pages have `local-{category}-desktop.jpg` and `local-{category}-mobile.jpg` captures. Source scroll captures and raw catalogues are saved alongside them.
+- Final user preview: `/Users/matthieu/.codex/visualizations/2026/09/29/01a0ede9-805a-7fa3-83f9-ea2dd51c857d/inspirations-components.jpg`.
+
+Required fidelity surfaces: homepage Geist typography is retained and confirmed through computed styles; the existing gutters, sidebar, dashed section dividers, grid spacing, and mobile layout remain consistent; light/dark color tokens are shared with Inspiration; source image posters are decoded and optimized to local WebP without stretching; copy and resource ordering match captured data. Removed sponsor and toolbar space and the updated wordmark are intentional user requests, not visual regressions.
+
+## Verification
+
+- Production build passes and statically generates all five routes; typecheck, lint, and diff whitespace checks pass.
+- Desktop sidebar navigation traversed all five routes and verified current-page indicators, headings, section lists, and no horizontal overflow.
+- Mobile menu navigation, grid/list switching, and section jump to Whiteboard verified at 390 × 844. No horizontal overflow on any new page.
+- Preview expansion, next-resource navigation, and close verified.
+- Search from Design Engineers found ForgeUI in Components.
+- Saved Emil Kowalski, navigated to Components, verified him in Saved resources, then restored the initial bookmark state.
+- Image file validation: every referenced local asset exists; resource destination URLs are valid HTTP(S) URLs. Browser console error check returned no errors.
+- View preference restored to grid; temporary viewport overrides reset. Preview remains available locally.
+
+## Implementation checklist
+
+- [x] Source content and assets captured.
+- [x] Shared catalogue pages, navigation, metadata, and sitemap implemented.
+- [x] Shared search and bookmark collection verified.
+- [x] Desktop/mobile visual and interaction checks complete.
+
+---
+
+# Earlier Inspiration-only QA (historical)
+
 # Inspirations design QA
 
 **Final result: passed**
