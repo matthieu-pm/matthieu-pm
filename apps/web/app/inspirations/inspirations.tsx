@@ -8,10 +8,13 @@ import {
   ArrowLeft01Icon,
   ArrowRight01Icon,
   Cancel01Icon,
-  FavouriteIcon,
   Menu01Icon,
   ListViewIcon,
   Globe02Icon,
+  VolumeHighIcon,
+  VolumeMute02Icon,
+  ComputerIcon,
+  Moon02Icon,
 } from "@hugeicons/core-free-icons"
 import {
   useCallback,
@@ -30,12 +33,13 @@ import {
   type CatalogueId,
   type Resource,
 } from "./catalogues"
-import { Globe } from "./pixel-globe"
+import { InspirationsOrb } from "./inspirations-orb"
+import { useItemSounds } from "./use-item-sounds"
 import styles from "./inspirations.module.css"
 
 type Theme = "auto" | "light" | "dark"
 const description =
-  "A curated collection of interface craft, component libraries, AI tools, and resources for builders."
+  "A collection of inspiring interfaces, component libraries, AI tools, and resources for bringing ideas to life."
 
 function subscribe(callback: () => void) {
   window.addEventListener("storage", callback)
@@ -84,6 +88,28 @@ function Icon({
     />
   )
 }
+function ToolbarIcon({
+  active,
+  icons,
+}: {
+  active: string
+  icons: Record<string, ReactNode>
+}) {
+  return (
+    <span className={styles.iconTransition} aria-hidden="true">
+      {Object.entries(icons).map(([state, icon]) => (
+        <span
+          key={state}
+          className={styles.iconLayer}
+          data-active={state === active}
+        >
+          {icon}
+        </span>
+      ))}
+    </span>
+  )
+}
+
 function SidebarNavigation({
   children,
   label,
@@ -265,20 +291,11 @@ export function Inspirations({
   )
   const [theme, setTheme] = usePreference("theme", "auto")
   const [view, setView] = usePreference("view", "list")
-  const [savedJson, setSavedJson] = usePreference("saved", "[]")
-  const saved = useMemo<string[]>(() => {
-    try {
-      const value: unknown = JSON.parse(savedJson)
-      return Array.isArray(value)
-        ? value.filter((v): v is string => typeof v === "string")
-        : []
-    } catch {
-      return []
-    }
-  }, [savedJson])
+  const [sound, setSound] = usePreference("sound", "on")
+  const pageRef = useRef<HTMLDivElement>(null)
+  useItemSounds(pageRef, sound === "on")
   const [searchOpen, setSearchOpen] = useState(false)
   const [query, setQuery] = useState("")
-  const [savedOpen, setSavedOpen] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [selected, setSelected] = useState<Resource | null>(null)
   const [previewPosition, setPreviewPosition] = useState<{
@@ -325,14 +342,6 @@ export function Inspirations({
   const explore = useCallback(() => {
     setSelected(resources[Math.floor(Math.random() * resources.length)] ?? null)
   }, [resources])
-  const toggleSaved = (resource: Resource) =>
-    setSavedJson(
-      JSON.stringify(
-        saved.includes(resource.href)
-          ? saved.filter((href) => href !== resource.href)
-          : [...saved, resource.href]
-      )
-    )
   const changeTheme = () =>
     setTheme(
       ({ auto: "light", light: "dark", dark: "auto" } as Record<Theme, Theme>)[
@@ -393,20 +402,30 @@ export function Inspirations({
       .toLowerCase()
       .includes(query.trim().toLowerCase())
   )
-  const saveButton = (resource: Resource, always = false) => (
+  const soundButton = (
     <button
       type="button"
-      className={`${styles.saveButton} ${always ? styles.alwaysVisible : ""}`}
-      aria-label={`${saved.includes(resource.href) ? "Remove" : "Save"} ${resource.name} ${saved.includes(resource.href) ? "from" : "to"} bookmarks`}
-      aria-pressed={saved.includes(resource.href)}
-      onClick={() => toggleSaved(resource)}
+      className={styles.iconButton}
+      aria-label="Interface sounds"
+      aria-pressed={sound === "on"}
+      title={sound === "on" ? "Mute sounds" : "Enable sounds"}
+      data-sound="off"
+      onClick={() => setSound(sound === "on" ? "off" : "on")}
     >
-      <HugeiconsIcon
-        icon={FavouriteIcon}
-        size={17}
-        strokeWidth={1.4}
-        fill={saved.includes(resource.href) ? "currentColor" : "none"}
-        aria-hidden="true"
+      <ToolbarIcon
+        active={sound}
+        icons={{
+          on: (
+            <HugeiconsIcon icon={VolumeHighIcon} size={16} strokeWidth={1.4} />
+          ),
+          off: (
+            <HugeiconsIcon
+              icon={VolumeMute02Icon}
+              size={16}
+              strokeWidth={1.4}
+            />
+          ),
+        }}
       />
     </button>
   )
@@ -418,7 +437,16 @@ export function Inspirations({
       title={`Theme: ${theme}`}
       onClick={changeTheme}
     >
-      <Icon index={11} />
+      <ToolbarIcon
+        active={theme}
+        icons={{
+          auto: (
+            <HugeiconsIcon icon={ComputerIcon} size={16} strokeWidth={1.4} />
+          ),
+          light: <Icon index={11} />,
+          dark: <HugeiconsIcon icon={Moon02Icon} size={16} strokeWidth={1.4} />,
+        }}
+      />
     </button>
   )
   const viewButton = (
@@ -429,16 +457,15 @@ export function Inspirations({
       title={`${grid ? "List" : "Grid"} view`}
       onClick={changeView}
     >
-      {grid ? (
-        <HugeiconsIcon
-          icon={ListViewIcon}
-          size={16}
-          strokeWidth={1.4}
-          aria-hidden="true"
-        />
-      ) : (
-        <Icon index={10} />
-      )}
+      <ToolbarIcon
+        active={grid ? "list" : "grid"}
+        icons={{
+          list: (
+            <HugeiconsIcon icon={ListViewIcon} size={16} strokeWidth={1.4} />
+          ),
+          grid: <Icon index={10} />,
+        }}
+      />
     </button>
   )
   const navLinks = navigation.map((item, index) => (
@@ -467,27 +494,23 @@ export function Inspirations({
     </a>
   ))
   return (
-    <div className={styles.page} data-theme={theme}>
+    <div ref={pageRef} className={styles.page} data-theme={theme}>
       <div className={styles.frame}>
         <header
           className={`${styles.mobileHeader} ${scrolled ? styles.mobileHeaderVisible : ""}`}
         >
-          <Link href="/inspirations">
-            <Globe small />
-            inspirations
-          </Link>
+          <span className={styles.mobileTitle}>
+            <InspirationsOrb className={styles.orb} size={24} />
+            My inspirations
+          </span>
           {themeButton}
         </header>
         <div className={styles.columns} id="top">
           <aside className={styles.sidebar}>
             <div className={styles.identity}>
-              <Link href="/inspirations" aria-label="Inspirations home">
-                <Globe />
-              </Link>
+              <InspirationsOrb className={styles.orb} />
               <span className={styles.mobileTheme}>{themeButton}</span>
-              <Link className={styles.wordmark} href="/inspirations">
-                inspirations<span>.design</span>
-              </Link>
+              <span className={styles.wordmark}>My inspirations</span>
               <h1>{description}</h1>
             </div>
             <div className={styles.sidebarNavigation}>
@@ -502,38 +525,17 @@ export function Inspirations({
                 </SidebarNavigation>
               </div>
             </div>
-            <div className={styles.sidebarBottom}>
-              <div className={styles.sidebarFooter}>
-                <a href="https://www.designeer.xyz/info">Info</a>
-              </div>
-            </div>
           </aside>
           <main className={styles.main}>
             <div className={styles.toolbar}>
-              <div className={styles.toolbarGroup}>
-                <button
-                  type="button"
-                  onClick={() => setSavedOpen(true)}
-                  aria-label="Open bookmarks"
-                >
-                  <Icon index={6} />
-                  <kbd>Saved{saved.length > 0 ? ` ${saved.length}` : ""}</kbd>
-                </button>
-                <a
-                  href="https://www.designeer.xyz/"
-                  aria-label="Open Designeer to submit a tool"
-                  title="Submit a tool on Designeer"
-                >
-                  <Icon index={7} />
-                </a>
-              </div>
               <div className={styles.toolbarGroup}>
                 <button type="button" onClick={openSearch} aria-label="Search">
                   <Icon index={8} />
                   <kbd>⌘</kbd>
                   <kbd>K</kbd>
                 </button>
-                <span className={styles.divider} />
+              </div>
+              <div className={styles.toolbarGroup}>
                 <button
                   type="button"
                   onClick={explore}
@@ -545,10 +547,11 @@ export function Inspirations({
                 </button>
                 <span className={styles.divider} />
                 {viewButton}
+                {soundButton}
                 {themeButton}
               </div>
             </div>
-            {catalogue.map((section, index) => (
+            {catalogue.map((section) => (
               <section
                 id={section.id}
                 key={section.id}
@@ -556,7 +559,6 @@ export function Inspirations({
                 aria-labelledby={`${section.id}-heading`}
               >
                 <div className={styles.sectionHeading}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
                   <h2 id={`${section.id}-heading`}>{section.title}</h2>
                   <p>{section.description}</p>
                 </div>
@@ -571,7 +573,6 @@ export function Inspirations({
                         >
                           <ResourceArtwork resource={resource} />
                         </button>
-                        {saveButton(resource)}
                       </div>
                     ) : (
                       <div
@@ -597,7 +598,6 @@ export function Inspirations({
                             <span>{resource.description}</span>
                           </span>
                         </a>
-                        {saveButton(resource)}
                         <button
                           className={styles.hoverPreview}
                           style={
@@ -623,13 +623,6 @@ export function Inspirations({
         </div>
         <footer className={styles.footer}>
           <div className={styles.footerIdentity}>
-            <span className={styles.wordmark}>
-              inspirations<span>.design</span>
-            </span>
-            <p>
-              Collection & design by{" "}
-              <a href="https://www.designeer.xyz/">Designeer</a>.
-            </p>
             <Link href="/">
               Back to Matthieu&apos;s projects{" "}
               <HugeiconsIcon
@@ -641,16 +634,6 @@ export function Inspirations({
             </Link>
           </div>
           <div className={styles.footerLinks}>
-            <div>
-              <p className={styles.kicker}>Navigate</p>
-              <nav aria-label="Footer navigation">
-                {navigation.map((item) => (
-                  <Link href={item.href} key={item.label}>
-                    {item.label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
             <div>
               <p className={styles.kicker}>Source</p>
               <a href="https://www.designeer.xyz/">
@@ -688,6 +671,7 @@ export function Inspirations({
           />
         </button>
         {viewButton}
+        {soundButton}
         {menuOpen && (
           <div id="inspirations-menu" className={styles.mobileMenu}>
             <SidebarNavigation label="Mobile navigation">
@@ -696,15 +680,6 @@ export function Inspirations({
             <SidebarNavigation label="Jump to section">
               {sectionLinks}
             </SidebarNavigation>
-            <button
-              onClick={() => {
-                setMenuOpen(false)
-                setSavedOpen(true)
-              }}
-            >
-              <Icon index={6} />
-              Saved resources{saved.length > 0 && <small>{saved.length}</small>}
-            </button>
             <Link href="/">Back to projects</Link>
           </div>
         )}
@@ -788,52 +763,6 @@ export function Inspirations({
           </div>
         </Modal>
       )}
-      {savedOpen && (
-        <Modal
-          label="Saved resources"
-          onClose={() => setSavedOpen(false)}
-          className={styles.savedDialog}
-        >
-          <div className={styles.modalHeading}>
-            <h2>
-              Saved resources <small>{saved.length}</small>
-            </h2>
-            <button
-              aria-label="Close bookmarks"
-              onClick={() => setSavedOpen(false)}
-            >
-              <HugeiconsIcon
-                icon={Cancel01Icon}
-                size={16}
-                strokeWidth={1.4}
-                aria-hidden="true"
-              />
-            </button>
-          </div>
-          <div className={styles.searchResults}>
-            {allResources
-              .filter((resource) => saved.includes(resource.href))
-              .map((resource) => (
-                <div className={styles.savedRow} key={resource.href}>
-                  <a href={resource.href} target="_blank" rel="noreferrer">
-                    <ResourceIcon resource={resource} size={24} />
-                    <span>
-                      <strong>{resource.name}</strong>
-                      <small>{resource.description}</small>
-                    </span>
-                  </a>
-                  {saveButton(resource, true)}
-                </div>
-              ))}
-            {saved.length === 0 && (
-              <p className={styles.empty}>
-                Your collection starts here. Save a resource using the heart
-                beside it.
-              </p>
-            )}
-          </div>
-        </Modal>
-      )}
       {selected && (
         <Modal
           label={selected.name}
@@ -884,7 +813,6 @@ export function Inspirations({
             <ResourceIcon resource={selected} size={18} />
             <strong>{selected.name}</strong>
             <span>{selected.description}</span>
-            {saveButton(selected, true)}
             <a href={selected.href} target="_blank" rel="noreferrer">
               Visit site{" "}
               <HugeiconsIcon

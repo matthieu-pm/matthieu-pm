@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { Inspirations } from "./inspirations"
 
 const description =
-  "A curated collection of interface craft, component libraries, AI tools, and resources for builders."
+  "A collection of inspiring interfaces, component libraries, AI tools, and resources for bringing ideas to life."
 
 export const metadata: Metadata = {
   title: "Inspirations — Matthieu Duchatellier",
