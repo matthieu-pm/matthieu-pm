@@ -399,13 +399,16 @@ export function Inspirations({
       title={`${grid ? "List" : "Grid"} view`}
       onClick={changeView}
     >
-      <span aria-hidden="true">
-        {grid ? (
-          <HugeiconsIcon icon={ListViewIcon} size={16} strokeWidth={1.4} />
-        ) : (
-          <Icon index={10} />
-        )}
-      </span>
+      {grid ? (
+        <HugeiconsIcon
+          icon={ListViewIcon}
+          size={16}
+          strokeWidth={1.4}
+          aria-hidden="true"
+        />
+      ) : (
+        <Icon index={10} />
+      )}
     </button>
   )
   const navLinks = navigation.map((item, index) => (
@@ -439,22 +442,22 @@ export function Inspirations({
         <header
           className={`${styles.mobileHeader} ${scrolled ? styles.mobileHeaderVisible : ""}`}
         >
-          <a href="#top">
+          <Link href="/inspirations">
             <Globe small />
             inspirations
-          </a>
+          </Link>
           {themeButton}
         </header>
         <div className={styles.columns} id="top">
           <aside className={styles.sidebar}>
             <div className={styles.identity}>
-              <a href="#top" aria-label="Inspirations home">
+              <Link href="/inspirations" aria-label="Inspirations home">
                 <Globe />
-              </a>
+              </Link>
               <span className={styles.mobileTheme}>{themeButton}</span>
-              <a className={styles.wordmark} href="#top">
+              <Link className={styles.wordmark} href="/inspirations">
                 inspirations<span>.design</span>
-              </a>
+              </Link>
               <h1>{description}</h1>
             </div>
             <div className={styles.sidebarNavigation}>
@@ -476,6 +479,45 @@ export function Inspirations({
             </div>
           </aside>
           <main className={styles.main}>
+            <div className={styles.toolbar}>
+              <div className={styles.toolbarGroup}>
+                <button
+                  type="button"
+                  onClick={() => setSavedOpen(true)}
+                  aria-label="Open bookmarks"
+                >
+                  <Icon index={6} />
+                  <kbd>Saved{saved.length > 0 ? ` ${saved.length}` : ""}</kbd>
+                </button>
+                <a
+                  href="https://www.designeer.xyz/"
+                  aria-label="Open Designeer to submit a tool"
+                  title="Submit a tool on Designeer"
+                >
+                  <Icon index={7} />
+                </a>
+              </div>
+              <div className={styles.toolbarGroup}>
+                <button type="button" onClick={openSearch} aria-label="Search">
+                  <Icon index={8} />
+                  <kbd>⌘</kbd>
+                  <kbd>K</kbd>
+                </button>
+                <span className={styles.divider} />
+                <button
+                  type="button"
+                  onClick={explore}
+                  aria-label="Explore a random resource"
+                >
+                  <Icon index={9} />
+                  <kbd>⌘</kbd>
+                  <kbd>E</kbd>
+                </button>
+                <span className={styles.divider} />
+                {viewButton}
+                {themeButton}
+              </div>
+            </div>
             {catalogue.map((section, index) => (
               <section
                 id={section.id}

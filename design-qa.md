@@ -2,7 +2,11 @@
 
 **final result: passed**
 
-Implemented Components, Build, Visuals, Utilities, and Design Engineers at `/inspirations/{components,build,visuals,utilities,designers}`. Their sidebar, mobile-menu, search-menu, and footer links stay inside the project. The existing Inspiration page and the user's typography, sliding selection, fallback cards, and removal of sponsors and the desktop toolbar are preserved.
+Implemented Components, Build, Visuals, Utilities, and Design Engineers at `/inspirations/{components,build,visuals,utilities,designers}`. Their sidebar, mobile-menu, search-menu, and footer links stay inside the project. The existing Inspiration page and the user's typography, sliding selection, fallback cards, and removal of sponsors are preserved. The desktop toolbar was subsequently restored at the user’s request.
+
+## Toolbar restoration
+
+Restored Saved, submit-tool link, Search, Explore, view toggle, and theme control from the original implementation. Verified the toolbar height and rendered controls, tested Saved and Search dialogs, and passed lint and whitespace checks. Desktop section scroll offsets account for the restored toolbar.
 
 ## Current findings
 
@@ -21,7 +25,7 @@ Evidence directory: `/tmp/inspirations-next-pages/`.
 - All five pages have `local-{category}-desktop.jpg` and `local-{category}-mobile.jpg` captures. Source scroll captures and raw catalogues are saved alongside them.
 - Final user preview: `/Users/matthieu/.codex/visualizations/2026/09/29/01a0ede9-805a-7fa3-83f9-ea2dd51c857d/inspirations-components.jpg`.
 
-Required fidelity surfaces: homepage Geist typography is retained and confirmed through computed styles; the existing gutters, sidebar, dashed section dividers, grid spacing, and mobile layout remain consistent; light/dark color tokens are shared with Inspiration; source image posters are decoded and optimized to local WebP without stretching; copy and resource ordering match captured data. Removed sponsor and toolbar space and the updated wordmark are intentional user requests, not visual regressions.
+Required fidelity surfaces: homepage Geist typography is retained and confirmed through computed styles; the existing gutters, sidebar, dashed section dividers, grid spacing, and mobile layout remain consistent; light/dark color tokens are shared with Inspiration; source image posters are decoded and optimized to local WebP without stretching; copy and resource ordering match captured data. Removed sponsor space and the updated wordmark are intentional user requests, not visual regressions. The restored toolbar uses its original sticky 53px layout and controls on all six catalogue pages; mobile retains its existing controls.
 
 ## Verification
 

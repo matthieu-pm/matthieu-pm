@@ -203,15 +203,19 @@
   z-index: -1;
   border-radius: 6px;
   pointer-events: none;
+  transform: translateY(var(--highlight-y, 0px));
+  transition:
+    transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    height 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sidebar nav::before,
+.mobileMenu nav::before,
+.row::before {
   background: linear-gradient(var(--field), var(--surface));
   box-shadow:
     inset 0 0 0 1px var(--line),
     inset 0 1px 1px color-mix(in srgb, var(--ink) 5%, transparent),
     0 2px 6px -4px #0005;
-  transform: translateY(var(--highlight-y, 0px));
-  transition:
-    transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
-    height 240ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 .sidebar nav a:is(.activeNav, :focus-visible),
 .mobileMenu nav a:is(.activeNav, :focus-visible) {
@@ -265,6 +269,37 @@
 .main {
   min-width: 0;
 }
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px var(--pad);
+  border-bottom: 1px dashed var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--paper);
+  height: 53px;
+}
+.toolbarGroup {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--muted);
+}
+.toolbarGroup :where(button, a) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 5px 6px;
+  border-radius: 10px;
+  min-height: 32px;
+}
+.toolbarGroup :where(button, a):hover {
+  background: var(--field);
+  color: var(--ink);
+}
 .page kbd {
   display: inline-flex;
   align-items: center;
@@ -302,7 +337,7 @@
 .section {
   padding: var(--pad);
   border-bottom: 1px dashed var(--line);
-  scroll-margin-top: 0;
+  scroll-margin-top: 53px;
 }
 .sectionHeading {
   display: flex;
@@ -337,11 +372,36 @@
   display: flex;
   align-items: center;
   position: relative;
+  isolation: isolate;
   min-width: 0;
   width: fit-content;
   max-width: 100%;
   border-radius: 6px;
   transition: opacity 150ms;
+}
+.row::before {
+  content: "";
+  position: absolute;
+  inset: 0 -8px;
+  z-index: -1;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 120ms ease-out;
+}
+.row:focus-within {
+  z-index: 1;
+}
+.row:focus-within::before {
+  opacity: 1;
+}
+@media (hover: hover) {
+  .row:hover {
+    z-index: 2;
+  }
+  .row:hover::before {
+    opacity: 1;
+  }
 }
 .resourceLink {
   display: flex;
@@ -381,11 +441,6 @@
   height: 3px;
   border-radius: 50%;
   background: var(--strong-line);
-}
-.resourceLink:hover .resourceText {
-  text-decoration: underline;
-  text-underline-offset: 0.3em;
-  text-decoration-thickness: 1px;
 }
 .saveButton {
   width: 25px;
@@ -863,7 +918,8 @@
     margin-top: 20px;
   }
   .sidebarNavigation,
-  .sidebarFooter {
+  .sidebarFooter,
+  .toolbar {
     display: none;
   }
   .sidebarBottom {
