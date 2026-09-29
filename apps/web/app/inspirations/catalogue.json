@@ -1,0 +1,933 @@
+[
+  {
+    "description": "Design galleries, interface patterns, and web inspiration.",
+    "id": "inspiration",
+    "items": [
+      {
+        "description": "Recordings of interfaces that move well.",
+        "href": "https://60fps.design/",
+        "icon": "/inspirations/44d6c1849bd84b18.png",
+        "name": "60fps",
+        "preview": "/inspirations/209aeb9a64d233ad.jpg"
+      },
+      {
+        "description": "Awards celebrating exceptional digital web craft.",
+        "href": "https://www.awwwards.com/",
+        "icon": "/inspirations/2ea16283561495f8.png",
+        "name": "Awwwards",
+        "preview": "/inspirations/fd81d02250199c8f.webp"
+      },
+      {
+        "description": "Visual moodboarding and creative inspiration engine.",
+        "href": "https://www.cosmos.so/",
+        "icon": "/inspirations/9af6dc93277d4eff.png",
+        "name": "Cosmos",
+        "preview": "/inspirations/8097658c1ee6b469.jpg"
+      },
+      {
+        "description": "Web design sorted by aesthetic style.",
+        "href": "https://www.curated.design/",
+        "icon": "/inspirations/33db07ddb99f6563.png",
+        "name": "Curated Design",
+        "preview": "/inspirations/54e19ff5ace50eab.jpg"
+      },
+      {
+        "description": "Platform for sharing design work publicly.",
+        "href": "https://layers.to/",
+        "icon": "/inspirations/3661e603a2dd12b8.png",
+        "name": "Layers",
+        "preview": "/inspirations/edd91c7f779655e9.jpg"
+      },
+      {
+        "description": "Showcase of minimal and restrained websites.",
+        "href": "https://minimal.gallery/",
+        "icon": "/inspirations/8853103bdb86df83.png",
+        "name": "Minimal Gallery",
+        "preview": "/inspirations/95e7f66c6d0df174.jpg"
+      },
+      {
+        "description": "Real mobile and web product flows.",
+        "href": "https://mobbin.com/",
+        "icon": "/inspirations/f65c990b0b5beee9.png",
+        "name": "Mobbin",
+        "preview": "/inspirations/3204766bb2c35bf8.jpg"
+      },
+      {
+        "description": "Curated SaaS landing page designs.",
+        "href": "https://www.saaspo.com/",
+        "icon": "/inspirations/56bbc71e216b8e0e.png",
+        "name": "Saaspo",
+        "preview": "/inspirations/3aa852ac22d9a3a7.jpg"
+      },
+      {
+        "description": "Design inspiration organized by page section.",
+        "href": "https://www.seesaw.website/",
+        "icon": "/inspirations/5c6e36c88b14df98.png",
+        "name": "SEESAW",
+        "preview": "/inspirations/dde9c7b9f4a8e30d.jpg"
+      },
+      {
+        "description": "Curated collection of website hero sections.",
+        "href": "https://supahero.io/",
+        "icon": "/inspirations/59301a00bec4214e.png",
+        "name": "Supahero",
+        "preview": "/inspirations/3bb0a563d2ba2112.jpg"
+      },
+      {
+        "description": "Visual gallery pairing images with prompts.",
+        "href": "https://www.imageory.in/",
+        "icon": "/inspirations/7a0aeb65dbd13c35.png",
+        "name": "Imageory",
+        "preview": null
+      },
+      {
+        "description": "Handcrafted website backgrounds ready to use.",
+        "href": "https://backgrounds.supply/",
+        "icon": "/inspirations/6e7562174bae0168.png",
+        "name": "Backgrounds Supply",
+        "preview": null
+      },
+      {
+        "description": "Free AI-generated backgrounds with original prompts.",
+        "href": "https://backgrounds.venust.ai/",
+        "icon": "/inspirations/dd46863393a575b6.png",
+        "name": "Venust Backgrounds",
+        "preview": "/inspirations/b5a750d612eba493.webp"
+      },
+      {
+        "description": "Micro-interaction analysis of top digital products.",
+        "href": "https://www.details.so/",
+        "icon": "/inspirations/ed1e3d418eaa70eb.png",
+        "name": "Details",
+        "preview": "/inspirations/7f13643c46fd97c7.webp"
+      },
+      {
+        "description": "Showcase of dark-mode website interfaces.",
+        "href": "https://sombra.design/",
+        "icon": "/inspirations/63d2d9b737a7891d.png",
+        "name": "Sombra",
+        "preview": "/inspirations/d758af47ea52a352.webp"
+      },
+      {
+        "description": "Global community sharing design concepts.",
+        "href": "https://dribbble.com/",
+        "icon": "/inspirations/22aa80299ab20065.png",
+        "name": "Dribbble",
+        "preview": null
+      },
+      {
+        "description": "Adobe showcase for creative portfolios.",
+        "href": "https://www.behance.net/",
+        "icon": "/inspirations/c52553903b30a32d.png",
+        "name": "Behance",
+        "preview": "/inspirations/5109ca81d1263b94.jpg"
+      },
+      {
+        "description": "Weekly selection of award-worthy websites.",
+        "href": "https://recent.design/",
+        "icon": "/inspirations/4ea5a3830b0c9e1a.png",
+        "name": "Recent Design",
+        "preview": "/inspirations/f3418e55ad7b0531.webp"
+      },
+      {
+        "description": "Curated gallery of navigation bar patterns.",
+        "href": "https://navbar.design/",
+        "icon": "/inspirations/b6108b528aa4db45.png",
+        "name": "navbar.design",
+        "preview": "/inspirations/037ab59758ec9d11.webp"
+      },
+      {
+        "description": "Curated gallery of creative website footers.",
+        "href": "https://footer.design/",
+        "icon": "/inspirations/483fa159b29c7402.png",
+        "name": "footer.design",
+        "preview": "/inspirations/3302d844285b117a.jpg"
+      },
+      {
+        "description": "Landing pages organized by industry.",
+        "href": "https://land-book.com/",
+        "icon": "/inspirations/dc1a8df99235be6f.png",
+        "name": "Land-book",
+        "preview": null
+      },
+      {
+        "description": "Daily UI inspiration tagged by component.",
+        "href": "https://collectui.com/",
+        "icon": "/inspirations/0a47020e399c659b.png",
+        "name": "Collect UI",
+        "preview": "/inspirations/4a3fc828ad6fb9c4.jpg"
+      },
+      {
+        "description": "Showcase of fine web design craft.",
+        "href": "https://www.siteinspire.com/",
+        "icon": "/inspirations/2174b8455b972972.png",
+        "name": "SiteInspire",
+        "preview": null
+      },
+      {
+        "description": "Curated gallery of responsive landing pages.",
+        "href": "https://www.lapa.ninja/",
+        "icon": "/inspirations/121726dcc02be029.png",
+        "name": "Lapa Ninja",
+        "preview": null
+      },
+      {
+        "description": "Historical archive of mobile onboarding flows.",
+        "href": "https://uxarchive.com/",
+        "icon": "/inspirations/bda08f00ae2ac495.png",
+        "name": "UX Archive",
+        "preview": null
+      },
+      {
+        "description": "Searchable gallery of interface screens.",
+        "href": "https://screenlane.com/",
+        "icon": "/inspirations/7db920b2086b3726.png",
+        "name": "Screenlane",
+        "preview": null
+      },
+      {
+        "description": "Premium UI components and interaction patterns.",
+        "href": "https://www.flowbase.co/",
+        "icon": "/inspirations/8fa599223849c598.png",
+        "name": "Flowbase",
+        "preview": "/inspirations/8ecc841510412c85.jpg"
+      },
+      {
+        "description": "Showcase of innovative interactive web design.",
+        "href": "https://hoverstat.es/",
+        "icon": "/inspirations/1d31c7233e3445ee.png",
+        "name": "Hover States",
+        "preview": "/inspirations/65123a7a72c890f9.jpg"
+      },
+      {
+        "description": "Hundreds of SaaS marketing page screenshots.",
+        "href": "https://www.saasframe.io/",
+        "icon": "/inspirations/bd3ff7c8d8144c0e.png",
+        "name": "SaaSFrame",
+        "preview": "/inspirations/70f41d886c022d75.jpg"
+      },
+      {
+        "description": "Extensive library of landing page designs.",
+        "href": "https://www.landingfolio.com/",
+        "icon": "/inspirations/11e314355d9fb863.png",
+        "name": "Landingfolio",
+        "preview": "/inspirations/947ae18dce9f6506.jpg"
+      },
+      {
+        "description": "Directory of mobile user interface patterns.",
+        "href": "https://pttrns.com/",
+        "icon": "/inspirations/dc45e349807c3afe.png",
+        "name": "Pttrns",
+        "preview": "/inspirations/c14b25b2574645f1.jpg"
+      },
+      {
+        "description": "Showcase of single-page website designs.",
+        "href": "https://onepagelove.com/",
+        "icon": "/inspirations/31597b03894d61de.png",
+        "name": "One Page Love",
+        "preview": "/inspirations/944ee2b710e0df6c.webp"
+      },
+      {
+        "description": "Creative search platform for visual art.",
+        "href": "https://www.designspiration.com/",
+        "icon": "/inspirations/ed85b779e251c335.png",
+        "name": "Designspiration",
+        "preview": "/inspirations/ecf3b100a54043d2.webp"
+      },
+      {
+        "description": "Curated archive of exceptional websites.",
+        "href": "https://bestwebsite.gallery/",
+        "icon": "/inspirations/0e2aa9dca53bc959.png",
+        "name": "Best Website Gallery",
+        "preview": "/inspirations/570447d3f035cfdf.webp"
+      },
+      {
+        "description": "Online magazine celebrating creative visual design.",
+        "href": "https://theinspirationgrid.com/",
+        "icon": "/inspirations/5c5f23797c1529dd.png",
+        "name": "Inspiration Grid",
+        "preview": "/inspirations/f938fd03d59a28de.webp"
+      },
+      {
+        "description": "Curated App Store screenshot designs.",
+        "href": "https://scrnshts.club/",
+        "icon": "/inspirations/34716642afe04f7d.png",
+        "name": "Scrnshts",
+        "preview": "/inspirations/6e112e506c4d3d2f.webp"
+      },
+      {
+        "description": "Collaborative research and visual bookmarking platform.",
+        "href": "https://www.are.na/",
+        "icon": "/inspirations/1ec1b9d798e9ab48.png",
+        "name": "Are.na",
+        "preview": "/inspirations/b85409d2109e6793.webp"
+      },
+      {
+        "description": "Curated mobile application design gallery.",
+        "href": "https://www.appinspo.com/",
+        "icon": "/inspirations/5141187427b5af0b.png",
+        "name": "Appinspo",
+        "preview": "/inspirations/e3be07bdb7dbd066.webp"
+      },
+      {
+        "description": "Showcase celebrating dark-mode websites.",
+        "href": "https://www.darkmodedesign.com/",
+        "icon": "/inspirations/13c6263c14cd8409.png",
+        "name": "Dark Mode Design",
+        "preview": "/inspirations/7b4511af8830c260.webp"
+      },
+      {
+        "description": "Visual discovery engine for creative ideas.",
+        "href": "https://www.pinterest.com/",
+        "icon": "/inspirations/91681623ce3eafb9.png",
+        "name": "Pinterest",
+        "preview": "/inspirations/d7d7162704bed97f.webp"
+      },
+      {
+        "description": "Focused collection of modern navigation bars.",
+        "href": "https://navbar.gallery/",
+        "icon": "/inspirations/fe599ece3bda9126.png",
+        "name": "navbar.gallery",
+        "preview": "/inspirations/20aba0af858f753f.webp"
+      },
+      {
+        "description": "Curated social media graphic design archive.",
+        "href": "https://posts.design/",
+        "icon": "/inspirations/c5c6032d7fdf0d74.png",
+        "name": "posts.design",
+        "preview": "/inspirations/f6759663cc3308af.webp"
+      },
+      {
+        "description": "Gallery of experimental mobile website designs.",
+        "href": "https://loadmo.re/",
+        "icon": "/inspirations/97df4c5e3e104ec6.png",
+        "name": "loadmo.re",
+        "preview": "/inspirations/360e62d755c6ccf8.webp"
+      },
+      {
+        "description": "Archive of contemporary visual web design.",
+        "href": "https://www.inspora.design/",
+        "icon": "/inspirations/761ddd6009cb1606.png",
+        "name": "inspora.design",
+        "preview": "/inspirations/5050326df2d1eae5.webp"
+      },
+      {
+        "description": "Curated call-to-action button and banner designs.",
+        "href": "https://cta.gallery/",
+        "icon": "/inspirations/8ce9c5fe1a36fa4a.png",
+        "name": "cta.gallery",
+        "preview": null
+      },
+      {
+        "description": "Directory of design engineering portfolios and lore.",
+        "href": "https://desengs.com/",
+        "icon": "/inspirations/9dd0f3bad57dd22f.png",
+        "name": "desengs.com",
+        "preview": "/inspirations/ccbf976a500058c5.webp"
+      },
+      {
+        "description": "Directory of lesser-known design, craft, and AI tools.",
+        "href": "https://isthereanytool.app/",
+        "icon": "/inspirations/e24c0f2374ccac0b.png",
+        "name": "isthereanytool",
+        "preview": "/inspirations/0afd22ae54b8a6b8.jpg"
+      },
+      {
+        "description": "Curated design engineering tools, resources, and inspiration.",
+        "href": "https://designeng.tools/",
+        "icon": "/inspirations/d62458ac3291393a.png",
+        "name": "designeng.tools",
+        "preview": null
+      },
+      {
+        "description": "Curated design-forward creators and posts on X.",
+        "href": "https://bestdesignsonx.com/",
+        "icon": "/inspirations/ecdf0fa5f9acf981.png",
+        "name": "bestdesignsonx.com",
+        "preview": "/inspirations/8d3301e262d7bc95.webp"
+      },
+      {
+        "description": "Directory of design resources and links.",
+        "href": "https://designbookmark.com/",
+        "icon": "/inspirations/ae4b386d46a8b3fe.png",
+        "name": "Design Bookmark",
+        "preview": "/inspirations/4fe0dd8e0a7065c5.webp"
+      },
+      {
+        "description": "Brand redesigns compared before and after.",
+        "href": "https://rebrand.gallery/",
+        "icon": "/inspirations/c7b94462addbfddc.png",
+        "name": "Rebrand Gallery",
+        "preview": null
+      },
+      {
+        "description": "Library of curated digital design assets.",
+        "href": "https://curations.supply/",
+        "icon": "/inspirations/16a47ec75930eaa4.png",
+        "name": "Curations",
+        "preview": "/inspirations/77da4e39e8f0befe.jpg"
+      },
+      {
+        "description": "Delightful landing pages organized by animation.",
+        "href": "https://landing.love/",
+        "icon": "/inspirations/e4dea25bc7eb7690.png",
+        "name": "Landing Love",
+        "preview": "/inspirations/ef65b01f510b6236.webp"
+      },
+      {
+        "description": "Extensive library of motion design clips.",
+        "href": "https://motionimo.xyz/",
+        "icon": "/inspirations/dd4188b7541814c2.png",
+        "name": "Motionimo",
+        "preview": "/inspirations/371b1abac34129cb.jpg"
+      },
+      {
+        "description": "Showcase of high-converting app screenshot concepts.",
+        "href": "https://before.click/",
+        "icon": "/inspirations/0a9eb9cb5f957d6e.png",
+        "name": "before.click",
+        "preview": "/inspirations/e952a6e5eaeb8669.jpg"
+      },
+      {
+        "description": "Standout design posts from social platforms.",
+        "href": "https://swiped.design/",
+        "icon": "/inspirations/c6684232fb1afb92.png",
+        "name": "Swiped",
+        "preview": "/inspirations/d08b2a7283bbb281.jpg"
+      },
+      {
+        "description": "Daily catalogue of creative landing pages.",
+        "href": "https://landdding.com/",
+        "icon": "/inspirations/3399cc52d2362aa5.png",
+        "name": "Landdding",
+        "preview": "/inspirations/d6bfafa0e817da9d.webp"
+      },
+      {
+        "description": "Essential tools tailored for design engineers.",
+        "href": "https://designengineer.tools/",
+        "icon": "/inspirations/8e4d2fe8a67ce788.png",
+        "name": "designengineer.tools",
+        "preview": "/inspirations/a2a6ca6ac52420c1.jpg"
+      },
+      {
+        "description": "Directory of design references and tools.",
+        "href": "https://www.insposite.com/",
+        "icon": "/inspirations/fbc3d0ab292bc2c8.png",
+        "name": "Insposite",
+        "preview": "/inspirations/3c039d457261650e.jpg"
+      },
+      {
+        "description": "Gallery of 25 loading button animations.",
+        "href": "https://loader-buttons.appllama.io/",
+        "icon": "/inspirations/93d4f694954d1b10.png",
+        "name": "Loader Buttons",
+        "preview": "/inspirations/d9ada574195f0fd1.jpg"
+      },
+      {
+        "description": "Standout product launch demo videos on X.",
+        "href": "https://whatships.com/",
+        "icon": "/inspirations/afa2f3427bf9906c.png",
+        "name": "What Ships",
+        "preview": "/inspirations/0f2d82187409ce95.jpg"
+      },
+      {
+        "description": "Carefully vetted archive of creative tools.",
+        "href": "https://greatstuff.fyi/",
+        "icon": "/inspirations/c3c7b08823728982.png",
+        "name": "GreatStuff",
+        "preview": "/inspirations/fc0751223af95e9a.jpg"
+      },
+      {
+        "description": "Weekly gallery highlighting exceptional iOS apps.",
+        "href": "https://greatapps.fyi/",
+        "icon": "/inspirations/fcea1b3f12d1bc4a.png",
+        "name": "Great Apps",
+        "preview": "/inspirations/8f949838868934d3.jpg"
+      },
+      {
+        "description": "Brands using creative top-level domain names.",
+        "href": "https://curated.domains/",
+        "icon": "/inspirations/a60365aa764df4ce.png",
+        "name": "Curated Domains",
+        "preview": "/inspirations/ff2328c7b6f52f7a.jpg"
+      },
+      {
+        "description": "Real-world website section and hero gallery.",
+        "href": "https://sections.wtf/",
+        "icon": "/inspirations/5521a5f0da4e640d.png",
+        "name": "Sections.wtf",
+        "preview": "/inspirations/31ed7b034bc8bbe5.jpg"
+      },
+      {
+        "description": "Websites chosen for exceptional tactile feel.",
+        "href": "https://browse.cool/",
+        "icon": "/inspirations/1809205bf705b18f.png",
+        "name": "Browse.cool",
+        "preview": "/inspirations/82c32f7287ad1226.webp"
+      },
+      {
+        "description": "Selective directory of outstanding designer portfolios.",
+        "href": "https://folios.gallery/",
+        "icon": "/inspirations/f753125284a739b0.png",
+        "name": "Folios Gallery",
+        "preview": "/inspirations/980fe2d360080760.jpg"
+      },
+      {
+        "description": "Quirky and experimental interactive web corners.",
+        "href": "https://wwwtf.site/",
+        "icon": "/inspirations/1d17422d958a01ff.png",
+        "name": "wwwtf.site",
+        "preview": "/inspirations/42b6e36c49dd6617.webp"
+      },
+      {
+        "description": "Discovery platform for early-stage software products.",
+        "href": "https://www.early.tools/",
+        "icon": "/inspirations/48e2b60a9f681d7d.png",
+        "name": "Early",
+        "preview": null
+      },
+      {
+        "description": "Open-source alternatives to popular SaaS tools.",
+        "href": "https://openalternative.co/",
+        "icon": "/inspirations/df271bdfddb1f62d.png",
+        "name": "OpenAlternative",
+        "preview": "/inspirations/2b34a6a186cceec5.webp"
+      },
+      {
+        "description": "Open-source creative tools for design craft.",
+        "href": "https://everywhere.tools/",
+        "icon": "/inspirations/34bacc8ce2211a58.png",
+        "name": "Everywhere Tools",
+        "preview": "/inspirations/854093710fc2bad5.webp"
+      },
+      {
+        "description": "Collaborative moodboard of unique visual finds.",
+        "href": "https://gallery.jessyin.world/",
+        "icon": "/inspirations/49a389861a30c8ef.png",
+        "name": "Jessy In's Gallery",
+        "preview": null
+      },
+      {
+        "description": "Design engineering and product portfolio showcases.",
+        "href": "https://www.wallofportfolios.in/",
+        "icon": "/inspirations/999b803a8b5e3681.png",
+        "name": "Wall of Portfolios",
+        "preview": "/inspirations/7458b8fb21ef79e9.webp"
+      },
+      {
+        "description": "Archive of thoughtful software micro-interactions.",
+        "href": "https://detail.design/",
+        "icon": "/inspirations/15fd1cc50185b43f.png",
+        "name": "Detail Design",
+        "preview": "/inspirations/203c609d26bdcca0.webp"
+      },
+      {
+        "description": "Studio crafting modern SaaS web experiences.",
+        "href": "https://betwnstudios.com/",
+        "icon": "/inspirations/e6541e4cf7b24434.png",
+        "name": "Betwn Studios",
+        "preview": null
+      },
+      {
+        "description": "Showcase of top SaaS landing pages.",
+        "href": "https://saaslandingpage.com/",
+        "icon": "/inspirations/e8d6f0812a5bcc12.png",
+        "name": "SaaS Landing Page",
+        "preview": "/inspirations/5eb5b6987019d8fb.webp"
+      },
+      {
+        "description": "Curated inspiration gallery of SaaS website design.",
+        "href": "https://bestsaaswebdesigns.com/",
+        "icon": "/inspirations/8448813065fbce3a.png",
+        "name": "Best SaaS Web Designs",
+        "preview": "/inspirations/67581c755e8323c2.webp"
+      },
+      {
+        "description": "Website design inspiration gallery.",
+        "href": "https://www.a1.gallery/",
+        "icon": "/inspirations/3937b4739ab8e232.jpg",
+        "name": "A1",
+        "preview": "/inspirations/1f531333fd1a9a0a.webp"
+      },
+      {
+        "description": "Real web pages and sections, curated with taste.",
+        "href": "https://uibook.art/",
+        "icon": "/inspirations/a064dcc268ca4f2c.png",
+        "name": "UIBook",
+        "preview": "/inspirations/2e53df885dcc85b4.webp"
+      },
+      {
+        "description": "Frontend developer from India building",
+        "href": "https://devchauhan.in/",
+        "icon": "/inspirations/844230bae040f433.jpg",
+        "name": "Dev Chauhan",
+        "preview": "/inspirations/2ed462a24f8c5f87.webp"
+      },
+      {
+        "description": "Godly is a curated gallery of the best designs.",
+        "href": "https://godly.design/",
+        "icon": "/inspirations/9bdcf6b3961832ed.png",
+        "name": "Godly",
+        "preview": "/inspirations/a4abeb4c05309b0e.webp"
+      },
+      {
+        "description": "Curated Collection of Hero Section Designs",
+        "href": "https://herogrids.com/",
+        "icon": "/inspirations/1bf0c9bdb4fe5885.png",
+        "name": "Herogrids",
+        "preview": "/inspirations/e75e1583445c8aa7.webp"
+      },
+      {
+        "description": "Websites, sections and fonts inspiration",
+        "href": "https://maxibestof.one/",
+        "icon": "/inspirations/3b83e50c4d242a6f.png",
+        "name": "MaxiBestOf",
+        "preview": null
+      },
+      {
+        "description": "The largest SaaS design inspiration library",
+        "href": "https://nicelydone.club",
+        "icon": "/inspirations/3f699f25b6a8f85d.png",
+        "name": "Nicelydone",
+        "preview": "/inspirations/014fa4a77061001f.webp"
+      },
+      {
+        "description": "Build with AI. We handle backend. You create. 🌱",
+        "href": "https://crafio.app/",
+        "icon": "/inspirations/2498a1f86de1c415.png",
+        "name": "Crafio",
+        "preview": "/inspirations/3555277ff9faa170.webp"
+      },
+      {
+        "description": "Brand guidelines and brand portal examples",
+        "href": "https://brandcenter.gallery/",
+        "icon": "/inspirations/6f91cdfa6511ff6c.jpg",
+        "name": "BrandCenter Gallery",
+        "preview": "/inspirations/e96d0c177570bf41.webp"
+      }
+    ],
+    "title": "Design Galleries"
+  },
+  {
+    "description": "Interface design canvases, tokens, and layout systems.",
+    "id": "interface",
+    "items": [
+      {
+        "description": "Collaborative interface design and prototyping platform.",
+        "href": "https://figma.com/",
+        "icon": "/inspirations/e1cf82f97ffa8593.png",
+        "name": "Figma",
+        "preview": null
+      },
+      {
+        "description": "Visual canvas designing and publishing websites.",
+        "href": "https://framer.com/",
+        "icon": "/inspirations/68c270cc7fd0ce0e.png",
+        "name": "Framer",
+        "preview": "/inspirations/3cfe545817594854.webp"
+      },
+      {
+        "description": "AI generator turning prompts into polished designs.",
+        "href": "https://make.design/",
+        "icon": "/inspirations/9e137891db36487f.png",
+        "name": "make.design",
+        "preview": "/inspirations/a8a9dd4d5a091f39.webp"
+      },
+      {
+        "description": "Open-source web design platform supporting SVG.",
+        "href": "https://penpot.app/",
+        "icon": "/inspirations/22780ce83391dfbf.png",
+        "name": "Penpot",
+        "preview": "/inspirations/bd5729676c800390.webp"
+      },
+      {
+        "description": "Browser-based 3D design software with physics.",
+        "href": "https://spline.design/",
+        "icon": "/inspirations/ff313a9964a6e905.png",
+        "name": "Spline",
+        "preview": "/inspirations/6164eef27dbac62c.webp"
+      },
+      {
+        "description": "Articles exploring modern digital interface craftsmanship.",
+        "href": "https://www.interfacecraft.dev/",
+        "icon": "/inspirations/e270f64547721100.png",
+        "name": "Interface Craft",
+        "preview": "/inspirations/8a28bc824aee57f8.webp"
+      },
+      {
+        "description": "Laboratory deconstructing animated UI components.",
+        "href": "https://www.uilabs.dev/",
+        "icon": "/inspirations/a29cb8dc5327eb6f.png",
+        "name": "UI Labs",
+        "preview": null
+      },
+      {
+        "description": "Showcase of experimental web interface patterns.",
+        "href": "https://uiw.tf/",
+        "icon": "/inspirations/a1f46779caad60b1.png",
+        "name": "UIWTF",
+        "preview": "/inspirations/13917cd080950ef7.webp"
+      },
+      {
+        "description": "Refined UI experiments from a studio.",
+        "href": "https://lab01.dev/",
+        "icon": "/inspirations/b0302227b6e7daaf.png",
+        "name": "Lab01",
+        "preview": "/inspirations/de628e4df3ae760c.webp"
+      },
+      {
+        "description": "AI-assisted design token and system editor.",
+        "href": "https://design.dev/",
+        "icon": "/inspirations/63ac4288e14ecb79.png",
+        "name": "design.dev",
+        "preview": "/inspirations/481b3e2bbe5d6585.webp"
+      },
+      {
+        "description": "Guide to common UI component states.",
+        "href": "https://uiplaybook.dev/",
+        "icon": "/inspirations/81a246d7304028e8.png",
+        "name": "UI Playbook",
+        "preview": "/inspirations/ddcc6c6d670b9a68.webp"
+      }
+    ],
+    "title": "Interface Design"
+  },
+  {
+    "description": "Essential books, design engineering essays, and craft tutorials.",
+    "id": "reading",
+    "items": [
+      {
+        "description": "Practical design guide for building interfaces.",
+        "href": "https://refactoringui.com/",
+        "icon": "/inspirations/68a1dfb01acffea4.png",
+        "name": "Refactoring UI",
+        "preview": "/inspirations/03b3a28a913e0836.webp"
+      },
+      {
+        "description": "Essential book covering typographic rules and layout.",
+        "href": "https://practicaltypography.com/",
+        "icon": "/inspirations/f1f792e321a2dcd3.png",
+        "name": "Practical Typography",
+        "preview": "/inspirations/a0a5160b0e37a814.webp"
+      },
+      {
+        "description": "Guidance on web performance and modern standards.",
+        "href": "https://web.dev/",
+        "icon": "/inspirations/5e7140a42d67f27b.png",
+        "name": "web.dev",
+        "preview": "/inspirations/03beae88ec85b2d9.webp"
+      },
+      {
+        "description": "Pattern library teaching accessible component design.",
+        "href": "https://inclusive-components.design/",
+        "icon": "/inspirations/6ea5c742c04f6eb3.png",
+        "name": "Inclusive Components",
+        "preview": null
+      },
+      {
+        "description": "Interactive tutorials breaking down CSS mechanics.",
+        "href": "https://joshwcomeau.com/",
+        "icon": "/inspirations/f2f1ed35058b8790.png",
+        "name": "Josh Comeau",
+        "preview": "/inspirations/7aedb63388517ad3.webp"
+      },
+      {
+        "description": "Directory of essential design literature by discipline.",
+        "href": "https://design-books.com/",
+        "icon": "/inspirations/c05de41fc5a88a71.png",
+        "name": "Design Books",
+        "preview": "/inspirations/e3f7620e4bb67c5b.webp"
+      },
+      {
+        "description": "Interactive guide exploring GPU kernel programming.",
+        "href": "https://learn-kernels.com/",
+        "icon": "/inspirations/52d05246e7e9689b.png",
+        "name": "Learn Kernels",
+        "preview": "/inspirations/9dd94fb1e8c834b6.webp"
+      },
+      {
+        "description": "Comprehensive checklist for production design systems.",
+        "href": "https://designsystemchecklist.com/",
+        "icon": "/inspirations/3dab6e31381ecf3d.png",
+        "name": "Design System Checklist",
+        "preview": null
+      },
+      {
+        "description": "Video course teaching practical user interface design.",
+        "href": "https://learn-ui.com/",
+        "icon": "/inspirations/89675c5b1cc3d34c.png",
+        "name": "Learn UI",
+        "preview": "/inspirations/8eedcea1e22f9ce1.webp"
+      },
+      {
+        "description": "Dissecting subtle design details in software.",
+        "href": "https://designspells.com/",
+        "icon": "/inspirations/6b4230b4febd8ea3.png",
+        "name": "Design Spells",
+        "preview": null
+      },
+      {
+        "description": "Evidence-based UI design patterns and data.",
+        "href": "https://goodui.org/",
+        "icon": "/inspirations/f99caa1a617c164c.png",
+        "name": "Good UI",
+        "preview": "/inspirations/339bed725f03eb31.webp"
+      },
+      {
+        "description": "Daily design blog sharing visual inspiration.",
+        "href": "https://abduzeedo.com/",
+        "icon": "/inspirations/9e1357ada3710e50.png",
+        "name": "Abduzeedo",
+        "preview": "/inspirations/0f56763a0146696e.webp"
+      },
+      {
+        "description": "Curated publication sharing critical UX essays.",
+        "href": "https://uxdesign.cc/",
+        "icon": "/inspirations/b0efa6d74a476215.png",
+        "name": "UX Collective",
+        "preview": null
+      },
+      {
+        "description": "Reliable resource for web designers and developers.",
+        "href": "https://www.smashingmagazine.com/",
+        "icon": "/inspirations/07a44a046233ff2b.png",
+        "name": "Smashing Magazine",
+        "preview": "/inspirations/2879894df4afab42.webp"
+      },
+      {
+        "description": "Blog publishing creative frontend experiments and tutorials.",
+        "href": "https://tympanus.net/codrops/",
+        "icon": "/inspirations/f19500cdc3532bdc.png",
+        "name": "Codrops",
+        "preview": "/inspirations/58350440ddadeeb7.webp"
+      },
+      {
+        "description": "Daily digest curating latest design trends.",
+        "href": "https://muz.li/",
+        "icon": "/inspirations/832fa36cf75f30f5.png",
+        "name": "Muzli",
+        "preview": "/inspirations/400aa44e8bff0894.webp"
+      },
+      {
+        "description": "Journal dedicated to information architecture craft.",
+        "href": "https://boxesandarrows.com/",
+        "icon": "/inspirations/844f9904700c0d75.png",
+        "name": "Boxes and Arrows",
+        "preview": "/inspirations/91cc5f3840607926.webp"
+      },
+      {
+        "description": "Community-driven news feed highlighting design stories.",
+        "href": "https://www.designernews.co/",
+        "icon": "/inspirations/cc372c820d60e3fc.png",
+        "name": "Designer News",
+        "preview": null
+      },
+      {
+        "description": "Design publication covering web standards and tools.",
+        "href": "https://www.webdesignerdepot.com/",
+        "icon": "/inspirations/57ce59947310b36c.png",
+        "name": "Web Designer Depot",
+        "preview": "/inspirations/8823d36b4796d397.webp"
+      },
+      {
+        "description": "Articles and tools covering web design.",
+        "href": "https://designmodo.com/",
+        "icon": "/inspirations/42047a32a38099b2.png",
+        "name": "Designmodo",
+        "preview": "/inspirations/cfca790c8acba21f.webp"
+      },
+      {
+        "description": "Design blog exploring creative branding insights.",
+        "href": "https://99designs.com/discover",
+        "icon": "/inspirations/375e183feafc6652.png",
+        "name": "99designs Discover",
+        "preview": "/inspirations/75ad2bc18e61a5e0.webp"
+      },
+      {
+        "description": "Monthly digital publication exploring digital interfaces.",
+        "href": "https://interfaces.dev/",
+        "icon": "/inspirations/55b0ea1d8fee91b2.jpg",
+        "name": "Interfaces",
+        "preview": "/inspirations/613f86bf9a73b2b1.webp"
+      },
+      {
+        "description": "Essays examining how tools shape design.",
+        "href": "https://www.makingsoftware.com/",
+        "icon": "/inspirations/70df551bb1d869f3.png",
+        "name": "Making Software",
+        "preview": null
+      },
+      {
+        "description": "Personal visual essays exploring interface design.",
+        "href": "https://visualrambling.space/",
+        "icon": "/inspirations/2b4ab7785f994721.png",
+        "name": "Visual Rambling",
+        "preview": "/inspirations/96ca64bfa4465b1d.webp"
+      },
+      {
+        "description": "Curated roadmap for mastering product design.",
+        "href": "https://www.degreeless.design/",
+        "icon": "/inspirations/47decfd41a600dcc.png",
+        "name": "Degreeless Design",
+        "preview": "/inspirations/ad89d83401b8040a.webp"
+      },
+      {
+        "description": "Guide to mastering SVG markup and animations.",
+        "href": "https://www.svg.guide/",
+        "icon": "/inspirations/c2cb9e415d7d42ac.png",
+        "name": "SVG Guide",
+        "preview": "/inspirations/addf0b808213cccd.webp"
+      },
+      {
+        "description": "Course on creating web animations that feel right.",
+        "href": "https://www.animations.dev/",
+        "icon": "/inspirations/0e025a6c1ed5fb10.png",
+        "name": "Animations.dev",
+        "preview": null
+      },
+      {
+        "description": "Course teaching techniques for designing with AI.",
+        "href": "https://ui-skills.com/",
+        "icon": "/inspirations/cf08d7625393ae49.png",
+        "name": "UI Skills",
+        "preview": "/inspirations/c8d5c8602a77bdf9.webp"
+      },
+      {
+        "description": "Course teaching AI workflows for interfaces.",
+        "href": "https://aiforui.dev/",
+        "icon": "/inspirations/2e233d748ac99bf9.png",
+        "name": "AI for UI",
+        "preview": "/inspirations/121c494b779c5099.webp"
+      },
+      {
+        "description": "Interviews with leading design engineers on craft.",
+        "href": "https://ui.land/",
+        "icon": "/inspirations/22f38c6f4fd7adc7.png",
+        "name": "UI Land",
+        "preview": null
+      },
+      {
+        "description": "Psychological principles that influence interface usability.",
+        "href": "https://lawsofux.com/",
+        "icon": "/inspirations/3cebb1b2b112f841.png",
+        "name": "Laws of UX",
+        "preview": "/inspirations/2e08d6c9650cf3f6.webp"
+      },
+      {
+        "description": "Knowledge base documenting interface guidelines and rules.",
+        "href": "https://userinterface.wiki/",
+        "icon": "/inspirations/d1524dfe52e3859a.png",
+        "name": "User Interface Wiki",
+        "preview": "/inspirations/82b92e186047745f.webp"
+      },
+      {
+        "description": "Pattern library highlighting AI interface design.",
+        "href": "https://www.shapeof.ai/",
+        "icon": "/inspirations/dc58af33b53c58ec.png",
+        "name": "The Shape of AI",
+        "preview": "/inspirations/12a6ef28cc09c38d.webp"
+      }
+    ],
+    "title": "Reading"
+  }
+]

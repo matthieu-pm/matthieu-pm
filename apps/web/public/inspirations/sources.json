@@ -1,0 +1,698 @@
+{
+  "source": "https://www.designeer.xyz/",
+  "captured": "2026-09-29",
+  "assets": {
+    "https://www.google.com/s2/favicons?domain=60fps.design&sz=64": "44d6c1849bd84b18.png",
+    "https://www.designeer.xyz/previews/60fps.jpg": "209aeb9a64d233ad.jpg",
+    "https://www.google.com/s2/favicons?domain=awwwards.com&sz=64": "2ea16283561495f8.png",
+    "https://www.google.com/s2/favicons?domain=cosmos.so&sz=64": "9af6dc93277d4eff.png",
+    "https://www.designeer.xyz/previews/cosmos.jpg": "8097658c1ee6b469.jpg",
+    "https://www.google.com/s2/favicons?domain=curated.design&sz=64": "33db07ddb99f6563.png",
+    "https://www.designeer.xyz/previews/curated-design.jpg": "54e19ff5ace50eab.jpg",
+    "https://www.google.com/s2/favicons?domain=layers.to&sz=64": "3661e603a2dd12b8.png",
+    "https://www.designeer.xyz/previews/layers.jpg": "edd91c7f779655e9.jpg",
+    "https://www.google.com/s2/favicons?domain=minimal.gallery&sz=64": "8853103bdb86df83.png",
+    "https://www.designeer.xyz/previews/minimal-gallery.jpg": "95e7f66c6d0df174.jpg",
+    "https://www.google.com/s2/favicons?domain=mobbin.com&sz=64": "f65c990b0b5beee9.png",
+    "https://www.designeer.xyz/previews/mobbin.jpg": "3204766bb2c35bf8.jpg",
+    "https://www.google.com/s2/favicons?domain=saaspo.com&sz=64": "56bbc71e216b8e0e.png",
+    "https://www.designeer.xyz/previews/saaspo.jpg": "3aa852ac22d9a3a7.jpg",
+    "https://www.google.com/s2/favicons?domain=seesaw.website&sz=64": "5c6e36c88b14df98.png",
+    "https://www.designeer.xyz/previews/seesaw.jpg": "dde9c7b9f4a8e30d.jpg",
+    "https://www.google.com/s2/favicons?domain=supahero.io&sz=64": "59301a00bec4214e.png",
+    "https://www.designeer.xyz/previews/supahero.jpg": "3bb0a563d2ba2112.jpg",
+    "https://www.google.com/s2/favicons?domain=imageory.in&sz=64": "7a0aeb65dbd13c35.png",
+    "https://www.google.com/s2/favicons?domain=backgrounds.supply&sz=64": "6e7562174bae0168.png",
+    "https://www.google.com/s2/favicons?domain=backgrounds.venust.ai&sz=64": "dd46863393a575b6.png",
+    "https://www.google.com/s2/favicons?domain=details.so&sz=64": "ed1e3d418eaa70eb.png",
+    "https://www.google.com/s2/favicons?domain=sombra.design&sz=64": "63d2d9b737a7891d.png",
+    "https://www.google.com/s2/favicons?domain=dribbble.com&sz=64": "22aa80299ab20065.png",
+    "https://www.google.com/s2/favicons?domain=behance.net&sz=64": "c52553903b30a32d.png",
+    "https://www.designeer.xyz/previews/behance-shot.jpg": "5109ca81d1263b94.jpg",
+    "https://www.google.com/s2/favicons?domain=recent.design&sz=64": "4ea5a3830b0c9e1a.png",
+    "https://www.google.com/s2/favicons?domain=navbar.design&sz=64": "b6108b528aa4db45.png",
+    "https://www.google.com/s2/favicons?domain=footer.design&sz=64": "483fa159b29c7402.png",
+    "https://www.designeer.xyz/previews/footer-design.jpg": "3302d844285b117a.jpg",
+    "https://www.google.com/s2/favicons?domain=land-book.com&sz=64": "dc1a8df99235be6f.png",
+    "https://www.google.com/s2/favicons?domain=collectui.com&sz=64": "0a47020e399c659b.png",
+    "https://www.designeer.xyz/previews/collect-ui.jpg": "4a3fc828ad6fb9c4.jpg",
+    "https://www.google.com/s2/favicons?domain=siteinspire.com&sz=64": "2174b8455b972972.png",
+    "https://www.google.com/s2/favicons?domain=lapa.ninja&sz=64": "121726dcc02be029.png",
+    "https://www.google.com/s2/favicons?domain=uxarchive.com&sz=64": "bda08f00ae2ac495.png",
+    "https://www.google.com/s2/favicons?domain=screenlane.com&sz=64": "7db920b2086b3726.png",
+    "https://www.google.com/s2/favicons?domain=flowbase.co&sz=64": "8fa599223849c598.png",
+    "https://www.designeer.xyz/previews/flowbase.jpg": "8ecc841510412c85.jpg",
+    "https://www.google.com/s2/favicons?domain=hoverstat.es&sz=64": "1d31c7233e3445ee.png",
+    "https://www.designeer.xyz/previews/hover-states.jpg": "65123a7a72c890f9.jpg",
+    "https://www.google.com/s2/favicons?domain=saasframe.io&sz=64": "bd3ff7c8d8144c0e.png",
+    "https://www.designeer.xyz/previews/saasframe.jpg": "70f41d886c022d75.jpg",
+    "https://www.google.com/s2/favicons?domain=landingfolio.com&sz=64": "11e314355d9fb863.png",
+    "https://www.designeer.xyz/previews/landingfolio.jpg": "947ae18dce9f6506.jpg",
+    "https://www.google.com/s2/favicons?domain=pttrns.com&sz=64": "dc45e349807c3afe.png",
+    "https://www.designeer.xyz/previews/pttrns.jpg": "c14b25b2574645f1.jpg",
+    "https://www.google.com/s2/favicons?domain=onepagelove.com&sz=64": "31597b03894d61de.png",
+    "https://www.google.com/s2/favicons?domain=designspiration.com&sz=64": "ed85b779e251c335.png",
+    "https://www.google.com/s2/favicons?domain=bestwebsite.gallery&sz=64": "0e2aa9dca53bc959.png",
+    "https://www.google.com/s2/favicons?domain=theinspirationgrid.com&sz=64": "5c5f23797c1529dd.png",
+    "https://www.google.com/s2/favicons?domain=scrnshts.club&sz=64": "34716642afe04f7d.png",
+    "https://www.google.com/s2/favicons?domain=are.na&sz=64": "1ec1b9d798e9ab48.png",
+    "https://www.google.com/s2/favicons?domain=appinspo.com&sz=64": "5141187427b5af0b.png",
+    "https://www.google.com/s2/favicons?domain=darkmodedesign.com&sz=64": "13c6263c14cd8409.png",
+    "https://www.google.com/s2/favicons?domain=pinterest.com&sz=64": "91681623ce3eafb9.png",
+    "https://www.google.com/s2/favicons?domain=navbar.gallery&sz=64": "fe599ece3bda9126.png",
+    "https://www.google.com/s2/favicons?domain=posts.design&sz=64": "c5c6032d7fdf0d74.png",
+    "https://www.google.com/s2/favicons?domain=loadmo.re&sz=64": "97df4c5e3e104ec6.png",
+    "https://www.google.com/s2/favicons?domain=inspora.design&sz=64": "761ddd6009cb1606.png",
+    "https://www.google.com/s2/favicons?domain=cta.gallery&sz=64": "8ce9c5fe1a36fa4a.png",
+    "https://www.google.com/s2/favicons?domain=desengs.com&sz=64": "9dd0f3bad57dd22f.png",
+    "https://www.google.com/s2/favicons?domain=isthereanytool.app&sz=64": "e24c0f2374ccac0b.png",
+    "https://www.designeer.xyz/previews/isthereanytool.jpg": "0afd22ae54b8a6b8.jpg",
+    "https://www.google.com/s2/favicons?domain=designeng.tools&sz=64": "d62458ac3291393a.png",
+    "https://www.google.com/s2/favicons?domain=bestdesignsonx.com&sz=64": "ecdf0fa5f9acf981.png",
+    "https://www.google.com/s2/favicons?domain=designbookmark.com&sz=64": "ae4b386d46a8b3fe.png",
+    "https://www.google.com/s2/favicons?domain=rebrand.gallery&sz=64": "c7b94462addbfddc.png",
+    "https://www.google.com/s2/favicons?domain=curations.supply&sz=64": "16a47ec75930eaa4.png",
+    "https://www.designeer.xyz/previews/curations.jpg": "77da4e39e8f0befe.jpg",
+    "https://www.google.com/s2/favicons?domain=landing.love&sz=64": "e4dea25bc7eb7690.png",
+    "https://www.google.com/s2/favicons?domain=motionimo.xyz&sz=64": "dd4188b7541814c2.png",
+    "https://www.designeer.xyz/previews/motionimo.jpg": "371b1abac34129cb.jpg",
+    "https://www.google.com/s2/favicons?domain=before.click&sz=64": "0a9eb9cb5f957d6e.png",
+    "https://www.designeer.xyz/previews/before-click.jpg": "e952a6e5eaeb8669.jpg",
+    "https://www.google.com/s2/favicons?domain=swiped.design&sz=64": "c6684232fb1afb92.png",
+    "https://www.designeer.xyz/previews/swiped.jpg": "d08b2a7283bbb281.jpg",
+    "https://www.google.com/s2/favicons?domain=landdding.com&sz=64": "3399cc52d2362aa5.png",
+    "https://www.google.com/s2/favicons?domain=designengineer.tools&sz=64": "8e4d2fe8a67ce788.png",
+    "https://www.designeer.xyz/previews/designengineer-tools.jpg": "a2a6ca6ac52420c1.jpg",
+    "https://www.google.com/s2/favicons?domain=insposite.com&sz=64": "fbc3d0ab292bc2c8.png",
+    "https://www.designeer.xyz/previews/insposite.jpg": "3c039d457261650e.jpg",
+    "https://www.google.com/s2/favicons?domain=loader-buttons.appllama.io&sz=64": "93d4f694954d1b10.png",
+    "https://www.designeer.xyz/previews/loader-buttons.jpg": "d9ada574195f0fd1.jpg",
+    "https://www.google.com/s2/favicons?domain=whatships.com&sz=64": "afa2f3427bf9906c.png",
+    "https://www.designeer.xyz/previews/what-ships.jpg": "0f2d82187409ce95.jpg",
+    "https://www.google.com/s2/favicons?domain=greatstuff.fyi&sz=64": "c3c7b08823728982.png",
+    "https://www.designeer.xyz/previews/greatstuff.jpg": "fc0751223af95e9a.jpg",
+    "https://www.google.com/s2/favicons?domain=greatapps.fyi&sz=64": "fcea1b3f12d1bc4a.png",
+    "https://www.designeer.xyz/previews/great-apps.jpg": "8f949838868934d3.jpg",
+    "https://www.google.com/s2/favicons?domain=curated.domains&sz=64": "a60365aa764df4ce.png",
+    "https://www.designeer.xyz/previews/curated-domains.jpg": "ff2328c7b6f52f7a.jpg",
+    "https://www.google.com/s2/favicons?domain=sections.wtf&sz=64": "5521a5f0da4e640d.png",
+    "https://www.designeer.xyz/previews/sections-wtf.jpg": "31ed7b034bc8bbe5.jpg",
+    "https://www.google.com/s2/favicons?domain=browse.cool&sz=64": "1809205bf705b18f.png",
+    "https://www.google.com/s2/favicons?domain=folios.gallery&sz=64": "f753125284a739b0.png",
+    "https://www.designeer.xyz/previews/folios-gallery.jpg": "980fe2d360080760.jpg",
+    "https://www.google.com/s2/favicons?domain=wwwtf.site&sz=64": "1d17422d958a01ff.png",
+    "https://www.google.com/s2/favicons?domain=early.tools&sz=64": "48e2b60a9f681d7d.png",
+    "https://www.google.com/s2/favicons?domain=openalternative.co&sz=64": "df271bdfddb1f62d.png",
+    "https://www.google.com/s2/favicons?domain=everywhere.tools&sz=64": "34bacc8ce2211a58.png",
+    "https://www.google.com/s2/favicons?domain=gallery.jessyin.world&sz=64": "49a389861a30c8ef.png",
+    "https://www.google.com/s2/favicons?domain=wallofportfolios.in&sz=64": "999b803a8b5e3681.png",
+    "https://www.google.com/s2/favicons?domain=detail.design&sz=64": "15fd1cc50185b43f.png",
+    "https://www.google.com/s2/favicons?domain=betwnstudios.com&sz=64": "e6541e4cf7b24434.png",
+    "https://www.google.com/s2/favicons?domain=saaslandingpage.com&sz=64": "e8d6f0812a5bcc12.png",
+    "https://www.google.com/s2/favicons?domain=bestsaaswebdesigns.com&sz=64": "8448813065fbce3a.png",
+    "https://www.google.com/s2/favicons?domain=a1.gallery&sz=64": "3937b4739ab8e232.jpg",
+    "https://www.google.com/s2/favicons?domain=uibook.art&sz=64": "a064dcc268ca4f2c.png",
+    "https://www.google.com/s2/favicons?domain=devchauhan.in&sz=64": "844230bae040f433.jpg",
+    "https://www.google.com/s2/favicons?domain=godly.design&sz=64": "9bdcf6b3961832ed.png",
+    "https://www.google.com/s2/favicons?domain=herogrids.com&sz=64": "1bf0c9bdb4fe5885.png",
+    "https://www.google.com/s2/favicons?domain=maxibestof.one&sz=64": "3b83e50c4d242a6f.png",
+    "https://www.google.com/s2/favicons?domain=nicelydone.club&sz=64": "3f699f25b6a8f85d.png",
+    "https://www.google.com/s2/favicons?domain=crafio.app&sz=64": "2498a1f86de1c415.png",
+    "https://www.google.com/s2/favicons?domain=brandcenter.gallery&sz=64": "6f91cdfa6511ff6c.jpg",
+    "https://www.google.com/s2/favicons?domain=figma.com&sz=64": "e1cf82f97ffa8593.png",
+    "https://www.google.com/s2/favicons?domain=framer.com&sz=64": "68c270cc7fd0ce0e.png",
+    "https://www.google.com/s2/favicons?domain=make.design&sz=64": "9e137891db36487f.png",
+    "https://www.google.com/s2/favicons?domain=penpot.app&sz=64": "22780ce83391dfbf.png",
+    "https://www.google.com/s2/favicons?domain=spline.design&sz=64": "ff313a9964a6e905.png",
+    "https://www.google.com/s2/favicons?domain=interfacecraft.dev&sz=64": "e270f64547721100.png",
+    "https://www.google.com/s2/favicons?domain=uilabs.dev&sz=64": "a29cb8dc5327eb6f.png",
+    "https://www.google.com/s2/favicons?domain=uiw.tf&sz=64": "a1f46779caad60b1.png",
+    "https://www.google.com/s2/favicons?domain=lab01.dev&sz=64": "b0302227b6e7daaf.png",
+    "https://www.google.com/s2/favicons?domain=design.dev&sz=64": "63ac4288e14ecb79.png",
+    "https://www.google.com/s2/favicons?domain=uiplaybook.dev&sz=64": "81a246d7304028e8.png",
+    "https://www.google.com/s2/favicons?domain=refactoringui.com&sz=64": "68a1dfb01acffea4.png",
+    "https://www.google.com/s2/favicons?domain=practicaltypography.com&sz=64": "f1f792e321a2dcd3.png",
+    "https://www.google.com/s2/favicons?domain=web.dev&sz=64": "5e7140a42d67f27b.png",
+    "https://www.google.com/s2/favicons?domain=inclusive-components.design&sz=64": "6ea5c742c04f6eb3.png",
+    "https://www.google.com/s2/favicons?domain=joshwcomeau.com&sz=64": "f2f1ed35058b8790.png",
+    "https://www.google.com/s2/favicons?domain=design-books.com&sz=64": "c05de41fc5a88a71.png",
+    "https://www.google.com/s2/favicons?domain=learn-kernels.com&sz=64": "52d05246e7e9689b.png",
+    "https://www.google.com/s2/favicons?domain=designsystemchecklist.com&sz=64": "3dab6e31381ecf3d.png",
+    "https://www.google.com/s2/favicons?domain=learn-ui.com&sz=64": "89675c5b1cc3d34c.png",
+    "https://www.google.com/s2/favicons?domain=designspells.com&sz=64": "6b4230b4febd8ea3.png",
+    "https://www.google.com/s2/favicons?domain=goodui.org&sz=64": "f99caa1a617c164c.png",
+    "https://www.google.com/s2/favicons?domain=abduzeedo.com&sz=64": "9e1357ada3710e50.png",
+    "https://www.google.com/s2/favicons?domain=uxdesign.cc&sz=64": "b0efa6d74a476215.png",
+    "https://www.google.com/s2/favicons?domain=smashingmagazine.com&sz=64": "07a44a046233ff2b.png",
+    "https://www.google.com/s2/favicons?domain=tympanus.net&sz=64": "f19500cdc3532bdc.png",
+    "https://www.google.com/s2/favicons?domain=muz.li&sz=64": "832fa36cf75f30f5.png",
+    "https://www.google.com/s2/favicons?domain=boxesandarrows.com&sz=64": "844f9904700c0d75.png",
+    "https://www.google.com/s2/favicons?domain=designernews.co&sz=64": "cc372c820d60e3fc.png",
+    "https://www.google.com/s2/favicons?domain=webdesignerdepot.com&sz=64": "57ce59947310b36c.png",
+    "https://www.google.com/s2/favicons?domain=designmodo.com&sz=64": "42047a32a38099b2.png",
+    "https://www.google.com/s2/favicons?domain=99designs.com&sz=64": "375e183feafc6652.png",
+    "https://www.google.com/s2/favicons?domain=interfaces.dev&sz=64": "55b0ea1d8fee91b2.jpg",
+    "https://www.google.com/s2/favicons?domain=makingsoftware.com&sz=64": "70df551bb1d869f3.png",
+    "https://www.google.com/s2/favicons?domain=visualrambling.space&sz=64": "2b4ab7785f994721.png",
+    "https://www.google.com/s2/favicons?domain=degreeless.design&sz=64": "47decfd41a600dcc.png",
+    "https://www.google.com/s2/favicons?domain=svg.guide&sz=64": "c2cb9e415d7d42ac.png",
+    "https://www.google.com/s2/favicons?domain=animations.dev&sz=64": "0e025a6c1ed5fb10.png",
+    "https://www.google.com/s2/favicons?domain=ui-skills.com&sz=64": "cf08d7625393ae49.png",
+    "https://www.google.com/s2/favicons?domain=aiforui.dev&sz=64": "2e233d748ac99bf9.png",
+    "https://www.google.com/s2/favicons?domain=ui.land&sz=64": "22f38c6f4fd7adc7.png",
+    "https://www.google.com/s2/favicons?domain=lawsofux.com&sz=64": "3cebb1b2b112f841.png",
+    "https://www.google.com/s2/favicons?domain=userinterface.wiki&sz=64": "d1524dfe52e3859a.png",
+    "https://www.google.com/s2/favicons?domain=shapeof.ai&sz=64": "dc58af33b53c58ec.png",
+    "https://www.designeer.xyz/_next/static/immutable/media/61a58143c2e45268.p.14th7iya-pf29.woff2": "926576b6cdbcd2ea.woff2",
+    "https://www.designeer.xyz/_next/static/immutable/media/797e433ab948586e-s.p.1v5bejj26fx9h.woff2": "5aa19bc10b18d8eb.woff2",
+    "https://www.designeer.xyz/_next/static/immutable/media/GeistPixel_Circle.p.33ptqjycga8_k.woff2": "bec5a42b31412a4e.woff2",
+    "https://www.designeer.xyz/_next/static/immutable/media/fc566e733948aae3-s.p.3sn1m8e9yfo1w.woff2": "3d125bd66b21e261.woff2",
+    "https://www.designeer.xyz/_next/static/immutable/media/GeistPixel_Triangle.p.2yt1keahkoo6c.woff2": "3313af32f36592d0.woff2",
+    "https://www.designeer.xyz/_next/static/immutable/media/d3f3f01dfc015e12-s.p.23zh95iq-x3nr.woff2": "d1e6add6df647ea1.woff2",
+    "https://www.designeer.xyz/_next/static/immutable/media/GeistPixel_Grid.p.2u9udzfirdsy9.woff2": "8dd3bc86736f40ac.woff2",
+    "https://www.designeer.xyz/_next/static/immutable/media/GeistPixel_Square.p.3i-voztpvqxl2.woff2": "56f040fd4177d5e9.woff2",
+    "https://www.designeer.xyz/_next/static/immutable/media/GeistPixel_Line.p.2mkbez_3692ug.woff2": "fd564c26463f4c9d.woff2",
+    "https://www.designeer.xyz/sponsors/loops.png": "b1fa3fd0b3e45034.png",
+    "https://www.designeer.xyz/sponsors/loops-poster.jpg": "4a626784867da531.jpg",
+    "https://assets.awwwards.com/assets/images/pages/about-certificates/awwwards.jpg": "fd81d02250199c8f.webp",
+    "https://backgrounds.venust.ai/social/backgrounds-og-v2.jpg": "b5a750d612eba493.webp",
+    "https://www.details.so/og-default.jpg": "7f13643c46fd97c7.webp",
+    "https://sombra.design/social-share.jpg": "d758af47ea52a352.webp",
+    "https://recent.design/og.png": "f3418e55ad7b0531.webp",
+    "https://framerusercontent.com/assets/x0OhropODCDTXpsFGgTF8Gzurvg.png": "037ab59758ec9d11.webp",
+    "https://assets.onepagelove.com/cdn-cgi/image/width=1200,height=628,fit=cover,gravity=top,format=jpg,quality=85/wp-content/uploads/global/one-page-love-meta.jpg": "944ee2b710e0df6c.webp",
+    "https://s.dspncdn.com/a1/webapp/img/content/meta/default_meta_display.jpg": "ecf3b100a54043d2.webp",
+    "https://static.bestwebsite.gallery/transforms/gallery_bestwebsite/craft/images/graphics/_1200x630_crop_center-center_82_none/bestwebsite-ogImageTemplate-websites.png?mtime=1787175726": "570447d3f035cfdf.webp",
+    "https://inspgr.id/app/uploads/2011/02/about-feature-image.jpg": "f938fd03d59a28de.webp",
+    "https://screensdesign.com/img/sd_preview_v2.jpg?v=2": "6e112e506c4d3d2f.webp",
+    "https://www.are.na/og-image.png": "b85409d2109e6793.webp",
+    "https://storage.googleapis.com/gpt-engineer-file-uploads/xsi2SKnwSogNjSZkh7wGLT80k933/social-images/social-1772816280331-opengraph.webp": "e3be07bdb7dbd066.webp",
+    "https://cdn.prod.website-files.com/5ea7fc450fe2ee12b924f695/63f1a4bc731066c857d55d0b_97ffe48072aebe00cb0efe5b320f4130_OpenGraph-min.png": "7b4511af8830c260.webp",
+    "https://s.pinimg.com/images/facebook_share_image.png": "d7d7162704bed97f.webp",
+    "https://cdn.prod.website-files.com/65676438ff1c480b81cf0085/65d0d08ee366dcfc3c73aa94_ogimage%20(2).webp": "20aba0af858f753f.webp",
+    "https://posts.design/brand/posts-design-share@2x.png": "f6759663cc3308af.webp",
+    "https://loadmo.re/media/pages/home/332c07bf8f-1603905890/loadmore-opengraph.png": "360e62d755c6ccf8.webp",
+    "https://www.inspora.design/brand/inspora-og.png": "5050326df2d1eae5.webp",
+    "https://desengs.com/og.png": "ccbf976a500058c5.webp",
+    "https://bestdesignsonx.com/og-image.png": "8d3301e262d7bc95.webp",
+    "https://designbookmark.com/opengraph-image.png?opengraph-image.1y3eb2org22jc.png": "4fe0dd8e0a7065c5.webp",
+    "https://www.landing.love/img/social.jpg": "ef65b01f510b6236.webp",
+    "https://landdding.com/images/thumbnail.png": "d6bfafa0e817da9d.webp",
+    "https://framerusercontent.com/images/6mfLGgOwqmbjZRV9WwDy8TFKU.png": "82c32f7287ad1226.webp",
+    "https://framerusercontent.com/images/h8APsJggWbEQ2iPjSpRFAe3RlE.png": "42b6e36c49dd6617.webp",
+    "https://openalternative.co/api/og": "2b34a6a186cceec5.webp",
+    "https://cdn.sanity.io/images/0bqbcj4c/production/26fa72ec5dd033e1a340c15bb4dfbdd8bbd6bb8c-1200x630.png?rect=0,2,1200,627&w=1200&h=627&fit=crop&auto=format": "854093710fc2bad5.webp",
+    "https://cdn.wallofportfolios.in/production/images/wall-of-portfolios.ef7b8bf48042.png": "7458b8fb21ef79e9.webp",
+    "https://detail.design/og.png": "203c609d26bdcca0.webp",
+    "https://saaslandingpage.com/wp-content/uploads/2023/12/Link-Share-Img@2x.png": "5eb5b6987019d8fb.webp",
+    "https://bestsaaswebdesigns.com/opengraph-image?27664ccf92bfb79c": "67581c755e8323c2.webp",
+    "https://www.a1.gallery/images/og-default.webp": "1f531333fd1a9a0a.webp",
+    "https://uibook.art/og/uibook-og-v2.jpg": "2e53df885dcc85b4.webp",
+    "https://devchauhan.in/assets/og/og.png": "2ed462a24f8c5f87.webp",
+    "https://godly.design/homepage-og.webp": "a4abeb4c05309b0e.webp",
+    "https://herogrids.com/og/home.png": "e75e1583445c8aa7.webp",
+    "https://i.imgur.com/oKheXYV.jpg": "014fa4a77061001f.webp",
+    "https://crafio.app/social/home-v2.png": "3555277ff9faa170.webp",
+    "https://brandcenter.gallery/og-default.png": "e96d0c177570bf41.webp",
+    "https://framerusercontent.com/images/vt65Mbfi3w8ymfTyRfbmgM4Tyo.png": "3cfe545817594854.webp",
+    "https://make.design/OG.jpg": "a8a9dd4d5a091f39.webp",
+    "https://site-assets.plasmic.app/bd5cdab7f749bba987c8de1f2cbdff60.webp": "bd5729676c800390.webp",
+    "https://spline.design/_next/static/immutable/media/spline_image_banner.2at491x3fx670.png": "6164eef27dbac62c.webp",
+    "https://interfacecraft.dev/images/og-safe-zone.png": "8a28bc824aee57f8.webp",
+    "https://uiw.tf/og.png": "13917cd080950ef7.webp",
+    "https://lab01.dev/assets/img/social-card.png": "de628e4df3ae760c.webp",
+    "https://design.dev/assets/img/social-og.jpg": "481b3e2bbe5d6585.webp",
+    "https://uiplaybook.dev/static/og.png": "ddcc6c6d670b9a68.webp",
+    "https://refactoringui.com/img/homepage/og-image.png": "03b3a28a913e0836.webp",
+    "https://practicaltypography.com/images/og-image.jpg?1784662551": "a0a5160b0e37a814.webp",
+    "https://web.dev/images/social-wide.jpg": "03beae88ec85b2d9.webp",
+    "https://www.joshwcomeau.com/opengraph-image.png?cac0cc658da9fd03": "7aedb63388517ad3.webp",
+    "https://design-books.com/opengraph-image.jpg": "e3f7620e4bb67c5b.webp",
+    "https://learn-kernels.com/opengraph-image?eeac42abd9ce1852": "9dd94fb1e8c834b6.webp",
+    "https://learn-ui.com/opengraph-image?eeac42abd9ce1852": "8eedcea1e22f9ce1.webp",
+    "http://goodui.org/site/assets/files/1050/og-default-1.jpg": "339bed725f03eb31.webp",
+    "https://abduzeedo.com/og-image.jpg": "0f56763a0146696e.webp",
+    "https://smashingmagazine.com/images/smashing-homepage.png": "2879894df4afab42.webp",
+    "https://codrops-1f606.kxcdn.com/codrops/wp-content/uploads/2024/04/codrops_social_graph.jpg?x51331": "58350440ddadeeb7.webp",
+    "https://muz.li/og.png": "400aa44e8bff0894.webp",
+    "https://boxesandarrows.com/wp-content/uploads/2020/02/BA-Logo-Horizontal.png": "91cc5f3840607926.webp",
+    "https://d3tamksjp7q04h.cloudfront.net/2024/10/29020247/Screenshot-2024-10-29-090225.png": "8823d36b4796d397.webp",
+    "https://designmodo.com/wp-content/uploads/2024/04/social-media-designmodo-1.jpg": "cfca790c8acba21f.webp",
+    "https://assets.99static.com/workbench/assets/asimov/images/og-image-80cfd8beb6.png": "75ad2bc18e61a5e0.webp",
+    "https://ho1jr3x2dcwdu3t5.public.blob.vercel-storage.com/og-image.png": "613f86bf9a73b2b1.webp",
+    "https://visualrambling.space/assets/og-image.NK77B_Ca.webp": "96ca64bfa4465b1d.webp",
+    "https://cdn.prod.website-files.com/644dcb5b2a4a5323fc30a279/64552d740aa34d5f3dbb6756_OG.png": "ad89d83401b8040a.webp",
+    "https://animating-svgs-rmom9spkv-nan-fyi.vercel.app/opengraph-image.png?0616b3ae80ba09a4": "addf0b808213cccd.webp",
+    "https://www.ui-skills.com/UI-OG.png": "c8d5c8602a77bdf9.webp",
+    "https://aiforui.dev/opengraph-image-pslsgm.png?opengraph-image.a184bf51.png": "121c494b779c5099.webp",
+    "https://lawsofux.com/home/social.en.png": "2e08d6c9650cf3f6.webp",
+    "https://www.userinterface.wiki/open-graph/default.png": "82b92e186047745f.webp",
+    "https://cdn.prod.website-files.com/65db6dd21591364dfcb8ade9/68ed1d8d0ec468824c7db7c6_og.jpg": "12a6ef28cc09c38d.webp"
+  },
+  "additionalPreviews": {
+    "Awwwards": {
+      "page": "https://www.awwwards.com/",
+      "image": "https://assets.awwwards.com/assets/images/pages/about-certificates/awwwards.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Venust Backgrounds": {
+      "page": "https://backgrounds.venust.ai/",
+      "image": "https://backgrounds.venust.ai/social/backgrounds-og-v2.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Details": {
+      "page": "https://www.details.so/",
+      "image": "https://www.details.so/og-default.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Sombra": {
+      "page": "https://sombra.design/",
+      "image": "https://sombra.design/social-share.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Recent Design": {
+      "page": "https://recent.design/",
+      "image": "https://recent.design/og.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "navbar.design": {
+      "page": "https://navbar.design/",
+      "image": "https://framerusercontent.com/assets/x0OhropODCDTXpsFGgTF8Gzurvg.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "One Page Love": {
+      "page": "https://onepagelove.com/",
+      "image": "https://assets.onepagelove.com/cdn-cgi/image/width=1200,height=628,fit=cover,gravity=top,format=jpg,quality=85/wp-content/uploads/global/one-page-love-meta.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Designspiration": {
+      "page": "https://www.designspiration.com/",
+      "image": "https://s.dspncdn.com/a1/webapp/img/content/meta/default_meta_display.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Best Website Gallery": {
+      "page": "https://bestwebsite.gallery/",
+      "image": "https://static.bestwebsite.gallery/transforms/gallery_bestwebsite/craft/images/graphics/_1200x630_crop_center-center_82_none/bestwebsite-ogImageTemplate-websites.png?mtime=1787175726",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Inspiration Grid": {
+      "page": "https://theinspirationgrid.com/",
+      "image": "https://inspgr.id/app/uploads/2011/02/about-feature-image.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Scrnshts": {
+      "page": "https://scrnshts.club/",
+      "image": "https://screensdesign.com/img/sd_preview_v2.jpg?v=2",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Are.na": {
+      "page": "https://www.are.na/",
+      "image": "https://www.are.na/og-image.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Appinspo": {
+      "page": "https://www.appinspo.com/",
+      "image": "https://storage.googleapis.com/gpt-engineer-file-uploads/xsi2SKnwSogNjSZkh7wGLT80k933/social-images/social-1772816280331-opengraph.webp",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Dark Mode Design": {
+      "page": "https://www.darkmodedesign.com/",
+      "image": "https://cdn.prod.website-files.com/5ea7fc450fe2ee12b924f695/63f1a4bc731066c857d55d0b_97ffe48072aebe00cb0efe5b320f4130_OpenGraph-min.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Pinterest": {
+      "page": "https://www.pinterest.com/",
+      "image": "https://s.pinimg.com/images/facebook_share_image.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "navbar.gallery": {
+      "page": "https://navbar.gallery/",
+      "image": "https://cdn.prod.website-files.com/65676438ff1c480b81cf0085/65d0d08ee366dcfc3c73aa94_ogimage%20(2).webp",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "posts.design": {
+      "page": "https://posts.design/",
+      "image": "https://posts.design/brand/posts-design-share@2x.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "loadmo.re": {
+      "page": "https://loadmo.re/",
+      "image": "https://loadmo.re/media/pages/home/332c07bf8f-1603905890/loadmore-opengraph.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "inspora.design": {
+      "page": "https://www.inspora.design/",
+      "image": "https://www.inspora.design/brand/inspora-og.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "desengs.com": {
+      "page": "https://desengs.com/",
+      "image": "https://desengs.com/og.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "bestdesignsonx.com": {
+      "page": "https://bestdesignsonx.com/",
+      "image": "https://bestdesignsonx.com/og-image.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Design Bookmark": {
+      "page": "https://designbookmark.com/",
+      "image": "https://designbookmark.com/opengraph-image.png?opengraph-image.1y3eb2org22jc.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Landing Love": {
+      "page": "https://landing.love/",
+      "image": "https://www.landing.love/img/social.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Landdding": {
+      "page": "https://landdding.com/",
+      "image": "https://landdding.com/images/thumbnail.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Browse.cool": {
+      "page": "https://browse.cool/",
+      "image": "https://framerusercontent.com/images/6mfLGgOwqmbjZRV9WwDy8TFKU.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "wwwtf.site": {
+      "page": "https://wwwtf.site/",
+      "image": "https://framerusercontent.com/images/h8APsJggWbEQ2iPjSpRFAe3RlE.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "OpenAlternative": {
+      "page": "https://openalternative.co/",
+      "image": "https://openalternative.co/api/og",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Everywhere Tools": {
+      "page": "https://everywhere.tools/",
+      "image": "https://cdn.sanity.io/images/0bqbcj4c/production/26fa72ec5dd033e1a340c15bb4dfbdd8bbd6bb8c-1200x630.png?rect=0,2,1200,627&w=1200&h=627&fit=crop&auto=format",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Wall of Portfolios": {
+      "page": "https://www.wallofportfolios.in/",
+      "image": "https://cdn.wallofportfolios.in/production/images/wall-of-portfolios.ef7b8bf48042.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Detail Design": {
+      "page": "https://detail.design/",
+      "image": "https://detail.design/og.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "SaaS Landing Page": {
+      "page": "https://saaslandingpage.com/",
+      "image": "https://saaslandingpage.com/wp-content/uploads/2023/12/Link-Share-Img@2x.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Best SaaS Web Designs": {
+      "page": "https://bestsaaswebdesigns.com/",
+      "image": "https://bestsaaswebdesigns.com/opengraph-image?27664ccf92bfb79c",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "A1": {
+      "page": "https://www.a1.gallery/",
+      "image": "https://www.a1.gallery/images/og-default.webp",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "UIBook": {
+      "page": "https://uibook.art/",
+      "image": "https://uibook.art/og/uibook-og-v2.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Dev Chauhan": {
+      "page": "https://devchauhan.in/",
+      "image": "https://devchauhan.in/assets/og/og.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Godly": {
+      "page": "https://godly.design/",
+      "image": "https://godly.design/homepage-og.webp",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Herogrids": {
+      "page": "https://herogrids.com/",
+      "image": "https://herogrids.com/og/home.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Nicelydone": {
+      "page": "https://nicelydone.club",
+      "image": "https://i.imgur.com/oKheXYV.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Crafio": {
+      "page": "https://crafio.app/",
+      "image": "https://crafio.app/social/home-v2.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "BrandCenter Gallery": {
+      "page": "https://brandcenter.gallery/",
+      "image": "https://brandcenter.gallery/og-default.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Framer": {
+      "page": "https://framer.com/",
+      "image": "https://framerusercontent.com/images/vt65Mbfi3w8ymfTyRfbmgM4Tyo.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "make.design": {
+      "page": "https://make.design/",
+      "image": "https://make.design/OG.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Penpot": {
+      "page": "https://penpot.app/",
+      "image": "https://site-assets.plasmic.app/bd5cdab7f749bba987c8de1f2cbdff60.webp",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Spline": {
+      "page": "https://spline.design/",
+      "image": "https://spline.design/_next/static/immutable/media/spline_image_banner.2at491x3fx670.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Interface Craft": {
+      "page": "https://www.interfacecraft.dev/",
+      "image": "https://interfacecraft.dev/images/og-safe-zone.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "UIWTF": {
+      "page": "https://uiw.tf/",
+      "image": "https://uiw.tf/og.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Lab01": {
+      "page": "https://lab01.dev/",
+      "image": "https://lab01.dev/assets/img/social-card.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "design.dev": {
+      "page": "https://design.dev/",
+      "image": "https://design.dev/assets/img/social-og.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "UI Playbook": {
+      "page": "https://uiplaybook.dev/",
+      "image": "https://uiplaybook.dev/static/og.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Refactoring UI": {
+      "page": "https://refactoringui.com/",
+      "image": "https://refactoringui.com/img/homepage/og-image.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Practical Typography": {
+      "page": "https://practicaltypography.com/",
+      "image": "https://practicaltypography.com/images/og-image.jpg?1784662551",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "web.dev": {
+      "page": "https://web.dev/",
+      "image": "https://web.dev/images/social-wide.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Josh Comeau": {
+      "page": "https://joshwcomeau.com/",
+      "image": "https://www.joshwcomeau.com/opengraph-image.png?cac0cc658da9fd03",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Design Books": {
+      "page": "https://design-books.com/",
+      "image": "https://design-books.com/opengraph-image.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Learn Kernels": {
+      "page": "https://learn-kernels.com/",
+      "image": "https://learn-kernels.com/opengraph-image?eeac42abd9ce1852",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Learn UI": {
+      "page": "https://learn-ui.com/",
+      "image": "https://learn-ui.com/opengraph-image?eeac42abd9ce1852",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Good UI": {
+      "page": "https://goodui.org/",
+      "image": "http://goodui.org/site/assets/files/1050/og-default-1.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Abduzeedo": {
+      "page": "https://abduzeedo.com/",
+      "image": "https://abduzeedo.com/og-image.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Smashing Magazine": {
+      "page": "https://www.smashingmagazine.com/",
+      "image": "https://smashingmagazine.com/images/smashing-homepage.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Codrops": {
+      "page": "https://tympanus.net/codrops/",
+      "image": "https://codrops-1f606.kxcdn.com/codrops/wp-content/uploads/2024/04/codrops_social_graph.jpg?x51331",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Muzli": {
+      "page": "https://muz.li/",
+      "image": "https://muz.li/og.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Boxes and Arrows": {
+      "page": "https://boxesandarrows.com/",
+      "image": "https://boxesandarrows.com/wp-content/uploads/2020/02/BA-Logo-Horizontal.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Web Designer Depot": {
+      "page": "https://www.webdesignerdepot.com/",
+      "image": "https://d3tamksjp7q04h.cloudfront.net/2024/10/29020247/Screenshot-2024-10-29-090225.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Designmodo": {
+      "page": "https://designmodo.com/",
+      "image": "https://designmodo.com/wp-content/uploads/2024/04/social-media-designmodo-1.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "99designs Discover": {
+      "page": "https://99designs.com/discover",
+      "image": "https://assets.99static.com/workbench/assets/asimov/images/og-image-80cfd8beb6.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Interfaces": {
+      "page": "https://interfaces.dev/",
+      "image": "https://ho1jr3x2dcwdu3t5.public.blob.vercel-storage.com/og-image.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Visual Rambling": {
+      "page": "https://visualrambling.space/",
+      "image": "https://visualrambling.space/assets/og-image.NK77B_Ca.webp",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Degreeless Design": {
+      "page": "https://www.degreeless.design/",
+      "image": "https://cdn.prod.website-files.com/644dcb5b2a4a5323fc30a279/64552d740aa34d5f3dbb6756_OG.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "SVG Guide": {
+      "page": "https://www.svg.guide/",
+      "image": "https://animating-svgs-rmom9spkv-nan-fyi.vercel.app/opengraph-image.png?0616b3ae80ba09a4",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "UI Skills": {
+      "page": "https://ui-skills.com/",
+      "image": "https://www.ui-skills.com/UI-OG.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "AI for UI": {
+      "page": "https://aiforui.dev/",
+      "image": "https://aiforui.dev/opengraph-image-pslsgm.png?opengraph-image.a184bf51.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "Laws of UX": {
+      "page": "https://lawsofux.com/",
+      "image": "https://lawsofux.com/home/social.en.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "User Interface Wiki": {
+      "page": "https://userinterface.wiki/",
+      "image": "https://www.userinterface.wiki/open-graph/default.png",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    },
+    "The Shape of AI": {
+      "page": "https://www.shapeof.ai/",
+      "image": "https://cdn.prod.website-files.com/65db6dd21591364dfcb8ade9/68ed1d8d0ec468824c7db7c6_og.jpg",
+      "kind": "site preview metadata",
+      "captured": "2026-09-29"
+    }
+  }
+}

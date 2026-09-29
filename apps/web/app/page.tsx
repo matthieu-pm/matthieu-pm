@@ -260,6 +260,25 @@ export default function Page() {
               <small>A guide to OKLCH colors.</small>
             </span>
           </a>
+          <Link className={styles.projectCard} href="/inspirations">
+            <span
+              className={`${styles.projectMark} ${styles.projectVisualMark}`}
+              aria-hidden="true"
+            >
+              <Image
+                className={styles.projectMarkImage}
+                src="/inspirations/globe.png"
+                alt=""
+                width={80}
+                height={80}
+                style={{ borderRadius: "50%" }}
+              />
+            </span>
+            <span>
+              <strong>Inspirations</strong>
+              <small>Design tools, references, and resources.</small>
+            </span>
+          </Link>
         </div>
       </section>
 
