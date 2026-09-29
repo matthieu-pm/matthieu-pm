@@ -501,6 +501,13 @@
         "preview": "/inspirations/854093710fc2bad5.webp"
       },
       {
+        "description": "Curated directory of design, AI, and developer tools.",
+        "href": "https://toolfolio.com/",
+        "icon": "/inspirations/catalogues/toolfolio-icon.webp",
+        "name": "Toolfolio",
+        "preview": "/inspirations/catalogues/toolfolio-preview.webp"
+      },
+      {
         "description": "Collaborative moodboard of unique visual finds.",
         "href": "https://gallery.jessyin.world/",
         "icon": "/inspirations/49a389861a30c8ef.png",
@@ -620,6 +627,13 @@
         "preview": null
       },
       {
+        "description": "HTML and CSS design canvas with AI agent integration.",
+        "href": "https://paper.design/",
+        "icon": "/inspirations/catalogues/paper-icon.webp",
+        "name": "Paper",
+        "preview": "/inspirations/catalogues/paper-preview.webp"
+      },
+      {
         "description": "Visual canvas designing and publishing websites.",
         "href": "https://framer.com/",
         "icon": "/inspirations/68c270cc7fd0ce0e.png",
@@ -688,6 +702,13 @@
         "icon": "/inspirations/81a246d7304028e8.png",
         "name": "UI Playbook",
         "preview": "/inspirations/ddcc6c6d670b9a68.webp"
+      },
+      {
+        "description": "Collaborative design canvas built from your production codebase.",
+        "href": "https://www.dessn.com/",
+        "icon": "/inspirations/catalogues/dessn-icon.webp",
+        "name": "Dessn",
+        "preview": "/inspirations/catalogues/dessn-preview.webp"
       }
     ],
     "title": "Interface Design"

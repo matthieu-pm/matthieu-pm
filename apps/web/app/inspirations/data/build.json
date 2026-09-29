@@ -11,6 +11,13 @@
         "preview": "/inspirations/catalogues/b2230f49e73e1515.webp"
       },
       {
+        "description": "OpenAI coding agent for building, debugging, and reviewing code.",
+        "href": "https://openai.com/codex/",
+        "icon": "/inspirations/catalogues/codex-icon.webp",
+        "name": "Codex",
+        "preview": null
+      },
+      {
         "description": "AI-first code editor for rapid development.",
         "href": "https://cursor.com/",
         "icon": "/inspirations/catalogues/8162672184c6cd7b.webp",
@@ -184,6 +191,20 @@
         "icon": "/inspirations/catalogues/777cbafb2707949d.webp",
         "name": "Launch Shots",
         "preview": null
+      },
+      {
+        "description": "Collaborative design canvas built from your production codebase.",
+        "href": "https://www.dessn.com/",
+        "icon": "/inspirations/catalogues/dessn-icon.webp",
+        "name": "Dessn",
+        "preview": "/inspirations/catalogues/dessn-preview.webp"
+      },
+      {
+        "description": "Vercel’s open-source framework for building durable AI agents.",
+        "href": "https://eve.dev/",
+        "icon": "/inspirations/catalogues/eve-icon.webp",
+        "name": "eve",
+        "preview": "/inspirations/catalogues/eve-preview.webp"
       }
     ],
     "title": "Development"
@@ -198,6 +219,20 @@
         "icon": "/inspirations/catalogues/da2b0d3bff1730bd.webp",
         "name": "Dray",
         "preview": "/inspirations/catalogues/a299ac81197d82d9.webp"
+      },
+      {
+        "description": "OpenAI coding agent for building, debugging, and reviewing code.",
+        "href": "https://openai.com/codex/",
+        "icon": "/inspirations/catalogues/codex-icon.webp",
+        "name": "Codex",
+        "preview": null
+      },
+      {
+        "description": "HTML and CSS design canvas with AI agent integration.",
+        "href": "https://paper.design/",
+        "icon": "/inspirations/catalogues/paper-icon.webp",
+        "name": "Paper",
+        "preview": "/inspirations/catalogues/paper-preview.webp"
       },
       {
         "description": "Structured DESIGN.MD specifications for AI agents.",
@@ -443,6 +478,13 @@
         "icon": "/inspirations/catalogues/94617ca33bb87b3a.webp",
         "name": "Ciele",
         "preview": null
+      },
+      {
+        "description": "Vercel’s open-source framework for building durable AI agents.",
+        "href": "https://eve.dev/",
+        "icon": "/inspirations/catalogues/eve-icon.webp",
+        "name": "eve",
+        "preview": "/inspirations/catalogues/eve-preview.webp"
       }
     ],
     "title": "Agents & MCP"

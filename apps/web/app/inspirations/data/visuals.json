@@ -1,5 +1,33 @@
 [
   {
+    "description": "Creative workflows, branding tools, and ready-made design assets.",
+    "id": "creative",
+    "items": [
+      {
+        "description": "Formerly Weavy. AI image and video workflows on a node canvas.",
+        "href": "https://weave.figma.com/",
+        "icon": "/inspirations/catalogues/weavy-icon.webp",
+        "name": "Figma Weave",
+        "preview": "/inspirations/catalogues/weavy-preview.webp"
+      },
+      {
+        "description": "Creative assets, templates, and AI image, video, and audio tools.",
+        "href": "https://elements.envato.com/",
+        "icon": "/inspirations/catalogues/envato-icon.webp",
+        "name": "Envato",
+        "preview": "/inspirations/catalogues/envato-preview.webp"
+      },
+      {
+        "description": "Professional logos and branding for startups and online businesses.",
+        "href": "https://anymark.co/",
+        "icon": "/inspirations/catalogues/anymark-icon.webp",
+        "name": "Anymark",
+        "preview": "/inspirations/catalogues/anymark-preview.webp"
+      }
+    ],
+    "title": "Creative Tools & Assets"
+  },
+  {
     "description": "Curated web typefaces, pairings, and font optimization.",
     "id": "type",
     "items": [

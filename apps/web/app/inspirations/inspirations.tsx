@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { useSelectedLayoutSegment } from "next/navigation"
 import { HugeiconsIcon } from "@hugeicons/react"
 import {
   ArrowUpRight01Icon,
@@ -18,6 +19,8 @@ import {
   Moon02Icon,
 } from "@hugeicons/core-free-icons"
 import {
+  createContext,
+  useContext,
   useCallback,
   useEffect,
   useMemo,
@@ -30,6 +33,7 @@ import {
 import {
   allResources,
   catalogues,
+  isCatalogueId,
   navigation,
   type CatalogueId,
   type Resource,
@@ -277,11 +281,16 @@ function ResourceArtwork({ resource }: { resource: Resource }) {
   )
 }
 
-export function Inspirations({
-  category = "inspiration",
-}: {
-  category?: CatalogueId
-}) {
+type PreviewPosition = { href: string; left: number; top: number }
+
+const CatalogueControls = createContext<{
+  grid: boolean
+  setSelected: (resource: Resource) => void
+} | null>(null)
+
+export function Inspirations({ children }: { children: ReactNode }) {
+  const segment = useSelectedLayoutSegment()
+  const category = segment && isCatalogueId(segment) ? segment : "inspiration"
   const catalogue = catalogues[category]
   const resources = useMemo(
     () =>
@@ -299,37 +308,6 @@ export function Inspirations({
   const [query, setQuery] = useState("")
   const [menuOpen, setMenuOpen] = useState(false)
   const [selected, setSelected] = useState<Resource | null>(null)
-  const [previewPosition, setPreviewPosition] = useState<{
-    href: string
-    left: number
-    top: number
-  } | null>(null)
-  const positionPreview = (row: HTMLDivElement, href: string) => {
-    const rect = row.getBoundingClientRect()
-    const width = 300
-    const height = 174
-    const gutter = 16
-    const topGutter = Math.max(
-      gutter,
-      (row.closest("main")?.firstElementChild?.getBoundingClientRect().bottom ??
-        0) + 12
-    )
-    setPreviewPosition({
-      href,
-      left: Math.min(
-        rect.width + 12,
-        window.innerWidth - rect.left - width - gutter
-      ),
-      top:
-        Math.max(
-          topGutter,
-          Math.min(
-            rect.top + (rect.height - height) / 2,
-            window.innerHeight - height - gutter
-          )
-        ) - rect.top,
-    })
-  }
   const [activeSection, setActiveSection] = useState(
     catalogue[0]?.id ?? category
   )
@@ -552,74 +530,9 @@ export function Inspirations({
                 {themeButton}
               </div>
             </div>
-            {catalogue.map((section) => (
-              <section
-                id={section.id}
-                key={section.id}
-                className={styles.section}
-                aria-labelledby={`${section.id}-heading`}
-              >
-                <div className={styles.sectionHeading}>
-                  <h2 id={`${section.id}-heading`}>{section.title}</h2>
-                  <p>{section.description}</p>
-                </div>
-                <div className={grid ? styles.grid : styles.list}>
-                  {section.items.map((resource) =>
-                    grid ? (
-                      <div key={resource.href} className={styles.card}>
-                        <button
-                          className={styles.cardPreview}
-                          aria-label={`Expand the preview of ${resource.name}`}
-                          onClick={() => setSelected(resource)}
-                        >
-                          <ResourceArtwork resource={resource} />
-                        </button>
-                      </div>
-                    ) : (
-                      <div
-                        key={resource.href}
-                        className={styles.row}
-                        onMouseEnter={(event) =>
-                          positionPreview(event.currentTarget, resource.href)
-                        }
-                        onFocusCapture={(event) =>
-                          positionPreview(event.currentTarget, resource.href)
-                        }
-                      >
-                        <a
-                          href={resource.href}
-                          target="_blank"
-                          rel="noreferrer"
-                          className={styles.resourceLink}
-                        >
-                          <ResourceIcon resource={resource} size={18} />
-                          <span className={styles.resourceText}>
-                            <strong>{resource.name}</strong>
-                            <span className={styles.dot} aria-hidden="true" />
-                            <span>{resource.description}</span>
-                          </span>
-                        </a>
-                        <button
-                          className={styles.hoverPreview}
-                          style={
-                            previewPosition?.href === resource.href
-                              ? {
-                                  left: previewPosition.left,
-                                  top: previewPosition.top,
-                                }
-                              : undefined
-                          }
-                          aria-label={`Expand the preview of ${resource.name}`}
-                          onClick={() => setSelected(resource)}
-                        >
-                          <ResourceArtwork resource={resource} />
-                        </button>
-                      </div>
-                    )
-                  )}
-                </div>
-              </section>
-            ))}
+            <CatalogueControls.Provider value={{ grid, setSelected }}>
+              {children}
+            </CatalogueControls.Provider>
           </main>
         </div>
         <footer className={styles.footer}>
@@ -823,5 +736,122 @@ export function Inspirations({
         </Modal>
       )}
     </div>
+  )
+}
+
+export function InspirationSections({
+  category = "inspiration",
+}: {
+  category?: CatalogueId
+}) {
+  const controls = useContext(CatalogueControls)
+  if (!controls)
+    throw new Error("InspirationSections requires the inspirations layout")
+  const { grid, setSelected } = controls
+  const catalogue = catalogues[category]
+  const [previewPosition, setPreviewPosition] =
+    useState<PreviewPosition | null>(null)
+  const positionPreview = (row: HTMLDivElement, href: string) => {
+    const rect = row.getBoundingClientRect()
+    const width = 300
+    const height = 174
+    const gutter = 16
+    const topGutter = Math.max(
+      gutter,
+      (row.closest("main")?.firstElementChild?.getBoundingClientRect().bottom ??
+        0) + 12
+    )
+    setPreviewPosition({
+      href,
+      left: Math.min(
+        rect.width + 12,
+        window.innerWidth - rect.left - width - gutter
+      ),
+      top:
+        Math.max(
+          topGutter,
+          Math.min(
+            rect.top + (rect.height - height) / 2,
+            window.innerHeight - height - gutter
+          )
+        ) - rect.top,
+    })
+  }
+  return (
+    <>
+      {catalogue.map((section, index) => (
+        <section
+          id={section.id}
+          key={`${category}:${section.id}`}
+          className={styles.section}
+          style={
+            {
+              "--section-delay": `${index * 400}ms`,
+            } as CSSProperties
+          }
+          aria-labelledby={`${section.id}-heading`}
+        >
+          <div className={styles.sectionHeading}>
+            <h2 id={`${section.id}-heading`}>{section.title}</h2>
+            <p>{section.description}</p>
+          </div>
+          <div className={grid ? styles.grid : styles.list}>
+            {section.items.map((resource) =>
+              grid ? (
+                <div key={resource.href} className={styles.card}>
+                  <button
+                    className={styles.cardPreview}
+                    aria-label={`Expand the preview of ${resource.name}`}
+                    onClick={() => setSelected(resource)}
+                  >
+                    <ResourceArtwork resource={resource} />
+                  </button>
+                </div>
+              ) : (
+                <div
+                  key={resource.href}
+                  className={styles.row}
+                  onMouseEnter={(event) =>
+                    positionPreview(event.currentTarget, resource.href)
+                  }
+                  onFocusCapture={(event) =>
+                    positionPreview(event.currentTarget, resource.href)
+                  }
+                >
+                  <a
+                    href={resource.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.resourceLink}
+                  >
+                    <ResourceIcon resource={resource} size={18} />
+                    <span className={styles.resourceText}>
+                      <strong>{resource.name}</strong>
+                      <span className={styles.dot} aria-hidden="true" />
+                      <span>{resource.description}</span>
+                    </span>
+                  </a>
+                  <button
+                    className={styles.hoverPreview}
+                    style={
+                      previewPosition?.href === resource.href
+                        ? {
+                            left: previewPosition.left,
+                            top: previewPosition.top,
+                          }
+                        : undefined
+                    }
+                    aria-label={`Expand the preview of ${resource.name}`}
+                    onClick={() => setSelected(resource)}
+                  >
+                    <ResourceArtwork resource={resource} />
+                  </button>
+                </div>
+              )
+            )}
+          </div>
+        </section>
+      ))}
+    </>
   )
 }

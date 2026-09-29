@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { Inspirations } from "../inspirations"
+import { InspirationSections } from "../inspirations"
 import { catalogues, isCatalogueId, navigation } from "../catalogues"
 
 type Props = { params: Promise<{ category: string }> }
@@ -33,5 +33,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CataloguePage({ params }: Props) {
   const { category } = await params
   if (!isCatalogueId(category) || category === "inspiration") notFound()
-  return <Inspirations key={category} category={category} />
+  return <InspirationSections key={category} category={category} />
 }

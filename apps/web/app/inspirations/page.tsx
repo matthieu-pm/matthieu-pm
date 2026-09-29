@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inspirations } from "./inspirations"
+import { InspirationSections } from "./inspirations"
 
 const description =
   "A collection of inspiring interfaces, component libraries, AI tools, and resources for bringing ideas to life."
@@ -17,5 +17,5 @@ export const metadata: Metadata = {
 }
 
 export default function InspirationsPage() {
-  return <Inspirations />
+  return <InspirationSections />
 }

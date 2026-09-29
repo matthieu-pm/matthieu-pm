@@ -282,6 +282,20 @@
         "icon": "/inspirations/catalogues/a89cad4732e4b335.webp",
         "name": "PostHog – We make your product self-driving",
         "preview": null
+      },
+      {
+        "description": "Curated directory of design, AI, and developer tools.",
+        "href": "https://toolfolio.com/",
+        "icon": "/inspirations/catalogues/toolfolio-icon.webp",
+        "name": "Toolfolio",
+        "preview": "/inspirations/catalogues/toolfolio-preview.webp"
+      },
+      {
+        "description": "Professional logos and branding for startups and online businesses.",
+        "href": "https://anymark.co/",
+        "icon": "/inspirations/catalogues/anymark-icon.webp",
+        "name": "Anymark",
+        "preview": "/inspirations/catalogues/anymark-preview.webp"
       }
     ],
     "title": "Utilities"
@@ -478,6 +492,13 @@
         "icon": "/inspirations/catalogues/9f5cf9338c54450f.webp",
         "name": "GenMotion",
         "preview": null
+      },
+      {
+        "description": "Formerly Weavy. AI image and video workflows on a node canvas.",
+        "href": "https://weave.figma.com/",
+        "icon": "/inspirations/catalogues/weavy-icon.webp",
+        "name": "Figma Weave",
+        "preview": "/inspirations/catalogues/weavy-preview.webp"
       }
     ],
     "title": "Video & Capture"
