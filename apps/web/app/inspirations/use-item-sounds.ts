@@ -126,7 +126,13 @@ export function useItemSounds(
       if (item?.matches(":focus-visible")) playSound("hover")
     }
     const click = (event: MouseEvent) => {
-      if (!event.isTrusted || event.button !== 0 || !itemFor(event.target))
+      const item = itemFor(event.target)
+      if (
+        !event.isTrusted ||
+        event.button !== 0 ||
+        !item ||
+        item.closest('[data-click-sound="off"]')
+      )
         return
       unlockAudio()
       if (context?.state === "suspended") {

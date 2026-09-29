@@ -5,6 +5,7 @@ import Link from "next/link"
 import { HugeiconsIcon } from "@hugeicons/react"
 import {
   ArrowUpRight01Icon,
+  ArrowUp01Icon,
   ArrowLeft01Icon,
   ArrowRight01Icon,
   Cancel01Icon,
@@ -409,7 +410,7 @@ export function Inspirations({
       aria-label="Interface sounds"
       aria-pressed={sound === "on"}
       title={sound === "on" ? "Mute sounds" : "Enable sounds"}
-      data-sound="off"
+      data-click-sound="off"
       onClick={() => setSound(sound === "on" ? "off" : "on")}
     >
       <ToolbarIcon
@@ -623,30 +624,26 @@ export function Inspirations({
         </div>
         <footer className={styles.footer}>
           <div className={styles.footerIdentity}>
-            <Link href="/">
-              Back to Matthieu&apos;s projects{" "}
+            <a href="https://matthieu.pm">
+              Curated by Matthieu{" "}
               <HugeiconsIcon
                 icon={ArrowUpRight01Icon}
                 size={14}
                 strokeWidth={1.4}
                 aria-hidden="true"
               />
-            </Link>
+            </a>
           </div>
-          <div className={styles.footerLinks}>
-            <div>
-              <p className={styles.kicker}>Source</p>
-              <a href="https://www.designeer.xyz/">
-                designeer.xyz{" "}
-                <HugeiconsIcon
-                  icon={ArrowUpRight01Icon}
-                  size={14}
-                  strokeWidth={1.4}
-                  aria-hidden="true"
-                />
-              </a>
-              <p>© 2026 Dhruv Jaradi</p>
-            </div>
+          <div className={styles.footerActions}>
+            <a href="#top">
+              Back to top{" "}
+              <HugeiconsIcon
+                icon={ArrowUp01Icon}
+                size={14}
+                strokeWidth={1.4}
+                aria-hidden="true"
+              />
+            </a>
           </div>
         </footer>
       </div>
