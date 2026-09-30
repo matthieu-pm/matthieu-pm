@@ -7,9 +7,11 @@ import styles from "./glass-triangle/glass-triangle.module.css"
 export function InspirationsOrb({
   size = 96,
   className,
+  interactive = true,
 }: {
   size?: number
   className?: string
+  interactive?: boolean
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [ready, setReady] = useState(false)
@@ -45,7 +47,11 @@ export function InspirationsOrb({
   return (
     <span
       className={`${styles.triangle} ${className ?? ""}`}
-      style={{ width: size, height: size }}
+      style={{
+        width: size,
+        height: size,
+        pointerEvents: interactive ? undefined : "none",
+      }}
       data-ready={ready}
     >
       <svg className={styles.fallback} viewBox="0 0 100 100" aria-hidden="true">
@@ -68,9 +74,13 @@ export function InspirationsOrb({
       <canvas
         ref={canvasRef}
         className={styles.canvas}
-        tabIndex={size > 24 ? 0 : -1}
+        tabIndex={interactive && size > 24 ? 0 : -1}
         role="img"
-        aria-label="Glass triangular prism. Drag to rotate in any direction. Arrow keys rotate; Shift and arrows roll; Home resets."
+        aria-label={
+          interactive
+            ? "Glass triangular prism. Drag to rotate in any direction. Arrow keys rotate; Shift and arrows roll; Home resets."
+            : "Glass triangular prism"
+        }
       />
     </span>
   )

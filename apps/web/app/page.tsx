@@ -3,6 +3,7 @@ import Link from "next/link"
 import type { CSSProperties } from "react"
 
 import { EmailCopy } from "./email-copy"
+import { InspirationsOrb } from "./inspirations/inspirations-orb"
 import styles from "./page.module.css"
 
 const contactButtonLabel = "Get in touch"
@@ -265,14 +266,7 @@ export default function Page() {
               className={`${styles.projectMark} ${styles.projectVisualMark}`}
               aria-hidden="true"
             >
-              <Image
-                className={styles.projectMarkImage}
-                src="/inspirations/globe.png"
-                alt=""
-                width={80}
-                height={80}
-                style={{ borderRadius: "50%" }}
-              />
+              <InspirationsOrb size={80} interactive={false} />
             </span>
             <span>
               <strong>Inspirations</strong>
