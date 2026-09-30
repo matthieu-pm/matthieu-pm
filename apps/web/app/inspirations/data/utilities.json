@@ -296,6 +296,13 @@
         "icon": "/inspirations/catalogues/anymark-icon.webp",
         "name": "Anymark",
         "preview": "/inspirations/catalogues/anymark-preview.webp"
+      },
+      {
+        "description": "Browser support tables for web platform features.",
+        "href": "https://caniuse.com/",
+        "icon": "/inspirations/catalogues/caniuse-icon.webp",
+        "name": "Can I Use",
+        "preview": null
       }
     ],
     "title": "Utilities"
@@ -394,6 +401,13 @@
         "icon": "/inspirations/catalogues/3adeebfd9fb4db25.webp",
         "name": "Rexa DB",
         "preview": null
+      },
+      {
+        "description": "Local API client with Git-friendly collections stored as files.",
+        "href": "https://www.usebruno.com/",
+        "icon": "/inspirations/catalogues/bruno-icon.webp",
+        "name": "Bruno",
+        "preview": "/inspirations/catalogues/bruno-preview.webp"
       }
     ],
     "title": "Desktop"
@@ -499,6 +513,13 @@
         "icon": "/inspirations/catalogues/weavy-icon.webp",
         "name": "Figma Weave",
         "preview": "/inspirations/catalogues/weavy-preview.webp"
+      },
+      {
+        "description": "Open-source software for screen recording and live streaming.",
+        "href": "https://obsproject.com/",
+        "icon": "/inspirations/catalogues/obs-icon.webp",
+        "name": "OBS Studio",
+        "preview": null
       }
     ],
     "title": "Video & Capture"
@@ -534,6 +555,13 @@
         "icon": "/inspirations/catalogues/92dcbfdb72dbe69a.webp",
         "name": "Linear",
         "preview": "/inspirations/catalogues/cd158c9610f21373.webp"
+      },
+      {
+        "description": "Collaborative canvas for diagrams, workshops, and product planning.",
+        "href": "https://miro.com/",
+        "icon": "/inspirations/catalogues/miro-icon.webp",
+        "name": "Miro",
+        "preview": "/inspirations/catalogues/miro-preview.webp"
       }
     ],
     "title": "Whiteboard"

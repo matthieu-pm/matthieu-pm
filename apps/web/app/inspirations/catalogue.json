@@ -611,6 +611,13 @@
         "icon": "/inspirations/6f91cdfa6511ff6c.jpg",
         "name": "BrandCenter Gallery",
         "preview": "/inspirations/e96d0c177570bf41.webp"
+      },
+      {
+        "description": "Recorded user flows and interaction patterns from real products.",
+        "href": "https://pageflows.com/",
+        "icon": "/inspirations/catalogues/page-flows-icon.webp",
+        "name": "Page Flows",
+        "preview": null
       }
     ],
     "title": "Design Galleries"
@@ -709,6 +716,13 @@
         "icon": "/inspirations/catalogues/dessn-icon.webp",
         "name": "Dessn",
         "preview": "/inspirations/catalogues/dessn-preview.webp"
+      },
+      {
+        "description": "Mac design workspace for interfaces, prototypes, and collaboration.",
+        "href": "https://www.sketch.com/",
+        "icon": "/inspirations/catalogues/sketch-icon.webp",
+        "name": "Sketch",
+        "preview": "/inspirations/catalogues/sketch-preview.webp"
       }
     ],
     "title": "Interface Design"
@@ -947,6 +961,13 @@
         "icon": "/inspirations/dc58af33b53c58ec.png",
         "name": "The Shape of AI",
         "preview": "/inspirations/12a6ef28cc09c38d.webp"
+      },
+      {
+        "description": "Reference documentation and guides for HTML, CSS, and JavaScript.",
+        "href": "https://developer.mozilla.org/en-US/",
+        "icon": "/inspirations/catalogues/mdn-icon.webp",
+        "name": "MDN Web Docs",
+        "preview": null
       }
     ],
     "title": "Reading"

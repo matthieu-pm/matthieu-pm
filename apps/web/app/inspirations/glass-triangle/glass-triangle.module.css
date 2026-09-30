@@ -17,10 +17,6 @@
 .canvas[data-dragging="true"] {
   cursor: grabbing;
 }
-.canvas:focus-visible {
-  outline: 1px dashed currentColor;
-  outline-offset: 3px;
-}
 .fallback {
   display: block;
   width: 100%;

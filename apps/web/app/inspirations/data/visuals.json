@@ -23,6 +23,13 @@
         "icon": "/inspirations/catalogues/anymark-icon.webp",
         "name": "Anymark",
         "preview": "/inspirations/catalogues/anymark-preview.webp"
+      },
+      {
+        "description": "AI image and vector generation with editing and brand controls.",
+        "href": "https://www.recraft.ai/",
+        "icon": "/inspirations/catalogues/recraft-icon.webp",
+        "name": "Recraft",
+        "preview": "/inspirations/catalogues/recraft-preview.webp"
       }
     ],
     "title": "Creative Tools & Assets"
@@ -79,6 +86,13 @@
         "icon": "/inspirations/catalogues/442c64d939529280.webp",
         "name": "Departure Mono",
         "preview": "/inspirations/catalogues/11e4f9d0146ab262.webp"
+      },
+      {
+        "description": "Open-source typefaces for websites, apps, and design projects.",
+        "href": "https://fonts.google.com/",
+        "icon": "/inspirations/catalogues/google-fonts-icon.webp",
+        "name": "Google Fonts",
+        "preview": "/inspirations/catalogues/google-fonts-preview.webp"
       }
     ],
     "title": "Type"
@@ -128,6 +142,13 @@
         "icon": "/inspirations/catalogues/f472388ad293e770.webp",
         "name": "Atmos",
         "preview": null
+      },
+      {
+        "description": "Color palette generator with contrast checking and export tools.",
+        "href": "https://coolors.co/",
+        "icon": "/inspirations/catalogues/coolors-icon.webp",
+        "name": "Coolors",
+        "preview": "/inspirations/catalogues/coolors-preview.webp"
       }
     ],
     "title": "Color"
@@ -177,6 +198,13 @@
         "icon": "/inspirations/catalogues/a2bd4d054b79a2bf.webp",
         "name": "Poly Haven",
         "preview": "/inspirations/catalogues/8a93465db66f666d.webp"
+      },
+      {
+        "description": "Discover, publish, and inspect interactive 3D models.",
+        "href": "https://sketchfab.com/",
+        "icon": "/inspirations/catalogues/sketchfab-icon.webp",
+        "name": "Sketchfab",
+        "preview": "/inspirations/catalogues/sketchfab-preview.webp"
       }
     ],
     "title": "3D"
@@ -233,6 +261,13 @@
         "icon": "/inspirations/catalogues/b51eaf19cebee1da.webp",
         "name": "Orbkit",
         "preview": "/inspirations/catalogues/38f596fe78c5d164.webp"
+      },
+      {
+        "description": "Create and explore interactive shaders in the browser.",
+        "href": "https://www.shadertoy.com/",
+        "icon": null,
+        "name": "Shadertoy",
+        "preview": null
       }
     ],
     "title": "Shaders"
@@ -464,6 +499,13 @@
         "icon": "/inspirations/catalogues/9bf68473d3377baf.webp",
         "name": "IconsDB",
         "preview": null
+      },
+      {
+        "description": "Consistent interface icons available as SVGs and React components.",
+        "href": "https://www.radix-ui.com/icons",
+        "icon": "/inspirations/catalogues/radix-icons-icon.webp",
+        "name": "Radix Icons",
+        "preview": "/inspirations/catalogues/radix-icons-preview.webp"
       }
     ],
     "title": "Icons"

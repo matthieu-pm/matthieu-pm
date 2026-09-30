@@ -926,6 +926,20 @@
         "icon": null,
         "name": "Daryl Patigas",
         "preview": "/inspirations/catalogues/db466ec532f66c9b.webp"
+      },
+      {
+        "description": "Web developer sharing CSS techniques and interface experiments.",
+        "href": "https://una.im/",
+        "icon": "/inspirations/catalogues/una-kravets-icon.webp",
+        "name": "Una Kravets",
+        "preview": "/inspirations/catalogues/una-kravets-preview.webp"
+      },
+      {
+        "description": "Atomic Design author sharing design systems and frontend practices.",
+        "href": "https://bradfrost.com/",
+        "icon": "/inspirations/catalogues/brad-frost-icon.webp",
+        "name": "Brad Frost",
+        "preview": null
       }
     ],
     "title": "Design engineers to follow"

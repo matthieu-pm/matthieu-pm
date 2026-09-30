@@ -842,6 +842,27 @@
         "icon": "/inspirations/catalogues/663bf13ade16ae66.webp",
         "name": "Flowcub - Free & Premium Website Templates",
         "preview": null
+      },
+      {
+        "description": "Accessible, unstyled React components and interaction primitives.",
+        "href": "https://react-aria.adobe.com/",
+        "icon": "/inspirations/catalogues/react-aria-icon.webp",
+        "name": "React Aria",
+        "preview": "/inspirations/catalogues/react-aria-preview.webp"
+      },
+      {
+        "description": "React components and hooks for building complete web interfaces.",
+        "href": "https://mantine.dev/",
+        "icon": "/inspirations/catalogues/mantine-icon.webp",
+        "name": "Mantine",
+        "preview": null
+      },
+      {
+        "description": "Customizable React components for chat and agent interfaces.",
+        "href": "https://elements.ai-sdk.dev/",
+        "icon": "/inspirations/catalogues/ai-elements-icon.webp",
+        "name": "AI Elements",
+        "preview": null
       }
     ],
     "title": "Component Libraries"
@@ -940,6 +961,13 @@
         "icon": "/inspirations/catalogues/b11699ed054f293f.webp",
         "name": "Lotiqlab",
         "preview": null
+      },
+      {
+        "description": "JavaScript animation engine for motion, timelines, and SVG.",
+        "href": "https://animejs.com/",
+        "icon": "/inspirations/catalogues/animejs-icon.webp",
+        "name": "Anime.js",
+        "preview": "/inspirations/catalogues/animejs-preview.webp"
       }
     ],
     "title": "Motion"

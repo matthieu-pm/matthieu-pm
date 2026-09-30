@@ -205,6 +205,48 @@
         "icon": "/inspirations/catalogues/eve-icon.webp",
         "name": "eve",
         "preview": "/inspirations/catalogues/eve-preview.webp"
+      },
+      {
+        "description": "Lightweight TypeScript ORM with SQL-like queries and schema migrations.",
+        "href": "https://orm.drizzle.team/",
+        "icon": "/inspirations/catalogues/drizzle-icon.webp",
+        "name": "Drizzle ORM",
+        "preview": null
+      },
+      {
+        "description": "Async data fetching, caching, and synchronization for web apps.",
+        "href": "https://tanstack.com/query/latest",
+        "icon": "/inspirations/catalogues/tanstack-query-icon.webp",
+        "name": "TanStack Query",
+        "preview": "/inspirations/catalogues/tanstack-query-preview.webp"
+      },
+      {
+        "description": "TypeScript-first schema validation with inferred static types.",
+        "href": "https://zod.dev/",
+        "icon": "/inspirations/catalogues/zod-icon.webp",
+        "name": "Zod",
+        "preview": "/inspirations/catalogues/zod-preview.webp"
+      },
+      {
+        "description": "JavaScript runtime, package manager, bundler, and test runner.",
+        "href": "https://bun.sh/",
+        "icon": "/inspirations/catalogues/bun-icon.webp",
+        "name": "Bun",
+        "preview": "/inspirations/catalogues/bun-preview.webp"
+      },
+      {
+        "description": "TypeScript toolkit for AI apps, streaming responses, and agents.",
+        "href": "https://ai-sdk.dev/",
+        "icon": "/inspirations/catalogues/ai-sdk-icon.webp",
+        "name": "Vercel AI SDK",
+        "preview": "/inspirations/catalogues/ai-sdk-preview.webp"
+      },
+      {
+        "description": "Local API client with Git-friendly collections stored as files.",
+        "href": "https://www.usebruno.com/",
+        "icon": "/inspirations/catalogues/bruno-icon.webp",
+        "name": "Bruno",
+        "preview": "/inspirations/catalogues/bruno-preview.webp"
       }
     ],
     "title": "Development"
@@ -485,9 +527,107 @@
         "icon": "/inspirations/catalogues/eve-icon.webp",
         "name": "eve",
         "preview": "/inspirations/catalogues/eve-preview.webp"
+      },
+      {
+        "description": "TypeScript toolkit for AI apps, streaming responses, and agents.",
+        "href": "https://ai-sdk.dev/",
+        "icon": "/inspirations/catalogues/ai-sdk-icon.webp",
+        "name": "Vercel AI SDK",
+        "preview": "/inspirations/catalogues/ai-sdk-preview.webp"
+      },
+      {
+        "description": "TypeScript framework for agents, workflows, memory, and evaluations.",
+        "href": "https://mastra.ai/",
+        "icon": "/inspirations/catalogues/mastra-icon.webp",
+        "name": "Mastra",
+        "preview": "/inspirations/catalogues/mastra-preview.webp"
+      },
+      {
+        "description": "Up-to-date library documentation for coding agents via MCP.",
+        "href": "https://context7.com/",
+        "icon": "/inspirations/catalogues/context7-icon.webp",
+        "name": "Context7",
+        "preview": "/inspirations/catalogues/context7-preview.webp"
       }
     ],
     "title": "Agents & MCP"
+  },
+  {
+    "description": "Managed databases, realtime backends, and serverless data infrastructure.",
+    "id": "databases",
+    "items": [
+      {
+        "description": "Serverless Postgres with database branching and autoscaling.",
+        "href": "https://neon.com/",
+        "icon": "/inspirations/catalogues/neon-icon.webp",
+        "name": "Neon",
+        "preview": "/inspirations/catalogues/neon-preview.webp"
+      },
+      {
+        "description": "Reactive backend with a database, TypeScript functions, and realtime sync.",
+        "href": "https://www.convex.dev/",
+        "icon": "/inspirations/catalogues/convex-icon.webp",
+        "name": "Convex",
+        "preview": "/inspirations/catalogues/convex-preview.webp"
+      },
+      {
+        "description": "Postgres platform with authentication, storage, and realtime APIs.",
+        "href": "https://supabase.com/",
+        "icon": "/inspirations/catalogues/supabase-icon.webp",
+        "name": "Supabase",
+        "preview": "/inspirations/catalogues/supabase-preview.webp"
+      },
+      {
+        "description": "SQLite-compatible databases for apps, agents, and embedded workloads.",
+        "href": "https://turso.tech/",
+        "icon": "/inspirations/catalogues/turso-icon.webp",
+        "name": "Turso",
+        "preview": "/inspirations/catalogues/turso-preview.webp"
+      },
+      {
+        "description": "Serverless Redis, vector search, and search databases.",
+        "href": "https://upstash.com/",
+        "icon": "/inspirations/catalogues/upstash-icon.webp",
+        "name": "Upstash",
+        "preview": "/inspirations/catalogues/upstash-preview.webp"
+      }
+    ],
+    "title": "Databases & Backends"
+  },
+  {
+    "description": "Authentication, email delivery, and application monitoring.",
+    "id": "services",
+    "items": [
+      {
+        "description": "Authentication and user management with ready-made UI components.",
+        "href": "https://clerk.com/",
+        "icon": "/inspirations/catalogues/clerk-icon.webp",
+        "name": "Clerk",
+        "preview": "/inspirations/catalogues/clerk-preview.webp"
+      },
+      {
+        "description": "TypeScript authentication framework with sessions and extensible plugins.",
+        "href": "https://better-auth.com/",
+        "icon": "/inspirations/catalogues/better-auth-icon.webp",
+        "name": "Better Auth",
+        "preview": "/inspirations/catalogues/better-auth-preview.webp"
+      },
+      {
+        "description": "Email API for transactional messages and product notifications.",
+        "href": "https://resend.com/",
+        "icon": "/inspirations/catalogues/resend-icon.webp",
+        "name": "Resend",
+        "preview": "/inspirations/catalogues/resend-preview.webp"
+      },
+      {
+        "description": "Error tracking, performance monitoring, and session replay.",
+        "href": "https://sentry.io/",
+        "icon": "/inspirations/catalogues/sentry-icon.webp",
+        "name": "Sentry",
+        "preview": "/inspirations/catalogues/sentry-preview.webp"
+      }
+    ],
+    "title": "App Services"
   },
   {
     "description": "Hosting platforms, edge runtimes, and deployment infrastructure.",
@@ -527,6 +667,13 @@
         "icon": "/inspirations/catalogues/a9aac4f2f7d7f391.webp",
         "name": "Fly.io",
         "preview": "/inspirations/catalogues/7f082eb8a4d1afa4.webp"
+      },
+      {
+        "description": "Cloud hosting for web apps, APIs, databases, and background workers.",
+        "href": "https://render.com/",
+        "icon": "/inspirations/catalogues/render-icon.webp",
+        "name": "Render",
+        "preview": "/inspirations/catalogues/render-preview.webp"
       }
     ],
     "title": "Deploy"
