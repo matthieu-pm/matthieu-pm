@@ -368,12 +368,12 @@ export function ReferenceContent() {
                   </div>
                   <div className="flex w-full flex-col items-center gap-3 text-center">
                     <h1 className="text-center text-3xl font-semibold tracking-tight sm:text-[40px]">
-                      {"Explore color as we see it"}
+                      {"OKLCH: a clearer way to work with color"}
                     </h1>
                     <p className="text-text-paragraph max-w-2xl text-base sm:text-lg">
-                      {
-                        "Discover how the OKLCH color model works. Learn, experiment and create more consistent and perceptually uniform color palettes."
-                      }
+                      Get a feel for lightness, chroma, and hue with interactive
+                      examples. See how OKLCH helps you build balanced palettes
+                      and work with color in CSS.
                     </p>
                   </div>
                 </div>
@@ -411,7 +411,7 @@ export function ReferenceContent() {
                 </div>
                 <article className="w-full max-w-173">
                   <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
-                    {"What are OKLCH colors?"}
+                    {"Understanding OKLCH"}
                     <span
                       aria-hidden="true"
                       className="h-px flex-1 bg-gray-400"
@@ -419,10 +419,11 @@ export function ReferenceContent() {
                   </h2>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    <code className="code-inline">{"oklch"}</code>
-                    {
-                      " is a newer color model that is designed to be perceptually uniform. This means that colors are much more accurate in terms of how humans perceive them and it makes working with them much easier."
-                    }
+                    OKLCH describes a color with three values: lightness (L),
+                    chroma (C), and hue (H). These values aim to follow how we
+                    perceive color, making visual adjustments more predictable.
+                    You can use them directly in CSS with{" "}
+                    <code className="code-inline">oklch()</code>.
                   </p>
                   {"\n"}
                   <div className="my-8 flex w-full flex-col items-center">
@@ -527,7 +528,7 @@ export function ReferenceContent() {
                   </div>
                   {"\n"}
                   <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
-                    {"Color models"}
+                    {"Different ways to describe color"}
                     <span
                       aria-hidden="true"
                       className="h-px flex-1 bg-gray-400"
@@ -535,27 +536,15 @@ export function ReferenceContent() {
                   </h2>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {"Before being able to understand how "}
-                    <code className="code-inline">{"oklch"}</code>
-                    {
-                      " differs from the other color models, it is important to understand some of the basic color concepts."
-                    }
+                    To see what makes OKLCH useful, start with two ideas: how a
+                    color is described and which colors a display can reproduce.
                   </p>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "Color models are systems to describe colors. These include "
-                    }
-                    <code className="code-inline">{"rgb"}</code>
-                    {", "}
-                    <code className="code-inline">{"hsl"}</code>
-                    {", "}
-                    <code className="code-inline">{"lch"}</code>
-                    {", "}
-                    <code className="code-inline">{"oklch"}</code>
-                    {
-                      " and more. The model determines how easy it is to manipulate or think about a color."
-                    }
+                    A color model expresses color as a set of values. You may
+                    already work with RGB, HSL, LCH, or OKLCH. Each gives you a
+                    different set of controls, which shapes how you choose and
+                    adjust colors.
                   </p>
                   {"\n"}
                   <div className="my-8 flex w-full flex-col items-center">
@@ -591,7 +580,7 @@ export function ReferenceContent() {
                   </div>
                   {"\n"}
                   <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
-                    {"Gamut"}
+                    {"Which colors can a display show?"}
                     <span
                       aria-hidden="true"
                       className="h-px flex-1 bg-gray-400"
@@ -599,9 +588,10 @@ export function ReferenceContent() {
                   </h2>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "Gamut is a playing field where the model lives and defines what colors are possible. Common gamuts include sRGB, the web default, and Display-P3 which is used on modern devices."
-                    }
+                    A gamut is a range of reproducible colors. Two common
+                    examples are sRGB, the familiar baseline for web content,
+                    and Display-P3, which reaches more vivid colors on
+                    compatible screens.
                   </p>
                   {"\n"}
                   <div className="my-8 flex w-full flex-col items-center">
@@ -646,13 +636,13 @@ export function ReferenceContent() {
                   </div>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "There is a lot more nuance when you get into color spaces. They don’t just define a gamut, but also things like the white point and transfer function."
-                    }
+                    A color space specifies more than this range. It also
+                    defines details such as its white point and how encoded
+                    values relate to light, known as its transfer function.
                   </p>
                   {"\n"}
                   <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
-                    {"Structure"}
+                    {"Reading an OKLCH value"}
                     <span
                       aria-hidden="true"
                       className="h-px flex-1 bg-gray-400"
@@ -660,39 +650,34 @@ export function ReferenceContent() {
                   </h2>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    <code className="code-inline">{"oklch"}</code>
-                    {", same as "}
-                    <code className="code-inline">{"lch"}</code>
-                    {
-                      ", consists of three values: Lightness, Chroma and Hue. The difference between the two is the underlying color space that the color model uses, which in case of OKLCH, is "
-                    }
+                    OKLCH and LCH both use lightness, chroma, and hue. Their
+                    values come from different underlying color spaces. OKLCH is
+                    the cylindrical form of{" "}
                     <a
                       className="hover:text-gray-1200 hover:decoration-gray-1200 underline decoration-gray-900 underline-offset-3 transition-colors duration-200 ease-out"
                       rel="noopener noreferrer"
                       target="_blank"
                       href="https://en.wikipedia.org/wiki/Oklab_color_space"
                     >
-                      {"OKLab"}
+                      Oklab
                     </a>
-                    {"."}
+                    .
                   </p>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "Lightness - Controls color brightness. Measured in values between 0 and 1 or percentage ranging from 0% to 100%."
-                    }
+                    Lightness: how light or dark a color appears. Use a number
+                    from 0 to 1, or a percentage from 0% to 100%.
                   </p>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "Chroma - Controls intensity of the color, similar to saturation."
-                    }
+                    Chroma: how colorful a color is. Zero gives you a neutral
+                    gray; higher values increase its intensity.
                   </p>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "Hue - Controls the hue, measured in degrees ranging from 0 to 360."
-                    }
+                    Hue: the color’s position around a circle, expressed as an
+                    angle. A full turn is 360 degrees, bringing you back to the
+                    starting hue.
                   </p>
                   {"\n"}
                   <div className="my-8 flex w-full flex-col items-center">
@@ -754,7 +739,7 @@ export function ReferenceContent() {
                   </div>
                   {"\n"}
                   <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
-                    {"Consistent brightness"}
+                    {"Balancing colors across a palette"}
                     <span
                       aria-hidden="true"
                       className="h-px flex-1 bg-gray-400"
@@ -762,17 +747,15 @@ export function ReferenceContent() {
                   </h2>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "Let’s say you want to create a couple of buttons and you want each one to have a different color. The usual workflow with other color models would be defining the first color and then handpicking others to match it."
-                    }
+                    Imagine a set of buttons in different colors. You want each
+                    to carry a similar visual weight, but matching them by eye
+                    can take several rounds of adjustment.
                   </p>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {"With "}
-                    <code className="code-inline">{"oklch"}</code>
-                    {
-                      ", you can use the same lightness value for all of them and only change hue. That way you create colors that look and feel the same."
-                    }
+                    With OKLCH, start with a shared lightness and chroma, then
+                    vary the hue. The resulting colors tend to feel more
+                    balanced, giving you a useful starting point for a palette.
                   </p>
                   {"\n"}
                   <div className="my-8 flex w-full flex-col items-center">
@@ -780,23 +763,19 @@ export function ReferenceContent() {
                   </div>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {"You can do the same thing with color models like "}
-                    <code className="code-inline">{"hsl"}</code>
-                    {
-                      ", but as you can see above, the colors don’t look uniform. Some are lighter, some darker, some pop more and some less."
-                    }
+                    Try the same approach in HSL. As the comparison shows, equal
+                    lightness values do not necessarily look equally light. Some
+                    hues stand out much more than others.
                   </p>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {"This is one of the major advantages of "}
-                    <code className="code-inline">{"oklch"}</code>
-                    {
-                      " over other color models. Creating perceptually uniform color palettes and working with them is very easy."
-                    }
+                    That perceptual consistency is a practical reason to choose
+                    OKLCH. It reduces the guesswork involved in building a
+                    palette whose colors feel related.
                   </p>
                   {"\n"}
                   <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
-                    {"Predictable shades"}
+                    {"Building a range of shades"}
                     <span
                       aria-hidden="true"
                       className="h-px flex-1 bg-gray-400"
@@ -804,9 +783,10 @@ export function ReferenceContent() {
                   </h2>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "It also works the other way around, where you can change the lightness value to create various color shades and there is no hue or saturation drift unlike in other color modes."
-                    }
+                    To build lighter and darker shades of a color, adjust
+                    lightness while keeping hue and chroma fixed. Within the
+                    available gamut, this helps preserve the color’s character
+                    across the range.
                   </p>
                   {"\n"}
                   <div className="my-8 flex w-full flex-col items-center">
@@ -968,19 +948,14 @@ export function ReferenceContent() {
                   </div>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {"In the example above, you can see that the "}
-                    <code className="code-inline">{"oklch"}</code>
-                    {
-                      " colors maintain consistent blueness across all of the shades, while in the "
-                    }
-                    <code className="code-inline">{"hsl"}</code>
-                    {
-                      " example, the lighter shades drift to purple and the darker ones muddy out towards grayish."
-                    }
+                    Compare the two blue scales above. The OKLCH scale keeps a
+                    more consistent sense of blue, while the HSL scale shows
+                    more variation in how the hue and intensity appear as the
+                    shades get lighter or darker.
                   </p>
                   {"\n"}
                   <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
-                    {"Gradients"}
+                    {"How gradients travel between colors"}
                     <span
                       aria-hidden="true"
                       className="h-px flex-1 bg-gray-400"
@@ -988,11 +963,11 @@ export function ReferenceContent() {
                   </h2>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {"The way gradients work in "}
-                    <code className="code-inline">{"oklch"}</code>
-                    {
-                      " is pretty different compared to other color models. In other color models, gradients are calculated in red, green, and blue values, which often leads to muddy midpoints and uneven brightness."
-                    }
+                    A gradient’s intermediate colors depend on the color space
+                    used to mix its endpoints. An OKLCH gradient can look quite
+                    different from an RGB gradient, where mixing red, green, and
+                    blue channels can produce a dull midpoint or uneven
+                    lightness.
                   </p>
                   {"\n"}
                   <div className="my-8 flex w-full flex-col items-center">
@@ -1048,11 +1023,9 @@ export function ReferenceContent() {
                   </div>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {"In "}
-                    <code className="code-inline">{"oklch"}</code>
-                    {
-                      ", the math follows lightness, chroma, and hue. In the example above you can see that the starting and ending points are the same but the colors the gradient passes through are quite different."
-                    }
+                    In OKLCH, interpolation changes lightness, chroma, and hue.
+                    The comparison uses identical endpoints, so any difference
+                    you see comes from the route between them.
                   </p>
                   {"\n"}
                   <div className="my-8 flex w-full flex-col items-center">
@@ -1101,23 +1074,20 @@ export function ReferenceContent() {
                   </div>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "This can be a double edged sword. While some gradients might look smoother, you might also see colors that you’ve never defined. This is because hue in "
-                    }
-                    <code className="code-inline">{"oklch"}</code>
-                    {" is circular and gradients can take unexpected detours."}
+                    That route may pass through hues you did not expect. In
+                    OKLCH, hue follows a circle, so moving between two colors
+                    can introduce a whole sequence of hues along the way.
                   </p>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {"To avoid this, many tools use "}
-                    <code className="code-inline">{"oklab"}</code>
-                    {
-                      " for gradients instead, because it interpolates in a straight line and gives more consistent results."
-                    }
+                    For a different result, try interpolating in Oklab. It takes
+                    a straight path through its color coordinates instead of
+                    following the hue circle, which can make the transition
+                    easier to anticipate.
                   </p>
                   {"\n"}
                   <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
-                    {"Color space support"}
+                    {"Going beyond sRGB"}
                     <span
                       aria-hidden="true"
                       className="h-px flex-1 bg-gray-400"
@@ -1125,13 +1095,9 @@ export function ReferenceContent() {
                   </h2>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "The sRGB gamut can’t reach a lot of colors that modern screens can show. In "
-                    }
-                    <code className="code-inline">{"oklch"}</code>
-                    {
-                      " you can write colors that are only possible to render on a screen that supports Display-P3 colors."
-                    }
+                    Some screens can reproduce colors beyond the sRGB range.
+                    With OKLCH, you can specify these wider-gamut colors too,
+                    including those available on Display-P3 screens.
                   </p>
                   {"\n"}
                   <div className="my-8 flex w-full flex-col items-center">
@@ -1197,19 +1163,19 @@ export function ReferenceContent() {
                   </div>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "If your display supports Display-P3, you will see the right colors more vivid than the left ones. If your display only supports sRGB, the colors should look nearly identical, as the browser maps the out of gamut color back inside the sRGB gamut."
-                    }
+                    On a Display-P3 screen, the swatches on the right can look
+                    more vivid. On an sRGB screen, the two sets may appear
+                    almost the same because the browser has to bring unsupported
+                    colors into the display’s range.
                   </p>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "Keep in mind that grays are identical in sRGB and Display-P3, so there would be no difference there."
-                    }
+                    The wider gamut adds room for more colorful shades. Neutral
+                    grays do not gain extra intensity in Display-P3.
                   </p>
                   {"\n"}
                   <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
-                    {"Maximum chroma"}
+                    {"Finding the chroma limit"}
                     <span
                       aria-hidden="true"
                       className="h-px flex-1 bg-gray-400"
@@ -1217,24 +1183,22 @@ export function ReferenceContent() {
                   </h2>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    <code className="code-inline">{"oklch"}</code>
-                    {
-                      " can also define more colors than any real screen can show. It can specify values that don’t fit inside any actual gamut like sRGB or Display-P3."
-                    }
+                    OKLCH values can describe colors beyond a display’s
+                    capabilities. Valid CSS does not guarantee that a color fits
+                    inside sRGB or Display-P3.
                   </p>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {"Let’s take this color as an example color: "}
-                    <code className="code-inline">{"oklch(0.7 0.4 40)"}</code>
-                    {
-                      ". It has a very high chroma value and it could mathematically exist but in practice it lies outside of any real display’s gamut."
-                    }
+                    Consider{" "}
+                    <code className="code-inline">oklch(0.7 0.4 40)</code>. Its
+                    chroma of 0.4 places it outside both sRGB and Display-P3 at
+                    this lightness and hue.
                   </p>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "When this color is used, it will get clipped or mapped to the nearest representable color inside the gamut."
-                    }
+                    The browser must bring an unsupported color into the
+                    available gamut through clipping or gamut mapping. What you
+                    see is a representable substitute.
                   </p>
                   {"\n"}
                   <figure data-rehype-pretty-code-figure="">
@@ -1472,15 +1436,15 @@ export function ReferenceContent() {
                   </figure>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "Generally you don’t want this to happen, as the clipped color can often look very different from the defined one."
-                    }
+                    This adjustment can change the appearance you intended.
+                    Checking the gamut helps you spot those changes before
+                    relying on a color in your design.
                   </p>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "Therefore, there is a concept of a maximum chroma value, which calculates the maximum chroma that a display can show based on the lightness, hue and the selected gamut."
-                    }
+                    Maximum chroma is the highest chroma that fits within a
+                    chosen gamut for a given lightness and hue. Change any of
+                    those conditions and the limit changes too.
                   </p>
                   {"\n"}
                   <div className="my-8 flex w-full flex-col items-center">
@@ -1495,13 +1459,14 @@ export function ReferenceContent() {
                   </div>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {
-                      "The bright band is every hue at one lightness. The lines mark how much chroma each gamut can reach there, and everything above them gets clipped. Move the lightness and watch the reachable range change shape."
-                    }
+                    The colored band runs through the hues at a single
+                    lightness. Each line shows a gamut’s chroma limit; values
+                    above it need to be mapped or clipped. Adjust lightness to
+                    see how those limits shift.
                   </p>
                   {"\n"}
                   <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
-                    {"Browser support & fallbacks"}
+                    {"Using OKLCH with CSS fallbacks"}
                     <span
                       aria-hidden="true"
                       className="h-px flex-1 bg-gray-400"
@@ -1509,27 +1474,23 @@ export function ReferenceContent() {
                   </h2>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    <code className="code-inline">{"oklch"}</code>
-                    {" colors were introduced in "}
+                    OKLCH is defined in{" "}
                     <a
                       className="hover:text-gray-1200 hover:decoration-gray-1200 underline decoration-gray-900 underline-offset-3 transition-colors duration-200 ease-out"
                       rel="noopener noreferrer"
                       target="_blank"
                       href="https://www.w3.org/TR/css-color-4/"
                     >
-                      {"CSS Color Module Level 4"}
+                      CSS Color Module Level 4
                     </a>
-                    {" and they are well supported across all modern browsers."}
+                    . For environments that do not recognize the syntax, provide
+                    a fallback color.
                   </p>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {"However, there are still some surfaces where "}
-                    <code className="code-inline">{"oklch"}</code>
-                    {
-                      " colors are not supported such as outdated browsers. In case you are worried about this, you can add fallbacks and use the "
-                    }
-                    <code className="code-inline">{"@supports"}</code>
-                    {" directive in CSS."}
+                    Start with an sRGB color, then add your OKLCH value inside
+                    an <code className="code-inline">@supports</code> rule. This
+                    lets the browser select the version it understands.
                   </p>
                   {"\n"}
                   <figure data-rehype-pretty-code-figure="">
@@ -2288,15 +2249,10 @@ export function ReferenceContent() {
                   </figure>
                   {"\n"}
                   <p className="text-text-paragraph w-full [&+p]:mt-6">
-                    {"This way the browser uses "}
-                    <code className="code-inline">{"oklch"}</code>
-                    {
-                      " if the syntax is supported, otherwise it falls back to sRGB. Keep in mind that this doesn’t magically change the colors. If an "
-                    }
-                    <code className="code-inline">{"oklch"}</code>
-                    {
-                      " color fits inside the sRGB gamut, it will look the same as the equivalent hex color."
-                    }
+                    Browsers that pass the feature check apply OKLCH; the others
+                    keep the sRGB fallback. The notation itself does not make a
+                    color more vivid. An OKLCH color within sRGB looks the same
+                    as its equivalent hex value.
                   </p>
                 </article>
                 <footer className="mt-16 flex w-full max-w-173 items-center justify-end sm:mt-20">
