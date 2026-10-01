@@ -1,0 +1,2355 @@
+/* Reference layout and original vector artwork captured from https://oklch.fyi/. */
+/* eslint-disable @next/next/no-img-element */
+import type { CSSProperties } from "react"
+import { BrightnessDemo, ChromaDemo } from "./color-demos"
+import { ThemePicker, Feedback, MobileMenu } from "./page-controls"
+export function ReferenceContent() {
+  return (
+    <div className="flex w-full flex-col md:h-dvh">
+      <nav className="text-gray-1200 flex w-full items-center justify-center border-gray-400 bg-transparent px-5 sm:border-b">
+        <div className="flex h-(--nav-height) w-full items-center justify-between">
+          <a aria-label="Home" className="flex items-center" href="/oklch">
+            <svg
+              aria-label="Logo"
+              className="text-gray-1200 size-8"
+              fill="none"
+              height="189"
+              role="graphics-symbol"
+              viewBox="0 0 198 189"
+              width="198"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M119.4 0C135.134 0.000120179 150.703 5.80892 162.489 17.5918C174.167 29.2665 181.079 45.7285 181.86 65.3975L181.861 65.3984L181.862 65.4307L181.895 66.3506V66.3701L181.896 66.375V66.3896L181.896 66.4053V66.4258L181.914 67.1436L181.915 67.1885L181.916 67.2373L181.931 68.2432C181.949 70.4647 181.879 72.6692 181.734 74.8545C192.162 89.4487 197.565 106.224 197.565 122.806V122.817L197.56 123.631L197.561 123.647C197.359 141.329 190.814 157.684 178.327 169.642C165.863 181.578 148.733 187.949 129.376 188.146H129.365L128.462 188.149L128.458 188.15H128.453C111.508 188.15 96.7142 183.105 84.502 174.726C64.5178 178.995 43.123 178.815 22.3486 172.648C12.9501 169.858 7.59459 159.978 10.3838 150.581L10.3887 150.565L10.3916 150.557L10.5117 150.169L10.5146 150.159L10.5186 150.149L10.5195 150.145C12.3682 144.45 16.8453 140.309 22.1943 138.663C8.99577 128.709 0.190897 113.792 0.00292969 96.1943V96.1836L0 95.6309V95.6201C0 73.2533 11.1034 56.1425 27.2246 45.3203C37.2969 38.5589 49.1567 34.3057 61.4746 32.1387C75.6921 11.2138 97.2961 0.000205814 119.4 0Z"
+                fill="currentColor"
+              ></path>
+              <path
+                className="stroke-gray-100"
+                d="M27.4 155.633C91.915 174.783 165.912 126.685 164.152 66.8825C163.197 34.425 142.125 17.75 119.4 17.75C92.0725 17.75 62.355 41.9725 62.355 93.3325C62.355 131.225 86.9175 170.4 128.452 170.4C160.23 170.4 179.815 150.055 179.815 122.805C179.815 87.9175 148.115 48.13 82.095 48.13C47.95 48.13 17.75 64.1075 17.75 95.62C17.75 127.133 60.685 150.197 108.11 121.387"
+                strokeLinecap="round"
+                strokeMiterlimit="10"
+                strokeWidth="11.5"
+              ></path>
+            </svg>
+          </a>
+          <div className="hidden items-center gap-2 md:flex">
+            <ThemePicker />
+            <Feedback />
+            <div className="animate-fade-in">
+              <a
+                className="bg-gray-1200 inline-flex h-8 shrink-0 touch-manipulation items-center justify-center gap-1.5 rounded-lg px-2.5 text-sm font-medium whitespace-nowrap text-gray-100 transition-[color,background-color,border-color,fill,box-shadow,scale] duration-150 ease-out will-change-transform select-none active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-red-500 aria-invalid:focus:ring-red-500/20 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+                data-slot="button"
+                href="https://oklch.fyi/sign-in"
+              >
+                {"Sign in"}
+              </a>
+            </div>
+          </div>
+          <div className="flex md:hidden">
+            <MobileMenu />
+          </div>
+        </div>
+      </nav>
+      <div className="flex w-full flex-1 md:overflow-hidden">
+        <aside className="no-scrollbar hidden h-full w-56 flex-col overflow-y-auto md:flex">
+          <nav className="flex flex-1 flex-col gap-0.5 p-3">
+            <a
+              className="hover:text-gray-1200 text-gray-1200 flex items-center gap-2 rounded-lg bg-gray-300 px-3 py-2 text-sm font-medium hover:bg-gray-300 active:bg-gray-300"
+              href="/oklch"
+            >
+              <svg
+                className="size-5"
+                aria-hidden="true"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.6861 2.83464C13.1618 1.45323 10.8382 1.45323 9.31392 2.83464L4.31392 7.36589C3.47724 8.12413 3 9.20068 3 10.3298V16.9999C3 19.2091 4.79086 20.9999 7 20.9999H8C9.10457 20.9999 10 20.1045 10 18.9999V15.9999C10 14.8954 10.8954 13.9999 12 13.9999C13.1046 13.9999 14 14.8954 14 15.9999V18.9999C14 20.1045 14.8954 20.9999 16 20.9999H17C19.2091 20.9999 21 19.2091 21 16.9999V10.3298C21 9.20069 20.5228 8.12413 19.6861 7.36589L14.6861 2.83464Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>{"Home"}</span>
+            </a>
+            <a
+              className="hover:text-gray-1200 text-gray-1100 flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium hover:bg-gray-300 active:bg-gray-300"
+              href="https://oklch.fyi/skill"
+            >
+              <svg
+                className="size-5"
+                aria-hidden="true"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M2 8C2 5.79086 3.79086 4 6 4C6.55228 4 7 4.44772 7 5C7 5.55228 6.55228 6 6 6C4.89543 6 4 6.89543 4 8C4 8.55228 3.55228 9 3 9C2.44772 9 2 8.55228 2 8ZM17 5C17 4.44772 17.4477 4 18 4C20.2091 4 22 5.79086 22 8C22 8.55228 21.5523 9 21 9C20.4477 9 20 8.55228 20 8C20 6.89543 19.1046 6 18 6C17.4477 6 17 5.55228 17 5ZM7 10C7 9.44772 7.44772 9 8 9H16C16.5523 9 17 9.44772 17 10C17 10.5523 16.5523 11 16 11H8C7.44772 11 7 10.5523 7 10ZM7 14C7 13.4477 7.44772 13 8 13H14C14.5523 13 15 13.4477 15 14C15 14.5523 14.5523 15 14 15H8C7.44772 15 7 14.5523 7 14ZM3 15C3.55228 15 4 15.4477 4 16C4 17.1046 4.89543 18 6 18C6.55228 18 7 18.4477 7 19C7 19.5523 6.55228 20 6 20C3.79086 20 2 18.2091 2 16C2 15.4477 2.44772 15 3 15ZM21 15C21.5523 15 22 15.4477 22 16C22 18.2091 20.2091 20 18 20C17.4477 20 17 19.5523 17 19C17 18.4477 17.4477 18 18 18C19.1046 18 20 17.1046 20 16C20 15.4477 20.4477 15 21 15Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>{"Skill"}</span>
+            </a>
+            <a
+              className="hover:text-gray-1200 text-gray-1100 flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium hover:bg-gray-300 active:bg-gray-300"
+              href="https://oklch.fyi/create"
+            >
+              <svg
+                className="size-5"
+                aria-hidden="true"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM16 12.9999C16.5523 12.9999 17 12.5522 17 11.9999C17 11.4476 16.5523 10.9999 16 10.9999L13 11V8.00012C13 7.44784 12.5523 7.00012 12 7.00012C11.4477 7.00012 11 7.44784 11 8.00012V11L7.99997 11.0001C7.44769 11.0001 6.99998 11.4479 7 12.0001C7.00002 12.5524 7.44774 13.0001 8.00003 13.0001L11 13V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16V13L16 12.9999Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>{"Create"}</span>
+            </a>
+            <a
+              className="hover:text-gray-1200 text-gray-1100 flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium hover:bg-gray-300 active:bg-gray-300"
+              href="https://oklch.fyi/convert"
+            >
+              <svg
+                className="size-5"
+                aria-hidden="true"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.7929 2.29289C17.1834 1.90237 17.8166 1.90237 18.2071 2.29289L20.5 4.58579C21.281 5.36683 21.281 6.63316 20.5 7.41421L18.2071 9.70711C17.8166 10.0976 17.1834 10.0976 16.7929 9.70711C16.4024 9.31658 16.4024 8.68342 16.7929 8.29289L18.0858 7H7C5.89543 7 5 7.89543 5 9V11C5 11.5523 4.55228 12 4 12C3.44772 12 3 11.5523 3 11V9C3 6.79086 4.79086 5 7 5H18.0858L16.7929 3.70711C16.4024 3.31658 16.4024 2.68342 16.7929 2.29289Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M21 13C21 12.4477 20.5523 12 20 12C19.4477 12 19 12.4477 19 13V15C19 16.1046 18.1046 17 17 17H5.91406L7.20696 15.7071C7.59748 15.3166 7.59748 14.6834 7.20696 14.2929C6.81643 13.9024 6.18327 13.9024 5.79274 14.2929L3.49985 16.5858C2.7188 17.3668 2.7188 18.6332 3.49985 19.4142L5.79274 21.7071C6.18327 22.0976 6.81643 22.0976 7.20696 21.7071C7.59748 21.3166 7.59748 20.6834 7.20696 20.2929L5.91406 19H17C19.2091 19 21 17.2091 21 15V13Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>{"Convert"}</span>
+            </a>
+            <a
+              className="hover:text-gray-1200 text-gray-1100 flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium hover:bg-gray-300 active:bg-gray-300"
+              href="https://oklch.fyi/color-palettes"
+            >
+              <svg
+                className="size-5"
+                aria-hidden="true"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M12 2C15.7277 2 18.86 4.54954 19.748 8H20C20.5523 8 21 8.44772 21 9C21 9.55228 20.5523 10 20 10V18C20 20.2091 18.2091 22 16 22H8C5.79086 22 4 20.2091 4 18V10C3.44772 10 3 9.55228 3 9C3 8.44772 3.44772 8 4 8H4.25195C5.14003 4.54954 8.27231 2 12 2ZM12 4C9.38772 4 7.16657 5.66984 6.34277 8H8V13C8 13.5523 8.44772 14 9 14C9.55228 14 10 13.5523 10 13V8H11V11C11 11.5523 11.4477 12 12 12C12.5523 12 13 11.5523 13 11V8H17.6572C16.8334 5.66984 14.6123 4 12 4Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>{"Color Palettes"}</span>
+            </a>
+            <a
+              className="hover:text-gray-1200 text-gray-1100 flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium hover:bg-gray-300 active:bg-gray-300"
+              href="https://oklch.fyi/gradients"
+            >
+              <svg
+                className="size-5"
+                aria-hidden="true"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M11.9996 2C9.1224 2 6.78994 4.33245 6.78994 7.20968C6.78994 7.96527 6.95023 8.68097 7.23778 9.32663C7.8908 10.7929 9.20071 11.9007 10.7905 12.2785C10.9341 12.0289 11.0926 11.789 11.2646 11.5601C12.549 9.85056 14.5966 8.74194 16.9028 8.74194C16.9287 8.74194 16.9546 8.74208 16.9804 8.74236C17.1291 8.25853 17.2093 7.74408 17.2093 7.20968C17.2093 4.33245 14.8768 2 11.9996 2ZM13.1495 19.4033C14.0981 20.3887 15.429 21 16.9028 21C19.7801 21 22.1125 18.6675 22.1125 15.7903C22.1125 13.1145 20.0944 10.9087 17.4977 10.6141C17.3028 10.592 17.1043 10.5806 16.9028 10.5806C15.429 10.5806 14.0981 11.192 13.1495 12.1774C13.2932 12.4177 13.423 12.6674 13.5379 12.9253C13.9283 13.8019 14.1448 14.772 14.1448 15.7903C14.1448 17.1099 13.7814 18.3464 13.1495 19.4033ZM12.0772 14.2576C12.2259 14.7415 12.3061 15.2559 12.3061 15.7903C12.3061 16.9644 11.9188 18.0454 11.2646 18.9161C10.3126 20.1833 8.79999 21 7.0964 21C4.21917 21 1.88672 18.6675 1.88672 15.7903C1.88672 13.3296 3.59342 11.2664 5.88725 10.7215C6.97703 12.6145 8.92154 13.9547 11.1975 14.2128C11.4611 14.2427 11.7288 14.2581 11.9996 14.2581C12.0255 14.2581 12.0514 14.2579 12.0772 14.2576Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>{"Gradients"}</span>
+            </a>
+            <a
+              className="hover:text-gray-1200 text-gray-1100 flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium hover:bg-gray-300 active:bg-gray-300"
+              href="https://oklch.fyi/gamut"
+            >
+              <svg
+                className="size-5"
+                aria-hidden="true"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.31851 15.6642C3.32312 17.6558 4.77047 20 6.99765 20H17.0019C19.2291 20 20.6764 17.6558 19.6811 15.6642L14.6789 5.65629C13.5751 3.4479 10.4244 3.4479 9.32065 5.65629L4.31851 15.6642Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>{"Gamut Visualizer"}</span>
+            </a>
+            <a
+              className="hover:text-gray-1200 text-gray-1100 flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium hover:bg-gray-300 active:bg-gray-300"
+              href="https://oklch.fyi/bulk-convert"
+            >
+              <svg
+                className="size-5"
+                aria-hidden="true"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 1.5C16.5523 1.5 17 1.94772 17 2.5V4H18C20.2091 4 22 5.79086 22 8V16C22 18.2091 20.2091 20 18 20H17V21.5C17 22.0523 16.5523 22.5 16 22.5C15.4477 22.5 15 22.0523 15 21.5V2.5C15 1.94772 15.4477 1.5 16 1.5Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M2 8C2 5.79086 3.79086 4 6 4H13V20H6C3.79086 20 2 18.2091 2 16V8ZM7.70711 8.79289C7.31658 8.40237 6.68342 8.40237 6.29289 8.79289C5.90237 9.18342 5.90237 9.81658 6.29289 10.2071L8.08579 12L6.29289 13.7929C5.90237 14.1834 5.90237 14.8166 6.29289 15.2071C6.68342 15.5976 7.31658 15.5976 7.70711 15.2071L10.2071 12.7071C10.5976 12.3166 10.5976 11.6834 10.2071 11.2929L7.70711 8.79289Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>{"Bulk Convert"}</span>
+            </a>
+            <a
+              className="hover:text-gray-1200 text-gray-1100 flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium hover:bg-gray-300 active:bg-gray-300"
+              href="https://oklch.fyi/saved"
+            >
+              <svg
+                className="size-5"
+                aria-hidden="true"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 2C5.79086 2 4 3.79086 4 6V19.9948C4 21.6146 5.82485 22.5625 7.15006 21.6311L10.8499 19.0306C11.54 18.5456 12.46 18.5456 13.1501 19.0306L16.8499 21.6311C18.1751 22.5625 20 21.6146 20 19.9948V6C20 3.79086 18.2091 2 16 2H8Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>{"Saved"}</span>
+            </a>
+          </nav>
+          <div className="mt-auto flex flex-col gap-0.5 border-t border-gray-400 p-3">
+            <a
+              className="hover:text-gray-1200 text-gray-1100 flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium hover:bg-gray-300 active:bg-gray-300"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://ko-fi.com/jakubkrehel"
+            >
+              <svg
+                className="size-5"
+                aria-hidden="true"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M3 4C3 3.44772 3.44772 3 4 3H16C16.5523 3 17 3.44772 17 4V6C19.2091 6 21 7.79086 21 10C21 12.2091 19.2091 14 17 14V17C17 19.2091 15.2091 21 13 21H7C4.79086 21 3 19.2091 3 17V4ZM17 12C18.1046 12 19 11.1046 19 10C19 8.89543 18.1046 8 17 8V12Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>{"Buy me a coffee"}</span>
+            </a>
+            <a
+              className="hover:text-gray-1200 text-gray-1100 flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium hover:bg-gray-300 active:bg-gray-300"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="mailto:jakub@kbo.sk"
+            >
+              <svg
+                className="size-5"
+                aria-hidden="true"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.34086 6.38914C2.1622 6.8145 2.08371 7.26454 2.0442 7.74818C1.99998 8.28936 1.99999 8.95371 2 9.75867V14.2413C1.99999 15.0463 1.99998 15.7106 2.0442 16.2518C2.09012 16.8139 2.18868 17.3306 2.43598 17.816C2.81947 18.5686 3.43139 19.1805 4.18404 19.564C4.66938 19.8113 5.18608 19.9099 5.74818 19.9558C6.28936 20 6.95371 20 7.75866 20H16.2413C17.0462 20 17.7106 20 18.2518 19.9558C18.8139 19.9099 19.3306 19.8113 19.816 19.564C20.5686 19.1805 21.1805 18.5686 21.564 17.816C21.8113 17.3306 21.9099 16.8139 21.9558 16.2518C22 15.7106 22 15.0463 22 14.2413V9.75868C22 8.95372 22 8.28937 21.9558 7.74818C21.9163 7.26453 21.8378 6.81449 21.6591 6.38912L14.5329 12.2196C13.0595 13.4252 10.9405 13.4252 9.46703 12.2196L2.34086 6.38914Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M20.4224 4.8169C20.233 4.67277 20.0302 4.54512 19.816 4.43598C19.3306 4.18868 18.8139 4.09012 18.2518 4.0442C17.7106 3.99998 17.0463 3.99999 16.2413 4H7.7587C6.95375 3.99999 6.28936 3.99998 5.74818 4.0442C5.18608 4.09012 4.66938 4.18868 4.18404 4.43598C3.96982 4.54512 3.76701 4.67278 3.57762 4.81691L10.7335 10.6717C11.4702 11.2745 12.5297 11.2745 13.2665 10.6717L20.4224 4.8169Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>{"Contact"}</span>
+            </a>
+            <a
+              className="hover:text-gray-1200 text-gray-1100 flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium hover:bg-gray-300 active:bg-gray-300"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://x.com/jakubkrehel"
+            >
+              <svg
+                className="size-5"
+                aria-hidden="true"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.5652 3.25H20.5319L14.0505 10.6628L21.6753 20.75H15.7052L11.0291 14.6322L5.67867 20.75H2.71017L9.64264 12.8212L2.32812 3.25H8.44986L12.6766 8.84192L17.5652 3.25ZM16.524 18.9731H18.1679L7.55662 4.93359H5.79256L16.524 18.9731Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>{"X (Twitter)"}</span>
+            </a>
+          </div>
+        </aside>
+        <main
+          className="bg-gray-background relative flex w-full flex-1 flex-col border-gray-400 md:border-l"
+          id="main-content"
+        >
+          <div className="flex-1 overflow-y-auto p-5 md:p-0">
+            <section className="mx-auto flex w-full max-w-7xl items-center justify-center gap-8 py-0 md:p-6 2xl:p-12">
+              <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center pt-12 pb-16">
+                <div className="flex w-full flex-col items-center gap-6 text-center">
+                  <div className="flex items-center [&>*:not(:first-child)]:-ml-8">
+                    <div
+                      className="bg-preview-bg shadow-custom flex items-center justify-center rounded-2xl p-1 transition-transform duration-300 ease-out will-change-transform hover:-translate-y-2"
+                      style={{ rotate: "-16deg" } as CSSProperties}
+                    >
+                      <div className="outline-subtle size-12 rounded-xl bg-[oklch(98.5%_0_0)] dark:bg-[oklch(20%_0_0)]"></div>
+                    </div>
+                    <div
+                      className="bg-preview-bg shadow-custom mb-3 flex items-center justify-center rounded-2xl p-1 transition-transform duration-300 ease-out will-change-transform hover:-translate-y-2"
+                      style={{ rotate: "-12deg" } as CSSProperties}
+                    >
+                      <div className="outline-subtle size-12 rounded-xl bg-[oklch(97%_0_0)] dark:bg-[oklch(25%_0_0)]"></div>
+                    </div>
+                    <div
+                      className="bg-preview-bg shadow-custom mb-5 flex items-center justify-center rounded-2xl p-1 transition-transform duration-300 ease-out will-change-transform hover:-translate-y-2"
+                      style={{ rotate: "-4deg" } as CSSProperties}
+                    >
+                      <div className="outline-subtle size-12 rounded-xl bg-[oklch(92.2%_0_0)] dark:bg-[oklch(30%_0_0)]"></div>
+                    </div>
+                    <div
+                      className="bg-preview-bg shadow-custom mb-6 flex items-center justify-center rounded-2xl p-1 transition-transform duration-300 ease-out will-change-transform hover:-translate-y-2"
+                      style={{ rotate: "0deg" } as CSSProperties}
+                    >
+                      <div className="outline-subtle size-12 rounded-xl bg-[oklch(87%_0_0)] dark:bg-[oklch(40%_0_0)]"></div>
+                    </div>
+                    <div
+                      className="bg-preview-bg shadow-custom mb-5 flex items-center justify-center rounded-2xl p-1 transition-transform duration-300 ease-out will-change-transform hover:-translate-y-2"
+                      style={{ rotate: "4deg" } as CSSProperties}
+                    >
+                      <div className="outline-subtle size-12 rounded-xl bg-[oklch(70.8%_0_0)] dark:bg-[oklch(55%_0_0)]"></div>
+                    </div>
+                    <div
+                      className="bg-preview-bg shadow-custom mb-3 flex items-center justify-center rounded-2xl p-1 transition-transform duration-300 ease-out will-change-transform hover:-translate-y-2"
+                      style={{ rotate: "12deg" } as CSSProperties}
+                    >
+                      <div className="outline-subtle size-12 rounded-xl bg-[oklch(55.6%_0_0)] dark:bg-[oklch(70%_0_0)]"></div>
+                    </div>
+                    <div
+                      className="bg-preview-bg shadow-custom flex items-center justify-center rounded-2xl p-1 transition-transform duration-300 ease-out will-change-transform hover:-translate-y-2"
+                      style={{ rotate: "16deg" } as CSSProperties}
+                    >
+                      <div className="outline-subtle size-12 rounded-xl bg-[oklch(43.9%_0_0)] dark:bg-[oklch(80%_0_0)]"></div>
+                    </div>
+                  </div>
+                  <div className="flex w-full flex-col items-center gap-3 text-center">
+                    <h1 className="text-center text-3xl font-semibold tracking-tight sm:text-[40px]">
+                      {"Explore color as we see it"}
+                    </h1>
+                    <p className="text-text-paragraph max-w-2xl text-base sm:text-lg">
+                      {
+                        "Discover how the OKLCH color model works. Learn, experiment and create more consistent and perceptually uniform color palettes."
+                      }
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-8 flex w-full flex-col items-center justify-center gap-2 sm:flex-row">
+                  <a
+                    className="bg-gray-1200 inline-flex h-10 w-full shrink-0 touch-manipulation items-center justify-center gap-1.5 rounded-[10px] px-4 pr-4 pl-3 text-sm font-medium whitespace-nowrap text-gray-100 transition-[color,background-color,border-color,fill,box-shadow,scale] duration-150 ease-out will-change-transform select-none active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-red-500 aria-invalid:focus:ring-red-500/20 sm:w-auto [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+                    data-slot="button"
+                    href="https://oklch.fyi/create"
+                  >
+                    <svg
+                      className="size-5 text-gray-100"
+                      aria-hidden="true"
+                      width="24px"
+                      height="24px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM16 12.9999C16.5523 12.9999 17 12.5522 17 11.9999C17 11.4476 16.5523 10.9999 16 10.9999L13 11V8.00012C13 7.44784 12.5523 7.00012 12 7.00012C11.4477 7.00012 11 7.44784 11 8.00012V11L7.99997 11.0001C7.44769 11.0001 6.99998 11.4479 7 12.0001C7.00002 12.5524 7.44774 13.0001 8.00003 13.0001L11 13V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16V13L16 12.9999Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                    {"Create"}
+                  </a>
+                  <a
+                    className="bg-preview-bg text-gray-1200 shadow-custom hover:shadow-custom-hover inline-flex h-10 w-full shrink-0 touch-manipulation items-center justify-center gap-1.5 rounded-[10px] px-4 text-sm font-medium whitespace-nowrap transition-[color,background-color,border-color,fill,box-shadow,scale] duration-150 ease-out will-change-transform select-none hover:bg-gray-200 active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-red-500 aria-invalid:focus:ring-red-500/20 sm:w-auto [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+                    data-slot="button"
+                    href="https://oklch.fyi/color-palettes"
+                  >
+                    {"Explore"}
+                  </a>
+                </div>
+                <article className="w-full max-w-173">
+                  <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
+                    {"What are OKLCH colors?"}
+                    <span
+                      aria-hidden="true"
+                      className="h-px flex-1 bg-gray-400"
+                    ></span>
+                  </h2>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    <code className="code-inline">{"oklch"}</code>
+                    {
+                      " is a newer color model that is designed to be perceptually uniform. This means that colors are much more accurate in terms of how humans perceive them and it makes working with them much easier."
+                    }
+                  </p>
+                  {"\n"}
+                  <div className="my-8 flex w-full flex-col items-center">
+                    <div className="bg-preview-bg shadow-custom flex w-full flex-col items-center justify-center overflow-hidden rounded-xl">
+                      <div className="bg-gray-background flex h-full w-full p-1">
+                        <div className="border-preview-border bg-preview-bg flex h-full w-full items-center justify-center overflow-hidden rounded-lg border py-12">
+                          <div className="flex gap-4 sm:gap-6">
+                            <div className="bg-preview-bg shadow-custom flex h-40 w-10 shrink-0 items-center justify-center rounded-full p-2">
+                              <div
+                                className="outline-subtle h-full w-full rounded-full"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.8 0.193 280)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                            </div>
+                            <div className="bg-preview-bg shadow-custom flex h-40 w-10 shrink-0 items-center justify-center rounded-full p-2">
+                              <div
+                                className="outline-subtle h-full w-full rounded-full"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.8 0.193 254.9)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                            </div>
+                            <div className="bg-preview-bg shadow-custom flex h-40 w-10 shrink-0 items-center justify-center rounded-full p-2">
+                              <div
+                                className="outline-subtle h-full w-full rounded-full"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.8 0.193 220)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                            </div>
+                            <div className="bg-preview-bg shadow-custom flex h-40 w-10 shrink-0 items-center justify-center rounded-full p-2">
+                              <div
+                                className="outline-subtle h-full w-full rounded-full"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.8 0.193 180)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                            </div>
+                            <div className="bg-preview-bg shadow-custom flex h-40 w-10 shrink-0 items-center justify-center rounded-full p-2">
+                              <div
+                                className="outline-subtle h-full w-full rounded-full"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.8 0.193 140)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                            </div>
+                            <div className="bg-preview-bg shadow-custom flex h-40 w-10 shrink-0 items-center justify-center rounded-full p-2">
+                              <div
+                                className="outline-subtle h-full w-full rounded-full"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.8 0.193 100)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                            </div>
+                            <div className="bg-preview-bg shadow-custom flex h-40 w-10 shrink-0 items-center justify-center rounded-full p-2">
+                              <div
+                                className="outline-subtle h-full w-full rounded-full"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.8 0.193 60)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                            </div>
+                            <div className="bg-preview-bg shadow-custom flex h-40 w-10 shrink-0 items-center justify-center rounded-full p-2">
+                              <div
+                                className="outline-subtle h-full w-full rounded-full"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.8 0.193 20)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                            </div>
+                            <div className="bg-preview-bg shadow-custom flex h-40 w-10 shrink-0 items-center justify-center rounded-full p-2">
+                              <div
+                                className="outline-subtle h-full w-full rounded-full"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.8 0.193 0)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {"\n"}
+                  <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
+                    {"Color models"}
+                    <span
+                      aria-hidden="true"
+                      className="h-px flex-1 bg-gray-400"
+                    ></span>
+                  </h2>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {"Before being able to understand how "}
+                    <code className="code-inline">{"oklch"}</code>
+                    {
+                      " differs from the other color models, it is important to understand some of the basic color concepts."
+                    }
+                  </p>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "Color models are systems to describe colors. These include "
+                    }
+                    <code className="code-inline">{"rgb"}</code>
+                    {", "}
+                    <code className="code-inline">{"hsl"}</code>
+                    {", "}
+                    <code className="code-inline">{"lch"}</code>
+                    {", "}
+                    <code className="code-inline">{"oklch"}</code>
+                    {
+                      " and more. The model determines how easy it is to manipulate or think about a color."
+                    }
+                  </p>
+                  {"\n"}
+                  <div className="my-8 flex w-full flex-col items-center">
+                    <div className="bg-preview-bg shadow-custom flex w-full flex-col items-center justify-center overflow-hidden rounded-xl">
+                      <div className="bg-gray-background flex h-full w-full p-1">
+                        <div className="border-preview-border bg-preview-bg flex h-full w-full items-center justify-center overflow-hidden rounded-lg border">
+                          <div className="flex w-full flex-wrap items-center justify-center gap-2 px-4 py-16">
+                            <span className="bg-preview-bg shadow-custom font-berkeley-mono text-gray-1200 flex items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none">
+                              {"oklch(0.55 0.18 260)"}
+                            </span>
+                            <span className="bg-preview-bg shadow-custom font-berkeley-mono text-gray-1200 flex items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none">
+                              {"hsl(220 100% 50%)"}
+                            </span>
+                            <span className="bg-preview-bg shadow-custom font-berkeley-mono text-gray-1200 flex items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none">
+                              {"rgb(0, 128, 255)"}
+                            </span>
+                            <span className="bg-preview-bg shadow-custom font-berkeley-mono text-gray-1200 flex items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none">
+                              {"lch(60% 60 260)"}
+                            </span>
+                            <span className="bg-preview-bg shadow-custom font-berkeley-mono text-gray-1200 flex items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none">
+                              {"lab(50 -10 -50)"}
+                            </span>
+                            <span className="bg-preview-bg shadow-custom font-berkeley-mono text-gray-1200 flex items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none">
+                              {"color(xyz 0.18 0.19 0.6)"}
+                            </span>
+                            <span className="bg-preview-bg shadow-custom font-berkeley-mono text-gray-1200 flex items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none">
+                              {"#1E90FF"}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {"\n"}
+                  <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
+                    {"Gamut"}
+                    <span
+                      aria-hidden="true"
+                      className="h-px flex-1 bg-gray-400"
+                    ></span>
+                  </h2>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "Gamut is a playing field where the model lives and defines what colors are possible. Common gamuts include sRGB, the web default, and Display-P3 which is used on modern devices."
+                    }
+                  </p>
+                  {"\n"}
+                  <div className="my-8 flex w-full flex-col items-center">
+                    <div className="bg-preview-bg shadow-custom flex w-full flex-col items-center justify-center overflow-hidden rounded-xl">
+                      <div className="bg-gray-background flex h-full w-full p-1">
+                        <div className="border-preview-border bg-preview-bg flex h-full w-full items-center justify-center overflow-hidden rounded-lg border py-16">
+                          <div className="relative flex aspect-square w-full max-w-[320px] items-center justify-center">
+                            <img
+                              alt="Gamut"
+                              width="1000"
+                              height="1000"
+                              decoding="async"
+                              style={{ color: "transparent" } as CSSProperties}
+                              src="/oklch/color-wheel.avif"
+                            />
+                            <div className="absolute top-14 right-1 flex items-center justify-center gap-2">
+                              <span className="flex h-0.5 w-16 items-center justify-center rounded-full bg-gray-600 dark:bg-gray-400"></span>
+                              <span className="bg-preview-bg shadow-custom font-berkeley-mono flex items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none">
+                                {"Display-P3"}
+                              </span>
+                            </div>
+                            <div className="absolute right-2 bottom-44 flex items-center justify-center gap-2">
+                              <span className="flex h-0.5 w-16 items-center justify-center rounded-full bg-gray-600 dark:bg-gray-400"></span>
+                              <span className="bg-preview-bg shadow-custom font-berkeley-mono flex items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none">
+                                {"sRGB"}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-4 flex w-full items-center justify-center text-center">
+                      <a
+                        className="hover:text-gray-1200 text-sm text-gray-900 transition-colors duration-150 ease-out"
+                        href="https://en.wikipedia.org/wiki/CIE_1931_color_space"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        {"CIE 1931 xy chromaticity diagram"}
+                      </a>
+                    </div>
+                  </div>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "There is a lot more nuance when you get into color spaces. They don’t just define a gamut, but also things like the white point and transfer function."
+                    }
+                  </p>
+                  {"\n"}
+                  <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
+                    {"Structure"}
+                    <span
+                      aria-hidden="true"
+                      className="h-px flex-1 bg-gray-400"
+                    ></span>
+                  </h2>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    <code className="code-inline">{"oklch"}</code>
+                    {", same as "}
+                    <code className="code-inline">{"lch"}</code>
+                    {
+                      ", consists of three values: Lightness, Chroma and Hue. The difference between the two is the underlying color space that the color model uses, which in case of OKLCH, is "
+                    }
+                    <a
+                      className="hover:text-gray-1200 hover:decoration-gray-1200 underline decoration-gray-900 underline-offset-3 transition-colors duration-200 ease-out"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href="https://en.wikipedia.org/wiki/Oklab_color_space"
+                    >
+                      {"OKLab"}
+                    </a>
+                    {"."}
+                  </p>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "Lightness - Controls color brightness. Measured in values between 0 and 1 or percentage ranging from 0% to 100%."
+                    }
+                  </p>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "Chroma - Controls intensity of the color, similar to saturation."
+                    }
+                  </p>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "Hue - Controls the hue, measured in degrees ranging from 0 to 360."
+                    }
+                  </p>
+                  {"\n"}
+                  <div className="my-8 flex w-full flex-col items-center">
+                    <div
+                      className="bg-preview-bg shadow-custom flex w-full flex-col items-center justify-center overflow-hidden rounded-xl"
+                      style={{ height: "240px" } as CSSProperties}
+                    >
+                      <div className="bg-gray-background flex h-full w-full p-1">
+                        <div className="border-preview-border bg-preview-bg flex h-full w-full items-center justify-center overflow-hidden rounded-lg border">
+                          <div className="bg-preview-bg font-berkeley-mono shadow-custom mb-8 flex gap-2 rounded-full px-4 py-2 select-none sm:px-6 sm:py-3 dark:bg-gray-100">
+                            <span className="text-gray-1200 text-center text-lg font-medium sm:text-4xl">
+                              {"oklch"}
+                            </span>
+                            <span className="text-gray-1200 text-center text-lg font-medium sm:text-4xl">
+                              {"("}
+                            </span>
+                            <div className="flex items-center gap-8">
+                              <div className="relative flex flex-col items-center justify-center gap-2">
+                                <span className="text-gray-1200 text-center text-lg font-medium sm:text-4xl">
+                                  {"0.5"}
+                                </span>
+                                <div className="absolute -bottom-18 flex flex-col items-center justify-center gap-2">
+                                  <span className="flex h-8 w-0.5 items-center justify-center rounded-full bg-gray-900"></span>
+                                  <span className="bg-preview-bg shadow-custom mr-16 flex items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none sm:mr-0 dark:bg-gray-100">
+                                    {"Lightness"}
+                                  </span>
+                                </div>
+                              </div>
+                              <div className="relative flex flex-col items-center justify-center gap-2">
+                                <span className="text-gray-1200 text-center text-lg font-medium sm:text-4xl">
+                                  {"0.2"}
+                                </span>
+                                <div className="absolute -bottom-18 flex flex-col items-center justify-center gap-2">
+                                  <span className="flex h-8 w-0.5 items-center justify-center rounded-full bg-gray-900"></span>
+                                  <span className="bg-preview-bg shadow-custom flex items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none dark:bg-gray-100">
+                                    {"Chroma"}
+                                  </span>
+                                </div>
+                              </div>
+                              <div className="relative flex flex-col items-center justify-center gap-2">
+                                <span className="text-gray-1200 text-center text-lg font-medium sm:text-4xl">
+                                  {"40"}
+                                </span>
+                                <div className="absolute -bottom-18 flex flex-col items-center justify-center gap-2">
+                                  <span className="flex h-8 w-0.5 items-center justify-center rounded-full bg-gray-900"></span>
+                                  <span className="bg-preview-bg shadow-custom ml-8 flex items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none sm:ml-0 dark:bg-gray-100">
+                                    {"Hue"}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <span className="text-gray-1200 text-center text-lg font-medium sm:text-4xl">
+                              {")"}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {"\n"}
+                  <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
+                    {"Consistent brightness"}
+                    <span
+                      aria-hidden="true"
+                      className="h-px flex-1 bg-gray-400"
+                    ></span>
+                  </h2>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "Let’s say you want to create a couple of buttons and you want each one to have a different color. The usual workflow with other color models would be defining the first color and then handpicking others to match it."
+                    }
+                  </p>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {"With "}
+                    <code className="code-inline">{"oklch"}</code>
+                    {
+                      ", you can use the same lightness value for all of them and only change hue. That way you create colors that look and feel the same."
+                    }
+                  </p>
+                  {"\n"}
+                  <div className="my-8 flex w-full flex-col items-center">
+                    <BrightnessDemo />
+                  </div>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {"You can do the same thing with color models like "}
+                    <code className="code-inline">{"hsl"}</code>
+                    {
+                      ", but as you can see above, the colors don’t look uniform. Some are lighter, some darker, some pop more and some less."
+                    }
+                  </p>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {"This is one of the major advantages of "}
+                    <code className="code-inline">{"oklch"}</code>
+                    {
+                      " over other color models. Creating perceptually uniform color palettes and working with them is very easy."
+                    }
+                  </p>
+                  {"\n"}
+                  <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
+                    {"Predictable shades"}
+                    <span
+                      aria-hidden="true"
+                      className="h-px flex-1 bg-gray-400"
+                    ></span>
+                  </h2>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "It also works the other way around, where you can change the lightness value to create various color shades and there is no hue or saturation drift unlike in other color modes."
+                    }
+                  </p>
+                  {"\n"}
+                  <div className="my-8 flex w-full flex-col items-center">
+                    <div
+                      className="bg-preview-bg shadow-custom flex w-full flex-col items-center justify-center overflow-hidden rounded-xl"
+                      style={{ height: "240px" } as CSSProperties}
+                    >
+                      <div className="bg-gray-background flex h-full w-full p-1">
+                        <div className="border-preview-border bg-preview-bg flex h-full w-full items-center justify-center overflow-hidden rounded-lg border">
+                          <div className="flex flex-col items-center justify-center gap-4">
+                            <div className="font-berkeley-mono flex h-10 w-24 items-center justify-center rounded-full border border-gray-400 bg-gray-200 py-1 font-medium select-none sm:hidden">
+                              {"OKLCH"}
+                            </div>
+                            <div className="flex items-center justify-center gap-1 rounded-full border border-gray-400 p-1 shadow-xs">
+                              <div className="font-berkeley-mono hidden h-10 w-24 items-center justify-center rounded-full border border-gray-400 bg-gray-200 py-1 font-medium select-none sm:flex">
+                                {"OKLCH"}
+                              </div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.25 0.18 260)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.35 0.18 260)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.45 0.18 260)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.55 0.18 260)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.65 0.18 260)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.75 0.18 260)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.85 0.18 260)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "oklch(0.92 0.18 260)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                            </div>
+                            <div className="font-berkeley-mono flex h-10 w-24 items-center justify-center rounded-full border border-gray-400 bg-gray-200 py-1 font-medium select-none sm:hidden">
+                              {"HSL"}
+                            </div>
+                            <div className="flex items-center justify-center gap-1 rounded-full border border-gray-400 p-1 shadow-xs">
+                              <div className="font-berkeley-mono hidden h-10 w-24 items-center justify-center rounded-full border border-gray-400 bg-gray-200 py-1 font-medium select-none sm:flex">
+                                {"HSL"}
+                              </div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "hsl(220 100% 25%)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "hsl(220 100% 35%)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "hsl(220 100% 45%)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "hsl(220 100% 55%)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "hsl(220 100% 65%)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "hsl(220 100% 75%)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "hsl(220 100% 85%)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                              <div
+                                className="outline-subtle relative size-8 rounded-full sm:size-10"
+                                style={
+                                  {
+                                    backgroundColor: "hsl(220 100% 92%)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {"In the example above, you can see that the "}
+                    <code className="code-inline">{"oklch"}</code>
+                    {
+                      " colors maintain consistent blueness across all of the shades, while in the "
+                    }
+                    <code className="code-inline">{"hsl"}</code>
+                    {
+                      " example, the lighter shades drift to purple and the darker ones muddy out towards grayish."
+                    }
+                  </p>
+                  {"\n"}
+                  <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
+                    {"Gradients"}
+                    <span
+                      aria-hidden="true"
+                      className="h-px flex-1 bg-gray-400"
+                    ></span>
+                  </h2>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {"The way gradients work in "}
+                    <code className="code-inline">{"oklch"}</code>
+                    {
+                      " is pretty different compared to other color models. In other color models, gradients are calculated in red, green, and blue values, which often leads to muddy midpoints and uneven brightness."
+                    }
+                  </p>
+                  {"\n"}
+                  <div className="my-8 flex w-full flex-col items-center">
+                    <div
+                      className="bg-preview-bg shadow-custom flex w-full flex-col items-center justify-center overflow-hidden rounded-xl p-1"
+                      style={{ height: "240px" } as CSSProperties}
+                    >
+                      <div className="flex h-full w-full items-center justify-center gap-1">
+                        <div className="flex h-full w-full flex-col items-center justify-center gap-1 rounded-xl">
+                          <span className="font-berkeley-mono text-gray-1200 w-full px-2 font-medium uppercase">
+                            {"srgb"}
+                          </span>
+                          <div
+                            className="outline-subtle relative h-full w-full rounded-xl"
+                            style={
+                              {
+                                background:
+                                  "linear-gradient(in srgb, #ff00ff, #00ff00)",
+                              } as CSSProperties
+                            }
+                          ></div>
+                        </div>
+                        <div className="flex h-full w-full flex-col items-center justify-center gap-1 rounded-xl">
+                          <span className="font-berkeley-mono text-gray-1200 w-full px-2 font-medium uppercase">
+                            {"oklab"}
+                          </span>
+                          <div
+                            className="outline-subtle relative h-full w-full rounded-xl"
+                            style={
+                              {
+                                background:
+                                  "linear-gradient(in oklab, #ff00ff, #00ff00)",
+                              } as CSSProperties
+                            }
+                          ></div>
+                        </div>
+                        <div className="flex h-full w-full flex-col items-center justify-center gap-1 rounded-xl">
+                          <span className="font-berkeley-mono text-gray-1200 w-full px-2 font-medium uppercase">
+                            {"oklch"}
+                          </span>
+                          <div
+                            className="outline-subtle relative h-full w-full rounded-xl"
+                            style={
+                              {
+                                background:
+                                  "linear-gradient(in oklch, #ff00ff, #00ff00)",
+                              } as CSSProperties
+                            }
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {"In "}
+                    <code className="code-inline">{"oklch"}</code>
+                    {
+                      ", the math follows lightness, chroma, and hue. In the example above you can see that the starting and ending points are the same but the colors the gradient passes through are quite different."
+                    }
+                  </p>
+                  {"\n"}
+                  <div className="my-8 flex w-full flex-col items-center">
+                    <div className="bg-preview-bg shadow-custom flex w-full flex-col items-center justify-center overflow-hidden rounded-xl">
+                      <div className="bg-gray-background flex h-full w-full p-1">
+                        <div className="border-preview-border bg-preview-bg flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg border">
+                          <div className="flex h-full w-full items-center justify-center px-4 pt-16 pb-8">
+                            <div className="relative aspect-square w-full max-w-60 rounded-full border-2 border-dashed border-gray-400">
+                              <span className="absolute top-1/2 left-1/2 h-full w-0.5 -translate-x-1/2 -translate-y-1/2 bg-blue-500"></span>
+                              <div
+                                className="absolute -inset-0.5 rounded-full border-2 border-red-500"
+                                style={
+                                  {
+                                    clipPath:
+                                      "polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%)",
+                                  } as CSSProperties
+                                }
+                              ></div>
+                              <span className="bg-preview-bg shadow-custom font-berkeley-mono absolute top-1/2 -right-9 flex w-18 -translate-y-1/2 items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none">
+                                {"Yellow"}
+                              </span>
+                              <span className="bg-preview-bg shadow-custom font-berkeley-mono absolute top-1/2 -left-9 z-(--z-above) flex w-18 -translate-y-1/2 items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none">
+                                {"Blue"}
+                              </span>
+                              <span className="bg-preview-bg shadow-custom font-berkeley-mono absolute -top-4 left-1/2 z-(--z-above) flex w-18 -translate-x-1/2 items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none">
+                                {"Green"}
+                              </span>
+                              <span className="bg-preview-bg shadow-custom font-berkeley-mono absolute right-1/2 -bottom-4 left-1/2 z-(--z-above) flex w-18 -translate-x-1/2 items-center justify-center rounded-full px-3 py-1 text-sm font-medium select-none">
+                                {"Red"}
+                              </span>
+                            </div>
+                          </div>
+                          <div className="flex w-full items-center justify-center gap-4 py-8">
+                            <div className="font-berkeley-mono flex items-center justify-center gap-2">
+                              {"OKLCH"}
+                              <span className="h-2 w-8 rounded-full bg-red-500"></span>
+                            </div>
+                            <div className="font-berkeley-mono flex items-center justify-center gap-2">
+                              {"OKLAB & SRGB"}
+                              <span className="h-2 w-8 rounded-full bg-blue-500"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "This can be a double edged sword. While some gradients might look smoother, you might also see colors that you’ve never defined. This is because hue in "
+                    }
+                    <code className="code-inline">{"oklch"}</code>
+                    {" is circular and gradients can take unexpected detours."}
+                  </p>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {"To avoid this, many tools use "}
+                    <code className="code-inline">{"oklab"}</code>
+                    {
+                      " for gradients instead, because it interpolates in a straight line and gives more consistent results."
+                    }
+                  </p>
+                  {"\n"}
+                  <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
+                    {"Color space support"}
+                    <span
+                      aria-hidden="true"
+                      className="h-px flex-1 bg-gray-400"
+                    ></span>
+                  </h2>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "The sRGB gamut can’t reach a lot of colors that modern screens can show. In "
+                    }
+                    <code className="code-inline">{"oklch"}</code>
+                    {
+                      " you can write colors that are only possible to render on a screen that supports Display-P3 colors."
+                    }
+                  </p>
+                  {"\n"}
+                  <div className="my-8 flex w-full flex-col items-center">
+                    <div
+                      className="bg-preview-bg shadow-custom flex w-full flex-col items-center justify-center overflow-hidden rounded-xl"
+                      style={{ height: "400px" } as CSSProperties}
+                    >
+                      <div className="flex h-full w-full items-center justify-center gap-1 p-1">
+                        <div className="flex h-full w-full flex-col items-center gap-1 rounded-xl">
+                          <span className="font-berkeley-mono text-gray-1200 w-full px-2 font-medium select-none">
+                            {"sRGB"}
+                          </span>
+                          <div
+                            className="outline-subtle relative h-full w-full rounded-xl"
+                            style={
+                              { backgroundColor: "#ff0022" } as CSSProperties
+                            }
+                          ></div>
+                          <div
+                            className="outline-subtle relative h-full w-full rounded-xl"
+                            style={
+                              { backgroundColor: "#00fc15" } as CSSProperties
+                            }
+                          ></div>
+                          <div
+                            className="outline-subtle relative h-full w-full rounded-xl"
+                            style={
+                              { backgroundColor: "#ffe000" } as CSSProperties
+                            }
+                          ></div>
+                        </div>
+                        <div className="flex h-full w-full flex-col items-center gap-1 rounded-xl">
+                          <span className="font-berkeley-mono text-gray-1200 w-full px-2 font-medium select-none">
+                            {"Display-P3"}
+                          </span>
+                          <div
+                            className="outline-subtle relative h-full w-full rounded-xl"
+                            style={
+                              {
+                                backgroundColor: "oklch(0.6471 0.296 26.47)",
+                              } as CSSProperties
+                            }
+                          ></div>
+                          <div
+                            className="outline-subtle relative h-full w-full rounded-xl"
+                            style={
+                              {
+                                backgroundColor: "oklch(0.85 0.3601 145.06)",
+                              } as CSSProperties
+                            }
+                          ></div>
+                          <div
+                            className="outline-subtle relative h-full w-full rounded-xl"
+                            style={
+                              {
+                                backgroundColor: "oklch(0.903 0.216 101)",
+                              } as CSSProperties
+                            }
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "If your display supports Display-P3, you will see the right colors more vivid than the left ones. If your display only supports sRGB, the colors should look nearly identical, as the browser maps the out of gamut color back inside the sRGB gamut."
+                    }
+                  </p>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "Keep in mind that grays are identical in sRGB and Display-P3, so there would be no difference there."
+                    }
+                  </p>
+                  {"\n"}
+                  <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
+                    {"Maximum chroma"}
+                    <span
+                      aria-hidden="true"
+                      className="h-px flex-1 bg-gray-400"
+                    ></span>
+                  </h2>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    <code className="code-inline">{"oklch"}</code>
+                    {
+                      " can also define more colors than any real screen can show. It can specify values that don’t fit inside any actual gamut like sRGB or Display-P3."
+                    }
+                  </p>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {"Let’s take this color as an example color: "}
+                    <code className="code-inline">{"oklch(0.7 0.4 40)"}</code>
+                    {
+                      ". It has a very high chroma value and it could mathematically exist but in practice it lies outside of any real display’s gamut."
+                    }
+                  </p>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "When this color is used, it will get clipped or mapped to the nearest representable color inside the gamut."
+                    }
+                  </p>
+                  {"\n"}
+                  <figure data-rehype-pretty-code-figure="">
+                    <pre
+                      className="tab-4 bg-preview-bg font-berkeley-mono shadow-custom **:font-berkeley-mono my-8 w-full overflow-x-auto rounded-xl py-4 text-[13px]"
+                      tabIndex={0}
+                      data-language="css"
+                      data-theme="pierre-dark-vibrant pierre-light-vibrant"
+                    >
+                      <code
+                        data-language="css"
+                        data-theme="pierre-dark-vibrant pierre-light-vibrant"
+                        style={{ display: "grid" } as CSSProperties}
+                      >
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"@"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.994741 0.445201 0.573499)",
+                                "--shiki-light":
+                                  "color(display-p3 0.834880 0.207921 0.387456)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"layer"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.980392 0.980392 0.980392)",
+                                "--shiki-light":
+                                  "color(display-p3 0.039216 0.039216 0.039216)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" base "}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"{"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"  :"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.327292 0.790977 0.995660)",
+                                "--shiki-light":
+                                  "color(display-p3 0.327292 0.790977 0.995660)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"root"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" {"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.327292 0.790977 0.995660)",
+                                "--shiki-light":
+                                  "color(display-p3 0.327292 0.790977 0.995660)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"    color"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {":"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.615613 0.445256 1.000000)",
+                                "--shiki-light":
+                                  "color(display-p3 0.391345 0.215644 0.853560)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" oklch"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"("}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.452682 0.814110 0.989434)",
+                                "--shiki-light":
+                                  "color(display-p3 0.246852 0.642335 0.817202)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"0.7"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.452682 0.814110 0.989434)",
+                                "--shiki-light":
+                                  "color(display-p3 0.246852 0.642335 0.817202)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" 0.4"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.452682 0.814110 0.989434)",
+                                "--shiki-light":
+                                  "color(display-p3 0.246852 0.642335 0.817202)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" 40"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {");"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"  }"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"}"}
+                          </span>
+                        </span>
+                      </code>
+                    </pre>
+                  </figure>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "Generally you don’t want this to happen, as the clipped color can often look very different from the defined one."
+                    }
+                  </p>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "Therefore, there is a concept of a maximum chroma value, which calculates the maximum chroma that a display can show based on the lightness, hue and the selected gamut."
+                    }
+                  </p>
+                  {"\n"}
+                  <div className="my-8 flex w-full flex-col items-center">
+                    <ChromaDemo />
+                    <div className="mt-4 flex w-full items-center justify-center text-center">
+                      <span className="text-sm text-gray-900 select-none">
+                        {
+                          "The solid line is sRGB, the dashed line is Display P3."
+                        }
+                      </span>
+                    </div>
+                  </div>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {
+                      "The bright band is every hue at one lightness. The lines mark how much chroma each gamut can reach there, and everything above them gets clipped. Move the lightness and watch the reachable range change shape."
+                    }
+                  </p>
+                  {"\n"}
+                  <h2 className="text-gray-1200 mt-16 mb-3 flex w-full items-center gap-3 font-[550] sm:mt-20">
+                    {"Browser support & fallbacks"}
+                    <span
+                      aria-hidden="true"
+                      className="h-px flex-1 bg-gray-400"
+                    ></span>
+                  </h2>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    <code className="code-inline">{"oklch"}</code>
+                    {" colors were introduced in "}
+                    <a
+                      className="hover:text-gray-1200 hover:decoration-gray-1200 underline decoration-gray-900 underline-offset-3 transition-colors duration-200 ease-out"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href="https://www.w3.org/TR/css-color-4/"
+                    >
+                      {"CSS Color Module Level 4"}
+                    </a>
+                    {" and they are well supported across all modern browsers."}
+                  </p>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {"However, there are still some surfaces where "}
+                    <code className="code-inline">{"oklch"}</code>
+                    {
+                      " colors are not supported such as outdated browsers. In case you are worried about this, you can add fallbacks and use the "
+                    }
+                    <code className="code-inline">{"@supports"}</code>
+                    {" directive in CSS."}
+                  </p>
+                  {"\n"}
+                  <figure data-rehype-pretty-code-figure="">
+                    <pre
+                      className="tab-4 bg-preview-bg font-berkeley-mono shadow-custom **:font-berkeley-mono my-8 w-full overflow-x-auto rounded-xl py-4 text-[13px]"
+                      tabIndex={0}
+                      data-language="css"
+                      data-theme="pierre-dark-vibrant pierre-light-vibrant"
+                    >
+                      <code
+                        data-language="css"
+                        data-theme="pierre-dark-vibrant pierre-light-vibrant"
+                        style={{ display: "grid" } as CSSProperties}
+                      >
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"@"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.994741 0.445201 0.573499)",
+                                "--shiki-light":
+                                  "color(display-p3 0.834880 0.207921 0.387456)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"layer"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.980392 0.980392 0.980392)",
+                                "--shiki-light":
+                                  "color(display-p3 0.039216 0.039216 0.039216)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" base "}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"{"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"  :"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.327292 0.790977 0.995660)",
+                                "--shiki-light":
+                                  "color(display-p3 0.327292 0.790977 0.995660)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"root"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" {"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.450980 0.450980 0.450980)",
+                                "--shiki-light":
+                                  "color(display-p3 0.450980 0.450980 0.450980)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"    /* sRGB hex */"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 1.000000 0.688063 0.418777)",
+                                "--shiki-light":
+                                  "color(display-p3 0.854172 0.502144 0.209646)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"    --color-gray-50"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {":"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 1.000000 0.868456 0.454295)",
+                                "--shiki-light":
+                                  "color(display-p3 0.883654 0.721037 0.210874)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" #fcfcfc"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {";"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 1.000000 0.688063 0.418777)",
+                                "--shiki-light":
+                                  "color(display-p3 0.854172 0.502144 0.209646)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"    --color-gray-100"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {":"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 1.000000 0.868456 0.454295)",
+                                "--shiki-light":
+                                  "color(display-p3 0.883654 0.721037 0.210874)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" #f9f9f9"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {";"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 1.000000 0.688063 0.418777)",
+                                "--shiki-light":
+                                  "color(display-p3 0.854172 0.502144 0.209646)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"    --color-gray-200"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {":"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 1.000000 0.868456 0.454295)",
+                                "--shiki-light":
+                                  "color(display-p3 0.883654 0.721037 0.210874)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" #f0f0f0"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {";"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line=""> </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.980392 0.980392 0.980392)",
+                                "--shiki-light":
+                                  "color(display-p3 0.039216 0.039216 0.039216)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"    @supports ("}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.327292 0.790977 0.995660)",
+                                "--shiki-light":
+                                  "color(display-p3 0.327292 0.790977 0.995660)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"color"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {":"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.615613 0.445256 1.000000)",
+                                "--shiki-light":
+                                  "color(display-p3 0.391345 0.215644 0.853560)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" oklch"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"("}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.452682 0.814110 0.989434)",
+                                "--shiki-light":
+                                  "color(display-p3 0.246852 0.642335 0.817202)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"0"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.452682 0.814110 0.989434)",
+                                "--shiki-light":
+                                  "color(display-p3 0.246852 0.642335 0.817202)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" 0"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.452682 0.814110 0.989434)",
+                                "--shiki-light":
+                                  "color(display-p3 0.246852 0.642335 0.817202)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" 0"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {")"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.980392 0.980392 0.980392)",
+                                "--shiki-light":
+                                  "color(display-p3 0.039216 0.039216 0.039216)",
+                              } as CSSProperties
+                            }
+                          >
+                            {") {"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.450980 0.450980 0.450980)",
+                                "--shiki-light":
+                                  "color(display-p3 0.450980 0.450980 0.450980)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"      /* OKLCH */"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 1.000000 0.688063 0.418777)",
+                                "--shiki-light":
+                                  "color(display-p3 0.854172 0.502144 0.209646)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"      --color-gray-50"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {":"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.615613 0.445256 1.000000)",
+                                "--shiki-light":
+                                  "color(display-p3 0.391345 0.215644 0.853560)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" oklch"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"("}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.452682 0.814110 0.989434)",
+                                "--shiki-light":
+                                  "color(display-p3 0.246852 0.642335 0.817202)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"0.991"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.452682 0.814110 0.989434)",
+                                "--shiki-light":
+                                  "color(display-p3 0.246852 0.642335 0.817202)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" 0"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.452682 0.814110 0.989434)",
+                                "--shiki-light":
+                                  "color(display-p3 0.246852 0.642335 0.817202)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" 0"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {");"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 1.000000 0.688063 0.418777)",
+                                "--shiki-light":
+                                  "color(display-p3 0.854172 0.502144 0.209646)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"      --color-gray-100"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {":"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.615613 0.445256 1.000000)",
+                                "--shiki-light":
+                                  "color(display-p3 0.391345 0.215644 0.853560)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" oklch"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"("}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.452682 0.814110 0.989434)",
+                                "--shiki-light":
+                                  "color(display-p3 0.246852 0.642335 0.817202)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"0.982"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.452682 0.814110 0.989434)",
+                                "--shiki-light":
+                                  "color(display-p3 0.246852 0.642335 0.817202)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" 0"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.452682 0.814110 0.989434)",
+                                "--shiki-light":
+                                  "color(display-p3 0.246852 0.642335 0.817202)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" 0"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {");"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 1.000000 0.688063 0.418777)",
+                                "--shiki-light":
+                                  "color(display-p3 0.854172 0.502144 0.209646)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"      --color-gray-200"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {":"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.615613 0.445256 1.000000)",
+                                "--shiki-light":
+                                  "color(display-p3 0.391345 0.215644 0.853560)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" oklch"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"("}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.452682 0.814110 0.989434)",
+                                "--shiki-light":
+                                  "color(display-p3 0.246852 0.642335 0.817202)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"0.955"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.452682 0.814110 0.989434)",
+                                "--shiki-light":
+                                  "color(display-p3 0.246852 0.642335 0.817202)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" 0"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.452682 0.814110 0.989434)",
+                                "--shiki-light":
+                                  "color(display-p3 0.246852 0.642335 0.817202)",
+                              } as CSSProperties
+                            }
+                          >
+                            {" 0"}
+                          </span>
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {");"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"    }"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                                "--shiki-light":
+                                  "color(display-p3 0.388235 0.388235 0.388235)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"  }"}
+                          </span>
+                        </span>
+                        {"\n"}
+                        <span data-line="">
+                          <span
+                            style={
+                              {
+                                "--shiki-dark":
+                                  "color(display-p3 0.980392 0.980392 0.980392)",
+                                "--shiki-light":
+                                  "color(display-p3 0.039216 0.039216 0.039216)",
+                              } as CSSProperties
+                            }
+                          >
+                            {"}"}
+                          </span>
+                        </span>
+                      </code>
+                    </pre>
+                  </figure>
+                  {"\n"}
+                  <p className="text-text-paragraph w-full [&+p]:mt-6">
+                    {"This way the browser uses "}
+                    <code className="code-inline">{"oklch"}</code>
+                    {
+                      " if the syntax is supported, otherwise it falls back to sRGB. Keep in mind that this doesn’t magically change the colors. If an "
+                    }
+                    <code className="code-inline">{"oklch"}</code>
+                    {
+                      " color fits inside the sRGB gamut, it will look the same as the equivalent hex color."
+                    }
+                  </p>
+                </article>
+                <footer className="mt-16 flex w-full max-w-173 items-center justify-between gap-2 sm:mt-20">
+                  <a
+                    className="text-gray-1100 hover:text-gray-1200 hover:decoration-gray-1100 font-[450] underline decoration-gray-600 underline-offset-3 transition-colors duration-200 ease-out"
+                    href="https://oklch.fyi/index.md"
+                  >
+                    {"index.md"}
+                  </a>
+                  <a
+                    aria-label="Jakub Krehel on X (opens in a new tab)"
+                    className="text-gray-1000 hover:text-gray-1200 transition-colors duration-200 ease-out"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://x.com/jakubkrehel"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="h-auto w-20 stroke-current"
+                      fill="none"
+                      height="213"
+                      viewBox="0 0 198 213"
+                      width="198"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.5785 114.757C16.0363 114.578 17.4751 113.352 23.4771 105.739M23.4771 105.739C25.3742 103.333 27.7273 100.289 30.6493 96.4383C41.1635 82.5824 59.125 56.105 71.3517 37.1063C83.5784 18.1076 89.1773 7.132 92.105 2.70171C95.0328 -1.72858 95.1197 0.719076 85.7474 31.8606C80.077 50.7016 70.9432 80.0185 62.2114 107.571M23.4771 105.739C21.0524 105.616 18.8051 105.504 16.8272 105.412C5.90867 104.902 3.27464 104.975 2.04803 114.35C0.821424 123.725 0.453302 141.899 2.14637 158.606C5.35676 190.286 8.0168 208.433 11.6745 210.928C13.2354 211.993 15.037 212 16.8374 211.243C20.6211 209.651 24.7554 206.82 27.8296 202.893C30.2548 199.794 34.2614 193.853 46.6991 155.871C50.9815 142.794 56.5108 125.558 62.2114 107.571M23.4771 105.739C34.4371 106.298 49.0237 107.1 58.764 107.476C59.941 107.521 61.0896 107.553 62.2114 107.571M62.2114 107.571C83.4138 107.911 94.9979 103.462 106.454 98.3212C108.889 97.2289 111.293 95.9939 113.639 94.668M113.639 94.668C120.516 90.7813 126.896 86.113 132.08 81.9647M113.639 94.668C119.557 90.2909 126.251 85.826 132.08 81.9647M113.639 94.668C108.471 98.4896 103.895 102.244 101.002 105.472C91.2173 116.387 87.4545 125.949 87.0955 128.452C86.936 129.563 88.3656 130.309 89.4112 130.309C91.6113 130.311 101.173 118.694 114.419 104.432C118.663 99.8616 119.255 102.092 119.866 103.474C120.961 105.95 123.743 106.858 126.621 107.393C133.214 108.618 139.429 105.473 145.622 105.328C146.813 105.914 147.432 107.179 147.941 108.634C148.45 110.089 148.829 111.695 150.574 115.355M132.08 81.9647C139.365 76.1347 144.289 71.3317 144.913 71.1688C150.889 69.6084 143.006 74.7258 132.08 81.9647ZM191.67 118.955C191.957 118.894 192.245 118.834 193.085 118.772C193.926 118.711 195.311 118.65 196.739 118.588"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="3"
+                      ></path>
+                    </svg>
+                  </a>
+                </footer>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+  )
+}
