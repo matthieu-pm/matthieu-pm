@@ -546,6 +546,15 @@ export function Inspirations({ children }: { children: ReactNode }) {
                 aria-hidden="true"
               />
             </a>
+            <a href="https://www.designeer.xyz/">
+              Inspired by Designeer{" "}
+              <HugeiconsIcon
+                icon={ArrowUpRight01Icon}
+                size={14}
+                strokeWidth={1.4}
+                aria-hidden="true"
+              />
+            </a>
           </div>
           <div className={styles.footerActions}>
             <a href="#top">
