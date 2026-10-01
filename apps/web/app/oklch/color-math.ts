@@ -58,7 +58,7 @@ function hslLinearRgb(hue: number, saturation: number, lightness: number) {
   })
 }
 
-/** Preserve the swatch hue and use the most colorful tint with readable contrast. */
+/** Invert background lightness, preserving its hue and enough contrast to read. */
 export function contrastingText(model: "oklch" | "hsl", lightness: number, hue: number) {
   const isOklch = model === "oklch"
   const background = luminance(isOklch
@@ -77,15 +77,18 @@ export function contrastingText(model: "oklch" | "hsl", lightness: number, hue: 
         / (Math.min(background, foreground) + 0.05),
     }
   }
-  // Begin with visible pastel/deep colors; move toward the extremes only as needed.
-  const lightStart = isOklch ? 0.86 : 0.82
-  const darkStart = isOklch ? 0.3 : 0.18
-  for (let step = 0; step <= 40; step++) {
-    const progress = step / 40
-    const light = tint(lightStart + (1 - lightStart) * progress)
-    const dark = tint(darkStart * (1 - progress))
-    const best = light.contrast >= dark.contrast ? light : dark
-    if (best.contrast >= 4.5 || step === 40) return best.color
+  const inverted = 1 - lightness
+  const opposite = tint(inverted)
+  if (opposite.contrast >= 4.5) return opposite.color
+
+  // Find the closest readable lightness instead of selecting a preset text color.
+  const endpoint = tint(1).contrast >= tint(0).contrast ? 1 : 0
+  let unreadable = inverted
+  let readable = endpoint
+  for (let step = 0; step < 24; step++) {
+    const candidate = (unreadable + readable) / 2
+    if (tint(candidate).contrast >= 4.5) readable = candidate
+    else unreadable = candidate
   }
-  return "white"
+  return tint(readable).color
 }
