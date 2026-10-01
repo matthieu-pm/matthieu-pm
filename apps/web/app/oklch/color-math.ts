@@ -42,53 +42,12 @@ export function rgbByte(linear: number) {
   return Math.round(Math.max(0, Math.min(1, encoded)) * 255)
 }
 
-function luminance(channels: readonly number[]) {
-  const [r = 0, g = 0, b = 0] = channels.map((channel) => Math.max(0, Math.min(1, channel)))
-  return 0.2126 * r + 0.7152 * g + 0.0722 * b
-}
-
-function hslLinearRgb(hue: number, saturation: number, lightness: number) {
-  const amplitude = saturation * Math.min(lightness, 1 - lightness)
-  return [0, 8, 4].map((offset) => {
-    const k = (offset + hue / 30) % 12
-    const channel = lightness - amplitude * Math.max(-1, Math.min(k - 3, 9 - k, 1))
-    return channel <= 0.04045
-      ? channel / 12.92
-      : ((channel + 0.055) / 1.055) ** 2.4
-  })
-}
-
-/** Invert background lightness, preserving its hue and enough contrast to read. */
+/** Keep the swatch hue, switching from light to dark text at 40% slider lightness. */
 export function contrastingText(model: "oklch" | "hsl", lightness: number, hue: number) {
-  const isOklch = model === "oklch"
-  const background = luminance(isOklch
-    ? linearRgb(lightness, 0.16, hue)
-    : hslLinearRgb(hue, 1, lightness))
-  const tint = (value: number) => {
-    const chroma = Math.min(0.1, maximumChroma(value, hue, "srgb"))
-    const foreground = luminance(isOklch
-      ? linearRgb(value, chroma, hue)
-      : hslLinearRgb(hue, 1, value))
-    return {
-      color: isOklch
-        ? `oklch(${value} ${chroma} ${hue})`
-        : `hsl(${hue} 100% ${value * 100}%)`,
-      contrast: (Math.max(background, foreground) + 0.05)
-        / (Math.min(background, foreground) + 0.05),
-    }
-  }
-  const inverted = 1 - lightness
-  const opposite = tint(inverted)
-  if (opposite.contrast >= 4.5) return opposite.color
-
-  // Find the closest readable lightness instead of selecting a preset text color.
-  const endpoint = tint(1).contrast >= tint(0).contrast ? 1 : 0
-  let unreadable = inverted
-  let readable = endpoint
-  for (let step = 0; step < 24; step++) {
-    const candidate = (unreadable + readable) / 2
-    if (tint(candidate).contrast >= 4.5) readable = candidate
-    else unreadable = candidate
-  }
-  return tint(readable).color
+  const textLightness = lightness < 0.4
+    ? 1 - lightness / 2
+    : (1 - lightness) / 2
+  if (model === "hsl") return `hsl(${hue} 100% ${textLightness * 100}%)`
+  const chroma = Math.min(0.1, maximumChroma(textLightness, hue, "srgb"))
+  return `oklch(${textLightness} ${chroma} ${hue})`
 }
