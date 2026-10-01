@@ -1,5 +1,6 @@
 /* Reference layout and original vector artwork captured from https://oklch.fyi/. */
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image"
 import type { CSSProperties } from "react"
 import { BrightnessDemo, ChromaDemo } from "./color-demos"
 import { ThemePicker, Feedback, MobileMenu } from "./page-controls"
@@ -9,28 +10,14 @@ export function ReferenceContent() {
       <nav className="text-gray-1200 flex w-full items-center justify-center border-gray-400 bg-transparent px-5 sm:border-b">
         <div className="flex h-(--nav-height) w-full items-center justify-between">
           <a aria-label="Home" className="flex items-center" href="/oklch">
-            <svg
-              aria-label="Logo"
-              className="text-gray-1200 size-8"
-              fill="none"
-              height="189"
-              role="graphics-symbol"
-              viewBox="0 0 198 189"
-              width="198"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M119.4 0C135.134 0.000120179 150.703 5.80892 162.489 17.5918C174.167 29.2665 181.079 45.7285 181.86 65.3975L181.861 65.3984L181.862 65.4307L181.895 66.3506V66.3701L181.896 66.375V66.3896L181.896 66.4053V66.4258L181.914 67.1436L181.915 67.1885L181.916 67.2373L181.931 68.2432C181.949 70.4647 181.879 72.6692 181.734 74.8545C192.162 89.4487 197.565 106.224 197.565 122.806V122.817L197.56 123.631L197.561 123.647C197.359 141.329 190.814 157.684 178.327 169.642C165.863 181.578 148.733 187.949 129.376 188.146H129.365L128.462 188.149L128.458 188.15H128.453C111.508 188.15 96.7142 183.105 84.502 174.726C64.5178 178.995 43.123 178.815 22.3486 172.648C12.9501 169.858 7.59459 159.978 10.3838 150.581L10.3887 150.565L10.3916 150.557L10.5117 150.169L10.5146 150.159L10.5186 150.149L10.5195 150.145C12.3682 144.45 16.8453 140.309 22.1943 138.663C8.99577 128.709 0.190897 113.792 0.00292969 96.1943V96.1836L0 95.6309V95.6201C0 73.2533 11.1034 56.1425 27.2246 45.3203C37.2969 38.5589 49.1567 34.3057 61.4746 32.1387C75.6921 11.2138 97.2961 0.000205814 119.4 0Z"
-                fill="currentColor"
-              ></path>
-              <path
-                className="stroke-gray-100"
-                d="M27.4 155.633C91.915 174.783 165.912 126.685 164.152 66.8825C163.197 34.425 142.125 17.75 119.4 17.75C92.0725 17.75 62.355 41.9725 62.355 93.3325C62.355 131.225 86.9175 170.4 128.452 170.4C160.23 170.4 179.815 150.055 179.815 122.805C179.815 87.9175 148.115 48.13 82.095 48.13C47.95 48.13 17.75 64.1075 17.75 95.62C17.75 127.133 60.685 150.197 108.11 121.387"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                strokeWidth="11.5"
-              ></path>
-            </svg>
+            <Image
+              className="oklch-logo"
+              src="/logos/oklch-icon.webp"
+              alt=""
+              width={32}
+              height={32}
+              aria-hidden="true"
+            />
           </a>
           <div className="hidden items-center gap-2 md:flex">
             <ThemePicker />
@@ -1019,7 +1006,7 @@ export function ReferenceContent() {
                             {"srgb"}
                           </span>
                           <div
-                            className="outline-subtle relative h-full w-full rounded-xl"
+                            className="outline-subtle relative h-full w-full rounded-lg"
                             style={
                               {
                                 background:
@@ -1033,7 +1020,7 @@ export function ReferenceContent() {
                             {"oklab"}
                           </span>
                           <div
-                            className="outline-subtle relative h-full w-full rounded-xl"
+                            className="outline-subtle relative h-full w-full rounded-lg"
                             style={
                               {
                                 background:
@@ -1047,7 +1034,7 @@ export function ReferenceContent() {
                             {"oklch"}
                           </span>
                           <div
-                            className="outline-subtle relative h-full w-full rounded-xl"
+                            className="outline-subtle relative h-full w-full rounded-lg"
                             style={
                               {
                                 background:
@@ -1158,19 +1145,19 @@ export function ReferenceContent() {
                             {"sRGB"}
                           </span>
                           <div
-                            className="outline-subtle relative h-full w-full rounded-xl"
+                            className="outline-subtle relative h-full w-full rounded-lg"
                             style={
                               { backgroundColor: "#ff0022" } as CSSProperties
                             }
                           ></div>
                           <div
-                            className="outline-subtle relative h-full w-full rounded-xl"
+                            className="outline-subtle relative h-full w-full rounded-lg"
                             style={
                               { backgroundColor: "#00fc15" } as CSSProperties
                             }
                           ></div>
                           <div
-                            className="outline-subtle relative h-full w-full rounded-xl"
+                            className="outline-subtle relative h-full w-full rounded-lg"
                             style={
                               { backgroundColor: "#ffe000" } as CSSProperties
                             }
@@ -1181,7 +1168,7 @@ export function ReferenceContent() {
                             {"Display-P3"}
                           </span>
                           <div
-                            className="outline-subtle relative h-full w-full rounded-xl"
+                            className="outline-subtle relative h-full w-full rounded-lg"
                             style={
                               {
                                 backgroundColor: "oklch(0.6471 0.296 26.47)",
@@ -1189,7 +1176,7 @@ export function ReferenceContent() {
                             }
                           ></div>
                           <div
-                            className="outline-subtle relative h-full w-full rounded-xl"
+                            className="outline-subtle relative h-full w-full rounded-lg"
                             style={
                               {
                                 backgroundColor: "oklch(0.85 0.3601 145.06)",
@@ -1197,7 +1184,7 @@ export function ReferenceContent() {
                             }
                           ></div>
                           <div
-                            className="outline-subtle relative h-full w-full rounded-xl"
+                            className="outline-subtle relative h-full w-full rounded-lg"
                             style={
                               {
                                 backgroundColor: "oklch(0.903 0.216 101)",
@@ -2312,38 +2299,16 @@ export function ReferenceContent() {
                     }
                   </p>
                 </article>
-                <footer className="mt-16 flex w-full max-w-173 items-center justify-between gap-2 sm:mt-20">
-                  <a
-                    className="text-gray-1100 hover:text-gray-1200 hover:decoration-gray-1100 font-[450] underline decoration-gray-600 underline-offset-3 transition-colors duration-200 ease-out"
-                    href="https://oklch.fyi/index.md"
-                  >
-                    {"index.md"}
-                  </a>
-                  <a
-                    aria-label="Jakub Krehel on X (opens in a new tab)"
-                    className="text-gray-1000 hover:text-gray-1200 transition-colors duration-200 ease-out"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    href="https://x.com/jakubkrehel"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className="h-auto w-20 stroke-current"
-                      fill="none"
-                      height="213"
-                      viewBox="0 0 198 213"
-                      width="198"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M15.5785 114.757C16.0363 114.578 17.4751 113.352 23.4771 105.739M23.4771 105.739C25.3742 103.333 27.7273 100.289 30.6493 96.4383C41.1635 82.5824 59.125 56.105 71.3517 37.1063C83.5784 18.1076 89.1773 7.132 92.105 2.70171C95.0328 -1.72858 95.1197 0.719076 85.7474 31.8606C80.077 50.7016 70.9432 80.0185 62.2114 107.571M23.4771 105.739C21.0524 105.616 18.8051 105.504 16.8272 105.412C5.90867 104.902 3.27464 104.975 2.04803 114.35C0.821424 123.725 0.453302 141.899 2.14637 158.606C5.35676 190.286 8.0168 208.433 11.6745 210.928C13.2354 211.993 15.037 212 16.8374 211.243C20.6211 209.651 24.7554 206.82 27.8296 202.893C30.2548 199.794 34.2614 193.853 46.6991 155.871C50.9815 142.794 56.5108 125.558 62.2114 107.571M23.4771 105.739C34.4371 106.298 49.0237 107.1 58.764 107.476C59.941 107.521 61.0896 107.553 62.2114 107.571M62.2114 107.571C83.4138 107.911 94.9979 103.462 106.454 98.3212C108.889 97.2289 111.293 95.9939 113.639 94.668M113.639 94.668C120.516 90.7813 126.896 86.113 132.08 81.9647M113.639 94.668C119.557 90.2909 126.251 85.826 132.08 81.9647M113.639 94.668C108.471 98.4896 103.895 102.244 101.002 105.472C91.2173 116.387 87.4545 125.949 87.0955 128.452C86.936 129.563 88.3656 130.309 89.4112 130.309C91.6113 130.311 101.173 118.694 114.419 104.432C118.663 99.8616 119.255 102.092 119.866 103.474C120.961 105.95 123.743 106.858 126.621 107.393C133.214 108.618 139.429 105.473 145.622 105.328C146.813 105.914 147.432 107.179 147.941 108.634C148.45 110.089 148.829 111.695 150.574 115.355M132.08 81.9647C139.365 76.1347 144.289 71.3317 144.913 71.1688C150.889 69.6084 143.006 74.7258 132.08 81.9647ZM191.67 118.955C191.957 118.894 192.245 118.834 193.085 118.772C193.926 118.711 195.311 118.65 196.739 118.588"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="3"
-                      ></path>
-                    </svg>
-                  </a>
+                <footer className="mt-16 flex w-full max-w-173 items-center justify-end sm:mt-20">
+                  <span className="oklch-signature-frame">
+                    <Image
+                      className="oklch-signature-image"
+                      src="/images/signature-matthieu.webp"
+                      alt="Matthieu Duchatellier signature"
+                      width={220}
+                      height={213}
+                    />
+                  </span>
                 </footer>
               </div>
             </section>

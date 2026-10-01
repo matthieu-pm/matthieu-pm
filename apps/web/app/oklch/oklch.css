@@ -351,3 +351,41 @@
     transition: none !important;
   }
 }
+
+.oklch-page .oklch-logo {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.oklch-page .oklch-signature-frame {
+  position: relative;
+  width: 180px;
+  height: 56px;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+.oklch-page .oklch-signature-image {
+  position: absolute;
+  top: -106px;
+  left: -20px;
+  width: 220px;
+  height: auto;
+  max-width: none;
+  mix-blend-mode: multiply;
+}
+.oklch-page.dark .oklch-signature-image {
+  filter: invert(1);
+  mix-blend-mode: screen;
+}
+@media (max-width: 680px) {
+  .oklch-page .oklch-signature-frame {
+    width: 132px;
+    height: 48px;
+  }
+  .oklch-page .oklch-signature-image {
+    top: -83px;
+    left: -19px;
+    width: 170px;
+  }
+}

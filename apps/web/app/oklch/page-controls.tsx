@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 import {
   useEffect,
   useRef,
@@ -206,7 +208,14 @@ export function MobileMenu() {
       >
         <div className="oklch-mobile-header">
           <a href="/oklch" aria-label="Home" onClick={close}>
-            <ReferenceIcon name="Logo" />
+            <Image
+              className="oklch-logo"
+              src="/logos/oklch-icon.webp"
+              alt=""
+              width={32}
+              height={32}
+              aria-hidden="true"
+            />
           </a>
           <button
             className="oklch-menu-toggle is-close"

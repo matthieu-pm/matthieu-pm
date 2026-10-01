@@ -41,3 +41,42 @@ export function rgbByte(linear: number) {
     linear <= 0.0031308 ? 12.92 * linear : 1.055 * linear ** (1 / 2.4) - 0.055
   return Math.round(Math.max(0, Math.min(1, encoded)) * 255)
 }
+
+function luminance(channels: readonly number[]) {
+  const [r = 0, g = 0, b = 0] = channels.map((channel) => Math.max(0, Math.min(1, channel)))
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b
+}
+
+function hslLinearRgb(hue: number, saturation: number, lightness: number) {
+  const amplitude = saturation * Math.min(lightness, 1 - lightness)
+  return [0, 8, 4].map((offset) => {
+    const k = (offset + hue / 30) % 12
+    const channel = lightness - amplitude * Math.max(-1, Math.min(k - 3, 9 - k, 1))
+    return channel <= 0.04045
+      ? channel / 12.92
+      : ((channel + 0.055) / 1.055) ** 2.4
+  })
+}
+
+/** Choose the higher-contrast tint of the swatch's own hue. */
+export function contrastingText(model: "oklch" | "hsl", lightness: number, hue: number) {
+  const isOklch = model === "oklch"
+  const background = luminance(isOklch
+    ? linearRgb(lightness, 0.16, hue)
+    : hslLinearRgb(hue, 1, lightness))
+  const tint = (value: number) => ({
+    color: isOklch
+      ? `oklch(${value} 0.005 ${hue})`
+      : `hsl(${hue} 70% ${value * 100}%)`,
+    luminance: luminance(isOklch
+      ? linearRgb(value, 0.005, hue)
+      : hslLinearRgb(hue, 0.7, value)),
+  })
+  const light = tint(0.995)
+  const dark = tint(isOklch ? 0.05 : 0.005)
+  const contrast = (value: number) =>
+    (Math.max(background, value) + 0.05) / (Math.min(background, value) + 0.05)
+  return contrast(light.luminance) >= contrast(dark.luminance)
+    ? light.color
+    : dark.color
+}
