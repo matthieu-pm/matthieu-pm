@@ -605,17 +605,13 @@
   font-size: 12px;
 }
 .footerIdentity {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
   border-right: 1px dashed var(--line);
   padding: 32px var(--pad);
 }
 .footerActions {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 20px;
   padding: 32px var(--pad);
 }

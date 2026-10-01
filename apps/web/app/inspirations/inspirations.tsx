@@ -546,6 +546,8 @@ export function Inspirations({ children }: { children: ReactNode }) {
                 aria-hidden="true"
               />
             </a>
+          </div>
+          <div className={styles.footerActions}>
             <a href="https://www.designeer.xyz/">
               Inspired by Designeer{" "}
               <HugeiconsIcon
@@ -555,8 +557,6 @@ export function Inspirations({ children }: { children: ReactNode }) {
                 aria-hidden="true"
               />
             </a>
-          </div>
-          <div className={styles.footerActions}>
             <a href="#top">
               Back to top{" "}
               <HugeiconsIcon
