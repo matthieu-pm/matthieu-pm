@@ -21,6 +21,10 @@ export function BrightnessDemo() {
                     model === "oklch"
                       ? `oklch(${lightness / 100} 0.16 ${hue})`
                       : `hsl(${hue} 100% ${lightness}%)`,
+                  color:
+                    model === "oklch"
+                      ? `oklch(${lightness <= 60 ? 0.96 : 0.22} 0.035 ${hue})`
+                      : `hsl(${hue} 70% ${lightness < 30 || (hue === 250 && lightness < 65) ? 95 : 15}%)`,
                 }}
               >
                 {model}
