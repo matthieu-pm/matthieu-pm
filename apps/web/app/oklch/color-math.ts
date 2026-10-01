@@ -45,9 +45,9 @@ export function rgbByte(linear: number) {
 /** Keep the swatch hue, switching from light to dark text at 40% slider lightness. */
 export function contrastingText(model: "oklch" | "hsl", lightness: number, hue: number) {
   const textLightness = lightness < 0.4
-    ? 1 - lightness / 2
-    : (1 - lightness) / 2
+    ? 1 - lightness
+    : ((1 - lightness) / 0.6) * 0.3
   if (model === "hsl") return `hsl(${hue} 100% ${textLightness * 100}%)`
-  const chroma = Math.min(0.1, maximumChroma(textLightness, hue, "srgb"))
+  const chroma = Math.min(0.16, maximumChroma(textLightness, hue, "srgb"))
   return `oklch(${textLightness} ${chroma} ${hue})`
 }
