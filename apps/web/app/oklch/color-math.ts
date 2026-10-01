@@ -58,25 +58,34 @@ function hslLinearRgb(hue: number, saturation: number, lightness: number) {
   })
 }
 
-/** Choose the higher-contrast tint of the swatch's own hue. */
+/** Preserve the swatch hue and use the most colorful tint with readable contrast. */
 export function contrastingText(model: "oklch" | "hsl", lightness: number, hue: number) {
   const isOklch = model === "oklch"
   const background = luminance(isOklch
     ? linearRgb(lightness, 0.16, hue)
     : hslLinearRgb(hue, 1, lightness))
-  const tint = (value: number) => ({
-    color: isOklch
-      ? `oklch(${value} 0.005 ${hue})`
-      : `hsl(${hue} 70% ${value * 100}%)`,
-    luminance: luminance(isOklch
-      ? linearRgb(value, 0.005, hue)
-      : hslLinearRgb(hue, 0.7, value)),
-  })
-  const light = tint(0.995)
-  const dark = tint(isOklch ? 0.05 : 0.005)
-  const contrast = (value: number) =>
-    (Math.max(background, value) + 0.05) / (Math.min(background, value) + 0.05)
-  return contrast(light.luminance) >= contrast(dark.luminance)
-    ? light.color
-    : dark.color
+  const tint = (value: number) => {
+    const chroma = Math.min(0.1, maximumChroma(value, hue, "srgb"))
+    const foreground = luminance(isOklch
+      ? linearRgb(value, chroma, hue)
+      : hslLinearRgb(hue, 1, value))
+    return {
+      color: isOklch
+        ? `oklch(${value} ${chroma} ${hue})`
+        : `hsl(${hue} 100% ${value * 100}%)`,
+      contrast: (Math.max(background, foreground) + 0.05)
+        / (Math.min(background, foreground) + 0.05),
+    }
+  }
+  // Begin with visible pastel/deep colors; move toward the extremes only as needed.
+  const lightStart = isOklch ? 0.86 : 0.82
+  const darkStart = isOklch ? 0.3 : 0.18
+  for (let step = 0; step <= 40; step++) {
+    const progress = step / 40
+    const light = tint(lightStart + (1 - lightStart) * progress)
+    const dark = tint(darkStart * (1 - progress))
+    const best = light.contrast >= dark.contrast ? light : dark
+    if (best.contrast >= 4.5 || step === 40) return best.color
+  }
+  return "white"
 }
