@@ -238,12 +238,7 @@ export default function Page() {
               <small>AI-powered MCQ exam practice</small>
             </span>
           </a>
-          <a
-            className={styles.projectCard}
-            href="https://oklch.sh"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <Link className={styles.projectCard} href="/oklch">
             <span
               className={`${styles.projectMark} ${styles.projectVisualMark}`}
               aria-hidden="true"
@@ -260,7 +255,7 @@ export default function Page() {
               <strong>oklch.sh</strong>
               <small>A guide to OKLCH colors.</small>
             </span>
-          </a>
+          </Link>
           <Link className={styles.projectCard} href="/inspirations">
             <span
               className={`${styles.projectMark} ${styles.projectVisualMark}`}
