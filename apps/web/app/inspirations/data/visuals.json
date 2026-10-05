@@ -39,6 +39,13 @@
     "id": "type",
     "items": [
       {
+        "description": "Four variable typefaces with italics, free for personal and commercial use.",
+        "href": "https://www.timeless.co/type",
+        "icon": "/inspirations/catalogues/timeless-type-icon.webp",
+        "name": "Timeless Type Family",
+        "preview": "/inspirations/catalogues/timeless-type-preview.webp"
+      },
+      {
         "description": "High-quality professional fonts free for commercial use.",
         "href": "https://fontshare.com/",
         "icon": "/inspirations/catalogues/a56a38715f9fc2e2.webp",
