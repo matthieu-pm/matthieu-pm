@@ -41,7 +41,7 @@ Use the root sentence-case rules for new headings and labels while preserving li
 
 When adapting a supplied course or research source, preserve the meaning, attribution, limits, and relevant examples. Rewrite substantively when asked to make the text distinct. Do not invent statistics, research findings, or capabilities to strengthen a lesson.
 
-Keep learning feedback specific: explain which detail made a choice useful, incomplete, or misleading. A rewrite score in a local exercise is instructional feedback, not an objective or validated assessment of writing quality. Do not imply an AI service evaluated text when the implementation uses local rules.
+Keep learning feedback specific: explain which detail made a choice useful, incomplete, or misleading. The rewrite exercise lets readers compare their own wording with an example and review criteria; it does not grade their text. Preserve this distinction instead of presenting keyword matches as a writing-quality score. Label fictional research excerpts as practice material.
 
 ## Exercises and state
 

@@ -13,16 +13,16 @@ import {
   GoodOrBad,
   MatchTheAction,
   MicrocopyMap,
-  RewriteScore,
+  RewriteReview,
   ToneInContext,
 } from "../ux-writing-lab"
 import styles from "../article.module.css"
 
 const articles = {
   "ux-writing": {
-    title: "Write the Interface",
+    title: "Write the interface",
     description:
-      "A practical guide to writing clear, useful, and consistent interface copy.",
+      "Learn to write labels, buttons, and messages that help people use your product. Practice with ten short exercises.",
   },
   "ai-design-engineer": {
     title: "From Prompt to Product",
@@ -123,29 +123,21 @@ function UxWritingArticle() {
   return (
     <>
       <section className={styles.prose} aria-labelledby="start-title">
-        <h2 id="start-title">Words are part of the interface.</h2>
+        <h2 id="start-title">Help people take the next step</h2>
         <p>
-          UX writing is writing for the user experience. It covers every word
-          that helps someone understand and use a product: buttons, labels,
-          onboarding, empty states, notifications, tooltips, errors, and more.
+          UX writing helps people understand what a product does and how to use
+          it. A button names an action. A field label explains what to enter. An
+          error message helps someone recover when a task fails.
         </p>
         <p>
-          The goal is not to decorate a screen. It is to put the right words in
-          the right place, at the right time, with the right tone—so the product
-          feels clear, confident, and easy to use.
+          Compare “Submit” with “Save changes.” The second label tells you what
+          will happen. That is the job of interface copy: give people enough
+          information to act with confidence.
         </p>
         <p>
-          That makes it different from marketing copy, which attracts attention,
-          and editorial content, which informs. UX writing supports a task. A
-          content designer works at the wider system level: planning,
-          structuring, governing, and connecting content across the entire
-          experience.
-        </p>
-        <p>
-          The discipline grew from content strategy and the earliest
-          conversational interfaces. Today it extends beyond screens into smart
-          devices, kiosks, voice products, and any experience where language
-          helps a person make a decision.
+          Use this guide to choose clearer labels, write helpful messages, and
+          review a product flow. Try the exercises as you go, or read through
+          first. All examples are for practice.
         </p>
         <div className={styles.ruleList}>
           <p>
@@ -164,11 +156,11 @@ function UxWritingArticle() {
         className={styles.prose}
         aria-labelledby="microcopy-title"
       >
-        <h2 id="microcopy-title">UX writing lives where people act.</h2>
+        <h2 id="microcopy-title">Recognize microcopy</h2>
         <p>
-          Marketing copy earns attention. Editorial content informs. UX writing
-          supports an interaction. It appears in small, contextual pieces of
-          language often called <strong>microcopy</strong>.
+          <strong>Microcopy</strong> is the short text that guides an
+          interaction. Its purpose matters more than its length: a slogan
+          attracts attention, while a password hint helps someone finish a task.
         </p>
         <div
           className={styles.componentCloud}
@@ -179,9 +171,9 @@ function UxWritingArticle() {
             "Empty state",
             "Notification",
             "Tooltip",
-            "Toast",
+            "Success message",
             "Title",
-            "CTA",
+            "Button label",
             "Confirmation",
             "Label",
             "Progress update",
@@ -192,17 +184,16 @@ function UxWritingArticle() {
           ))}
         </div>
         <p>
-          The interface may be a website, an app, a smart device, a chatbot, a
-          kiosk, or a voice assistant. The surface changes; the responsibility
-          does not. The words must help someone know what is happening and what
-          they can do next.
+          These words appear in apps, websites, kiosks, and voice assistants. At
+          each step, ask: what does the person need to know now, and what can
+          they do next?
         </p>
       </section>
 
       <Exercise
         id="find-the-microcopy"
         title="Find the microcopy"
-        introduction="UX writing is defined by where the words live and the job they do."
+        introduction="Choose the examples that help someone use a product. You can select more than one."
       >
         <MicrocopyMap />
       </Exercise>
@@ -212,30 +203,30 @@ function UxWritingArticle() {
         className={styles.prose}
         aria-labelledby="team-title"
       >
-        <h2 id="team-title">Do not wait for the final screen.</h2>
+        <h2 id="team-title">Write while you design</h2>
         <p>
           UX writers work closely with designers, product managers, researchers,
-          developers, support, and marketing. They contribute across the product
-          cycle—not as a final proofreading step.
+          developers, support, and marketing. Start with the user’s goal and
+          write the copy while the flow is still taking shape.
         </p>
         <div className={styles.lifecycle}>
           <article className={styles.infoCard}>
             <span>Discover</span>
-            <p>User interviews, verbatim analysis, UX audits.</p>
+            <p>Listen to users. Collect their words and questions.</p>
           </article>
           <article className={styles.infoCard}>
             <span>Build</span>
-            <p>Prototypes, microcopy, glossary, voice and tone.</p>
+            <p>Write in the prototype. Check each action and state.</p>
           </article>
           <article className={styles.infoCard}>
             <span>Deliver</span>
-            <p>User testing, A/B tests, measurement, iteration.</p>
+            <p>Test understanding. Improve and document the copy.</p>
           </article>
         </div>
         <p>
-          The writer and designer should work in the same file, inspect the same
-          flow, and make decisions together. Space affects wording; wording
-          affects hierarchy. Collaboration is the work, not a handoff around it.
+          Review the flow together. Can someone skip this step? What happens if
+          saving fails? Does “Delete” mean permanent deletion? Agree on the
+          behavior before writing a promise the product cannot keep.
         </p>
       </section>
 
@@ -244,48 +235,40 @@ function UxWritingArticle() {
         className={styles.prose}
         aria-labelledby="principles-title"
       >
-        <h2 id="principles-title">Clear. Concise. Useful.</h2>
+        <h2 id="principles-title">Give every word a job</h2>
         <p>
-          These three principles are the fastest way to assess interface copy.
-          If the words fail one of them, the experience creates friction.
+          Review your draft in four passes. Start with what the person needs,
+          then make the wording shorter, more natural, and easier to understand.
         </p>
         <div className={styles.principles}>
           <div className={styles.infoCard}>
-            <strong>Clear</strong>
-            <small>Use familiar language. Avoid jargon and ambiguity.</small>
+            <strong>Purposeful</strong>
+            <small>Does it help someone decide, act, or recover?</small>
           </div>
           <div className={styles.infoCard}>
             <strong>Concise</strong>
-            <small>Remove filler without removing necessary context.</small>
+            <small>Can you cut words without losing needed context?</small>
           </div>
           <div className={styles.infoCard}>
-            <strong>Useful</strong>
-            <small>
-              Anticipate the next question and show the way forward.
-            </small>
+            <strong>Conversational</strong>
+            <small>Would you say this to someone asking for help?</small>
+          </div>
+          <div className={styles.infoCard}>
+            <strong>Clear</strong>
+            <small>Will people understand what happens next?</small>
           </div>
         </div>
-        <div className={styles.ruleList}>
-          <p>
-            <span>Use active voice</span> Name who does what.
-          </p>
-          <p>
-            <span>Sound natural</span> Write like a calm, helpful person.
-          </p>
-          <p>
-            <span>Plan for translation</span> Avoid wordplay that breaks across
-            languages.
-          </p>
-          <p>
-            <span>Stay consistent</span> One concept should keep one name.
-          </p>
-        </div>
+        <p>
+          Shorter is not always clearer. “File too large” names the problem.
+          “Choose a file under 10 MB” also explains how to fix it. Keep the
+          details someone needs to finish the task.
+        </p>
       </section>
 
       <Exercise
         id="choose-good-over-vague"
-        title="Choose good over vague"
-        introduction="Specific copy reduces uncertainty and makes recovery feel possible."
+        title="Choose a helpful error message"
+        introduction="Compare the messages. Which one explains what to do next?"
       >
         <GoodOrBad />
       </Exercise>
@@ -293,9 +276,9 @@ function UxWritingArticle() {
       <Exercise
         id="replace-the-jargon"
         title="Replace the jargon"
-        introduction="Rewrite the message. Your score rewards plain language, brevity, and a concrete next step."
+        introduction="Rewrite this sign-in error in everyday language. Explain the problem and give a next step."
       >
-        <RewriteScore />
+        <RewriteReview />
       </Exercise>
 
       <section
@@ -303,9 +286,7 @@ function UxWritingArticle() {
         className={styles.prose}
         aria-labelledby="structure-title"
       >
-        <h2 id="structure-title">
-          Make the message understandable at first sight.
-        </h2>
+        <h2 id="structure-title">Put the important words first</h2>
         <p>
           Put the most important information first. Use short sentences, active
           voice, and familiar words. If a technical term is essential, explain
@@ -313,20 +294,20 @@ function UxWritingArticle() {
         </p>
         <div className={styles.ruleList}>
           <p>
-            <span>Lead with the point</span> Do not make users read the setup
-            before the answer.
+            <span>Lead with the action</span> “To continue, you will need to
+            verify your email” becomes “Verify your email to continue.”
           </p>
           <p>
-            <span>Remove the unneeded</span> Cut repetition, greetings, and
-            filler that delay action.
+            <span>Use active voice</span> “An invitation will be sent by us”
+            becomes “We’ll send an invitation.”
           </p>
           <p>
-            <span>Write for translation</span> Avoid idioms, wordplay, and
-            sentences built around English word order.
+            <span>Use everyday words</span> “Initiate data export” becomes
+            “Export your data.”
           </p>
           <p>
-            <span>Name things once</span> A project should not become a
-            workspace, space, or folder elsewhere.
+            <span>Write for translation</span> “You’re good to go” becomes “Your
+            account is ready.” Avoid idioms and wordplay.
           </p>
         </div>
       </section>
@@ -334,7 +315,7 @@ function UxWritingArticle() {
       <Exercise
         id="keep-one-name"
         title="Keep one name"
-        introduction="Consistency reduces the amount of interface language a user has to learn."
+        introduction="A workspace, project, and space may sound like different things. Keep one name for the same concept."
       >
         <ConsistencyCheck />
       </Exercise>
@@ -344,51 +325,69 @@ function UxWritingArticle() {
         className={styles.prose}
         aria-labelledby="components-title"
       >
-        <h2 id="components-title">
-          Every component asks a different question.
-        </h2>
+        <h2 id="components-title">Match the words to the component</h2>
         <p>
-          A CTA predicts an action. An error helps someone recover. An empty
-          state explains what belongs here. Loading copy manages waiting. Good
-          UX writing begins with the component’s job, not a clever sentence.
+          Start with the question someone has at that moment. What will this
+          button do? Why is this list empty? Did my changes save? Use the
+          component to answer it.
         </p>
         <div className={styles.componentRules}>
           <article className={styles.infoCard}>
-            <strong>CTA</strong>
-            <p>Action + truthful outcome.</p>
+            <strong>Button</strong>
+            <p>
+              Name the action and object: “Save changes” or “Download invoice.”
+            </p>
           </article>
           <article className={styles.infoCard}>
             <strong>Loading</strong>
-            <p>What is happening + whether to wait or act.</p>
+            <p>
+              Describe the current task: “Uploading your file…” Only show
+              progress you can measure.
+            </p>
           </article>
           <article className={styles.infoCard}>
             <strong>Onboarding</strong>
-            <p>Benefit + one concept + visible progress.</p>
+            <p>Explain one useful step: “Choose a language to find lessons.”</p>
           </article>
           <article className={styles.infoCard}>
             <strong>Empty state</strong>
-            <p>What belongs here + why it is empty + first action.</p>
+            <p>
+              Explain what belongs here: “No saved places yet. Save a place to
+              find it here later.”
+            </p>
           </article>
           <article className={styles.infoCard}>
-            <strong>404</strong>
-            <p>What happened + a route to something useful.</p>
+            <strong>Success</strong>
+            <p>
+              Confirm the result: “Changes saved.” Add a next step only if one
+              is needed.
+            </p>
           </article>
           <article className={styles.infoCard}>
             <strong>Error</strong>
-            <p>Specific problem + recovery + alternative exit.</p>
+            <p>
+              Name the problem and a way forward: “Upload failed. Choose a file
+              under 10 MB.”
+            </p>
           </article>
         </div>
         <p>
-          Use progressive disclosure: reveal the minimum needed for the current
-          decision, then offer deeper detail close by. A tooltip cannot rescue a
-          vague label, and onboarding cannot compensate for a confusing product.
+          Put essential instructions beside the action. Give form fields visible
+          labels, and keep requirements outside placeholders that disappear
+          during typing. Offer extra detail when it is useful.
+        </p>
+        <p>
+          For errors, explain the cause only when you know it. Say what was
+          saved or charged only when the product can confirm it. Before a
+          permanent action, state the consequence and name both choices: “Delete
+          draft” and “Keep draft.”
         </p>
       </section>
 
       <Exercise
         id="make-the-cta-tell-the-truth"
-        title="Make the CTA tell the truth"
-        introduction="A button label is a promise about what will happen after the click."
+        title="Name the button’s action"
+        introduction="Choose a label that matches what the button actually does."
       >
         <MatchTheAction />
       </Exercise>
@@ -396,7 +395,7 @@ function UxWritingArticle() {
       <Exercise
         id="build-an-error-message"
         title="Build an error message"
-        introduction="A useful error protects the user’s progress and makes recovery concrete."
+        introduction="Choose the details someone needs after a failed payment. Then review an example message."
       >
         <BuildAnErrorMessage />
       </Exercise>
@@ -406,19 +405,20 @@ function UxWritingArticle() {
         className={styles.prose}
         aria-labelledby="audit-title"
       >
-        <h2 id="audit-title">Treat copy as a product decision.</h2>
+        <h2 id="audit-title">Test the words in the flow</h2>
         <p>
           A UX writing audit reviews a complete journey, not isolated sentences.
           Capture the screen, component, current copy, user goal, issue,
-          proposed change, and evidence. Repeated problems reveal the system
-          work behind the individual fixes.
+          proposed change, and evidence. Fix the problems that prevent someone
+          from finishing before polishing less important wording.
         </p>
         <p>
           Test important language in a prototype with the people who will use
           it. Watch whether they understand the state, predict the action, and
           recover from problems. For high-volume decisions, compare variants
-          with an A/B test and measure the product outcome—not which sentence
-          sounds nicer.
+          with an A/B test. For example, test whether a clearer booking label
+          helps people find a room. Check completed bookings and accidental
+          actions as well as clicks.
         </p>
         <div className={styles.ruleList}>
           <p>
@@ -442,8 +442,8 @@ function UxWritingArticle() {
 
       <Exercise
         id="audit-the-flow"
-        title="Audit the flow"
-        introduction="Look beyond grammar. Find the language problems that block understanding or action."
+        title="Find the copy problems"
+        introduction="Review this error screen. Select every issue that makes it harder to understand or recover."
       >
         <AuditTheFlow />
       </Exercise>
@@ -453,12 +453,13 @@ function UxWritingArticle() {
         className={styles.prose}
         aria-labelledby="research-title"
       >
-        <h2 id="research-title">Borrow language before you invent it.</h2>
+        <h2 id="research-title">Use words your readers recognize</h2>
         <p>
           Good interface language begins with evidence: interviews, support
           conversations, search queries, reviews, usability sessions, and the
           words people already use. Collect repeated phrases and the context in
-          which they appear. That is semantic research.
+          which they appear. Use them to propose labels, then test whether other
+          people understand those labels in the product.
         </p>
         <p>
           A useful persona is not a fictional biography. It captures the user’s
@@ -470,7 +471,7 @@ function UxWritingArticle() {
       <Exercise
         id="find-user-language"
         title="Find the user’s language"
-        introduction="Repeated phrases from research can reveal the label people will recognize fastest."
+        introduction="Read the fictional research excerpts. Choose a label that reflects the words these people use."
       >
         <FindUserLanguage />
       </Exercise>
@@ -480,29 +481,42 @@ function UxWritingArticle() {
         className={styles.prose}
         aria-labelledby="voice-title"
       >
-        <h2 id="voice-title">Your voice stays. Your tone moves.</h2>
+        <h2 id="voice-title">Adjust the tone to the situation</h2>
         <p>
           Voice is the product’s consistent personality. Tone adapts that voice
           to the situation. A celebration can be energetic; a payment problem
-          should be calm. The user’s emotional state decides the volume.
+          should be calm and specific. Consider the person’s goal, likely
+          concerns, and the consequences of the action.
         </p>
-        <blockquote>
+        <div className={styles.ruleList}>
           <p>
-            When you try to speak to everyone, you end up speaking to no one.
+            <span>Routine task</span> Be brief: “Changes saved.”
           </p>
-        </blockquote>
+          <p>
+            <span>First use</span> Explain the benefit: “Save a place to find it
+            before your trip.”
+          </p>
+          <p>
+            <span>Something failed</span> Give a recovery step: “We couldn’t
+            load your places. Try again.”
+          </p>
+          <p>
+            <span>Permanent action</span> State the consequence: “Delete this
+            list? You can’t undo this.”
+          </p>
+        </div>
         <p>
-          Define voice with useful dimensions rather than loose adjectives. For
-          example: direct rather than chatty, warm rather than playful, expert
-          without sounding technical. For each dimension, show what “more” and
-          “less” sound like in real components.
+          Document your voice with examples. If it is clear, warm, and direct,
+          show how those qualities work in a welcome, an error, and a
+          confirmation. Keep humor out of moments when someone may lose work or
+          money.
         </p>
       </section>
 
       <Exercise
         id="tune-the-tone-to-the-moment"
-        title="Tune the tone to the moment"
-        introduction="Keep the same clear, human voice while adjusting the energy to fit the situation."
+        title="Choose a tone that fits"
+        introduction="Try both situations. Choose a message that respects how the person may be feeling."
       >
         <ToneInContext />
       </Exercise>
@@ -512,11 +526,11 @@ function UxWritingArticle() {
         className={styles.prose}
         aria-labelledby="system-title"
       >
-        <h2 id="system-title">Turn good decisions into reusable guidance.</h2>
+        <h2 id="system-title">Document the decisions you repeat</h2>
         <p>
           A content design system is the shared source of truth for interface
-          language. It combines principles with examples teams can apply while
-          designing and shipping—not a PDF that is opened once a year.
+          language. Start with the decisions your team keeps making: which terms
+          to use, how to explain errors, and what each button should say.
         </p>
         <div className={styles.ruleList}>
           <p>
@@ -529,16 +543,17 @@ function UxWritingArticle() {
           </p>
           <p>
             <span>Patterns</span> Guidance for errors, onboarding, empty states,
-            CTAs, and notifications.
+            buttons, and notifications.
           </p>
           <p>
-            <span>Governance</span> Owners, contribution rules, review rhythm,
-            and version history.
+            <span>Maintenance</span> Who reviews changes, when to update the
+            guidance, and where to record decisions.
           </p>
         </div>
         <p>
-          Keep the system relevant by reviewing support requests, store reviews,
-          social conversations, new devices, and emerging interaction patterns.
+          A glossary entry can be simple: “Saved places” means places someone
+          has bookmarked. Use it in navigation and headings; avoid “Repository”
+          for the same feature. Include the reason, an owner, and a review date.
         </p>
       </section>
 
@@ -547,11 +562,12 @@ function UxWritingArticle() {
         className={styles.prose}
         aria-labelledby="inclusive-title"
       >
-        <h2 id="inclusive-title">Make the system clearer for everyone.</h2>
+        <h2 id="inclusive-title">Remove barriers to understanding</h2>
         <p>
           Accessible UX writing uses plain language, descriptive labels, short
           sentences, and context that does not depend on vision, color, or prior
-          knowledge. Inclusivity is not a tone—it is the removal of barriers.
+          knowledge. Check whether someone can understand the task while using a
+          screen reader, reading in a second language, or working in a hurry.
         </p>
         <p>
           Do not communicate meaning through color, position, sound, or imagery
@@ -561,44 +577,44 @@ function UxWritingArticle() {
         </p>
         <div className={styles.ruleList}>
           <p>
-            <span>Reduce choices</span> Hick’s Law: remove or group competing
-            decisions.
+            <span>Name the destination</span> Replace “Click here” with “Read
+            the delivery policy.”
           </p>
           <p>
-            <span>Make targets predictable</span> Fitts’s Law: labels should
-            describe the action precisely.
+            <span>Keep labels visible</span> Use “Email address” as the label
+            and “name@example.com” as an optional example.
           </p>
           <p>
-            <span>Chunk information</span> Miller’s Law: break dense
-            instructions into meaningful groups.
+            <span>Explain the fix</span> Replace “Invalid date” with “Choose a
+            date in the future.”
           </p>
           <p>
-            <span>Use familiar patterns</span> Jakob’s Law: prefer language
-            people already recognize.
+            <span>Include text cues</span> Mark fields “Required” in text, even
+            if you also use color.
           </p>
           <p>
-            <span>Keep hierarchy simple</span> Prägnanz: make the main message
-            and action easy to perceive.
+            <span>Break up instructions</span> Put each action in its own step.
+            Use headings that describe the task.
           </p>
         </div>
         <p>
           Inclusion goes further than technical access. Avoid assumptions about
           gender, relationships, ability, culture, or available resources. Ask
           only for information the task truly needs, and do not encode a
-          “normal” user into labels or defaults.
+          presumed user into labels or defaults. “Emergency contact” leaves room
+          for more relationships than “Husband or wife.”
         </p>
         <p>
           In a voice or conversational interface, language becomes the
-          interface. Design intents, repair paths, confirmations, and contextual
-          responses. The user needs to know what the system understood and how
-          to correct it.
+          interface. Explain what it understood, confirm consequential actions,
+          and let people correct mistakes.
         </p>
       </section>
 
       <Exercise
         id="remove-the-barrier"
         title="Remove the barrier"
-        introduction="Accessible copy communicates the same meaning without relying on a single sense."
+        introduction="Compare two form instructions. Choose the one people can understand without seeing color."
       >
         <AccessibilityPass />
       </Exercise>
@@ -608,12 +624,12 @@ function UxWritingArticle() {
         className={styles.prose}
         aria-labelledby="ai-title"
       >
-        <h2 id="ai-title">Use AI to explore. Keep the judgment.</h2>
+        <h2 id="ai-title">Use AI to draft alternatives</h2>
         <p>
           AI can generate alternatives, challenge a tone, simplify complex text,
-          cluster feedback, or help audit a flow. It works best with a precise
-          brief: user, context, goal, component, constraints, desired format,
-          and examples from your content system.
+          group feedback, or help review a flow. Give it the user’s goal, the
+          product’s actual behavior, the component, and any constraints. Include
+          examples of your voice and preferred terms.
         </p>
         <p>
           Treat every output as a draft. Verify the product behavior, source
@@ -624,11 +640,11 @@ function UxWritingArticle() {
       </section>
 
       <section className={styles.takeaway} aria-labelledby="takeaway-title">
-        <h2 id="takeaway-title">The right words. The right moment.</h2>
+        <h2 id="takeaway-title">Try it on one screen</h2>
         <p>
-          Know the user, the component, the context, and the next action. Write
-          clearly, remove what is unnecessary, and test whether the result truly
-          helps.
+          Choose a screen in your product. Write down what someone needs to do,
+          revise the words that might slow them down, and ask another person
+          what they expect to happen next.
         </p>
       </section>
     </>

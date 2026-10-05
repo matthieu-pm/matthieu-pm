@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useState } from "react"
 import { Alert02Icon, Tick02Icon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 
@@ -11,7 +11,7 @@ const microcopyItems = [
   ["tooltip", "Tooltip", true],
   ["onboarding", "Onboarding step", true],
   ["cta", "Call to action", true],
-  ["blog", "SEO blog post", false],
+  ["blog", "Blog post", false],
   ["ad", "Advertising slogan", false],
 ] as const
 
@@ -89,7 +89,7 @@ export function MicrocopyMap() {
     <div className={styles.lab}>
       <div className={styles.labBody}>
         <p className={styles.prompt}>
-          Select everything a UX writer would shape inside a product.
+          Which examples guide a product interaction? Select all that apply.
         </p>
         <div
           className={styles.selectGrid}
@@ -118,8 +118,8 @@ export function MicrocopyMap() {
         </div>
         <FeedbackSlot visible={checked} correct={correct}>
           {correct
-            ? "Exactly. UX writing lives in the interface and supports a user action."
-            : "Look for words that guide an interaction. Blog posts and ad slogans have different jobs."}
+            ? "Yes. Errors, tooltips, onboarding, and calls to action help people use a product."
+            : "Look for text that helps someone act inside a product. Include errors, tooltips, onboarding, and calls to action."}
         </FeedbackSlot>
       </div>
     </div>
@@ -134,7 +134,8 @@ export function GoodOrBad() {
     <div className={styles.lab}>
       <div className={styles.labBody}>
         <p className={styles.prompt}>
-          A file upload stopped at 92%. Which message helps the user recover?
+          An upload paused when the internet connection dropped. The product can
+          resume it. Which message helps someone continue?
         </p>
         <div className={styles.comparison}>
           <button
@@ -157,37 +158,24 @@ export function GoodOrBad() {
             <span>Option B</span>
             <SelectionMark visible={choice === "good"} />
             <strong>Upload paused</strong>
-            <small>Reconnect to the internet, then resume your upload.</small>
+            <small>
+              Your connection dropped. Reconnect, then resume the upload.
+            </small>
           </button>
         </div>
         <FeedbackSlot visible={choice !== null} correct={correct}>
           {correct
-            ? "Right. It names the state, the cause, and the next step."
-            : "Option A is vague: it hides both the cause and the way forward."}
+            ? "Yes. It explains why the upload paused and gives a recovery step the product supports."
+            : "“Try again later” gives no reason to wait. Here, the person can reconnect and resume."}
         </FeedbackSlot>
       </div>
     </div>
   )
 }
 
-function scoreRewrite(value: string) {
-  const copy = value.trim()
-  if (!copy) return 0
-
-  let score = 20
-  if (copy.length <= 72) score += 20
-  if (/sign.?in|account|email|password/i.test(copy)) score += 20
-  if (/check|try again|reset|use another/i.test(copy)) score += 25
-  if (!/authentication|credentials|unsuccessful|error occurred/i.test(copy))
-    score += 10
-  if (copy.split(/[.!?]+/).filter(Boolean).length <= 2) score += 5
-  return Math.min(score, 100)
-}
-
-export function RewriteScore() {
+export function RewriteReview() {
   const [value, setValue] = useState("")
   const [submitted, setSubmitted] = useState(false)
-  const score = useMemo(() => scoreRewrite(value), [value])
 
   return (
     <div className={styles.lab}>
@@ -197,43 +185,51 @@ export function RewriteScore() {
           <p>Authentication was unsuccessful due to invalid credentials.</p>
         </div>
         <label className={styles.fieldLabel} htmlFor="rewrite">
-          Your version
+          Your sign-in message
         </label>
+        <p className={styles.fieldHint} id="rewrite-hint">
+          The email and password don’t match. Help someone check their details
+          and try again. Limit: 180 characters.
+        </p>
         <textarea
           id="rewrite"
+          aria-describedby="rewrite-hint rewrite-count"
           value={value}
           onChange={(event) => {
             setValue(event.target.value)
             setSubmitted(false)
           }}
-          placeholder="Write a shorter, more useful message…"
           maxLength={180}
         />
         <div className={styles.labActions}>
-          <span>{value.length}/180</span>
+          <span id="rewrite-count">{180 - value.length} characters left</span>
           <button
             type="button"
             onClick={() => setSubmitted(true)}
             disabled={!value.trim()}
           >
-            Score my copy
+            Compare with an example
           </button>
         </div>
-        <div className={styles.scoreSlot}>
-          {submitted && (
-            <div className={styles.scoreResult} role="status">
-              <strong>
-                {score}
-                <span>/100</span>
-              </strong>
-              <p>
-                {score >= 85
-                  ? "Clear, concise, and actionable."
-                  : "Replace technical terms, name the problem, and give one next step."}
-              </p>
-            </div>
-          )}
-        </div>
+        {submitted && (
+          <div className={styles.rewriteReview} role="status">
+            <strong>One possible rewrite</strong>
+            <p>
+              We couldn’t sign you in. Check your email and password, then try
+              again.
+            </p>
+            <p>
+              This names the task, uses familiar words, and gives a next step.
+              Your version can be different. Check that it does those three
+              things without blaming the person or guessing which detail is
+              wrong.
+            </p>
+            <p>
+              This is a self-review exercise. Your text is not automatically
+              graded.
+            </p>
+          </div>
+        )}
       </div>
     </div>
   )
@@ -275,8 +271,10 @@ export function MatchTheAction() {
         </div>
         <FeedbackSlot visible={choice !== null} correct={correct}>
           {correct
-            ? "Correct. The label lowers pressure and describes what actually happens."
-            : "The label should predict the button’s actual behavior."}
+            ? "Yes. “Check availability” describes the search without suggesting that it books a room."
+            : choice === "book"
+              ? "“Book a room” suggests a commitment. This button only checks availability."
+              : "“Continue” hides the next step. “Check availability” tells someone what they will see."}
         </FeedbackSlot>
       </div>
     </div>
@@ -287,7 +285,8 @@ const toneSituations = [
   {
     id: "delay",
     label: "Payment delayed",
-    prompt: "A bank transfer is taking longer than expected.",
+    prompt:
+      "A bank transfer is taking longer than expected. The product will notify the sender when it completes.",
     choices: [
       "Woohoo! Your payment is taking a little adventure.",
       "Your transfer is still processing. We’ll let you know when it’s complete.",
@@ -302,7 +301,7 @@ const toneSituations = [
     choices: [
       "Your activity was recorded successfully.",
       "Something happened.",
-      "30 days in a row—you did it!",
+      "30 days in a row. You did it!",
     ],
     answer: 2,
   },
@@ -324,7 +323,7 @@ export function ToneInContext() {
       <div className={styles.labBody}>
         <div
           className={styles.situationTabs}
-          role="tablist"
+          role="group"
           aria-label="Choose a situation"
           data-selected-index={situationIndex}
         >
@@ -337,8 +336,7 @@ export function ToneInContext() {
           {toneSituations.map((item, index) => (
             <button
               type="button"
-              role="tab"
-              aria-selected={situationIndex === index}
+              aria-pressed={situationIndex === index}
               aria-controls="tone-situation-panel"
               onClick={() => changeSituation(index)}
               key={item.id}
@@ -350,7 +348,6 @@ export function ToneInContext() {
         <div
           className={styles.toneScene}
           id="tone-situation-panel"
-          role="tabpanel"
           key={situation.id}
         >
           <p className={styles.situationPrompt}>{situation.prompt}</p>
@@ -372,8 +369,12 @@ export function ToneInContext() {
         </div>
         <FeedbackSlot visible={choice !== null} correct={correct}>
           {correct
-            ? "That tone fits the user’s emotional state while keeping the brand clear and human."
-            : "Keep the brand voice, but adjust the energy to fit the moment."}
+            ? situation.id === "delay"
+              ? "Yes. It explains the current state and the promised update without making light of someone’s money."
+              : "Yes. It names the achievement and celebrates it without adding a long message."
+            : situation.id === "delay"
+              ? "Someone waiting for money needs a clear status and next step. Jokes or abrupt commands do not help."
+              : "Name the achievement. A 30-day streak deserves more recognition than a generic system confirmation."}
         </FeedbackSlot>
       </div>
     </div>
@@ -409,10 +410,13 @@ export function BuildAnErrorMessage() {
       <div className={styles.labBody}>
         <div className={styles.miniDialog}>
           <span>Card payment failed</span>
-          <p>The order is still in the basket and nothing has been charged.</p>
+          <p>
+            The order is still in the basket and nothing has been charged. The
+            person can try another payment method. The cause is unknown.
+          </p>
         </div>
         <p className={styles.prompt}>
-          Which details belong in the error message?
+          Which details belong in the error message? Select all that apply.
         </p>
         <div
           className={styles.selectGrid}
@@ -441,8 +445,8 @@ export function BuildAnErrorMessage() {
         </div>
         <FeedbackSlot visible={checked} correct={correct}>
           {correct
-            ? "Yes. Explain the state, protect the user’s progress, and give one useful next step."
-            : "Keep information that helps the user understand or recover. Hide internal detail and blame."}
+            ? "For example: “Payment failed. You haven’t been charged, and your order is still in your basket. Try another payment method.”"
+            : "Include what failed, what was saved, and how to recover. The cause is unknown, so don’t guess or assign blame."}
         </FeedbackSlot>
       </div>
     </div>
@@ -513,7 +517,7 @@ export function ConsistencyCheck() {
 }
 
 const auditIssues = [
-  ["vague", "Vague CTA", true],
+  ["vague", "Vague button label", true],
   ["jargon", "Internal jargon", true],
   ["missing", "No next step", true],
   ["length", "Long page title", false],
@@ -545,7 +549,7 @@ export function AuditTheFlow() {
           <span className={styles.auditButton}>Continue</span>
         </div>
         <p className={styles.prompt}>
-          Which problems would you record in a UX writing audit?
+          Which problems affect this screen? Select all that apply.
         </p>
         <div
           className={styles.selectGrid}
@@ -574,8 +578,8 @@ export function AuditTheFlow() {
         </div>
         <FeedbackSlot visible={checked} correct={correct}>
           {correct
-            ? "Good audit. The copy hides the problem, uses system language, and gives an unclear action."
-            : "Audit what changes comprehension or action. The short title is not the problem here."}
+            ? "Yes. “Synchronization exception” is jargon, and “Continue” hides the recovery step. Confirm what the product can do before rewriting."
+            : "Look at the jargon, vague button, and missing recovery step. The title’s length is not the problem."}
         </FeedbackSlot>
       </div>
     </div>
@@ -589,7 +593,10 @@ export function FindUserLanguage() {
   return (
     <div className={styles.lab}>
       <div className={styles.labBody}>
-        <div className={styles.quoteStack} aria-label="User research excerpts">
+        <div
+          className={styles.quoteStack}
+          aria-label="Fictional user research excerpts"
+        >
           <p>“I want to find the places I saved for later.”</p>
           <p>“Where did my saved places go?”</p>
           <p>“I save restaurants before a trip.”</p>
@@ -623,8 +630,8 @@ export function FindUserLanguage() {
         </div>
         <FeedbackSlot visible={choice !== null} correct={correct}>
           {correct
-            ? "Exactly. Repeated user language is usually easier to recognize than an internal product term."
-            : "Return to the users’ own words. They consistently describe the action as saving places."}
+            ? "“Saved places” matches these excerpts. It is a good candidate to test in navigation, not proof that everyone will understand it."
+            : "These people describe saving places. “Saved places” reflects that language more directly."}
         </FeedbackSlot>
       </div>
     </div>

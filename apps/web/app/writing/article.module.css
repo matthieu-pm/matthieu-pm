@@ -145,7 +145,7 @@
 }
 .principles {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   margin-top: 28px;
 }
@@ -445,6 +445,11 @@
   font-size: 13px;
   font-weight: 550;
 }
+.fieldHint {
+  margin-top: var(--lab-space-sm);
+  color: var(--muted);
+  font-size: 14px;
+}
 .lab textarea {
   display: block;
   width: 100%;
@@ -463,6 +468,7 @@
 }
 .labActions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: var(--lab-space-md);
@@ -494,13 +500,9 @@
   cursor: default;
   opacity: 0.4;
 }
-.scoreSlot:empty {
-  display: none;
-}
-.scoreResult {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+.rewriteReview {
+  display: grid;
+  gap: 10px;
   margin-top: var(--lab-space-md);
   padding: 14px;
   border-radius: 11px;
@@ -517,18 +519,12 @@
     transform: translateY(3px);
   }
 }
-.scoreResult strong {
+.rewriteReview strong {
   color: #2f2f2f;
-  font-size: 28px;
-  font-weight: 500;
-  letter-spacing: -0.04em;
+  font-size: 14px;
+  font-weight: 600;
 }
-.scoreResult strong span {
-  color: #999;
-  font-size: 13px;
-  letter-spacing: 0;
-}
-.scoreResult p {
+.rewriteReview p {
   color: #666;
   font-size: 14px;
 }
@@ -949,7 +945,7 @@
   }
   .feedback,
   .selectionMark,
-  .scoreResult,
+  .rewriteReview,
   .toneScene {
     transform: none !important;
     filter: none !important;
