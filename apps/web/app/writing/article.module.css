@@ -188,24 +188,213 @@
 .lifecycle p {
   margin-top: 4px;
 }
-.ruleList {
-  display: grid;
-  gap: 0;
-  margin-top: 24px;
-  border-top: 1px solid var(--line);
+/* Practice examples use real controls inside the article's existing card shell. */
+.copyExample {
+  margin: 28px 0;
 }
-.ruleList p {
-  display: grid;
-  grid-template-columns: 152px 1fr;
-  gap: 14px;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--line);
+.exampleSurface {
+  composes: card from "../card.module.css";
+  padding: 24px;
+}
+.exampleLabel {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+}
+.exampleSurface h3 {
+  font-size: 18px;
+  font-weight: 550;
+  letter-spacing: -0.025em;
+  line-height: 1.35;
+}
+.exampleSurface h3 + p,
+.exampleAfter h3 + p {
+  margin-top: 8px;
   color: var(--muted);
   font-size: 14px;
 }
-.ruleList span {
-  color: #343434;
+.copyExample figcaption {
+  margin-top: 12px;
+  padding-inline: 4px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.exampleSurface label {
+  display: block;
+  font-size: 14px;
   font-weight: 550;
+}
+.exampleSurface label span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+}
+.exampleSurface input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 10px 12px;
+  border: 1px solid #dcdcd8;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+}
+.exampleSurface input::placeholder {
+  color: #777;
+}
+.exampleSurface input:focus-visible,
+.exampleSurface summary:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+.exampleSurface input[aria-invalid="true"] {
+  border-color: #a33d32;
+}
+.exampleSurface .exampleHint {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.exampleHint + label {
+  margin-top: 22px;
+}
+.exampleActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+.exampleActions button {
+  min-height: 40px;
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 10px;
+  background: #242424;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+.exampleActions button:hover {
+  background: #404040;
+}
+.exampleActions span,
+.exampleSurface .exampleStatus {
+  color: var(--muted);
+  font-size: 13px;
+}
+.exampleSurface .exampleStatus:not(:empty) {
+  margin-top: 12px;
+}
+.exampleCollection {
+  margin-top: 28px;
+}
+.exampleChoices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.exampleChoices button {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+}
+.exampleChoices button[aria-pressed="true"] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+}
+.exampleCollection .copyExample {
+  margin-top: 14px;
+}
+.exampleBefore {
+  padding-bottom: 22px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.exampleBefore > span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+.exampleAfter {
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--surface);
+}
+.exampleAfter .exampleLabel {
+  margin-bottom: 8px;
+}
+.messageExamples {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 14px;
+  margin: 28px 0;
+}
+.messageExamples .copyExample {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.messageExamples .exampleSurface {
+  flex: 1;
+  padding: 20px;
+}
+.exampleSurface .exampleConfirmation {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: var(--surface);
+  font-size: 14px;
+}
+.exampleSurface p + .exampleConfirmation {
+  margin: 20px 0;
+}
+.exampleSurface .exampleOwner {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.exampleInstructions {
+  padding-left: 20px;
+  margin: 12px 0 24px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.exampleInstructions li + li {
+  margin-top: 6px;
+}
+.exampleSurface .exampleError {
+  margin-top: 8px;
+  color: #a33d32;
+  font-size: 13px;
+}
+.exampleDetails {
+  margin-top: 22px;
+  font-size: 14px;
+}
+.exampleDetails summary {
+  width: fit-content;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.exampleDetails p {
+  margin-top: 10px;
+  color: var(--muted);
 }
 .componentRules {
   display: grid;
@@ -871,6 +1060,12 @@
 }
 
 @media (max-width: 600px) {
+  .messageExamples {
+    grid-template-columns: 1fr;
+  }
+  .exampleSurface {
+    padding: 20px;
+  }
   .page {
     padding: 40px 20px;
   }
@@ -894,10 +1089,6 @@
   }
   .lifecycle {
     grid-template-columns: 1fr;
-  }
-  .ruleList p {
-    grid-template-columns: 1fr;
-    gap: 3px;
   }
   .componentRules {
     grid-template-columns: 1fr;

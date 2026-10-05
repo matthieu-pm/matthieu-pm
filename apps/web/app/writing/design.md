@@ -20,6 +20,8 @@ Use the 644px column with home/copy-link controls, title, descriptive lead, and 
 
 Keep exercise instructions, controls, and feedback in the same group. Use framed surfaces for interactive practice or a genuine comparison, not every prose section. Each section should answer a new question; avoid repeating the same takeaway in a heading, card, caption, and conclusion.
 
+Teach guidance through concrete interface examples in `ux-writing-examples.tsx`: editable fields, local save confirmations, recovery flows, message previews, and before/after copy. Label practice examples clearly and keep actions local. Avoid table-style label/value rows and horizontal dividers for these lessons.
+
 ## Visual baseline
 
 | Role | Current value |
@@ -67,3 +69,5 @@ Check all three slugs when changing shared CSS or controls. Inspect long heading
 - `article.module.css`: shared typography, layout, surfaces, and exercise styling.
 - `article-controls.tsx`: home navigation and page-link copying.
 - `ux-writing-lab.tsx`: exercise content, state, and evaluation rules.
+
+- `ux-writing-examples.tsx`: illustrative interfaces and local practice flows for the prose sections.

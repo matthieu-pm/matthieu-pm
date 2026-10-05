@@ -16,6 +16,14 @@ import {
   RewriteReview,
   ToneInContext,
 } from "../ux-writing-lab"
+import {
+  SettingsExample,
+  RewriteExamples,
+  RecoveryExample,
+  ToneExamples,
+  ContentPatternExample,
+  AccessibleFormExample,
+} from "../ux-writing-examples"
 import styles from "../article.module.css"
 
 const articles = {
@@ -139,16 +147,7 @@ function UxWritingArticle() {
           review a product flow. Try the exercises as you go, or read through
           first. All examples are for practice.
         </p>
-        <div className={styles.ruleList}>
-          <p>
-            <span>UX writing</span> Shapes the words people use while completing
-            a task.
-          </p>
-          <p>
-            <span>Content design</span> Shapes the content structure, rules, and
-            strategy around that task.
-          </p>
-        </div>
+        <SettingsExample />
       </section>
 
       <section
@@ -292,24 +291,7 @@ function UxWritingArticle() {
           voice, and familiar words. If a technical term is essential, explain
           it where it appears. If it is not essential, replace it.
         </p>
-        <div className={styles.ruleList}>
-          <p>
-            <span>Lead with the action</span> “To continue, you will need to
-            verify your email” becomes “Verify your email to continue.”
-          </p>
-          <p>
-            <span>Use active voice</span> “An invitation will be sent by us”
-            becomes “We’ll send an invitation.”
-          </p>
-          <p>
-            <span>Use everyday words</span> “Initiate data export” becomes
-            “Export your data.”
-          </p>
-          <p>
-            <span>Write for translation</span> “You’re good to go” becomes “Your
-            account is ready.” Avoid idioms and wordplay.
-          </p>
-        </div>
+        <RewriteExamples />
       </section>
 
       <Exercise
@@ -420,24 +402,7 @@ function UxWritingArticle() {
           helps people find a room. Check completed bookings and accidental
           actions as well as clicks.
         </p>
-        <div className={styles.ruleList}>
-          <p>
-            <span>Comprehension</span> Can people explain what the message
-            means?
-          </p>
-          <p>
-            <span>Prediction</span> Can they tell what a button will do before
-            selecting it?
-          </p>
-          <p>
-            <span>Recovery</span> Can they complete the next step without
-            outside help?
-          </p>
-          <p>
-            <span>Consistency</span> Does the flow use the same terms, tone, and
-            patterns?
-          </p>
-        </div>
+        <RecoveryExample />
       </section>
 
       <Exercise
@@ -488,23 +453,7 @@ function UxWritingArticle() {
           should be calm and specific. Consider the person’s goal, likely
           concerns, and the consequences of the action.
         </p>
-        <div className={styles.ruleList}>
-          <p>
-            <span>Routine task</span> Be brief: “Changes saved.”
-          </p>
-          <p>
-            <span>First use</span> Explain the benefit: “Save a place to find it
-            before your trip.”
-          </p>
-          <p>
-            <span>Something failed</span> Give a recovery step: “We couldn’t
-            load your places. Try again.”
-          </p>
-          <p>
-            <span>Permanent action</span> State the consequence: “Delete this
-            list? You can’t undo this.”
-          </p>
-        </div>
+        <ToneExamples />
         <p>
           Document your voice with examples. If it is clear, warm, and direct,
           show how those qualities work in a welcome, an error, and a
@@ -532,24 +481,7 @@ function UxWritingArticle() {
           language. Start with the decisions your team keeps making: which terms
           to use, how to explain errors, and what each button should say.
         </p>
-        <div className={styles.ruleList}>
-          <p>
-            <span>Voice and tone</span> Principles, ranges, and examples for
-            real situations.
-          </p>
-          <p>
-            <span>Glossary</span> Approved terms, avoided terms, definitions,
-            and translations.
-          </p>
-          <p>
-            <span>Patterns</span> Guidance for errors, onboarding, empty states,
-            buttons, and notifications.
-          </p>
-          <p>
-            <span>Maintenance</span> Who reviews changes, when to update the
-            guidance, and where to record decisions.
-          </p>
-        </div>
+        <ContentPatternExample />
         <p>
           A glossary entry can be simple: “Saved places” means places someone
           has bookmarked. Use it in navigation and headings; avoid “Repository”
@@ -575,28 +507,7 @@ function UxWritingArticle() {
           the field with a visible label. Explain errors next to the affected
           input.
         </p>
-        <div className={styles.ruleList}>
-          <p>
-            <span>Name the destination</span> Replace “Click here” with “Read
-            the delivery policy.”
-          </p>
-          <p>
-            <span>Keep labels visible</span> Use “Email address” as the label
-            and “name@example.com” as an optional example.
-          </p>
-          <p>
-            <span>Explain the fix</span> Replace “Invalid date” with “Choose a
-            date in the future.”
-          </p>
-          <p>
-            <span>Include text cues</span> Mark fields “Required” in text, even
-            if you also use color.
-          </p>
-          <p>
-            <span>Break up instructions</span> Put each action in its own step.
-            Use headings that describe the task.
-          </p>
-        </div>
+        <AccessibleFormExample />
         <p>
           Inclusion goes further than technical access. Avoid assumptions about
           gender, relationships, ability, culture, or available resources. Ask
