@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { InspirationSections } from "../inspirations"
 import { catalogues, isCatalogueId, navigation } from "../catalogues"
+import { siteConfig } from "../../site-config"
 
 type Props = { params: Promise<{ category: string }> }
 
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = navigation.find((item) => item.id === category)
   if (!page || !isCatalogueId(category) || category === "inspiration")
     notFound()
-  const title = `${page.label} — Inspirations — Matthieu Duchatellier`
+  const title = `${page.label} — My collection — ${siteConfig.name}`
   const description = catalogues[category]
     .map((section) => section.description)
     .join(" ")
@@ -26,7 +27,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: page.href },
-    openGraph: { type: "website", title, description, url: page.href },
+    openGraph: {
+      type: "website",
+      title,
+      description,
+      url: page.href,
+      images: [
+        {
+          url: siteConfig.socialPreview.path,
+          width: siteConfig.socialPreview.width,
+          height: siteConfig.socialPreview.height,
+          alt: siteConfig.socialPreview.alt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      creator: "@matthieu_pm",
+      images: [siteConfig.socialPreview.path],
+    },
   }
 }
 

@@ -89,6 +89,15 @@
   color: var(--ink);
   font-size: inherit;
   font-style: italic;
+  font-synthesis: style;
+}
+
+.intro strong {
+  font-weight: 600;
+}
+
+.intro strong .emailButton {
+  font-weight: inherit;
 }
 
 .intro a,

@@ -97,7 +97,7 @@ export default function Page() {
               height={14}
               aria-hidden="true"
             />
-            SKEMA
+            <strong>SKEMA</strong>
           </a>{" "}
           and{" "}
           <a
@@ -114,13 +114,15 @@ export default function Page() {
               height={14}
               aria-hidden="true"
             />
-            Politecnico di Milano
-          </a>.
-        </p>
-        <p>
-          I care <em>deeply</em> about craft and building products people enjoy
-          using. I like figuring out what to build, designing how it should
-          work, and bringing it to life in code.
+            <strong>Politecnico di Milano</strong>
+          </a>
+          . I care{" "}
+          <em>
+            <strong>deeply</strong>
+          </em>{" "}
+          about craft and building products people enjoy using. I like figuring
+          out what to build, designing how it should work, and bringing it to
+          life in code.
         </p>
         <p>
           Previously, I worked on growth and marketing at{" "}
@@ -138,7 +140,7 @@ export default function Page() {
               height={14}
               aria-hidden="true"
             />
-            Avico
+            <strong>Avico</strong>
           </a>{" "}
           and{" "}
           <a
@@ -147,23 +149,23 @@ export default function Page() {
             target="_blank"
             rel="noreferrer"
           >
-            other
+            <strong>other</strong>
           </a>{" "}
-          companies.
-        </p>
-        <p>
-          I&apos;m looking for an end-of-study PM or Design Engineer internship
-          starting May 2027. You can reach me at{" "}
+          companies, and I&apos;m looking for an end-of-study PM or Design
+          Engineer internship starting May 2027. You can reach me at{" "}
           <a
             className={styles.socialLink}
             href="https://x.com/matthieu_pm"
             target="_blank"
             rel="noreferrer"
           >
-            @matthieu_pm
+            <strong>@matthieu_pm</strong>
           </a>{" "}
           or via{" "}
-          <EmailCopy />, and explore my code on{" "}
+          <strong>
+            <EmailCopy />
+          </strong>
+          , and explore my code on{" "}
           <a
             className={styles.socialLink}
             href="https://gitlab.com/wondertale-dev"
@@ -178,8 +180,9 @@ export default function Page() {
               height={14}
               aria-hidden="true"
             />
-            GitLab
-          </a>.
+            <strong>GitLab</strong>
+          </a>
+          .
         </p>
       </section>
 
@@ -248,10 +251,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section
-        className={styles.section}
-        aria-labelledby="capabilities-title"
-      >
+      <section className={styles.section} aria-labelledby="capabilities-title">
         <h2 id="capabilities-title">Skills for agents</h2>
         <div className={styles.rowList}>
           {capabilities.map((capability) => (
@@ -272,10 +272,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section
-        className={styles.section}
-        aria-labelledby="writing-title"
-      >
+      <section className={styles.section} aria-labelledby="writing-title">
         <h2 id="writing-title">Writing</h2>
         <div className={styles.rowList}>
           {articles.map((article) => (
@@ -346,10 +343,7 @@ export default function Page() {
               height={16}
               aria-hidden="true"
             />
-            <span
-              className={styles.contactButtonLabel}
-              aria-hidden="true"
-            >
+            <span className={styles.contactButtonLabel} aria-hidden="true">
               {Array.from(contactButtonLabel).map((character, index) => {
                 const visibleCharacter =
                   character === " " ? "\u00A0" : character
@@ -401,11 +395,7 @@ export default function Page() {
 
       <footer className={styles.footer}>
         <nav className={styles.footerSocials} aria-label="Social profiles">
-          <a
-            href="https://x.com/matthieu_pm"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://x.com/matthieu_pm" target="_blank" rel="noreferrer">
             <Image
               className={styles.footerSocialIcon}
               src="/logos/x.webp"
