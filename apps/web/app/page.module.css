@@ -119,7 +119,9 @@
   font-weight: 500;
 }
 
-.intro a {
+.intro a,
+.intro .emailButton {
+  text-decoration-style: wavy;
   text-decoration-color: #c2c2c2;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 3px;
