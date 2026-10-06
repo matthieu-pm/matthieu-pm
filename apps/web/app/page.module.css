@@ -247,49 +247,99 @@
 }
 
 .activityHeading a {
+  position: relative;
+  isolation: isolate;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  margin: -7px -9px;
+  padding: 7px 9px;
+  border-radius: 8px;
   color: var(--muted);
   font-size: 13px;
   text-decoration: none;
+  user-select: none;
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.activityHeading a::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--soft);
+  opacity: 0;
+  transform: scale(0.92);
   transition:
-    color 180ms ease,
+    opacity 160ms ease,
     transform 180ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .activityArrow {
+  position: relative;
+  display: inline-flex;
+  width: 14px;
+  height: 14px;
   flex-shrink: 0;
-  transition: transform 220ms cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+}
+
+.activityArrow svg {
+  flex-shrink: 0;
+  transition:
+    transform 180ms cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 180ms ease;
+}
+
+.activityArrow svg:last-child {
+  position: absolute;
+  inset: 0;
+  transform: translate(-110%, 110%);
+  opacity: 0;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .activityHeading a:hover {
     color: var(--ink);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    transform: translateY(-1px);
   }
 
-  .activityHeading a:hover .activityArrow {
-    transform: translate(2px, -2px);
+  .activityHeading a:hover::before {
+    opacity: 1;
+    transform: scale(1);
+    transition-duration: 220ms;
+  }
+
+  .activityHeading a:hover .activityArrow svg {
+    transition-duration: 260ms;
+  }
+
+  .activityHeading a:hover .activityArrow svg:first-child {
+    transform: translate(110%, -110%);
+    opacity: 0;
+  }
+
+  .activityHeading a:hover .activityArrow svg:last-child {
+    transform: translate(0, 0);
+    opacity: 1;
   }
 }
 
-.activityHeading a:active {
+.activityHeading a:active:not(:focus-visible) {
   transform: scale(0.97);
   transition-duration: 120ms;
 }
 
-.activityHeading a:active .activityArrow {
-  transform: translate(1px, -1px);
-  transition-duration: 120ms;
+.activityHeading a:focus-visible {
+  color: var(--ink);
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }
 
-.activityHeading a:focus-visible {
-  outline: 2px solid var(--ink);
-  outline-offset: 4px;
-  border-radius: 2px;
+.activityHeading a:focus-visible::before {
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
 .activityStatus {
@@ -730,8 +780,17 @@
 
 @media (prefers-reduced-motion: reduce) {
   .activityHeading a,
-  .activityHeading a .activityArrow {
+  .activityHeading a::before,
+  .activityHeading a .activityArrow svg {
     transform: none !important;
+  }
+
+  .activityHeading a .activityArrow svg:first-child {
+    opacity: 1;
+  }
+
+  .activityHeading a .activityArrow svg:last-child {
+    display: none;
   }
 
   .page *,

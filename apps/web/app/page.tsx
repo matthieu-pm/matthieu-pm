@@ -297,13 +297,18 @@ export default function Page() {
           <a href={gitlabProfileUrl} target="_blank" rel="noreferrer">
             <Image src="/logos/gitlab.svg" alt="" width={14} height={14} />
             GitLab
-            <HugeiconsIcon
-              className={styles.activityArrow}
-              icon={ArrowUpRight01Icon}
-              size={14}
-              strokeWidth={1.8}
-              aria-hidden="true"
-            />
+            <span className={styles.activityArrow} aria-hidden="true">
+              <HugeiconsIcon
+                icon={ArrowUpRight01Icon}
+                size={14}
+                strokeWidth={1.8}
+              />
+              <HugeiconsIcon
+                icon={ArrowUpRight01Icon}
+                size={14}
+                strokeWidth={1.8}
+              />
+            </span>
           </a>
         </div>
         <Suspense
