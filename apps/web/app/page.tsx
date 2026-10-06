@@ -182,6 +182,18 @@ export default function Page() {
       <section className={styles.section} aria-labelledby="work-title">
         <h2 id="work-title">Projects</h2>
         <div className={styles.projectGrid}>
+          <Link className={styles.projectCard} href="/inspirations">
+            <span
+              className={`${styles.projectMark} ${styles.projectVisualMark}`}
+              aria-hidden="true"
+            >
+              <InspirationsOrb size={80} interactive={false} />
+            </span>
+            <span>
+              <strong>My collection</strong>
+              <small>Design tools and inspiration</small>
+            </span>
+          </Link>
           <a
             className={styles.projectCard}
             href="https://atlasapp.fr"
@@ -205,18 +217,6 @@ export default function Page() {
               <small>AI-powered exam practice</small>
             </span>
           </a>
-          <Link className={styles.projectCard} href="/inspirations">
-            <span
-              className={`${styles.projectMark} ${styles.projectVisualMark}`}
-              aria-hidden="true"
-            >
-              <InspirationsOrb size={80} interactive={false} />
-            </span>
-            <span>
-              <strong>My collection</strong>
-              <small>Design tools and inspiration</small>
-            </span>
-          </Link>
           <a
             className={styles.projectCard}
             href="https://skema-project-learning.vercel.app/landing/index.html"
