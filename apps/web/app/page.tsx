@@ -202,7 +202,7 @@ export default function Page() {
             </span>
             <span>
               <strong>Atlas</strong>
-              <small>AI-powered MCQ exam practice</small>
+              <small>AI-powered exam practice</small>
             </span>
           </a>
           <Link className={styles.projectCard} href="/inspirations">
@@ -214,7 +214,7 @@ export default function Page() {
             </span>
             <span>
               <strong>My collection</strong>
-              <small>Design tools, references, and resources.</small>
+              <small>Design tools and inspiration</small>
             </span>
           </Link>
           <a
@@ -238,7 +238,7 @@ export default function Page() {
             </span>
             <span>
               <strong>Mimo</strong>
-              <small>One-to-one language learning with a real teacher.</small>
+              <small>One-to-one language tutoring</small>
             </span>
           </a>
         </div>
