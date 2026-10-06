@@ -117,9 +117,7 @@ export default function Page() {
             <strong>Politecnico di Milano</strong>
           </a>
           . I care{" "}
-          <em>
-            <strong>deeply</strong>
-          </em>{" "}
+          <strong>deeply</strong>{" "}
           about craft and building products people enjoy using. I like figuring
           out what to build, designing how it should work, and bringing it to
           life in code.
@@ -152,7 +150,7 @@ export default function Page() {
             <strong>other</strong>
           </a>{" "}
           companies, and I&apos;m looking for an end-of-study PM or Design
-          Engineer internship starting May 2027. You can reach me at{" "}
+          Engineer internship starting June 2027. You can reach me at{" "}
           <a
             className={styles.socialLink}
             href="https://x.com/matthieu_pm"
