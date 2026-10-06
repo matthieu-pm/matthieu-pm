@@ -118,7 +118,7 @@ export default function Page() {
           life in code.
         </p>
         <p>
-          Previously, I worked on growth and marketing at{" "}
+          Previously, I worked on growth and design at{" "}
           <a
             className={styles.socialLink}
             href="https://www.avico.com/"
