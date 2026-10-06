@@ -1,3 +1,4 @@
+// Rename to page.tsx to make this showcase publicly accessible again.
 import type { Metadata } from "next"
 import Link from "next/link"
 import { siteConfig } from "../../site-config"

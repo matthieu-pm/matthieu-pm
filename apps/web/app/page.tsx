@@ -15,11 +15,6 @@ const contactButtonStaggerMs = 28
 
 const capabilities = [
   {
-    path: "/product-bet",
-    description: "Shape product ideas into bounded, testable decisions.",
-    href: "/skills/product-bet",
-  },
-  {
     path: "/great-ui",
     description: "Build and polish interfaces where every detail compounds.",
     href: "/skills/great-ui",
@@ -371,7 +366,7 @@ export default function Page() {
           </a>
         </div>
         <p className={styles.contactNote}>
-          Or download my résumé. (
+          Or download my resume. (
           <a
             href="/matthieu-duchatellier-resume.pdf"
             target="_blank"

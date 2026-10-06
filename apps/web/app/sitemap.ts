@@ -20,11 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-    {
-      url: `${siteConfig.url}/skills/product-bet`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
     ...["ux-writing", "ai-design-engineer", "ai-product-manager"].map(
       (slug) => ({
         url: `${siteConfig.url}/writing/${slug}`,
