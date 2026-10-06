@@ -231,6 +231,7 @@
 }
 
 .preview {
+  position: relative;
   display: grid;
   min-height: 322px;
   overflow-x: auto;
@@ -946,4 +947,453 @@
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Live, deliberately scoped before/after examples. */
+.craftExamples {
+  display: grid;
+  gap: 36px;
+  margin-top: 32px;
+}
+
+.craftHeading {
+  margin-bottom: 16px;
+}
+
+.craftHeading h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.craftHeading p {
+  margin-top: 6px;
+  color: #6b6b6b;
+  font-size: 14px;
+}
+
+.craftShell {
+  composes: card from "../../card.module.css";
+  padding: 5px;
+}
+
+.craftGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.craftSide {
+  min-width: 0;
+  padding: 18px 16px 16px;
+}
+
+.craftSide + .craftSide {
+  border-left: 1px solid #e9e9e6;
+}
+
+.craftLabel {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #6b6b6b;
+  font-size: 12px;
+}
+
+.craftWith .craftLabel {
+  color: #292927;
+}
+
+.craftDot {
+  width: 6px;
+  height: 6px;
+  border: 1px solid #93938e;
+  border-radius: 50%;
+}
+
+.craftWith .craftDot {
+  border-color: #292927;
+  background: #292927;
+}
+
+.craftCaption {
+  margin-top: 12px !important;
+  color: #71716d;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.readingStage {
+  display: grid;
+  min-height: 308px;
+  padding: 24px 0;
+  place-items: center;
+}
+
+.readingCard {
+  width: 100%;
+  max-width: 224px;
+  padding: 8px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.craftWithout .readingCard {
+  outline: 1px solid #b9b9b4;
+  box-shadow: 0 4px 0 #dcdcd8;
+}
+
+.craftWith .readingCard {
+  box-shadow: 0 0 0 1px oklch(0 0 0 / 0.06), 0 1px 2px -1px oklch(0 0 0 / 0.06), 0 2px 4px oklch(0 0 0 / 0.04);
+}
+
+.readingArtwork {
+  position: relative;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #e9ece7;
+}
+
+.readingArtwork span {
+  position: absolute;
+  width: 104px;
+  height: 150px;
+  top: 26px;
+  left: calc(50% - 74px);
+  border: 1px solid #788777;
+  border-radius: 52px 52px 0 0;
+  background: #c8d1c3;
+  transform: rotate(-24deg);
+}
+
+.readingArtwork span:nth-child(2) {
+  left: calc(50% - 44px);
+  background: #d9e0d4;
+  transform: rotate(-4deg);
+}
+
+.readingArtwork span:nth-child(3) {
+  left: calc(50% - 14px);
+  background: #edf0e9;
+  transform: rotate(16deg);
+}
+
+.craftWith .readingArtwork {
+  border-radius: 12px;
+  outline: 1px solid oklch(0 0 0 / 0.1);
+  outline-offset: -1px;
+}
+
+.readingContent {
+  padding: 14px 8px 8px;
+}
+
+.readingEyebrow {
+  color: #74746e;
+  font-size: 11px;
+}
+
+.readingContent h4 {
+  margin: 6px 0 3px;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.readingContent p {
+  color: #6b6b6b;
+  font-size: 12px;
+}
+
+.readingLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 36px;
+  margin-top: 18px;
+  padding: 6px 14px;
+  border: 1px solid #cececa;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.craftWith .readingLink {
+  padding-right: 12px;
+  border-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px oklch(0 0 0 / 0.06), 0 1px 2px -1px oklch(0 0 0 / 0.06), 0 2px 4px oklch(0 0 0 / 0.04);
+}
+
+.saveStage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 320px;
+  padding-top: 36px;
+}
+
+.saveTitle {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.saveSubtitle {
+  margin-top: 4px;
+  color: #777773;
+  font-size: 12px;
+}
+
+.saveControl {
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.saveTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 142px;
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 1px solid #dededb;
+  border-radius: 10px;
+  background: #fff;
+  color: #30302e;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.saveIcon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.saveIcon > span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+}
+
+.saveIcon > span[data-visible="true"] {
+  opacity: 1;
+}
+
+.collectionPicker {
+  position: absolute;
+  z-index: 2;
+  top: calc(100% + 8px);
+  left: 50%;
+  margin-left: -103px;
+  width: 206px;
+  padding: 6px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.collectionPicker[data-open="true"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.collectionPicker > span {
+  display: block;
+  padding: 6px 8px;
+  color: #777773;
+  font-size: 11px;
+}
+
+.collectionPicker button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 36px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: #fff;
+  color: #454542;
+  text-align: left;
+  font-size: 12px;
+}
+
+.collectionPicker button svg {
+  flex-shrink: 0;
+}
+
+.collectionPicker .removeSaved {
+  margin-top: 4px;
+  border-top: 1px solid #efefed;
+  border-radius: 0 0 6px 6px;
+}
+
+.craftWith .saveTrigger {
+  transition: transform 150ms ease-out;
+}
+
+.craftWith .saveTrigger:active {
+  transform: scale(0.96);
+}
+
+.craftWith .saveIcon > span {
+  transform: scale(0.25);
+  filter: blur(4px);
+  transition: opacity 300ms cubic-bezier(0.2, 0, 0, 1), transform 300ms cubic-bezier(0.2, 0, 0, 1), filter 300ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.craftWith .saveIcon > span[data-visible="true"] {
+  transform: scale(1);
+  filter: blur(0);
+}
+
+.craftWith .collectionPicker {
+  transform: translateY(-4px) scale(0.96);
+  transform-origin: 50% -8px;
+  transition: transform 150ms cubic-bezier(0.23, 1, 0.32, 1), opacity 150ms ease-out;
+}
+
+.craftWith .collectionPicker[data-open="true"] {
+  transform: translateY(0) scale(1);
+  transition-duration: 200ms;
+}
+
+.saveControl[data-keyboard="true"] *,
+.saveControl[data-keyboard="true"] .saveTrigger:active {
+  transition: none !important;
+}
+
+.saveControl[data-keyboard="true"] .saveTrigger:active {
+  transform: none;
+}
+
+.saveStatus {
+  margin-top: 12px !important;
+  color: #777773;
+  font-size: 11px;
+}
+
+.filterStage {
+  position: relative;
+  min-height: 280px;
+  padding: 24px 0;
+}
+
+.filterButtons {
+  display: flex;
+  gap: 4px;
+  width: fit-content;
+  padding: 3px;
+  border-radius: 9px;
+  background: #f0f0ed;
+}
+
+.filterButtons button {
+  min-height: 32px;
+  padding: 5px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #72726e;
+  font-size: 12px;
+}
+
+.filterButtons button[aria-pressed="true"] {
+  background: #fff;
+  color: #292927;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 8%);
+}
+
+.noteList {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.noteList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 52px;
+  border-bottom: 1px solid #efefed;
+}
+
+.noteList strong,
+.noteList small {
+  display: block;
+}
+
+.noteList strong {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.noteList small {
+  margin-top: 2px;
+  color: #777773;
+  font-size: 11px;
+}
+
+.noteList svg {
+  flex-shrink: 0;
+  color: #92928c;
+}
+
+/* Intentionally excessive motion, only in the labeled counterexample. */
+.noteList[data-animate="true"] li {
+  animation: ornamentalEntrance 600ms ease both;
+}
+
+.noteList[data-animate="true"] li:nth-child(2) {
+  animation-delay: 150ms;
+}
+
+.noteList[data-animate="true"] li:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+@keyframes ornamentalEntrance {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.filterCount {
+  display: block;
+  margin-top: 10px;
+  color: #777773;
+  font-size: 11px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .readingLink:hover,
+  .saveTrigger:hover,
+  .collectionPicker button:hover {
+    background: #f7f7f4;
+  }
+}
+
+@media (max-width: 540px) {
+  .craftGrid { grid-template-columns: 1fr; }
+  .craftSide { padding: 18px 22px; }
+  .craftSide + .craftSide { border-left: 0; border-top: 1px solid #e9e9e6; }
+  .readingCard { max-width: 240px; }
+  .filterStage { max-width: 260px; margin-inline: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .noteList[data-animate="true"] li { animation: none; }
+  .craftWith .saveTrigger:active { transform: none; }
+  .craftWith .saveIcon > span { transform: none; filter: none; }
+  .craftWith .collectionPicker { transform: none; }
 }

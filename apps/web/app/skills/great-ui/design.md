@@ -44,7 +44,15 @@ The outer-radius control adjusts the other values within their valid ranges. Pre
 
 Keep the nested geometry illustration visually separate from its controls and outer demo shell. An edit to the illustration's border or fill should not unintentionally recolor the entire lab. Maintain sufficient contrast to distinguish every layer without redundant outlines.
 
+## Craft examples
+
+The Surfaces, Interaction, and Restraint examples pair the same content with “Without skill” on the left and “With skill” on the right. These are authored, working demonstrations of the principles, not recorded model outputs. Below 540px, stack each pair in that order with its labels intact.
+
+Surfaces uses a real article link and isolates nested geometry, alignment, and elevation. Interaction saves to a local collection and demonstrates press feedback, icon swaps, and a picker anchored to its trigger. Support Escape, outside clicks, tab navigation, and interruption. Restraint intentionally replays a slow entrance only in the labeled counterexample after pointer filtering; the with-skill list updates immediately. Neither side animates on initial render or keyboard filtering, and reduced motion removes all demonstration movement.
+
 ## Responsive behavior and accessibility
+
+Use the shared `SectionNavigator` for the introduction, section headings, and final install action. On wide screens, a compact fixed left rail shows ticks that grow around the hovered or focused section and reveal its title, returning to the current section when the pointer leaves. At widths below 1024px, use the compact “On this page” disclosure with full labels. Keep navigation outside the reading column, respect reduced motion, and focus the destination after a jump.
 
 Use the existing 680px mobile breakpoint. Let the comparison and lab reflow in their established order, retain readable labels, and wrap installation commands without breaking copying. Preserve visible focus, native range keyboard behavior, and non-color state cues.
 
@@ -56,4 +64,5 @@ Check static and motion panels independently at desktop and 390px. Exercise ever
 
 - `page.tsx`: narrative, source attribution, installation placement.
 - `controls.tsx`: `InterfaceLab`, `DemoCanvas`, `RadiusLab`, header and install controls.
+- `craft-examples.tsx`: live Surfaces, Interaction, and Restraint comparisons.
 - `showcase.module.css`: component geometry, surfaces, state styling, motion, responsive rules.

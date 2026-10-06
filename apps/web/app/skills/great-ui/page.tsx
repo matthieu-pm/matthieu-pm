@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 import { siteConfig } from "../../site-config"
+import { SectionNavigator } from "../../section-navigator"
 import {
   HeaderControls,
   InstallCommand,
@@ -9,6 +10,7 @@ import {
   RadiusLab,
 } from "./controls"
 import styles from "./showcase.module.css"
+import { CraftExamples } from "./craft-examples"
 
 const path = "/skills/great-ui"
 const title = "Great UI"
@@ -42,32 +44,16 @@ export const metadata: Metadata = {
   },
 }
 
-const craftDetails = [
-  [
-    "Surfaces",
-    "Concentric radii, optical alignment, layered shadows, and neutral image outlines.",
-  ],
-  [
-    "Interaction",
-    "Responsive press states, contextual icon swaps, origin-aware overlays, and interruptible motion.",
-  ],
-  [
-    "Restraint",
-    "No ornamental delay. Motion appears only when it explains, confirms, or preserves context.",
-  ],
-] as const
-
 export default function GreatUiPage() {
   return (
     <main className={styles.page}>
+      <SectionNavigator />
       <div className={styles.column}>
         <HeaderControls pageUrl={`${siteConfig.url}${path}`} />
 
         <header className={styles.hero}>
           <h1>/great-ui</h1>
-          <p className={styles.lead}>
-            Make every interface detail feel right.
-          </p>
+          <p className={styles.lead}>Make every interface detail feel right.</p>
           <p>
             A faithful merge of{" "}
             <a
@@ -125,14 +111,7 @@ export default function GreatUiPage() {
             Great UI combines both source skills rather than selecting a few
             memorable tricks.
           </p>
-          <div className={styles.surface}>
-            {craftDetails.map(([name, detail]) => (
-              <div className={styles.detail} key={name}>
-                <span>{name}</span>
-                <p>{detail}</p>
-              </div>
-            ))}
-          </div>
+          <CraftExamples />
         </section>
 
         <section className={styles.section} aria-labelledby="sources-title">
@@ -165,7 +144,12 @@ export default function GreatUiPage() {
           </div>
         </section>
 
-        <section className={styles.section} aria-label="Install Great UI">
+        <section
+          id="install"
+          className={styles.section}
+          aria-label="Install Great UI"
+          data-section-nav-label="Install Great UI"
+        >
           <InstallCommand />
         </section>
 

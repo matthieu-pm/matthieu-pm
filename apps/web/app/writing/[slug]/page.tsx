@@ -3,6 +3,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 
 import { siteConfig } from "../../site-config"
+import { SectionNavigator } from "../../section-navigator"
 import { ArticleControls } from "../article-controls"
 import {
   AccessibilityPass,
@@ -680,6 +681,7 @@ export default async function WritingPage({
 
   return (
     <main className={styles.page}>
+      <SectionNavigator key={slug} />
       <div className={styles.column}>
         <ArticleHeader slug={slug} />
         {slug === "ux-writing" && <UxWritingArticle />}

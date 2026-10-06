@@ -55,6 +55,8 @@ Use native inputs and buttons with accessible names, visible selected states, an
 
 ## Responsive behavior and motion
 
+Use the shared `SectionNavigator` to follow the article title and all section headings, including exercises. A compact fixed left tick rail highlights the current section on wide screens. Ticks expand around the hovered or focused section and reveal its label, returning to the current section when the pointer leaves. Below 1024px, use the “On this page” disclosure with full labels. Navigation updates automatically from the headings, supports direct section links, focuses jump destinations, and respects reduced motion.
+
 Keep comfortable text sizes and page gutters. Stack comparison cards and exercise controls when they no longer fit; preserve the reading order from instruction to input to feedback. Avoid clipped textareas and feedback that forces the entire document to scroll horizontally.
 
 Motion is subordinate to reading. Keep focus and copy feedback prompt and discreet. Respect reduced motion and avoid making lessons appear only after decorative reveal sequences.
