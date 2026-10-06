@@ -516,9 +516,11 @@ function Stat({
           </span>
           <span className={styles.unit}>{unit}</span>
         </div>
-        <div className={styles.statDate} style={{ color: MUTED }}>
-          {sub}
-        </div>
+        {sub && (
+          <div className={styles.statDate} style={{ color: MUTED }}>
+            {sub}
+          </div>
+        )}
       </div>
     )
   }
@@ -549,9 +551,11 @@ function Stat({
       </div>
       <div className={styles.cornerDetail}>
         <div className={styles.cornerUnit}>{unit}</div>
-        <div className={styles.cornerDate} style={{ color: MUTED }}>
-          {sub}
-        </div>
+        {sub && (
+          <div className={styles.cornerDate} style={{ color: MUTED }}>
+            {sub}
+          </div>
+        )}
       </div>
     </div>
   )
@@ -1516,7 +1520,7 @@ export default function ContributionSkyline({
       label: "1 year total",
       value: nf.format(stats.total),
       unit: noun(stats.total),
-      sub: range(stats.first, stats.last, true),
+      sub: "",
     },
     {
       label: "Busiest day",
