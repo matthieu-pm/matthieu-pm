@@ -209,24 +209,6 @@ export default function Page() {
               <small>AI-powered MCQ exam practice</small>
             </span>
           </a>
-          <Link className={styles.projectCard} href="/oklch">
-            <span
-              className={`${styles.projectMark} ${styles.projectVisualMark}`}
-              aria-hidden="true"
-            >
-              <Image
-                className={`${styles.projectMarkImage} ${styles.oklchProjectMarkImage}`}
-                src="/logos/oklch-icon.webp"
-                alt=""
-                width={96}
-                height={96}
-              />
-            </span>
-            <span>
-              <strong>oklch.sh</strong>
-              <small>A guide to OKLCH colors.</small>
-            </span>
-          </Link>
           <Link className={styles.projectCard} href="/inspirations">
             <span
               className={`${styles.projectMark} ${styles.projectVisualMark}`}
