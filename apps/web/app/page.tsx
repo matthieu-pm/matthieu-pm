@@ -217,7 +217,7 @@ export default function Page() {
               <InspirationsOrb size={80} interactive={false} />
             </span>
             <span>
-              <strong>Inspirations</strong>
+              <strong>My collection</strong>
               <small>Design tools, references, and resources.</small>
             </span>
           </Link>

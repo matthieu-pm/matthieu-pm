@@ -1,0 +1,128 @@
+[
+  {
+    "description": "OpenAI coding agent for building, debugging, and reviewing code.",
+    "href": "https://openai.com/codex/",
+    "icon": "/inspirations/catalogues/codex-icon.webp",
+    "name": "Codex",
+    "preview": "/inspirations/stack/codex-preview.webp"
+  },
+  {
+    "name": "Ghostty",
+    "description": "Fast GPU-accelerated terminal emulator for developers.",
+    "href": "https://ghostty.org/",
+    "icon": "/inspirations/catalogues/d8538581ec62ff73.webp",
+    "preview": "/inspirations/catalogues/2ce8d32185df2fb7.webp"
+  },
+  {
+    "name": "GitLab",
+    "description": "Git repositories, code review, and continuous integration.",
+    "href": "https://about.gitlab.com/",
+    "icon": "/logos/gitlab.svg",
+    "preview": "/inspirations/stack/gitlab-preview.webp"
+  },
+  {
+    "name": "Bun",
+    "description": "JavaScript runtime, package manager, bundler, and test runner.",
+    "href": "https://bun.com/",
+    "icon": "/inspirations/catalogues/bun-icon.webp",
+    "preview": "/inspirations/catalogues/bun-preview.webp"
+  },
+  {
+    "name": "TypeScript",
+    "description": "JavaScript with syntax for types.",
+    "href": "https://www.typescriptlang.org/",
+    "icon": "/inspirations/stack/typescript-icon.webp",
+    "preview": "/inspirations/stack/typescript-preview.webp"
+  },
+  {
+    "name": "Next.js",
+    "description": "A React framework for building web applications.",
+    "href": "https://nextjs.org/",
+    "icon": "/inspirations/stack/nextjs-icon.webp",
+    "preview": "/inspirations/stack/nextjs-preview.webp"
+  },
+  {
+    "name": "TanStack",
+    "description": "Open-source libraries for building web applications.",
+    "href": "https://tanstack.com/",
+    "icon": "/inspirations/stack/tanstack-icon.webp",
+    "preview": "/inspirations/stack/tanstack-preview.webp"
+  },
+  {
+    "description": "Components you copy directly into codebases.",
+    "href": "https://ui.shadcn.com/",
+    "icon": "/inspirations/catalogues/761852f20838893c.webp",
+    "name": "shadcn/ui",
+    "preview": "/inspirations/catalogues/c595dd81f1faf818.webp"
+  },
+  {
+    "description": "Collaborative interface design and prototyping platform.",
+    "href": "https://figma.com/",
+    "icon": "/inspirations/e1cf82f97ffa8593.png",
+    "name": "Figma",
+    "preview": "/inspirations/stack/figma-preview.webp"
+  },
+  {
+    "name": "tldraw",
+    "description": "Infinite whiteboard and canvas SDK.",
+    "href": "https://tldraw.com/",
+    "icon": "/inspirations/catalogues/3b086519d27f1d22.webp",
+    "preview": "/inspirations/catalogues/11005bafa7c91467.webp"
+  },
+  {
+    "name": "Aside browser",
+    "description": "A browser with an AI assistant for working across websites.",
+    "href": "https://aside.com/",
+    "icon": "/inspirations/stack/aside-icon.webp",
+    "preview": "/inspirations/stack/aside-preview.webp"
+  },
+  {
+    "name": "Maze",
+    "description": "User research and usability testing platform.",
+    "href": "https://maze.co/",
+    "icon": "/inspirations/stack/maze-icon.webp",
+    "preview": "/inspirations/stack/maze-preview.webp"
+  },
+  {
+    "name": "PostHog",
+    "description": "Product analytics, session replay, and experimentation tools.",
+    "href": "https://posthog.com/",
+    "icon": "/inspirations/catalogues/a89cad4732e4b335.webp",
+    "preview": "/inspirations/stack/posthog-preview.webp"
+  },
+  {
+    "description": "Serverless Postgres with database branching and autoscaling.",
+    "href": "https://neon.com/",
+    "icon": "/inspirations/catalogues/neon-icon.webp",
+    "name": "NeonDB",
+    "preview": "/inspirations/catalogues/neon-preview.webp"
+  },
+  {
+    "description": "Reactive backend with a database, TypeScript functions, and realtime sync.",
+    "href": "https://www.convex.dev/",
+    "icon": "/inspirations/catalogues/convex-icon.webp",
+    "name": "Convex",
+    "preview": "/inspirations/catalogues/convex-preview.webp"
+  },
+  {
+    "description": "Cloud platform for deploying Next.js applications.",
+    "href": "https://vercel.com/",
+    "icon": "/inspirations/catalogues/3c9d62d486a541a4.webp",
+    "name": "Vercel",
+    "preview": "/inspirations/catalogues/1f067801f1610abc.webp"
+  },
+  {
+    "description": "Project management software setting speed standards.",
+    "href": "https://linear.app/",
+    "icon": "/inspirations/catalogues/92dcbfdb72dbe69a.webp",
+    "name": "Linear",
+    "preview": "/inspirations/catalogues/cd158c9610f21373.webp"
+  },
+  {
+    "name": "Notion",
+    "description": "A workspace for notes, documents, and projects.",
+    "href": "https://www.notion.com/",
+    "icon": "/inspirations/stack/notion-icon.webp",
+    "preview": "/inspirations/stack/notion-preview.webp"
+  }
+]

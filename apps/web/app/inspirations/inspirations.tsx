@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { createPortal } from "react-dom"
 import { useSelectedLayoutSegment } from "next/navigation"
 import { HugeiconsIcon } from "@hugeicons/react"
 import {
@@ -23,6 +24,7 @@ import {
   useContext,
   useCallback,
   useEffect,
+  useId,
   useMemo,
   useRef,
   useState,
@@ -38,6 +40,7 @@ import {
   type CatalogueId,
   type Resource,
 } from "./catalogues"
+import stack from "./data/stack.json"
 import { InspirationsOrb } from "./inspirations-orb"
 import { useItemSounds } from "./use-item-sounds"
 import styles from "./inspirations.module.css"
@@ -283,6 +286,145 @@ function ResourceArtwork({ resource }: { resource: Resource }) {
 
 type PreviewPosition = { href: string; left: number; top: number }
 
+function stackPreviewPosition(link: HTMLAnchorElement) {
+  const rect = link.getBoundingClientRect()
+  const width = Math.min(300, window.innerWidth - 32)
+  const height = (width * 9) / 16 + 48
+  const sidebarRight = link.closest("aside")?.getBoundingClientRect().right
+  const right = (sidebarRight ?? rect.right) + 12
+  return {
+    left: Math.max(16, Math.min(right, window.innerWidth - width - 16)),
+    top: Math.max(
+      16,
+      Math.min(
+        rect.top + (rect.height - height) / 2,
+        window.innerHeight - height - 16
+      )
+    ),
+  }
+}
+
+function MyStack() {
+  const id = useId()
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const [preview, setPreview] = useState<{
+    resource: Resource
+    container: Element
+    trigger: HTMLAnchorElement
+    left: number
+    top: number
+  } | null>(null)
+  const keepPreview = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+  }
+  const closePreview = () => {
+    keepPreview()
+    closeTimer.current = setTimeout(() => setPreview(null), 150)
+  }
+  const showPreview = (link: HTMLAnchorElement, resource: Resource) => {
+    keepPreview()
+    const container = link.closest("[data-theme]")
+    if (!container) return
+    setPreview({
+      resource,
+      container,
+      trigger: link,
+      ...stackPreviewPosition(link),
+    })
+  }
+  useEffect(() => {
+    if (!preview) return
+    const dismiss = () => setPreview(null)
+    const onScroll = () => {
+      if (preview.trigger.matches(":focus-visible"))
+        setPreview((current) =>
+          current
+            ? { ...current, ...stackPreviewPosition(current.trigger) }
+            : null
+        )
+      else dismiss()
+    }
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") dismiss()
+    }
+    window.addEventListener("scroll", onScroll, true)
+    window.addEventListener("resize", dismiss)
+    window.addEventListener("keydown", onKeyDown)
+    return () => {
+      window.removeEventListener("scroll", onScroll, true)
+      window.removeEventListener("resize", dismiss)
+      window.removeEventListener("keydown", onKeyDown)
+    }
+  }, [preview])
+  useEffect(
+    () => () => {
+      if (closeTimer.current) clearTimeout(closeTimer.current)
+    },
+    []
+  )
+  return (
+    <section className={styles.stackSection} aria-label="My stack">
+      <h2 className={styles.stackHeading}>My stack</h2>
+      <ul className={styles.stackGrid}>
+        {stack.map((resource) => (
+          <li key={resource.href}>
+            <a
+              className={styles.stackLink}
+              href={resource.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={resource.name}
+              aria-describedby={
+                preview?.resource.href === resource.href ? id : undefined
+              }
+              onPointerEnter={(event) => {
+                if (
+                  event.pointerType !== "touch" &&
+                  window.matchMedia("(hover: hover)").matches
+                )
+                  showPreview(event.currentTarget, resource)
+              }}
+              onPointerLeave={closePreview}
+              onFocus={(event) => {
+                if (event.currentTarget.matches(":focus-visible"))
+                  showPreview(event.currentTarget, resource)
+              }}
+              onBlur={() => setPreview(null)}
+              onClick={() => setPreview(null)}
+            >
+              <span className={styles.stackLogo}>
+                <ResourceIcon resource={resource} size={20} />
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      {preview &&
+        createPortal(
+          <div
+            id={id}
+            role="tooltip"
+            className={styles.stackPreview}
+            style={{ left: preview.left, top: preview.top }}
+            onPointerEnter={keepPreview}
+            onPointerLeave={closePreview}
+          >
+            <div className={styles.stackPreviewArtwork}>
+              <ResourceArtwork resource={preview.resource} />
+            </div>
+            <div className={styles.stackPreviewCaption}>
+              <strong>{preview.resource.name}</strong>
+              <span>
+                {new URL(preview.resource.href).hostname.replace(/^www\./, "")}
+              </span>
+            </div>
+          </div>,
+          preview.container
+        )}
+    </section>
+  )
+}
+
 const CatalogueControls = createContext<{
   grid: boolean
   setSelected: (resource: Resource) => void
@@ -480,7 +622,7 @@ export function Inspirations({ children }: { children: ReactNode }) {
         >
           <span className={styles.mobileTitle}>
             <InspirationsOrb className={styles.orb} size={24} />
-            My inspirations
+            My collection
           </span>
           {themeButton}
         </header>
@@ -489,7 +631,7 @@ export function Inspirations({ children }: { children: ReactNode }) {
             <div className={styles.identity}>
               <InspirationsOrb className={styles.orb} />
               <span className={styles.mobileTheme}>{themeButton}</span>
-              <span className={styles.wordmark}>My inspirations</span>
+              <span className={styles.wordmark}>My collection</span>
               <h1>{description}</h1>
             </div>
             <div className={styles.sidebarNavigation}>
@@ -503,6 +645,7 @@ export function Inspirations({ children }: { children: ReactNode }) {
                   {sectionLinks}
                 </SidebarNavigation>
               </div>
+              <MyStack />
             </div>
           </aside>
           <main className={styles.main}>
@@ -599,6 +742,7 @@ export function Inspirations({ children }: { children: ReactNode }) {
             <SidebarNavigation label="Jump to section">
               {sectionLinks}
             </SidebarNavigation>
+            <MyStack />
             <Link href="/">Back to projects</Link>
           </div>
         )}
