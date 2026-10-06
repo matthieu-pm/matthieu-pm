@@ -2,6 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import type { CSSProperties } from "react"
 import { Suspense } from "react"
+import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 
 import { gitlabProfileUrl } from "@/lib/gitlab-activity"
 
@@ -145,7 +147,10 @@ export default function Page() {
             <strong>other</strong>
           </a>{" "}
           companies, and I&apos;m looking for an end-of-study PM or Design
-          Engineer internship starting June 2027. You can reach me at{" "}
+          Engineer internship starting June 2027.
+        </p>
+        <p>
+          You can reach me at{" "}
           <a
             className={styles.socialLink}
             href="https://x.com/matthieu_pm"
@@ -291,7 +296,14 @@ export default function Page() {
           <h2 id="activity-title">Building, day by day</h2>
           <a href={gitlabProfileUrl} target="_blank" rel="noreferrer">
             <Image src="/logos/gitlab.svg" alt="" width={14} height={14} />
-            GitLab <span aria-hidden="true">↗</span>
+            GitLab
+            <HugeiconsIcon
+              className={styles.activityArrow}
+              icon={ArrowUpRight01Icon}
+              size={14}
+              strokeWidth={1.8}
+              aria-hidden="true"
+            />
           </a>
         </div>
         <Suspense
