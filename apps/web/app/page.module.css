@@ -329,6 +329,8 @@
   width: 112px;
   height: 112px;
   object-fit: contain;
+  /* Offset the GIF's transparent top padding to center the visible character. */
+  transform: translateY(-11px);
 }
 
 .projectCard strong,
