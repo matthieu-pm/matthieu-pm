@@ -1,5 +1,47 @@
 [
   {
+    "description": "Collaborative interface design and prototyping platform.",
+    "href": "https://figma.com/",
+    "icon": "/inspirations/e1cf82f97ffa8593.png",
+    "name": "Figma",
+    "preview": "/inspirations/stack/figma-preview.webp"
+  },
+  {
+    "name": "tldraw",
+    "description": "Infinite whiteboard and canvas SDK.",
+    "href": "https://tldraw.com/",
+    "icon": "/inspirations/catalogues/3b086519d27f1d22.webp",
+    "preview": "/inspirations/catalogues/11005bafa7c91467.webp"
+  },
+  {
+    "name": "Aside browser",
+    "description": "A browser with an AI assistant for working across websites.",
+    "href": "https://aside.com/",
+    "icon": "/inspirations/stack/aside-icon.webp",
+    "preview": "/inspirations/stack/aside-preview.webp"
+  },
+  {
+    "name": "Maze",
+    "description": "User research and usability testing platform.",
+    "href": "https://maze.co/",
+    "icon": "/inspirations/stack/maze-icon.webp",
+    "preview": "/inspirations/stack/maze-preview.webp"
+  },
+  {
+    "name": "PostHog",
+    "description": "Product analytics, session replay, and experimentation tools.",
+    "href": "https://posthog.com/",
+    "icon": "/inspirations/catalogues/a89cad4732e4b335.webp",
+    "preview": "/inspirations/stack/posthog-preview.webp"
+  },
+  {
+    "description": "Project management software setting speed standards.",
+    "href": "https://linear.app/",
+    "icon": "/inspirations/catalogues/92dcbfdb72dbe69a.webp",
+    "name": "Linear",
+    "preview": "/inspirations/catalogues/cd158c9610f21373.webp"
+  },
+  {
     "description": "OpenAI coding agent for building, debugging, and reviewing code.",
     "href": "https://openai.com/codex/",
     "icon": "/inspirations/catalogues/codex-icon.webp",
@@ -56,41 +98,6 @@
     "preview": "/inspirations/catalogues/c595dd81f1faf818.webp"
   },
   {
-    "description": "Collaborative interface design and prototyping platform.",
-    "href": "https://figma.com/",
-    "icon": "/inspirations/e1cf82f97ffa8593.png",
-    "name": "Figma",
-    "preview": "/inspirations/stack/figma-preview.webp"
-  },
-  {
-    "name": "tldraw",
-    "description": "Infinite whiteboard and canvas SDK.",
-    "href": "https://tldraw.com/",
-    "icon": "/inspirations/catalogues/3b086519d27f1d22.webp",
-    "preview": "/inspirations/catalogues/11005bafa7c91467.webp"
-  },
-  {
-    "name": "Aside browser",
-    "description": "A browser with an AI assistant for working across websites.",
-    "href": "https://aside.com/",
-    "icon": "/inspirations/stack/aside-icon.webp",
-    "preview": "/inspirations/stack/aside-preview.webp"
-  },
-  {
-    "name": "Maze",
-    "description": "User research and usability testing platform.",
-    "href": "https://maze.co/",
-    "icon": "/inspirations/stack/maze-icon.webp",
-    "preview": "/inspirations/stack/maze-preview.webp"
-  },
-  {
-    "name": "PostHog",
-    "description": "Product analytics, session replay, and experimentation tools.",
-    "href": "https://posthog.com/",
-    "icon": "/inspirations/catalogues/a89cad4732e4b335.webp",
-    "preview": "/inspirations/stack/posthog-preview.webp"
-  },
-  {
     "description": "Serverless Postgres with database branching and autoscaling.",
     "href": "https://neon.com/",
     "icon": "/inspirations/catalogues/neon-icon.webp",
@@ -110,13 +117,6 @@
     "icon": "/inspirations/catalogues/3c9d62d486a541a4.webp",
     "name": "Vercel",
     "preview": "/inspirations/catalogues/1f067801f1610abc.webp"
-  },
-  {
-    "description": "Project management software setting speed standards.",
-    "href": "https://linear.app/",
-    "icon": "/inspirations/catalogues/92dcbfdb72dbe69a.webp",
-    "name": "Linear",
-    "preview": "/inspirations/catalogues/cd158c9610f21373.webp"
   },
   {
     "name": "Notion",
