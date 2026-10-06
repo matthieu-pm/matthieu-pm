@@ -38,7 +38,9 @@ Modify the named component or visual layer when the request is local. Do not add
 
 ## Composition and reading order
 
-The homepage follows a single 644px column: identity, introduction, projects, skills for agents, writing, contact, then social links and signature. Keep this sequence easy to scan. Project cards are visual entry points; skills and articles are quieter rows with a title and a short explanation.
+The homepage follows a single 644px column: identity, introduction, projects, skills for agents, writing, GitLab activity, contact, then social links and signature. Keep this sequence easy to scan. Project cards are visual entry points; skills and articles are quieter rows with a title and a short explanation.
+
+The GitLab activity skyline uses the public profile calendar for `wondertale-dev`, refreshed hourly. Keep real contribution counts, the heat-map/3D toggle, keyboard exploration, and reduced-motion support. Use the warm ember palette within the existing content measure. If GitLab is unavailable, show an honest unavailable state and retain the profile link; never substitute generated activity.
 
 Use cards for discrete destinations and interactive demonstrations. Use open prose for the introduction and explanatory content. Do not wrap every paragraph or section in another surface. Preserve one dominant object per section and let supporting labels recede.
 

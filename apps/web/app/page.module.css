@@ -219,6 +219,49 @@
   gap: 16px;
 }
 
+.activityHeading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin-bottom: 20px;
+}
+
+.activityHeading h2 {
+  margin-bottom: 0;
+}
+
+.activityHeading a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.activityHeading a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.activityHeading a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.activityStatus {
+  margin: 0;
+  padding: 24px;
+  border: 1px solid var(--faint);
+  border-radius: 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .projectCard {
   composes: card from "./card.module.css";
 

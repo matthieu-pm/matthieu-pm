@@ -1,8 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
 import type { CSSProperties } from "react"
+import { Suspense } from "react"
+
+import { gitlabProfileUrl } from "@/lib/gitlab-activity"
 
 import { EmailCopy } from "./email-copy"
+import { GitLabActivity } from "./gitlab-activity"
 import { InspirationsOrb } from "./inspirations/inspirations-orb"
 import styles from "./page.module.css"
 
@@ -317,6 +321,23 @@ export default function Page() {
             </Link>
           ))}
         </div>
+      </section>
+
+      <section className={styles.section} aria-labelledby="activity-title">
+        <div className={styles.activityHeading}>
+          <h2 id="activity-title">Building, day by day</h2>
+          <a href={gitlabProfileUrl} target="_blank" rel="noreferrer">
+            <Image src="/logos/gitlab.svg" alt="" width={14} height={14} />
+            GitLab <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <Suspense
+          fallback={
+            <p className={styles.activityStatus}>Loading GitLab activity…</p>
+          }
+        >
+          <GitLabActivity />
+        </Suspense>
       </section>
 
       <section
