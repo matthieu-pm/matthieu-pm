@@ -272,6 +272,30 @@ export default function Page() {
               <small>Design tools, references, and resources.</small>
             </span>
           </Link>
+          <a
+            className={styles.projectCard}
+            href="https://skema-project-learning.vercel.app/landing/index.html"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span
+              className={`${styles.projectMark} ${styles.projectVisualMark}`}
+              aria-hidden="true"
+            >
+              <Image
+                className={`${styles.projectMarkImage} ${styles.lumaProjectMarkImage}`}
+                src="/logos/luma-transparent.gif"
+                alt=""
+                width={192}
+                height={208}
+                unoptimized
+              />
+            </span>
+            <span>
+              <strong>Mimo</strong>
+              <small>One-to-one language learning with a real teacher.</small>
+            </span>
+          </a>
         </div>
       </section>
 
