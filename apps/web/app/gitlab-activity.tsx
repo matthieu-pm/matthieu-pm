@@ -20,6 +20,7 @@ export async function GitLabActivity() {
       data={activity.days}
       endDate={activity.endDate}
       palette="ember"
+      showStats={false}
       duration={1800}
       weekStart={1}
     />

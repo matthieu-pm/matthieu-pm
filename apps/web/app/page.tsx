@@ -115,24 +115,7 @@ export default function Page() {
               aria-hidden="true"
             />
             Politecnico di Milano
-          </a>, and the founding product engineer at{" "}
-          <a
-            className={styles.socialLink}
-            href="https://forgeapp.sh"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              className={`${styles.socialIcon} ${styles.socialIconForge}`}
-              src="/logos/forge.svg"
-              alt=""
-              width={19}
-              height={14}
-              aria-hidden="true"
-            />
-            Forge
-          </a>, where we&apos;re creating the workspace for self-building
-          software.
+          </a>.
         </p>
         <p>
           I care <em>deeply</em> about craft and building products people enjoy
@@ -166,23 +149,7 @@ export default function Page() {
           >
             other
           </a>{" "}
-          companies, and co-founded{" "}
-          <a
-            className={styles.socialLink}
-            href="https://wondertale.xyz"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              className={styles.socialIcon}
-              src="/logos/wondertale.webp"
-              alt=""
-              width={14}
-              height={14}
-              aria-hidden="true"
-            />
-            Wondertale
-          </a>.
+          companies.
         </p>
         <p>
           I&apos;m looking for an end-of-study PM or Design Engineer internship
