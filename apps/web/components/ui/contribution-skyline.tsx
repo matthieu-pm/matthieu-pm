@@ -1552,9 +1552,7 @@ export default function ContributionSkyline({
       ref={rootRef}
       className={`${styles.root} ${className}`}
       style={{
-        background: "var(--skyline-background, #ffffff)",
         color: "var(--skyline-foreground, #1f1f1f)",
-        borderColor: "var(--skyline-border, #e9e9e9)",
       }}
     >
       <header className={styles.header}>
