@@ -221,11 +221,11 @@ export default function Page() {
             >
               <Image
                 className={`${styles.projectMarkImage} ${styles.lumaProjectMarkImage}`}
-                src="/logos/luma-transparent.gif"
+                src="/logos/luma.png"
                 alt=""
-                width={192}
-                height={208}
-                unoptimized
+                width={1254}
+                height={1254}
+                sizes="112px"
               />
             </span>
             <span>
