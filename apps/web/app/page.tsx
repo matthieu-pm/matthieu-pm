@@ -234,6 +234,29 @@ export default function Page() {
               <small>One-to-one language tutoring</small>
             </span>
           </a>
+          <a
+            className={styles.projectCard}
+            href="https://atrium-38h1zpquf-matthieu-pm.vercel.app/login?redirect_url=https%3A%2F%2Fatrium-38h1zpquf-matthieu-pm.vercel.app%2F"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span
+              className={`${styles.projectMark} ${styles.projectVisualMark}`}
+              aria-hidden="true"
+            >
+              <Image
+                className={styles.projectMarkImage}
+                src="/logos/atrium.png"
+                alt=""
+                width={80}
+                height={80}
+              />
+            </span>
+            <span>
+              <strong>Atrium</strong>
+              <small>AI-powered CRM</small>
+            </span>
+          </a>
         </div>
       </section>
 
