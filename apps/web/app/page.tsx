@@ -225,7 +225,7 @@ export default function Page() {
                 alt=""
                 width={1254}
                 height={1254}
-                sizes="112px"
+                sizes="88px"
               />
             </span>
             <span>
