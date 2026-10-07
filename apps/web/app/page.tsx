@@ -257,6 +257,29 @@ export default function Page() {
               <small>AI-powered CRM</small>
             </span>
           </a>
+          <a
+            className={styles.projectCard}
+            href="https://forge-app-mauve.vercel.app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span
+              className={`${styles.projectMark} ${styles.projectVisualMark}`}
+              aria-hidden="true"
+            >
+              <Image
+                className={styles.projectMarkImage}
+                src="/logos/forge.svg"
+                alt=""
+                width={80}
+                height={80}
+              />
+            </span>
+            <span>
+              <strong>Forge</strong>
+              <small>Issue tracking with AI agents</small>
+            </span>
+          </a>
         </div>
       </section>
 
