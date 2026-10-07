@@ -67,7 +67,7 @@ export default function Page() {
 
       <section className={styles.intro} aria-label="Introduction">
         <p>
-          I&apos;m a Product Management & UX Design MSc student at{" "}
+          I’m a Product Management & UX Design MSc student at{" "}
           <a
             className={styles.socialLink}
             href="https://www.skema.edu/en/programmes/msc-product-management-ux-design"
@@ -101,11 +101,10 @@ export default function Page() {
             />
             <strong>Polimi Graduate School of Management</strong>
           </a>
-          . I care{" "}
-          <strong>deeply</strong>{" "}
-          about craft and building products people enjoy using. I like figuring
-          out what to build, designing how it should work, and bringing it to
-          life in code.
+          . I bring product thinking, design, and code together to turn ideas
+          into useful, thoughtful experiences. I enjoy understanding what people
+          need, deciding what’s worth building, and shaping the details that
+          make it feel right.
         </p>
         <p>
           Previously, I worked on growth and product design at{" "}
