@@ -137,7 +137,8 @@
   flex: 1 0 auto;
   min-height: 0;
 }
-.kicker {
+.kicker,
+.stackHeading {
   font:
     400 10px/1.4 var(--font-sans),
     system-ui,
@@ -220,15 +221,6 @@
 .stackSection {
   margin-top: 28px;
   padding-bottom: 8px;
-}
-.stackHeading {
-  margin-bottom: 8px !important;
-  text-transform: uppercase;
-  color: var(--muted);
-  font:
-    400 10px/1.4 var(--font-sans),
-    system-ui,
-    sans-serif;
 }
 .stackGrid {
   display: flex;
