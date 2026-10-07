@@ -87,7 +87,7 @@ export default function Page() {
           and{" "}
           <a
             className={styles.socialLink}
-            href="https://www.polimi.it/en/"
+            href="https://www.gsom.polimi.it/en"
             target="_blank"
             rel="noreferrer"
           >
@@ -99,7 +99,7 @@ export default function Page() {
               height={14}
               aria-hidden="true"
             />
-            <strong>Politecnico di Milano</strong>
+            <strong>Polimi Graduate School of Management</strong>
           </a>
           . I care{" "}
           <strong>deeply</strong>{" "}
