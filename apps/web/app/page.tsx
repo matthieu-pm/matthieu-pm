@@ -236,7 +236,7 @@ export default function Page() {
           </a>
           <a
             className={styles.projectCard}
-            href="https://atrium-38h1zpquf-matthieu-pm.vercel.app/login?redirect_url=https%3A%2F%2Fatrium-38h1zpquf-matthieu-pm.vercel.app%2F"
+            href="https://atrium-landing-tau.vercel.app/"
             target="_blank"
             rel="noreferrer"
           >
