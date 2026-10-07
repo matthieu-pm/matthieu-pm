@@ -30,6 +30,18 @@ const articles = [
       "A practical guide to writing clear, useful, and consistent interface copy.",
     href: "/writing/ux-writing",
   },
+  {
+    title: "From Prompt to Product",
+    detail:
+      "A hands-on introduction to prompting, building, and refining interfaces with AI.",
+    href: "/writing/ai-design-engineer",
+  },
+  {
+    title: "The AI-Augmented Product Manager",
+    detail:
+      "A practical guide for PMs using AI to sharpen discovery, decisions, and delivery.",
+    href: "/writing/ai-product-manager",
+  },
 ]
 
 function PageSkeleton() {
