@@ -111,7 +111,7 @@ export default function Page() {
               height={14}
               aria-hidden="true"
             />
-            <strong>Polimi Graduate School of Management</strong>
+            <strong>Polimi GSOM</strong>
           </a>
           . I bring product thinking, design, and code together to turn ideas
           into useful, thoughtful experiences. I enjoy understanding what people

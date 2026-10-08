@@ -1,0 +1,226 @@
+{
+  "openai": {
+    "error": "HTTP Error 403: Forbidden",
+    "site": "https://openai.com/"
+  },
+  "chatgpt": {
+    "error": "HTTP Error 403: Forbidden",
+    "site": "https://chatgpt.com/"
+  },
+  "claude": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/claude.png",
+    "source": "https://assets.claude.com/95a868946ac8a31e5ff832e2899f294aa368b836.png?w=32&h=32",
+    "site": "https://claude.com/",
+    "candidates": [
+      "https://assets.claude.com/95a868946ac8a31e5ff832e2899f294aa368b836.png?w=32&h=32"
+    ]
+  },
+  "v0": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/v0.svg",
+    "source": "https://v0.app/assets/icon.svg",
+    "site": "https://v0.app/",
+    "candidates": [
+      "https://v0.app/assets/icon.svg",
+      "https://v0.app/assets/apple-icon.png",
+      "https://v0.app/assets/icon-light-32x32.png",
+      "https://v0.app/assets/icon-dark-32x32.png"
+    ]
+  },
+  "github": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/github.svg",
+    "source": "https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg",
+    "site": "https://github.com/",
+    "candidates": [
+      "https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg",
+      "https://github.githubassets.com/favicons/favicon.svg",
+      "https://github.com/fluidicon.png",
+      "https://github.githubassets.com/favicons/favicon.png"
+    ]
+  },
+  "gitlab": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/gitlab.png",
+    "source": "https://about.gitlab.com/images/ico/favicon-192x192.png",
+    "site": "https://about.gitlab.com/",
+    "candidates": [
+      "https://about.gitlab.com/images/ico/favicon-192x192.png",
+      "https://about.gitlab.com/images/ico/favicon-32x32.png",
+      "https://about.gitlab.com/images/ico/favicon-192x192.png",
+      "https://about.gitlab.com/images/ico/favicon.ico"
+    ]
+  },
+  "vercel": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/vercel.png",
+    "source": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png",
+    "site": "https://vercel.com/",
+    "candidates": [
+      "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png",
+      "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-60x60.png",
+      "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-72x72.png",
+      "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-76x76.png",
+      "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-114x114.png",
+      "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-120x120.png",
+      "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-144x144.png",
+      "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-152x152.png",
+      "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-180x180.png",
+      "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-256x256.png",
+      "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/favicon.ico"
+    ]
+  },
+  "shadcn": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/shadcn.png",
+    "source": "https://ui.shadcn.com/apple-touch-icon.png",
+    "site": "https://ui.shadcn.com/",
+    "candidates": [
+      "https://ui.shadcn.com/apple-touch-icon.png",
+      "https://ui.shadcn.com/favicon-16x16.png",
+      "https://ui.shadcn.com/favicon.ico"
+    ]
+  },
+  "nextjs": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/nextjs.ico",
+    "source": "https://nextjs.org/favicon.ico?favicon.38folom4sz_yx.ico",
+    "site": "https://nextjs.org/",
+    "candidates": [
+      "https://nextjs.org/favicon.ico?favicon.38folom4sz_yx.ico"
+    ]
+  },
+  "tanstack": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/tanstack.svg",
+    "source": "https://tanstack.com/favicon-light.svg",
+    "site": "https://tanstack.com/",
+    "candidates": [
+      "https://tanstack.com/favicon-light.svg",
+      "https://tanstack.com/favicon-dark.svg",
+      "https://tanstack.com/apple-touch-icon.png",
+      "https://tanstack.com/favicon-32x32.png",
+      "https://tanstack.com/favicon-16x16.png",
+      "https://tanstack.com/favicon.ico"
+    ]
+  },
+  "bun": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/bun.svg",
+    "source": "https://bun.sh/logo.svg",
+    "site": "https://bun.sh/",
+    "candidates": [
+      "https://bun.sh/logo.svg",
+      "https://bun.sh/icons/apple-touch-icon.png",
+      "https://bun.sh/icons/favicon-32x32.png",
+      "https://bun.sh/icons/icon-192x192.png",
+      "https://bun.sh/favicon.ico"
+    ]
+  },
+  "neon": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/neon.svg",
+    "source": "https://neon.com/favicon/favicon.svg",
+    "site": "https://neon.com/",
+    "candidates": [
+      "https://neon.com/favicon/favicon.svg",
+      "https://neon.com/apple-touch-icon.png",
+      "https://neon.com/apple-touch-icon-152x152.png",
+      "https://neon.com/apple-touch-icon-120x120.png",
+      "https://neon.com/favicon/favicon.ico"
+    ]
+  },
+  "convex": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/convex.ico",
+    "source": "https://convex.dev/favicon.ico?favicon.0-xvzi-2x5h06.ico",
+    "site": "https://convex.dev/",
+    "candidates": [
+      "https://convex.dev/favicon.ico?favicon.0-xvzi-2x5h06.ico"
+    ]
+  },
+  "supabase": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/supabase.ico",
+    "source": "https://supabase.com/favicon/favicon.ico",
+    "site": "https://supabase.com/",
+    "candidates": [
+      "https://supabase.com/favicon/favicon.ico",
+      "https://supabase.com/favicon/apple-icon-57x57.png",
+      "https://supabase.com/favicon/apple-icon-60x60.png",
+      "https://supabase.com/favicon/apple-icon-72x72.png",
+      "https://supabase.com/favicon/apple-icon-76x76.png",
+      "https://supabase.com/favicon/apple-icon-114x114.png",
+      "https://supabase.com/favicon/apple-icon-120x120.png",
+      "https://supabase.com/favicon/apple-icon-144x144.png",
+      "https://supabase.com/favicon/apple-icon-152x152.png",
+      "https://supabase.com/favicon/favicon-16x16.png",
+      "https://supabase.com/favicon/favicon-32x32.png",
+      "https://supabase.com/favicon/favicon-48x48.png",
+      "https://supabase.com/favicon/favicon-96x96.png",
+      "https://supabase.com/favicon/favicon-128.png",
+      "https://supabase.com/favicon/favicon-180x180.png",
+      "https://supabase.com/favicon/favicon-196x196.png",
+      "https://supabase.com/favicon/favicon.ico",
+      "https://supabase.com/favicon/favicon.ico"
+    ]
+  },
+  "betterauth": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/betterauth.png",
+    "source": "https://better-auth.com/favicon/apple-touch-icon.png",
+    "site": "https://better-auth.com/",
+    "candidates": [
+      "https://better-auth.com/favicon/apple-touch-icon.png",
+      "https://better-auth.com/favicon/favicon-32x32.png",
+      "https://better-auth.com/favicon/favicon-16x16.png",
+      "https://better-auth.com/favicon/favicon.ico"
+    ]
+  },
+  "clerk": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/clerk.ico",
+    "source": "https://clerk.com/v2/favicon.ico",
+    "site": "https://clerk.com/",
+    "candidates": [
+      "https://clerk.com/v2/favicon.ico"
+    ]
+  },
+  "workos": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/workos.png",
+    "source": "https://cdn.prod.website-files.com/621f54116cab10f6e9215d8b/621f549024eb2947f6f2f7f7_Favicon%20256x256.png",
+    "site": "https://workos.com/",
+    "candidates": [
+      "https://cdn.prod.website-files.com/621f54116cab10f6e9215d8b/621f549024eb2947f6f2f7f7_Favicon%20256x256.png",
+      "https://cdn.prod.website-files.com/621f54116cab10f6e9215d8b/6a44e9f137f7ee438717c16d_favicon%202.ico",
+      "https://cdn.prod.website-files.com/621f54116cab10f6e9215d8b/6a44e9f14b26717fdcabf00f_favicon%202.ico"
+    ]
+  },
+  "mobbin": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/mobbin.svg",
+    "source": "https://mobbin.com/mobbin-marketing-pages/images/favicon.svg",
+    "site": "https://mobbin.com/",
+    "candidates": [
+      "https://mobbin.com/mobbin-marketing-pages/images/favicon.svg",
+      "https://mobbin.com/mobbin-marketing-pages/images/apple-touch-icon.png"
+    ]
+  },
+  "grok": {
+    "error": "HTTP Error 403: Forbidden",
+    "site": "https://x.ai/bot"
+  },
+  "muse": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/muse.svg",
+    "source": "https://muse.ai/images/favicon/app-squiggle.svg",
+    "site": "https://muse.ai/",
+    "candidates": [
+      "https://muse.ai/images/favicon/app-squiggle.svg",
+      "https://muse.ai/favicon.ico"
+    ]
+  },
+  "git": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/git.ico",
+    "source": "https://git-scm.com/favicon.ico",
+    "site": "https://git-scm.com/",
+    "candidates": [
+      "https://git-scm.com/favicon.ico"
+    ]
+  },
+  "homebrew": {
+    "file": "/Users/matthieu/Projects/matthieu-pm/tmp/codex-workshop/assets/tools/homebrew.svg",
+    "source": "https://brew.sh/assets/img/homebrew.svg",
+    "site": "https://brew.sh/",
+    "candidates": [
+      "https://brew.sh/assets/img/homebrew.svg",
+      "https://brew.sh/assets/img/apple-touch-icon.png",
+      "https://brew.sh/assets/img/favicon.ico"
+    ]
+  }
+}
