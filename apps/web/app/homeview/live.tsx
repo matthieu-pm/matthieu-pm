@@ -243,7 +243,7 @@ export function HomeViewLive({
                               <span>{lights ? "3 lights on" : "All off"}</span>
                             </button>
                             <button
-                              className={styles.musicTile}
+                              aria-label="Show Music screen"
                               onClick={() => {
                                 setInstantScene(false)
                                 setScene("Music")

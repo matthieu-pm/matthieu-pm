@@ -10,7 +10,7 @@
 ["click","#hv-tab-Home"],
 ["wait",350],
 ["eval","(() => {if(document.querySelector('[role=tabpanel]:not([inert])').id!=='hv-panel-Home')throw new Error('Rapid reversal failed');const track=document.querySelector('[class*=screenTrack]');if(Math.abs(new DOMMatrix(getComputedStyle(track).transform).m41)>.1)throw new Error('Track not home');return 'Rapid reversal settles correctly';})()"],
-["click","button[class*=musicTile]"],
+["click","button[aria-label='Show Music screen']"],
 ["wait",350],
 ["eval","(() => {if(document.activeElement.id!=='hv-tab-Music')throw new Error('Focus left on hidden screen');return 'In-screen navigation restores focus to selected tab';})()"],
 ["key","ArrowRight","#hv-tab-Music"],

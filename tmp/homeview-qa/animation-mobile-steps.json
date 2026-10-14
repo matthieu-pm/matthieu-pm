@@ -1,0 +1,8 @@
+[
+["scroll","section[aria-labelledby='homeview-title']"],
+["click","#hv-tab-Music"],
+["eval","(() => {const track=document.querySelector('[class*=screenTrack]');if(getComputedStyle(track).transitionDuration!=='0s')throw new Error('Reduced-motion screen still animates');const indicator=document.querySelector('[class*=selectorHighlight]');if(getComputedStyle(indicator).transitionDuration!=='0s')throw new Error('Reduced-motion selector still animates');if(Math.abs(new DOMMatrix(getComputedStyle(track).transform).m41+130)>.1)throw new Error('Wrong screen position');return 'Reduced motion changes both instantly';})()"],
+["click","#hv-tab-Clock"],
+["shot","tmp/homeview-qa/animation-mobile-reduced.png","section[aria-labelledby='homeview-title']",2],
+["eval","(() => {if(document.documentElement.scrollWidth>innerWidth)throw new Error('Overflow');const highlight=document.querySelector('[class*=selectorHighlight]').getBoundingClientRect(),button=document.querySelector('#hv-tab-Clock').getBoundingClientRect();if(Math.abs(highlight.x-button.x)>.5||Math.abs(highlight.width-button.width)>.5)throw new Error('Mobile highlight misaligned');return 'Mobile layout and highlight alignment pass';})()"]
+]
