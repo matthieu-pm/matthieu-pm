@@ -410,25 +410,25 @@ export function HomeViewLive({
               </g>
             </svg>
           </div>
-        </div>
-        <figcaption className={styles.controls}>
-          <div className={styles.finishPicker} aria-label="Device finish">
-            {finishes.map((item) => (
-              <button
-                key={item.name}
-                aria-label={`${item.name} finish`}
-                title={item.name}
-                aria-pressed={finish === item.name}
-                onClick={() => setFinish(item.name)}
-              >
-                <span style={{ background: item.color }} />
-              </button>
-            ))}
-            <span className={styles.finishName} aria-live="polite">
-              {finish}
-            </span>
+          <div className={styles.controls}>
+            <div
+              className={styles.finishPicker}
+              role="group"
+              aria-label="Device finish"
+            >
+              {finishes.map((item) => (
+                <button
+                  key={item.name}
+                  aria-label={`${item.name} finish`}
+                  aria-pressed={finish === item.name}
+                  onClick={() => setFinish(item.name)}
+                >
+                  <span style={{ background: item.color }} />
+                </button>
+              ))}
+            </div>
           </div>
-        </figcaption>
+        </div>
       </figure>
     </section>
   )

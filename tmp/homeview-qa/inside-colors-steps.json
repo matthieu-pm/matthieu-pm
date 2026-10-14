@@ -1,0 +1,11 @@
+[
+["scroll","section[aria-labelledby='homeview-title']"],
+["eval","(() => {const picker=document.querySelector('[aria-label=\"Device finish\"]'),card=document.querySelector('.iso-plate'),p=picker.getBoundingClientRect(),c=card.getBoundingClientRect();if(!card.contains(picker))throw new Error('Colors outside card');if(picker.textContent.trim())throw new Error('Labels remain');if(picker.querySelector('[title]'))throw new Error('Hover labels remain');if(Math.abs((p.x+p.width/2)-(c.x+c.width/2))>1)throw new Error('Not centered');if(p.bottom>c.bottom)throw new Error('Colors overflow');return 'Unlabeled color options centered inside the card';})()"],
+["click","button[aria-label='Rose finish']"],
+["wait",350],
+["eval","(() => {if(document.querySelector('figure').dataset.finish!=='Rose')throw new Error('Color button not clickable');return 'Color selection still works';})()"],
+["touchDrag","#hv-panel-Home",0.75,0.25,0.2,0.25,16],
+["wait",350],
+["eval","(() => {if(document.querySelector('figure').dataset.scene!=='Music')throw new Error('Swipe blocked');if(document.documentElement.scrollWidth>innerWidth)throw new Error('Overflow');return 'Swiping and mobile containment pass';})()"],
+["shot","tmp/homeview-qa/inside-colors-mobile.png","section[aria-labelledby='homeview-title']",2]
+]

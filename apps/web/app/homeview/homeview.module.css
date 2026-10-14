@@ -501,11 +501,12 @@
   color: #ffffff90;
 }
 .controls {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 12px;
-  margin-top: 14px;
+  margin-top: -40px;
 }
 .figure[data-instant-scene="true"] .screenTrack {
   transition: none;
@@ -541,12 +542,6 @@
   outline: 1px solid #818181;
   outline-offset: 3px;
 }
-.finishName {
-  margin-left: 8px;
-  min-width: 49px;
-  font-size: 11px;
-  color: #777;
-}
 @media (max-width: 540px) {
   .heading {
     align-items: flex-start;
@@ -561,15 +556,11 @@
     margin: 0 -16px;
   }
   .controls {
-    flex-wrap: wrap;
-    gap: 8px;
+    margin-top: -32px;
   }
   .finishPicker button {
     width: 30px;
     height: 44px;
-  }
-  .finishName {
-    display: none;
   }
   .stage {
     margin-block: 6px;
