@@ -1,0 +1,15 @@
+[
+["scroll","section[aria-labelledby='homeview-title']"],
+["eval","(() => {if(document.querySelector('.iso-plate').textContent.includes('Apple HomeView'))throw new Error('Card mention remains');return 'Card mention removed';})()"],
+["click","button[aria-pressed][class*=lightTile]"],
+["eval", "(() => {const home=document.querySelector('#hv-panel-Home'),tile=home.querySelector('button[class*=lightTile]');if(home.getAnimations({subtree:true}).filter(a=>a.transitionProperty==='opacity').length<2)throw new Error('Background or rays did not crossfade');if(!tile.getAnimations().length)throw new Error('Tile did not animate');for(const a of document.querySelector('.iso-plate').getAnimations({subtree:true}))a.playbackRate=.2;return 'Room background, light tile, and bulb rays transition';})()"],
+["sheet","tmp/homeview-qa/lights-motion.png",100,4,".iso-plate",1,null,4],
+["wait",1500],
+["eval","(() => {const opacity=getComputedStyle(document.querySelector('#hv-panel-Home'),'::before').opacity;if(opacity!=='0')throw new Error('Not off: '+opacity);return 'Lights-off state settles';})()"],
+["click","button[aria-pressed][class*=lightTile]"],
+["click","button[aria-pressed][class*=lightTile]"],
+["click","button[aria-pressed][class*=lightTile]"],
+["wait",350],
+["eval","(() => {if(getComputedStyle(document.querySelector('#hv-panel-Home'),'::before').opacity!=='1')throw new Error('Rapid toggling failed');return 'Rapid toggling finishes in the correct state';})()"],
+["shot","tmp/homeview-qa/lights-final.png","section[aria-labelledby='homeview-title']",2]
+]

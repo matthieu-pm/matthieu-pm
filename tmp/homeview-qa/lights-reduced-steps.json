@@ -1,0 +1,6 @@
+[
+["scroll","section[aria-labelledby='homeview-title']"],
+["click","button[aria-pressed][class*=lightTile]"],
+["eval","(() => {const bg=getComputedStyle(document.querySelector('#hv-panel-Home'),'::before'),rays=getComputedStyle(document.querySelector('[class*=lightRays]'));if(bg.transitionDuration!=='0s'||bg.opacity!=='0'||rays.transitionDuration!=='0s'||rays.opacity!=='0')throw new Error('Reduced motion failed');if(document.querySelector('.iso-plate').textContent.includes('Apple HomeView'))throw new Error('Mention remains');return 'Reduced motion, lights state, and label removal pass';})()"],
+["shot","tmp/homeview-qa/lights-mobile-off.png","section[aria-labelledby='homeview-title']",2]
+]

@@ -28,13 +28,13 @@ function LightIcon({ on }: { on: boolean }) {
         strokeWidth="1.4"
         strokeLinecap="round"
       />
-      {on && (
-        <path
-          d="M10 1V0M3.5 4 2 3M16.5 4 18 3M2 9H0M18 9h2"
-          stroke="currentColor"
-          strokeWidth="1"
-        />
-      )}
+      <path
+        className={styles.lightRays}
+        d="M10 1V0M3.5 4 2 3M16.5 4 18 3M2 9H0M18 9h2"
+        stroke="currentColor"
+        strokeWidth="1"
+        opacity={on ? 1 : 0}
+      />
     </svg>
   )
 }
@@ -137,11 +137,6 @@ export function HomeViewLive({
         data-active={inView && !still ? "true" : "false"}
       >
         <div className={`${styles.plate} iso-plate`}>
-          <div className={styles.topline}>
-            <span>
-              Apple HomeView <span className={styles.concept}>/ Concept</span>
-            </span>
-          </div>
           <div
             className={styles.stage}
             onPointerMove={(event) => {
