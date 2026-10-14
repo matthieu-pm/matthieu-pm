@@ -146,8 +146,8 @@ export default function Page() {
           >
             <strong>other</strong>
           </a>{" "}
-          companies, and I&apos;m looking for an end-of-study PM or Design
-          Engineer internship starting June 2027.
+          companies, and I&apos;m open for a PM or Design Engineer position
+          starting June 2027.
         </p>
         <p>
           You can reach me at{" "}
