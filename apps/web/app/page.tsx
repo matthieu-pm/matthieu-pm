@@ -184,8 +184,6 @@ export default function Page() {
         </p>
       </section>
 
-      <HomeView />
-
       <section className={styles.section} aria-labelledby="work-title">
         <h2 id="work-title">Projects</h2>
         <div className={styles.projectGrid}>
@@ -296,6 +294,8 @@ export default function Page() {
           </a>
         </div>
       </section>
+
+      <HomeView />
 
       <section className={styles.section} aria-labelledby="capabilities-title">
         <h2 id="capabilities-title">Skills for agents</h2>
