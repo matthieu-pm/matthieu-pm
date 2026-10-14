@@ -506,7 +506,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-top: -40px;
+  margin-top: 14px;
 }
 .figure[data-instant-scene="true"] .screenTrack {
   transition: none;
@@ -554,9 +554,6 @@
   }
   .stage {
     margin: 0 -16px;
-  }
-  .controls {
-    margin-top: -32px;
   }
   .finishPicker button {
     width: 30px;

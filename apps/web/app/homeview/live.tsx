@@ -410,23 +410,23 @@ export function HomeViewLive({
               </g>
             </svg>
           </div>
-          <div className={styles.controls}>
-            <div
-              className={styles.finishPicker}
-              role="group"
-              aria-label="Device finish"
-            >
-              {finishes.map((item) => (
-                <button
-                  key={item.name}
-                  aria-label={`${item.name} finish`}
-                  aria-pressed={finish === item.name}
-                  onClick={() => setFinish(item.name)}
-                >
-                  <span style={{ background: item.color }} />
-                </button>
-              ))}
-            </div>
+        </div>
+        <div className={styles.controls}>
+          <div
+            className={styles.finishPicker}
+            role="group"
+            aria-label="Device finish"
+          >
+            {finishes.map((item) => (
+              <button
+                key={item.name}
+                aria-label={`${item.name} finish`}
+                aria-pressed={finish === item.name}
+                onClick={() => setFinish(item.name)}
+              >
+                <span style={{ background: item.color }} />
+              </button>
+            ))}
           </div>
         </div>
       </figure>
