@@ -430,25 +430,6 @@ export default function Page() {
             </span>
           </a>
         </div>
-        <p className={styles.contactNote}>
-          Or download my resume. (
-          <a
-            href="/matthieu-duchatellier-resume.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            french version
-          </a>
-          {" / "}
-          <a
-            href="/english-resume-matthieu-duchatellier.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            english version
-          </a>
-          )
-        </p>
       </section>
 
       <footer className={styles.footer}>

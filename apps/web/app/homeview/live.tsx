@@ -9,7 +9,8 @@ import {
 } from "react"
 import styles from "./homeview.module.css"
 
-type Scene = "Home" | "Music" | "Clock"
+const scenes = ["Home", "Music", "Clock"] as const
+type Scene = (typeof scenes)[number]
 const finishes = [
   { name: "Silver", color: "#dadcdd" },
   { name: "Starlight", color: "#ded4c3" },
@@ -46,6 +47,7 @@ export function HomeViewLive({
   screenMatrix: string
 }) {
   const [scene, setScene] = useState<Scene>("Home")
+  const [instantScene, setInstantScene] = useState(false)
   const [finish, setFinish] = useState("Silver")
   const [lights, setLights] = useState(true)
   const [playing, setPlaying] = useState(false)
@@ -130,6 +132,8 @@ export function HomeViewLive({
         className={`${styles.figure} iso`}
         data-finish={finish}
         data-scene={scene}
+        data-instant-scene={instantScene}
+        style={{ "--scene-index": scenes.indexOf(scene) } as CSSProperties}
         data-active={inView && !still ? "true" : "false"}
       >
         <div className={`${styles.plate} iso-plate`}>
@@ -188,8 +192,15 @@ export function HomeViewLive({
                       className={styles.screen}
                       data-lights={lights ? "on" : "off"}
                     >
-                      {scene === "Home" && (
-                        <div className={styles.homeScreen}>
+                      <div className={styles.screenTrack}>
+                        <div
+                          className={styles.homeScreen}
+                          role="tabpanel"
+                          id="hv-panel-Home"
+                          aria-labelledby="hv-tab-Home"
+                          aria-hidden={scene !== "Home"}
+                          inert={scene !== "Home"}
+                        >
                           <div className={styles.screenHeader}>
                             <span>My Home</span>
                             <span className={styles.wifi}>◔</span>
@@ -233,7 +244,15 @@ export function HomeViewLive({
                             </button>
                             <button
                               className={styles.musicTile}
-                              onClick={() => setScene("Music")}
+                              onClick={() => {
+                                setInstantScene(false)
+                                setScene("Music")
+                                root.current
+                                  ?.querySelector<HTMLButtonElement>(
+                                    "#hv-tab-Music"
+                                  )
+                                  ?.focus({ preventScroll: true })
+                              }}
                             >
                               <span className={styles.musicIcon}>♫</span>
                               <strong>Music</strong>
@@ -242,9 +261,14 @@ export function HomeViewLive({
                           </div>
                           <div className={styles.homeIndicator} />
                         </div>
-                      )}
-                      {scene === "Music" && (
-                        <div className={styles.musicScreen}>
+                        <div
+                          className={styles.musicScreen}
+                          role="tabpanel"
+                          id="hv-panel-Music"
+                          aria-labelledby="hv-tab-Music"
+                          aria-hidden={scene !== "Music"}
+                          inert={scene !== "Music"}
+                        >
                           <div className={styles.screenHeader}>
                             <span>Now playing</span>
                             <span>♫</span>
@@ -262,7 +286,10 @@ export function HomeViewLive({
                           </div>
                           <div className={styles.artist}>HomeView sessions</div>
                           <div className={styles.player}>
-                            <div className={styles.bars} data-playing={playing}>
+                            <div
+                              className={styles.bars}
+                              data-playing={playing && scene === "Music"}
+                            >
                               {[8, 15, 10, 19, 12].map((h, i) => (
                                 <span
                                   key={i}
@@ -289,9 +316,14 @@ export function HomeViewLive({
                           </div>
                           <div className={styles.homeIndicator} />
                         </div>
-                      )}
-                      {scene === "Clock" && (
-                        <div className={styles.clockScreen}>
+                        <div
+                          className={styles.clockScreen}
+                          role="tabpanel"
+                          id="hv-panel-Clock"
+                          aria-labelledby="hv-tab-Clock"
+                          aria-hidden={scene !== "Clock"}
+                          inert={scene !== "Clock"}
+                        >
                           <div className={styles.screenHeader}>
                             <span>A moment at home</span>
                             <span>◷</span>
@@ -323,7 +355,7 @@ export function HomeViewLive({
                           </span>
                           <div className={styles.homeIndicator} />
                         </div>
-                      )}
+                      </div>
                     </div>
                   </foreignObject>
                   <rect
@@ -340,12 +372,44 @@ export function HomeViewLive({
           </div>
         </div>
         <figcaption className={styles.controls}>
-          <div className={styles.scenePicker} aria-label="Display screen">
-            {(["Home", "Music", "Clock"] as const).map((mode) => (
+          <div
+            className={styles.scenePicker}
+            role="tablist"
+            aria-label="Display screen"
+          >
+            <span className={styles.selectorHighlight} aria-hidden="true" />
+            {scenes.map((mode) => (
               <button
                 key={mode}
-                aria-pressed={scene === mode}
-                onClick={() => setScene(mode)}
+                role="tab"
+                id={`hv-tab-${mode}`}
+                aria-controls={`hv-panel-${mode}`}
+                aria-selected={scene === mode}
+                tabIndex={scene === mode ? 0 : -1}
+                onClick={(event) => {
+                  setInstantScene(event.detail === 0)
+                  setScene(mode)
+                }}
+                onKeyDown={(event) => {
+                  const index = scenes.indexOf(mode)
+                  const next =
+                    event.key === "ArrowRight"
+                      ? scenes[(index + 1) % scenes.length]
+                      : event.key === "ArrowLeft"
+                        ? scenes[(index + scenes.length - 1) % scenes.length]
+                        : event.key === "Home"
+                          ? scenes[0]
+                          : event.key === "End"
+                            ? scenes[scenes.length - 1]
+                            : undefined
+                  if (!next) return
+                  event.preventDefault()
+                  setInstantScene(true)
+                  setScene(next)
+                  root.current
+                    ?.querySelector<HTMLButtonElement>(`#hv-tab-${next}`)
+                    ?.focus({ preventScroll: true })
+                }}
               >
                 {mode}
               </button>

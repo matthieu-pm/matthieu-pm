@@ -1,0 +1,21 @@
+[
+["scroll","section[aria-labelledby='homeview-title']"],
+["wait",200],
+["click","#hv-tab-Music"],
+["eval","(() => {const track=document.querySelector('[class*=screenTrack]');const running=track.getAnimations();if(!running.length)throw new Error('No screen transition');const indicator=document.querySelector('[class*=selectorHighlight]');if(!indicator.getAnimations().length)throw new Error('No selector transition');for(const a of [...running,...indicator.getAnimations()])a.playbackRate=.2;return 'Both slide transitions running';})()"],
+["sheet","tmp/homeview-qa/slide-motion.png",100,5,"section[aria-labelledby='homeview-title']",1,null,5],
+["wait",1300],
+["eval","(() => {const button=document.querySelector('#hv-tab-Music').getBoundingClientRect(),highlight=document.querySelector('[class*=selectorHighlight]').getBoundingClientRect();if(Math.abs(button.x-highlight.x)>.5||Math.abs(button.width-highlight.width)>.5)throw new Error('Highlight misaligned');const selected=document.querySelector('[role=tabpanel]:not([inert])');if(selected.id!=='hv-panel-Music')throw new Error('Wrong panel');return {panel:selected.id,highlightAligned:true};})()"],
+["click","#hv-tab-Clock"],
+["click","#hv-tab-Home"],
+["wait",350],
+["eval","(() => {if(document.querySelector('[role=tabpanel]:not([inert])').id!=='hv-panel-Home')throw new Error('Rapid reversal failed');const track=document.querySelector('[class*=screenTrack]');if(Math.abs(new DOMMatrix(getComputedStyle(track).transform).m41)>.1)throw new Error('Track not home');return 'Rapid reversal settles correctly';})()"],
+["click","button[class*=musicTile]"],
+["wait",350],
+["eval","(() => {if(document.activeElement.id!=='hv-tab-Music')throw new Error('Focus left on hidden screen');return 'In-screen navigation restores focus to selected tab';})()"],
+["key","ArrowRight","#hv-tab-Music"],
+["eval","(() => {if(document.activeElement.id!=='hv-tab-Clock'||document.querySelector('[role=tabpanel]:not([inert])').id!=='hv-panel-Clock')throw new Error('Arrow navigation failed');return 'Arrow-key navigation works';})()"],
+["key","Home","#hv-tab-Clock"],
+["eval","(() => {if(document.activeElement.id!=='hv-tab-Home')throw new Error('Home key failed');if(document.querySelector('#hv-panel-Music').inert!==true)throw new Error('Hidden panel interactive');if(document.documentElement.scrollWidth>innerWidth)throw new Error('Overflow');return 'Keyboard, inactive panels, and containment pass';})()"],
+["shot","tmp/homeview-qa/animation-desktop.png","section[aria-labelledby='homeview-title']",2]
+]
