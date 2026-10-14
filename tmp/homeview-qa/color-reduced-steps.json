@@ -1,0 +1,5 @@
+[
+["scroll","section[aria-labelledby='homeview-title']"],
+["click","button[aria-label='Midnight finish']"],
+["eval","(() => {const stop=document.querySelector('#hv-dome stop:nth-child(2)'),face=document.querySelector('.metal .iso-shade[data-shade=\"0\"]');if(getComputedStyle(stop).transitionDuration!=='0s'||getComputedStyle(face).transitionDuration!=='0s')throw new Error('Reduced motion still transitions');if(getComputedStyle(stop).stopColor!=='rgb(86, 90, 96)')throw new Error('Color not instant');return 'Reduced-motion finish changes immediately';})()"]
+]

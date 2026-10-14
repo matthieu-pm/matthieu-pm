@@ -1,0 +1,13 @@
+[
+["scroll","section[aria-labelledby='homeview-title']"],
+["click","button[aria-label='Midnight finish']"],
+["eval","(() => {const stop=document.querySelector('#hv-dome stop:nth-child(2)'),edge=document.querySelector('.metal .iso-edge'),face=document.querySelector('.metal .iso-shade[data-shade=\"0\"]'),hole=document.querySelector('.grille ellipse');for(const [name,el] of [['gradient',stop],['outline',edge],['metal face',face],['grille hole',hole]]){if(!el.getAnimations().length)throw new Error(name+' snapped');for(const a of el.getAnimations())a.playbackRate=.2;}return 'Gradient, aluminum faces, outlines, and grille all interpolate';})()"],
+["sheet","tmp/homeview-qa/color-motion.png",90,4,".iso-plate",1,null,4],
+["wait",1400],
+["eval","(() => {const color=getComputedStyle(document.querySelector('#hv-dome stop:nth-child(2)')).stopColor;if(color!=='rgb(86, 90, 96)')throw new Error('Wrong finish: '+color);return 'Midnight settles to its exact color';})()"],
+["click","button[aria-label='Rose finish']"],
+["click","button[aria-label='Starlight finish']"],
+["wait",400],
+["eval","(() => {const color=getComputedStyle(document.querySelector('#hv-dome stop:nth-child(2)')).stopColor;if(color!=='rgb(222, 213, 198)')throw new Error('Reversal failed: '+color);return 'Rapid color changes settle correctly';})()"],
+["shot","tmp/homeview-qa/color-final.png","section[aria-labelledby='homeview-title']",2]
+]

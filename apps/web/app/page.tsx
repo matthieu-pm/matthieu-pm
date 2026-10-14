@@ -146,7 +146,7 @@ export default function Page() {
           >
             <strong>other</strong>
           </a>{" "}
-          companies, and I&apos;m open for a PM or Design Engineer position
+          companies, and I&apos;m open for a Product Manager or Design Engineer position
           starting June 2027.
         </p>
         <p>

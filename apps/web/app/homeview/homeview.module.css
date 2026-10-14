@@ -80,6 +80,15 @@
   height: auto;
   overflow: visible;
 }
+.device :global(.iso-solid) > path,
+.device :global(.grille) ellipse {
+  transition:
+    fill 280ms cubic-bezier(0.32, 0.72, 0, 1),
+    stroke 280ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.device stop {
+  transition: stop-color 280ms cubic-bezier(0.32, 0.72, 0, 1);
+}
 .device :global(.iso-fill) {
   fill: var(--hv-mid);
 }
