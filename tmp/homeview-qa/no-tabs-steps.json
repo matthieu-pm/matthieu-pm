@@ -1,0 +1,16 @@
+[
+["scroll","section[aria-labelledby='homeview-title']"],
+["eval","(() => {if(document.querySelector('[role=tablist]'))throw new Error('Tabs remain');if(document.querySelectorAll('button[aria-label$=\" finish\"]').length!==4)throw new Error('Finish picker changed');return 'Tab selector removed; four finish controls remain';})()"],
+["touchDrag","#hv-panel-Home",0.75,0.25,0.2,0.25,16],
+["wait",350],
+["eval","(() => {if(document.querySelector('figure[data-scene]').dataset.scene!=='Music')throw new Error('Swipe broken');return 'Swipe navigation works without tabs';})()"],
+["key","ArrowRight","[data-lights]"],
+["eval","(() => {if(document.querySelector('figure[data-scene]').dataset.scene!=='Clock')throw new Error('Keyboard navigation failed');return 'Focused display supports arrow keys';})()"],
+["key","Home","[data-lights]"],
+["click","button[aria-label='Show Music screen']"],
+["wait",350],
+["eval","(() => {if(document.activeElement.getAttribute('data-lights')===null)throw new Error('Focus lost');return 'In-screen Music button keeps focus on the display';})()"],
+["click","button[aria-label='Rose finish']"],
+["eval","(() => {if(document.querySelector('figure[data-finish]').dataset.finish!=='Rose')throw new Error('Color picker broken');if(document.documentElement.scrollWidth>innerWidth)throw new Error('Overflow');return 'Color picker and mobile containment pass';})()"],
+["shot","tmp/homeview-qa/no-tabs-mobile.png","section[aria-labelledby='homeview-title']",2]
+]

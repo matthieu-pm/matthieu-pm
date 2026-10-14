@@ -77,7 +77,7 @@ export function HomeViewLive({
     setScene(next)
     if (moveFocus)
       root.current
-        ?.querySelector<HTMLButtonElement>(`#hv-tab-${next}`)
+        ?.querySelector<HTMLDivElement>("[data-lights]")
         ?.focus({ preventScroll: true })
   })
 
@@ -208,14 +208,36 @@ export function HomeViewLive({
                     <div
                       className={styles.screen}
                       data-lights={lights ? "on" : "off"}
+                      role="region"
+                      aria-roledescription="carousel"
+                      aria-label={`HomeView display, ${scene} screen`}
+                      tabIndex={0}
+                      onKeyDown={(event) => {
+                        if (event.target !== event.currentTarget) return
+                        const index = scenes.indexOf(scene)
+                        const next =
+                          event.key === "ArrowRight"
+                            ? scenes[Math.min(index + 1, scenes.length - 1)]
+                            : event.key === "ArrowLeft"
+                              ? scenes[Math.max(index - 1, 0)]
+                              : event.key === "Home"
+                                ? scenes[0]
+                                : event.key === "End"
+                                  ? scenes[scenes.length - 1]
+                                  : undefined
+                        if (!next) return
+                        event.preventDefault()
+                        setInstantScene(true)
+                        setScene(next)
+                      }}
                       {...screenSwipeHandlers}
                     >
                       <div ref={trackRef} className={styles.screenTrack}>
                         <div
                           className={styles.homeScreen}
-                          role="tabpanel"
+                          role="group"
                           id="hv-panel-Home"
-                          aria-labelledby="hv-tab-Home"
+                          aria-label="Home screen"
                           aria-hidden={scene !== "Home"}
                           inert={scene !== "Home"}
                         >
@@ -266,8 +288,8 @@ export function HomeViewLive({
                                 setInstantScene(false)
                                 setScene("Music")
                                 root.current
-                                  ?.querySelector<HTMLButtonElement>(
-                                    "#hv-tab-Music"
+                                  ?.querySelector<HTMLDivElement>(
+                                    "[data-lights]"
                                   )
                                   ?.focus({ preventScroll: true })
                               }}
@@ -281,9 +303,9 @@ export function HomeViewLive({
                         </div>
                         <div
                           className={styles.musicScreen}
-                          role="tabpanel"
+                          role="group"
                           id="hv-panel-Music"
-                          aria-labelledby="hv-tab-Music"
+                          aria-label="Music screen"
                           aria-hidden={scene !== "Music"}
                           inert={scene !== "Music"}
                         >
@@ -336,9 +358,9 @@ export function HomeViewLive({
                         </div>
                         <div
                           className={styles.clockScreen}
-                          role="tabpanel"
+                          role="group"
                           id="hv-panel-Clock"
-                          aria-labelledby="hv-tab-Clock"
+                          aria-label="Clock screen"
                           aria-hidden={scene !== "Clock"}
                           inert={scene !== "Clock"}
                         >
@@ -390,49 +412,6 @@ export function HomeViewLive({
           </div>
         </div>
         <figcaption className={styles.controls}>
-          <div
-            className={styles.scenePicker}
-            role="tablist"
-            aria-label="Display screen"
-          >
-            <span className={styles.selectorHighlight} aria-hidden="true" />
-            {scenes.map((mode) => (
-              <button
-                key={mode}
-                role="tab"
-                id={`hv-tab-${mode}`}
-                aria-controls={`hv-panel-${mode}`}
-                aria-selected={scene === mode}
-                tabIndex={scene === mode ? 0 : -1}
-                onClick={(event) => {
-                  setInstantScene(event.detail === 0)
-                  setScene(mode)
-                }}
-                onKeyDown={(event) => {
-                  const index = scenes.indexOf(mode)
-                  const next =
-                    event.key === "ArrowRight"
-                      ? scenes[(index + 1) % scenes.length]
-                      : event.key === "ArrowLeft"
-                        ? scenes[(index + scenes.length - 1) % scenes.length]
-                        : event.key === "Home"
-                          ? scenes[0]
-                          : event.key === "End"
-                            ? scenes[scenes.length - 1]
-                            : undefined
-                  if (!next) return
-                  event.preventDefault()
-                  setInstantScene(true)
-                  setScene(next)
-                  root.current
-                    ?.querySelector<HTMLButtonElement>(`#hv-tab-${next}`)
-                    ?.focus({ preventScroll: true })
-                }}
-              >
-                {mode}
-              </button>
-            ))}
-          </div>
           <div className={styles.finishPicker} aria-label="Device finish">
             {finishes.map((item) => (
               <button
