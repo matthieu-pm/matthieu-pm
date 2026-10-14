@@ -9,6 +9,7 @@ import { gitlabProfileUrl } from "@/lib/gitlab-activity"
 
 import { EmailCopy } from "./email-copy"
 import { GitLabActivity } from "./gitlab-activity"
+import { HomeView } from "./homeview/art"
 import { InspirationsOrb } from "./inspirations/inspirations-orb"
 import styles from "./page.module.css"
 
@@ -182,6 +183,8 @@ export default function Page() {
           .
         </p>
       </section>
+
+      <HomeView />
 
       <section className={styles.section} aria-labelledby="work-title">
         <h2 id="work-title">Projects</h2>

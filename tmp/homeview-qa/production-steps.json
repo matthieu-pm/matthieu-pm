@@ -1,0 +1,15 @@
+[
+["scroll","section[aria-labelledby='homeview-title']"],
+["eval","(() => { const b=document.querySelector('button[aria-label=\"Increase temperature\"]'); for(let i=0;i<12;i++) b.click(); return 'upper boundary driven'; })()"],
+["wait",150],
+["eval","(() => { if(!document.querySelector('button[aria-label=\"Increase temperature\"]').disabled || !document.querySelector('[data-readout]').textContent.startsWith('28°')) throw new Error('Upper limit failed'); const d=document.querySelector('button[aria-label=\"Decrease temperature\"]'); for(let i=0;i<20;i++) d.click(); return 'upper limit pass'; })()"],
+["wait",150],
+["eval","(() => { if(!document.querySelector('button[aria-label=\"Decrease temperature\"]').disabled || !document.querySelector('[data-readout]').textContent.startsWith('16°')) throw new Error('Lower limit failed'); return 'lower limit pass'; })()"],
+["click","button[aria-label='Midnight finish']"],
+["eval","Array.from(document.querySelectorAll('button')).find(b=>b.textContent==='Music').click()"],
+["wait",100],
+["click","button[aria-label='Play music animation']"],
+["eval","(() => { const el=document.querySelector('[class*=bars] span'); if(getComputedStyle(el).animationName !== 'none') throw new Error('Reduced motion did not stop'); if(document.documentElement.scrollWidth>innerWidth) throw new Error('Mobile overflow'); return 'reduced motion and mobile overflow pass'; })()"],
+["shot","tmp/homeview-qa/production-mobile-midnight.png","section[aria-labelledby='homeview-title']",2],
+["lines",null,".iso-plate"]
+]

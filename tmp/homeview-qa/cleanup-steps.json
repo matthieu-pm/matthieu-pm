@@ -1,0 +1,11 @@
+[
+["scroll","section[aria-labelledby='homeview-title']"],
+["eval","(() => { const text=document.querySelector('section[aria-labelledby=\"homeview-title\"]').textContent; for(const label of ['A little concept, just for home.','FIG. 01','Tap a screen. Make it yours.','Local time'])if(text.includes(label))throw new Error('Still present: '+label); const box=document.querySelector('.iso-svg').viewBox.baseVal;if(box.width!==712)throw new Error('Size unchanged');return 'Labels removed and device reduced by 10%'; })()"],
+["eval","Array.from(document.querySelectorAll('button')).find(b=>b.textContent==='Music').click()"],
+["wait",120],
+["eval","(() => {if(document.querySelector('foreignObject').textContent.includes('PREVIEW'))throw new Error('PREVIEW still present');return 'Music label removed';})()"],
+["shot","tmp/homeview-qa/cleanup-desktop.png","section[aria-labelledby='homeview-title']",2],
+["eval","Array.from(document.querySelectorAll('button')).find(b=>b.textContent==='Clock').click()"],
+["wait",120],
+["eval","(() => {if(document.querySelector('[data-readout]').textContent.trim())throw new Error('Clock footer remains');return 'Clock footer empty';})()"]
+]

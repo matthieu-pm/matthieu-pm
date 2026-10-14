@@ -1,0 +1,607 @@
+.section {
+  margin-top: var(--section-gap);
+}
+.heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.heading h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.012em;
+}
+.figure {
+  margin: 0;
+  --hv-bright: #fafafa;
+  --hv-mid: #d9dbdd;
+  --hv-dark: #969a9e;
+  --hv-hole: #33373a;
+  --hv-stroke: #999da1;
+}
+.figure[data-finish="Starlight"] {
+  --hv-bright: #fbf6ed;
+  --hv-mid: #ded5c6;
+  --hv-dark: #a29989;
+  --hv-hole: #474237;
+  --hv-stroke: #a69d8f;
+}
+.figure[data-finish="Rose"] {
+  --hv-bright: #fcf1ef;
+  --hv-mid: #dfc9c7;
+  --hv-dark: #a48d8c;
+  --hv-hole: #513e3e;
+  --hv-stroke: #aa9292;
+}
+.figure[data-finish="Midnight"] {
+  --hv-bright: #989ca2;
+  --hv-mid: #565a60;
+  --hv-dark: #292c32;
+  --hv-hole: #17191c;
+  --hv-stroke: #5c6066;
+}
+.plate {
+  composes: card from "../card.module.css";
+  overflow: hidden;
+  padding: 24px;
+}
+.topline {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  color: #87878a;
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  line-height: 16px;
+  min-height: 16px;
+}
+.topline > span:last-child {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 12px;
+  color: #4b4b4e;
+}
+.concept {
+  color: #999;
+}
+.stage {
+  margin: 0 -24px;
+  isolation: isolate;
+}
+.device {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.device :global(.iso-fill) {
+  fill: var(--hv-mid);
+}
+.device :global(.iso-shade),
+.device :global(.iso-top) {
+  stroke: none;
+}
+.device :global(.iso-shade[data-shade="0"]) {
+  fill: var(--hv-dark);
+}
+.device :global(.iso-shade[data-shade="1"]) {
+  fill: var(--hv-dark);
+  opacity: 0.7;
+}
+.device :global(.iso-shade[data-shade="2"]) {
+  fill: var(--hv-mid);
+}
+.device :global(.iso-shade[data-shade="3"]) {
+  fill: var(--hv-bright);
+  opacity: 0.75;
+}
+.device :global(.iso-top) {
+  fill: var(--hv-bright);
+}
+.device :global(.iso-edge) {
+  fill: none;
+  stroke: var(--hv-stroke);
+  stroke-width: 0.45px;
+  stroke-linejoin: round;
+}
+.device :global(.dome .iso-fill),
+.device :global(.base .iso-fill),
+.device :global(.grille .iso-fill) {
+  fill: url(#hv-metal);
+}
+.device :global(.dome .iso-fill) {
+  fill: url(#hv-dome);
+}
+.device :global(.dome .iso-shade),
+.device :global(.dome .iso-top) {
+  display: none;
+}
+.device :global(.grille .iso-shade),
+.device :global(.grille .iso-top) {
+  opacity: 0.3;
+}
+.device :global(.grille .iso-edge) {
+  stroke: none;
+}
+.device :global(.rubber .iso-fill),
+.device :global(.rubber .iso-shade),
+.device :global(.rubber .iso-top) {
+  fill: #727476;
+}
+.device :global(.rim .iso-fill),
+.device :global(.rim .iso-shade),
+.device :global(.rim .iso-top) {
+  fill: var(--hv-bright);
+}
+.device :global(.bezel .iso-fill),
+.device :global(.bezel .iso-shade),
+.device :global(.bezel .iso-top) {
+  fill: #08090a;
+}
+.device :global(.bezel .iso-edge) {
+  stroke: #343539;
+}
+.device :global(.glass .iso-fill),
+.device :global(.glass .iso-shade),
+.device :global(.glass .iso-top) {
+  fill: #302b27;
+}
+.device :global(.glass .iso-edge) {
+  stroke: none;
+}
+.screen {
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  border-radius: 17px;
+  color: #fff;
+  font-family:
+    var(--font-sans),
+    -apple-system,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 8px;
+  line-height: 1.25;
+}
+.screen button {
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  border: 0;
+}
+.screen button:focus-visible {
+  outline: 1.5px solid #fff;
+  outline-offset: 2px;
+}
+.screen button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.homeScreen,
+.musicScreen,
+.clockScreen {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  padding: 9px;
+}
+.homeScreen {
+  background: radial-gradient(
+    ellipse at 12% 20%,
+    #ad8657 0%,
+    #856647 32%,
+    #3b342d 85%
+  );
+}
+.screen[data-lights="off"] .homeScreen {
+  background: radial-gradient(
+    ellipse at 12% 20%,
+    #676969,
+    #42494d 38%,
+    #232b31 85%
+  );
+}
+.screenHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 7px;
+  font-weight: 500;
+  line-height: 9px;
+}
+.wifi {
+  font-size: 9px;
+  opacity: 0.65;
+}
+.roomLabel {
+  margin-top: 9px;
+  font-size: 6px;
+  color: #ffffffad;
+}
+.climate {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 7px;
+}
+.climate > span {
+  flex: 0 0 2.5ch;
+  font-size: 31px;
+  font-variant-numeric: tabular-nums;
+  line-height: 34px;
+  letter-spacing: -2px;
+  font-weight: 350;
+}
+.climate > div {
+  font-size: 5px;
+  color: #ffffffba;
+}
+.temperatureButtons {
+  display: flex;
+  gap: 3px;
+  margin-top: 2px;
+}
+.temperatureButtons button {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 22px;
+  background: #ffffff15;
+  border-radius: 4px;
+  font-size: 10px;
+}
+.tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.tiles > button {
+  text-align: left;
+  padding: 5px 6px;
+  height: 43px;
+  border-radius: 8px;
+  border: 0.5px solid #ffffff24;
+  background: #ffffff12;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+.tiles > button:hover {
+  background: #ffffff24;
+}
+.tiles > button:active {
+  transform: scale(0.96);
+}
+.tiles strong,
+.tiles span {
+  display: block;
+}
+.tiles svg {
+  width: 13px;
+  height: 13px;
+  margin-bottom: 1px;
+}
+.tiles strong {
+  font-size: 6px;
+  font-weight: 500;
+  line-height: 8px;
+}
+.tiles button > span:last-child {
+  font-size: 4.6px;
+  color: #ffffff9c;
+  margin-top: 1px;
+  white-space: nowrap;
+}
+.tiles .lightTile[aria-pressed="true"] {
+  background: #e4bb703d;
+  border-color: #f3d4964d;
+}
+.musicIcon {
+  font-size: 14px;
+  line-height: 15px;
+}
+.homeIndicator {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #ffffff90;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+.musicScreen {
+  background: radial-gradient(ellipse at 0 0, #616752, #252b25 80%);
+}
+.album {
+  position: relative;
+  overflow: hidden;
+  margin: 7px auto 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background: #d6ddc4;
+  color: #384339;
+  box-shadow: 0 3px 6px #0003;
+}
+.album > div {
+  position: absolute;
+  width: 39px;
+  height: 60px;
+  border-radius: 50%;
+  background: #858f67;
+  transform: rotate(35deg);
+  top: 17px;
+  left: 28px;
+}
+.album > span {
+  position: relative;
+  display: block;
+  padding: 9px 7px;
+  font-size: 9px;
+  line-height: 9px;
+  letter-spacing: -0.3px;
+  font-family: Georgia, serif;
+}
+.trackTitle {
+  font-size: 6px;
+  line-height: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+.artist {
+  font-size: 5px;
+  text-align: center;
+  color: #ffffff70;
+  line-height: 8px;
+}
+.player {
+  display: grid;
+  grid-template-columns: 22px 1fr 22px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3px 11px 0;
+  height: 17px;
+}
+.player button {
+  justify-self: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff15;
+  font-size: 9px;
+  display: grid;
+  place-items: center;
+}
+.bars {
+  display: flex;
+  align-items: center;
+  height: 14px;
+  gap: 2px;
+  width: 22px;
+}
+.bars span {
+  display: block;
+  width: 2px;
+  height: calc(var(--bar-height) * 0.5);
+  background: #c5cea7;
+  border-radius: 2px;
+}
+.figure[data-active="true"] .bars[data-playing="true"] span {
+  animation: equalizer 950ms ease-in-out var(--bar-delay) infinite alternate;
+}
+@keyframes equalizer {
+  from {
+    transform: scaleY(0.35);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+.clockScreen {
+  background: radial-gradient(
+    ellipse at 70% 10%,
+    #7e9290,
+    #465f61 48%,
+    #293b41 95%
+  );
+  text-align: center;
+}
+.clockFace {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  margin: 8px auto 3px;
+  border: 0.5px solid #ffffff21;
+  border-radius: 50%;
+  background: #ffffff09;
+}
+.clockFace i {
+  position: absolute;
+  height: 29px;
+  width: 1px;
+  left: 31px;
+  top: 2px;
+  transform-origin: 50% 29px;
+}
+.clockFace i::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 1px;
+  border-radius: 1px;
+  background: #ffffff9e;
+}
+.hourHand,
+.minuteHand {
+  position: absolute;
+  left: 30px;
+  bottom: 31px;
+  width: 2px;
+  height: 18px;
+  background: #faf9ed;
+  border-radius: 2px;
+  transform-origin: 50% 100%;
+}
+.minuteHand {
+  height: 25px;
+  width: 1px;
+  left: 30.5px;
+}
+.clockFace b {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #faf9ed;
+  top: 29px;
+  left: 29px;
+}
+.digitalTime {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+.clockNote {
+  font-size: 5px;
+  color: #ffffff90;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+}
+.scenePicker {
+  display: flex;
+  padding: 3px;
+  gap: 2px;
+  background: #f0f0ee;
+  border: 1px solid #e8e8e5;
+  border-radius: 10px;
+}
+.scenePicker button {
+  min-height: 32px;
+  padding: 5px 12px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #737373;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease;
+}
+.scenePicker button:hover {
+  color: #1f1f1f;
+}
+.scenePicker button[aria-pressed="true"] {
+  background: #fff;
+  color: #282828;
+  box-shadow: 0 1px 3px #00000012;
+}
+.scenePicker button:focus-visible,
+.finishPicker button:focus-visible {
+  outline: 2px solid #333;
+  outline-offset: 3px;
+}
+.finishPicker {
+  display: flex;
+  align-items: center;
+}
+.finishPicker button {
+  width: 30px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.finishPicker button span {
+  width: 14px;
+  height: 14px;
+  display: block;
+  border-radius: 50%;
+  border: 0.5px solid #0000001f;
+  box-shadow: inset 0 1px 1px #ffffff70;
+}
+.finishPicker button[aria-pressed="true"] span {
+  outline: 1px solid #818181;
+  outline-offset: 3px;
+}
+.finishName {
+  margin-left: 8px;
+  min-width: 49px;
+  font-size: 11px;
+  color: #777;
+}
+@media (max-width: 540px) {
+  .heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 16px;
+  }
+  .plate {
+    padding: 18px 16px;
+  }
+  .stage {
+    margin: 0 -16px;
+  }
+  .controls {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .scenePicker button {
+    padding: 6px 11px;
+    min-height: 38px;
+  }
+  .finishPicker button {
+    width: 30px;
+    height: 44px;
+  }
+  .finishName {
+    display: none;
+  }
+  .topline {
+    top: 18px;
+    right: 16px;
+    font-size: 9px;
+  }
+  .topline > span:last-child {
+    font-size: 11px;
+  }
+  .stage {
+    margin-block: 6px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .figure * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .device {
+    width: 125%;
+    max-width: none;
+    margin-left: -12.5%;
+  }
+}

@@ -1,0 +1,7 @@
+[
+["scroll","section[aria-labelledby='homeview-title']"],
+["eval","(() => {const svg=document.querySelector('.iso-svg'),card=document.querySelector('.iso-plate'),body=svg.querySelector('g[aria-hidden=\"true\"]');const b=body.getBBox(),matrix=body.getScreenCTM(),p=new DOMPoint(b.x+b.width/2,b.y+b.height/2).matrixTransform(matrix),c=card.getBoundingClientRect();const dx=p.x-(c.x+c.width/2),dy=p.y-(c.y+c.height/2);if(Math.abs(dx)>2||Math.abs(dy)>7)throw new Error('Not centered: '+dx+','+dy);return {horizontalOffset:dx,verticalOffset:dy,overflow:document.documentElement.scrollWidth>innerWidth};})()"],
+["click","button[aria-label='Increase temperature']"],
+["eval","(() => {if(!document.querySelector('foreignObject').textContent.includes('22°'))throw new Error('Screen click failed');return 'Screen remains aligned and interactive';})()"],
+["shot","tmp/homeview-qa/centered-mobile.png","section[aria-labelledby='homeview-title']",2]
+]
