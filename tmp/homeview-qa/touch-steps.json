@@ -1,0 +1,21 @@
+[
+["scroll","section[aria-labelledby='homeview-title']"],
+["touchDrag","#hv-panel-Home",0.75,0.25,0.38,0.25,20,null,"tmp/homeview-qa/touch-mid-drag.png"],
+["wait",350],
+["eval","(() => {if(document.querySelector('#hv-tab-Music').getAttribute('aria-selected')!=='true')throw new Error('Touch swipe failed');if(document.querySelector('figure').hasAttribute('data-dragging'))throw new Error('Gesture not released');return 'Real touch swipe selects Music';})()"],
+["touchDrag","#hv-panel-Music",0.6,0.3,0.53,0.3,12,null,null,180],
+["wait",350],
+["eval","(() => {if(document.querySelector('#hv-tab-Music').getAttribute('aria-selected')!=='true')throw new Error('Short swipe did not snap back');return 'Short touch drag snaps back';})()"],
+["touchDrag","#hv-panel-Music",0.75,0.25,0.2,0.25,16,"cancel"],
+["wait",350],
+["eval","(() => {if(document.querySelector('#hv-tab-Music').getAttribute('aria-selected')!=='true')throw new Error('Cancelled drag changed screen');return 'Cancelled touch drag restores selected screen';})()"],
+["eval","window.__scrollBefore=scrollY"],
+["touchDrag","#hv-panel-Music",0.5,0.2,0.5,0.8,16],
+["wait",350],
+["eval","(() => {if(Math.abs(scrollY-window.__scrollBefore)<10)throw new Error('Vertical scrolling blocked');if(document.querySelector('#hv-tab-Music').getAttribute('aria-selected')!=='true')throw new Error('Vertical scroll changed screen');return {verticalScrollPreserved:true,scrollDelta:scrollY-window.__scrollBefore};})()"],
+["scroll","section[aria-labelledby='homeview-title']"],
+["touchDrag","#hv-panel-Music",0.75,0.25,0.2,0.25,16],
+["wait",350],
+["eval","(() => {if(document.querySelector('#hv-tab-Clock').getAttribute('aria-selected')!=='true')throw new Error('Second touch swipe failed');if(document.documentElement.scrollWidth>innerWidth)throw new Error('Overflow');return 'Touch navigation and containment pass';})()"],
+["shot","tmp/homeview-qa/swipe-mobile.png","section[aria-labelledby='homeview-title']",2]
+]

@@ -144,6 +144,9 @@
   stroke: none;
 }
 .screen {
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
   width: 130px;
   height: 130px;
   overflow: hidden;
@@ -177,6 +180,14 @@
   height: 130px;
   transform: translateX(calc(var(--scene-index) * -130px));
   transition: transform 280ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.figure[data-dragging="true"] .screenTrack,
+.figure[data-dragging="true"] .selectorHighlight {
+  transition: none;
+}
+.figure[data-dragging="true"] .screen,
+.figure[data-dragging="true"] .screen button {
+  cursor: grabbing;
 }
 .homeScreen,
 .musicScreen,

@@ -1,0 +1,8 @@
+[
+["scroll","section[aria-labelledby='homeview-title']"],
+["touchDrag","#hv-panel-Home",0.7,0.25,0.48,0.25,2],
+["wait",100],
+["eval","(() => {if(document.querySelector('#hv-tab-Music').getAttribute('aria-selected')!=='true')throw new Error('Quick flick failed');const track=document.querySelector('[class*=screenTrack]');if(getComputedStyle(track).transitionDuration!=='0s')throw new Error('Reduced-motion snap animates');if(Math.abs(new DOMMatrix(getComputedStyle(track).transform).m41+130)>.1)throw new Error('Wrong screen position');return 'Quick flick works; reduced motion settles instantly';})()"],
+["key","ArrowRight","#hv-tab-Music"],
+["eval","(() => {if(document.activeElement.id!=='hv-tab-Clock')throw new Error('Keyboard navigation failed');return 'Keyboard navigation still works after swiping';})()"]
+]

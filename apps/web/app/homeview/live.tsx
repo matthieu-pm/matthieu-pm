@@ -8,6 +8,7 @@ import {
   type ReactNode,
 } from "react"
 import styles from "./homeview.module.css"
+import { useScreenSwipe } from "./use-screen-swipe"
 
 const scenes = ["Home", "Music", "Clock"] as const
 type Scene = (typeof scenes)[number]
@@ -59,6 +60,26 @@ export function HomeViewLive({
   const sheen = useRef<SVGRectElement>(null)
   const target = useRef(0)
   const wake = useRef<() => void>(() => {})
+  const {
+    figureRef,
+    planeRef,
+    trackRef,
+    handlers: screenSwipeHandlers,
+  } = useScreenSwipe(scenes.indexOf(scene), (index) => {
+    const next = scenes[index]
+    if (!next) return
+    const moveFocus =
+      next !== scene &&
+      root.current
+        ?.querySelector("[data-lights]")
+        ?.contains(document.activeElement)
+    setInstantScene(false)
+    setScene(next)
+    if (moveFocus)
+      root.current
+        ?.querySelector<HTMLButtonElement>(`#hv-tab-${next}`)
+        ?.focus({ preventScroll: true })
+  })
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)")
@@ -129,6 +150,7 @@ export function HomeViewLive({
         <h2 id="homeview-title">HomeView</h2>
       </div>
       <figure
+        ref={figureRef}
         className={`${styles.figure} iso`}
         data-finish={finish}
         data-scene={scene}
@@ -180,14 +202,15 @@ export function HomeViewLive({
                 </clipPath>
               </defs>
               {hardware}
-              <g transform={screenMatrix}>
+              <g ref={planeRef} transform={screenMatrix}>
                 <g clipPath="url(#hv-screen)">
                   <foreignObject width="130" height="130">
                     <div
                       className={styles.screen}
                       data-lights={lights ? "on" : "off"}
+                      {...screenSwipeHandlers}
                     >
-                      <div className={styles.screenTrack}>
+                      <div ref={trackRef} className={styles.screenTrack}>
                         <div
                           className={styles.homeScreen}
                           role="tabpanel"
