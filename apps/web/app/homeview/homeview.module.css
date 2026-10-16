@@ -53,10 +53,24 @@
   margin: 0 -24px;
   isolation: isolate;
 }
+.deviceFrame {
+  /* Keep in sync with VIEWBOX in live.tsx. */
+  --hv-w: 712px;
+  --hv-h: 445px;
+
+  container-type: inline-size;
+  width: 100%;
+}
+.scaler {
+  position: relative;
+  width: var(--hv-w);
+  height: var(--hv-h);
+  zoom: calc(100cqw / var(--hv-w));
+}
 .device {
   display: block;
-  width: 100%;
-  height: auto;
+  width: var(--hv-w);
+  height: var(--hv-h);
   overflow: visible;
 }
 .device :global(.iso-solid) > path,
@@ -144,6 +158,10 @@
   stroke: none;
 }
 .screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
   touch-action: pan-y;
   user-select: none;
   cursor: grab;
@@ -177,6 +195,20 @@
 .screen button:disabled {
   opacity: 0.3;
   cursor: default;
+}
+.sheen {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 80px;
+  height: 130px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(255 255 255 / 9%),
+    transparent
+  );
+  pointer-events: none;
 }
 .screenTrack {
   display: flex;
@@ -573,9 +605,8 @@
 }
 
 @media (max-width: 540px) {
-  .device {
+  .deviceFrame {
     width: 125%;
-    max-width: none;
     margin-left: -12.5%;
   }
 }

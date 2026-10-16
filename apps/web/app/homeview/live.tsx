@@ -12,6 +12,20 @@ import { useScreenSwipe } from "./use-screen-swipe"
 
 const scenes = ["Home", "Music", "Clock"] as const
 type Scene = (typeof scenes)[number]
+// Matches --hv-w / --hv-h in homeview.module.css. WebKit paints layered HTML
+// inside a foreignObject at the SVG origin, so the screen is HTML over the
+// device and both are zoomed from this user space.
+const VIEWBOX = { x: -36, y: -22.5, width: 712, height: 445 }
+
+function screenPlaneTransform(screenMatrix: string) {
+  const match = screenMatrix.match(
+    /matrix\(\s*([-\d.eE+]+)[\s,]+([-\d.eE+]+)[\s,]+([-\d.eE+]+)[\s,]+([-\d.eE+]+)[\s,]+([-\d.eE+]+)[\s,]+([-\d.eE+]+)\s*\)/
+  )
+  if (!match) return undefined
+  const [, a, b, c, d, e, f] = match
+  return `matrix(${a}, ${b}, ${c}, ${d}, ${Number(e) - VIEWBOX.x}, ${Number(f) - VIEWBOX.y})`
+}
+
 const finishes = [
   { name: "Silver", color: "#dadcdd" },
   { name: "Starlight", color: "#ded4c3" },
@@ -57,7 +71,7 @@ export function HomeViewLive({
   const [still, setStill] = useState(true)
   const [temperature, setTemperature] = useState(21)
   const root = useRef<HTMLElement>(null)
-  const sheen = useRef<SVGRectElement>(null)
+  const sheen = useRef<HTMLDivElement>(null)
   const target = useRef(0)
   const wake = useRef<() => void>(() => {})
   const {
@@ -121,7 +135,7 @@ export function HomeViewLive({
       const dt = previous ? Math.min((now - previous) / 1000, 0.05) : 0
       previous = now
       current += (target.current - current) * (1 - Math.exp(-8 * dt))
-      surface?.setAttribute("transform", `translate(${current} 0)`)
+      surface?.style.setProperty("transform", `translate(${current}px, 0px)`)
       frame =
         Math.abs(target.current - current) > 0.01
           ? requestAnimationFrame(tick)
@@ -136,7 +150,7 @@ export function HomeViewLive({
     return () => {
       cancelAnimationFrame(frame)
       wake.current = () => {}
-      surface?.removeAttribute("transform")
+      surface?.style.removeProperty("transform")
     }
   }, [inView, still])
 
@@ -173,242 +187,232 @@ export function HomeViewLive({
               wake.current()
             }}
           >
-            <svg
-              viewBox="-36 -22.5 712 445"
-              className={`${styles.device} iso-svg`}
-              aria-label="Apple-inspired HomeView concept with a square display, aluminum enclosure, and perforated speaker base"
-            >
-              <defs>
-                <filter id="hv-shadow">
-                  <feGaussianBlur stdDeviation="6" />
-                </filter>
-                <linearGradient id="hv-metal" x1="0" y1="0" x2="1" y2=".65">
-                  <stop stopColor="var(--hv-bright)" />
-                  <stop offset=".4" stopColor="var(--hv-mid)" />
-                  <stop offset="1" stopColor="var(--hv-dark)" />
-                </linearGradient>
-                <radialGradient id="hv-dome" cx=".28" cy=".12" r=".9">
-                  <stop stopColor="var(--hv-bright)" />
-                  <stop offset=".5" stopColor="var(--hv-mid)" />
-                  <stop offset="1" stopColor="var(--hv-dark)" />
-                </radialGradient>
-                <linearGradient id="hv-sheen" x1="0" x2="1">
-                  <stop stopColor="#fff" stopOpacity="0" />
-                  <stop offset=".5" stopColor="#fff" stopOpacity=".09" />
-                  <stop offset="1" stopColor="#fff" stopOpacity="0" />
-                </linearGradient>
-                <clipPath id="hv-screen">
-                  <rect width="130" height="130" rx="17" />
-                </clipPath>
-              </defs>
-              {hardware}
-              <g ref={planeRef} transform={screenMatrix}>
-                <g clipPath="url(#hv-screen)">
-                  <foreignObject width="130" height="130">
+            <div className={styles.deviceFrame}>
+              <div className={styles.scaler}>
+                <svg
+                  viewBox={`${VIEWBOX.x} ${VIEWBOX.y} ${VIEWBOX.width} ${VIEWBOX.height}`}
+                  className={`${styles.device} iso-svg`}
+                  aria-label="Apple-inspired HomeView concept with a square display, aluminum enclosure, and perforated speaker base"
+                >
+                  <defs>
+                    <filter id="hv-shadow">
+                      <feGaussianBlur stdDeviation="6" />
+                    </filter>
+                    <linearGradient id="hv-metal" x1="0" y1="0" x2="1" y2=".65">
+                      <stop stopColor="var(--hv-bright)" />
+                      <stop offset=".4" stopColor="var(--hv-mid)" />
+                      <stop offset="1" stopColor="var(--hv-dark)" />
+                    </linearGradient>
+                    <radialGradient id="hv-dome" cx=".28" cy=".12" r=".9">
+                      <stop stopColor="var(--hv-bright)" />
+                      <stop offset=".5" stopColor="var(--hv-mid)" />
+                      <stop offset="1" stopColor="var(--hv-dark)" />
+                    </radialGradient>
+                  </defs>
+                  {hardware}
+                  <g ref={planeRef} transform={screenMatrix}>
+                    <rect
+                      width="130"
+                      height="130"
+                      fill="transparent"
+                      pointerEvents="none"
+                    />
+                  </g>
+                </svg>
+                <div
+                  className={styles.screen}
+                  style={{ transform: screenPlaneTransform(screenMatrix) }}
+                  data-lights={lights ? "on" : "off"}
+                  role="region"
+                  aria-roledescription="carousel"
+                  aria-label={`HomeView display, ${scene} screen`}
+                  tabIndex={0}
+                  onKeyDown={(event) => {
+                    if (event.target !== event.currentTarget) return
+                    const index = scenes.indexOf(scene)
+                    const next =
+                      event.key === "ArrowRight"
+                        ? scenes[Math.min(index + 1, scenes.length - 1)]
+                        : event.key === "ArrowLeft"
+                          ? scenes[Math.max(index - 1, 0)]
+                          : event.key === "Home"
+                            ? scenes[0]
+                            : event.key === "End"
+                              ? scenes[scenes.length - 1]
+                              : undefined
+                    if (!next) return
+                    event.preventDefault()
+                    setInstantScene(true)
+                    setScene(next)
+                  }}
+                  {...screenSwipeHandlers}
+                >
+                  <div ref={trackRef} className={styles.screenTrack}>
                     <div
-                      className={styles.screen}
-                      data-lights={lights ? "on" : "off"}
-                      role="region"
-                      aria-roledescription="carousel"
-                      aria-label={`HomeView display, ${scene} screen`}
-                      tabIndex={0}
-                      onKeyDown={(event) => {
-                        if (event.target !== event.currentTarget) return
-                        const index = scenes.indexOf(scene)
-                        const next =
-                          event.key === "ArrowRight"
-                            ? scenes[Math.min(index + 1, scenes.length - 1)]
-                            : event.key === "ArrowLeft"
-                              ? scenes[Math.max(index - 1, 0)]
-                              : event.key === "Home"
-                                ? scenes[0]
-                                : event.key === "End"
-                                  ? scenes[scenes.length - 1]
-                                  : undefined
-                        if (!next) return
-                        event.preventDefault()
-                        setInstantScene(true)
-                        setScene(next)
-                      }}
-                      {...screenSwipeHandlers}
+                      className={styles.homeScreen}
+                      role="group"
+                      id="hv-panel-Home"
+                      aria-label="Home screen"
+                      aria-hidden={scene !== "Home"}
+                      inert={scene !== "Home"}
                     >
-                      <div ref={trackRef} className={styles.screenTrack}>
-                        <div
-                          className={styles.homeScreen}
-                          role="group"
-                          id="hv-panel-Home"
-                          aria-label="Home screen"
-                          aria-hidden={scene !== "Home"}
-                          inert={scene !== "Home"}
-                        >
-                          <div className={styles.screenHeader}>
-                            <span>My Home</span>
-                            <span className={styles.wifi}>◔</span>
-                          </div>
-                          <div className={styles.roomLabel}>Living room</div>
-                          <div className={styles.climate}>
-                            <span>{temperature}°</span>
-                            <div>
-                              <span>Feels just right</span>
-                              <div className={styles.temperatureButtons}>
-                                <button
-                                  aria-label="Decrease temperature"
-                                  disabled={temperature <= 16}
-                                  onClick={() =>
-                                    setTemperature((t) => Math.max(16, t - 1))
-                                  }
-                                >
-                                  −
-                                </button>
-                                <button
-                                  aria-label="Increase temperature"
-                                  disabled={temperature >= 28}
-                                  onClick={() =>
-                                    setTemperature((t) => Math.min(28, t + 1))
-                                  }
-                                >
-                                  +
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                          <div className={styles.tiles}>
+                      <div className={styles.screenHeader}>
+                        <span>My Home</span>
+                        <span className={styles.wifi}>◔</span>
+                      </div>
+                      <div className={styles.roomLabel}>Living room</div>
+                      <div className={styles.climate}>
+                        <span>{temperature}°</span>
+                        <div>
+                          <span>Feels just right</span>
+                          <div className={styles.temperatureButtons}>
                             <button
-                              className={styles.lightTile}
-                              aria-pressed={lights}
-                              onClick={() => setLights((value) => !value)}
-                            >
-                              <LightIcon on={lights} />
-                              <strong>Lights</strong>
-                              <span>{lights ? "3 lights on" : "All off"}</span>
-                            </button>
-                            <button
-                              aria-label="Show Music screen"
-                              onClick={() => {
-                                setInstantScene(false)
-                                setScene("Music")
-                                root.current
-                                  ?.querySelector<HTMLDivElement>(
-                                    "[data-lights]"
-                                  )
-                                  ?.focus({ preventScroll: true })
-                              }}
-                            >
-                              <span className={styles.musicIcon}>♫</span>
-                              <strong>Music</strong>
-                              <span>A moment of calm</span>
-                            </button>
-                          </div>
-                          <div className={styles.homeIndicator} />
-                        </div>
-                        <div
-                          className={styles.musicScreen}
-                          role="group"
-                          id="hv-panel-Music"
-                          aria-label="Music screen"
-                          aria-hidden={scene !== "Music"}
-                          inert={scene !== "Music"}
-                        >
-                          <div className={styles.screenHeader}>
-                            <span>Now playing</span>
-                            <span>♫</span>
-                          </div>
-                          <div className={styles.album}>
-                            <div />
-                            <span>
-                              slow
-                              <br />
-                              mornings.
-                            </span>
-                          </div>
-                          <div className={styles.trackTitle}>
-                            A little room to breathe
-                          </div>
-                          <div className={styles.artist}>HomeView sessions</div>
-                          <div className={styles.player}>
-                            <div
-                              className={styles.bars}
-                              data-playing={playing && scene === "Music"}
-                            >
-                              {[8, 15, 10, 19, 12].map((h, i) => (
-                                <span
-                                  key={i}
-                                  style={
-                                    {
-                                      "--bar-height": `${h}px`,
-                                      "--bar-delay": `${i * -160}ms`,
-                                    } as CSSProperties
-                                  }
-                                />
-                              ))}
-                            </div>
-                            <button
-                              aria-label={
-                                playing
-                                  ? "Pause music animation"
-                                  : "Play music animation"
+                              aria-label="Decrease temperature"
+                              disabled={temperature <= 16}
+                              onClick={() =>
+                                setTemperature((t) => Math.max(16, t - 1))
                               }
-                              aria-pressed={playing}
-                              onClick={() => setPlaying((p) => !p)}
                             >
-                              {playing ? "Ⅱ" : "▶"}
+                              −
+                            </button>
+                            <button
+                              aria-label="Increase temperature"
+                              disabled={temperature >= 28}
+                              onClick={() =>
+                                setTemperature((t) => Math.min(28, t + 1))
+                              }
+                            >
+                              +
                             </button>
                           </div>
-                          <div className={styles.homeIndicator} />
-                        </div>
-                        <div
-                          className={styles.clockScreen}
-                          role="group"
-                          id="hv-panel-Clock"
-                          aria-label="Clock screen"
-                          aria-hidden={scene !== "Clock"}
-                          inert={scene !== "Clock"}
-                        >
-                          <div className={styles.screenHeader}>
-                            <span>A moment at home</span>
-                            <span>◷</span>
-                          </div>
-                          <div className={styles.clockFace}>
-                            {Array.from({ length: 12 }, (_, i) => (
-                              <i
-                                key={i}
-                                style={{ transform: `rotate(${i * 30}deg)` }}
-                              />
-                            ))}
-                            <span
-                              className={styles.hourHand}
-                              style={{
-                                transform: `rotate(${(Number(time.slice(0, 2)) % 12) * 30 + Number(time.slice(3)) * 0.5}deg)`,
-                              }}
-                            />
-                            <span
-                              className={styles.minuteHand}
-                              style={{
-                                transform: `rotate(${Number(time.slice(3)) * 6}deg)`,
-                              }}
-                            />
-                            <b />
-                          </div>
-                          <div className={styles.digitalTime}>{time}</div>
-                          <span className={styles.clockNote}>
-                            Make yourself at home.
-                          </span>
-                          <div className={styles.homeIndicator} />
                         </div>
                       </div>
+                      <div className={styles.tiles}>
+                        <button
+                          className={styles.lightTile}
+                          aria-pressed={lights}
+                          onClick={() => setLights((value) => !value)}
+                        >
+                          <LightIcon on={lights} />
+                          <strong>Lights</strong>
+                          <span>{lights ? "3 lights on" : "All off"}</span>
+                        </button>
+                        <button
+                          aria-label="Show Music screen"
+                          onClick={() => {
+                            setInstantScene(false)
+                            setScene("Music")
+                            root.current
+                              ?.querySelector<HTMLDivElement>("[data-lights]")
+                              ?.focus({ preventScroll: true })
+                          }}
+                        >
+                          <span className={styles.musicIcon}>♫</span>
+                          <strong>Music</strong>
+                          <span>A moment of calm</span>
+                        </button>
+                      </div>
+                      <div className={styles.homeIndicator} />
                     </div>
-                  </foreignObject>
-                  <rect
-                    ref={sheen}
-                    x="20"
-                    width="80"
-                    height="130"
-                    fill="url(#hv-sheen)"
-                    pointerEvents="none"
-                  />
-                </g>
-              </g>
-            </svg>
+                    <div
+                      className={styles.musicScreen}
+                      role="group"
+                      id="hv-panel-Music"
+                      aria-label="Music screen"
+                      aria-hidden={scene !== "Music"}
+                      inert={scene !== "Music"}
+                    >
+                      <div className={styles.screenHeader}>
+                        <span>Now playing</span>
+                        <span>♫</span>
+                      </div>
+                      <div className={styles.album}>
+                        <div />
+                        <span>
+                          slow
+                          <br />
+                          mornings.
+                        </span>
+                      </div>
+                      <div className={styles.trackTitle}>
+                        A little room to breathe
+                      </div>
+                      <div className={styles.artist}>HomeView sessions</div>
+                      <div className={styles.player}>
+                        <div
+                          className={styles.bars}
+                          data-playing={playing && scene === "Music"}
+                        >
+                          {[8, 15, 10, 19, 12].map((h, i) => (
+                            <span
+                              key={i}
+                              style={
+                                {
+                                  "--bar-height": `${h}px`,
+                                  "--bar-delay": `${i * -160}ms`,
+                                } as CSSProperties
+                              }
+                            />
+                          ))}
+                        </div>
+                        <button
+                          aria-label={
+                            playing
+                              ? "Pause music animation"
+                              : "Play music animation"
+                          }
+                          aria-pressed={playing}
+                          onClick={() => setPlaying((p) => !p)}
+                        >
+                          {playing ? "Ⅱ" : "▶"}
+                        </button>
+                      </div>
+                      <div className={styles.homeIndicator} />
+                    </div>
+                    <div
+                      className={styles.clockScreen}
+                      role="group"
+                      id="hv-panel-Clock"
+                      aria-label="Clock screen"
+                      aria-hidden={scene !== "Clock"}
+                      inert={scene !== "Clock"}
+                    >
+                      <div className={styles.screenHeader}>
+                        <span>A moment at home</span>
+                        <span>◷</span>
+                      </div>
+                      <div className={styles.clockFace}>
+                        {Array.from({ length: 12 }, (_, i) => (
+                          <i
+                            key={i}
+                            style={{ transform: `rotate(${i * 30}deg)` }}
+                          />
+                        ))}
+                        <span
+                          className={styles.hourHand}
+                          style={{
+                            transform: `rotate(${(Number(time.slice(0, 2)) % 12) * 30 + Number(time.slice(3)) * 0.5}deg)`,
+                          }}
+                        />
+                        <span
+                          className={styles.minuteHand}
+                          style={{
+                            transform: `rotate(${Number(time.slice(3)) * 6}deg)`,
+                          }}
+                        />
+                        <b />
+                      </div>
+                      <div className={styles.digitalTime}>{time}</div>
+                      <span className={styles.clockNote}>
+                        Make yourself at home.
+                      </span>
+                      <div className={styles.homeIndicator} />
+                    </div>
+                  </div>
+                  <div ref={sheen} className={styles.sheen} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className={styles.controls}>
