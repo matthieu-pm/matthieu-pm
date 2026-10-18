@@ -618,6 +618,13 @@
         "icon": "/inspirations/catalogues/page-flows-icon.webp",
         "name": "Page Flows",
         "preview": null
+      },
+      {
+        "description": "Explore AI-made motion videos, their prompts, and creator skills. A searchable collection of motion design inspiration, curated by MotionVideo.",
+        "href": "https://motionvideo.xyz/",
+        "icon": "/inspirations/catalogues/motionvideo-icon.webp",
+        "name": "MotionVideo",
+        "preview": "/inspirations/catalogues/motionvideo-preview.webp"
       }
     ],
     "title": "Design Galleries"
