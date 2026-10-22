@@ -9,7 +9,6 @@ import { gitlabProfileUrl } from "@/lib/gitlab-activity"
 
 import { EmailCopy } from "./email-copy"
 import { GitLabActivity } from "./gitlab-activity"
-import { HomeView } from "./homeview/art"
 import { InspirationsOrb } from "./inspirations/inspirations-orb"
 import styles from "./page.module.css"
 
@@ -295,8 +294,6 @@ export default function Page() {
         </div>
       </section>
 
-      <HomeView />
-
       <section className={styles.section} aria-labelledby="capabilities-title">
         <h2 id="capabilities-title">Skills for agents</h2>
         <div className={styles.rowList}>
@@ -336,6 +333,24 @@ export default function Page() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className={styles.section} aria-labelledby="archive-title">
+        <h2 id="archive-title">Archive</h2>
+        <div className={styles.rowList}>
+          <Link
+            href="/archive/homeview"
+            className={`${styles.detailRow} ${styles.skillLink}`}
+          >
+            <span className={styles.rowIndex} aria-hidden="true">
+              <PageSkeleton />
+            </span>
+            <div>
+              <h3>HomeView</h3>
+              <p>An interactive home display concept, and how it was built.</p>
+            </div>
+          </Link>
         </div>
       </section>
 

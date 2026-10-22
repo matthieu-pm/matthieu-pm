@@ -2,7 +2,7 @@ import geometry from "./geometry.json"
 import { HomeViewLive } from "./live"
 
 // Precomputed, audited paths stay on the server. The client receives SVG elements.
-export function HomeView() {
+export function HomeView({ title = "HomeView" }: { title?: string } = {}) {
   const hardware = (
     <g
       key="homeview-hardware"
@@ -67,6 +67,10 @@ export function HomeView() {
     </g>
   )
   return (
-    <HomeViewLive hardware={hardware} screenMatrix={geometry.screenMatrix} />
+    <HomeViewLive
+      hardware={hardware}
+      screenMatrix={geometry.screenMatrix}
+      title={title}
+    />
   )
 }

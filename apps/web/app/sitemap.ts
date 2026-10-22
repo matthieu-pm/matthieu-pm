@@ -6,6 +6,11 @@ import { navigation } from "./inspirations/catalogues"
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
+      url: `${siteConfig.url}/archive/homeview`,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
       url: `${siteConfig.url}/oklch`,
       changeFrequency: "monthly",
       priority: 0.8,

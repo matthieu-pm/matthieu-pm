@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import {
   useEffect,
   useRef,
@@ -57,9 +58,11 @@ function LightIcon({ on }: { on: boolean }) {
 export function HomeViewLive({
   hardware,
   screenMatrix,
+  title,
 }: {
   hardware: ReactNode
   screenMatrix: string
+  title: string
 }) {
   const [scene, setScene] = useState<Scene>("Home")
   const [instantScene, setInstantScene] = useState(false)
@@ -161,7 +164,7 @@ export function HomeViewLive({
       aria-labelledby="homeview-title"
     >
       <div className={styles.heading}>
-        <h2 id="homeview-title">HomeView</h2>
+        <h2 id="homeview-title">{title}</h2>
       </div>
       <figure
         ref={figureRef}
@@ -327,17 +330,16 @@ export function HomeViewLive({
                         <span>♫</span>
                       </div>
                       <div className={styles.album}>
-                        <div />
-                        <span>
-                          slow
-                          <br />
-                          mornings.
-                        </span>
+                        <Image
+                          src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/93/14/66/9314660a-8ec2-2e26-652b-62c82b14fb80/823375358930_Cover.jpg/100x100bb.jpg"
+                          alt="FIRESTARTER cover"
+                          width={100}
+                          height={100}
+                          unoptimized
+                        />
                       </div>
-                      <div className={styles.trackTitle}>
-                        A little room to breathe
-                      </div>
-                      <div className={styles.artist}>HomeView sessions</div>
+                      <div className={styles.trackTitle}>FIRESTARTER</div>
+                      <div className={styles.artist}>K/DA</div>
                       <div className={styles.player}>
                         <div
                           className={styles.bars}
