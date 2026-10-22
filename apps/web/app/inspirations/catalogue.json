@@ -625,6 +625,13 @@
         "icon": "/inspirations/catalogues/motionvideo-icon.webp",
         "name": "MotionVideo",
         "preview": "/inspirations/catalogues/motionvideo-preview.webp"
+      },
+      {
+        "description": "Agent-ready React components, screens and blocks for AI products and SaaS. One file each, no dependencies – add them yourself or let Claude, Cursor or v0 do it.",
+        "href": "https://www.affectui.com/",
+        "icon": "/inspirations/catalogues/affectui-icon.webp",
+        "name": "affectUI",
+        "preview": "/inspirations/catalogues/affectui-preview.webp"
       }
     ],
     "title": "Design Galleries"
