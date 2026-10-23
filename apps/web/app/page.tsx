@@ -291,6 +291,29 @@ export default function Page() {
               <small>Issue tracking with AI agents</small>
             </span>
           </a>
+          <a
+            className={styles.projectCard}
+            href="https://survey.matthieu-pm.chatgpt.site"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span
+              className={`${styles.projectMark} ${styles.projectVisualMark}`}
+              aria-hidden="true"
+            >
+              <Image
+                className={styles.projectMarkImage}
+                src="/logos/researchie.svg"
+                alt=""
+                width={80}
+                height={80}
+              />
+            </span>
+            <span>
+              <strong>Researchie</strong>
+              <small>AI chat research form</small>
+            </span>
+          </a>
         </div>
       </section>
 
