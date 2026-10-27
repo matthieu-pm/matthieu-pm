@@ -161,8 +161,8 @@ export default function Page() {
           or via{" "}
           <strong>
             <EmailCopy />
-          </strong>
-          , and explore my code on{" "}
+          </strong>{" "}
+          and explore my code on{" "}
           <a
             className={styles.socialLink}
             href="https://gitlab.com/wondertale-dev"
