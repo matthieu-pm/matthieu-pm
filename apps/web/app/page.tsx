@@ -367,6 +367,18 @@ export default function Page() {
               <p>An interactive home display concept, and how it was built.</p>
             </div>
           </Link>
+          <Link
+            href="/archive/building-day-by-day"
+            className={`${styles.detailRow} ${styles.skillLink}`}
+          >
+            <span className={styles.rowIndex} aria-hidden="true">
+              <PageSkeleton />
+            </span>
+            <div>
+              <h3>Building, day by day</h3>
+              <p>A year of GitLab activity, drawn as an interactive skyline.</p>
+            </div>
+          </Link>
         </div>
       </section>
 
