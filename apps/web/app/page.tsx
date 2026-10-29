@@ -1,14 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import type { CSSProperties } from "react"
-import { Suspense } from "react"
-import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons"
-import { HugeiconsIcon } from "@hugeicons/react"
-
-import { gitlabProfileUrl } from "@/lib/gitlab-activity"
-
 import { EmailCopy } from "./email-copy"
-import { GitLabActivity } from "./gitlab-activity"
 import { InspirationsOrb } from "./inspirations/inspirations-orb"
 import styles from "./page.module.css"
 
@@ -375,35 +368,6 @@ export default function Page() {
             </div>
           </Link>
         </div>
-      </section>
-
-      <section className={styles.section} aria-labelledby="activity-title">
-        <div className={styles.activityHeading}>
-          <h2 id="activity-title">Building, day by day</h2>
-          <a href={gitlabProfileUrl} target="_blank" rel="noreferrer">
-            <Image src="/logos/gitlab.svg" alt="" width={14} height={14} />
-            GitLab
-            <span className={styles.activityArrow} aria-hidden="true">
-              <HugeiconsIcon
-                icon={ArrowUpRight01Icon}
-                size={14}
-                strokeWidth={1.8}
-              />
-              <HugeiconsIcon
-                icon={ArrowUpRight01Icon}
-                size={14}
-                strokeWidth={1.8}
-              />
-            </span>
-          </a>
-        </div>
-        <Suspense
-          fallback={
-            <p className={styles.activityStatus}>Loading GitLab activity…</p>
-          }
-        >
-          <GitLabActivity />
-        </Suspense>
       </section>
 
       <section
