@@ -239,7 +239,7 @@ export default function Page() {
           </a>
           <a
             className={styles.projectCard}
-            href="https://carbon.forgenow.tech"
+            href="https://carbonhq.sh"
             target="_blank"
             rel="noreferrer"
           >
