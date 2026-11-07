@@ -216,30 +216,6 @@ export default function Page() {
           </a>
           <a
             className={styles.projectCard}
-            href="https://skema-project-learning.vercel.app/landing/index.html"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span
-              className={`${styles.projectMark} ${styles.projectVisualMark}`}
-              aria-hidden="true"
-            >
-              <Image
-                className={`${styles.projectMarkImage} ${styles.lumaProjectMarkImage}`}
-                src="/logos/luma.png"
-                alt=""
-                width={1254}
-                height={1254}
-                sizes="88px"
-              />
-            </span>
-            <span>
-              <strong>Mimo</strong>
-              <small>One-to-one language tutoring</small>
-            </span>
-          </a>
-          <a
-            className={styles.projectCard}
             href="https://atrium-landing-tau.vercel.app/"
             target="_blank"
             rel="noreferrer"

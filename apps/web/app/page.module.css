@@ -414,12 +414,6 @@
   height: 96px;
 }
 
-.lumaProjectMarkImage {
-  width: 88px;
-  height: 88px;
-  object-fit: contain;
-}
-
 .projectCard strong,
 .projectCard small {
   display: block;
