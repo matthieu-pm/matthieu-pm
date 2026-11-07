@@ -263,6 +263,29 @@ export default function Page() {
           </a>
           <a
             className={styles.projectCard}
+            href="https://carbon.forgenow.tech"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span
+              className={`${styles.projectMark} ${styles.projectVisualMark}`}
+              aria-hidden="true"
+            >
+              <Image
+                className={styles.projectMarkImage}
+                src="/logos/carbon.svg"
+                alt=""
+                width={80}
+                height={80}
+              />
+            </span>
+            <span>
+              <strong>Carbon</strong>
+              <small>One app for your coding agents</small>
+            </span>
+          </a>
+          <a
+            className={styles.projectCard}
             href="https://forge-app-mauve.vercel.app"
             target="_blank"
             rel="noreferrer"
