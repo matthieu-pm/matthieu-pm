@@ -223,7 +223,7 @@ export default function Page() {
                 <span className={styles.projectText}>
                   <strong>{project.name}</strong>
                   <span className={styles.projectDescription}>
-                    {project.description}
+                    ~ {project.description}
                   </span>
                 </span>
                 <span className={styles.projectMeta}>
