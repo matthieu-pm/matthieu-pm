@@ -123,9 +123,10 @@ export default function Page() {
 
       <section className={styles.intro} aria-label="Introduction">
         <p>
-          I really love AI and building AI products. I enjoy turning ideas into
-          useful tools, bringing product thinking, design, and code together.
-          I’m currently a Product Management & UX Design MSc student at{" "}
+          I really love AI and building AI products. Making my own, like Forge
+          and Carbon, has taught me a lot about CS and engineering, and it’s
+          changed how I approach product and design. I’m currently a Product
+          Management & UX Design MSc student at{" "}
           <a
             className={styles.socialLink}
             href="https://www.skema.edu/en/programmes/msc-product-management-ux-design"
