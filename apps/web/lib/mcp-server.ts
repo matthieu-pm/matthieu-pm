@@ -3,6 +3,7 @@ import { z } from "zod"
 
 import { navigation } from "../app/inspirations/catalogues"
 import { siteConfig } from "../app/site-config"
+import { mcpCapabilities, mcpServerInfo } from "./mcp-metadata"
 import {
   collectionIndex,
   contentIndex,
@@ -32,13 +33,11 @@ function result(data: Record<string, unknown>) {
 }
 
 export function createMcpServer(readContent: (id: string) => Promise<string>) {
-  const server = new McpServer(
-    { name: "matthieu-pm", version: "1.0.0", websiteUrl: siteConfig.url },
-    {
-      instructions:
-        "Search Matthieu's public design collection, skills and writing. Use source URLs when citing results. Empty queries browse the available items. Page text describes the published guide; installing a skill is a separate action described on its page.",
-    }
-  )
+  const server = new McpServer(mcpServerInfo, {
+    capabilities: mcpCapabilities,
+    instructions:
+      "Search Matthieu's public design collection, skills and writing. Use source URLs when citing results. Empty queries browse the available items. Page text describes the published guide; installing a skill is a separate action described on its page.",
+  })
 
   server.registerTool(
     "search_collection",
