@@ -107,9 +107,10 @@ export default function Page() {
             <strong>POLIMI</strong>
           </a>
           . I bring product thinking, design, and code together to turn ideas
-          into useful, thoughtful experiences. I enjoy understanding what people
-          need, deciding what’s worth building, and shaping the details that
-          make it feel right.
+          into useful, thoughtful experiences.
+          <br />
+          I enjoy understanding what people need, deciding what’s worth building,
+          and shaping the details that make it feel right.
         </p>
         <p>
           Previously, I worked on growth and product design at{" "}

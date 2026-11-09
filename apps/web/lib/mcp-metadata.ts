@@ -11,12 +11,17 @@ export const mcpCapabilities = {
   resources: { listChanged: true },
 }
 
-// Compatibility card for discovery clients using the original SEP-1649 format.
+const mcpEndpointPath = "/api/mcp"
+const mcpEndpoint = `${siteConfig.url}${mcpEndpointPath}`
+
+// Keep SEP-1649 transport metadata and the endpoint fields DNS-AID clients read.
 export const mcpServerCard = {
   serverInfo: mcpServerInfo,
+  endpoint: mcpEndpoint,
+  endpoints: { mcp: mcpEndpointPath },
   transport: {
     type: "streamable-http",
-    endpoint: `${siteConfig.url}/api/mcp`,
+    endpoint: mcpEndpoint,
   },
   capabilities: mcpCapabilities,
 }
