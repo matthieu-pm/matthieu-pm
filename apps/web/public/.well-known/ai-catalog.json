@@ -16,6 +16,18 @@
         "Read Matthieu's Great UI guidance for polishing an interface",
         "Search Matthieu's collection for typography and design inspiration tools"
       ]
+    },
+    {
+      "identifier": "urn:air:matthieu.pm:skill:great-ui",
+      "displayName": "Great UI",
+      "description": "Build, polish, animate, and review interfaces with guidance on surfaces, optical alignment, icons, interaction motion, accessibility, component craft, and perceived performance.",
+      "type": "application/agent-skills+zip",
+      "url": "https://matthieu.pm/.well-known/agent-skills/great-ui.zip",
+      "representativeQueries": [
+        "Polish an interface's spacing, surfaces, and optical alignment",
+        "Add smooth, accessible animations and interactions to a web app",
+        "Review UI components for accessibility, craft, and perceived performance"
+      ]
     }
   ]
 }
