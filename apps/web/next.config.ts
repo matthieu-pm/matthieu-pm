@@ -5,6 +5,13 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/.well-known/ai-catalog.json",
+        headers: [
+          { key: "Content-Type", value: "application/json" },
+          { key: "Access-Control-Allow-Origin", value: "*" },
+        ],
+      },
+      {
         source: "/.well-known/agent-skills/:path*",
         headers: [
           { key: "Access-Control-Allow-Origin", value: "*" },
@@ -16,7 +23,8 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Link",
-            value: '</llms.txt>; rel="describedby"; type="text/plain"',
+            value:
+              '</llms.txt>; rel="describedby"; type="text/plain", </.well-known/ai-catalog.json>; rel="ai-catalog"; type="application/json"',
           },
         ],
       },

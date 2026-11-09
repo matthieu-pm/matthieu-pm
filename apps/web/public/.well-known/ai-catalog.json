@@ -1,0 +1,21 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Matthieu Duchatellier",
+    "identifier": "https://matthieu.pm"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:matthieu.pm:mcp:portfolio",
+      "displayName": "Matthieu's Portfolio MCP Server",
+      "description": "Read-only access to Matthieu Duchatellier's published writing, UI skill guidance, and curated collection of design and development resources.",
+      "type": "application/mcp-server-card+json",
+      "url": "https://matthieu.pm/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "Find Matthieu's writing about UX writing and AI product management",
+        "Read Matthieu's Great UI guidance for polishing an interface",
+        "Search Matthieu's collection for typography and design inspiration tools"
+      ]
+    }
+  ]
+}

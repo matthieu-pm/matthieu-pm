@@ -9,6 +9,7 @@ export function GET() {
     "Allow: /",
     "",
     `Sitemap: ${siteConfig.url}/sitemap.xml`,
+    `Agentmap: ${siteConfig.url}/.well-known/ai-catalog.json`,
     `Host: ${siteConfig.url}`,
     "",
   ].join("\n")
