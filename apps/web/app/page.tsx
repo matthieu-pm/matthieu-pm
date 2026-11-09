@@ -1,6 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
-import type { CSSProperties } from "react"
+import { Suspense, type CSSProperties } from "react"
+import { ActivityBarSkeleton } from "./activity-bar"
+import { CodingActivity } from "./coding-activity"
 import { EmailCopy } from "./email-copy"
 import { InspirationsOrb } from "./inspirations/inspirations-orb"
 import styles from "./page.module.css"
@@ -144,6 +146,9 @@ export default function Page() {
           <br />I enjoy understanding what people need, deciding what’s worth
           building, and shaping the details that make it feel right.
         </p>
+        <Suspense fallback={<ActivityBarSkeleton />}>
+          <CodingActivity />
+        </Suspense>
         <p>
           Previously, I worked on growth and product design at{" "}
           <a

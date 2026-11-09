@@ -1,0 +1,277 @@
+"use client"
+
+import {
+  useId,
+  useRef,
+  useState,
+  type CSSProperties,
+  type KeyboardEvent,
+} from "react"
+import type { ActivityWeek, CodingActivityData } from "@/lib/coding-activity"
+import styles from "./activity-bar.module.css"
+
+const number = new Intl.NumberFormat("en-US")
+const shortDate = new Intl.DateTimeFormat("en-US", {
+  month: "short",
+  day: "numeric",
+  timeZone: "UTC",
+})
+const fullDate = new Intl.DateTimeFormat("en-US", {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "UTC",
+})
+const date = (value: string, year = false) =>
+  (year ? fullDate : shortDate).format(new Date(`${value}T00:00:00Z`))
+const range = (week: ActivityWeek, year = false) =>
+  `${date(week.start, year)} – ${date(week.end, year)}`
+const count = (value: number) =>
+  `${number.format(value)} contribution${value === 1 ? "" : "s"}`
+
+export function ActivityBar({ data }: { data: CodingActivityData }) {
+  const id = useId()
+  const buttons = useRef<(HTMLButtonElement | null)[]>([])
+  const [hovered, setHovered] = useState<number | null>(null)
+  const [focused, setFocused] = useState<number | null>(null)
+  const [selected, setSelected] = useState<number | null>(null)
+  const currentIndex = data.weeks.findIndex((week) => week.current)
+  const [tabIndex, setTabIndex] = useState(currentIndex < 0 ? 0 : currentIndex)
+  const previewIndex = selected === null ? (hovered ?? focused) : null
+  const preview = previewIndex === null ? null : data.weeks[previewIndex]
+  const selection = selected === null ? null : data.weeks[selected]
+  const max = Math.max(1, ...data.weeks.map((week) => week.total))
+  const partial = !data.githubAvailable || !data.gitlabAvailable
+
+  function close() {
+    if (selected !== null) buttons.current[selected]?.focus()
+    setSelected(null)
+  }
+
+  function navigate(event: KeyboardEvent<HTMLButtonElement>, index: number) {
+    const firstFuture = data.weeks.findIndex((week) => week.future)
+    const last = firstFuture < 0 ? data.weeks.length - 1 : firstFuture - 1
+    const next = {
+      ArrowLeft: index - 1,
+      ArrowRight: index + 1,
+      Home: 0,
+      End: last,
+    }[event.key]
+    if (next === undefined) return
+    event.preventDefault()
+    const target = Math.max(0, Math.min(last, next))
+    setTabIndex(target)
+    buttons.current[target]?.focus()
+  }
+
+  if (!data.githubAvailable && !data.gitlabAvailable) {
+    return (
+      <div className={styles.unavailable}>
+        Activity is temporarily unavailable. Explore my work on{" "}
+        <a
+          href="https://github.com/matthieu-pm"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://gitlab.com/wondertale-dev"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitLab
+        </a>
+        .
+      </div>
+    )
+  }
+
+  return (
+    <div
+      className={styles.activity}
+      onKeyDown={(event) => {
+        if (event.key === "Escape") {
+          if (selected !== null) close()
+          setHovered(null)
+          setFocused(null)
+        }
+      }}
+    >
+      <div
+        className={styles.track}
+        role="group"
+        aria-label={`Weekly GitHub and GitLab activity in ${data.year}. Use arrow keys to explore and Enter to view a week.`}
+        onPointerLeave={() => setHovered(null)}
+        onBlur={(event) => {
+          if (!event.currentTarget.contains(event.relatedTarget))
+            setFocused(null)
+        }}
+      >
+        {data.weeks.map((week, index) => (
+          <button
+            className={styles.week}
+            key={week.start}
+            ref={(element) => {
+              buttons.current[index] = element
+            }}
+            type="button"
+            disabled={week.future}
+            tabIndex={index === tabIndex ? 0 : -1}
+            aria-label={`${range(week, true)}: ${week.future ? "upcoming week" : count(week.total)}${week.current ? " so far" : ""}${partial ? ", partial data" : ""}`}
+            aria-expanded={selected === index}
+            aria-controls={`${id}-details`}
+            aria-describedby={
+              previewIndex === index ? `${id}-tooltip` : undefined
+            }
+            data-future={week.future || undefined}
+            data-empty={week.total === 0 || undefined}
+            data-muted={(selected !== null && selected !== index) || undefined}
+            data-selected={selected === index || undefined}
+            style={
+              {
+                "--intensity": `${Math.round(35 + 65 * Math.sqrt(week.total / max))}%`,
+                "--tilt": `${[0, 5, 0, -4, 0, 4, 0][index % 7]}deg`,
+              } as CSSProperties
+            }
+            onPointerEnter={(event) => {
+              if (event.pointerType === "mouse" && !week.future)
+                setHovered(index)
+            }}
+            onFocus={(event) => {
+              if (event.currentTarget.matches(":focus-visible"))
+                setFocused(index)
+              setTabIndex(index)
+            }}
+            onClick={() => {
+              setSelected(selected === index ? null : index)
+              setHovered(null)
+            }}
+            onKeyDown={(event) => navigate(event, index)}
+          >
+            <span className={styles.tick} aria-hidden="true" />
+          </button>
+        ))}
+        {preview && previewIndex !== null && (
+          <div
+            className={styles.tooltip}
+            role="tooltip"
+            id={`${id}-tooltip`}
+            style={
+              {
+                "--position": `${((previewIndex + 0.5) / data.weeks.length) * 100}%`,
+              } as CSSProperties
+            }
+          >
+            <span className={styles.tooltipDate}>{range(preview)}</span>
+            <span>
+              {count(preview.total)}
+              {preview.current ? " so far" : ""}
+            </span>
+            <span className={styles.breakdown}>
+              GitHub{" "}
+              {preview.github === null
+                ? "unavailable"
+                : number.format(preview.github)}{" "}
+              · GitLab{" "}
+              {preview.gitlab === null
+                ? "unavailable"
+                : number.format(preview.gitlab)}
+            </span>
+            <span className={styles.tooltipAction}>
+              View week <span aria-hidden="true">↗</span>
+            </span>
+          </div>
+        )}
+      </div>
+      {partial && (
+        <div className={styles.notice}>
+          {data.githubAvailable ? "GitLab" : "GitHub"} activity is temporarily
+          unavailable. Showing {data.githubAvailable ? "GitHub" : "GitLab"}{" "}
+          activity.
+        </div>
+      )}
+      {selection && (
+        <div
+          className={styles.details}
+          id={`${id}-details`}
+          role="region"
+          aria-label={`Activity for ${range(selection, true)}`}
+        >
+          <div className={styles.detailsHeader}>
+            <span>
+              {range(selection, true)}
+              {selection.current ? " · so far" : ""}
+            </span>
+            <button
+              type="button"
+              className={styles.close}
+              onClick={close}
+              aria-label="Close activity details"
+            >
+              ×
+            </button>
+          </div>
+          <div className={styles.columns}>
+            <div>
+              <h3>Code activity</h3>
+              <div>{count(selection.total)}</div>
+              <div>
+                {selection.activeDays} active day
+                {selection.activeDays === 1 ? "" : "s"}
+              </div>
+            </div>
+            <div>
+              <h3>Across both profiles</h3>
+              <a
+                href={`https://github.com/matthieu-pm?from=${selection.start}&to=${selection.end}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub{" "}
+                <span>
+                  {selection.github === null
+                    ? "Unavailable"
+                    : number.format(selection.github)}
+                </span>{" "}
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="https://gitlab.com/wondertale-dev"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitLab{" "}
+                <span>
+                  {selection.gitlab === null
+                    ? "Unavailable"
+                    : number.format(selection.gitlab)}
+                </span>{" "}
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+          <div className={styles.note}>
+            Combined profile contributions. Activity mirrored between platforms
+            may appear in both counts.
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
+export function ActivityBarSkeleton() {
+  return (
+    <div
+      className={styles.skeleton}
+      role="status"
+      aria-label="Loading coding activity"
+    >
+      {Array.from({ length: 53 }, (_, index) => (
+        <span key={index} />
+      ))}
+    </div>
+  )
+}
