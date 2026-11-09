@@ -177,7 +177,12 @@ export default function Page() {
       </section>
 
       <section className={styles.section} aria-labelledby="work-title">
-        <h2 id="work-title">Projects</h2>
+        <h2 id="work-title" className={styles.projectsTitle}>
+          Projects
+        </h2>
+        <p className={styles.projectsDescription}>
+          Each project is my own work, from product decisions and design to code.
+        </p>
         <div className={styles.projectGrid}>
           <Link className={styles.projectCard} href="/inspirations">
             <span
