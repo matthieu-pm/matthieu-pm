@@ -451,7 +451,11 @@ export default function Page() {
       </section>
 
       <footer className={styles.footer}>
-        <nav className={styles.footerSocials} aria-label="Social profiles">
+        <nav
+          className={styles.footerSocials}
+          aria-label="Social profiles and resources"
+        >
+          <Link href="/mcp">MCP</Link>
           <a href="https://x.com/matthieu_pm" target="_blank" rel="noreferrer">
             <Image
               className={styles.footerSocialIcon}

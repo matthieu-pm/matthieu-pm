@@ -19,6 +19,38 @@ monorepo. It is responsive, accessible, and optimized for fast loading.
 - Shared UI workspace configured for shadcn/ui components
 - No environment variables or external database required
 
+## MCP connection
+
+The `/mcp` page explains how to connect an assistant to the public, read-only
+Streamable HTTP endpoint at `https://matthieu.pm/api/mcp`. No account, API key,
+database, or additional service is required.
+
+- `search_collection`: keyword search and category browsing of the same JSON
+  catalogues used by the design collection, with source links and pagination.
+- `search_content`: keyword search across published skill guides and articles.
+  An empty query lists their IDs without fetching the page text.
+- `get_content`: read a published page as Markdown, with offsets for longer pages.
+
+The server also exposes the collection and content index as MCP resources.
+It uses the official MCP SDK in stateless JSON response mode, so requests can
+run on different serverless instances. GET returns 405 because this server does
+not provide a persistent event stream.
+
+Published pages are explicitly listed in `apps/web/lib/site-content.ts`; drafts
+and hidden pages are excluded. Collection changes are picked up from the existing
+catalogues. Article metadata is shared with the writing pages. Full page text is
+converted from the current deployment’s rendered HTML and cached for up to an
+hour. External collection links are returned as references and never fetched.
+Results report temporarily unavailable pages instead of inventing content.
+
+To connect to a local development server, use `http://localhost:3001/api/mcp`.
+To run protocol and content tests:
+
+```bash
+cd apps/web
+bun run test:mcp
+```
+
 ## Technology
 
 | Tool                                          | Purpose                                        |

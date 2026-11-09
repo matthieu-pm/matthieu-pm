@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next"
 
 import { siteConfig } from "./site-config"
 import { navigation } from "./inspirations/catalogues"
+import { publishedContent } from "@/lib/site-content"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -25,18 +26,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
+    ...publishedContent.map((entry) => ({
+      url: `${siteConfig.url}${entry.path}`,
+      changeFrequency: "monthly" as const,
+      priority: entry.kind === "skill" ? 0.8 : 0.7,
+    })),
     {
-      url: `${siteConfig.url}/skills/great-ui`,
+      url: `${siteConfig.url}/mcp`,
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.6,
     },
-    ...["ux-writing", "ai-design-engineer", "ai-product-manager"].map(
-      (slug) => ({
-        url: `${siteConfig.url}/writing/${slug}`,
-        changeFrequency: "monthly" as const,
-        priority: 0.7,
-      })
-    ),
     {
       url: siteConfig.url,
       changeFrequency: "monthly",

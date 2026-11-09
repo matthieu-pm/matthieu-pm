@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import { articles } from "@/lib/site-content"
 
 import { siteConfig } from "../../site-config"
 import { SectionNavigator } from "../../section-navigator"
@@ -26,24 +27,6 @@ import {
   AccessibleFormExample,
 } from "../ux-writing-examples"
 import styles from "../article.module.css"
-
-const articles = {
-  "ux-writing": {
-    title: "Write the interface",
-    description:
-      "Learn to write labels, buttons, and messages that help people use your product. Practice with ten short exercises.",
-  },
-  "ai-design-engineer": {
-    title: "From Prompt to Product",
-    description:
-      "A hands-on introduction to prompting, building, and refining interfaces with AI.",
-  },
-  "ai-product-manager": {
-    title: "The AI-Augmented Product Manager",
-    description:
-      "A practical guide for PMs using AI to sharpen discovery, decisions, and delivery.",
-  },
-} as const
 
 type ArticleSlug = keyof typeof articles
 
