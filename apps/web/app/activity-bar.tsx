@@ -7,6 +7,8 @@ import {
   type CSSProperties,
   type KeyboardEvent,
 } from "react"
+import { Cancel01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import type { ActivityWeek, CodingActivityData } from "@/lib/coding-activity"
 import styles from "./activity-bar.module.css"
 
@@ -210,7 +212,12 @@ export function ActivityBar({ data }: { data: CodingActivityData }) {
               onClick={close}
               aria-label="Close activity details"
             >
-              ×
+              <HugeiconsIcon
+                icon={Cancel01Icon}
+                size={16}
+                strokeWidth={2}
+                aria-hidden="true"
+              />
             </button>
           </div>
           <div className={styles.columns}>
