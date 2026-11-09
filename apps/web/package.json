@@ -4,6 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "generate:llms-full": "bun scripts/generate-llms-full.ts",
     "test:mcp": "bun test lib/mcp.test.mjs",
     "test:webmcp": "bun test lib/webmcp.test.mjs",
     "dev": "next dev --port 3001",

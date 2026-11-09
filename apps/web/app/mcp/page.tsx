@@ -3,11 +3,10 @@ import Link from "next/link"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { ArrowTurnBackwardIcon } from "@hugeicons/core-free-icons"
 
-import { siteConfig } from "../site-config"
+import { mcpEndpoint } from "@/lib/mcp-metadata"
 import { CopyValue } from "./copy-value"
 import styles from "./mcp.module.css"
 
-const endpoint = `${siteConfig.url}/api/mcp`
 const title = "Connect your assistant"
 const description =
   "Use Matthieu’s design collection, skills, and writing in your AI assistant through a public, read-only MCP server."
@@ -62,7 +61,7 @@ export default function McpPage() {
               authentication.
             </li>
           </ol>
-          <CopyValue value={endpoint} label="server URL" />
+          <CopyValue value={mcpEndpoint} label="server URL" />
           <p className={styles.note}>
             Your assistant needs to support remote MCP servers without
             authentication. The option and its name depend on the app you use.
@@ -71,7 +70,7 @@ export default function McpPage() {
             <summary>Using Codex from the terminal?</summary>
             <p>Run this command to add the connection:</p>
             <CopyValue
-              value={`codex mcp add matthieu --url ${endpoint}`}
+              value={`codex mcp add matthieu --url ${mcpEndpoint}`}
               label="Codex command"
             />
           </details>

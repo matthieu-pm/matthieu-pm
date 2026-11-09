@@ -1,3 +1,5 @@
+import { mcpEndpointPath } from "./mcp-metadata"
+
 export type WebMcpTool = {
   name: string
   description: string
@@ -35,7 +37,7 @@ async function requestMcp(
   params: Record<string, unknown>,
   signal: AbortSignal
 ) {
-  const response = await fetcher("/api/mcp", {
+  const response = await fetcher(mcpEndpointPath, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

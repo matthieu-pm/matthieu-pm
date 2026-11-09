@@ -28,12 +28,14 @@ const articles = [
     detail:
       "A hands-on introduction to prompting, building, and refining interfaces with AI.",
     href: "/writing/ai-design-engineer",
+    hidden: true,
   },
   {
     title: "The AI-Augmented Product Manager",
     detail:
       "A practical guide for PMs using AI to sharpen discovery, decisions, and delivery.",
     href: "/writing/ai-product-manager",
+    hidden: true,
   },
 ]
 
@@ -79,14 +81,6 @@ export default function Page() {
             target="_blank"
             rel="noreferrer"
           >
-            <Image
-              className={styles.socialIcon}
-              src="/logos/skema.webp"
-              alt=""
-              width={14}
-              height={14}
-              aria-hidden="true"
-            />
             <strong>SKEMA</strong>
           </a>{" "}
           and{" "}
@@ -96,14 +90,6 @@ export default function Page() {
             target="_blank"
             rel="noreferrer"
           >
-            <Image
-              className={styles.socialIcon}
-              src="/logos/polimi.webp"
-              alt=""
-              width={14}
-              height={14}
-              aria-hidden="true"
-            />
             <strong>POLIMI</strong>
           </a>
           . I bring product thinking, design, and code together to turn ideas
@@ -120,14 +106,6 @@ export default function Page() {
             target="_blank"
             rel="noreferrer"
           >
-            <Image
-              className={styles.socialIcon}
-              src="/logos/avico-icon.webp"
-              alt=""
-              width={14}
-              height={14}
-              aria-hidden="true"
-            />
             <strong>Avico</strong>
           </a>{" "}
           and{" "}
@@ -163,14 +141,6 @@ export default function Page() {
             target="_blank"
             rel="noreferrer"
           >
-            <Image
-              className={styles.socialIcon}
-              src="/logos/gitlab.svg"
-              alt=""
-              width={14}
-              height={14}
-              aria-hidden="true"
-            />
             <strong>GitLab</strong>
           </a>
           .
@@ -339,21 +309,23 @@ export default function Page() {
       <section className={styles.section} aria-labelledby="writing-title">
         <h2 id="writing-title">Writing</h2>
         <div className={styles.rowList}>
-          {articles.map((article) => (
-            <Link
-              className={`${styles.detailRow} ${styles.skillLink}`}
-              href={article.href}
-              key={article.title}
-            >
-              <span className={styles.rowIndex} aria-hidden="true">
-                <PageSkeleton />
-              </span>
-              <div>
-                <h3>{article.title}</h3>
-                <p>{article.detail}</p>
-              </div>
-            </Link>
-          ))}
+          {articles
+            .filter((article) => !article.hidden)
+            .map((article) => (
+              <Link
+                className={`${styles.detailRow} ${styles.skillLink}`}
+                href={article.href}
+                key={article.title}
+              >
+                <span className={styles.rowIndex} aria-hidden="true">
+                  <PageSkeleton />
+                </span>
+                <div>
+                  <h3>{article.title}</h3>
+                  <p>{article.detail}</p>
+                </div>
+              </Link>
+            ))}
         </div>
       </section>
 
@@ -398,28 +370,12 @@ export default function Page() {
         </p>
         <div className={styles.contactBar}>
           <span className={styles.emailIdentity}>
-            <Image
-              className={styles.contactIcon}
-              src="/logos/gmail.webp"
-              alt=""
-              width={16}
-              height={16}
-              aria-hidden="true"
-            />
             <span>mattduchatellier@gmail.com</span>
           </span>
           <a
             href="mailto:mattduchatellier@gmail.com"
             aria-label={contactButtonLabel}
           >
-            <Image
-              className={styles.contactButtonIcon}
-              src="/icons/paper-plane-fast.svg"
-              alt=""
-              width={16}
-              height={16}
-              aria-hidden="true"
-            />
             <span className={styles.contactButtonLabel} aria-hidden="true">
               {Array.from(contactButtonLabel).map((character, index) => {
                 const visibleCharacter =
@@ -455,14 +411,6 @@ export default function Page() {
         <div className={styles.footerLinks}>
           <nav className={styles.footerSocials} aria-label="Social profiles">
             <a href="https://x.com/matthieu_pm" target="_blank" rel="noreferrer">
-              <Image
-                className={styles.footerSocialIcon}
-                src="/logos/x.webp"
-                alt=""
-                width={14}
-                height={14}
-                aria-hidden="true"
-              />
               X
             </a>
             <a
@@ -470,14 +418,6 @@ export default function Page() {
               target="_blank"
               rel="noreferrer"
             >
-              <Image
-                className={styles.footerSocialIcon}
-                src="/logos/product-hunt.webp"
-                alt=""
-                width={14}
-                height={14}
-                aria-hidden="true"
-              />
               ProductHunt
             </a>
             <a
@@ -485,14 +425,6 @@ export default function Page() {
               target="_blank"
               rel="noreferrer"
             >
-              <Image
-                className={styles.footerSocialIcon}
-                src="/logos/linkedin.webp"
-                alt=""
-                width={14}
-                height={14}
-                aria-hidden="true"
-              />
               LinkedIn
             </a>
             <a
@@ -500,22 +432,12 @@ export default function Page() {
               target="_blank"
               rel="noreferrer"
             >
-              <span className={styles.footerSocialIconCrop} aria-hidden="true">
-                <Image
-                  className={styles.footerSocialIconMedium}
-                  src="/logos/medium.webp"
-                  alt=""
-                  width={28}
-                  height={21}
-                />
-              </span>
               Medium
             </a>
           </nav>
           <nav className={styles.footerSocials} aria-label="Site resources">
             <Link href="/mcp">MCP</Link>
-            <a href="/llms.md">llms.md</a>
-            <a href="/sitemap.md">sitemap.md</a>
+            <a href="/llms.txt">llms.txt</a>
           </nav>
         </div>
         <span className={styles.footerSignatureFrame}>

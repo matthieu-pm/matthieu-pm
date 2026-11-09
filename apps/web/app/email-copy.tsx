@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 
 import styles from "./page.module.css"
@@ -61,14 +60,6 @@ export function EmailCopy() {
         onClick={handleCopy}
         onFocus={() => setTooltipVisible(true)}
       >
-        <Image
-          className={styles.socialIcon}
-          src="/logos/gmail.webp"
-          alt=""
-          width={14}
-          height={14}
-          aria-hidden="true"
-        />
         email
       </button>
       <span

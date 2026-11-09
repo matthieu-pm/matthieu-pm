@@ -21,8 +21,14 @@ monorepo. It is responsive, accessible, and optimized for fast loading.
 
 ## MCP connection
 
+The full text of every public page is available at `/llms-full.txt`, linked from
+`/llms.txt` and `/llms.md`. To refresh it after changing site content, start the
+local development server and run `bun run --cwd apps/web generate:llms-full`.
+An optional URL argument selects another running instance. The generator uses
+the sitemap and collection data, and writes the file only when all pages load.
+
 The `/mcp` page explains how to connect an assistant to the public, read-only
-Streamable HTTP endpoint at `https://matthieu.pm/api/mcp`. No account, API key,
+Streamable HTTP endpoint at `https://matthieu.pm/mcp`. No account, API key,
 database, or additional service is required.
 
 - `search_collection`: keyword search and category browsing of the same JSON

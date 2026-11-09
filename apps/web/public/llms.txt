@@ -6,6 +6,8 @@ Matthieu is a Product Management & UX Design MSc student at SKEMA and Polimi Gra
 
 The canonical website is https://matthieu.pm. The links below include portfolio pages, articles, interactive design resources, and external project websites.
 
+- [Full website content](https://matthieu.pm/llms-full.txt): Complete text of all public pages in one file.
+
 ## Portfolio and contact
 
 - [Homepage](https://matthieu.pm/): Biography, selected projects, skills, writing, and contact information.
@@ -24,7 +26,7 @@ The canonical website is https://matthieu.pm. The links below include portfolio 
 
 ## Design resources
 
-- [MCP connection guide](https://matthieu.pm/mcp): Connect an assistant to search the design collection, skills, and writing. Public, read-only Streamable HTTP endpoint: https://matthieu.pm/api/mcp. No authentication required.
+- [MCP connection guide](https://matthieu.pm/mcp): Connect an assistant to search the design collection, skills, and writing. Public, read-only Streamable HTTP endpoint: https://matthieu.pm/mcp. No authentication required.
 - [My collection](https://matthieu.pm/inspirations): Curated design tools and inspiration, with categories for components, building tools, visuals, utilities, and design engineers.
 - [Great UI](https://matthieu.pm/skills/great-ui): A design engineering skill for agents, combining interface polish and interaction craft with interactive examples.
 - [OKLCH color guide](https://matthieu.pm/oklch): Interactive guide to lightness, chroma, hue, CSS syntax, gradients, color gamuts, and browser fallbacks.

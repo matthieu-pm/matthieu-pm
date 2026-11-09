@@ -11,8 +11,8 @@ export const mcpCapabilities = {
   resources: { listChanged: true },
 }
 
-const mcpEndpointPath = "/api/mcp"
-const mcpEndpoint = `${siteConfig.url}${mcpEndpointPath}`
+export const mcpEndpointPath = "/mcp"
+export const mcpEndpoint = `${siteConfig.url}${mcpEndpointPath}`
 
 // Keep SEP-1649 transport metadata and the endpoint fields DNS-AID clients read.
 export const mcpServerCard = {

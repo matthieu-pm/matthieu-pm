@@ -198,23 +198,6 @@
   white-space: nowrap;
 }
 
-.socialIcon {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  flex: 0 0 14px;
-  margin-right: 4px;
-  object-fit: contain;
-  vertical-align: -0.125em;
-}
-
-.socialIconForge {
-  width: auto;
-  height: 14px;
-  flex-basis: auto;
-  filter: brightness(0);
-}
-
 .section {
   margin-top: var(--section-gap);
 }
@@ -588,13 +571,6 @@
   text-overflow: ellipsis;
 }
 
-.contactIcon {
-  width: 16px;
-  height: 16px;
-  flex: 0 0 16px;
-  object-fit: contain;
-}
-
 .contactBar a {
   display: inline-flex;
   flex: 0 0 auto;
@@ -606,12 +582,6 @@
   padding: 4px 14px;
   text-decoration: none;
   transition: background-color 160ms ease;
-}
-
-.contactButtonIcon {
-  width: 16px;
-  height: 16px;
-  flex: 0 0 16px;
 }
 
 .contactButtonLabel {
@@ -690,31 +660,6 @@
   text-decoration-color: currentColor;
 }
 
-.footerSocialIcon,
-.footerSocialIconCrop {
-  width: 14px;
-  height: 14px;
-  flex: 0 0 14px;
-}
-
-.footerSocialIcon {
-  object-fit: contain;
-}
-
-.footerSocialIconCrop {
-  position: relative;
-  overflow: hidden;
-}
-
-.footerSocialIconMedium {
-  position: absolute;
-  top: -3.5px;
-  left: -7px;
-  width: 28px;
-  height: 21px;
-  max-width: none;
-}
-
 .footerSignatureFrame {
   position: relative;
   width: 180px;
@@ -725,7 +670,7 @@
 
 .footerSignatureImage {
   position: absolute;
-  top: -106px;
+  top: -110px;
   left: -20px;
   width: 220px;
   height: auto;
@@ -762,10 +707,6 @@
     min-height: 44px;
     justify-content: center;
     text-align: center;
-  }
-
-  .footer {
-    align-items: flex-start;
   }
 
   .footerSocials {

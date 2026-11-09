@@ -30,7 +30,7 @@ const nextConfig: NextConfig = {
           {
             key: "Link",
             value:
-              '</llms.md>; rel="describedby"; type="text/markdown", </.well-known/ai-catalog.json>; rel="ai-catalog"; type="application/json"',
+              '</llms.txt>; rel="describedby"; type="text/plain", </.well-known/ai-catalog.json>; rel="ai-catalog"; type="application/json"',
           },
         ],
       },
