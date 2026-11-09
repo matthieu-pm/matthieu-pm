@@ -210,19 +210,13 @@
   letter-spacing: -0.012em;
 }
 
-.projectsSection {
-  padding-block: 24px 28px;
-  border-block: 1px solid var(--faint);
-}
-
 .projectsSection h2 {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   color: var(--muted);
 }
 
 .projectList {
   display: grid;
-  gap: 4px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -348,12 +342,12 @@
 
 .projectRow {
   display: grid;
-  grid-template-columns: 24px minmax(0, 1fr) auto;
-  min-height: 44px;
+  grid-template-columns: 20px minmax(0, 1fr) auto;
+  min-height: 36px;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   margin-inline: -8px;
-  padding: 8px;
+  padding: 4px 8px;
   border-radius: 6px;
   color: var(--ink);
   text-decoration: none;
@@ -381,28 +375,30 @@
 
 .projectMark {
   display: grid;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   place-items: center;
 }
 
 .projectMarkImage {
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
 }
 
 .projectText {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
   min-width: 0;
-  line-height: 24px;
+  line-height: 22px;
 }
 
 .projectText strong {
   font-weight: 500;
 }
 
-.projectSeparator,
 .projectDescription {
   color: var(--muted);
 }
@@ -418,8 +414,8 @@
 
 .technologyIcon {
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   background: currentColor;
   mask-position: center;
   mask-repeat: no-repeat;
@@ -692,8 +688,8 @@
     gap: 10px;
   }
 
-  .projectSeparator {
-    display: none;
+  .projectText {
+    flex-direction: column;
   }
 
   .projectDescription {

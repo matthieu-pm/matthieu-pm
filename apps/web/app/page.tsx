@@ -42,7 +42,7 @@ const projects: {
     name: "Atrium",
     description: "AI-powered CRM",
     href: "https://atrium-landing-tau.vercel.app/",
-    logo: "/logos/atrium.png",
+    logo: "/logos/atrium.svg",
     stack: ["nextdotjs", "convex", "react"],
   },
   {
@@ -226,18 +226,15 @@ export default function Page() {
                       className={styles.projectMarkImage}
                       src={project.logo}
                       alt=""
-                      width={24}
-                      height={24}
+                      width={20}
+                      height={20}
                     />
                   ) : (
-                    <InspirationsOrb size={24} interactive={false} />
+                    <InspirationsOrb size={20} interactive={false} />
                   )}
                 </span>
                 <span className={styles.projectText}>
                   <strong>{project.name}</strong>
-                  <span className={styles.projectSeparator} aria-hidden="true">
-                    {" ~ "}
-                  </span>
                   <span className={styles.projectDescription}>
                     {project.description}
                   </span>
