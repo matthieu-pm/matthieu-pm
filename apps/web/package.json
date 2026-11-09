@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "test:mcp": "bun test lib/mcp.test.mjs",
+    "test:webmcp": "bun test lib/webmcp.test.mjs",
     "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",

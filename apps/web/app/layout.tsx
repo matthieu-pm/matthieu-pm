@@ -3,8 +3,19 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata } from "next"
 import { Geist } from "next/font/google"
 
+import { publishedContent } from "@/lib/site-content"
+
 import "./globals.css"
+import { navigation } from "./inspirations/catalogues"
 import { siteConfig } from "./site-config"
+import { WebMcp } from "./webmcp"
+
+const agentPaths = [
+  "/",
+  "/mcp",
+  ...navigation.map((item) => item.href),
+  ...publishedContent.map((item) => item.path),
+]
 
 const geist = Geist({
   subsets: ["latin"],
@@ -119,6 +130,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <WebMcp paths={agentPaths} />
         <Analytics />
         <SpeedInsights />
       </body>

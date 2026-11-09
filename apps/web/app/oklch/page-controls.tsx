@@ -130,6 +130,8 @@ export function Feedback() {
       {open && (
         <form
           id="oklch-feedback-form"
+          toolname="draft_oklch_feedback"
+          tooldescription="Prepare feedback about the OKLCH reference demo. Submitting opens the user's email app with a draft addressed to jakub@kbo.sk; it does not send an email."
           className="oklch-feedback-form"
           onSubmit={(event) => {
             event.preventDefault()
@@ -138,6 +140,8 @@ export function Feedback() {
           }}
         >
           <textarea
+            name="message"
+            toolparamdescription="Feedback message to include in the email draft."
             autoFocus
             aria-label="Feedback message"
             placeholder="Ideas, suggestions, or issues"

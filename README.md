@@ -51,6 +51,27 @@ cd apps/web
 bun run test:mcp
 ```
 
+## Browser tools (WebMCP)
+
+In browsers that support [WebMCP](https://webmachinelearning.github.io/webmcp/),
+every page registers `search_collection`, `search_content`, `get_content`, and
+`navigate_site` on page load. The read tools use the same schemas and validated
+handlers as `/api/mcp`; navigation accepts only the published paths in its schema.
+The adapter prefers `document.modelContext`, with a fallback for older browsers
+that expose `navigator.modelContext`. Unsupported browsers continue normally.
+
+Registration uses an AbortSignal to remove tools on cleanup or page exit. Tools
+remain available across client-side navigation and register again when a page
+returns from the browser's back/forward cache. Existing demo and feedback forms
+also expose declarative tool metadata and require user review before submission.
+
+Run `bun run test:webmcp` from `apps/web` to check discovery, execution, validation,
+cancellation, and cleanup. To verify native discovery, enable WebMCP in a browser
+that implements it and call `await document.modelContext.getTools()` after loading
+the page. After deploying, scan the public URL with
+`POST https://isitagentready.com/api/scan` and a JSON body of
+`{"url":"https://matthieu.pm"}`; check `checks.discovery.webMcp.status` for `pass`.
+
 ## Technology
 
 | Tool                                          | Purpose                                        |

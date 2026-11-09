@@ -33,6 +33,8 @@ export function SettingsExample() {
       caption="UX writing names the action: “Save changes.” Content design decides which fields belong together and where the confirmation appears."
     >
       <form
+        toolname="demo_save_profile"
+        tooldescription="Try the article's profile settings example. Updates only this page's demo confirmation; does not save a real profile."
         onSubmit={(event) => {
           event.preventDefault()
           setSaved(true)
@@ -44,6 +46,8 @@ export function SettingsExample() {
         </p>
         <input
           id="example-name"
+          name="display_name"
+          toolparamdescription="Display name to try in the profile settings demo."
           aria-describedby="example-name-hint"
           value={name}
           onChange={(event) => {
@@ -273,12 +277,19 @@ export function AccessibleFormExample() {
         <li>Enter an email address for delivery updates.</li>
         <li>Choose a future delivery date.</li>
       </ol>
-      <form onSubmit={submit} onChange={() => setSaved(false)}>
+      <form
+        toolname="demo_save_delivery"
+        tooldescription="Try the article's delivery form validation with a made-up email and a future date. Nothing is sent or booked."
+        onSubmit={submit}
+        onChange={() => setSaved(false)}
+      >
         <label htmlFor="example-delivery-email">
           Email address <span>(Required)</span>
         </label>
         <input
           id="example-delivery-email"
+          name="email"
+          toolparamdescription="Made-up email address for the delivery form demo."
           type="email"
           required
           placeholder="name@example.com"
@@ -292,6 +303,8 @@ export function AccessibleFormExample() {
         </label>
         <input
           id="example-delivery-date"
+          name="delivery_date"
+          toolparamdescription="Future delivery date for the demo, in YYYY-MM-DD format."
           type="date"
           required
           value={date}

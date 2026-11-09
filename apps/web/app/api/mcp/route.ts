@@ -10,6 +10,8 @@ function responseHeaders(request: Request) {
   const headers = new Headers({ "Cache-Control": "no-store", Vary: "Origin" })
   const origin = request.headers.get("origin")
   const allowed = new Set([
+    // Browser WebMCP calls come from the current deployment, including aliases.
+    new URL(request.url).origin,
     siteConfig.url,
     "https://claude.ai",
     "https://chatgpt.com",
