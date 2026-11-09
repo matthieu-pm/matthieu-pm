@@ -2,6 +2,19 @@ import type { NextConfig } from "next"
 import { fileURLToPath } from "node:url"
 
 const nextConfig: NextConfig = {
+  async headers() {
+    return [
+      {
+        source: "/",
+        headers: [
+          {
+            key: "Link",
+            value: '</llms.txt>; rel="describedby"; type="text/plain"',
+          },
+        ],
+      },
+    ]
+  },
   async redirects() {
     return [
       {
