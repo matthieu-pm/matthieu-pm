@@ -127,26 +127,8 @@ export default function Page() {
         <p>
           I really love AI and building AI products. Making my own, like Forge
           and Carbon, has taught me a lot about CS and engineering, and it’s
-          changed how I approach product and design. Currently, I&apos;m a
-          Product Management & UX Design MSc student at{" "}
-          <a
-            className={styles.socialLink}
-            href="https://www.skema.edu/en/programmes/msc-product-management-ux-design"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <strong>SKEMA</strong>
-          </a>{" "}
-          and{" "}
-          <a
-            className={styles.socialLink}
-            href="https://www.gsom.polimi.it/en"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <strong>POLIMI</strong>
-          </a>
-          .
+          changed how I approach product and design. Currently, I&apos;m pursuing
+          a Product Management & UX Design MSc at SKEMA & POLIMI.
         </p>
         <Suspense fallback={<ActivityBarSkeleton />}>
           <CodingActivity />
@@ -155,20 +137,11 @@ export default function Page() {
           Previously, I worked on growth and product design at{" "}
           <a
             className={styles.socialLink}
-            href="https://www.avico.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <strong>Avico</strong>
-          </a>{" "}
-          and{" "}
-          <a
-            className={styles.socialLink}
             href="https://www.linkedin.com/in/matthieu-duchatellier/"
             target="_blank"
             rel="noreferrer"
           >
-            <strong>other</strong>
+            <strong>diverse</strong>
           </a>{" "}
           companies, and I&apos;m open for a Product Manager or Design Engineer
           position starting June 2027.

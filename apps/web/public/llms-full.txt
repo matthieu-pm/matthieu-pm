@@ -32,10 +32,10 @@ Source: https://matthieu.pm
 
 Product Manager · Design Engineer
 
-I’m a Product Management & UX Design MSc student at [**SKEMA**](<https://www.skema.edu/en/programmes/msc-product-management-ux-design>) and [**POLIMI**](<https://www.gsom.polimi.it/en>). I bring product thinking, design, and code together to turn ideas into useful, thoughtful experiences.  
+Currently, I'm pursuing a Product Management & UX Design MSc at SKEMA & POLIMI. I bring product thinking, design, and code together to turn ideas into useful, thoughtful experiences.
 I enjoy understanding what people need, deciding what’s worth building, and shaping the details that make it feel right.
 
-Previously, I worked on growth and product design at [**Avico**](<https://www.avico.com/>) and [**other**](<https://www.linkedin.com/in/matthieu-duchatellier/>) companies, and I'm open for a Product Manager or Design Engineer position starting June 2027.
+Previously, I worked on growth and product design at [**diverse**](<https://www.linkedin.com/in/matthieu-duchatellier/>) companies, and I'm open for a Product Manager or Design Engineer position starting June 2027.
 
 You can reach me at [**@matthieu\_pm**](<https://x.com/matthieu_pm>) or via ** email  mattduchatellier@gmail.com ** and explore my code on [**GitLab**](<https://gitlab.com/wondertale-dev>).
 

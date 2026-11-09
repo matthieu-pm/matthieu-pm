@@ -2,7 +2,7 @@
 
 > Personal portfolio of Matthieu Duchatellier, Product Manager and Design Engineer working across strategy, growth, UX, and AI-enabled product delivery.
 
-Matthieu is a Product Management & UX Design MSc student at SKEMA and Polimi Graduate School of Management. He brings product thinking, design, and code together to build useful experiences, and previously worked on growth and product design at Avico.
+Matthieu is pursuing a Product Management & UX Design MSc at SKEMA & POLIMI. He brings product thinking, design, and code together to build useful experiences, and previously worked on growth and product design at [**diverse**](https://www.linkedin.com/in/matthieu-duchatellier/) companies.
 
 The canonical website is https://matthieu.pm. The links below include portfolio pages, articles, interactive design resources, and external project websites.
 
