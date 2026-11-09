@@ -467,79 +467,8 @@
 }
 
 .detailRow {
-  display: grid;
-  grid-template-columns: 50px minmax(0, 1fr);
-  align-items: start;
-  gap: 16px;
-  color: var(--ink);
-}
-
-.rowIndex {
-  --card-radius: 12px;
-  --card-shell-offset: 2px;
-
-  position: relative;
-  isolation: isolate;
-  display: grid;
-  width: 50px;
-  height: 58px;
-  place-items: center;
-  border: 1px solid #e5e5e2;
-  border-radius: var(--card-radius);
-  background: #f6f6f4;
-  box-shadow:
-    0 1px 2px rgb(0 0 0 / 4%),
-    0 4px 10px -7px rgb(0 0 0 / 16%);
-  color: #9b9b9b;
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 11px;
-}
-
-.rowIndex::before {
-  position: absolute;
-  z-index: -1;
-  inset: var(--card-shell-offset);
-  border: 1px solid #dfdfdc;
-  border-radius: calc(var(--card-radius) - var(--card-shell-offset));
-  background: #fff;
-  box-shadow: 0 1px 1px rgb(0 0 0 / 2%);
-  content: "";
-  pointer-events: none;
-}
-
-.skillPageSkeleton {
-  display: grid;
-  width: 28px;
-  gap: 3px;
-}
-
-.skillPageSkeleton > span {
   display: block;
-  background: #d9d9d6;
-}
-
-.skillSkeletonTitle {
-  width: 12px;
-  height: 3px;
-  border-radius: 999px;
-}
-
-.skillPageSkeleton > .skillSkeletonHero {
-  width: 28px;
-  height: 10px;
-  border: 1px solid #e1e1de;
-  border-radius: 3px;
-  background: #eeeeec;
-}
-
-.skillSkeletonLine {
-  width: 24px;
-  height: 3px;
-  border-radius: 999px;
-}
-
-.skillPageSkeleton > .skillSkeletonLineShort {
-  width: 17px;
+  color: var(--ink);
 }
 
 .detailRow h3 {
@@ -665,7 +594,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 32px;
-  margin-top: var(--section-gap);
+  margin-top: 64px;
   padding-bottom: 16px;
 }
 
@@ -704,6 +633,7 @@
   height: 56px;
   flex: 0 0 auto;
   overflow: hidden;
+  transform: translateX(16px);
 }
 
 .footerSignatureImage {

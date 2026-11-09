@@ -99,19 +99,6 @@ const articles = [
   },
 ]
 
-function PageSkeleton() {
-  return (
-    <span className={styles.skillPageSkeleton}>
-      <span className={styles.skillSkeletonTitle} />
-      <span className={styles.skillSkeletonHero} />
-      <span className={styles.skillSkeletonLine} />
-      <span
-        className={`${styles.skillSkeletonLine} ${styles.skillSkeletonLineShort}`}
-      />
-    </span>
-  )
-}
-
 export default function Page() {
   return (
     <main className={styles.page}>
@@ -290,9 +277,6 @@ export default function Page() {
               className={`${styles.detailRow} ${styles.skillLink}`}
               key={capability.path}
             >
-              <span className={styles.rowIndex} aria-hidden="true">
-                <PageSkeleton />
-              </span>
               <div>
                 <h3>{capability.path}</h3>
                 <p>{capability.description}</p>
@@ -313,9 +297,6 @@ export default function Page() {
                 href={article.href}
                 key={article.title}
               >
-                <span className={styles.rowIndex} aria-hidden="true">
-                  <PageSkeleton />
-                </span>
                 <div>
                   <h3>{article.title}</h3>
                   <p>{article.detail}</p>
@@ -332,9 +313,6 @@ export default function Page() {
             href="/archive/homeview"
             className={`${styles.detailRow} ${styles.skillLink}`}
           >
-            <span className={styles.rowIndex} aria-hidden="true">
-              <PageSkeleton />
-            </span>
             <div>
               <h3>HomeView</h3>
               <p>An interactive home display concept, and how it was built.</p>
@@ -344,9 +322,6 @@ export default function Page() {
             href="/archive/building-day-by-day"
             className={`${styles.detailRow} ${styles.skillLink}`}
           >
-            <span className={styles.rowIndex} aria-hidden="true">
-              <PageSkeleton />
-            </span>
             <div>
               <h3>Building, day by day</h3>
               <p>A year of GitLab activity, drawn as an interactive skyline.</p>
