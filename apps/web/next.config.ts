@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/llms.md",
+        headers: [
+          { key: "Content-Type", value: "text/markdown; charset=utf-8" },
+        ],
+      },
+      {
         source: "/.well-known/ai-catalog.json",
         headers: [
           { key: "Content-Type", value: "application/json" },
@@ -24,7 +30,7 @@ const nextConfig: NextConfig = {
           {
             key: "Link",
             value:
-              '</llms.txt>; rel="describedby"; type="text/plain", </.well-known/ai-catalog.json>; rel="ai-catalog"; type="application/json"',
+              '</llms.md>; rel="describedby"; type="text/markdown", </.well-known/ai-catalog.json>; rel="ai-catalog"; type="application/json"',
           },
         ],
       },

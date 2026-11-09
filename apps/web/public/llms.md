@@ -1,0 +1,42 @@
+# Matthieu Duchatellier
+
+> Personal portfolio of Matthieu Duchatellier, Product Manager and Design Engineer working across strategy, growth, UX, and AI-enabled product delivery.
+
+Matthieu is a Product Management & UX Design MSc student at SKEMA and Polimi Graduate School of Management. He brings product thinking, design, and code together to build useful experiences, and previously worked on growth and product design at Avico.
+
+The canonical website is https://matthieu.pm. The links below include portfolio pages, articles, interactive design resources, and external project websites.
+
+## Portfolio and contact
+
+- [Homepage](https://matthieu.pm/): Biography, selected projects, skills, writing, and contact information.
+- [Email](mailto:mattduchatellier@gmail.com): Contact Matthieu about product management and design engineering opportunities.
+- [LinkedIn](https://www.linkedin.com/in/matthieu-duchatellier/): Professional profile.
+- [GitLab](https://gitlab.com/wondertale-dev): Code and projects.
+- [X](https://x.com/matthieu_pm): Social profile.
+
+## Projects
+
+- [Carbon](https://carbonhq.sh): One app for coding agents.
+- [Forge](https://forge-app-mauve.vercel.app): Issue tracking with AI agents.
+- [Atlas](https://atlasapp.fr): AI-powered exam practice.
+- [Atrium](https://atrium-landing-tau.vercel.app/): AI-powered CRM.
+- [Researchie](https://survey.matthieu-pm.chatgpt.site): AI chat research form.
+
+## Design resources
+
+- [MCP connection guide](https://matthieu.pm/mcp): Connect an assistant to search the design collection, skills, and writing. Public, read-only Streamable HTTP endpoint: https://matthieu.pm/api/mcp. No authentication required.
+- [My collection](https://matthieu.pm/inspirations): Curated design tools and inspiration, with categories for components, building tools, visuals, utilities, and design engineers.
+- [Great UI](https://matthieu.pm/skills/great-ui): A design engineering skill for agents, combining interface polish and interaction craft with interactive examples.
+- [OKLCH color guide](https://matthieu.pm/oklch): Interactive guide to lightness, chroma, hue, CSS syntax, gradients, color gamuts, and browser fallbacks.
+
+## Writing
+
+- [Write the interface](https://matthieu.pm/writing/ux-writing): Guide to useful interface labels, buttons, and messages, with ten short exercises.
+- [From Prompt to Product](https://matthieu.pm/writing/ai-design-engineer): Introduction to prompting, building, and refining interfaces with AI.
+- [The AI-Augmented Product Manager](https://matthieu.pm/writing/ai-product-manager): Guide to using AI for product discovery, decisions, and delivery.
+
+## Optional
+
+- [HomeView](https://matthieu.pm/archive/homeview): Interactive home display concept and how it was built.
+- [Building, day by day](https://matthieu.pm/archive/building-day-by-day): A year of GitLab activity visualized as an interactive skyline.
+- [Sitemap](https://matthieu.pm/sitemap.xml): Index of website pages.

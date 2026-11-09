@@ -514,8 +514,8 @@ export default function Page() {
           </nav>
           <nav className={styles.footerSocials} aria-label="Site resources">
             <Link href="/mcp">MCP</Link>
-            <a href="/llms.txt">llms.txt</a>
-            <a href="/sitemap.txt">sitemap.txt</a>
+            <a href="/llms.md">llms.md</a>
+            <a href="/sitemap.md">sitemap.md</a>
           </nav>
         </div>
         <span className={styles.footerSignatureFrame}>
