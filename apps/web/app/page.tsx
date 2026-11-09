@@ -29,42 +29,42 @@ const projects: {
 }[] = [
   {
     name: "My collection",
-    description: "Design tools and inspiration",
+    description: "Curated lists of tools and inspiring designs",
     href: "/inspirations",
     logo: null,
     stack: ["nextdotjs", "react", "typescript"],
   },
   {
     name: "Atlas",
-    description: "AI-powered exam practice",
+    description: "Prepare your exams with AI-powered MCQs",
     href: "https://atlasapp.fr",
     logo: "/logos/atlas.svg",
     stack: ["nextdotjs", "convex", "react"],
   },
   {
     name: "Atrium",
-    description: "AI-powered CRM",
+    description: "Revenue teams meets agentic CRM workflows",
     href: "https://atrium-landing-tau.vercel.app/",
     logo: "/logos/atrium.svg",
     stack: ["nextdotjs", "convex", "react"],
   },
   {
     name: "Carbon",
-    description: "One app for your coding agents",
+    description: "A desktop home for your coding agents",
     href: "https://carbonhq.sh",
     logo: "/logos/carbon.svg",
     stack: ["tauri", "react", "typescript"],
   },
   {
     name: "Forge",
-    description: "Issue tracking with AI agents",
+    description: "An agentic issue tracking workspace",
     href: "https://forge-app-mauve.vercel.app",
     logo: "/logos/forge.svg",
     stack: ["vite", "react", "typescript"],
   },
   {
     name: "Researchie",
-    description: "AI chat research form",
+    description: "Agentic research forms",
     href: "https://survey.matthieu-pm.chatgpt.site",
     logo: "/logos/researchie.svg",
     stack: ["nextdotjs", "react", "typescript"],
@@ -127,8 +127,8 @@ export default function Page() {
         <p>
           I really love AI and building AI products. Making my own, like Forge
           and Carbon, has taught me a lot about CS and engineering, and it’s
-          changed how I approach product and design. Currently, I&apos;m a Product
-          Management & UX Design MSc student at{" "}
+          changed how I approach product and design. Currently, I&apos;m a
+          Product Management & UX Design MSc student at{" "}
           <a
             className={styles.socialLink}
             href="https://www.skema.edu/en/programmes/msc-product-management-ux-design"
@@ -204,7 +204,7 @@ export default function Page() {
         className={`${styles.section} ${styles.projectsSection}`}
         aria-labelledby="work-title"
       >
-        <h2 id="work-title">Projects</h2>
+        <h2 id="work-title">Tools and apps I built</h2>
         <ul className={styles.projectList}>
           {projects.map((project) => (
             <li key={project.name}>
