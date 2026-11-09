@@ -5,6 +5,11 @@
   "private": true,
   "scripts": {
     "generate:llms-full": "bun scripts/generate-llms-full.ts",
+    "activity:collect": "node scripts/activity-collector.mjs",
+    "activity:sync": "node scripts/activity-collector.mjs --publish",
+    "activity:install": "node scripts/activity-sync-service.mjs install",
+    "activity:status": "node scripts/activity-sync-service.mjs status",
+    "activity:stop": "node scripts/activity-sync-service.mjs stop",
     "test:mcp": "bun test lib/mcp.test.mjs",
     "test:webmcp": "bun test lib/webmcp.test.mjs",
     "dev": "next dev --port 3001",

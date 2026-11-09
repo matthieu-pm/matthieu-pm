@@ -180,9 +180,34 @@ import { Button } from "@workspace/ui/components/button"
 5. Leave the output directory on the Next.js default.
 6. Deploy the project.
 
-The current site does not require environment variables. After deployment,
+The activity details use `ACTIVITY_DETAILS_URL`, the public URL of an aggregate
+JSON file in Vercel Blob. The rest of the site works without it. After deployment,
 enable Analytics and Speed Insights in the Vercel dashboard to collect their
 respective metrics.
+
+### Activity details sync
+
+The collector requires Node.js 24. From `apps/web`, run `bun run activity:collect` to collect locally or
+`bun run activity:sync` to collect and publish. `bun run activity:install` installs
+a macOS LaunchAgent that runs at login and every five minutes while the Mac is
+awake. `bun run activity:status` inspects it; `bun run activity:stop` stops it.
+
+The collector scans GitHub/GitLab repositories under `~/Projects`, reading the
+remote-tracking histories already present on this Mac. It counts commits authored
+by the configured personal author names, including remote branches, and deduplicates
+commit SHAs across mirrors and worktrees. Line totals are committed text changes;
+binary files have no line count. Repositories not cloned here are not included.
+
+Codex and Carbon records supply successful patch/file-edit counts and the most-used
+model by completed turns. Repeated call/turn IDs are deduplicated. Shell-based edits
+without structured patch calls are not counted as AI diffs. Neither source records
+editor tab completions, so that metric is omitted.
+
+Only weekly totals and model labels are published. Prompts, messages, paths,
+repository names, commit SHAs, and call IDs remain local. The private cache and logs
+live in `~/.local/share/matthieu-activity`. Uploads use the linked project's Blob
+credentials through Vercel CLI; keep `.env.local` untracked. The website refreshes
+expanded week statistics every minute, and the public blob cache lasts 60 seconds.
 
 ## Use it as a template
 

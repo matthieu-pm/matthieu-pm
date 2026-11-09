@@ -2,6 +2,7 @@
 
 import {
   useId,
+  useEffect,
   useRef,
   useState,
   type CSSProperties,
@@ -10,6 +11,7 @@ import {
 import { Cancel01Icon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 import type { ActivityWeek, CodingActivityData } from "@/lib/coding-activity"
+import type { ActivityDetails } from "@/lib/activity-details"
 import styles from "./activity-bar.module.css"
 
 const number = new Intl.NumberFormat("en-US")
@@ -44,6 +46,66 @@ export function ActivityBar({ data }: { data: CodingActivityData }) {
   const selection = selected === null ? null : data.weeks[selected]
   const max = Math.max(1, ...data.weeks.map((week) => week.total))
   const partial = !data.githubAvailable || !data.gitlabAvailable
+  const selectedWeek = selection?.start
+  const [detailedWeeks, setDetailedWeeks] = useState<
+    Record<
+      string,
+      {
+        details: ActivityDetails | null
+        updatedAt?: string
+      }
+    >
+  >({})
+  const detailed = selectedWeek ? detailedWeeks[selectedWeek] : undefined
+
+  useEffect(() => {
+    if (!selectedWeek) return
+    const week = selectedWeek
+    let stopped = false
+    let controller: AbortController | null = null
+    async function refresh() {
+      controller?.abort()
+      const requestController = new AbortController()
+      controller = requestController
+      try {
+        const response = await fetch(
+          `/api/activity-details?week=${encodeURIComponent(week)}`,
+          { cache: "no-store", signal: requestController.signal }
+        )
+        if (!response.ok) throw new Error("Activity details unavailable")
+        const payload: {
+          week: string
+          updatedAt: string
+          details: ActivityDetails | null
+        } = await response.json()
+        if (payload.week !== week) throw new Error("Unexpected activity week")
+        if (!stopped)
+          setDetailedWeeks((previous) => ({
+            ...previous,
+            [week]: {
+              details: payload.details,
+              updatedAt: payload.updatedAt,
+            },
+          }))
+      } catch {
+        if (!stopped && !requestController.signal.aborted)
+          setDetailedWeeks((previous) => ({
+            ...previous,
+            [week]: {
+              ...previous[week],
+              details: previous[week]?.details ?? null,
+            },
+          }))
+      }
+    }
+    void refresh()
+    const timer = window.setInterval(refresh, 60_000)
+    return () => {
+      stopped = true
+      controller?.abort()
+      window.clearInterval(timer)
+    }
+  }, [selectedWeek])
 
   function close() {
     if (selected !== null) buttons.current[selected]?.focus()
@@ -223,11 +285,51 @@ export function ActivityBar({ data }: { data: CodingActivityData }) {
           <div className={styles.columns}>
             <div>
               <h3>Code activity</h3>
-              <div>{count(selection.total)}</div>
-              <div>
-                {selection.activeDays} active day
-                {selection.activeDays === 1 ? "" : "s"}
-              </div>
+              {detailed?.details ? (
+                <div
+                  title={
+                    detailed.updatedAt
+                      ? `Updated ${new Date(detailed.updatedAt).toLocaleString("en-US")}`
+                      : undefined
+                  }
+                >
+                  <div>
+                    {number.format(detailed.details.commits)} commit
+                    {detailed.details.commits === 1 ? "" : "s"} across{" "}
+                    {number.format(detailed.details.repositories)} repo
+                    {detailed.details.repositories === 1 ? "" : "s"}
+                  </div>
+                  <div>
+                    {number.format(detailed.details.linesAdded)} lines added
+                  </div>
+                  <div>
+                    {number.format(detailed.details.linesDeleted)} lines deleted
+                  </div>
+                  {detailed.details.aiDiffs !== null && (
+                    <div title="File edits recorded by successful Codex/Carbon patch and edit tools">
+                      {number.format(detailed.details.aiDiffs)} AI diffs
+                    </div>
+                  )}
+                  {detailed.details.mostUsedModel && (
+                    <div title="Most completed Codex/Carbon turns this week">
+                      Used {detailed.details.mostUsedModel} most
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <>
+                  <div>{count(selection.total)}</div>
+                  <div>
+                    {selection.activeDays} active day
+                    {selection.activeDays === 1 ? "" : "s"}
+                  </div>
+                  <div className={styles.statsStatus}>
+                    {detailed
+                      ? "Detailed statistics unavailable"
+                      : "Loading statistics…"}
+                  </div>
+                </>
+              )}
             </div>
             <div>
               <h3>Across both profiles</h3>
