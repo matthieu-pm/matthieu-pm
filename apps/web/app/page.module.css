@@ -207,8 +207,7 @@
   margin-top: var(--section-gap);
 }
 
-.section::before,
-.footer::before {
+.section::before {
   position: absolute;
   top: calc(var(--section-gap) / -2);
   right: 0;
@@ -615,10 +614,6 @@
   gap: 32px;
   margin-top: 64px;
   padding-bottom: 16px;
-}
-
-.footer::before {
-  top: -32px;
 }
 
 .footerLinks {
