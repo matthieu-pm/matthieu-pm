@@ -183,15 +183,10 @@
   text-underline-offset: 3px;
 }
 
-.note,
 .notice,
 .unavailable {
   font-size: 12px;
   line-height: 18px;
-}
-
-.note {
-  margin-top: 14px;
 }
 
 .notice {

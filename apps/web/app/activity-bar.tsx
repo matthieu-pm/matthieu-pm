@@ -252,10 +252,6 @@ export function ActivityBar({ data }: { data: CodingActivityData }) {
               </a>
             </div>
           </div>
-          <div className={styles.note}>
-            Combined profile contributions. Activity mirrored between platforms
-            may appear in both counts.
-          </div>
         </div>
       )}
     </div>
