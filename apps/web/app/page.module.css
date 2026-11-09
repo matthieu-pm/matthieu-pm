@@ -16,7 +16,7 @@
   font-size: 15px;
   font-weight: var(--font-weight-body);
   line-height: 1.5;
-  padding: 96px 24px;
+  padding: 48px 24px 96px;
 }
 
 .page > * {
@@ -672,7 +672,7 @@
   .page {
     --section-gap: 32px;
 
-    padding: 48px 24px;
+    padding: 24px 24px 48px;
   }
 
   .projectRow {

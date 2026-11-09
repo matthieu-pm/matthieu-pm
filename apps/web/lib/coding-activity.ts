@@ -73,7 +73,7 @@ export function combineActivity(
   const gitlabDays = new Map(gitlab?.map((day) => [day.date, day.count]))
   const weeks: ActivityWeek[] = []
 
-  for (let start = firstSunday; start <= yearEnd; start += 7 * dayMs) {
+  for (let start = firstSunday; start <= today; start += 7 * dayMs) {
     const end = Math.min(start + 6 * dayMs, yearEnd)
     let githubCount = 0
     let gitlabCount = 0

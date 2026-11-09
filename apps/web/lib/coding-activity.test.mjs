@@ -45,7 +45,7 @@ test("combines both platforms into calendar weeks, preserving source counts", ()
     ],
     "2026-01-05"
   )
-  assert.equal(result.weeks.length, 53)
+  assert.equal(result.weeks.length, 2)
   assert.equal(result.weeks[0].start, "2026-01-01")
   assert.equal(result.weeks[0].total, 2)
   assert.deepEqual(result.weeks[1], {
@@ -58,9 +58,26 @@ test("combines both platforms into calendar weeks, preserving source counts", ()
     current: true,
     future: false,
   })
-  assert.equal(result.weeks[2].future, true)
-  assert.equal(result.weeks[2].total, 0)
-  assert.equal(result.weeks[52].end, "2026-12-31")
+  assert.equal(result.weeks.at(-1).current, true)
+  assert.equal(
+    result.weeks.some((week) => week.future),
+    false
+  )
+})
+
+test("always ends with the current week, including at year boundaries", () => {
+  for (const asOf of [
+    "2026-01-01",
+    "2026-01-04",
+    "2026-06-15",
+    "2026-11-09",
+    "2026-12-31",
+  ]) {
+    const result = combineActivity([], [], asOf)
+    assert.equal(result.weeks.at(-1).current, true)
+    assert.ok(result.weeks.every((week) => week.start <= asOf && !week.future))
+    assert.equal(result.weeks.filter((week) => week.current).length, 1)
+  }
 })
 
 test("handles leap years, the final week and known zero activity", () => {
