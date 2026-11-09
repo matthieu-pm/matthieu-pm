@@ -344,11 +344,11 @@
 .projectRow {
   display: grid;
   grid-template-columns: 20px minmax(0, 1fr) auto;
-  min-height: 36px;
+  min-height: 32px;
   align-items: center;
   gap: 10px;
   margin-inline: -8px;
-  padding: 4px 8px;
+  padding: 2px 8px;
   border-radius: 6px;
   color: var(--ink);
   text-decoration: none;
@@ -361,8 +361,24 @@
   }
 
   .projectRow:hover .projectStack {
-    color: var(--ink);
+    display: none;
   }
+
+  .projectRow:hover .projectDestination {
+    display: flex;
+  }
+}
+
+.projectRow:focus-visible {
+  background: var(--soft);
+}
+
+.projectRow:focus-visible .projectStack {
+  display: none;
+}
+
+.projectRow:focus-visible .projectDestination {
+  display: flex;
 }
 
 .projectRow:focus-visible,
@@ -389,14 +405,15 @@
 }
 
 .projectText {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 8px;
   min-width: 0;
+  overflow: hidden;
   line-height: 22px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .projectText strong {
+  margin-right: 8px;
   font-weight: 500;
 }
 
@@ -404,11 +421,34 @@
   color: var(--muted);
 }
 
+.projectMeta {
+  min-width: 0;
+  max-width: min(220px, 32vw);
+  padding-left: 8px;
+  color: var(--muted);
+}
+
+.projectDestination {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  line-height: 22px;
+}
+
+.projectDestination > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.projectDestination svg {
+  flex-shrink: 0;
+}
+
 .projectStack {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding-left: 8px;
   color: var(--muted);
   transition: color 160ms ease;
 }
@@ -699,16 +739,21 @@
   }
 
   .projectText {
+    display: flex;
     flex-direction: column;
+    white-space: normal;
   }
 
   .projectDescription {
     display: block;
   }
 
+  .projectMeta {
+    padding-left: 0;
+  }
+
   .projectStack {
     padding-top: 3px;
-    padding-left: 0;
     gap: 6px;
   }
 

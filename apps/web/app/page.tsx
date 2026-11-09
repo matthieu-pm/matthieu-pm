@@ -239,19 +239,41 @@ export default function Page() {
                     {project.description}
                   </span>
                 </span>
-                <span className={styles.projectStack}>
-                  {project.stack.map((technology) => (
-                    <span
-                      className={styles.technologyIcon}
-                      key={technology}
-                      role="img"
-                      aria-label={technologies[technology]}
-                      title={technologies[technology]}
-                      style={{
-                        maskImage: `url(/logos/technologies/${technology}.svg)`,
-                      }}
-                    />
-                  ))}
+                <span className={styles.projectMeta}>
+                  <span className={styles.projectStack}>
+                    {project.stack.map((technology) => (
+                      <span
+                        className={styles.technologyIcon}
+                        key={technology}
+                        role="img"
+                        aria-label={technologies[technology]}
+                        title={technologies[technology]}
+                        style={{
+                          maskImage: `url(/logos/technologies/${technology}.svg)`,
+                        }}
+                      />
+                    ))}
+                  </span>
+                  <span
+                    className={styles.projectDestination}
+                    title={project.href}
+                    aria-hidden="true"
+                  >
+                    <span>
+                      {project.href.startsWith("/")
+                        ? project.href
+                        : new URL(project.href).hostname.replace(/^www\./, "")}
+                    </span>
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                      <path
+                        d="M4 12 12 4M4 4h8v8"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
                 </span>
               </Link>
             </li>
