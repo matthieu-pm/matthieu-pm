@@ -411,7 +411,7 @@
 }
 
 .projectText strong {
-  margin-right: 8px;
+  margin-right: 4px;
   font-weight: 500;
 }
 
@@ -463,7 +463,7 @@
 
 .rowList {
   display: grid;
-  gap: 18px;
+  gap: 12px;
 }
 
 .detailRow {
