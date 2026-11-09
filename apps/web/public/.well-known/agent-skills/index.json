@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "great-ui",
+      "type": "archive",
+      "description": "Faithful single-skill merge of Jakub Krehel's better-ui and Emil Kowalski's emil-design-eng. Use to build, polish, animate, or review interfaces with the complete source guidance on surfaces, optical alignment, icons, interaction motion, gestures, animation performance, accessibility, component craft, perceived speed, and UI review.",
+      "url": "/.well-known/agent-skills/great-ui.zip",
+      "digest": "sha256:17cdb2c29316767ccfd1541cf69ce498c6c4d3f295f1e13d2739c5408966ce46"
+    }
+  ]
+}
