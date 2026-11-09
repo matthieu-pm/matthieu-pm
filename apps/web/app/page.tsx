@@ -451,69 +451,72 @@ export default function Page() {
       </section>
 
       <footer className={styles.footer}>
-        <nav
-          className={styles.footerSocials}
-          aria-label="Social profiles and resources"
-        >
-          <Link href="/mcp">MCP</Link>
-          <a href="https://x.com/matthieu_pm" target="_blank" rel="noreferrer">
-            <Image
-              className={styles.footerSocialIcon}
-              src="/logos/x.webp"
-              alt=""
-              width={14}
-              height={14}
-              aria-hidden="true"
-            />
-            X
-          </a>
-          <a
-            href="https://www.producthunt.com/@mengde"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              className={styles.footerSocialIcon}
-              src="/logos/product-hunt.webp"
-              alt=""
-              width={14}
-              height={14}
-              aria-hidden="true"
-            />
-            ProductHunt
-          </a>
-          <a
-            href="https://www.linkedin.com/in/matthieu-duchatellier/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              className={styles.footerSocialIcon}
-              src="/logos/linkedin.webp"
-              alt=""
-              width={14}
-              height={14}
-              aria-hidden="true"
-            />
-            LinkedIn
-          </a>
-          <a
-            href="https://medium.com/@mengde-pm"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className={styles.footerSocialIconCrop} aria-hidden="true">
+        <div className={styles.footerLinks}>
+          <nav className={styles.footerSocials} aria-label="Social profiles">
+            <a href="https://x.com/matthieu_pm" target="_blank" rel="noreferrer">
               <Image
-                className={styles.footerSocialIconMedium}
-                src="/logos/medium.webp"
+                className={styles.footerSocialIcon}
+                src="/logos/x.webp"
                 alt=""
-                width={28}
-                height={21}
+                width={14}
+                height={14}
+                aria-hidden="true"
               />
-            </span>
-            Medium
-          </a>
-        </nav>
+              X
+            </a>
+            <a
+              href="https://www.producthunt.com/@mengde"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                className={styles.footerSocialIcon}
+                src="/logos/product-hunt.webp"
+                alt=""
+                width={14}
+                height={14}
+                aria-hidden="true"
+              />
+              ProductHunt
+            </a>
+            <a
+              href="https://www.linkedin.com/in/matthieu-duchatellier/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                className={styles.footerSocialIcon}
+                src="/logos/linkedin.webp"
+                alt=""
+                width={14}
+                height={14}
+                aria-hidden="true"
+              />
+              LinkedIn
+            </a>
+            <a
+              href="https://medium.com/@mengde-pm"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className={styles.footerSocialIconCrop} aria-hidden="true">
+                <Image
+                  className={styles.footerSocialIconMedium}
+                  src="/logos/medium.webp"
+                  alt=""
+                  width={28}
+                  height={21}
+                />
+              </span>
+              Medium
+            </a>
+          </nav>
+          <nav className={styles.footerSocials} aria-label="Site resources">
+            <Link href="/mcp">MCP</Link>
+            <a href="/llms.txt">llms.txt</a>
+            <a href="/sitemap.txt">sitemap.txt</a>
+          </nav>
+        </div>
         <span className={styles.footerSignatureFrame}>
           <Image
             className={styles.footerSignatureImage}

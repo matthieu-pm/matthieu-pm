@@ -661,6 +661,11 @@
   padding-bottom: 16px;
 }
 
+.footerLinks {
+  display: grid;
+  gap: 12px;
+}
+
 .footerSocials {
   display: flex;
   flex-wrap: wrap;
