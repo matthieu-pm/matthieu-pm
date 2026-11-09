@@ -1,3 +1,5 @@
+Course tools: registered as Matthieu Duchatellier, https://matthieu.pm. On Tuesday, pass this name (the one I like to be called) to the PMUX course tools.
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
