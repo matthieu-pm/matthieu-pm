@@ -5,12 +5,16 @@
   --faint: #e9e9e9;
   --soft: #f3f3f3;
   --section-gap: 32px;
+  --font-weight-body: 350;
+  --font-weight-medium: 450;
+  --font-weight-bold: 500;
 
   min-height: 100svh;
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-sans), system-ui, sans-serif;
   font-size: 15px;
+  font-weight: var(--font-weight-body);
   line-height: 1.5;
   padding: 96px 24px;
 }
@@ -36,7 +40,7 @@
 
 .identity h1 {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   line-height: 22px;
   letter-spacing: -0.012em;
 }
@@ -68,7 +72,7 @@
   margin-top: 24px;
   color: var(--muted);
   font-size: 15px;
-  font-weight: 400;
+  font-weight: var(--font-weight-body);
 }
 
 .intro p {
@@ -84,7 +88,7 @@
 .emailButton {
   font-family: inherit;
   font-synthesis: none;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 .intro em {
@@ -96,7 +100,7 @@
 
 .intro strong {
   color: var(--ink);
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
 }
 
 .intro strong .emailButton {
@@ -118,7 +122,7 @@
 }
 
 .contactNote a {
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 .intro a,
@@ -160,7 +164,7 @@
   box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
   color: #fff;
   font-size: 12px;
-  font-weight: 450;
+  font-weight: 400;
   line-height: 16px;
   opacity: 0;
   pointer-events: none;
@@ -199,13 +203,26 @@
 }
 
 .section {
+  position: relative;
   margin-top: var(--section-gap);
+}
+
+.section::before,
+.footer::before {
+  position: absolute;
+  top: calc(var(--section-gap) / -2);
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: var(--faint);
+  content: "";
+  pointer-events: none;
 }
 
 .section h2 {
   margin-bottom: 8px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   line-height: 26px;
   letter-spacing: -0.012em;
 }
@@ -412,7 +429,7 @@
 
 .projectText strong {
   margin-right: 4px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 .projectDescription {
@@ -473,7 +490,7 @@
 
 .detailRow h3 {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   line-height: 24px;
 }
 
@@ -590,12 +607,17 @@
 }
 
 .footer {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
   margin-top: 64px;
   padding-bottom: 16px;
+}
+
+.footer::before {
+  top: -32px;
 }
 
 .footerLinks {
