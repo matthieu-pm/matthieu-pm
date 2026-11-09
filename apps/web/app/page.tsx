@@ -127,7 +127,7 @@ export default function Page() {
         <p>
           I really love AI and building AI products. Making my own, like Forge
           and Carbon, has taught me a lot about CS and engineering, and it’s
-          changed how I approach product and design. I’m currently a Product
+          changed how I approach product and design. Currently, I&apos;m a Product
           Management & UX Design MSc student at{" "}
           <a
             className={styles.socialLink}
