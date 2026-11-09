@@ -140,6 +140,7 @@ const output =
 
 // Write only after every page succeeds, preserving the previous export on error.
 await writeFile(new URL("../public/llms-full.txt", import.meta.url), output)
+await writeFile(new URL("../public/llms.txt", import.meta.url), output)
 console.log(
-  `Wrote llms-full.txt (${sections.length} pages, ${Buffer.byteLength(output)} bytes)`
+  `Wrote llms-full.txt and llms.txt (${sections.length} pages, ${Buffer.byteLength(output)} bytes each)`
 )

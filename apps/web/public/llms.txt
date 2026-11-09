@@ -1,44 +1,2013 @@
+# Matthieu Duchatellier — Full website content
+
+> Complete text of the 15 public pages at https://matthieu.pm, including the portfolio, collection, skills, writing, guides, and archives.
+
+External projects and collection resources are linked; their websites are not included. Interactive examples are represented by their initial text and accompanying explanations.
+
+## Contents
+
+- [Matthieu Duchatellier](https://matthieu.pm)
+- [Building, day by day](https://matthieu.pm/archive/building-day-by-day)
+- [HomeView — a home display concept](https://matthieu.pm/archive/homeview)
+- [OKLCH Color Guide: Lightness, Chroma, Hue & CSS](https://matthieu.pm/oklch)
+- [My collection — Matthieu Duchatellier](https://matthieu.pm/inspirations)
+- [Components — My collection — Matthieu Duchatellier](https://matthieu.pm/inspirations/components)
+- [Build — My collection — Matthieu Duchatellier](https://matthieu.pm/inspirations/build)
+- [Visuals — My collection — Matthieu Duchatellier](https://matthieu.pm/inspirations/visuals)
+- [Utilities — My collection — Matthieu Duchatellier](https://matthieu.pm/inspirations/utilities)
+- [Design Engineers — My collection — Matthieu Duchatellier](https://matthieu.pm/inspirations/designers)
+- [Great UI](https://matthieu.pm/skills/great-ui)
+- [Write the interface](https://matthieu.pm/writing/ux-writing)
+- [From Prompt to Product](https://matthieu.pm/writing/ai-design-engineer)
+- [The AI-Augmented Product Manager](https://matthieu.pm/writing/ai-product-manager)
+- [Connect your assistant](https://matthieu.pm/mcp)
+
+---
+
 # Matthieu Duchatellier
 
-> Personal portfolio of Matthieu Duchatellier, Product Manager and Design Engineer working across strategy, growth, UX, and AI-enabled product delivery.
+Source: https://matthieu.pm
 
-Matthieu is a Product Management & UX Design MSc student at SKEMA and Polimi Graduate School of Management. He brings product thinking, design, and code together to build useful experiences, and previously worked on growth and product design at Avico.
+# Matthieu Duchatellier
 
-The canonical website is https://matthieu.pm. The links below include portfolio pages, articles, interactive design resources, and external project websites.
+Product Manager · Design Engineer
 
-- [Full website content](https://matthieu.pm/llms-full.txt): Complete text of all public pages in one file.
+I’m a Product Management & UX Design MSc student at [**SKEMA**](<https://www.skema.edu/en/programmes/msc-product-management-ux-design>) and [**POLIMI**](<https://www.gsom.polimi.it/en>). I bring product thinking, design, and code together to turn ideas into useful, thoughtful experiences.  
+I enjoy understanding what people need, deciding what’s worth building, and shaping the details that make it feel right.
 
-## Portfolio and contact
+Previously, I worked on growth and product design at [**Avico**](<https://www.avico.com/>) and [**other**](<https://www.linkedin.com/in/matthieu-duchatellier/>) companies, and I'm open for a Product Manager or Design Engineer position starting June 2027.
 
-- [Homepage](https://matthieu.pm/): Biography, selected projects, skills, writing, and contact information.
-- [Email](mailto:mattduchatellier@gmail.com): Contact Matthieu about product management and design engineering opportunities.
-- [LinkedIn](https://www.linkedin.com/in/matthieu-duchatellier/): Professional profile.
-- [GitLab](https://gitlab.com/wondertale-dev): Code and projects.
-- [X](https://x.com/matthieu_pm): Social profile.
+You can reach me at [**@matthieu\_pm**](<https://x.com/matthieu_pm>) or via ** email  mattduchatellier@gmail.com ** and explore my code on [**GitLab**](<https://gitlab.com/wondertale-dev>).
 
 ## Projects
 
-- [Carbon](https://carbonhq.sh): One app for coding agents.
-- [Forge](https://forge-app-mauve.vercel.app): Issue tracking with AI agents.
-- [Atlas](https://atlasapp.fr): AI-powered exam practice.
-- [Atrium](https://atrium-landing-tau.vercel.app/): AI-powered CRM.
-- [Researchie](https://survey.matthieu-pm.chatgpt.site): AI chat research form.
+Each project is my own work, from product decisions and design to code.
 
-## Design resources
+**My collection** — Design tools and inspiration
 
-- [MCP connection guide](https://matthieu.pm/mcp): Connect an assistant to search the design collection, skills, and writing. Public, read-only Streamable HTTP endpoint: https://matthieu.pm/mcp. No authentication required.
-- [My collection](https://matthieu.pm/inspirations): Curated design tools and inspiration, with categories for components, building tools, visuals, utilities, and design engineers.
-- [Great UI](https://matthieu.pm/skills/great-ui): A design engineering skill for agents, combining interface polish and interaction craft with interactive examples.
-- [OKLCH color guide](https://matthieu.pm/oklch): Interactive guide to lightness, chroma, hue, CSS syntax, gradients, color gamuts, and browser fallbacks.
+https://matthieu.pm/inspirations
+
+**Atlas** — AI-powered exam practice
+
+https://atlasapp.fr/
+
+**Atrium** — AI-powered CRM
+
+https://atrium-landing-tau.vercel.app/
+
+**Carbon** — One app for your coding agents
+
+https://carbonhq.sh/
+
+**Forge** — Issue tracking with AI agents
+
+https://forge-app-mauve.vercel.app/
+
+**Researchie** — AI chat research form
+
+https://survey.matthieu-pm.chatgpt.site/
+
+## Skills for agents
+
+### /great-ui
+
+Build and polish interfaces where every detail compounds.
+
+https://matthieu.pm/skills/great-ui
 
 ## Writing
 
-- [Write the interface](https://matthieu.pm/writing/ux-writing): Guide to useful interface labels, buttons, and messages, with ten short exercises.
-- [From Prompt to Product](https://matthieu.pm/writing/ai-design-engineer): Introduction to prompting, building, and refining interfaces with AI.
-- [The AI-Augmented Product Manager](https://matthieu.pm/writing/ai-product-manager): Guide to using AI for product discovery, decisions, and delivery.
+### Write the interface
 
-## Optional
+A practical guide to writing clear, useful, and consistent interface copy.
 
-- [HomeView](https://matthieu.pm/archive/homeview): Interactive home display concept and how it was built.
-- [Building, day by day](https://matthieu.pm/archive/building-day-by-day): A year of GitLab activity visualized as an interactive skyline.
-- [Sitemap](https://matthieu.pm/sitemap.xml): Index of website pages.
+https://matthieu.pm/writing/ux-writing
+
+## Archive
+
+### HomeView
+
+An interactive home display concept, and how it was built.
+
+https://matthieu.pm/archive/homeview
+
+### Building, day by day
+
+A year of GitLab activity, drawn as an interactive skyline.
+
+https://matthieu.pm/archive/building-day-by-day
+
+## Let's talk
+
+I'm open to product opportunities where I can bring together strategy, design, growth, and AI.
+
+ mattduchatellier@gmail.com [Get in touch](<mailto:mattduchatellier@gmail.com>)
+
+ ![Matthieu Duchatellier signature](<https://matthieu.pm/_next/image?url=%2Fimages%2Fsignature-matthieu.webp&w=640&q=75>)
+
+---
+
+# Building, day by day
+
+Source: https://matthieu.pm/archive/building-day-by-day
+
+Archive · Activity
+
+# Building, day by day
+
+A year of contributions, one day at a time.
+
+My GitLab activity as an interactive skyline. Switch between the calendar and 3D views, and explore each day’s contributions.
+
+## GitLab activity
+
+[GitLab](<https://gitlab.com/wondertale-dev>)
+
+###  1,773  contributions in the last year
+
+ Hover a day for details · arrow keys to explore  Drag to orbit · double-click to reset 
+
+ Less  More 
+
+[Back to Archive](<https://matthieu.pm/#archive-title>) Matthieu Duchatellier
+
+---
+
+# HomeView — a home display concept
+
+Source: https://matthieu.pm/archive/homeview
+
+Archive · Design study
+
+# HomeView
+
+A small display. A little more life at home.
+
+An Apple-inspired home display with a square screen, an aluminum enclosure, and a domed speaker base. A study in making a physical object feel tangible and usable in the browser.
+
+## Explore the concept
+
+ My Home ◔
+
+Living room
+
+ 21° 
+
+ Feels just right 
+
+−+
+
+ **Lights** 3 lights on  ♫**Music** A moment of calm 
+
+Choose a finish below the device. Swipe its screen, or focus the display and use the arrow keys, to explore Home, Music, and Clock. Try the lights, temperature controls, and music animation.
+
+## Start with the object
+
+The concept brings a few everyday actions into one quiet object: adjust the room temperature, switch the lights, or glance at the time. The music screen adds an animated player. These controls simulate the experience locally; they don’t connect to home devices or play audio.
+
+The hardware takes cues from Apple’s materials and proportions. This is an independent design study, unaffiliated with Apple, with model units rather than manufactured dimensions.
+
+## Build the form in code
+
+The device is drawn with SVG. A build script uses the Anatomy geometry kit to project 47 solids into a shared view: the rubber foot, speaker body, 36 curved grille segments, dome, hinge, and layered display. The speaker apertures follow the curved surface, while the bezel and glass share the display’s rounded outline.
+
+The script orders and audits the geometry, then saves the paths in a generated file. Next.js renders those paths on the server. The browser receives the finished shapes, so it doesn’t need to rebuild the hardware during an animation.
+
+SVG
+
+The enclosure, speaker, shadows, and material detail.
+
+HTML + CSS
+
+A live screen aligned to the same projected plane.
+
+React
+
+Screen navigation, finishes, and local control states.
+
+## Put a real interface on the screen
+
+The screen is HTML positioned over the SVG device with a shared transformation matrix. That keeps text and buttons interactive while matching the angle of the glass. It also avoids a WebKit rendering issue with layered HTML inside an SVG foreignObject.
+
+Swipes are translated from the pointer’s position into the screen’s own coordinates. The interface follows the drag, then settles onto a screen using distance and flick velocity. A little resistance at either end makes the boundary feel physical. Keyboard navigation offers the same three screens, and inactive screens are removed from the focus order.
+
+## Finish with the small details
+
+Four finishes change the material colors through CSS variables. The swatches sit outside the card so the object stays the focus. Moving the pointer shifts a soft reflection across the glass, the lights update their readout, and the clock uses the visitor’s local time.
+
+The device and screen scale together as the card gets smaller. Motion respects reduced-motion preferences, and the clock updates only while the concept is in view. The result pairs a fixed, detailed illustration with a small layer of live behavior.
+
+[Back to Archive](<https://matthieu.pm/#archive-title>) Matthieu Duchatellier
+
+---
+
+# OKLCH Color Guide: Lightness, Chroma, Hue & CSS
+
+Source: https://matthieu.pm/oklch
+
+[Buy me a coffee](<https://ko-fi.com/jakubkrehel>)[Contact](<mailto:jakub@kbo.sk>)[X (Twitter)](<https://x.com/jakubkrehel>)
+
+# OKLCH: a clearer way to work with color
+
+Get a feel for lightness, chroma, and hue with interactive examples. See how OKLCH helps you build balanced palettes and work with color in CSS.
+
+[Create](<https://oklch.fyi/create>)[Explore](<https://oklch.fyi/color-palettes>)
+
+## Understanding OKLCH
+
+OKLCH describes a color with three values: lightness (L), chroma (C), and hue (H). These values aim to follow how we perceive color, making visual adjustments more predictable. You can use them directly in CSS with `oklch()`.
+
+## Different ways to describe color
+
+To see what makes OKLCH useful, start with two ideas: how a color is described and which colors a display can reproduce.
+
+A color model expresses color as a set of values. You may already work with RGB, HSL, LCH, or OKLCH. Each gives you a different set of controls, which shapes how you choose and adjust colors.
+
+ oklch(0.55 0.18 260)  hsl(220 100% 50%)  rgb(0, 128, 255)  lch(60% 60 260)  lab(50 -10 -50)  color(xyz 0.18 0.19 0.6)  #1E90FF 
+
+## Which colors can a display show?
+
+A gamut is a range of reproducible colors. Two common examples are sRGB, the familiar baseline for web content, and Display-P3, which reaches more vivid colors on compatible screens.
+
+![Gamut](<https://matthieu.pm/oklch/color-wheel.avif>)
+
+ Display-P3 
+
+ sRGB 
+
+[CIE 1931 xy chromaticity diagram](<https://en.wikipedia.org/wiki/CIE_1931_color_space>)
+
+A color space specifies more than this range. It also defines details such as its white point and how encoded values relate to light, known as its transfer function.
+
+## Reading an OKLCH value
+
+OKLCH and LCH both use lightness, chroma, and hue. Their values come from different underlying color spaces. OKLCH is the cylindrical form of [Oklab](<https://en.wikipedia.org/wiki/Oklab_color_space>).
+
+Lightness: how light or dark a color appears. Use a number from 0 to 1, or a percentage from 0% to 100%.
+
+Chroma: how colorful a color is. Zero gives you a neutral gray; higher values increase its intensity.
+
+Hue: the color’s position around a circle, expressed as an angle. A full turn is 360 degrees, bringing you back to the starting hue.
+
+ oklch (
+
+ 0.5 
+
+ Lightness 
+
+ 0.2 
+
+ Chroma 
+
+ 40 
+
+ Hue 
+
+)
+
+## Balancing colors across a palette
+
+Imagine a set of buttons in different colors. You want each to carry a similar visual weight, but matching them by eye can take several rounds of adjustment.
+
+With OKLCH, start with a shared lightness and chroma, then vary the hue. The resulting colors tend to feel more balanced, giving you a useful starting point for a palette.
+
+oklch
+
+oklch
+
+oklch
+
+oklch
+
+hsl
+
+hsl
+
+hsl
+
+hsl
+
+oklch(0.50 0.16 30)
+
+oklch(0.50 0.16 150)
+
+oklch(0.50 0.16 250)
+
+oklch(0.50 0.16 320)
+
+hsl(30 100% 50%)
+
+hsl(150 100% 50%)
+
+hsl(250 100% 50%)
+
+hsl(320 100% 50%)
+
+ Lightness
+
+50% 50
+
+Try the same approach in HSL. As the comparison shows, equal lightness values do not necessarily look equally light. Some hues stand out much more than others.
+
+That perceptual consistency is a practical reason to choose OKLCH. It reduces the guesswork involved in building a palette whose colors feel related.
+
+## Building a range of shades
+
+To build lighter and darker shades of a color, adjust lightness while keeping hue and chroma fixed. Within the available gamut, this helps preserve the color’s character across the range.
+
+OKLCH
+
+OKLCH
+
+HSL
+
+HSL
+
+Compare the two blue scales above. The OKLCH scale keeps a more consistent sense of blue, while the HSL scale shows more variation in how the hue and intensity appear as the shades get lighter or darker.
+
+## How gradients travel between colors
+
+A gradient’s intermediate colors depend on the color space used to mix its endpoints. An OKLCH gradient can look quite different from an RGB gradient, where mixing red, green, and blue channels can produce a dull midpoint or uneven lightness.
+
+ srgb 
+
+ oklab 
+
+ oklch 
+
+In OKLCH, interpolation changes lightness, chroma, and hue. The comparison uses identical endpoints, so any difference you see comes from the route between them.
+
+ Yellow  Blue  Green  Red 
+
+OKLCH
+
+OKLAB & SRGB
+
+That route may pass through hues you did not expect. In OKLCH, hue follows a circle, so moving between two colors can introduce a whole sequence of hues along the way.
+
+For a different result, try interpolating in Oklab. It takes a straight path through its color coordinates instead of following the hue circle, which can make the transition easier to anticipate.
+
+## Going beyond sRGB
+
+Some screens can reproduce colors beyond the sRGB range. With OKLCH, you can specify these wider-gamut colors too, including those available on Display-P3 screens.
+
+ sRGB 
+
+ Display-P3 
+
+On a Display-P3 screen, the swatches on the right can look more vivid. On an sRGB screen, the two sets may appear almost the same because the browser has to bring unsupported colors into the display’s range.
+
+The wider gamut adds room for more colorful shades. Neutral grays do not gain extra intensity in Display-P3.
+
+## Finding the chroma limit
+
+OKLCH values can describe colors beyond a display’s capabilities. Valid CSS does not guarantee that a color fits inside sRGB or Display-P3.
+
+Consider `oklch(0.7 0.4 40)`. Its chroma of 0.4 places it outside both sRGB and Display-P3 at this lightness and hue.
+
+The browser must bring an unsupported color into the available gamut through clipping or gamut mapping. What you see is a representable substitute.
+
+```
+@layer base {
+  :root {
+    color: oklch(0.7 0.4 40);
+  }
+}
+```
+
+This adjustment can change the appearance you intended. Checking the gamut helps you spot those changes before relying on a color in your design.
+
+Maximum chroma is the highest chroma that fits within a chosen gamut for a given lightness and hue. Change any of those conditions and the limit changes too.
+
+65
+
+ The solid line is sRGB, the dashed line is Display P3. 
+
+The colored band runs through the hues at a single lightness. Each line shows a gamut’s chroma limit; values above it need to be mapped or clipped. Adjust lightness to see how those limits shift.
+
+## Using OKLCH with CSS fallbacks
+
+OKLCH is defined in [CSS Color Module Level 4](<https://www.w3.org/TR/css-color-4/>). For environments that do not recognize the syntax, provide a fallback color.
+
+Start with an sRGB color, then add your OKLCH value inside an `@supports` rule. This lets the browser select the version it understands.
+
+```
+@layer base {
+  :root {
+    /* sRGB hex */
+    --color-gray-50: #fcfcfc;
+    --color-gray-100: #f9f9f9;
+    --color-gray-200: #f0f0f0;
+ 
+    @supports (color: oklch(0 0 0)) {
+      /* OKLCH */
+      --color-gray-50: oklch(0.991 0 0);
+      --color-gray-100: oklch(0.982 0 0);
+      --color-gray-200: oklch(0.955 0 0);
+    }
+  }
+}
+```
+
+Browsers that pass the feature check apply OKLCH; the others keep the sRGB fallback. The notation itself does not make a color more vivid. An OKLCH color within sRGB looks the same as its equivalent hex value.
+
+ ![Matthieu Duchatellier signature](<https://matthieu.pm/_next/image?url=%2Fimages%2Fsignature-matthieu.webp&w=640&q=75>)
+
+---
+
+# My collection — Matthieu Duchatellier
+
+Source: https://matthieu.pm/inspirations
+
+# My collection
+
+A collection of inspiring interfaces, component libraries, AI tools, and resources for bringing ideas to life.
+
+## My stack
+
+- [Figma](<https://figma.com/>): Collaborative interface design and prototyping platform.
+- [tldraw](<https://tldraw.com/>): Infinite whiteboard and canvas SDK.
+- [Aside browser](<https://aside.com/>): A browser with an AI assistant for working across websites.
+- [Maze](<https://maze.co/>): User research and usability testing platform.
+- [PostHog](<https://posthog.com/>): Product analytics, session replay, and experimentation tools.
+- [Linear](<https://linear.app/>): Project management software setting speed standards.
+- [Codex](<https://openai.com/codex/>): OpenAI coding agent for building, debugging, and reviewing code.
+- [Ghostty](<https://ghostty.org/>): Fast GPU-accelerated terminal emulator for developers.
+- [GitLab](<https://about.gitlab.com/>): Git repositories, code review, and continuous integration.
+- [Bun](<https://bun.com/>): JavaScript runtime, package manager, bundler, and test runner.
+- [TypeScript](<https://www.typescriptlang.org/>): JavaScript with syntax for types.
+- [Next.js](<https://nextjs.org/>): A React framework for building web applications.
+- [TanStack](<https://tanstack.com/>): Open-source libraries for building web applications.
+- [shadcn/ui](<https://ui.shadcn.com/>): Components you copy directly into codebases.
+- [NeonDB](<https://neon.com/>): Serverless Postgres with database branching and autoscaling.
+- [Convex](<https://www.convex.dev/>): Reactive backend with a database, TypeScript functions, and realtime sync.
+- [Vercel](<https://vercel.com/>): Cloud platform for deploying Next.js applications.
+- [Notion](<https://www.notion.com/>): A workspace for notes, documents, and projects.
+
+## Design Galleries
+
+Design galleries, interface patterns, and web inspiration.
+
+- [60fps](<https://60fps.design/>): Recordings of interfaces that move well.
+- [Awwwards](<https://www.awwwards.com/>): Awards celebrating exceptional digital web craft.
+- [Cosmos](<https://www.cosmos.so/>): Visual moodboarding and creative inspiration engine.
+- [Curated Design](<https://www.curated.design/>): Web design sorted by aesthetic style.
+- [Layers](<https://layers.to/>): Platform for sharing design work publicly.
+- [Minimal Gallery](<https://minimal.gallery/>): Showcase of minimal and restrained websites.
+- [Mobbin](<https://mobbin.com/>): Real mobile and web product flows.
+- [Saaspo](<https://www.saaspo.com/>): Curated SaaS landing page designs.
+- [SEESAW](<https://www.seesaw.website/>): Design inspiration organized by page section.
+- [Supahero](<https://supahero.io/>): Curated collection of website hero sections.
+- [Imageory](<https://www.imageory.in/>): Visual gallery pairing images with prompts.
+- [Backgrounds Supply](<https://backgrounds.supply/>): Handcrafted website backgrounds ready to use.
+- [Venust Backgrounds](<https://backgrounds.venust.ai/>): Free AI-generated backgrounds with original prompts.
+- [Details](<https://www.details.so/>): Micro-interaction analysis of top digital products.
+- [Sombra](<https://sombra.design/>): Showcase of dark-mode website interfaces.
+- [Dribbble](<https://dribbble.com/>): Global community sharing design concepts.
+- [Behance](<https://www.behance.net/>): Adobe showcase for creative portfolios.
+- [Recent Design](<https://recent.design/>): Weekly selection of award-worthy websites.
+- [navbar.design](<https://navbar.design/>): Curated gallery of navigation bar patterns.
+- [footer.design](<https://footer.design/>): Curated gallery of creative website footers.
+- [Land-book](<https://land-book.com/>): Landing pages organized by industry.
+- [Collect UI](<https://collectui.com/>): Daily UI inspiration tagged by component.
+- [SiteInspire](<https://www.siteinspire.com/>): Showcase of fine web design craft.
+- [Lapa Ninja](<https://www.lapa.ninja/>): Curated gallery of responsive landing pages.
+- [UX Archive](<https://uxarchive.com/>): Historical archive of mobile onboarding flows.
+- [Screenlane](<https://screenlane.com/>): Searchable gallery of interface screens.
+- [Flowbase](<https://www.flowbase.co/>): Premium UI components and interaction patterns.
+- [Hover States](<https://hoverstat.es/>): Showcase of innovative interactive web design.
+- [SaaSFrame](<https://www.saasframe.io/>): Hundreds of SaaS marketing page screenshots.
+- [Landingfolio](<https://www.landingfolio.com/>): Extensive library of landing page designs.
+- [Pttrns](<https://pttrns.com/>): Directory of mobile user interface patterns.
+- [One Page Love](<https://onepagelove.com/>): Showcase of single-page website designs.
+- [Designspiration](<https://www.designspiration.com/>): Creative search platform for visual art.
+- [Best Website Gallery](<https://bestwebsite.gallery/>): Curated archive of exceptional websites.
+- [Inspiration Grid](<https://theinspirationgrid.com/>): Online magazine celebrating creative visual design.
+- [Scrnshts](<https://scrnshts.club/>): Curated App Store screenshot designs.
+- [Are.na](<https://www.are.na/>): Collaborative research and visual bookmarking platform.
+- [Appinspo](<https://www.appinspo.com/>): Curated mobile application design gallery.
+- [Dark Mode Design](<https://www.darkmodedesign.com/>): Showcase celebrating dark-mode websites.
+- [Pinterest](<https://www.pinterest.com/>): Visual discovery engine for creative ideas.
+- [navbar.gallery](<https://navbar.gallery/>): Focused collection of modern navigation bars.
+- [posts.design](<https://posts.design/>): Curated social media graphic design archive.
+- [loadmo.re](<https://loadmo.re/>): Gallery of experimental mobile website designs.
+- [inspora.design](<https://www.inspora.design/>): Archive of contemporary visual web design.
+- [cta.gallery](<https://cta.gallery/>): Curated call-to-action button and banner designs.
+- [desengs.com](<https://desengs.com/>): Directory of design engineering portfolios and lore.
+- [isthereanytool](<https://isthereanytool.app/>): Directory of lesser-known design, craft, and AI tools.
+- [designeng.tools](<https://designeng.tools/>): Curated design engineering tools, resources, and inspiration.
+- [bestdesignsonx.com](<https://bestdesignsonx.com/>): Curated design-forward creators and posts on X.
+- [Design Bookmark](<https://designbookmark.com/>): Directory of design resources and links.
+- [Rebrand Gallery](<https://rebrand.gallery/>): Brand redesigns compared before and after.
+- [Curations](<https://curations.supply/>): Library of curated digital design assets.
+- [Landing Love](<https://landing.love/>): Delightful landing pages organized by animation.
+- [Motionimo](<https://motionimo.xyz/>): Extensive library of motion design clips.
+- [before.click](<https://before.click/>): Showcase of high-converting app screenshot concepts.
+- [Swiped](<https://swiped.design/>): Standout design posts from social platforms.
+- [Landdding](<https://landdding.com/>): Daily catalogue of creative landing pages.
+- [designengineer.tools](<https://designengineer.tools/>): Essential tools tailored for design engineers.
+- [Insposite](<https://www.insposite.com/>): Directory of design references and tools.
+- [Loader Buttons](<https://loader-buttons.appllama.io/>): Gallery of 25 loading button animations.
+- [What Ships](<https://whatships.com/>): Standout product launch demo videos on X.
+- [GreatStuff](<https://greatstuff.fyi/>): Carefully vetted archive of creative tools.
+- [Great Apps](<https://greatapps.fyi/>): Weekly gallery highlighting exceptional iOS apps.
+- [Curated Domains](<https://curated.domains/>): Brands using creative top-level domain names.
+- [Sections.wtf](<https://sections.wtf/>): Real-world website section and hero gallery.
+- [Browse.cool](<https://browse.cool/>): Websites chosen for exceptional tactile feel.
+- [Folios Gallery](<https://folios.gallery/>): Selective directory of outstanding designer portfolios.
+- [wwwtf.site](<https://wwwtf.site/>): Quirky and experimental interactive web corners.
+- [Early](<https://www.early.tools/>): Discovery platform for early-stage software products.
+- [OpenAlternative](<https://openalternative.co/>): Open-source alternatives to popular SaaS tools.
+- [Everywhere Tools](<https://everywhere.tools/>): Open-source creative tools for design craft.
+- [Toolfolio](<https://toolfolio.com/>): Curated directory of design, AI, and developer tools.
+- [Jessy In's Gallery](<https://gallery.jessyin.world/>): Collaborative moodboard of unique visual finds.
+- [Wall of Portfolios](<https://www.wallofportfolios.in/>): Design engineering and product portfolio showcases.
+- [Detail Design](<https://detail.design/>): Archive of thoughtful software micro-interactions.
+- [Betwn Studios](<https://betwnstudios.com/>): Studio crafting modern SaaS web experiences.
+- [SaaS Landing Page](<https://saaslandingpage.com/>): Showcase of top SaaS landing pages.
+- [Best SaaS Web Designs](<https://bestsaaswebdesigns.com/>): Curated inspiration gallery of SaaS website design.
+- [A1](<https://www.a1.gallery/>): Website design inspiration gallery.
+- [UIBook](<https://uibook.art/>): Real web pages and sections, curated with taste.
+- [Dev Chauhan](<https://devchauhan.in/>): Frontend developer from India building
+- [Godly](<https://godly.design/>): Godly is a curated gallery of the best designs.
+- [Herogrids](<https://herogrids.com/>): Curated Collection of Hero Section Designs
+- [MaxiBestOf](<https://maxibestof.one/>): Websites, sections and fonts inspiration
+- [Nicelydone](<https://nicelydone.club>): The largest SaaS design inspiration library
+- [Crafio](<https://crafio.app/>): Build with AI. We handle backend. You create. 🌱
+- [BrandCenter Gallery](<https://brandcenter.gallery/>): Brand guidelines and brand portal examples
+- [Page Flows](<https://pageflows.com/>): Recorded user flows and interaction patterns from real products.
+
+## Interface Design
+
+Interface design canvases, tokens, and layout systems.
+
+- [Figma](<https://figma.com/>): Collaborative interface design and prototyping platform.
+- [Paper](<https://paper.design/>): HTML and CSS design canvas with AI agent integration.
+- [Framer](<https://framer.com/>): Visual canvas designing and publishing websites.
+- [make.design](<https://make.design/>): AI generator turning prompts into polished designs.
+- [Penpot](<https://penpot.app/>): Open-source web design platform supporting SVG.
+- [Spline](<https://spline.design/>): Browser-based 3D design software with physics.
+- [Interface Craft](<https://www.interfacecraft.dev/>): Articles exploring modern digital interface craftsmanship.
+- [UI Labs](<https://www.uilabs.dev/>): Laboratory deconstructing animated UI components.
+- [UIWTF](<https://uiw.tf/>): Showcase of experimental web interface patterns.
+- [Lab01](<https://lab01.dev/>): Refined UI experiments from a studio.
+- [design.dev](<https://design.dev/>): AI-assisted design token and system editor.
+- [UI Playbook](<https://uiplaybook.dev/>): Guide to common UI component states.
+- [Dessn](<https://www.dessn.com/>): Collaborative design canvas built from your production codebase.
+- [Sketch](<https://www.sketch.com/>): Mac design workspace for interfaces, prototypes, and collaboration.
+
+## Reading
+
+Essential books, design engineering essays, and craft tutorials.
+
+- [Refactoring UI](<https://refactoringui.com/>): Practical design guide for building interfaces.
+- [Practical Typography](<https://practicaltypography.com/>): Essential book covering typographic rules and layout.
+- [web.dev](<https://web.dev/>): Guidance on web performance and modern standards.
+- [Inclusive Components](<https://inclusive-components.design/>): Pattern library teaching accessible component design.
+- [Josh Comeau](<https://joshwcomeau.com/>): Interactive tutorials breaking down CSS mechanics.
+- [Design Books](<https://design-books.com/>): Directory of essential design literature by discipline.
+- [Learn Kernels](<https://learn-kernels.com/>): Interactive guide exploring GPU kernel programming.
+- [Design System Checklist](<https://designsystemchecklist.com/>): Comprehensive checklist for production design systems.
+- [Learn UI](<https://learn-ui.com/>): Video course teaching practical user interface design.
+- [Design Spells](<https://designspells.com/>): Dissecting subtle design details in software.
+- [Good UI](<https://goodui.org/>): Evidence-based UI design patterns and data.
+- [Abduzeedo](<https://abduzeedo.com/>): Daily design blog sharing visual inspiration.
+- [UX Collective](<https://uxdesign.cc/>): Curated publication sharing critical UX essays.
+- [Smashing Magazine](<https://www.smashingmagazine.com/>): Reliable resource for web designers and developers.
+- [Codrops](<https://tympanus.net/codrops/>): Blog publishing creative frontend experiments and tutorials.
+- [Muzli](<https://muz.li/>): Daily digest curating latest design trends.
+- [Boxes and Arrows](<https://boxesandarrows.com/>): Journal dedicated to information architecture craft.
+- [Designer News](<https://www.designernews.co/>): Community-driven news feed highlighting design stories.
+- [Web Designer Depot](<https://www.webdesignerdepot.com/>): Design publication covering web standards and tools.
+- [Designmodo](<https://designmodo.com/>): Articles and tools covering web design.
+- [99designs Discover](<https://99designs.com/discover>): Design blog exploring creative branding insights.
+- [Interfaces](<https://interfaces.dev/>): Monthly digital publication exploring digital interfaces.
+- [Making Software](<https://www.makingsoftware.com/>): Essays examining how tools shape design.
+- [Visual Rambling](<https://visualrambling.space/>): Personal visual essays exploring interface design.
+- [Degreeless Design](<https://www.degreeless.design/>): Curated roadmap for mastering product design.
+- [SVG Guide](<https://www.svg.guide/>): Guide to mastering SVG markup and animations.
+- [Animations.dev](<https://www.animations.dev/>): Course on creating web animations that feel right.
+- [UI Skills](<https://ui-skills.com/>): Course teaching techniques for designing with AI.
+- [AI for UI](<https://aiforui.dev/>): Course teaching AI workflows for interfaces.
+- [UI Land](<https://ui.land/>): Interviews with leading design engineers on craft.
+- [Laws of UX](<https://lawsofux.com/>): Psychological principles that influence interface usability.
+- [User Interface Wiki](<https://userinterface.wiki/>): Knowledge base documenting interface guidelines and rules.
+- [The Shape of AI](<https://www.shapeof.ai/>): Pattern library highlighting AI interface design.
+- [MDN Web Docs](<https://developer.mozilla.org/en-US/>): Reference documentation and guides for HTML, CSS, and JavaScript.
+
+---
+
+# Components — My collection — Matthieu Duchatellier
+
+Source: https://matthieu.pm/inspirations/components
+
+# My collection
+
+A collection of inspiring interfaces, component libraries, AI tools, and resources for bringing ideas to life.
+
+## My stack
+
+- [Figma](<https://figma.com/>): Collaborative interface design and prototyping platform.
+- [tldraw](<https://tldraw.com/>): Infinite whiteboard and canvas SDK.
+- [Aside browser](<https://aside.com/>): A browser with an AI assistant for working across websites.
+- [Maze](<https://maze.co/>): User research and usability testing platform.
+- [PostHog](<https://posthog.com/>): Product analytics, session replay, and experimentation tools.
+- [Linear](<https://linear.app/>): Project management software setting speed standards.
+- [Codex](<https://openai.com/codex/>): OpenAI coding agent for building, debugging, and reviewing code.
+- [Ghostty](<https://ghostty.org/>): Fast GPU-accelerated terminal emulator for developers.
+- [GitLab](<https://about.gitlab.com/>): Git repositories, code review, and continuous integration.
+- [Bun](<https://bun.com/>): JavaScript runtime, package manager, bundler, and test runner.
+- [TypeScript](<https://www.typescriptlang.org/>): JavaScript with syntax for types.
+- [Next.js](<https://nextjs.org/>): A React framework for building web applications.
+- [TanStack](<https://tanstack.com/>): Open-source libraries for building web applications.
+- [shadcn/ui](<https://ui.shadcn.com/>): Components you copy directly into codebases.
+- [NeonDB](<https://neon.com/>): Serverless Postgres with database branching and autoscaling.
+- [Convex](<https://www.convex.dev/>): Reactive backend with a database, TypeScript functions, and realtime sync.
+- [Vercel](<https://vercel.com/>): Cloud platform for deploying Next.js applications.
+- [Notion](<https://www.notion.com/>): A workspace for notes, documents, and projects.
+
+## Component Libraries
+
+Production UI primitives and accessible component libraries.
+
+- [ForgeUI](<https://forgeui.in/>): Animated React and Tailwind components and templates.
+- [RewampUI](<https://www.rewampui.com/>): Component showcase dashboard of ready-made UI.
+- [shadcn/ui](<https://ui.shadcn.com/>): Components you copy directly into codebases.
+- [Base UI](<https://base-ui.com/>): Unstyled component primitives from Radix and MUI.
+- [Radix](<https://www.radix-ui.com/>): Accessible unstyled UI primitives for React.
+- [21st.dev](<https://21st.dev/>): Community shadcn registry with interactive previews.
+- [Motion Primitives](<https://motion-primitives.com/>): Animated React components powered by Motion.
+- [React Bits](<https://reactbits.dev/>): Animated and creative components for React.
+- [Component Gallery](<https://component.gallery/>): Repository comparing design system components.
+- [NumberFlow](<https://number-flow.barvian.me/>): Smooth number transitions across modern frameworks.
+- [Fancy Components](<https://www.fancycomponents.dev/>): Playful React components with physics effects.
+- [Opensource UI](<https://opensourceui.in/>): Copy-paste React UI and device mockups.
+- [Spectrum UI](<https://ui.spectrumhq.in/>): Polished components designed for SaaS websites.
+- [Amicro](<https://amicro.vercel.app/>): Lightweight drop-in React micro-animation primitives.
+- [Painterly](<https://painterly.design-tools.workers.dev/>): Artistic canvas loader components for React.
+- [Bencho](<https://bencho.dev/>): Interactive UI blocks with adjustable physics.
+- [shadcnblocks](<https://www.shadcnblocks.com/>): Thousands of clean shadcn website blocks.
+- [blocks.so](<https://blocks.so/>): Open-source website blocks installable via CLI.
+- [8bitcn](<https://8bitcn.com/>): Retro 8-bit components for shadcn projects.
+- [Evil Charts](<https://evilcharts.com/>): Animated SVG charts designed for shadcn/ui.
+- [coss ui](<https://coss.com/ui>): Copy-paste components built on Base UI.
+- [Rare UI](<https://rareui.com/>): Unique animated UI components for React.
+- [beUI](<https://beui.dev/>): Animated React components with Tailwind CSS.
+- [Butter Nav](<https://butter-nav.vercel.app/>): Mega-menu featuring fluid layout morphing transitions.
+- [Cult UI](<https://www.cult-ui.com/>): Animated React components with Framer Motion.
+- [daisyUI](<https://daisyui.com/>): Component class library for Tailwind CSS.
+- [HeroUI](<https://www.heroui.com/>): Modern React UI library, formerly NextUI.
+- [Kibo UI](<https://www.kibo-ui.com/>): Component registry tailored for AI interfaces.
+- [Magic UI](<https://magicui.design/>): Animated components crafted for landing pages.
+- [Aceternity UI](<https://ui.aceternity.com/>): Trendy animated components and hero sections.
+- [Animate UI](<https://animate-ui.com/>): Accessible shadcn components animated with Motion.
+- [FlyonUI](<https://flyonui.com/>): Semantic Tailwind CSS components ready for v4.
+- [TailGrids](<https://tailgrids.com/>): Responsive UI blocks designed for Tailwind.
+- [Flowbite](<https://flowbite.com/>): Extensive component library for Tailwind CSS.
+- [HyperUI](<https://www.hyperui.dev/>): Free open-source Tailwind CSS UI components.
+- [Preline UI](<https://preline.co/>): Tailwind CSS components for complex dashboards.
+- [Float UI](<https://floatui.com/>): Tailwind components crafted for marketing websites.
+- [Meraki UI](<https://merakiui.com/>): Tailwind components with right-to-left language support.
+- [Tremor](<https://tremor.so/>): Modular React library for building dashboards.
+- [Headless UI](<https://headlessui.com/>): Unstyled accessible components from Tailwind Labs.
+- [Base CN](<https://basecn.dev/>): Base UI primitives adapted for shadcn.
+- [Easy UI](<https://easyui.pro/>): Copy-paste component library for rapid building.
+- [Eldora UI](<https://eldoraui.site/>): Animated components tailored for web landings.
+- [Velora UI](<https://velora.colorlib.com/>): Free Tailwind CSS components and sections.
+- [Watermelon UI](<https://watermelon.sh/>): React component library for shadcn ecosystem.
+- [Beautiful UI](<https://beautifului.dev/>): Polished copy-paste components for web applications.
+- [Hexter UI](<https://hexter-ui.com/>): Clean component collection for shadcn projects.
+- [Lightswind](<https://lightswind.com/>): Tailwind components featuring lighting and glows.
+- [Reverse UI](<https://reverseui.com/>): Tailwind and React component library.
+- [Smooth UI](<https://smoothui.dev/>): Motion-heavy React components ready to copy.
+- [Tailark](<https://tailark.com/>): Tailwind sections and components for marketing.
+- [UI Layouts](<https://ui-layouts.com/>): Full-page layouts and heroes for Tailwind.
+- [Kokonut UI](<https://kokonutui.com/>): Creative interactive components for shadcn format.
+- [Nex UI](<https://nexui.dev/>): Extensible component library for modern startups.
+- [Ninja UI](<https://ninna-ui.dev/>): Lightweight UI components for fast websites.
+- [Sera UI](<https://seraui.com/>): React components designed for shadcn CLI.
+- [Re UI](<https://reui.io/>): Accessible UI components using Base UI.
+- [Syntax UI](<https://syntaxui.com/>): Animated copy-paste components for landing pages.
+- [shadcn-cssinjs](<https://www.shadcn-cssinjs.com/>): shadcn components adapted for CSS-in-JS.
+- [Transitions](<https://transitions.dev/>): Curated CSS transition recipes and easings.
+- [23rd](<https://23rd.dev/>): shadcn components for React and Svelte.
+- [Oneko](<https://oneko.dhrv.pw/>): Pixel cat companion that chases cursor.
+- [Rolling Number](<https://rolling.kitlangton.dev/>): Smooth digit-rolling number counter for React.
+- [Annnimate](<https://annnimate.com/>): GSAP motion components ready for production.
+- [GetLayers](<https://getlayers.ai/>): AI prompts for cinematic page sections.
+- [Scritto](<https://scrit.to/>): Rolling character text transition component library.
+- [ogimagecn](<https://www.ogimagecn.com/>): Open Graph image components using Satori.
+- [Dither Kit](<https://www.tripwire.sh/dither-kit>): Dithered chart components with retro aesthetic.
+- [shieldcn](<https://shieldcn.dev/>): README badges styled with shadcn aesthetics.
+- [unlumen UI](<https://ui.unlumen.com/>): Minimalist React component library with CLI.
+- [Bearnie](<https://bearnie.dev/>): Astro and Tailwind component collection.
+- [Fluid Functionalism](<https://www.fluidfunctionalism.com/>): Components designed with purposeful physical animation.
+- [termcn](<https://termcn.dev/>): Terminal UI components for React, built on Ink and OpenTUI.
+- [framecn](<https://framecn.dev/>): Video rendering components for React, built on Editframe.
+- [emailcn](<https://emailcn.run/>): Responsive email components for React Email, MJML, and JSX Email.
+- [startercn](<https://startercn.vercel.app/>): shadcn/ui registry template with docs, landing page, and agent support.
+- [pdfcn](<https://pdfcn.dev/>): PDF components for React, built on Takumi and Forme.
+- [editorcn](<https://editorcn.vercel.app/>): Rich text editor components for React, built on Tiptap.
+- [Shadcn Labs](<https://www.shadcn-labs.com/>): Open-source shadcn/ui component registries and tools ecosystem.
+- [Frameblox](<https://frameblox.com/>): Modular Framer sections and templates.
+- [Nexvyn UI](<https://ui.nexvyn.dev/>): Polished drop-in components for digital interfaces.
+- [Gradient Spin](<https://gradient-spin.vercel.app/>): Spinning gradient loading indicator for React.
+- [Libraries.dev](<https://libraries.dev/>): UI effects and components for agents.
+- [Sona UI](<https://www.sonaui.com/>): Animated React components you fully own.
+- [Colorion Text Effects](<https://text-effects.colorion.co/>): Animated text effects ready to copy.
+- [Dot Matrix](<https://dotmatrix.zzzzshawn.cloud/>): Over fifty dot-matrix loaders for shadcn.
+- [SRCL](<https://www.sacred.computer/>): Retro DOS-style terminal component kit.
+- [Prompt Kit](<https://www.prompt-kit.com/>): Chat and AI interface component primitives.
+- [Shoogle](<https://shoogle.dev/>): Search engine spanning shadcn component registries.
+- [interior.dev](<https://www.interior.dev/>): Micro-interactions finely tuned for click responsiveness.
+- [soundcn](<https://soundcn.xyz/>): Collection of copy-paste UI sound effects.
+- [cuelume](<https://cuelume.dev/>): Micro interface sounds generated with Web Audio.
+- [Canvas UI](<https://canvasui.dev/>): GPU-accelerated liquid physics and canvas shaders.
+- [Odyssey UI](<https://www.odysseyui.com/>): Animated React components built on shadcn.
+- [Spell UI](<https://spell.sh/>): High-craft interactive components for modern apps.
+- [Skiper UI](<https://skiper-ui.com/>): Animated UI primitives for Tailwind CSS.
+- [devl](<https://www.devl.dev/>): Minimalist experimental UI components for web.
+- [Uiuno](<https://uiuno.com/>): AI workspace for organizing shadcn components.
+- [Vengeance UI](<https://www.vengeanceui.com/>): Animated React components with scroll interactions.
+- [sensory-ui](<https://www.sensory-ui.com/>): Sound design system for shadcn/ui components.
+- [Amacro](<https://amacro.vercel.app/>): Drop-in page reveal animations for React.
+- [Evil Buttons](<https://www.evilbuttons.com/>): Interactive and tactile button components.
+- [Componentry](<https://componentry.dev/>): Customizable React UI primitives and components.
+- [Great UI](<https://www.great-ui.com/>): Copy-paste React and Tailwind CSS components.
+- [Ruru UI](<https://ui.ruru.build/>): Accessible customizable UI components for React.
+- [Shadcn Studio](<https://shadcnstudio.com/>): shadcn/ui components, blocks, and templates.
+- [Animated shadcn/ui](<https://shadcn-animated.vercel.app/>): Motion-powered variants of shadcn/ui components.
+- [Pin UI](<https://www.pinui.xyz/>): Distinctive copy-paste React and Tailwind components.
+- [loading.dev](<https://loading.dev/>): Lightweight library of loading indicators for React.
+- [UICapsule](<https://www.uicapsule.com/>): A curated collection of components that spark joy
+- [Space UI](<https://www.spaceui.one>): Ship your ideas faster with better UI
+- [PaceUI](<https://paceui.com>): Production-ready React UI for React Apps
+- [BoardUI](<https://www.boardui.com/>): Build agentic products and data-rich dashboards
+- [Toolcraft](<https://toolcraft.sh/>): Build custom design apps with AI.
+- [Animata](<https://animata.design>): Ship stunning UI faster with Ship stunning UI
+- [NoiceSS](<https://noicess.fun>): Create stunning, beautiful screenshot mockups
+- [Blueprint](<https://designsystem-generator-bbs.vercel.app/>): A starter design system kit from your brand
+- [Chirag Gadhvi](<https://chiraggadhvi.in/>): Software and AI Engineer
+- [1iad - One Interaction a Day](<https://1iad.com/>): A growing collection of animated React components.
+- [Flowcub - Free & Premium Website Templates](<https://flowcub.com>): Ready-to-Customize Webflow & Framer Templates
+- [React Aria](<https://react-aria.adobe.com/>): Accessible, unstyled React components and interaction primitives.
+- [Mantine](<https://mantine.dev/>): React components and hooks for building complete web interfaces.
+- [AI Elements](<https://elements.ai-sdk.dev/>): Customizable React components for chat and agent interfaces.
+
+## Motion
+
+Animation timing, spring physics, and motion libraries.
+
+- [Motion](<https://motion.dev/>): Production-ready animation library for React applications.
+- [GSAP](<https://gsap.com/>): Industry-standard JavaScript timeline animation engine.
+- [Rive](<https://rive.app/>): Interactive state-machine vector animation tool.
+- [Lottie](<https://lottiefiles.com/>): Lightweight JSON-based vector animation format.
+- [Easing Wizard](<https://easingwizard.com/>): Visual generator for custom CSS springs.
+- [Morphrig](<https://morphrig.dev/>): Interactive manual on how icon morphing works.
+- [Theatre.js](<https://www.theatrejs.com/>): Visual motion design sequencer for DOM.
+- [morphicons](<https://www.morphicons.com/>): Spring-physics icon morphing animation library.
+- [glimm](<https://glimm.dev/>): Shader-driven page transitions for Next.js.
+- [Devouring Details](<https://devouringdetails.com/>): Interactive book teaching micro-interaction design.
+- [textmotion](<https://textmotion.dev/>): Zero-dependency text roll animation primitive.
+- [Bezel](<https://bezel-ui.vercel.app>): Bezel is a React component library for interface
+- [Lotiqlab](<https://Lotiqlab.com>): Free online Lottie editor and motion tool
+- [Anime.js](<https://animejs.com/>): JavaScript animation engine for motion, timelines, and SVG.
+
+---
+
+# Build — My collection — Matthieu Duchatellier
+
+Source: https://matthieu.pm/inspirations/build
+
+# My collection
+
+A collection of inspiring interfaces, component libraries, AI tools, and resources for bringing ideas to life.
+
+## My stack
+
+- [Figma](<https://figma.com/>): Collaborative interface design and prototyping platform.
+- [tldraw](<https://tldraw.com/>): Infinite whiteboard and canvas SDK.
+- [Aside browser](<https://aside.com/>): A browser with an AI assistant for working across websites.
+- [Maze](<https://maze.co/>): User research and usability testing platform.
+- [PostHog](<https://posthog.com/>): Product analytics, session replay, and experimentation tools.
+- [Linear](<https://linear.app/>): Project management software setting speed standards.
+- [Codex](<https://openai.com/codex/>): OpenAI coding agent for building, debugging, and reviewing code.
+- [Ghostty](<https://ghostty.org/>): Fast GPU-accelerated terminal emulator for developers.
+- [GitLab](<https://about.gitlab.com/>): Git repositories, code review, and continuous integration.
+- [Bun](<https://bun.com/>): JavaScript runtime, package manager, bundler, and test runner.
+- [TypeScript](<https://www.typescriptlang.org/>): JavaScript with syntax for types.
+- [Next.js](<https://nextjs.org/>): A React framework for building web applications.
+- [TanStack](<https://tanstack.com/>): Open-source libraries for building web applications.
+- [shadcn/ui](<https://ui.shadcn.com/>): Components you copy directly into codebases.
+- [NeonDB](<https://neon.com/>): Serverless Postgres with database branching and autoscaling.
+- [Convex](<https://www.convex.dev/>): Reactive backend with a database, TypeScript functions, and realtime sync.
+- [Vercel](<https://vercel.com/>): Cloud platform for deploying Next.js applications.
+- [Notion](<https://www.notion.com/>): A workspace for notes, documents, and projects.
+
+## Development
+
+Modern code editors, runtimes, and local tooling.
+
+- [Claude Code](<https://claude.com/claude-code>): Agentic coding tool inside your terminal.
+- [Codex](<https://openai.com/codex/>): OpenAI coding agent for building, debugging, and reviewing code.
+- [Cursor](<https://cursor.com/>): AI-first code editor for rapid development.
+- [Zed](<https://zed.dev/>): High-performance code editor built for low latency.
+- [v0](<https://v0.app/>): Generative AI translating prompts into shadcn code.
+- [Bolt.new](<https://bolt.new/>): In-browser development sandbox for full-stack applications.
+- [Vite](<https://vite.dev/>): Blazing fast frontend build and dev tool.
+- [Biome](<https://biomejs.dev/>): Fast Rust-based formatter and code linter.
+- [Playwright](<https://playwright.dev/>): Reliable browser automation and end-to-end testing.
+- [BuilderTools](<https://www.buildertools.sh/>): Focused developer tools for shipping software.
+- [nuqs](<https://nuqs.47ng.com/>): Type-safe URL search params for React.
+- [Better T Stack](<https://www.better-t-stack.dev/>): CLI scaffolding modern full-stack TypeScript setups.
+- [AI Stack](<https://github.com/alp82/aistack>): Directory comparing modern AI tech stacks.
+- [Alumnium](<https://alumnium.ai/>): Natural-language end-to-end testing via MCP.
+- [Vercel Doctor](<https://vercel-doctor.com/>): Diagnostic tool identifying Next.js performance bottlenecks.
+- [OSS Perks](<https://ossperks.com/>): Free cloud credits for open-source maintainers.
+- [Vinext](<https://vinext.dev/>): Vite plugin running Next.js on Cloudflare.
+- [evlog](<https://www.evlog.dev/>): Structured logging framework for web applications.
+- [@web-kits/audio](<https://audio.raphaelsalaja.com/>): Declarative sound library for web apps.
+- [Nue](<https://nuejs.org/>): Lightweight web framework alternative to React.
+- [Umami](<https://umami.is/>): Privacy-focused web analytics without cookie banners.
+- [Torph](<https://torph.lochie.me/>): Dependency-free text morphing animation library.
+- [x.ai/bot](<https://x.ai/bot>): Documentation detailing xAI web crawler specifications.
+- [Tracwell](<https://tracwell.app/>): Focused analytics tracking visitors and conversions.
+- [DialKit](<https://www.dialkit.dev/>): Floating interface toolbar for parameter tuning.
+- [FetchrLy](<https://fetchrly.co.in>): Your personal AI Agent for job hunting ;)
+- [Launch Shots](<https://launchshots.com/>): The App Store screenshots & ASO
+- [Dessn](<https://www.dessn.com/>): Collaborative design canvas built from your production codebase.
+- [eve](<https://eve.dev/>): Vercel’s open-source framework for building durable AI agents.
+- [Drizzle ORM](<https://orm.drizzle.team/>): Lightweight TypeScript ORM with SQL-like queries and schema migrations.
+- [TanStack Query](<https://tanstack.com/query/latest>): Async data fetching, caching, and synchronization for web apps.
+- [Zod](<https://zod.dev/>): TypeScript-first schema validation with inferred static types.
+- [Bun](<https://bun.sh/>): JavaScript runtime, package manager, bundler, and test runner.
+- [Vercel AI SDK](<https://ai-sdk.dev/>): TypeScript toolkit for AI apps, streaming responses, and agents.
+- [Bruno](<https://www.usebruno.com/>): Local API client with Git-friendly collections stored as files.
+- [affectUI](<https://www.affectui.com/>): Agent-ready React components, screens and blocks for AI products and SaaS. One file each, no dependencies – add them yourself or let Claude, Cursor or v0 do it.
+
+## Agents & MCP
+
+Coding agents, local MCP servers, and machine specs.
+
+- [Dray](<https://www.drayhq.com/>): Unified desktop workspace managing coding agents.
+- [Codex](<https://openai.com/codex/>): OpenAI coding agent for building, debugging, and reviewing code.
+- [Paper](<https://paper.design/>): HTML and CSS design canvas with AI agent integration.
+- [Refero](<https://styles.refero.design/>): Structured DESIGN.MD specifications for AI agents.
+- [designmd.me](<https://designmd.me/>): Generator creating machine-readable design specifications.
+- [Open Design](<https://open-design.ai/>): Standardized design systems formatted for agents.
+- [designmd.supply](<https://designmd.supply/>): DESIGN.MD templates to guide AI assistants.
+- [getdesign.md](<https://getdesign.md/>): Interactive generator producing AI design rules.
+- [Hyperbrowser Design.md](<https://design-md.hyperbrowser.ai/>): DESIGN.MD generator extracting rules from websites.
+- [Aura](<https://aura.build/>): Design system generator structuring AI guidelines.
+- [Neuform](<https://neuform.ai/>): AI-assisted interface design producing clean code.
+- [typeui.sh](<https://typeui.sh/>): Command-line tool scaffolding typed UI components.
+- [Webclaw](<https://webclaw.io/>): Converts any webpage into structured markdown.
+- [Ghostex](<https://ghostex.dev/>): Orchestrates multiple background coding agent sessions.
+- [is-agentic.com](<https://is-agentic.com/>): Scores how effectively websites support crawlers.
+- [Herdr](<https://herdr.dev/>): Distributed runner managing coding agent jobs.
+- [Soubi](<https://soubi.vercel.app/>): Compiler transforming agent skill definitions.
+- [agentcn](<https://agentcn.run/>): Customizable and production-ready AI agent recipes for React.
+- [skills](<https://www.skills.sh/shadcn-labs/skills>): Agent skills for shadcn registries and developer workflows.
+- [mcpcn](<https://mcpcn.dev/>): ChatGPT, Claude, and MCP app UI components for React.
+- [integrations.sh](<https://integrations.sh/>): Repository of API integration specifications for agents.
+- [fx](<https://fx.sh/>): High-performance coding agent CLI in Zig.
+- [HyperFrames](<https://www.hyperframes.dev/>): Headless HTML-to-MP4 video rendering engine.
+- [Foglamp](<https://www.foglamp.dev/>): Observability tool monitoring latency and costs.
+- [Distill](<https://distill.id/>): Intelligent agent organizing scattered research notes.
+- [Agentation](<https://www.agentation.com/>): Converts on-screen UI annotations into context.
+- [OpenCode](<https://opencode.ai/>): Open-source terminal AI coding agent.
+- [Impeccable](<https://impeccable.style/>): Design intelligence skill for AI agents.
+- [SkillSync](<https://skillsync.com/>): Synchronizes agent context across code editors.
+- [bb](<https://getbb.app/>): Open-source development environment for coding agents.
+- [Capacity](<https://capacity.so/>): Natural language workspace generating full-stack apps.
+- [Lafys](<https://lafys.com/>): Prompt-driven UI component generator for builders.
+- [Efecto](<https://efecto.app/>): Agent-first visual web canvas with MCP.
+- [Arc labs](<https://www.arclabs.space/>): AI career suite simulating technical interviews.
+- [Scira](<https://scira.ai/>): Minimalist open-source AI search engine.
+- [Kombai](<https://kombai.com/>): AI design engineer that codes UI from context.
+- [Causal](<https://causal.so/>): AI canvas workspace for notes and plans.
+- [Ciele](<https://ciele.app>): Build AI Teammates that answer from your knowledge
+- [eve](<https://eve.dev/>): Vercel’s open-source framework for building durable AI agents.
+- [Vercel AI SDK](<https://ai-sdk.dev/>): TypeScript toolkit for AI apps, streaming responses, and agents.
+- [Mastra](<https://mastra.ai/>): TypeScript framework for agents, workflows, memory, and evaluations.
+- [Context7](<https://context7.com/>): Up-to-date library documentation for coding agents via MCP.
+
+## Databases & Backends
+
+Managed databases, realtime backends, and serverless data infrastructure.
+
+- [Neon](<https://neon.com/>): Serverless Postgres with database branching and autoscaling.
+- [Convex](<https://www.convex.dev/>): Reactive backend with a database, TypeScript functions, and realtime sync.
+- [Supabase](<https://supabase.com/>): Postgres platform with authentication, storage, and realtime APIs.
+- [Turso](<https://turso.tech/>): SQLite-compatible databases for apps, agents, and embedded workloads.
+- [Upstash](<https://upstash.com/>): Serverless Redis, vector search, and search databases.
+
+## App Services
+
+Authentication, email delivery, and application monitoring.
+
+- [Clerk](<https://clerk.com/>): Authentication and user management with ready-made UI components.
+- [Better Auth](<https://better-auth.com/>): TypeScript authentication framework with sessions and extensible plugins.
+- [Resend](<https://resend.com/>): Email API for transactional messages and product notifications.
+- [Sentry](<https://sentry.io/>): Error tracking, performance monitoring, and session replay.
+
+## Deploy
+
+Hosting platforms, edge runtimes, and deployment infrastructure.
+
+- [Vercel](<https://vercel.com/>): Cloud platform for deploying Next.js applications.
+- [Cloudflare](<https://developers.cloudflare.com/workers/>): Global edge network running serverless Workers.
+- [Netlify](<https://netlify.com/>): Web platform providing continuous deployment pipelines.
+- [Railway](<https://railway.app/>): Simplified infrastructure platform for deploying databases.
+- [Fly.io](<https://fly.io/>): Runs Docker containers close to users.
+- [Render](<https://render.com/>): Cloud hosting for web apps, APIs, databases, and background workers.
+
+---
+
+# Visuals — My collection — Matthieu Duchatellier
+
+Source: https://matthieu.pm/inspirations/visuals
+
+# My collection
+
+A collection of inspiring interfaces, component libraries, AI tools, and resources for bringing ideas to life.
+
+## My stack
+
+- [Figma](<https://figma.com/>): Collaborative interface design and prototyping platform.
+- [tldraw](<https://tldraw.com/>): Infinite whiteboard and canvas SDK.
+- [Aside browser](<https://aside.com/>): A browser with an AI assistant for working across websites.
+- [Maze](<https://maze.co/>): User research and usability testing platform.
+- [PostHog](<https://posthog.com/>): Product analytics, session replay, and experimentation tools.
+- [Linear](<https://linear.app/>): Project management software setting speed standards.
+- [Codex](<https://openai.com/codex/>): OpenAI coding agent for building, debugging, and reviewing code.
+- [Ghostty](<https://ghostty.org/>): Fast GPU-accelerated terminal emulator for developers.
+- [GitLab](<https://about.gitlab.com/>): Git repositories, code review, and continuous integration.
+- [Bun](<https://bun.com/>): JavaScript runtime, package manager, bundler, and test runner.
+- [TypeScript](<https://www.typescriptlang.org/>): JavaScript with syntax for types.
+- [Next.js](<https://nextjs.org/>): A React framework for building web applications.
+- [TanStack](<https://tanstack.com/>): Open-source libraries for building web applications.
+- [shadcn/ui](<https://ui.shadcn.com/>): Components you copy directly into codebases.
+- [NeonDB](<https://neon.com/>): Serverless Postgres with database branching and autoscaling.
+- [Convex](<https://www.convex.dev/>): Reactive backend with a database, TypeScript functions, and realtime sync.
+- [Vercel](<https://vercel.com/>): Cloud platform for deploying Next.js applications.
+- [Notion](<https://www.notion.com/>): A workspace for notes, documents, and projects.
+
+## Creative Tools & Assets
+
+Creative workflows, branding tools, and ready-made design assets.
+
+- [Figma Weave](<https://weave.figma.com/>): Formerly Weavy. AI image and video workflows on a node canvas.
+- [Envato](<https://elements.envato.com/>): Creative assets, templates, and AI image, video, and audio tools.
+- [Anymark](<https://anymark.co/>): Professional logos and branding for startups and online businesses.
+- [Recraft](<https://www.recraft.ai/>): AI image and vector generation with editing and brand controls.
+
+## Type
+
+Curated web typefaces, pairings, and font optimization.
+
+- [Timeless Type Family](<https://www.timeless.co/type>): Four variable typefaces with italics, free for personal and commercial use.
+- [Fontshare](<https://fontshare.com/>): High-quality professional fonts free for commercial use.
+- [Klim](<https://klim.co.nz/>): Type foundry creating contemporary web typefaces.
+- [Fontsource](<https://fontsource.org/>): Self-host open-source fonts via npm packages.
+- [Wakamai Fondue](<https://wakamaifondue.com/>): Tool inspecting font files and features.
+- [Utopia](<https://utopia.fyi/>): Fluid typography calculator generating CSS clamp.
+- [Velvetyne](<https://velvetyne.fr/>): Open-source foundry distributing experimental typefaces.
+- [Departure Mono](<https://departuremono.com/>): Pixel monospace typeface designed for terminals.
+- [Google Fonts](<https://fonts.google.com/>): Open-source typefaces for websites, apps, and design projects.
+
+## Color
+
+Color palette generators, contrast checkers, and color math.
+
+- [OKLCH](<https://oklch.com/>): Color picker using perceptually uniform space.
+- [Color.review](<https://color.review/>): Contrast checker helping design accessible palettes.
+- [Huetone](<https://huetone.ardov.me/>): Accessible palette generator balancing contrast ratios.
+- [APCA](<https://www.myndex.com/APCA/>): Modern contrast algorithm matching visual perception.
+- [Ramps](<https://www.ramps.studio/>): Design token tool generating OKLCH ramps.
+- [Atmos](<https://atmos.style/>): A color palette generator built for UI designers
+- [Coolors](<https://coolors.co/>): Color palette generator with contrast checking and export tools.
+
+## 3D
+
+3D modeling tools and WebGL rendering engines online.
+
+- [Three.js](<https://threejs.org/>): JavaScript 3D library rendering WebGL scenes.
+- [React Three Fiber](<https://r3f.docs.pmnd.rs/>): Declarative React renderer for Three.js scenes.
+- [Drei](<https://drei.docs.pmnd.rs/>): Helper components for React Three Fiber.
+- [Blender](<https://blender.org/>): Open-source 3D modeling and animation suite.
+- [gltf.report](<https://gltf.report/>): Web-based optimizer for 3D glTF files.
+- [Poly Haven](<https://polyhaven.com/>): Public asset library offering CC0 textures.
+- [Sketchfab](<https://sketchfab.com/>): Discover, publish, and inspect interactive 3D models.
+
+## Shaders
+
+Interactive fragment shaders, procedural noise, and canvas effects.
+
+- [Book of Shaders](<https://thebookofshaders.com/>): Interactive guide to mastering fragment shaders.
+- [compute.toys](<https://compute.toys/>): Sandbox for authoring WGSL compute shaders.
+- [Shaderfrog](<https://shaderfrog.com/>): Visual node-based editor for composing shaders.
+- [shadercn](<https://shadercn.run/>): Shader components for React, built on vgpu and TypeGPU.
+- [Paper Shaders](<https://shaders.paper.design/>): Zero-dependency shaders ready to import.
+- [OpenShaders](<https://openshaders.com/>): Open-source shader collection for web projects.
+- [Orbkit](<https://orbkit.zzzzshawn.cloud/>): WebGL shader renderer for orb animations.
+- [Shadertoy](<https://www.shadertoy.com/>): Create and explore interactive shaders in the browser.
+
+## Icons
+
+Crisp icon families and glyphs for modern interfaces.
+
+- [Lucide](<https://lucide.dev/>): Community-maintained Feather Icons fork with thousands of glyphs.
+- [Phosphor](<https://phosphoricons.com/>): Icon family providing six consistent weights.
+- [Iconify](<https://iconify.design/>): Unified framework providing instant icon access.
+- [Rune Icons](<https://www.runeicons.com/>): Minimalist icon set offering five styles.
+- [Icon Museum](<https://icon.museum/>): Archive celebrating mobile app icon craftsmanship.
+- [Tabler Icons](<https://tabler.io/icons>): Library of thousands of outline icons.
+- [Heroicons](<https://heroicons.com/>): Handcrafted SVG icons from Tailwind creators.
+- [Material Symbols](<https://fonts.google.com/icons>): Google variable icon font spanning three styles.
+- [Bootstrap Icons](<https://icons.getbootstrap.com/>): Official icon library designed for Bootstrap.
+- [Remix Icon](<https://remixicon.com/>): Neutral icon library in outline and fill.
+- [Iconoir](<https://iconoir.com/>): Open-source SVG icons with consistent strokes.
+- [Ionicons](<https://ionic.io/ionicons/>): Premium icon pack for web and mobile.
+- [Simple Icons](<https://simpleicons.org/>): Over three thousand SVG brand logos.
+- [theSVG](<https://thesvg.org/>): Curated collection of clean brand SVGs.
+- [Feather](<https://feathericons.com/>): Minimalist open-source icon set on 24px grid.
+- [Carbon Icons](<https://carbondesignsystem.com/>): IBM official icon library for enterprise design.
+- [Boxicons](<https://boxicons.com/>): Vector icons crafted in three styles.
+- [MX Icons](<https://mx-icons.vercel.app/>): Large collection of customizable React icons.
+- [Eva Icons](<https://akveo.github.io/eva-icons/>): Pack of 400 icons in outline and fill.
+- [Devicon](<https://devicon.dev/>): Developer-focused icon set for programming tools.
+- [css.gg](<https://css.gg/>): 700 lightweight icons rendered using pure CSS.
+- [HugeIcons](<https://hugeicons.com/>): Comprehensive library of stroke and solid icons.
+- [Reicon](<https://reicon.dev/>): Tree-shakeable React icon library with dual weights.
+- [Iconsax](<https://app.iconsax.io/>): Versatile icon set with six visual styles.
+- [icons0](<https://icons0.dev/>): Search engine covering over 200k icons.
+- [Heroicons Animated](<https://heroicons-animated.com/>): Heroicons enhanced with reactive hover animations.
+- [Icons.download](<https://icons.download/>): Curated icon library in sixteen aesthetic styles.
+- [Lucide Animated](<https://lucide-animated.com/>): Lucide icons enhanced with micro-animations.
+- [Icon Foundry](<https://iconfoundry.store/>): Searchable collection of icons from many families.
+- [Inkword](<https://inkword.app/>): Turns a single word into a matching illustration.
+- [Nucleo – The Ultimate Icon Bundle](<https://nucleoapp.com/?ref=21998>): Explore the Nucleo icons, 40,000+ premium SVG icon
+- [IconsDB](<https://iconsdb.app>): Instant, semantic search across 200K+ icons
+- [Radix Icons](<https://www.radix-ui.com/icons>): Consistent interface icons available as SVGs and React components.
+
+---
+
+# Utilities — My collection — Matthieu Duchatellier
+
+Source: https://matthieu.pm/inspirations/utilities
+
+# My collection
+
+A collection of inspiring interfaces, component libraries, AI tools, and resources for bringing ideas to life.
+
+## My stack
+
+- [Figma](<https://figma.com/>): Collaborative interface design and prototyping platform.
+- [tldraw](<https://tldraw.com/>): Infinite whiteboard and canvas SDK.
+- [Aside browser](<https://aside.com/>): A browser with an AI assistant for working across websites.
+- [Maze](<https://maze.co/>): User research and usability testing platform.
+- [PostHog](<https://posthog.com/>): Product analytics, session replay, and experimentation tools.
+- [Linear](<https://linear.app/>): Project management software setting speed standards.
+- [Codex](<https://openai.com/codex/>): OpenAI coding agent for building, debugging, and reviewing code.
+- [Ghostty](<https://ghostty.org/>): Fast GPU-accelerated terminal emulator for developers.
+- [GitLab](<https://about.gitlab.com/>): Git repositories, code review, and continuous integration.
+- [Bun](<https://bun.com/>): JavaScript runtime, package manager, bundler, and test runner.
+- [TypeScript](<https://www.typescriptlang.org/>): JavaScript with syntax for types.
+- [Next.js](<https://nextjs.org/>): A React framework for building web applications.
+- [TanStack](<https://tanstack.com/>): Open-source libraries for building web applications.
+- [shadcn/ui](<https://ui.shadcn.com/>): Components you copy directly into codebases.
+- [NeonDB](<https://neon.com/>): Serverless Postgres with database branching and autoscaling.
+- [Convex](<https://www.convex.dev/>): Reactive backend with a database, TypeScript functions, and realtime sync.
+- [Vercel](<https://vercel.com/>): Cloud platform for deploying Next.js applications.
+- [Notion](<https://www.notion.com/>): A workspace for notes, documents, and projects.
+
+## Utilities
+
+Developer utilities that accelerate frontend workflows.
+
+- [SVGOMG](<https://svgomg.net/>): Web GUI to optimize and clean SVG files.
+- [RegExr](<https://regexr.com/>): Interactive sandbox for testing regular expressions.
+- [Squoosh](<https://squoosh.app/>): Browser image compression with visual comparisons.
+- [Fffuel](<https://fffuel.co/>): Generative SVG textures, gradients, and patterns.
+- [ui.camera](<https://ui.camera/>): 3D mockups and scene staging for software.
+- [Ray.so](<https://ray.so/>): Turn code snippets into shareable screenshots.
+- [Transform](<https://transform.tools/>): Polyglot code converter for JSON and types.
+- [Playgrnd](<https://www.playgrnd.tools/>): Suite of browser-based offline creative tools.
+- [Anim8](<https://www.tryanim8.com/>): Convert MP4 recordings into animated SVG graphics.
+- [OGFolio](<https://www.ogfolio.com/>): Inspect and preview Open Graph social cards.
+- [DotForge](<https://dotforge.vercel.app/>): Real-time dither effect generator for web.
+- [ASCIInator](<https://asciinator.app/>): Browser utility converting images into ASCII art.
+- [Vessa](<https://vessa.design/>): Publish brand guidelines as live pages.
+- [Icoon](<https://icoon.co/>): AI tool generating custom 3D icons.
+- [Design Minis](<https://www.designminis.com/>): Suite of micro design tools and scales.
+- [ASCII (Kracked Devs)](<https://ascii.krackeddevs.com/>): Fast tool converting text into ASCII art.
+- [Dither Lab](<https://literate-enigma-snowy.vercel.app/>): Applies vintage dithering filters to photographs.
+- [Hallmark](<https://www.usehallmark.com/>): Landing page builder producing handcrafted designs.
+- [Tooooools](<https://www.tooooools.app/>): In-browser utilities to dither and pixelate images.
+- [Screan](<https://screan.app/>): Create promotional App Store screenshot mockups.
+- [PostSpark](<https://postspark.app/>): Format screenshots with clean social backgrounds.
+- [Drawably](<https://www.drawably.dev/>): Sketching tool generating hand-drawn UI shapes.
+- [Mesurer](<https://mesurer.dev/>): On-screen tool checking website pixel spacing.
+- [Render Labs](<https://render-labs.evlog.cloud/>): Image rendering tool from evlog team.
+- [Butterfly](<https://www.butterfly.so/>): Minimalist landing page builder for validation.
+- [Corne](<https://corne.rs/>): Documentation for the Corne split keyboard.
+- [Shiori](<https://www.shiori.sh/>): Bookmark manager with CLI and Raycast support.
+- [Open Source Together](<https://opensource-together.com/>): Platform matching developers with open-source projects.
+- [ASCII Studio](<https://www.asciistudio.space/>): Transforms images and videos into ASCII art.
+- [Tabbied](<https://tabbied.com/>): Generative geometric pattern creator for SVG.
+- [Rynix Studio](<https://studio.rynix.in/edit>): Playground for real-time video visual effects.
+- [Mascofast](<https://mascofast.com/>): AI tool generating animated transparent 3D mascots.
+- [Screenshot Studio](<https://www.screenshot-studio.com/>): Frames screenshots inside realistic 3D mockups.
+- [Replay](<https://letsreplay.co/>): Session replay and visitor recording for websites.
+- [Convergence UI](<https://convergence.suryansu.in>): Tweak colors, typography, borders and radius in
+- [Space-Bin](<https://space-bin.onrender.com>): Temporary encrypted space for secure file transfer
+- [Nute](<https://nute.app/>): No nonsense notes
+- [Schedual](<https://schedual.app/>): No nonsense tasks
+- [Home / Prepora](<https://prepora.xyz>): Practice IELTS reading, listening, and writing
+- [PostHog – We make your product self-driving](<https://posthog.com/>): PostHog automatically diagnoses problems, fixes
+- [Toolfolio](<https://toolfolio.com/>): Curated directory of design, AI, and developer tools.
+- [Anymark](<https://anymark.co/>): Professional logos and branding for startups and online businesses.
+- [Can I Use](<https://caniuse.com/>): Browser support tables for web platform features.
+
+## Desktop
+
+Native macOS and desktop utility apps for productivity.
+
+- [Raycast](<https://raycast.com/>): Extendable desktop launcher replacing Spotlight.
+- [Ghostty](<https://ghostty.org/>): Fast GPU-accelerated terminal emulator for developers.
+- [Warp](<https://warp.dev/>): Rust-based terminal with block outputs and AI.
+- [CleanShot X](<https://cleanshot.com/>): Ultimate screen capture and recording utility.
+- [Granola](<https://granola.ai/>): AI notepad generating meeting summaries without bots.
+- [LocalSend](<https://localsend.org/>): Share files securely across local Wi-Fi networks.
+- [Canario](<https://rioterm.com/canario>): Terminal organizing CLI sessions into panes.
+- [CoolDock](<https://cooldock.app/>): Secondary dock supporting desktop monitoring widgets.
+- [Supaste](<https://supaste.com/>): Clipboard manager and screenshot history for Mac.
+- [Runey](<https://runey.app/>): Invoicing and client tracking app for freelancers.
+- [Revone](<https://revone.app/>): Unified revenue dashboard aggregating payment metrics.
+- [Zen Browser](<https://zen-browser.app/>): Firefox fork with vertical tabs and focus.
+- [Rexa DB](<https://rexadb.app>): Modern database client for developers who ship
+- [Bruno](<https://www.usebruno.com/>): Local API client with Git-friendly collections stored as files.
+
+## Video & Capture
+
+Screen recording software, timeline editors, and demo tools.
+
+- [Screen Studio](<https://screen.studio/>): Screen recorder adding camera zooms automatically.
+- [Remotion](<https://remotion.dev/>): Render high-definition videos programmatically with React.
+- [DaVinci Resolve](<https://www.blackmagicdesign.com/products/davinciresolve>): Professional video editing and color grading suite.
+- [Descript](<https://descript.com/>): AI video editor where you edit text.
+- [Gifski](<https://gif.ski/>): High-quality video-to-GIF converter preserving framerates.
+- [Slant It](<https://slantit.app/>): Transforms flat captures into 3D mockups.
+- [Remocn](<https://www.remocn.dev/>): Remotion animation components for video production.
+- [BetterShot](<https://www.bettershot.site/>): Screen recorder featuring cursor zoom and captions.
+- [Recordly](<https://recordly.dev/>): Screen recording tool for polished developer demos.
+- [Cursorful](<https://cursorful.com/>): Screen recorder that automatically tracks cursor.
+- [Tokokino](<https://tokokino.com/>): In-browser editor for device framing and mockups.
+- [Prequel](<https://prequel.sh>): Cinematic screen recorder for mac
+- [GenMotion](<https://genmotion.dev>): AI launch videos and motion graphics editor
+- [Figma Weave](<https://weave.figma.com/>): Formerly Weavy. AI image and video workflows on a node canvas.
+- [OBS Studio](<https://obsproject.com/>): Open-source software for screen recording and live streaming.
+- [MotionVideo](<https://motionvideo.xyz/>): Explore AI-made motion videos, their prompts, and creator skills. A searchable collection of motion design inspiration, curated by MotionVideo.
+
+## Whiteboard
+
+Infinite canvas workspaces for wireframing and systems architecture.
+
+- [tldraw](<https://tldraw.com/>): Infinite whiteboard library offering React SDK.
+- [Excalidraw](<https://excalidraw.com/>): Collaborative whiteboard with hand-drawn sketch aesthetic.
+- [Obsidian](<https://obsidian.md/>): Local-first Markdown knowledge base with graphs.
+- [Linear](<https://linear.app/>): Project management software setting speed standards.
+- [Miro](<https://miro.com/>): Collaborative canvas for diagrams, workshops, and product planning.
+
+---
+
+# Design Engineers — My collection — Matthieu Duchatellier
+
+Source: https://matthieu.pm/inspirations/designers
+
+# My collection
+
+A collection of inspiring interfaces, component libraries, AI tools, and resources for bringing ideas to life.
+
+## My stack
+
+- [Figma](<https://figma.com/>): Collaborative interface design and prototyping platform.
+- [tldraw](<https://tldraw.com/>): Infinite whiteboard and canvas SDK.
+- [Aside browser](<https://aside.com/>): A browser with an AI assistant for working across websites.
+- [Maze](<https://maze.co/>): User research and usability testing platform.
+- [PostHog](<https://posthog.com/>): Product analytics, session replay, and experimentation tools.
+- [Linear](<https://linear.app/>): Project management software setting speed standards.
+- [Codex](<https://openai.com/codex/>): OpenAI coding agent for building, debugging, and reviewing code.
+- [Ghostty](<https://ghostty.org/>): Fast GPU-accelerated terminal emulator for developers.
+- [GitLab](<https://about.gitlab.com/>): Git repositories, code review, and continuous integration.
+- [Bun](<https://bun.com/>): JavaScript runtime, package manager, bundler, and test runner.
+- [TypeScript](<https://www.typescriptlang.org/>): JavaScript with syntax for types.
+- [Next.js](<https://nextjs.org/>): A React framework for building web applications.
+- [TanStack](<https://tanstack.com/>): Open-source libraries for building web applications.
+- [shadcn/ui](<https://ui.shadcn.com/>): Components you copy directly into codebases.
+- [NeonDB](<https://neon.com/>): Serverless Postgres with database branching and autoscaling.
+- [Convex](<https://www.convex.dev/>): Reactive backend with a database, TypeScript functions, and realtime sync.
+- [Vercel](<https://vercel.com/>): Cloud platform for deploying Next.js applications.
+- [Notion](<https://www.notion.com/>): A workspace for notes, documents, and projects.
+
+## Design engineers to follow
+
+Curated design engineers and creative developers to follow.
+
+- [Emil Kowalski](<https://emilkowal.ski/>): Creator of Sonner, Vaul, and animations.
+- [Rauno Freiberg](<https://rauno.me/>): Author of Interaction Guidelines at Vercel.
+- [Paco Coursey](<https://paco.me/>): Creator of cmdk and next-themes.
+- [Gavin Nelson](<https://nelson.co/>): Designer at OpenAI crafting tactile interfaces.
+- [Adam Argyle](<https://nerdy.dev/>): Chrome DevRel keeping CSS modern.
+- [Sarah Drasner](<https://sarahdrasner.com/>): Engineering leader and web animation author.
+- [Jhey Tompkins](<https://jhey.dev/>): Creative developer building playful CSS experiments.
+- [Lynn Fisher](<https://lynnandtonic.com/>): Designer behind the Single Div project.
+- [Yogesh](<https://yogesh.co/>): Founder behind Remote3, Promptmonitor, and Dray.
+- [shadcn](<https://shadcn.com/>): Creator of shadcn/ui and component registries.
+- [Äli](<https://aaali.xyz/>): Designer building minimal personal software.
+- [Arlan Marat](<https://www.arlan.me/>): Design engineer from Waymo and Yandex.
+- [Ashish Kashyap](<https://www.ashkashyap.me/>): Creator of Pikaicons iconography system.
+- [Bakemono](<https://www.bakemono.space/>): Design engineer crafting tactile interfaces.
+- [Emmanuel Hong](<https://www.emmanuelhong.com/>): NYC designer crafting digital brand experiences.
+- [Fara Yan](<https://farayan.me/>): CMU designer crafting community interfaces.
+- [Flora Guo](<https://www.floguo.com/>): Product designer at Ramp and Vercel.
+- [Glenn Hitchcock](<https://glenn.me/>): Design systems lead at Poolside.
+- [Dominik Kandravý](<https://www.heyiam.dk/>): Building native macOS tools Hoy and Monocle.
+- [Hardik Pandya](<https://hvpandya.com/>): Design and AI leader at Google.
+- [Noman Ijaz](<https://iamnoman.com/>): Frontend developer exploring pixel gradients.
+- [Julien Thibeaut](<https://ibelick.com/>): Designer building animations for AI startups.
+- [Jia Chen](<https://www.jia.build/>): Creative engineer and prolific hackathon builder.
+- [Michelle Liu](<https://www.liumichelle.com/>): Designer crafting tools across Apple and NASA.
+- [Yuhang Lu](<https://www.luyuhang.net/>): Interface designer from Nothing to xAI.
+- [Lyle Klyne](<https://lyleklyne.com/>): Technical interface designer at Perplexity.
+- [Marcelo Chaman Mallqui](<https://marcelochaman.ca/>): Infrastructure engineer building platform tools at Gumloop.
+- [Marijana Pavlinić](<https://marijanapav.com/>): Brand and devtools designer at Vercel.
+- [Michael Alexander](<https://www.mek.gallery/>): Visual artist and typographer.
+- [Nick Jones](<https://www.narrowdesign.com/>): Experimental interface designer behind Stripe Press.
+- [Stuart Regan](<https://stuart.re/>): Product designer crafting efficient software workflows.
+- [Vijay Verma](<https://vjy.me/>): Indie game maker and studio founder.
+- [Benji Taylor](<https://benji.org/>): Creator of Agentation and Honk.
+- [Aniket Pawar](<https://www.aniketpawar.com/>): Frontend engineer in the shadcn ecosystem.
+- [Aaron Mahlke](<https://www.mahlke.design/>): Design engineer crafting tactile web experiments.
+- [Grizz](<https://grizz.fyi/>): Interaction designer building expressive web experiments.
+- [Alistair Smith](<https://alistair.sh/>): Software engineer at Anthropic on Claude Code.
+- [David Umoru](<https://davidumoru.me/>): Creative technologist building ASCII art tools.
+- [Fabian Arbor](<https://fabianarbor.com/>): Creative director crafting distinct brand identities.
+- [Praveen Juge](<https://praveenjuge.com/>): Designer writing on interface accessibility.
+- [Lokendra Kushwah](<https://lokiii.me/>): Frontend engineer building AI-driven interfaces.
+- [Jakub Krehel](<https://jakub.kr/>): Founding design engineer at Interfere.
+- [Ishaan Dey](<https://www.ishaand.com/>): Design engineer and creator of Shadow.
+- [Tushaar Mehta](<https://www.tushaarmehtaa.xyz/>): Creative director designing AI-first products.
+- [Kai Nair](<https://ikeacrisp.com/>): Creative technologist designing expressive brand systems.
+- [Paolo Nessim](<https://www.paolonessim.com/>): Engineer building real-time systems and robotics.
+- [Ashish Gogula](<https://www.ashishgogula.in/>): Design engineer building Xenon.
+- [Ruru](<https://ruru.build/>): Design engineer building Ruru UI.
+- [Harsh Singh](<https://www.harshsingh.me/>): Software engineer exploring minimalist design.
+- [Rohit Singh Rawat](<https://rohitsinghrawat.com/>): Full-stack engineer crafting SaaS products.
+- [Preet Suthar](<https://preetsuthar.me/>): Design engineer building open-source tools.
+- [Maze](<https://remvze.com/>): Design engineer and creator of Moodist.
+- [Siddharth](<https://siddz.com/>): Full-stack engineer crafting interactive UI.
+- [Sam](<https://samworks.vercel.app/>): Design engineer building motion-driven web apps.
+- [Dhruv Suthar](<https://dhrv.pw/>): Community Engineer at Raycast.
+- [Rahul Singh Bhadoriya](<https://rahulbhadoriya.com/>): Visual designer and founder of Dacoit Design.
+- [Manu Arora](<https://manuarora.in/>): Creator of Aceternity UI and TailwindMasterKit.
+- [Swami Malode](<https://swamii.me/>): Design engineer building VidStudio and Rare UI.
+- [Shawn Dsilva](<https://www.shwn.design/>): Creator of Dot Matrix and Orbkit.
+- [Shivam](<https://www.10xshivam.dev/>): Full-stack developer building scalable web interfaces.
+- [Rohit Mehta](<https://portfolio.negativ.in/>): Developer building Negativ UI.
+- [Ratnesh Chipre](<https://ratneshc.com/>): Design engineer building Draftlogo.
+- [Shivraj Roy](<https://www.shivrajroy.in/>): Frontend engineer focused on micro-animations.
+- [Vansh Nagar](<https://www.vanshnagar.com/>): Creator of ASCII Studio and web tools.
+- [Harsh Jadhav](<https://harshjdhv.com/>): Design engineer and creator of Componentry.
+- [Aaryan](<https://aaryan.design/>): Creator of Sileo physics-based toast components.
+- [Atharvsinh Jadav](<https://athrix.me/>): Full-stack developer building ObsidianUI.
+- [Divyansh Swarnkar](<https://divyanshh.tech/>): Full-stack developer building performant web apps.
+- [Gurbinder](<https://gurbinder.dev/>): Design engineer building Skiper UI and EvilCharts.
+- [Ashutosh Singh](<https://www.ashutoshx7.me/>): Creator of Vengeance UI building AI interfaces.
+- [Palak Sharma](<https://palakonweb.in/>): Full-stack developer crafting 3D WebGL interfaces.
+- [Aman Shakya](<https://amanshakya.in/>): Design engineer building Forge UI and Statsio.
+- [Mihir Aman Raj](<https://www.mihircodes.in/>): Creative developer building atomix/ui experiments.
+- [Prasanjit Dey](<https://www.prasanjitdey.com/>): Design engineer and creator of Insposite.
+- [Chánh Đại](<https://chanhdai.com/>): Design engineer building React Wheel Picker.
+- [Sophie Manalo](<https://www.sophiamanalo.com/>): Creative developer building expressive web interfaces.
+- [Abhinav Kale](<https://abhi.at/>): Design engineer crafting minimal web experiments.
+- [Karaan](<https://www.karaan.me/>): Frontend engineer focusing on UI craft.
+- [Ram](<https://ramx.in/>): Frontend developer building interactive web products.
+- [Victor Williams](<https://www.victorwilliams.me/>): Design engineer crafting modern digital experiences.
+- [Umesh Nagare](<https://umeshnagare.com/>): Full-stack engineer building clean user interfaces.
+- [Gautam](<https://www.heygautam.com/>): Full-stack developer building open-source tools.
+- [Atharva Mhaske](<https://atharvaxdevs.xyz/>): Frontend developer building creative web experiments.
+- [Janina](<https://janina.works/>): Product designer crafting interactive interfaces.
+- [Unlimited Studio](<https://unlimited.studio>): Independent studio crafting bespoke digital identities.
+- [Manish Kumar](<https://www.manixh.dev/>): Frontend developer building sleek web interfaces.
+- [Dhruv](<https://jdhruv.dev/>): Design engineer crafting interactive tactile software.
+- [Sahil Singh](<https://sahilcodex.vercel.app/>): Frontend developer crafting interactive React components.
+- [Nexvyn](<https://nexvyn.dev/>): Design engineer building nexvyn/ui components.
+- [Syed Subhan](<https://www.syedsubhan.in/>): Creative developer crafting 3D shader experiments.
+- [Jay](<https://www.radiumcoders.com/>): Design engineer building Evil Buttons and Mascot.
+- [Chidu](<https://chidu.me/>): Product designer crafting considered web interactions.
+- [Connor Hepburn](<https://hpbrn.cc/>): Engineer developing Creed and web agents.
+- [Pratham](<https://www.pratham.me/>): Product designer crafting high-craft landing pages.
+- [Offgrid](<https://offgrid.inc/>): Branding studio crafting identities for tech companies.
+- [Daniel White](<https://www.danielwhite.uk/>): Design engineer and founder of textmotion.
+- [Sasha Balandina](<https://sashabalandina.com/>): Product designer crafting typography-focused interfaces.
+- [Timothy Maarv](<https://www.timothymaarv.me/>): Product designer crafting 0-to-1 software experiences.
+- [Soren Blank](<https://sorenblank.com/>): Design engineer crafting fluid micro-interactions.
+- [Ozzy](<https://www.ozzyx.xyz/>): Design engineer building interior.dev micro-interactions.
+- [Utsav Gupta](<https://www.utsavworks.in/>): Full-stack engineer building AI agents.
+- [Saurabh Sharma](<https://www.srbh.site/>): Design engineer building Great UI components.
+- [Iteration](<https://iteration.design/>): Design studio founded by Josh Puckett.
+- [Josh Puckett](<https://joshpuckett.me/>): Founder of Iteration and DialKit.
+- [Mery Kaftar](<https://merycodes.com/>): Design engineer at Vercel crafting AI interfaces.
+- [Lele Zhang](<https://lelezhang.design/>): Product designer exploring thoughtful AI interfaces.
+- [Pranathi Peri](<https://pranathiperi.com/>): Designer at Anthropic on Claude Code.
+- [Airla Fan](<https://airladesigns.com/>): Digital designer at YouTube crafting visual systems.
+- [Mariana Castilho](<https://www.mrncst.computer/>): Product designer and engineer at Profound.
+- [Evil Rabbit](<https://www.evilrabbit.com/>): Head of Design at Vercel.
+- [Dominik Martin](<https://dominikmart.in/>): Product designer building modern digital products.
+- [Tom](<https://tomm.page/>): Creator of Spell UI crafting component kits.
+- [Dan Hollick](<https://old.alcohollick.com/>): Design engineer at Cursor.
+- [Anthony Fu](<https://antfu.me/>): Open-source creator and Vue core team member.
+- [Paul Bakaus](<https://paulbakaus.com/>): Creator of jQuery UI building AI tools.
+- [Aditya Sur](<https://ample.studio/>): Designer and developer crafting digital experiences.
+- [Raphael Salaja](<https://www.raphaelsalaja.com/>): Design engineer pushing boundaries in interface craft.
+- [Ana Howard](<https://ana.sh/>): Design engineer in London crafting thoughtful interfaces.
+- [Jakub Antalík](<https://jakubantalik.com/>): Product designer and Design Lead at Fun.xyz.
+- [Henry Heffernan](<https://henryheffernan.com/>): Creative developer known for the OS portfolio.
+- [Wojtek Witkowski](<https://wojtek.im/>): Staff UI engineer at Coinbase.
+- [Akash Bhadange](<https://designerdada.com/>): Product designer and founder of Peerlist.
+- [Aiden Bai](<https://aidenybai.com/>): Founder of Million.js and React Scan.
+- [Shu Ding](<https://shud.in/>): Designer and engineer at Vercel.
+- [Danilo Woznica](<https://danilowoz.com/>): Creator of react-content-loader component library.
+- [Daryl Ginn](<https://system.studio/>): Founder of System Studio and Minimal Gallery.
+- [Gunnar Gray](<https://gunnargray.com/>): Product Design Lead at Perplexity AI.
+- [Todd Hamilton](<https://toddham.com/>): Product designer and developer building AIProxy.
+- [Zaid Mukaddam](<https://zaidmukaddam.com/>): Creator of Scira AI conversational search.
+- [Kartik Labhshetwar](<https://kartiklabhshetwar.com/>): Software engineer building AI memory at Mem0.
+- [Saurabh](<https://saura3h.xyz/>): Design engineer building beUI, a motion component library.
+- [Daryl Patigas](<https://imdaryl.com/>): Founding designer at Lottielab.
+- [Una Kravets](<https://una.im/>): Web developer sharing CSS techniques and interface experiments.
+- [Brad Frost](<https://bradfrost.com/>): Atomic Design author sharing design systems and frontend practices.
+
+---
+
+# Great UI
+
+Source: https://matthieu.pm/skills/great-ui
+
+# /great-ui
+
+Make every interface detail feel right.
+
+A faithful merge of [Better UI](<https://github.com/jakubkrehel/skills/tree/main/skills/better-ui>) and [Emil Design Engineering](<https://github.com/emilkowalski/skills/tree/main/skills/emil-design-eng>). It brings together surfaces, icons, and motion that feel right.
+
+`npx skills add matthieu-pm/great-ui`
+
+## Correct is the start. Crafted is the goal.
+
+Refine the details that make an interface feel intentional. Improve geometry, optical balance, and surface depth. Add contextual icons, generous hit areas, and subtle motion.
+
+M Message 
+
+ Day  Week  Month 
+
+ 1,201 
+
+ Follow 
+
+M Message 
+
+ Day  Week  Month 
+
+ 1,201 
+
+ Following  Follow 
+
+## Make the geometry feel inevitable.
+
+Nested surfaces feel related when their radii share the same center. Adjust each value to see the geometry respond in real time.
+
+ Outer radius 
+
+20px 20
+
+ Inner radius 
+
+12px 12
+
+ Padding 
+
+8px 8
+
+Change the values to see how the border radius adapts.
+
+## Polish is a system, not a flourish.
+
+Great UI combines both source skills rather than selecting a few memorable tricks.
+
+### Surfaces
+
+The same reading card, with geometry and depth that feel related.
+
+Without skill
+
+ Field notes · Design 
+
+#### Words that work.
+
+Small details. Clearer interfaces.
+
+[Read article](<https://matthieu.pm/writing/ux-writing>)
+
+With skill
+
+ Field notes · Design 
+
+#### Words that work.
+
+Small details. Clearer interfaces.
+
+[Read article](<https://matthieu.pm/writing/ux-writing>)
+
+Concentric corners, balanced spacing, and layered shadows replace mismatched radii and hard outlines.
+
+### Interaction
+
+The same save action, with feedback that follows your intent.
+
+Without skill
+
+ Words that work.  Keep it for later. 
+
+ Save article 
+
+Not saved yet
+
+With skill
+
+ Words that work.  Keep it for later. 
+
+ Save article 
+
+Not saved yet
+
+Press feedback, smooth icon changes, and a picker anchored to its button make each action feel connected.
+
+### Restraint
+
+The same filter, with the unnecessary motion taken away.
+
+Without skill
+
+ All notes  Saved 
+
+-    **Words that work** — Writing 
+-    **A little less motion** — Interaction 
+-    **Details add up** — Craft 
+
+ 3 notes 
+
+With skill
+
+ All notes  Saved 
+
+-    **Words that work** — Writing 
+-    **A little less motion** — Interaction 
+-    **Details add up** — Craft 
+
+ 3 notes 
+
+Removing the repeated entrance animation makes filtering immediate and keeps attention on the content.
+
+## Two perspectives. One working method.
+
+Better UI supplies exact recipes. Emil Design Engineering supplies the judgment for when and why to use them.
+
+01 **better-ui** — Exact values for surfaces, icons, and motion.
+
+https://github.com/jakubkrehel/skills/tree/main/skills/better-ui
+
+02 **emil-design-eng** — Craft judgment, interaction purpose, and restraint.
+
+https://github.com/emilkowalski/skills/tree/main/skills/emil-design-eng
+
+`npx skills add matthieu-pm/great-ui`
+
+[Matthieu Duchatellier](<https://matthieu.pm/>) Better UI × Emil Design Engineering
+
+---
+
+# Write the interface
+
+Source: https://matthieu.pm/writing/ux-writing
+
+# Write the interface
+
+Learn to write labels, buttons, and messages that help people use your product. Practice with ten short exercises.
+
+ By Matthieu Duchatellier 
+
+## Help people take the next step
+
+UX writing helps people understand what a product does and how to use it. A button names an action. A field label explains what to enter. An error message helps someone recover when a task fails.
+
+Compare “Submit” with “Save changes.” The second label tells you what will happen. That is the job of interface copy: give people enough information to act with confidence.
+
+Use this guide to choose clearer labels, write helpful messages, and review a product flow. Try the exercises as you go, or read through first. All examples are for practice.
+
+ Try it · Profile settings 
+
+ Display name 
+
+This is how your name appears on your profile.
+
+Alex Morgan
+
+ Save changes 
+
+UX writing names the action: “Save changes.” Content design decides which fields belong together and where the confirmation appears.
+
+## Recognize microcopy
+
+**Microcopy** is the short text that guides an interaction. Its purpose matters more than its length: a slogan attracts attention, while a password hint helps someone finish a task.
+
+ Onboarding  Empty state  Notification  Tooltip  Success message  Title  Button label  Confirmation  Label  Progress update  Alert  Transactional email 
+
+These words appear in apps, websites, kiosks, and voice assistants. At each step, ask: what does the person need to know now, and what can they do next?
+
+## Find the microcopy
+
+Choose the examples that help someone use a product. You can select more than one.
+
+Which examples guide a product interaction? Select all that apply.
+
+ +Error message  +Tooltip  +Onboarding step  +Call to action  +Blog post  +Advertising slogan 
+
+ 0 selected  Check answer 
+
+## Write while you design
+
+UX writers work closely with designers, product managers, researchers, developers, support, and marketing. Start with the user’s goal and write the copy while the flow is still taking shape.
+
+ Discover 
+
+Listen to users. Collect their words and questions.
+
+ Build 
+
+Write in the prototype. Check each action and state.
+
+ Deliver 
+
+Test understanding. Improve and document the copy.
+
+Review the flow together. Can someone skip this step? What happens if saving fails? Does “Delete” mean permanent deletion? Agree on the behavior before writing a promise the product cannot keep.
+
+## Give every word a job
+
+Review your draft in four passes. Start with what the person needs, then make the wording shorter, more natural, and easier to understand.
+
+**Purposeful** — Does it help someone decide, act, or recover?
+
+**Concise** — Can you cut words without losing needed context?
+
+**Conversational** — Would you say this to someone asking for help?
+
+**Clear** — Will people understand what happens next?
+
+Shorter is not always clearer. “File too large” names the problem. “Choose a file under 10 MB” also explains how to fix it. Keep the details someone needs to finish the task.
+
+## Choose a helpful error message
+
+Compare the messages. Which one explains what to do next?
+
+An upload paused when the internet connection dropped. The product can resume it. Which message helps someone continue?
+
+ Option A **Something went wrong.** — Please try again later.  Option B **Upload paused** — Your connection dropped. Reconnect, then resume the upload. 
+
+## Replace the jargon
+
+Rewrite this sign-in error in everyday language. Explain the problem and give a next step.
+
+ Replace this 
+
+Authentication was unsuccessful due to invalid credentials.
+
+ Your sign-in message 
+
+The email and password don’t match. Help someone check their details and try again. Limit: 180 characters.
+
+ 180 characters left  Compare with an example 
+
+## Put the important words first
+
+Put the most important information first. Use short sentences, active voice, and familiar words. If a technical term is essential, explain it where it appears. If it is not essential, replace it.
+
+ Lead with the action  Use active voice  Use everyday words  Write for translation 
+
+ Example · Email and account messages 
+
+ Before 
+
+To continue, you will need to verify your email.
+
+ After 
+
+### Verify your email to continue
+
+Open the verification link we sent to alex@example.com.
+
+The heading puts the next action first. The supporting line explains how to complete it.
+
+## Keep one name
+
+A workspace, project, and space may sound like different things. Keep one name for the same concept.
+
+ Navigation **Workspace**
+
+ Page title **Your project**
+
+ Confirmation **Space created**
+
+All three labels describe the same thing. What should the team do?
+
+ Choose one term  Keep the variety  Add tooltips 
+
+## Match the words to the component
+
+Start with the question someone has at that moment. What will this button do? Why is this list empty? Did my changes save? Use the component to answer it.
+
+**Button**
+
+Name the action and object: “Save changes” or “Download invoice.”
+
+**Loading**
+
+Describe the current task: “Uploading your file…” Only show progress you can measure.
+
+**Onboarding**
+
+Explain one useful step: “Choose a language to find lessons.”
+
+**Empty state**
+
+Explain what belongs here: “No saved places yet. Save a place to find it here later.”
+
+**Success**
+
+Confirm the result: “Changes saved.” Add a next step only if one is needed.
+
+**Error**
+
+Name the problem and a way forward: “Upload failed. Choose a file under 10 MB.”
+
+Put essential instructions beside the action. Give form fields visible labels, and keep requirements outside placeholders that disappear during typing. Offer extra detail when it is useful.
+
+For errors, explain the cause only when you know it. Say what was saved or charged only when the product can confirm it. Before a permanent action, state the consequence and name both choices: “Delete draft” and “Keep draft.”
+
+## Name the button’s action
+
+Choose a label that matches what the button actually does.
+
+ Hotel search 
+
+The button only checks whether rooms are available. It does not make a booking.
+
+What should the button say?
+
+ Book a room  Check availability  Continue 
+
+## Build an error message
+
+Choose the details someone needs after a failed payment. Then review an example message.
+
+ Card payment failed 
+
+The order is still in the basket and nothing has been charged. The person can try another payment method. The cause is unknown.
+
+Which details belong in the error message? Select all that apply.
+
+ +What happened  +How to recover  +What was saved  +The internal error code  +Who caused the problem 
+
+ 0 selected  Check answer 
+
+## Test the words in the flow
+
+A UX writing audit reviews a complete journey, not isolated sentences. Capture the screen, component, current copy, user goal, issue, proposed change, and evidence. Fix the problems that prevent someone from finishing before polishing less important wording.
+
+Test important language in a prototype with the people who will use it. Watch whether they understand the state, predict the action, and recover from problems. For high-volume decisions, compare variants with an A/B test. For example, test whether a clearer booking label helps people find a room. Check completed bookings and accidental actions as well as clicks.
+
+ Try it · File upload 
+
+### Your file is too large
+
+trip-notes.pdf is 12 MB. Choose a file under 10 MB.
+
+ Use a smaller example file 
+
+Can you explain why the upload failed, predict the next action, and finish without help? The file name stays consistent throughout.
+
+## Find the copy problems
+
+Review this error screen. Select every issue that makes it harder to understand or recover.
+
+ Profile transfer **Migration unsuccessful**
+
+A synchronization exception occurred.
+
+ Continue 
+
+Which problems affect this screen? Select all that apply.
+
+ +Vague button label  +Internal jargon  +No next step  +Long page title 
+
+ 0 selected  Check audit 
+
+## Use words your readers recognize
+
+Good interface language begins with evidence: interviews, support conversations, search queries, reviews, usability sessions, and the words people already use. Collect repeated phrases and the context in which they appear. Use them to propose labels, then test whether other people understand those labels in the product.
+
+A useful persona is not a fictional biography. It captures the user’s goal, situation, knowledge, anxieties, and vocabulary. Write for the decisions that person needs to make in the product.
+
+## Find the user’s language
+
+Read the fictional research excerpts. Choose a label that reflects the words these people use.
+
+“I want to find the places I saved for later.”
+
+“Where did my saved places go?”
+
+“I save restaurants before a trip.”
+
+What should the navigation label say?
+
+ Repository  Saved places  My collection 
+
+## Adjust the tone to the situation
+
+Voice is the product’s consistent personality. Tone adapts that voice to the situation. A celebration can be energetic; a payment problem should be calm and specific. Consider the person’s goal, likely concerns, and the consequences of the action.
+
+ Routine confirmation 
+
+✓ Changes saved
+
+Confirm the result. Keep it brief.
+
+ First use 
+
+### No saved places yet
+
+Save a place to find it before your next trip.
+
+Explain what belongs here and how to start.
+
+ Something failed 
+
+### We couldn’t load your places
+
+Check your connection, then try again.
+
+Name the problem and give a recovery step.
+
+ Permanent action 
+
+### Delete “Weekend in Paris”?
+
+This deletes the list and its saved places. You can’t undo this.
+
+State exactly what will be lost.
+
+Document your voice with examples. If it is clear, warm, and direct, show how those qualities work in a welcome, an error, and a confirmation. Keep humor out of moments when someone may lose work or money.
+
+## Choose a tone that fits
+
+Try both situations. Choose a message that respects how the person may be feeling.
+
+ Payment delayed  Goal reached  Payment delayed  Goal reached 
+
+A bank transfer is taking longer than expected. The product will notify the sender when it completes.
+
+ A Woohoo! Your payment is taking a little adventure.  B Your transfer is still processing. We’ll let you know when it’s complete.  C Transfer pending. Wait. 
+
+## Document the decisions you repeat
+
+A content design system is the shared source of truth for interface language. Start with the decisions your team keeps making: which terms to use, how to explain errors, and what each button should say.
+
+ Example · A reusable content pattern 
+
+### When someone saves a place
+
+Use a short confirmation. Keep the feature name “Saved places” in navigation and help text.
+
+✓ Added to your saved places
+
+Use after saving succeeds. If saving fails, explain the problem and offer a retry. Avoid “Repository” and “Collection” for this feature.
+
+Owner: the team responsible for saved places.
+
+Store the wording, its intended use, and its owner together. Review the pattern when the product behavior changes.
+
+A glossary entry can be simple: “Saved places” means places someone has bookmarked. Use it in navigation and headings; avoid “Repository” for the same feature. Include the reason, an owner, and a review date.
+
+## Remove barriers to understanding
+
+Accessible UX writing uses plain language, descriptive labels, short sentences, and context that does not depend on vision, color, or prior knowledge. Check whether someone can understand the task while using a screen reader, reading in a second language, or working in a hurry.
+
+Do not communicate meaning through color, position, sound, or imagery alone. Write links and buttons that make sense out of context. Name the field with a visible label. Explain errors next to the affected input.
+
+ Try it · Delivery details 
+
+### Choose your delivery date
+
+1.  Enter an email address for delivery updates.
+2.  Choose a future delivery date.
+
+ Email address  (Required) name@example.com
+
+Use a made-up address to try this example.
+
+ Delivery date  (Required) 
+
+Try a past date to see the error message.
+
+Read the delivery policy
+
+For this example, any future date is available. In a real checkout, explain available days and delivery costs here.
+
+ Save delivery details 
+
+The labels stay visible while you type. Required fields use text, the date error explains the fix, and the policy link names its destination. Nothing is sent or booked.
+
+Inclusion goes further than technical access. Avoid assumptions about gender, relationships, ability, culture, or available resources. Ask only for information the task truly needs, and do not encode a presumed user into labels or defaults. “Emergency contact” leaves room for more relationships than “Husband or wife.”
+
+In a voice or conversational interface, language becomes the interface. Explain what it understood, confirm consequential actions, and let people correct mistakes.
+
+## Remove the barrier
+
+Compare two form instructions. Choose the one people can understand without seeing color.
+
+A form has three required fields. Which instruction removes the most barriers?
+
+ Option A **Complete the fields in red.** — Required information is communicated through color.  Option B **Complete all fields marked “Required”.** — Each field also includes a visible text label. 
+
+## Use AI to draft alternatives
+
+AI can generate alternatives, challenge a tone, simplify complex text, group feedback, or help review a flow. Give it the user’s goal, the product’s actual behavior, the component, and any constraints. Include examples of your voice and preferred terms.
+
+Treat every output as a draft. Verify the product behavior, source claims, accessibility, terminology, tone, and privacy before anything ships. A strong workflow asks for several options, compares them against explicit criteria, and improves the brief from the failures.
+
+## Try it on one screen
+
+Choose a screen in your product. Write down what someone needs to do, revise the words that might slow them down, and ask another person what they expect to happen next.
+
+[Matthieu Duchatellier](<https://matthieu.pm/>) Writing about product, design, and AI.
+
+---
+
+# From Prompt to Product
+
+Source: https://matthieu.pm/writing/ai-design-engineer
+
+# From Prompt to Product
+
+A hands-on introduction to prompting, building, and refining interfaces with AI.
+
+ By Matthieu Duchatellier 
+
+## AI is a fast collaborator, not an art director.
+
+Use it to create options, translate intent into code, and inspect the result. Keep the taste, constraints, and final judgment with you.
+
+## Start with a visual brief
+
+Name the user, the job, the mood, the hierarchy, and the constraints. A precise brief beats a long prompt.
+
+## Ask for different directions
+
+Generate three meaningfully different approaches before polishing one. Compare structure, not decoration.
+
+## Build in small slices
+
+Move from layout to components to states. Review each slice in the browser before adding more.
+
+## Critique with evidence
+
+Check screenshots at real breakpoints. Ask what is unclear, inconsistent, inaccessible, or visually weak.
+
+## Polish by hand
+
+Fix spacing, type, motion, focus states, and edge cases. AI gets you to a draft; craft gets you to done.
+
+[Matthieu Duchatellier](<https://matthieu.pm/>) Writing about product, design, and AI.
+
+---
+
+# The AI-Augmented Product Manager
+
+Source: https://matthieu.pm/writing/ai-product-manager
+
+# The AI-Augmented Product Manager
+
+A practical guide for PMs using AI to sharpen discovery, decisions, and delivery.
+
+ By Matthieu Duchatellier 
+
+## Use AI to widen the work, not outsource the decision.
+
+AI can compress research, challenge assumptions, and sharpen product artifacts. Your job is still to supply context and own the tradeoffs.
+
+## Give it the real context
+
+Share the goal, user, constraints, evidence, and open questions. Generic context creates generic advice.
+
+## Synthesize, then verify
+
+Use AI to cluster interviews or feedback, but trace every important claim back to the source.
+
+## Generate counterarguments
+
+Ask what would make the idea fail, which assumption is weakest, and what cheaper test could prove it.
+
+## Draft sharper artifacts
+
+Turn decisions into briefs, specs, test plans, and release notes. Edit for product truth and team clarity.
+
+## Keep a decision log
+
+Record the evidence, tradeoff, owner, and revisit date. AI is most useful when the reasoning stays visible.
+
+[Matthieu Duchatellier](<https://matthieu.pm/>) Writing about product, design, and AI.
+
+---
+
+# Connect your assistant
+
+Source: https://matthieu.pm/mcp
+
+[Return home](<https://matthieu.pm/>)
+
+# Good references.  
+One connection.
+
+Bring my design collection, skills, and writing into the conversation you’re already having with your AI assistant.
+
+## Connect with MCP
+
+MCP lets compatible AI assistants use resources from other apps and websites. Add this site as a remote MCP server in your assistant’s connection settings.
+
+1.  Choose the option to add a remote or custom MCP server.
+2.  Name it **Matthieu’s resources** and paste this server URL.
+3.  If asked, choose **Streamable HTTP** and no authentication.
+
+`https://matthieu.pm/mcp` Copy 
+
+Your assistant needs to support remote MCP servers without authentication. The option and its name depend on the app you use.
+
+Using Codex from the terminal?
+
+Run this command to add the connection:
+
+`codex mcp add matthieu --url https://matthieu.pm/mcp` Copy 
+
+## Start with a question
+
+Once connected, try asking your assistant:
+
+-   “Find typography resources in Matthieu’s design collection.”
+-   “Read Matthieu’s Great UI guide and suggest improvements to this interface.”
+-   “Find Matthieu’s writing on UX copy and help me improve these error messages.”
+
+## What you can use
+
+[The design collection ↗](<https://matthieu.pm/inspirations>)
+
+Search curated tools, interface inspiration, components, visuals, utilities, and design engineers.
+
+[Skills ↗](<https://matthieu.pm/skills/great-ui>)
+
+Read the published Great UI guide, its examples, and installation instructions.
+
+[Writing ↗](<https://matthieu.pm/writing/ux-writing>)
+
+Search and read articles on UX writing, building interfaces with AI, and AI for product managers.
+
+Available tools and resources
+
+`search_collection`
+
+Find resources by keyword or category.
+
+`search_content`
+
+Search the full text of published skills and articles. An empty query lists the pages.
+
+`get_content`
+
+Read a page as Markdown using its ID. Longer pages can be read in parts.
+
+The content index and collection are also available as MCP resources. Results include source links.
+
+This connection reads public content. It can’t edit the site, send messages, or install skills.
+
+Prefer browsing? [Back to the website](<https://matthieu.pm/>).
