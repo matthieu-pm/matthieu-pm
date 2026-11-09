@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import { Geist } from "next/font/google"
 
 import { publishedContent } from "@/lib/site-content"
+import { ThemeProvider } from "@/components/theme-provider"
 
 import "./globals.css"
 import { navigation } from "./inspirations/catalogues"
@@ -121,7 +122,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={geist.variable}>
+    <html lang="en" className={geist.variable} suppressHydrationWarning>
       <body>
         <script
           type="application/ld+json"
@@ -129,7 +130,7 @@ export default function RootLayout({
             __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
           }}
         />
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
         <WebMcp paths={agentPaths} />
         <Analytics />
         <SpeedInsights />

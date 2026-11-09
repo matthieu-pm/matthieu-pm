@@ -31,7 +31,11 @@
   border: 0;
   border-radius: 3px;
   background: transparent;
-  color: color-mix(in srgb, var(--accent) var(--intensity), #c6d4ff);
+  color: color-mix(
+    in srgb,
+    var(--accent) var(--intensity),
+    light-dark(#c6d4ff, #364875)
+  );
   cursor: pointer;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
@@ -49,16 +53,16 @@
 }
 
 .week[data-empty] {
-  color: #dedee2;
+  color: light-dark(#dedee2, #414146);
 }
 
 .week[data-future] {
-  color: #eeeeef;
+  color: light-dark(#eeeeef, #29292d);
   cursor: default;
 }
 
 .week[data-muted]:not([data-future]) {
-  color: #d7d7da;
+  color: light-dark(#d7d7da, #37373c);
 }
 
 .week[data-selected],
@@ -80,9 +84,9 @@
   display: grid;
   width: 224px;
   padding: 9px 11px 0;
-  border: 1px solid #e6e6e6;
+  border: 1px solid var(--site-line);
   border-radius: 9px;
-  background: #fff;
+  background: var(--site-surface);
   box-shadow:
     0 2px 8px rgb(0 0 0 / 8%),
     0 1px 2px rgb(0 0 0 / 4%);
@@ -194,7 +198,7 @@
 }
 
 .skeleton {
-  color: #eeeeef;
+  color: light-dark(#eeeeef, #29292d);
 }
 
 @keyframes reveal {

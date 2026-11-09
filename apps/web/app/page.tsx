@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Suspense, type CSSProperties } from "react"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { ActivityBarSkeleton } from "./activity-bar"
 import { CodingActivity } from "./coding-activity"
 import { EmailCopy } from "./email-copy"
@@ -115,10 +116,11 @@ export default function Page() {
             aria-hidden="true"
           />
         </div>
-        <div>
+        <div className={styles.identityCopy}>
           <h1>Matthieu Duchatellier</h1>
           <p>Product Manager · Design Engineer</p>
         </div>
+        <ThemeToggle />
       </header>
 
       <section className={styles.intro} aria-label="Introduction">

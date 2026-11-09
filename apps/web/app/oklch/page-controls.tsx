@@ -1,56 +1,10 @@
 "use client"
 
 import Image from "next/image"
+import { useThemeChange, useThemePreference } from "@/components/theme-provider"
 
-import {
-  useEffect,
-  useRef,
-  useState,
-  useSyncExternalStore,
-  type ReactNode,
-} from "react"
+import { useEffect, useRef, useState, type ReactNode } from "react"
 import { ReferenceIcon, type IconName } from "./reference-icons"
-
-type Theme = "light" | "dark" | "system"
-const themeKey = "matthieu-oklch-theme"
-const themeEvent = "oklch-theme-change"
-let fallbackTheme: Theme = "system"
-function getTheme(): Theme {
-  try {
-    const stored = localStorage.getItem(themeKey)
-    return stored === "light" || stored === "dark" ? stored : fallbackTheme
-  } catch {
-    return fallbackTheme
-  }
-}
-function snapshot() {
-  const theme = getTheme()
-  return `${theme}:${theme === "dark" || (theme === "system" && matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light"}`
-}
-function subscribe(callback: () => void) {
-  const media = matchMedia("(prefers-color-scheme: dark)")
-  window.addEventListener(themeEvent, callback)
-  window.addEventListener("storage", callback)
-  media.addEventListener("change", callback)
-  return () => {
-    window.removeEventListener(themeEvent, callback)
-    window.removeEventListener("storage", callback)
-    media.removeEventListener("change", callback)
-  }
-}
-const serverSnapshot = () => "system:light"
-function useTheme() {
-  return useSyncExternalStore(subscribe, snapshot, serverSnapshot)
-}
-function setTheme(theme: Theme) {
-  fallbackTheme = theme
-  try {
-    localStorage.setItem(themeKey, theme)
-  } catch {
-    /* Continue with the session preference. */
-  }
-  window.dispatchEvent(new Event(themeEvent))
-}
 
 export function PageShell({
   children,
@@ -59,18 +13,12 @@ export function PageShell({
   children: ReactNode
   className: string
 }) {
-  const theme = useTheme().split(":")[1]
-  return (
-    <div
-      className={`oklch-page ${className} ${theme === "dark" ? "dark" : ""}`}
-    >
-      {children}
-    </div>
-  )
+  return <div className={`oklch-page ${className}`}>{children}</div>
 }
 
 export function ThemePicker() {
-  const selected = useTheme().split(":")[0]
+  const selected = useThemePreference()
+  const { changeTheme: setTheme } = useThemeChange()
   return (
     <div className="oklch-theme-picker" role="group" aria-label="Color theme">
       {(["light", "dark", "system"] as const).map((theme) => {

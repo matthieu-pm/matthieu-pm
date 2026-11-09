@@ -1,9 +1,9 @@
 .page {
-  --paper: #fcfcfc;
-  --ink: #1f1f1f;
-  --muted: #6b6b6b;
-  --faint: #e9e9e9;
-  --soft: #f3f3f3;
+  --paper: var(--site-canvas);
+  --ink: var(--site-ink);
+  --muted: var(--site-muted);
+  --faint: var(--site-line);
+  --soft: var(--site-soft);
   --section-gap: 32px;
   --font-weight-body: 350;
   --font-weight-medium: 450;
@@ -36,6 +36,11 @@
 .detailRow h3,
 .detailRow p {
   margin: 0;
+}
+
+.identityCopy {
+  flex: 1;
+  min-width: 0;
 }
 
 .identity h1 {
@@ -160,9 +165,9 @@
   left: 50%;
   padding: 5px 8px;
   border-radius: 6px;
-  background: #242424;
+  background: var(--site-strong);
   box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
-  color: #fff;
+  color: var(--site-on-strong);
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -180,7 +185,7 @@
   left: 50%;
   width: 6px;
   height: 6px;
-  background: #242424;
+  background: var(--site-strong);
   content: "";
   transform: translate(-50%, -50%) rotate(45deg);
 }
@@ -193,8 +198,8 @@
 .intro a:hover,
 .emailButton:hover,
 .contactNote a:hover {
-  color: #000;
-  text-decoration-color: #1f1f1f;
+  color: var(--site-hover);
+  text-decoration-color: var(--site-ink);
 }
 
 .socialLink {
@@ -220,7 +225,7 @@
 
 .section h2 {
   margin-bottom: 8px;
-  color: #555;
+  color: var(--site-heading);
   font-size: 16px;
   font-weight: var(--font-weight-medium);
   line-height: 26px;
@@ -401,7 +406,7 @@
 .intro a:focus-visible,
 .emailButton:focus-visible,
 .contactNote a:focus-visible {
-  outline: 2px solid #222;
+  outline: 2px solid var(--site-ink);
   outline-offset: 4px;
 }
 
@@ -505,7 +510,7 @@
 }
 
 .skillLink:focus-visible {
-  outline: 2px solid #222;
+  outline: 2px solid var(--site-ink);
   outline-offset: 6px;
 }
 
@@ -527,7 +532,7 @@
   margin-top: 24px;
   border: 1px solid var(--faint);
   border-radius: 999px;
-  background: #fff;
+  background: var(--site-surface);
   box-shadow:
     0 1px 2px rgb(0 0 0 / 3%),
     inset 0 0 0 1px rgb(0 0 0 / 1%);
@@ -561,8 +566,8 @@
   align-items: center;
   gap: 6px;
   border-radius: 999px;
-  background: #242424;
-  color: #fff;
+  background: var(--site-strong);
+  color: var(--site-on-strong);
   padding: 4px 14px;
   text-decoration: none;
   transition: background-color 160ms ease;
@@ -598,7 +603,7 @@
 }
 
 .contactBar a:hover {
-  background: #000;
+  background: var(--site-hover);
 }
 
 .contactSection .contactNote {
@@ -641,7 +646,7 @@
 }
 
 .footerSocials a:hover {
-  color: #000;
+  color: var(--site-hover);
   text-decoration-color: currentColor;
 }
 
@@ -752,5 +757,39 @@
   .page *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+:global(.dark) .footerSignatureImage {
+  filter: invert(1);
+}
+
+@media (max-width: 480px) {
+  .identity h1 {
+    font-size: 14px;
+  }
+  .identity p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+:global(.dark) .projectMarkImage:not([src*="researchie"]) {
+  filter: invert(1);
+}
+
+@media (max-width: 480px) {
+  .emailTooltip {
+    right: 0;
+    left: auto;
+    transform: translateY(-3px);
+  }
+  .emailTooltipVisible {
+    transform: translateY(0);
+  }
+  .emailTooltip::after {
+    right: 16px;
+    left: auto;
+    transform: translateY(-50%) rotate(45deg);
   }
 }

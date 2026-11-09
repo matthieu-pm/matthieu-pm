@@ -4,7 +4,7 @@
   top: 50%;
   left: 20px;
   transform: translateY(-50%);
-  color: #1f1f1f;
+  color: light-dark(#1f1f1f, var(--site-ink));
   font-family: var(--font-sans), system-ui, sans-serif;
   font-size: 12px;
   line-height: 1.4;
@@ -38,7 +38,7 @@
   width: 36px;
   height: clamp(10px, calc((100svh - 80px) / var(--section-count)), 12px);
   min-height: 10px;
-  color: #c8c8c4 !important;
+  color: light-dark(#c8c8c4, var(--site-line)) !important;
   text-decoration: none;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .link[aria-current] {
-  color: #1f1f1f !important;
+  color: light-dark(#1f1f1f, var(--site-ink)) !important;
 }
 
 .navigation[data-keyboard-focus] .tick {
@@ -66,8 +66,8 @@
   max-width: 240px;
   padding: 8px 10px;
   border-radius: 8px;
-  background: #fcfcfc;
-  color: #1f1f1f;
+  background: light-dark(#fcfcfc, var(--site-canvas));
+  color: light-dark(#1f1f1f, var(--site-ink));
   box-shadow:
     0 0 0 1px rgb(0 0 0 / 6%),
     0 4px 16px rgb(0 0 0 / 8%);
@@ -99,13 +99,13 @@
 }
 
 .navigation ~ * [data-section-nav-target]:focus-visible {
-  outline: 2px solid #222;
+  outline: 2px solid light-dark(#222, var(--site-ink));
   outline-offset: 8px;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .link:hover {
-    color: #1f1f1f !important;
+    color: light-dark(#1f1f1f, var(--site-ink)) !important;
   }
 
   .navigation:not([data-labels-hidden]) .link:hover .label {
@@ -131,8 +131,8 @@
     padding: 0 16px;
     border: 0;
     border-radius: 22px;
-    background: #fcfcfc;
-    color: #1f1f1f;
+    background: light-dark(#fcfcfc, var(--site-canvas));
+    color: light-dark(#1f1f1f, var(--site-ink));
     font-size: 13px !important;
     box-shadow:
       0 0 0 1px rgb(0 0 0 / 8%),
@@ -140,7 +140,7 @@
   }
 
   .menuButton span {
-    color: #6b6b6b;
+    color: light-dark(#6b6b6b, var(--site-heading));
     font-variant-numeric: tabular-nums;
   }
 
@@ -155,7 +155,7 @@
     overscroll-behavior: contain;
     padding: 8px;
     border-radius: 16px;
-    background: #fcfcfc;
+    background: light-dark(#fcfcfc, var(--site-canvas));
     box-shadow:
       0 0 0 1px rgb(0 0 0 / 7%),
       0 6px 24px rgb(0 0 0 / 10%);
@@ -172,11 +172,11 @@
     gap: 12px;
     padding: 10px;
     border-radius: 8px;
-    color: #6b6b6b !important;
+    color: light-dark(#6b6b6b, var(--site-heading)) !important;
   }
 
   .link[aria-current] {
-    background: #f0f0ee;
+    background: light-dark(#f0f0ee, var(--site-soft));
   }
 
   .tick {

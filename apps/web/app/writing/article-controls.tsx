@@ -9,6 +9,8 @@ import {
   Tick02Icon,
 } from "@hugeicons/core-free-icons"
 
+import { ThemeToggle } from "@/components/theme-toggle"
+
 import styles from "./article.module.css"
 
 export function ArticleControls({ pageUrl }: { pageUrl: string }) {
@@ -39,19 +41,22 @@ export function ArticleControls({ pageUrl }: { pageUrl: string }) {
           aria-hidden="true"
         />
       </Link>
-      <button
-        type="button"
-        className={styles.headerButton}
-        onClick={copyLink}
-        aria-label={copied ? "Article link copied" : "Copy article link"}
-      >
-        <HugeiconsIcon
-          icon={copied ? Tick02Icon : Link01Icon}
-          size={20}
-          strokeWidth={1.7}
-          aria-hidden="true"
-        />
-      </button>
+      <div className={styles.headerActions}>
+        <button
+          type="button"
+          className={styles.headerButton}
+          onClick={copyLink}
+          aria-label={copied ? "Article link copied" : "Copy article link"}
+        >
+          <HugeiconsIcon
+            icon={copied ? Tick02Icon : Link01Icon}
+            size={20}
+            strokeWidth={1.7}
+            aria-hidden="true"
+          />
+        </button>
+        <ThemeToggle />
+      </div>
       <span className={styles.srOnly} role="status">
         {copied ? "Article link copied" : ""}
       </span>

@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import { useThemeChange, useThemePreference } from "@/components/theme-provider"
 import Link from "next/link"
 import { createPortal } from "react-dom"
 import { useSelectedLayoutSegment } from "next/navigation"
@@ -45,7 +46,6 @@ import { InspirationsOrb } from "./inspirations-orb"
 import { useItemSounds } from "./use-item-sounds"
 import styles from "./inspirations.module.css"
 
-type Theme = "auto" | "light" | "dark"
 const description =
   "A collection of inspiring interfaces, component libraries, AI tools, and resources for bringing ideas to life."
 
@@ -441,7 +441,9 @@ export function Inspirations({ children }: { children: ReactNode }) {
       ),
     [catalogue]
   )
-  const [theme, setTheme] = usePreference("theme", "auto")
+  const preference = useThemePreference()
+  const { changeTheme: setTheme } = useThemeChange()
+  const theme = preference === "system" || !preference ? "auto" : preference
   const [view, setView] = usePreference("view", "list")
   const [sound, setSound] = usePreference("sound", "on")
   const pageRef = useRef<HTMLDivElement>(null)
@@ -464,11 +466,7 @@ export function Inspirations({ children }: { children: ReactNode }) {
     setSelected(resources[Math.floor(Math.random() * resources.length)] ?? null)
   }, [resources])
   const changeTheme = () =>
-    setTheme(
-      ({ auto: "light", light: "dark", dark: "auto" } as Record<Theme, Theme>)[
-        theme as Theme
-      ] ?? "auto"
-    )
+    setTheme(theme === "auto" ? "light" : theme === "light" ? "dark" : "system")
   const changeView = () => setView(grid ? "list" : "grid")
   const navigatePreview = (direction: number) => {
     const index = resources.findIndex(

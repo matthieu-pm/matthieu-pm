@@ -19,6 +19,8 @@ import {
   Tick02Icon,
 } from "@hugeicons/core-free-icons"
 
+import { ThemeToggle } from "@/components/theme-toggle"
+
 import styles from "./showcase.module.css"
 
 const command = "npx skills add matthieu-pm/great-ui"
@@ -97,19 +99,22 @@ export function HeaderControls({ pageUrl }: { pageUrl: string }) {
           aria-hidden="true"
         />
       </Link>
-      <button
-        type="button"
-        className={styles.headerButton}
-        onClick={copyLink}
-        aria-label={copied ? "Page link copied" : "Copy page link"}
-      >
-        <SwapIcon
-          active={copied}
-          activeIcon={Tick02Icon}
-          idleIcon={Link01Icon}
-          size={20}
-        />
-      </button>
+      <div className={styles.headerActions}>
+        <button
+          type="button"
+          className={styles.headerButton}
+          onClick={copyLink}
+          aria-label={copied ? "Page link copied" : "Copy page link"}
+        >
+          <SwapIcon
+            active={copied}
+            activeIcon={Tick02Icon}
+            idleIcon={Link01Icon}
+            size={20}
+          />
+        </button>
+        <ThemeToggle />
+      </div>
       <span className={styles.srOnly} role="status">
         {copied ? "Page link copied" : ""}
       </span>

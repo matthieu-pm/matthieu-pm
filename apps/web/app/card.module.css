@@ -4,9 +4,9 @@
 
   position: relative;
   isolation: isolate;
-  border: 1px solid #e5e5e2;
+  border: 1px solid light-dark(#e5e5e2, var(--site-line));
   border-radius: var(--card-radius);
-  background: #f6f6f4;
+  background: light-dark(#f6f6f4, var(--site-soft));
   box-shadow:
     0 1px 2px rgb(0 0 0 / 4%),
     0 5px 12px -7px rgb(0 0 0 / 16%);
@@ -16,9 +16,9 @@
   position: absolute;
   z-index: -1;
   inset: var(--card-shell-offset);
-  border: 1px solid #dfdfdc;
+  border: 1px solid light-dark(#dfdfdc, var(--site-line));
   border-radius: calc(var(--card-radius) - var(--card-shell-offset));
-  background: #fff;
+  background: light-dark(#fff, var(--site-surface));
   box-shadow: 0 1px 1px rgb(0 0 0 / 2%);
   content: "";
   pointer-events: none;

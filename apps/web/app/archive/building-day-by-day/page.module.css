@@ -1,6 +1,6 @@
 .activity {
-  --soft: #f4f4f2;
-  --faint: #e3e3e0;
+  --soft: light-dark(#f4f4f2, var(--site-soft));
+  --faint: light-dark(#e3e3e0, var(--site-line));
 
   margin-top: 40px;
 }

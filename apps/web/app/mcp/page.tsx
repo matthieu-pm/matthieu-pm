@@ -3,6 +3,8 @@ import Link from "next/link"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { ArrowTurnBackwardIcon } from "@hugeicons/core-free-icons"
 
+import { ThemeToggle } from "@/components/theme-toggle"
+
 import { mcpEndpoint } from "@/lib/mcp-metadata"
 import { CopyValue } from "./copy-value"
 import styles from "./mcp.module.css"
@@ -22,14 +24,17 @@ export default function McpPage() {
   return (
     <main className={styles.page}>
       <div className={styles.column}>
-        <Link className={styles.back} href="/" aria-label="Return home">
-          <HugeiconsIcon
-            icon={ArrowTurnBackwardIcon}
-            size={20}
-            strokeWidth={1.7}
-            aria-hidden="true"
-          />
-        </Link>
+        <nav className={styles.headerControls} aria-label="Page actions">
+          <Link className={styles.back} href="/" aria-label="Return home">
+            <HugeiconsIcon
+              icon={ArrowTurnBackwardIcon}
+              size={20}
+              strokeWidth={1.7}
+              aria-hidden="true"
+            />
+          </Link>
+          <ThemeToggle />
+        </nav>
 
         <header className={styles.hero}>
           <h1>
