@@ -6,7 +6,6 @@
   --soft: #f3f3f3;
   --section-gap: 96px;
 
-  position: relative;
   min-height: 100svh;
   background: var(--paper);
   color: var(--ink);
@@ -213,7 +212,6 @@
 
 .projectsSection h2 {
   margin-bottom: 12px;
-  color: var(--muted);
 }
 
 .projectList {
@@ -349,7 +347,7 @@
   gap: 10px;
   margin-inline: -8px;
   padding: 2px 8px;
-  border-radius: 6px;
+  border-radius: 12px;
   color: var(--ink);
   text-decoration: none;
   transition: background-color 160ms ease;
@@ -698,15 +696,6 @@
 .footerSocials a:hover {
   color: #000;
   text-decoration-color: currentColor;
-}
-
-.footerResources {
-  position: absolute;
-  right: 24px;
-  bottom: 8px;
-  left: 24px;
-  max-width: 644px;
-  margin-inline: auto;
 }
 
 .footerSignatureFrame {

@@ -405,7 +405,7 @@ export default function Page() {
 
       <footer className={styles.footer}>
         <div className={styles.footerLinks}>
-          <nav className={styles.footerSocials} aria-label="Social profiles">
+          <nav className={styles.footerSocials} aria-label="Footer links">
             <a
               href="https://x.com/matthieu_pm"
               target="_blank"
@@ -434,6 +434,8 @@ export default function Page() {
             >
               Medium
             </a>
+            <Link href="/mcp">MCP</Link>
+            <a href="/llms.txt">llms.txt</a>
           </nav>
         </div>
         <span className={styles.footerSignatureFrame}>
@@ -445,13 +447,6 @@ export default function Page() {
             height={213}
           />
         </span>
-        <nav
-          className={`${styles.footerSocials} ${styles.footerResources}`}
-          aria-label="Site resources"
-        >
-          <Link href="/mcp">MCP</Link>
-          <a href="/llms.txt">llms.txt</a>
-        </nav>
       </footer>
     </main>
   )
