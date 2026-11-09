@@ -210,19 +210,22 @@
   letter-spacing: -0.012em;
 }
 
-.section .projectsTitle {
-  margin-bottom: 4px;
+.projectsSection {
+  padding-block: 24px 28px;
+  border-block: 1px solid var(--faint);
 }
 
-.projectsDescription {
-  margin: 0 0 20px;
+.projectsSection h2 {
+  margin-bottom: 16px;
   color: var(--muted);
 }
 
-.projectGrid {
+.projectList {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .activityHeading {
@@ -343,33 +346,31 @@
   font-size: 14px;
 }
 
-.projectCard {
-  composes: card from "./card.module.css";
-
-  display: flex;
-  min-height: 238px;
-  flex-direction: column;
-  justify-content: space-between;
+.projectRow {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+  min-height: 44px;
+  align-items: center;
+  gap: 12px;
+  margin-inline: -8px;
+  padding: 8px;
+  border-radius: 6px;
   color: var(--ink);
-  padding: 26px;
   text-decoration: none;
-  transition:
-    box-shadow 200ms cubic-bezier(0, 0, 0.2, 1),
-    transform 200ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 160ms ease;
 }
 
-.projectCard:hover {
-  box-shadow:
-    0 1px 2px rgb(0 0 0 / 5%),
-    0 7px 16px -8px rgb(0 0 0 / 20%);
-  transform: translateY(-1px);
+@media (hover: hover) and (pointer: fine) {
+  .projectRow:hover {
+    background: var(--soft);
+  }
+
+  .projectRow:hover .projectStack {
+    color: var(--ink);
+  }
 }
 
-.projectCard:hover::before {
-  border-color: #d8d8d5;
-}
-
-.projectCard:focus-visible,
+.projectRow:focus-visible,
 .contactBar a:focus-visible,
 .intro a:focus-visible,
 .emailButton:focus-visible,
@@ -380,47 +381,49 @@
 
 .projectMark {
   display: grid;
-  min-width: 52px;
-  min-height: 52px;
-  place-self: center;
+  width: 24px;
+  height: 24px;
   place-items: center;
-  color: #2c2c2c;
-  font-size: 22px;
-  font-weight: 520;
-  letter-spacing: -0.06em;
-}
-
-.projectVisualMark {
-  width: 100%;
-  flex: 1;
 }
 
 .projectMarkImage {
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
-.oklchProjectMarkImage {
-  width: 96px;
-  height: 96px;
+.projectText {
+  min-width: 0;
+  line-height: 24px;
 }
 
-.projectCard strong,
-.projectCard small {
-  display: block;
-}
-
-.projectCard strong {
-  font-size: 16px;
+.projectText strong {
   font-weight: 500;
 }
 
-.projectCard small {
-  margin-top: 2px;
+.projectSeparator,
+.projectDescription {
   color: var(--muted);
-  font-size: 15px;
-  line-height: 24px;
+}
+
+.projectStack {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 8px;
+  color: var(--muted);
+  transition: color 160ms ease;
+}
+
+.technologyIcon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: currentColor;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
 }
 
 .rowList {
@@ -684,12 +687,28 @@
     padding: 48px 24px;
   }
 
-  .projectGrid {
-    grid-template-columns: 1fr;
+  .projectRow {
+    align-items: start;
+    gap: 10px;
   }
 
-  .projectCard {
-    min-height: 250px;
+  .projectSeparator {
+    display: none;
+  }
+
+  .projectDescription {
+    display: block;
+  }
+
+  .projectStack {
+    padding-top: 3px;
+    padding-left: 0;
+    gap: 6px;
+  }
+
+  .technologyIcon {
+    width: 16px;
+    height: 16px;
   }
 
   .contactBar {

@@ -8,6 +8,66 @@ import styles from "./page.module.css"
 const contactButtonLabel = "Get in touch"
 const contactButtonStaggerMs = 28
 
+const technologies = {
+  nextdotjs: "Next.js",
+  react: "React",
+  typescript: "TypeScript",
+  tauri: "Tauri",
+  convex: "Convex",
+  vite: "Vite",
+}
+
+const projects: {
+  name: string
+  description: string
+  href: string
+  logo: string | null
+  stack: (keyof typeof technologies)[]
+}[] = [
+  {
+    name: "My collection",
+    description: "Design tools and inspiration",
+    href: "/inspirations",
+    logo: null,
+    stack: ["nextdotjs", "react", "typescript"],
+  },
+  {
+    name: "Atlas",
+    description: "AI-powered exam practice",
+    href: "https://atlasapp.fr",
+    logo: "/logos/atlas.svg",
+    stack: ["nextdotjs", "convex", "react"],
+  },
+  {
+    name: "Atrium",
+    description: "AI-powered CRM",
+    href: "https://atrium-landing-tau.vercel.app/",
+    logo: "/logos/atrium.png",
+    stack: ["nextdotjs", "convex", "react"],
+  },
+  {
+    name: "Carbon",
+    description: "One app for your coding agents",
+    href: "https://carbonhq.sh",
+    logo: "/logos/carbon.svg",
+    stack: ["tauri", "react", "typescript"],
+  },
+  {
+    name: "Forge",
+    description: "Issue tracking with AI agents",
+    href: "https://forge-app-mauve.vercel.app",
+    logo: "/logos/forge.svg",
+    stack: ["vite", "react", "typescript"],
+  },
+  {
+    name: "Researchie",
+    description: "AI chat research form",
+    href: "https://survey.matthieu-pm.chatgpt.site",
+    logo: "/logos/researchie.svg",
+    stack: ["nextdotjs", "react", "typescript"],
+  },
+]
+
 const capabilities = [
   {
     path: "/great-ui",
@@ -94,9 +154,8 @@ export default function Page() {
           </a>
           . I bring product thinking, design, and code together to turn ideas
           into useful, thoughtful experiences.
-          <br />
-          I enjoy understanding what people need, deciding what’s worth building,
-          and shaping the details that make it feel right.
+          <br />I enjoy understanding what people need, deciding what’s worth
+          building, and shaping the details that make it feel right.
         </p>
         <p>
           Previously, I worked on growth and product design at{" "}
@@ -117,8 +176,8 @@ export default function Page() {
           >
             <strong>other</strong>
           </a>{" "}
-          companies, and I&apos;m open for a Product Manager or Design Engineer position
-          starting June 2027.
+          companies, and I&apos;m open for a Product Manager or Design Engineer
+          position starting June 2027.
         </p>
         <p>
           You can reach me at{" "}
@@ -147,142 +206,60 @@ export default function Page() {
         </p>
       </section>
 
-      <section className={styles.section} aria-labelledby="work-title">
-        <h2 id="work-title" className={styles.projectsTitle}>
-          Projects
-        </h2>
-        <p className={styles.projectsDescription}>
-          Each project is my own work, from product decisions and design to code.
-        </p>
-        <div className={styles.projectGrid}>
-          <Link className={styles.projectCard} href="/inspirations">
-            <span
-              className={`${styles.projectMark} ${styles.projectVisualMark}`}
-              aria-hidden="true"
-            >
-              <InspirationsOrb size={80} interactive={false} />
-            </span>
-            <span>
-              <strong>My collection</strong>
-              <small>Design tools and inspiration</small>
-            </span>
-          </Link>
-          <a
-            className={styles.projectCard}
-            href="https://atlasapp.fr"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span
-              className={`${styles.projectMark} ${styles.projectVisualMark}`}
-              aria-hidden="true"
-            >
-              <Image
-                className={styles.projectMarkImage}
-                src="/logos/atlas.svg"
-                alt=""
-                width={80}
-                height={80}
-              />
-            </span>
-            <span>
-              <strong>Atlas</strong>
-              <small>AI-powered exam practice</small>
-            </span>
-          </a>
-          <a
-            className={styles.projectCard}
-            href="https://atrium-landing-tau.vercel.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span
-              className={`${styles.projectMark} ${styles.projectVisualMark}`}
-              aria-hidden="true"
-            >
-              <Image
-                className={styles.projectMarkImage}
-                src="/logos/atrium.png"
-                alt=""
-                width={80}
-                height={80}
-              />
-            </span>
-            <span>
-              <strong>Atrium</strong>
-              <small>AI-powered CRM</small>
-            </span>
-          </a>
-          <a
-            className={styles.projectCard}
-            href="https://carbonhq.sh"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span
-              className={`${styles.projectMark} ${styles.projectVisualMark}`}
-              aria-hidden="true"
-            >
-              <Image
-                className={styles.projectMarkImage}
-                src="/logos/carbon.svg"
-                alt=""
-                width={80}
-                height={80}
-              />
-            </span>
-            <span>
-              <strong>Carbon</strong>
-              <small>One app for your coding agents</small>
-            </span>
-          </a>
-          <a
-            className={styles.projectCard}
-            href="https://forge-app-mauve.vercel.app"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span
-              className={`${styles.projectMark} ${styles.projectVisualMark}`}
-              aria-hidden="true"
-            >
-              <Image
-                className={styles.projectMarkImage}
-                src="/logos/forge.svg"
-                alt=""
-                width={80}
-                height={80}
-              />
-            </span>
-            <span>
-              <strong>Forge</strong>
-              <small>Issue tracking with AI agents</small>
-            </span>
-          </a>
-          <a
-            className={styles.projectCard}
-            href="https://survey.matthieu-pm.chatgpt.site"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span
-              className={`${styles.projectMark} ${styles.projectVisualMark}`}
-              aria-hidden="true"
-            >
-              <Image
-                className={styles.projectMarkImage}
-                src="/logos/researchie.svg"
-                alt=""
-                width={80}
-                height={80}
-              />
-            </span>
-            <span>
-              <strong>Researchie</strong>
-              <small>AI chat research form</small>
-            </span>
-          </a>
-        </div>
+      <section
+        className={`${styles.section} ${styles.projectsSection}`}
+        aria-labelledby="work-title"
+      >
+        <h2 id="work-title">Projects</h2>
+        <ul className={styles.projectList}>
+          {projects.map((project) => (
+            <li key={project.name}>
+              <Link
+                className={styles.projectRow}
+                href={project.href}
+                target={project.href.startsWith("/") ? undefined : "_blank"}
+                rel={project.href.startsWith("/") ? undefined : "noreferrer"}
+              >
+                <span className={styles.projectMark} aria-hidden="true">
+                  {project.logo ? (
+                    <Image
+                      className={styles.projectMarkImage}
+                      src={project.logo}
+                      alt=""
+                      width={24}
+                      height={24}
+                    />
+                  ) : (
+                    <InspirationsOrb size={24} interactive={false} />
+                  )}
+                </span>
+                <span className={styles.projectText}>
+                  <strong>{project.name}</strong>
+                  <span className={styles.projectSeparator} aria-hidden="true">
+                    {" ~ "}
+                  </span>
+                  <span className={styles.projectDescription}>
+                    {project.description}
+                  </span>
+                </span>
+                <span className={styles.projectStack}>
+                  {project.stack.map((technology) => (
+                    <span
+                      className={styles.technologyIcon}
+                      key={technology}
+                      role="img"
+                      aria-label={technologies[technology]}
+                      title={technologies[technology]}
+                      style={{
+                        maskImage: `url(/logos/technologies/${technology}.svg)`,
+                      }}
+                    />
+                  ))}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className={styles.section} aria-labelledby="capabilities-title">
@@ -410,7 +387,11 @@ export default function Page() {
       <footer className={styles.footer}>
         <div className={styles.footerLinks}>
           <nav className={styles.footerSocials} aria-label="Social profiles">
-            <a href="https://x.com/matthieu_pm" target="_blank" rel="noreferrer">
+            <a
+              href="https://x.com/matthieu_pm"
+              target="_blank"
+              rel="noreferrer"
+            >
               X
             </a>
             <a
