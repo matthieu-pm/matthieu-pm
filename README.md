@@ -25,9 +25,8 @@ The full text of every public page is available in matching `/llms.txt` and
 `/llms-full.txt` exports, linked from the summary index at `/llms.md`. They also
 include project profiles covering technology, architecture, features, product
 decisions, and implementation boundaries. The editable profile source is
-`apps/web/content/project-profiles.md`, with the source files used for each
-description recorded in its source-basis notes. Review it against the owning
-project folders when their implementation changes.
+`apps/web/content/project-profiles.md`. Review it against the owning project
+folders when their implementation changes.
 
 To refresh the exports after changing site content or profiles, start the
 local development server and run `bun run --cwd apps/web generate:llms-full`.

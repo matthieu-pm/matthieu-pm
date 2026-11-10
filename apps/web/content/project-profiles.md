@@ -30,8 +30,6 @@ The same catalogue data feeds the public read-only MCP server. Its collection se
 
 The content is curated rather than automatically scraped: short descriptions explain what each resource helps someone do. Categories follow function, and a resource can belong to more than one category; global search deduplicates destinations. Grid and list are two ways to browse the same records, so changing presentation does not change the resource set. Dense, restrained catalogue typography keeps scanning efficient, while expressive artwork gives the directory an identity. Preview and sound remain optional aids to exploration. Accounts, bookmarks, and submission workflows are outside the current browsing product. External sites remain references; the agent interfaces do not fetch them on the visitor's behalf.
 
-Source basis: `apps/web/app/inspirations/design.md`, `inspirations.tsx`, `catalogues.ts`, `catalogue.json`, `data/*.json`, `apps/web/lib/mcp-content.ts`, `mcp-server.ts`, `webmcp.ts`, and `apps/web/proxy.ts` in the portfolio repository.
-
 ## Atlas
 
 Website: https://atlasapp.fr
@@ -59,8 +57,6 @@ Authenticated Next.js API routes coordinate document extraction and AI generatio
 ### Product decisions
 
 The generation prompts explicitly constrain questions, answers, and explanations to the uploaded material. This keeps practice tied to the learner's course rather than a generic subject summary; it is a generation constraint, not a guarantee that model output is error-free. Difficulty levels and explanations support repeated practice, while analytics turn results into a next study action. Progress and social features give learners reasons to return without replacing the study task. Sharing and cloning make a generated course reusable, with controls over access and copying. Separating analysis from question generation and using a validated fallback balances generation cost, latency, and completeness. Storage and token allowances make expensive generation visible and bounded. No measured improvement in grades or learning outcomes is claimed.
-
-Source basis: `AGENTS.md`, `CHANGELOG.md`, `package.json`, `app/layout.tsx`, `components/convex-client-provider.tsx`, `convex/schema.ts`, `app/api/generate-course/route.ts`, `lib/ai/course-generator.ts`, `lib/ai/openai-client.ts`, `lib/ai/prompts.ts`, and `lib/leveling.ts` in the Atlas repository.
 
 ## Atrium
 
@@ -95,8 +91,6 @@ Objects define record types; lists define working sets. Keeping those concepts s
 
 The code documents concrete limits: reporting changes require structured configuration; workflow edits need a grounded target and structured changes; some list/view actions depend on active UI context; direct deal enrichment is not supported by the enrichment specialist. Integration availability and enabled workflows depend on the workspace configuration.
 
-Source basis: `README.md`, `package.json`, `convex/schema.ts`, `docs/user/objects-and-lists.md`, `docs/user/custom-objects.md`, `docs/ai/pulse-specialist-migration.md`, `src/lib/ai/pulse-execution-rollout.ts`, `assistant-models.ts`, and the Companies page/table implementation in the Atrium repository.
-
 ## Carbon
 
 Website: https://carbonhq.sh
@@ -126,8 +120,6 @@ The native backend owns processes, local files, Git operations, and services nee
 The session is the unit of work: conversation, branch, worktree, browser, and review context stay together. Separate worktrees make parallel tasks easier to inspect and reduce accidental interference between branches. Existing agent CLIs and their configurations remain the execution foundation, while Carbon supplies a consistent desktop workspace around them. Local transcript storage keeps work resumable and inspectable without requiring Carbon to host conversations; agent providers and explicitly used integrations still receive the requests needed for their services. The CLI makes coordination available to agents as well as people. Local speech processing keeps dictation audio on the machine.
 
 Release status and boundaries matter: the repository records a macOS beta release. Pages/Spaces code is feature-gated and disabled by default, so it should not be presented as a generally available feature. Provider capabilities and edit/replay behavior vary; for example, latest-prompt replay is restricted to eligible text-only Codex turns.
-
-Source basis: `README.md`, `THIRD-PARTY-LICENSES.md`, `apps/desktop/package.json`, `apps/desktop/CHANGELOG.md`, `apps/desktop/src-tauri/Cargo.toml`, `src-tauri/src/settings.rs`, and `apps/docs/content/reference/data.mdx` and `privacy.mdx` in the Carbon repository.
 
 ## Forge
 
@@ -161,8 +153,6 @@ Human edits and agent actions use the same canonical product services so permiss
 
 The repository labels the current build unreleased. Some modules have implemented server-backed paths but require rollout and deployment qualification. Signals and Reviews are restricted to explicitly granted, fictional read-only previews. Inbound external MCP is documented as gated work. Resources, Loops, and other optional modules should not be described as universally enabled merely because their code exists. Provider qualification and hosted acceptance are separate from local or fixture tests.
 
-Source basis: `README.md`, `apps/forge/package.json`, `docs/operations/canonical-issues-and-server-storage.md`, `bounded-issue-queries.md`, `shared-personal-issue-views.md`, `background-jobs.md`, `feature-gates.md`, `docs/agent-execution-policy.md`, `docs/operations/team-resources-and-loops.md`, and `docs/documents.md` in the Forge repository.
-
 ## Researchie
 
 Website: https://survey.matthieu-pm.chatgpt.site
@@ -192,5 +182,3 @@ A versioned questionnaire in `lib/survey.ts` defines question wording, answer ty
 The chat presentation makes a structured form approachable, while fixed wording and deterministic branches keep the research instrument reviewable and comparable. Follow-ups stay anchored to one recalled task before asking broader preferences, which helps preserve the participant's own account. Earlier-answer edits invalidate later answers rather than silently retaining responses to an inapplicable branch. Account-free participation reduces entry friction; authenticated researcher access keeps management and export separate from participation. Notification consent is separate from research participation and does not change the survey answers.
 
 This is a conversational survey, not a live generative interviewer. The protocol identifies it as an owner-private pilot: recruitment information and retention arrangements require finalization before broader recruitment. Recalled behavior and self-reported effort do not establish observed performance, causal effects, predictive validity, or validated trust scores. Event timing includes interruptions. The tab-scoped resume token can be lost when the tab closes. Publication-update email delivery is not automated. These boundaries are part of the product and research design, not measured study findings.
-
-Source basis: `behavioral-study/README.md`, `package.json`, `docs/protocol.md`, `docs/survey-instrument.md`, `lib/survey.ts`, `components/conversational-survey.tsx`, `app/api/survey/route.ts`, `db/schema.ts`, and `scripts/run-framework.mjs` in the Researchie project folder.
