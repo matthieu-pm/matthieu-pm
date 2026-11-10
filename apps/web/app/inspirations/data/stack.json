@@ -81,21 +81,24 @@
     "description": "A programming language for reliable and efficient software.",
     "href": "https://rust-lang.org/",
     "icon": "/logos/technologies/rust.svg",
-    "preview": "/inspirations/stack/rust-preview.webp"
+    "preview": "/inspirations/stack/rust-preview.webp",
+    "previewVideo": "/inspirations/stack/rust-preview.mp4"
   },
   {
     "name": "Tauri",
     "description": "Build cross-platform apps with Rust and web technologies.",
     "href": "https://tauri.app/",
     "icon": "/logos/technologies/tauri.svg",
-    "preview": "/inspirations/stack/tauri-preview.webp"
+    "preview": "/inspirations/stack/tauri-preview.webp",
+    "previewVideo": "/inspirations/stack/tauri-preview.mp4"
   },
   {
     "name": "React",
     "description": "A library for building web and native user interfaces.",
     "href": "https://react.dev/",
     "icon": "/logos/technologies/react.svg",
-    "preview": "/inspirations/stack/react-preview.webp"
+    "preview": "/inspirations/stack/react-preview.webp",
+    "previewVideo": "/inspirations/stack/react-preview.mp4"
   },
   {
     "name": "Next.js",

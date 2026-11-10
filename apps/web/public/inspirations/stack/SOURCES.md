@@ -25,3 +25,4 @@ Retrieved 10 November 2026:
 - `tauri-preview.webp`: Screenshot of https://tauri.app/.
 - `react-preview.webp`: Screenshot of https://react.dev/.
 - Rust, Tauri, and React icons reuse `/logos/technologies/` assets.
+- `rust-preview.mp4`, `tauri-preview.mp4`, and `react-preview.mp4`: Eight-second browser recordings of the respective official websites above, captured at 1440×810 on 10 November 2026. Silent H.264 clips scroll through the homepage and return to the top.
