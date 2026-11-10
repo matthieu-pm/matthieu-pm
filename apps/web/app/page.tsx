@@ -39,7 +39,7 @@ const projects: {
     href: "/inspirations",
     logo: null,
     video: "/videos/inspirations.mp4",
-    stack: ["nextdotjs", "bun", "modelcontextprotocol"],
+    stack: ["bun", "nextdotjs", "modelcontextprotocol"],
   },
   {
     name: "Atlas",
@@ -47,7 +47,7 @@ const projects: {
     href: "https://atlasapp.fr",
     logo: "/logos/atlas.svg",
     video: "/videos/atlas.mp4?v=5",
-    stack: ["nextdotjs", "convex", "modelcontextprotocol"],
+    stack: ["nextdotjs", "react", "convex"],
   },
   {
     name: "Atrium",
@@ -55,7 +55,7 @@ const projects: {
     href: "https://atrium-landing-tau.vercel.app/",
     logo: "/logos/atrium.svg",
     video: "/videos/atrium.mp4?v=6",
-    stack: ["nextdotjs", "orpc", "typescript"],
+    stack: ["typescript", "orpc", "nextdotjs"],
   },
   {
     name: "Carbon",
@@ -63,7 +63,7 @@ const projects: {
     href: "https://carbonhq.sh",
     logo: "/logos/carbon.svg",
     video: "/videos/carbon.mp4",
-    stack: ["tauri", "typescript", "rust"],
+    stack: ["rust", "typescript", "tauri"],
   },
   {
     name: "Forge",
