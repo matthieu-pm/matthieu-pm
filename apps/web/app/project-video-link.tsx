@@ -31,7 +31,7 @@ export function ProjectVideoLink({
   const open = (link: HTMLAnchorElement) => {
     keepOpen()
     const rect = link.getBoundingClientRect()
-    const width = Math.min(300, window.innerWidth - 32)
+    const width = Math.min(480, window.innerWidth - 32)
     const height = ((width - 12) * 9) / 16 + 12
     const fitsRight = rect.right + 12 + width <= window.innerWidth - 16
     const fitsLeft = rect.left - 12 - width >= 16

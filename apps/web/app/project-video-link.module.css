@@ -1,7 +1,7 @@
 .preview {
   position: fixed;
   z-index: 50;
-  width: min(300px, calc(100vw - 32px));
+  width: min(480px, calc(100vw - 32px));
   padding: 6px;
   border-radius: 14px;
   background: var(--site-surface);
