@@ -9,6 +9,7 @@ import {
 } from "../app/inspirations/catalogues"
 import stack from "../app/inspirations/data/stack.json"
 import { siteConfig } from "../app/site-config"
+import { contentSignal } from "../lib/content-policy"
 
 // Run against the local site so the export includes the current checkout.
 const origin = new URL(process.argv[2] ?? "http://localhost:3001")
@@ -130,6 +131,8 @@ const output =
     `# ${siteConfig.name} — Full website content`,
     `> Complete text of the ${sections.length} public pages at ${siteConfig.url}, including the portfolio, collection, skills, writing, guides, and archives.`,
     "External projects and collection resources are linked; their websites are not included. Interactive examples are represented by their initial text and accompanying explanations.",
+    "## Content usage policy",
+    `Content-Signal: ${contentSignal}`,
     "## Contents",
     sections.map((page) => `- [${page.title}](${page.url})`).join("\n"),
     ...sections.map(

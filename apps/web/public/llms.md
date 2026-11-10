@@ -8,6 +8,10 @@ The canonical website is https://matthieu.pm. The links below include portfolio 
 
 - [Full website content](https://matthieu.pm/llms-full.txt): Complete text of all public pages in one file.
 
+## Content usage policy
+
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
 ## Portfolio and contact
 
 - [Homepage](https://matthieu.pm/): Biography, selected projects, skills, writing, and contact information.

@@ -4,6 +4,10 @@
 
 External projects and collection resources are linked; their websites are not included. Interactive examples are represented by their initial text and accompanying explanations.
 
+## Content usage policy
+
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
 ## Contents
 
 - [Matthieu Duchatellier](https://matthieu.pm)

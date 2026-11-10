@@ -1,11 +1,12 @@
 import { siteConfig } from "../site-config"
+import { contentSignal } from "../../lib/content-policy"
 
 export const dynamic = "force-static"
 
 export function GET() {
   const content = [
     "User-Agent: *",
-    "Content-Signal: ai-train=no, search=yes, ai-input=no",
+    `Content-Signal: ${contentSignal}`,
     "Allow: /",
     "",
     `Sitemap: ${siteConfig.url}/sitemap.xml`,
