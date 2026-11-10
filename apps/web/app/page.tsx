@@ -39,6 +39,7 @@ const projects: {
     description: "Prepare your exams with AI-powered MCQs",
     href: "https://atlasapp.fr",
     logo: "/logos/atlas.svg",
+    video: "/videos/atlas.mp4",
     stack: ["nextdotjs", "convex", "react"],
   },
   {
@@ -46,6 +47,7 @@ const projects: {
     description: "Revenue teams meet agentic CRM workflows",
     href: "https://atrium-landing-tau.vercel.app/",
     logo: "/logos/atrium.svg",
+    video: "/videos/atrium.mp4",
     stack: ["nextdotjs", "convex", "react"],
   },
   {
@@ -61,6 +63,7 @@ const projects: {
     description: "An agentic issue tracking workspace",
     href: "https://forge-app-mauve.vercel.app",
     logo: "/logos/forge.svg",
+    video: "/videos/forge.mp4",
     stack: ["vite", "react", "typescript"],
   },
   {
@@ -68,6 +71,7 @@ const projects: {
     description: "Agentic research forms",
     href: "https://survey.matthieu-pm.chatgpt.site",
     logo: "/logos/researchie.svg",
+    video: "/videos/researchie.mp4",
     stack: ["nextdotjs", "react", "typescript"],
   },
 ]
