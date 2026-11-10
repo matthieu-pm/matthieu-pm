@@ -1,15 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Suspense, type CSSProperties } from "react"
+import { Suspense } from "react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { ActivityBarSkeleton } from "./activity-bar"
 import { CodingActivity } from "./coding-activity"
 import { EmailCopy } from "./email-copy"
 import { InspirationsOrb } from "./inspirations/inspirations-orb"
 import styles from "./page.module.css"
-
-const contactButtonLabel = "Get in touch"
-const contactButtonStaggerMs = 28
 
 const technologies = {
   nextdotjs: "Next.js",
@@ -307,54 +304,6 @@ export default function Page() {
               <p>A year of GitLab activity, drawn as an interactive skyline.</p>
             </div>
           </Link>
-        </div>
-      </section>
-
-      <section
-        className={`${styles.section} ${styles.contactSection}`}
-        aria-labelledby="contact-title"
-      >
-        <h2 id="contact-title">Let&apos;s talk</h2>
-        <p>
-          I&apos;m open to product opportunities where I can bring together
-          strategy, design, growth, and AI.
-        </p>
-        <div className={styles.contactBar}>
-          <span className={styles.emailIdentity}>
-            <span>mattduchatellier@gmail.com</span>
-          </span>
-          <a
-            href="mailto:mattduchatellier@gmail.com"
-            aria-label={contactButtonLabel}
-          >
-            <span className={styles.contactButtonLabel} aria-hidden="true">
-              {Array.from(contactButtonLabel).map((character, index) => {
-                const visibleCharacter =
-                  character === " " ? "\u00A0" : character
-
-                return (
-                  <span
-                    className={styles.contactButtonLetter}
-                    data-letter={visibleCharacter}
-                    style={
-                      {
-                        "--letter-delay-in": `${
-                          index * contactButtonStaggerMs
-                        }ms`,
-                        "--letter-delay-out": `${
-                          (contactButtonLabel.length - index - 1) *
-                          contactButtonStaggerMs
-                        }ms`,
-                      } as CSSProperties
-                    }
-                    key={`${character}-${index}`}
-                  >
-                    {visibleCharacter}
-                  </span>
-                )
-              })}
-            </span>
-          </a>
         </div>
       </section>
 

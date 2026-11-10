@@ -113,8 +113,7 @@
 }
 
 .intro a,
-.emailButton,
-.contactNote a {
+.emailButton {
   color: var(--ink);
   text-decoration-line: underline;
   text-decoration-color: #a5a5a5;
@@ -124,10 +123,6 @@
   transition:
     color 160ms ease,
     text-decoration-color 160ms ease;
-}
-
-.contactNote a {
-  font-weight: var(--font-weight-medium);
 }
 
 .intro a,
@@ -196,8 +191,7 @@
 }
 
 .intro a:hover,
-.emailButton:hover,
-.contactNote a:hover {
+.emailButton:hover {
   color: var(--site-hover);
   text-decoration-color: var(--site-ink);
 }
@@ -402,10 +396,8 @@
 }
 
 .projectRow:focus-visible,
-.contactBar a:focus-visible,
 .intro a:focus-visible,
-.emailButton:focus-visible,
-.contactNote a:focus-visible {
+.emailButton:focus-visible {
   outline: 2px solid var(--site-ink);
   outline-offset: 4px;
 }
@@ -519,98 +511,6 @@
   line-height: 24px;
 }
 
-.contactSection > p {
-  margin: 0;
-  color: var(--muted);
-}
-
-.contactBar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-top: 24px;
-  border: 1px solid var(--faint);
-  border-radius: 999px;
-  background: var(--site-surface);
-  box-shadow:
-    0 1px 2px rgb(0 0 0 / 3%),
-    inset 0 0 0 1px rgb(0 0 0 / 1%);
-  line-height: 22px;
-  padding: 3px 3px 3px 14px;
-}
-
-.contactBar > span {
-  min-width: 0;
-  overflow: hidden;
-  color: var(--muted);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emailIdentity {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.emailIdentity > span {
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.contactBar a {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  gap: 6px;
-  border-radius: 999px;
-  background: var(--site-strong);
-  color: var(--site-on-strong);
-  padding: 4px 14px;
-  text-decoration: none;
-  transition: background-color 160ms ease;
-}
-
-.contactButtonLabel {
-  display: inline-flex;
-  height: 22px;
-  overflow: hidden;
-}
-
-.contactButtonLetter {
-  position: relative;
-  display: inline-block;
-  height: 22px;
-  line-height: 22px;
-  transform: translateY(0);
-  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: var(--letter-delay-out);
-  will-change: transform;
-}
-
-.contactButtonLetter::after {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  content: attr(data-letter);
-}
-
-.contactBar a:hover .contactButtonLetter {
-  transform: translateY(-100%);
-  transition-delay: var(--letter-delay-in);
-}
-
-.contactBar a:hover {
-  background: var(--site-hover);
-}
-
-.contactSection .contactNote {
-  margin-top: 18px;
-  font-size: 14px;
-}
-
 .footer {
   position: relative;
   display: flex;
@@ -702,23 +602,6 @@
   .technologyIcon {
     width: 16px;
     height: 16px;
-  }
-
-  .contactBar {
-    align-items: stretch;
-    border-radius: 18px;
-    flex-direction: column;
-    padding: 6px;
-  }
-
-  .contactBar > span {
-    padding: 3px 4px;
-  }
-
-  .contactBar a {
-    min-height: 44px;
-    justify-content: center;
-    text-align: center;
   }
 
   .footerSocials {

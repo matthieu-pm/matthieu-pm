@@ -97,12 +97,6 @@ A year of GitLab activity, drawn as an interactive skyline.
 
 https://matthieu.pm/archive/building-day-by-day
 
-## Let's talk
-
-I'm open to product opportunities where I can bring together strategy, design, growth, and AI.
-
- mattduchatellier@gmail.com [Get in touch](<mailto:mattduchatellier@gmail.com>)
-
  ![Matthieu Duchatellier signature](<https://matthieu.pm/_next/image?url=%2Fimages%2Fsignature-matthieu.webp&w=640&q=75>)
 
 ---
