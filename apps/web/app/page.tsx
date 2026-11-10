@@ -6,6 +6,7 @@ import { ActivityBarSkeleton } from "./activity-bar"
 import { CodingActivity } from "./coding-activity"
 import { EmailCopy } from "./email-copy"
 import { InspirationsOrb } from "./inspirations/inspirations-orb"
+import { ProjectVideoLink } from "./project-video-link"
 import styles from "./page.module.css"
 
 const technologies = {
@@ -22,6 +23,7 @@ const projects: {
   description: string
   href: string
   logo: string | null
+  video?: string
   stack: (keyof typeof technologies)[]
 }[] = [
   {
@@ -50,6 +52,7 @@ const projects: {
     description: "A desktop home for your coding agents",
     href: "https://carbonhq.sh",
     logo: "/logos/carbon.svg",
+    video: "/videos/carbon.mp4",
     stack: ["tauri", "react", "typescript"],
   },
   {
@@ -176,14 +179,15 @@ export default function Page() {
       >
         <h2 id="work-title">Tools and apps I built</h2>
         <ul className={styles.projectList}>
-          {projects.map((project) => (
-            <li key={project.name}>
-              <Link
-                className={styles.projectRow}
-                href={project.href}
-                target={project.href.startsWith("/") ? undefined : "_blank"}
-                rel={project.href.startsWith("/") ? undefined : "noreferrer"}
-              >
+          {projects.map((project) => {
+            const linkProps = {
+              className: styles.projectRow,
+              href: project.href,
+              target: project.href.startsWith("/") ? undefined : "_blank",
+              rel: project.href.startsWith("/") ? undefined : "noreferrer",
+            }
+            const content = (
+              <>
                 <span className={styles.projectMark} aria-hidden="true">
                   {project.logo ? (
                     <Image
@@ -239,9 +243,20 @@ export default function Page() {
                     </svg>
                   </span>
                 </span>
-              </Link>
-            </li>
-          ))}
+              </>
+            )
+            return (
+              <li key={project.name}>
+                {project.video ? (
+                  <ProjectVideoLink {...linkProps} videoSrc={project.video}>
+                    {content}
+                  </ProjectVideoLink>
+                ) : (
+                  <Link {...linkProps}>{content}</Link>
+                )}
+              </li>
+            )
+          })}
         </ul>
       </section>
 
