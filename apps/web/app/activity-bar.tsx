@@ -11,7 +11,10 @@ import {
 import { Cancel01Icon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 import type { ActivityWeek, CodingActivityData } from "@/lib/coding-activity"
-import type { ActivityDetails } from "@/lib/activity-details"
+import type {
+  ActivityDetails,
+  ActivityDetailsSnapshot,
+} from "@/lib/activity-details"
 import styles from "./activity-bar.module.css"
 
 const number = new Intl.NumberFormat("en-US")
@@ -33,7 +36,13 @@ const range = (week: ActivityWeek, year = false) =>
 const count = (value: number) =>
   `${number.format(value)} contribution${value === 1 ? "" : "s"}`
 
-export function ActivityBar({ data }: { data: CodingActivityData }) {
+export function ActivityBar({
+  data,
+  initialDetails,
+}: {
+  data: CodingActivityData
+  initialDetails: ActivityDetailsSnapshot | null
+}) {
   const id = useId()
   const buttons = useRef<(HTMLButtonElement | null)[]>([])
   const [hovered, setHovered] = useState<number | null>(null)
@@ -55,7 +64,17 @@ export function ActivityBar({ data }: { data: CodingActivityData }) {
         updatedAt?: string
       }
     >
-  >({})
+  >(() =>
+    Object.fromEntries(
+      data.weeks.map((week) => [
+        week.start,
+        {
+          details: initialDetails?.weeks[week.start] ?? null,
+          updatedAt: initialDetails?.updatedAt,
+        },
+      ])
+    )
+  )
   const detailed = selectedWeek ? detailedWeeks[selectedWeek] : undefined
 
   useEffect(() => {
@@ -324,9 +343,7 @@ export function ActivityBar({ data }: { data: CodingActivityData }) {
                     {selection.activeDays === 1 ? "" : "s"}
                   </div>
                   <div className={styles.statsStatus}>
-                    {detailed
-                      ? "Detailed statistics unavailable"
-                      : "Loading statistics…"}
+                    Detailed statistics unavailable
                   </div>
                 </>
               )}
