@@ -127,7 +127,8 @@ export default function Page() {
           <CodingActivity />
         </Suspense>
         <p>
-          Previously, I worked on growth and product design at{" "}
+          Previously, I co-founded Wondertale, a design studio I ran for two and a
+          half years, and worked on growth and product design at{" "}
           <a
             className={styles.socialLink}
             href="https://www.avico.com/en/"
@@ -135,8 +136,8 @@ export default function Page() {
             rel="noreferrer"
           >
             <strong>Avico</strong>
-          </a>
-          , an air charter broker, and{" "}
+          </a>{" "}
+          and{" "}
           <a
             className={styles.socialLink}
             href="https://www.xllence.fr/fr/"
@@ -145,8 +146,8 @@ export default function Page() {
           >
             <strong>Xllence</strong>
           </a>
-          , a B2B sales agency. I’m open to a Product Manager or Design Engineer
-          role starting June 2027.
+          . I’m open to a Product Manager or Design Engineer role starting June
+          2027.
         </p>
         <p>
           You can reach me at{" "}

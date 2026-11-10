@@ -2,7 +2,7 @@
 
 > Personal portfolio of Matthieu Duchatellier, Product Manager and Design Engineer building AI products.
 
-Matthieu loves building AI products. Making projects such as Forge and Carbon has taught him about engineering and changed how he approaches product and design. He is pursuing a Product Management & UX Design MSc at SKEMA & POLIMI. Previously, he worked on growth and product design at [**Avico**](https://www.avico.com/en/), an air charter broker, and [**Xllence**](https://www.xllence.fr/fr/), a B2B sales agency. He is open to a Product Manager or Design Engineer role starting June 2027.
+Matthieu loves building AI products. Making projects such as Forge and Carbon has taught him about engineering and changed how he approaches product and design. He is pursuing a Product Management & UX Design MSc at SKEMA & POLIMI. Previously, he co-founded Wondertale, a design studio he ran for two and a half years, and worked on growth and product design at [**Avico**](https://www.avico.com/en/) and [**Xllence**](https://www.xllence.fr/fr/). He is open to a Product Manager or Design Engineer role starting June 2027.
 
 The canonical website is https://matthieu.pm. The links below include portfolio pages, articles, interactive design resources, and external project websites.
 
