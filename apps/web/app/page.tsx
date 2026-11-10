@@ -120,7 +120,8 @@ export default function Page() {
           I love building AI products. Making my own, like Forge and Carbon, has
           taught me a lot about engineering, and it’s changed how I approach
           product and design. Currently, I&apos;m pursuing
-          a Product Management & UX Design MSc at SKEMA & POLIMI.
+          a Product Management & UX Design MSc at{" "}
+          <span className={styles.educationSchools}>SKEMA & POLIMI.</span>
         </p>
         <Suspense fallback={<ActivityBarSkeleton />}>
           <CodingActivity />

@@ -571,6 +571,10 @@
 }
 
 @media (max-width: 680px) {
+  .educationSchools {
+    display: block;
+  }
+
   .page {
     --section-gap: 32px;
 
