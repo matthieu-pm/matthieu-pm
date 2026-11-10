@@ -6,8 +6,8 @@
   --soft: var(--site-soft);
   --section-gap: 32px;
   --font-weight-body: 300;
-  --font-weight-medium: 400;
-  --font-weight-bold: 450;
+  --font-weight-medium: 350;
+  --font-weight-bold: 400;
 
   min-height: 100svh;
   background: var(--paper);
