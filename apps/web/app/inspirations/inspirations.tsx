@@ -256,8 +256,78 @@ function ResourceIcon({
   )
 }
 
+function ResourceVideo({
+  resource,
+  onError,
+}: {
+  resource: Resource & { previewVideo: string }
+  onError: () => void
+}) {
+  const ref = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = ref.current
+    if (!video) return
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)")
+    let visible = false
+    const syncPlayback = () => {
+      if (motion.matches) {
+        video.pause()
+        if (video.hasAttribute("src")) {
+          video.removeAttribute("src")
+          video.load()
+        }
+      } else if (visible && !document.hidden) {
+        if (!video.hasAttribute("src")) video.src = resource.previewVideo
+        void video.play().catch(() => {})
+      } else {
+        video.pause()
+      }
+    }
+    const observer = new IntersectionObserver(([entry]) => {
+      visible = entry?.isIntersecting ?? false
+      syncPlayback()
+    })
+    observer.observe(video)
+    motion.addEventListener("change", syncPlayback)
+    document.addEventListener("visibilitychange", syncPlayback)
+    return () => {
+      observer.disconnect()
+      motion.removeEventListener("change", syncPlayback)
+      document.removeEventListener("visibilitychange", syncPlayback)
+      video.pause()
+    }
+  }, [resource.previewVideo])
+
+  return (
+    <video
+      ref={ref}
+      poster={resource.preview ?? undefined}
+      aria-label={`${resource.name} website preview`}
+      width={1440}
+      height={810}
+      className={styles.previewImage}
+      loop
+      muted
+      playsInline
+      preload="none"
+      disablePictureInPicture
+      onError={onError}
+    />
+  )
+}
+
 function ResourceArtwork({ resource }: { resource: Resource }) {
   const [failedPreview, setFailedPreview] = useState<string | null>(null)
+  const [failedVideo, setFailedVideo] = useState<string | null>(null)
+  if (resource.previewVideo && resource.previewVideo !== failedVideo)
+    return (
+      <ResourceVideo
+        key={resource.previewVideo}
+        resource={{ ...resource, previewVideo: resource.previewVideo }}
+        onError={() => setFailedVideo(resource.previewVideo ?? null)}
+      />
+    )
   if (resource.preview && resource.preview !== failedPreview)
     return (
       <Image

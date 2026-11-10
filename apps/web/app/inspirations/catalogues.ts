@@ -11,6 +11,7 @@ export type Resource = {
   href: string
   icon: string | null
   preview: string | null
+  previewVideo?: string
 }
 
 export const catalogues = {

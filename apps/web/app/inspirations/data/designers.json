@@ -946,21 +946,24 @@
         "href": "https://ryo.lu/",
         "icon": "/inspirations/catalogues/ryo-lu-icon.webp",
         "name": "Ryo Lu",
-        "preview": null
+        "preview": "/inspirations/catalogues/ryo-lu-preview.webp",
+        "previewVideo": "/inspirations/catalogues/ryo-lu-preview.mp4"
       },
       {
         "description": "Product designer trying to merge the physical and digital worlds.",
         "href": "https://ramsey.page/",
         "icon": "/inspirations/catalogues/ramsey-hatoum-icon.webp",
         "name": "Ramsey Hatoum",
-        "preview": null
+        "preview": "/inspirations/catalogues/ramsey-hatoum-preview.webp",
+        "previewVideo": "/inspirations/catalogues/ramsey-hatoum-preview.mp4"
       },
       {
         "description": "Product designer creating digital interactive experiences.",
         "href": "https://itslucas.works/",
         "icon": "/inspirations/catalogues/lucas-huang-icon.webp",
         "name": "Lucas Huang",
-        "preview": null
+        "preview": "/inspirations/catalogues/lucas-huang-preview.webp",
+        "previewVideo": "/inspirations/catalogues/lucas-huang-preview.mp4"
       }
     ],
     "title": "Design engineers to follow"
