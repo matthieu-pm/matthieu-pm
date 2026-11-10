@@ -40,7 +40,7 @@ const projects: {
   {
     name: "Atrium",
     description: "Revenue teams meet agentic CRM workflows",
-    href: "https://atrium-landing-tau.vercel.app/",
+    href: "https://atriumcrm.com/",
     logo: "/logos/atrium.svg",
     video: "/videos/atrium.mp4?v=6",
     stack: ["typescript", "orpc", "nextdotjs"],

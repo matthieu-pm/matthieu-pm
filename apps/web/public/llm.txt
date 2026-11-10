@@ -19,7 +19,7 @@ The canonical website is https://matthieu.pm. The links below include portfolio 
 - [Carbon](https://carbonhq.sh): One app for coding agents.
 - [Forge](https://app.forgenow.tech/): Issue tracking with AI agents.
 - [Atlas](https://atlasapp.fr): AI-powered exam practice.
-- [Atrium](https://atrium-landing-tau.vercel.app/): AI-powered CRM.
+- [Atrium](https://atriumcrm.com/): AI-powered CRM.
 - [Researchie](https://survey.matthieu-pm.chatgpt.site): AI chat research form.
 
 ## Design resources

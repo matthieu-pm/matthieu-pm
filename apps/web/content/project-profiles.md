@@ -60,7 +60,7 @@ The generation prompts explicitly constrain questions, answers, and explanations
 
 ## Atrium
 
-Website: https://atrium-landing-tau.vercel.app/
+Website: https://atriumcrm.com/
 
 ### Product and audience
 

@@ -50,7 +50,7 @@ You can reach me at [**@matthieu\_pm**](<https://x.com/matthieu_pm>) or via ** e
 
 -   [**My collection** ~ Curated lists of tools and inspiring designs](<https://matthieu.pm/inspirations>)
 -   [**Atlas** ~ Prepare your exams with AI-powered MCQs](<https://atlasapp.fr/>)
--   [**Atrium** ~ Revenue teams meet agentic CRM workflows](<https://atrium-landing-tau.vercel.app/>)
+-   [**Atrium** ~ Revenue teams meet agentic CRM workflows](<https://atriumcrm.com/>)
 -   [**Carbon** ~ A desktop home for your coding agents](<https://carbonhq.sh/>)
 -   [**Forge** ~ An agentic issue tracking workspace](<https://app.forgenow.tech/>)
 -   [**Researchie** ~ Agentic research forms](<https://survey.matthieu-pm.chatgpt.site/>)
@@ -1861,7 +1861,7 @@ The generation prompts explicitly constrain questions, answers, and explanations
 
 ## Atrium
 
-Website: https://atrium-landing-tau.vercel.app/
+Website: https://atriumcrm.com/
 
 ### Product and audience
 
