@@ -31,6 +31,7 @@ Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 ## Design resources
 
+- [Visitor skill](https://matthieu.pm/.well-known/agent-skills/visit/SKILL.md): How to read this site, cite its pages, and respect the limits of its project descriptions.
 - [MCP connection guide](https://matthieu.pm/mcp): Connect an assistant to search the design collection, skills, and writing. Public, read-only Streamable HTTP endpoint: https://matthieu.pm/mcp. No authentication required.
 - [My collection](https://matthieu.pm/inspirations): Curated design tools and inspiration, with categories for components, building tools, visuals, utilities, and design engineers.
 - [Great UI](https://matthieu.pm/skills/great-ui): A design engineering skill for agents, combining interface polish and interaction craft with interactive examples.

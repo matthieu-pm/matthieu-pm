@@ -8,6 +8,10 @@ External project websites are linked rather than mirrored. The project descripti
 
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
+## Visiting agents
+
+[Visitor skill](https://matthieu.pm/.well-known/agent-skills/visit/SKILL.md): How to read this site, cite its pages, and respect the limits of its project descriptions.
+
 ## Contents
 
 - [Matthieu Duchatellier](https://matthieu.pm)

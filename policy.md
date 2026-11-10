@@ -22,16 +22,16 @@ The shared implementation value is in `apps/web/lib/content-policy.ts`.
 
 ## Existing surface and build scope
 
-This file records the existing policy and implementation. It does not select
-additional features that are absent from the source files.
+This file records the existing policy and implementation, plus the visitor
+skill selected by Matthieu for the PMUX agent surface.
 
 | Course part | Existing implementation and scope |
 | --- | --- |
 | robots.txt | Keep the generated route, the three Content Signals above, `Allow: /`, and the sitemap link. |
 | llms.txt | Keep the published content, page links, project descriptions, and usage policy in `apps/web/public/llms.txt`. |
 | Markdown pages | Keep the existing Markdown negotiation through `apps/web/proxy.ts` and `apps/web/app/api/markdown/route.ts`, plus the published text exports. Separate static copies beside HTML files are not selected here. |
-| Visitor skill | The discovery index currently publishes the Great UI skill. A site-specific `visit/SKILL.md` is not present, and the existing policy sources do not specify whether to build it. |
-| Small Cloudflare Worker | Skip: this site uses Next.js on Vercel and already implements Markdown negotiation. Do not add `worker.js` or `wrangler.jsonc` for this documentation change. |
+| Visitor skill | Build `apps/web/public/.well-known/agent-skills/visit/SKILL.md` with reading and citation guidance. Add it to the discovery index alongside Great UI and link it from the text guides. |
+| Small Cloudflare Worker | Skip: this site uses Next.js on Vercel and already implements Markdown negotiation. Do not add `worker.js` or `wrangler.jsonc`. |
 
 The existing public, read-only MCP endpoint is documented in `/llms.md` for
 searching the design collection, skills, and writing. Keep that existing scope.

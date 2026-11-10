@@ -1,4 +1,4 @@
-"""Regenerate the discovery index and its bundled skill artifact.
+"""Regenerate the discovery index, Great UI archive, and visitor skill digest.
 
 Run from any directory: python3 apps/web/scripts/publish-agent-skills.py
 To publish a newer Great UI release, update SOURCE_REVISION and rerun.
@@ -52,6 +52,11 @@ def main():
         raise ValueError("Invalid skill description")
 
     digest = f"sha256:{hashlib.sha256(artifact_bytes).hexdigest()}"
+    visitor_bytes = (DESTINATION / "visit/SKILL.md").read_bytes()
+    visitor_frontmatter = visitor_bytes.decode("utf-8").split("---", 2)[1]
+    visitor_description = re.search(
+        r"^description: (.+)$", visitor_frontmatter, re.MULTILINE
+    ).group(1)
     index = {
         "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
         "skills": [{
@@ -60,6 +65,12 @@ def main():
             "description": description,
             "url": f"/.well-known/agent-skills/{name}.zip",
             "digest": digest,
+        }, {
+            "name": "visit",
+            "type": "skill-md",
+            "description": visitor_description,
+            "url": "/.well-known/agent-skills/visit/SKILL.md",
+            "digest": f"sha256:{hashlib.sha256(visitor_bytes).hexdigest()}",
         }],
     }
     DESTINATION.mkdir(parents=True, exist_ok=True)

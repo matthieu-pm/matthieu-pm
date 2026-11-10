@@ -142,6 +142,8 @@ const output =
     "External project websites are linked rather than mirrored. The project descriptions explain their technology, architecture, features, and product decisions from the local project sources. Interactive examples are represented by their initial text and accompanying explanations.",
     "## Content usage policy",
     `Content-Signal: ${contentSignal}`,
+    "## Visiting agents",
+    `[Visitor skill](${siteConfig.url}/.well-known/agent-skills/visit/SKILL.md): How to read this site, cite its pages, and respect the limits of its project descriptions.`,
     "## Contents",
     [
       ...sections.map((page) => `- [${page.title}](${page.url})`),

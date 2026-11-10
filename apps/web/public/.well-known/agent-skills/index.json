@@ -7,6 +7,13 @@
       "description": "Faithful single-skill merge of Jakub Krehel's better-ui and Emil Kowalski's emil-design-eng. Use to build, polish, animate, or review interfaces with the complete source guidance on surfaces, optical alignment, icons, interaction motion, gestures, animation performance, accessibility, component craft, perceived speed, and UI review.",
       "url": "/.well-known/agent-skills/great-ui.zip",
       "digest": "sha256:17cdb2c29316767ccfd1541cf69ce498c6c4d3f295f1e13d2739c5408966ce46"
+    },
+    {
+      "name": "visit",
+      "type": "skill-md",
+      "description": "Read and cite Matthieu Duchatellier's portfolio, writing, project descriptions, and design resources at matthieu.pm.",
+      "url": "/.well-known/agent-skills/visit/SKILL.md",
+      "digest": "sha256:f62b8871a67576cb1dbe1e231b9a3c78ee90fb969d65ba40b4ada244a46f442d"
     }
   ]
 }
