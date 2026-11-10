@@ -160,6 +160,15 @@ export default function Page() {
             rel="noreferrer"
           >
             <strong>GitLab</strong>
+          </a>{" "}
+          /{" "}
+          <a
+            className={styles.socialLink}
+            href="https://github.com/matthieu-pm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <strong>GitHub</strong>
           </a>
           .
         </p>
