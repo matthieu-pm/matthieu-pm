@@ -578,21 +578,33 @@
   }
 
   .projectRow {
+    grid-template-areas:
+      "mark name meta"
+      ". description description";
     align-items: start;
-    gap: 10px;
+    gap: 0 10px;
+  }
+
+  .projectMark {
+    grid-area: mark;
   }
 
   .projectText {
-    display: flex;
-    flex-direction: column;
+    display: contents;
     white-space: normal;
   }
 
+  .projectText strong {
+    grid-area: name;
+  }
+
   .projectDescription {
+    grid-area: description;
     display: block;
   }
 
   .projectMeta {
+    grid-area: meta;
     padding-left: 0;
   }
 
