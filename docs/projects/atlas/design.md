@@ -8,7 +8,7 @@ Help a portfolio visitor recognize Atlas as an AI-powered MCQ exam-practice proj
 
 ## Composition
 
-Keep Atlas in the homepage Projects grid as a single linked card, with the local mark above its name and a short description below. Its peers are OKLCH and Inspirations. Match their label typography, spacing, card geometry, and interaction weight.
+Keep Atlas in the homepage Projects grid as a single linked card, with the local mark above its name and a short description below. Its peers include Inspirations. Match their label typography, spacing, card geometry, and interaction weight.
 
 The current destination is `https://atlasapp.fr`, as configured in the homepage source. Preserve the external-link behavior unless the requested change explicitly changes navigation. The card should not look like an embedded or locally hosted exam interface.
 

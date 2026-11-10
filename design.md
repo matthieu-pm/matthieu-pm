@@ -16,7 +16,6 @@ This file owns the shared principles and the homepage at `/`. Read the relevant 
 | --- | --- | --- |
 | Portfolio | This file | Identity, introduction, projects, skills, writing, contact, footer |
 | Atlas | [Atlas](docs/projects/atlas/design.md) | Its portfolio presentation; the application lives elsewhere |
-| OKLCH | [OKLCH](apps/web/app/oklch/design.md) | Color reference and interactive demonstrations |
 | Inspirations | [Inspirations](apps/web/app/inspirations/design.md) | All catalogue categories and shared browsing controls |
 | Great UI | [Great UI](apps/web/app/skills/great-ui/design.md) | Skill installation, interface comparison, geometry lab |
 | Product Bet | [Product Bet](apps/web/app/skills/product-bet/design.md) | Skill installation and an example investment decision |
@@ -78,7 +77,7 @@ Values are owned by `apps/web/app/page.module.css`, not by a global token packag
 
 The shared card in `apps/web/app/card.module.css` has an 18px outer radius, a 4px inset shell, and a 14px inner radius. Its warm neutral shell, white inset, thin borders, and low-opacity shadows create restrained depth. Reuse that geometry where already composed; do not replace it with flat generic panels or stack more shells inside it.
 
-The portfolio, skill showcases, and writing pages currently use light canvases. Inspirations and OKLCH own separate light/dark behavior. Do not assume the presence of a theme-provider file makes dark mode global.
+The portfolio, skill showcases, and writing pages currently use light canvases. Inspirations owns separate light/dark behavior. Do not assume the presence of a theme-provider file makes dark mode global.
 
 ## Assets and authorship
 

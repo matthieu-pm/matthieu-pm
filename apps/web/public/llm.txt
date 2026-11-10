@@ -26,7 +26,6 @@ The canonical website is https://matthieu.pm. The links below include portfolio 
 
 - [My collection](https://matthieu.pm/inspirations): Curated design tools and inspiration, with categories for components, building tools, visuals, utilities, and design engineers.
 - [Great UI](https://matthieu.pm/skills/great-ui): A design engineering skill for agents, combining interface polish and interaction craft with interactive examples.
-- [OKLCH color guide](https://matthieu.pm/oklch): Interactive guide to lightness, chroma, hue, CSS syntax, gradients, color gamuts, and browser fallbacks.
 
 ## Writing
 

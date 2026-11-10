@@ -16,11 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
-    {
-      url: `${siteConfig.url}/oklch`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
     ...navigation.map((page) => ({
       url: `${siteConfig.url}${page.href}`,
       changeFrequency: "monthly" as const,
