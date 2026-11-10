@@ -47,7 +47,7 @@ const projects: {
     description: "Revenue teams meet agentic CRM workflows",
     href: "https://atrium-landing-tau.vercel.app/",
     logo: "/logos/atrium.svg",
-    video: "/videos/atrium.mp4?v=3",
+    video: "/videos/atrium.mp4?v=4",
     stack: ["nextdotjs", "convex", "react"],
   },
   {
@@ -63,7 +63,7 @@ const projects: {
     description: "An agentic issue tracking workspace",
     href: "https://forge-app-mauve.vercel.app",
     logo: "/logos/forge.svg",
-    video: "/videos/forge.mp4?v=3",
+    video: "/videos/forge.mp4?v=4",
     stack: ["vite", "react", "typescript"],
   },
   {
