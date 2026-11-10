@@ -123,7 +123,7 @@ Release status and boundaries matter: the repository records a macOS beta releas
 
 ## Forge
 
-Website: https://forge-app-mauve.vercel.app
+Website: https://app.forgenow.tech/
 
 ### Product and audience
 
