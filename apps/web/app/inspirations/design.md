@@ -54,7 +54,7 @@ Keep sound optional through the existing control. Sound must not be the only fee
 
 ## Footer and responsive behavior
 
-Keep `Curated by Matthieu` linked to `https://matthieu.pm`. `Inspired by Designeer` belongs at the left of the main footer action row, with `Back to top` at its other end. Preserve this row structure rather than placing the attribution in a separate decorative column.
+Keep `Curated by Matthieu` linked to `https://matthieu.pm`, with `Back to top` at the right of the main footer action row.
 
 The principal responsive transitions are at 1023px and 639px. Recompose the sidebar into the existing mobile navigation, preserve toolbar access, and adapt previews to the viewport. Test short desktop heights as well as narrow widths; the sticky sidebar must not make navigation unreachable.
 
