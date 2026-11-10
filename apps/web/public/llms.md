@@ -2,7 +2,7 @@
 
 > Personal portfolio of Matthieu Duchatellier, Product Manager and Design Engineer building AI products.
 
-Matthieu loves AI and building AI products. Making projects such as Forge and Carbon has taught him about computer science and engineering and changed how he approaches product and design. He is pursuing a Product Management & UX Design MSc at SKEMA & POLIMI, previously worked on growth and product design at [**diverse**](https://www.linkedin.com/in/matthieu-duchatellier/) companies, and is open to a Product Manager or Design Engineer position starting June 2027.
+Matthieu loves building AI products. Making projects such as Forge and Carbon has taught him about engineering and changed how he approaches product and design. He is pursuing a Product Management & UX Design MSc at SKEMA & POLIMI, previously worked on growth and product design at [**diverse**](https://www.linkedin.com/in/matthieu-duchatellier/) companies, and is open to a Product Manager or Design Engineer position starting June 2027.
 
 The canonical website is https://matthieu.pm. The links below include portfolio pages, articles, interactive design resources, and external project websites.
 

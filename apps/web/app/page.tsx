@@ -117,9 +117,9 @@ export default function Page() {
 
       <section className={styles.intro} aria-label="Introduction">
         <p>
-          I really love AI and building AI products. Making my own, like Forge
-          and Carbon, has taught me a lot about CS and engineering, and it’s
-          changed how I approach product and design. Currently, I&apos;m pursuing
+          I love building AI products. Making my own, like Forge and Carbon, has
+          taught me a lot about engineering, and it’s changed how I approach
+          product and design. Currently, I&apos;m pursuing
           a Product Management & UX Design MSc at SKEMA & POLIMI.
         </p>
         <Suspense fallback={<ActivityBarSkeleton />}>
