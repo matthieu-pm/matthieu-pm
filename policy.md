@@ -1,6 +1,7 @@
 # Agent surface policy
 
-Owner: Matthieu Duchatellier  
+Owner: Matthieu Duchatellier
+
 Website: https://matthieu.pm
 
 ## Content Signals
