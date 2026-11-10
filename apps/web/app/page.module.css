@@ -5,9 +5,9 @@
   --faint: var(--site-line);
   --soft: var(--site-soft);
   --section-gap: 32px;
-  --font-weight-body: 350;
-  --font-weight-medium: 450;
-  --font-weight-bold: 500;
+  --font-weight-body: 300;
+  --font-weight-medium: 400;
+  --font-weight-bold: 450;
 
   min-height: 100svh;
   background: var(--paper);
@@ -164,7 +164,7 @@
   box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
   color: var(--site-on-strong);
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 350;
   line-height: 16px;
   opacity: 0;
   pointer-events: none;
