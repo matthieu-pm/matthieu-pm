@@ -129,14 +129,23 @@ export default function Page() {
           Previously, I worked on growth and product design at{" "}
           <a
             className={styles.socialLink}
-            href="https://www.linkedin.com/in/matthieu-duchatellier/"
+            href="https://www.avico.com/en/"
             target="_blank"
             rel="noreferrer"
           >
-            <strong>diverse</strong>
-          </a>{" "}
-          companies, and I&apos;m open for a Product Manager or Design Engineer
-          position starting June 2027.
+            <strong>Avico</strong>
+          </a>
+          , an air charter broker, and{" "}
+          <a
+            className={styles.socialLink}
+            href="https://www.xllence.fr/fr/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <strong>Xllence</strong>
+          </a>
+          , a B2B sales agency. I’m open to a Product Manager or Design Engineer
+          role starting June 2027.
         </p>
         <p>
           You can reach me at{" "}
