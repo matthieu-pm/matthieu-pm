@@ -551,19 +551,21 @@
 }
 
 .footerSignatureFrame {
+  --signature-width: 220px;
+
   position: relative;
   width: 180px;
   height: 56px;
   flex: 0 0 auto;
   overflow: hidden;
-  transform: translateX(16px);
 }
 
 .footerSignatureImage {
   position: absolute;
   top: -110px;
-  left: -20px;
-  width: 220px;
+  /* Exclude the asset's transparent right margin: 79 of its 297 pixels. */
+  right: calc(var(--signature-width) * -79 / 297);
+  width: var(--signature-width);
   height: auto;
   max-width: none;
 }
@@ -609,14 +611,14 @@
   }
 
   .footerSignatureFrame {
+    --signature-width: 170px;
+
     width: 132px;
     height: 48px;
   }
 
   .footerSignatureImage {
     top: -83px;
-    left: -19px;
-    width: 170px;
   }
 }
 
