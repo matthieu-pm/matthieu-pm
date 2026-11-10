@@ -12,16 +12,15 @@ import styles from "./page.module.css"
 const technologies = {
   nextdotjs: "Next.js",
   react: "React",
+  typescript: "TypeScript",
   tauri: "Tauri",
   rust: "Rust",
   convex: "Convex",
   bun: "Bun",
   modelcontextprotocol: "Model Context Protocol",
-  openai: "OpenAI",
   orpc: "oRPC",
   tanstack: "TanStack Start",
   neon: "Neon Postgres",
-  electron: "Electron",
   cloudflare: "Cloudflare D1",
   drizzle: "Drizzle ORM",
 }
@@ -48,7 +47,7 @@ const projects: {
     href: "https://atlasapp.fr",
     logo: "/logos/atlas.svg",
     video: "/videos/atlas.mp4?v=5",
-    stack: ["nextdotjs", "convex", "openai"],
+    stack: ["nextdotjs", "convex", "modelcontextprotocol"],
   },
   {
     name: "Atrium",
@@ -56,7 +55,7 @@ const projects: {
     href: "https://atrium-landing-tau.vercel.app/",
     logo: "/logos/atrium.svg",
     video: "/videos/atrium.mp4?v=6",
-    stack: ["nextdotjs", "convex", "orpc"],
+    stack: ["nextdotjs", "orpc", "typescript"],
   },
   {
     name: "Carbon",
@@ -64,7 +63,7 @@ const projects: {
     href: "https://carbonhq.sh",
     logo: "/logos/carbon.svg",
     video: "/videos/carbon.mp4",
-    stack: ["tauri", "react", "rust"],
+    stack: ["tauri", "typescript", "rust"],
   },
   {
     name: "Forge",
@@ -72,7 +71,7 @@ const projects: {
     href: "https://forge-app-mauve.vercel.app",
     logo: "/logos/forge.svg",
     video: "/videos/forge.mp4?v=6",
-    stack: ["tanstack", "neon", "electron"],
+    stack: ["tanstack", "neon", "typescript"],
   },
   {
     name: "Researchie",
