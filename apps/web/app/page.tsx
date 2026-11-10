@@ -11,18 +11,14 @@ import styles from "./page.module.css"
 
 const technologies = {
   nextdotjs: "Next.js",
-  react: "React",
   typescript: "TypeScript",
   tauri: "Tauri",
   rust: "Rust",
-  convex: "Convex",
   bun: "Bun",
   modelcontextprotocol: "Model Context Protocol",
   orpc: "oRPC",
   tanstack: "TanStack Start",
   neon: "Neon Postgres",
-  cloudflare: "Cloudflare D1",
-  drizzle: "Drizzle ORM",
 }
 
 const projects: {
@@ -40,14 +36,6 @@ const projects: {
     logo: null,
     video: "/videos/inspirations.mp4",
     stack: ["bun", "nextdotjs", "modelcontextprotocol"],
-  },
-  {
-    name: "Atlas",
-    description: "Prepare your exams with AI-powered MCQs",
-    href: "https://atlasapp.fr",
-    logo: "/logos/atlas.svg",
-    video: "/videos/atlas.mp4?v=5",
-    stack: ["nextdotjs", "react", "convex"],
   },
   {
     name: "Atrium",
@@ -72,14 +60,6 @@ const projects: {
     logo: "/logos/forge.svg",
     video: "/videos/forge.mp4?v=6",
     stack: ["tanstack", "neon", "typescript"],
-  },
-  {
-    name: "Researchie",
-    description: "Agentic research forms",
-    href: "https://survey.matthieu-pm.chatgpt.site",
-    logo: "/logos/researchie.svg",
-    video: "/videos/researchie.mp4?v=2",
-    stack: ["react", "cloudflare", "drizzle"],
   },
 ]
 
