@@ -18,3 +18,10 @@ Retrieved 6 October 2026. Other logos and previews reuse existing catalogue asse
 - `maze-icon.webp`: https://www.datocms-assets.com/38511/1762960626-image.png?w=192&h=192 (Maze homepage icon).
 - `maze-preview.webp`: https://www.datocms-assets.com/38511/1762727117-og-image-default.jpg?auto=format (Maze homepage social preview).
 - `posthog-preview.webp`: https://posthog.com/images/og/default.png (PostHog homepage social preview).
+
+Retrieved 10 November 2026:
+
+- `rust-preview.webp`: Screenshot of https://rust-lang.org/.
+- `tauri-preview.webp`: Screenshot of https://tauri.app/.
+- `react-preview.webp`: Screenshot of https://react.dev/.
+- Rust, Tauri, and React icons reuse `/logos/technologies/` assets.

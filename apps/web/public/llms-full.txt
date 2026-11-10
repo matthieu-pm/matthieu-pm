@@ -419,6 +419,9 @@ A collection of inspiring interfaces, component libraries, AI tools, and resourc
 - [GitLab](<https://about.gitlab.com/>): Git repositories, code review, and continuous integration.
 - [Bun](<https://bun.com/>): JavaScript runtime, package manager, bundler, and test runner.
 - [TypeScript](<https://www.typescriptlang.org/>): JavaScript with syntax for types.
+- [Rust](<https://rust-lang.org/>): A programming language for reliable and efficient software.
+- [Tauri](<https://tauri.app/>): Build cross-platform apps with Rust and web technologies.
+- [React](<https://react.dev/>): A library for building web and native user interfaces.
 - [Next.js](<https://nextjs.org/>): A React framework for building web applications.
 - [TanStack](<https://tanstack.com/>): Open-source libraries for building web applications.
 - [shadcn/ui](<https://ui.shadcn.com/>): Components you copy directly into codebases.
@@ -601,6 +604,9 @@ A collection of inspiring interfaces, component libraries, AI tools, and resourc
 - [GitLab](<https://about.gitlab.com/>): Git repositories, code review, and continuous integration.
 - [Bun](<https://bun.com/>): JavaScript runtime, package manager, bundler, and test runner.
 - [TypeScript](<https://www.typescriptlang.org/>): JavaScript with syntax for types.
+- [Rust](<https://rust-lang.org/>): A programming language for reliable and efficient software.
+- [Tauri](<https://tauri.app/>): Build cross-platform apps with Rust and web technologies.
+- [React](<https://react.dev/>): A library for building web and native user interfaces.
 - [Next.js](<https://nextjs.org/>): A React framework for building web applications.
 - [TanStack](<https://tanstack.com/>): Open-source libraries for building web applications.
 - [shadcn/ui](<https://ui.shadcn.com/>): Components you copy directly into codebases.
@@ -779,6 +785,9 @@ A collection of inspiring interfaces, component libraries, AI tools, and resourc
 - [GitLab](<https://about.gitlab.com/>): Git repositories, code review, and continuous integration.
 - [Bun](<https://bun.com/>): JavaScript runtime, package manager, bundler, and test runner.
 - [TypeScript](<https://www.typescriptlang.org/>): JavaScript with syntax for types.
+- [Rust](<https://rust-lang.org/>): A programming language for reliable and efficient software.
+- [Tauri](<https://tauri.app/>): Build cross-platform apps with Rust and web technologies.
+- [React](<https://react.dev/>): A library for building web and native user interfaces.
 - [Next.js](<https://nextjs.org/>): A React framework for building web applications.
 - [TanStack](<https://tanstack.com/>): Open-source libraries for building web applications.
 - [shadcn/ui](<https://ui.shadcn.com/>): Components you copy directly into codebases.
@@ -928,6 +937,9 @@ A collection of inspiring interfaces, component libraries, AI tools, and resourc
 - [GitLab](<https://about.gitlab.com/>): Git repositories, code review, and continuous integration.
 - [Bun](<https://bun.com/>): JavaScript runtime, package manager, bundler, and test runner.
 - [TypeScript](<https://www.typescriptlang.org/>): JavaScript with syntax for types.
+- [Rust](<https://rust-lang.org/>): A programming language for reliable and efficient software.
+- [Tauri](<https://tauri.app/>): Build cross-platform apps with Rust and web technologies.
+- [React](<https://react.dev/>): A library for building web and native user interfaces.
 - [Next.js](<https://nextjs.org/>): A React framework for building web applications.
 - [TanStack](<https://tanstack.com/>): Open-source libraries for building web applications.
 - [shadcn/ui](<https://ui.shadcn.com/>): Components you copy directly into codebases.
@@ -1057,6 +1069,9 @@ A collection of inspiring interfaces, component libraries, AI tools, and resourc
 - [GitLab](<https://about.gitlab.com/>): Git repositories, code review, and continuous integration.
 - [Bun](<https://bun.com/>): JavaScript runtime, package manager, bundler, and test runner.
 - [TypeScript](<https://www.typescriptlang.org/>): JavaScript with syntax for types.
+- [Rust](<https://rust-lang.org/>): A programming language for reliable and efficient software.
+- [Tauri](<https://tauri.app/>): Build cross-platform apps with Rust and web technologies.
+- [React](<https://react.dev/>): A library for building web and native user interfaces.
 - [Next.js](<https://nextjs.org/>): A React framework for building web applications.
 - [TanStack](<https://tanstack.com/>): Open-source libraries for building web applications.
 - [shadcn/ui](<https://ui.shadcn.com/>): Components you copy directly into codebases.
@@ -1186,6 +1201,9 @@ A collection of inspiring interfaces, component libraries, AI tools, and resourc
 - [GitLab](<https://about.gitlab.com/>): Git repositories, code review, and continuous integration.
 - [Bun](<https://bun.com/>): JavaScript runtime, package manager, bundler, and test runner.
 - [TypeScript](<https://www.typescriptlang.org/>): JavaScript with syntax for types.
+- [Rust](<https://rust-lang.org/>): A programming language for reliable and efficient software.
+- [Tauri](<https://tauri.app/>): Build cross-platform apps with Rust and web technologies.
+- [React](<https://react.dev/>): A library for building web and native user interfaces.
 - [Next.js](<https://nextjs.org/>): A React framework for building web applications.
 - [TanStack](<https://tanstack.com/>): Open-source libraries for building web applications.
 - [shadcn/ui](<https://ui.shadcn.com/>): Components you copy directly into codebases.
