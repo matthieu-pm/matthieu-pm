@@ -31,6 +31,7 @@ const projects: {
     description: "Curated lists of tools and inspiring designs",
     href: "/inspirations",
     logo: null,
+    video: "/videos/inspirations.mp4",
     stack: ["nextdotjs", "react", "typescript"],
   },
   {
@@ -248,7 +249,11 @@ export default function Page() {
             return (
               <li key={project.name}>
                 {project.video ? (
-                  <ProjectVideoLink {...linkProps} videoSrc={project.video}>
+                  <ProjectVideoLink
+                    {...linkProps}
+                    videoSrc={project.video}
+                    projectName={project.name}
+                  >
                     {content}
                   </ProjectVideoLink>
                 ) : (

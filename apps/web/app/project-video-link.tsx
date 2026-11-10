@@ -9,9 +9,10 @@ type Preview = { left: number; top: number; reducedMotion: boolean }
 
 export function ProjectVideoLink({
   videoSrc,
+  projectName,
   children,
   ...props
-}: ComponentProps<typeof Link> & { videoSrc: string }) {
+}: ComponentProps<typeof Link> & { videoSrc: string; projectName: string }) {
   const id = useId()
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const [preview, setPreview] = useState<Preview | null>(null)
@@ -109,7 +110,7 @@ export function ProjectVideoLink({
           <div
             id={id}
             role="tooltip"
-            aria-label="Carbon product preview"
+            aria-label={`${projectName} product preview`}
             className={styles.preview}
             style={{ left: preview.left, top: preview.top }}
             onPointerEnter={keepOpen}
@@ -118,7 +119,7 @@ export function ProjectVideoLink({
             <video
               className={styles.video}
               src={videoSrc}
-              aria-label="Carbon product demo"
+              aria-label={`${projectName} product demo`}
               autoPlay={!preview.reducedMotion}
               loop
               muted
