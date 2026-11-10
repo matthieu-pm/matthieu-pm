@@ -1,12 +1,12 @@
 # Matthieu Duchatellier
 
-> Personal portfolio of Matthieu Duchatellier, Product Manager and Design Engineer working across strategy, growth, UX, and AI-enabled product delivery.
+> Personal portfolio of Matthieu Duchatellier, Product Manager and Design Engineer building AI products.
 
-Matthieu is pursuing a Product Management & UX Design MSc at SKEMA & POLIMI. He brings product thinking, design, and code together to build useful experiences, and previously worked on growth and product design at [**diverse**](https://www.linkedin.com/in/matthieu-duchatellier/) companies.
+Matthieu loves AI and building AI products. Making projects such as Forge and Carbon has taught him about computer science and engineering and changed how he approaches product and design. He is pursuing a Product Management & UX Design MSc at SKEMA & POLIMI, previously worked on growth and product design at [**diverse**](https://www.linkedin.com/in/matthieu-duchatellier/) companies, and is open to a Product Manager or Design Engineer position starting June 2027.
 
 The canonical website is https://matthieu.pm. The links below include portfolio pages, articles, interactive design resources, and external project websites.
 
-- [Full website content](https://matthieu.pm/llms-full.txt): Complete text of all public pages in one file.
+- [Full website content and project descriptions](https://matthieu.pm/llms-full.txt): Current text of all public pages, plus repository-based descriptions of each project's technology, architecture, features, product decisions, and implementation boundaries.
 
 ## Content usage policy
 
@@ -22,11 +22,12 @@ Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 ## Projects
 
-- [Carbon](https://carbonhq.sh): One app for coding agents.
-- [Forge](https://forge-app-mauve.vercel.app): Issue tracking with AI agents.
-- [Atlas](https://atlasapp.fr): AI-powered exam practice.
-- [Atrium](https://atrium-landing-tau.vercel.app/): AI-powered CRM.
-- [Researchie](https://survey.matthieu-pm.chatgpt.site): AI chat research form.
+- [My collection](https://matthieu.pm/inspirations): Curated lists of tools and inspiring designs.
+- [Atlas](https://atlasapp.fr): Prepare your exams with AI-powered MCQs.
+- [Atrium](https://atrium-landing-tau.vercel.app/): Revenue teams meet agentic CRM workflows.
+- [Carbon](https://carbonhq.sh): A desktop home for your coding agents.
+- [Forge](https://forge-app-mauve.vercel.app): An agentic issue tracking workspace.
+- [Researchie](https://survey.matthieu-pm.chatgpt.site): Agentic research forms, implemented as a versioned conversational questionnaire.
 
 ## Design resources
 

@@ -21,8 +21,15 @@ monorepo. It is responsive, accessible, and optimized for fast loading.
 
 ## MCP connection
 
-The full text of every public page is available at `/llms-full.txt`, linked from
-`/llms.txt` and `/llms.md`. To refresh it after changing site content, start the
+The full text of every public page is available in matching `/llms.txt` and
+`/llms-full.txt` exports, linked from the summary index at `/llms.md`. They also
+include project profiles covering technology, architecture, features, product
+decisions, and implementation boundaries. The editable profile source is
+`apps/web/content/project-profiles.md`, with the source files used for each
+description recorded in its source-basis notes. Review it against the owning
+project folders when their implementation changes.
+
+To refresh the exports after changing site content or profiles, start the
 local development server and run `bun run --cwd apps/web generate:llms-full`.
 An optional URL argument selects another running instance. The generator uses
 the sitemap and collection data, and writes the file only when all pages load.

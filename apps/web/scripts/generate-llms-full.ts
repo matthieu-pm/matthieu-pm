@@ -1,4 +1,4 @@
-import { writeFile } from "node:fs/promises"
+import { readFile, writeFile } from "node:fs/promises"
 import TurndownService from "turndown"
 
 import sitemap from "../app/sitemap"
@@ -20,15 +20,6 @@ const converter = new TurndownService({
   bulletListMarker: "-",
 })
 
-converter.addRule("omitNonContent", {
-  filter: (node) =>
-    ["HEAD", "TITLE", "SCRIPT", "STYLE", "NOSCRIPT", "SVG", "NAV"].includes(
-      node.nodeName
-    ) ||
-    node.getAttribute("aria-hidden") === "true" ||
-    node.hasAttribute("hidden"),
-  replacement: () => "",
-})
 converter.addRule("links", {
   filter: "a",
   replacement: (content, node) => {
@@ -67,10 +58,28 @@ converter.addRule("smallText", {
   replacement: (content) => ` — ${content}`,
 })
 
+// Omission rules take precedence over the inline spacing rules above.
+converter.addRule("omitNonContent", {
+  filter: (node) =>
+    ["HEAD", "TITLE", "SCRIPT", "STYLE", "NOSCRIPT", "SVG", "NAV"].includes(
+      node.nodeName
+    ) ||
+    node.getAttribute("aria-hidden") === "true" ||
+    node.hasAttribute("data-theme-toggle") ||
+    node.hasAttribute("hidden"),
+  replacement: () => "",
+})
+
 const pages = sitemap().sort((a, b) =>
   a.url === siteConfig.url ? -1 : b.url === siteConfig.url ? 1 : 0
 )
 const sections: { title: string; url: string; content: string }[] = []
+const projectProfiles = (
+  await readFile(
+    new URL("../content/project-profiles.md", import.meta.url),
+    "utf8"
+  )
+).trim()
 
 for (const page of pages) {
   pageUrl = page.url
@@ -129,21 +138,27 @@ for (const page of pages) {
 const output =
   [
     `# ${siteConfig.name} — Full website content`,
-    `> Complete text of the ${sections.length} public pages at ${siteConfig.url}, including the portfolio, collection, skills, writing, guides, and archives.`,
-    "External projects and collection resources are linked; their websites are not included. Interactive examples are represented by their initial text and accompanying explanations.",
+    `> Complete text of the ${sections.length} public pages at ${siteConfig.url}, including the portfolio, collection, skills, writing, guides, and archives, plus repository-based project descriptions.`,
+    "External project websites are linked rather than mirrored. The project descriptions explain their technology, architecture, features, and product decisions from the local project sources. Interactive examples are represented by their initial text and accompanying explanations.",
     "## Content usage policy",
     `Content-Signal: ${contentSignal}`,
     "## Contents",
-    sections.map((page) => `- [${page.title}](${page.url})`).join("\n"),
+    [
+      ...sections.map((page) => `- [${page.title}](${page.url})`),
+      "- [Project descriptions](#project-descriptions)",
+    ].join("\n"),
     ...sections.map(
       (page) =>
         `---\n\n# ${page.title}\n\nSource: ${page.url}\n\n${page.content}`
     ),
-  ].join("\n\n") + "\n"
+    `---\n\n${projectProfiles}`,
+  ]
+    .join("\n\n")
+    .replace(/[ \t]+$/gm, "") + "\n"
 
 // Write only after every page succeeds, preserving the previous export on error.
 await writeFile(new URL("../public/llms-full.txt", import.meta.url), output)
 await writeFile(new URL("../public/llms.txt", import.meta.url), output)
 console.log(
-  `Wrote llms-full.txt and llms.txt (${sections.length} pages, ${Buffer.byteLength(output)} bytes each)`
+  `Wrote llms-full.txt and llms.txt (${sections.length} pages plus project profiles, ${Buffer.byteLength(output)} bytes each)`
 )
