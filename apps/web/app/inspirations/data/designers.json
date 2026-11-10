@@ -940,6 +940,27 @@
         "icon": "/inspirations/catalogues/brad-frost-icon.webp",
         "name": "Brad Frost",
         "preview": null
+      },
+      {
+        "description": "Cursor head of design, designed at Notion and Stripe.",
+        "href": "https://ryo.lu/",
+        "icon": "/inspirations/catalogues/ryo-lu-icon.webp",
+        "name": "Ryo Lu",
+        "preview": null
+      },
+      {
+        "description": "Product designer trying to merge the physical and digital worlds.",
+        "href": "https://ramsey.page/",
+        "icon": "/inspirations/catalogues/ramsey-hatoum-icon.webp",
+        "name": "Ramsey Hatoum",
+        "preview": null
+      },
+      {
+        "description": "Product designer creating digital interactive experiences.",
+        "href": "https://itslucas.works/",
+        "icon": "/inspirations/catalogues/lucas-huang-icon.webp",
+        "name": "Lucas Huang",
+        "preview": null
       }
     ],
     "title": "Design engineers to follow"

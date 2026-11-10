@@ -1332,6 +1332,9 @@ Curated design engineers and creative developers to follow.
 - [Daryl Patigas](<https://imdaryl.com/>): Founding designer at Lottielab.
 - [Una Kravets](<https://una.im/>): Web developer sharing CSS techniques and interface experiments.
 - [Brad Frost](<https://bradfrost.com/>): Atomic Design author sharing design systems and frontend practices.
+- [Ryo Lu](<https://ryo.lu/>): Cursor head of design, designed at Notion and Stripe.
+- [Ramsey Hatoum](<https://ramsey.page/>): Product designer trying to merge the physical and digital worlds.
+- [Lucas Huang](<https://itslucas.works/>): Product designer creating digital interactive experiences.
 
 ---
 
