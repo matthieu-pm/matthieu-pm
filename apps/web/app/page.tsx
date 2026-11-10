@@ -12,10 +12,18 @@ import styles from "./page.module.css"
 const technologies = {
   nextdotjs: "Next.js",
   react: "React",
-  typescript: "TypeScript",
   tauri: "Tauri",
+  rust: "Rust",
   convex: "Convex",
-  vite: "Vite",
+  bun: "Bun",
+  modelcontextprotocol: "Model Context Protocol",
+  openai: "OpenAI",
+  orpc: "oRPC",
+  tanstack: "TanStack Start",
+  neon: "Neon Postgres",
+  electron: "Electron",
+  cloudflare: "Cloudflare D1",
+  drizzle: "Drizzle ORM",
 }
 
 const projects: {
@@ -32,7 +40,7 @@ const projects: {
     href: "/inspirations",
     logo: null,
     video: "/videos/inspirations.mp4",
-    stack: ["nextdotjs", "react", "typescript"],
+    stack: ["nextdotjs", "bun", "modelcontextprotocol"],
   },
   {
     name: "Atlas",
@@ -40,7 +48,7 @@ const projects: {
     href: "https://atlasapp.fr",
     logo: "/logos/atlas.svg",
     video: "/videos/atlas.mp4?v=5",
-    stack: ["nextdotjs", "convex", "react"],
+    stack: ["nextdotjs", "convex", "openai"],
   },
   {
     name: "Atrium",
@@ -48,7 +56,7 @@ const projects: {
     href: "https://atrium-landing-tau.vercel.app/",
     logo: "/logos/atrium.svg",
     video: "/videos/atrium.mp4?v=6",
-    stack: ["nextdotjs", "convex", "react"],
+    stack: ["nextdotjs", "convex", "orpc"],
   },
   {
     name: "Carbon",
@@ -56,7 +64,7 @@ const projects: {
     href: "https://carbonhq.sh",
     logo: "/logos/carbon.svg",
     video: "/videos/carbon.mp4",
-    stack: ["tauri", "react", "typescript"],
+    stack: ["tauri", "react", "rust"],
   },
   {
     name: "Forge",
@@ -64,7 +72,7 @@ const projects: {
     href: "https://forge-app-mauve.vercel.app",
     logo: "/logos/forge.svg",
     video: "/videos/forge.mp4?v=6",
-    stack: ["vite", "react", "typescript"],
+    stack: ["tanstack", "neon", "electron"],
   },
   {
     name: "Researchie",
@@ -72,7 +80,7 @@ const projects: {
     href: "https://survey.matthieu-pm.chatgpt.site",
     logo: "/logos/researchie.svg",
     video: "/videos/researchie.mp4?v=2",
-    stack: ["nextdotjs", "react", "typescript"],
+    stack: ["react", "cloudflare", "drizzle"],
   },
 ]
 
