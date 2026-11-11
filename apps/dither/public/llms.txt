@@ -1,0 +1,65 @@
+# Dither
+
+Deterministic Bayer 8×8 ordered dithering for images.
+Studio: https://dither.matthieu.pm/
+MCP endpoint: https://dither.matthieu.pm/mcp
+Transport: Streamable HTTP, stateless, POST. No authentication required.
+
+## Tools
+
+- get_dither_presets: list classic, fine and soft settings.
+- dither_image: return a dithered PNG as MCP image content plus metadata.
+- get_dither_shader: return the equivalent WebGL 2 GLSL fragment shader.
+
+## dither_image
+
+Provide exactly one image source:
+- image_url: public HTTPS URL, port 443, no credentials, up to 8 MB.
+- image_base64: base64 bytes or a PNG/JPEG/WebP/AVIF data URL, up to 2.75 MB decoded.
+
+Still PNG, JPEG, WebP and AVIF images only. Up to 24 megapixels decoded.
+No local paths, private network URLs, animation, SVG or HTML.
+
+Options:
+- preset: classic (default), fine, soft.
+- pixel_size: integer 1–16, output pixels; overrides preset.
+- color_levels: integer 2–16 per RGB channel; overrides preset.
+- strength: 0–1; zero preserves decoded source pixels after orientation/resize.
+- grain: 0–0.2 deterministic color grain; overrides preset.
+- max_width: integer 64–4096, default 2048. Fit inside this width and height; no upscaling.
+
+Classic: pixel_size 4, color_levels 4, strength 1, grain 0.035.
+Fine: pixel_size 2, color_levels 6, strength 1, grain 0.015.
+Soft: pixel_size 3, color_levels 5, strength 0.7, grain 0.02.
+
+The output preserves alpha, uses sRGB and corrects EXIF orientation.
+The output image content contains base64 PNG bytes; save them to a .png file.
+The structured result contains dimensions, byte size, algorithm and settings.
+Images are processed in memory and not persisted; no hosted image URL is created.
+PNG output is limited to 2.9 MB. Reduce max_width, color_levels or grain if output is too large.
+Total JSON request body limit: 3.9 MB.
+The public remote endpoint can fetch image URLs: only submit URLs you intend it to retrieve.
+
+## Connection example
+
+{"mcpServers":{"dither":{"url":"https://dither.matthieu.pm/mcp"}}}
+
+Example tool arguments (substitute an accessible image URL):
+{"image_url":"https://example.com/photo.jpg","preset":"classic","max_width":2048}
+
+## HTTP API
+
+POST https://dither.matthieu.pm/api/dither
+Content-Type: application/json
+Body: same arguments as dither_image.
+Success: image/png bytes. Error: JSON with an error message.
+
+## Browser studio
+
+Browser images are processed locally in a worker, using the same dithering code as the MCP renderer.
+Browser upload limit: 20 MB, 24 megapixels. Export longest edge: up to 1024, 2048 or 4096 pixels.
+The browser does not upload your chosen image to this server.
+Browser and server decoders/resizers can differ slightly; dithering settings and Bayer matrix are shared.
+The reference screenshot's exact original shader is unconfirmed; this is a Bayer dithering implementation.
+
+Built by Matthieu Duchatellier: https://matthieu.pm
