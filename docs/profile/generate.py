@@ -21,24 +21,31 @@ BOLD = os.environ.get("PROFILE_BOLD_FONT", "/System/Library/Fonts/Supplemental/A
 MONO = os.environ.get("PROFILE_MONO_FONT", "/System/Library/Fonts/Supplemental/Andale Mono.ttf")
 
 
-def hero():
+def hero(dark=True):
     width, height = 1200, 400
-    paper, ink, muted, blue = "#f5f3ee", "#242522", "#777971", "#3454df"
+    ink, muted, blue = ("#ffffff", "#aab1bb", "#5875ff") if dark else ("#242522", "#777971", "#3454df")
+    suffix = "" if dark else "-light"
     frames = []
     # A rotating, dotted torus: one continuous revolution, with no end-frame pause.
     for frame in range(64):
         phase = frame / 64 * math.tau
-        im = Image.new("RGB", (width, height), paper)
+        im = Image.new("RGBA", (width, height), (0, 0, 0, 0))
         d = ImageDraw.Draw(im)
-        d.rounded_rectangle((0, 0, width-1, height-1), radius=22, outline="#deddd6", width=2)
         d.text((42, 31), "MATTHIEU DUCHATELLIER", font=ImageFont.truetype(MONO, 15), fill=ink)
         d.text((42, 88), "I love building", font=ImageFont.truetype(BOLD, 62), fill=ink)
         d.text((39, 157), "AI products.", font=ImageFont.truetype(BOLD, 78), fill=ink)
         d.text((44, 262), "Product Manager  /  Design Engineer", font=ImageFont.truetype(FONT, 23), fill=muted)
-        d.line((42, 321, 1157, 321), fill="#deddd6", width=1)
-        d.ellipse((44, 348, 52, 356), fill=blue)
-        d.text((66, 343), "PRODUCT THINKING.  DESIGN CRAFT.  CODE.", font=ImageFont.truetype(MONO, 13), fill=muted)
-        d.text((1030, 342), "matthieu.pm", font=ImageFont.truetype(MONO, 14), fill=ink)
+        d.line((42, 321, 1157, 321), fill="#30363d" if dark else "#deddd6", width=1)
+        label = "PRODUCT THINKING.  DESIGN CRAFT.  CODE."
+        label_font = ImageFont.truetype(MONO, 13)
+        label_bounds = d.textbbox((0, 0), label, font=label_font)
+        label_y = 351 - (label_bounds[1] + label_bounds[3]) / 2
+        d.ellipse((44, 347, 52, 355), fill=blue)
+        d.text((66, label_y), label, font=label_font, fill=muted)
+        domain_font = ImageFont.truetype(MONO, 14)
+        domain_bounds = d.textbbox((0, 0), "matthieu.pm", font=domain_font)
+        domain_y = 351 - (domain_bounds[1] + domain_bounds[3]) / 2
+        d.text((1030, domain_y), "matthieu.pm", font=domain_font, fill=ink)
         points=[]
         for u in range(68):
             a = u / 68 * math.tau
@@ -56,12 +63,22 @@ def hero():
                 points.append((z, 925+x*s, 167+y*s, s))
         for z,x,y,s in sorted(points):
             depth=(z+160)/320
-            color=tuple(int(a+(b-a)*depth) for a,b in zip((181,190,219),(42,68,183)))
+            far, near = ((110,128,205),(102,134,255)) if dark else ((181,190,219),(42,68,183))
+            color=tuple(int(a+(b-a)*depth) for a,b in zip(far,near))
             size=1.1+max(0,depth)*1.3
             d.ellipse((x-size,y-size,x+size,y+size),fill=color)
-        frames.append(im.quantize(colors=96,method=Image.Quantize.MEDIANCUT))
-    frames[0].save(ASSETS/"hello.gif",save_all=True,append_images=frames[1:],duration=80,loop=0,optimize=True,disposal=1)
-    frames[0].convert("RGB").save(ASSETS/"hello.png")
+        if frame == 0:
+            im.save(ASSETS/f"hello{suffix}.png")
+        # Reserve index zero for transparency in every frame. Disposal=2 clears
+        # the previous sculpture before drawing its next pose on the page.
+        quantized = im.convert("RGB").quantize(colors=95, method=Image.Quantize.MEDIANCUT)
+        palette = [0, 0, 0] + quantized.getpalette()[:765]
+        quantized = quantized.point(lambda index: index + 1)
+        quantized.putpalette(palette)
+        transparent = im.getchannel("A").point(lambda alpha: 255 if alpha < 128 else 0)
+        quantized.paste(0, mask=transparent)
+        frames.append(quantized)
+    frames[0].save(ASSETS/f"hello{suffix}.gif",save_all=True,append_images=frames[1:],duration=80,loop=0,optimize=False,disposal=2,transparency=0,background=0)
 
 
 def clip(name):
@@ -73,6 +90,7 @@ def clip(name):
 
 if __name__ == "__main__":
     hero()
+    hero(dark=False)
     with ThreadPoolExecutor(max_workers=4) as pool:
         list(pool.map(clip,["carbon","forge","atrium","inspirations"]))
     for path in sorted(ASSETS.glob("*.gif")):
