@@ -67,7 +67,7 @@ def hero(dark=True):
             size=1.1+max(0,depth)*1.3
             d.ellipse((x-size,y-size,x+size,y+size),fill=color)
         if frame == 0:
-            im.save(ASSETS/f"hello{suffix}.png")
+            im.save(ASSETS/f"header-no-divider{suffix}.png")
         # Reserve index zero for transparency in every frame. Disposal=2 clears
         # the previous sculpture before drawing its next pose on the page.
         quantized = im.convert("RGB").quantize(colors=95, method=Image.Quantize.MEDIANCUT)
@@ -77,7 +77,7 @@ def hero(dark=True):
         transparent = im.getchannel("A").point(lambda alpha: 255 if alpha < 128 else 0)
         quantized.paste(0, mask=transparent)
         frames.append(quantized)
-    frames[0].save(ASSETS/f"hello{suffix}.gif",save_all=True,append_images=frames[1:],duration=80,loop=0,optimize=False,disposal=2,transparency=0,background=0)
+    frames[0].save(ASSETS/f"header-no-divider{suffix}.gif",save_all=True,append_images=frames[1:],duration=80,loop=0,optimize=False,disposal=2,transparency=0,background=0)
 
 
 def clip(name):

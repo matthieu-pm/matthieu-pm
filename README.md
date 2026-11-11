@@ -1,7 +1,7 @@
 <a href="https://matthieu.pm">
   <picture>
-    <source media="(prefers-color-scheme: light)" srcset="docs/profile/hello-light.gif" />
-    <img src="docs/profile/hello.gif" alt="Matthieu Duchatellier — I love building AI products. Product Manager / Design Engineer. An animated blue point-cloud sculpture rotates beside the introduction." width="100%" />
+    <source media="(prefers-color-scheme: light)" srcset="docs/profile/header-no-divider-light.gif" />
+    <img src="docs/profile/header-no-divider.gif" alt="Matthieu Duchatellier — I love building AI products. Product Manager / Design Engineer. An animated blue point-cloud sculpture rotates beside the introduction." width="100%" />
   </picture>
 </a>
 
