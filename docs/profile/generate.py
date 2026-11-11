@@ -35,7 +35,6 @@ def hero(dark=True):
         d.text((42, 88), "I love building", font=ImageFont.truetype(BOLD, 62), fill=ink)
         d.text((39, 157), "AI products.", font=ImageFont.truetype(BOLD, 78), fill=ink)
         d.text((44, 262), "Product Manager  /  Design Engineer", font=ImageFont.truetype(FONT, 23), fill=muted)
-        d.line((42, 321, 1157, 321), fill="#30363d" if dark else "#deddd6", width=1)
         label = "PRODUCT THINKING.  DESIGN CRAFT.  CODE."
         label_font = ImageFont.truetype(MONO, 13)
         label_bounds = d.textbbox((0, 0), label, font=label_font)
