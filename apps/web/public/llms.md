@@ -26,7 +26,7 @@ Content-Signal: search=yes, ai-input=yes, ai-train=yes
 - [Atlas](https://atlasapp.fr): Prepare your exams with AI-powered MCQs.
 - [Atrium](https://atriumcrm.com/): Revenue teams meet agentic CRM workflows.
 - [Carbon](https://carbonhq.sh): A desktop home for your coding agents.
-- [Forge](https://app.forgenow.tech/): An agentic issue tracking workspace.
+- [Forge](https://forgenow.tech/): An agentic issue tracking workspace.
 - [Researchie](https://survey.matthieu-pm.chatgpt.site): Agentic research forms, implemented as a versioned conversational questionnaire.
 
 ## Design resources

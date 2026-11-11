@@ -102,7 +102,7 @@ const structuredData = {
       worksFor: {
         "@type": "Organization",
         name: "Forge",
-        url: "https://app.forgenow.tech/",
+        url: "https://forgenow.tech/",
       },
       knowsAbout: [
         "Product management",

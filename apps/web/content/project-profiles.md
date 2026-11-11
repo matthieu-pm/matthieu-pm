@@ -123,7 +123,7 @@ Release status and boundaries matter: the repository records a macOS beta releas
 
 ## Forge
 
-Website: https://app.forgenow.tech/
+Website: https://forgenow.tech/
 
 ### Product and audience
 

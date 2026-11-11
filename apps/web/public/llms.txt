@@ -52,7 +52,7 @@ You can reach me at [**@matthieu\_pm**](<https://x.com/matthieu_pm>) or via ** e
 -   [**Atlas** ~ Prepare your exams with AI-powered MCQs](<https://atlasapp.fr/>)
 -   [**Atrium** ~ Revenue teams meet agentic CRM workflows](<https://atriumcrm.com/>)
 -   [**Carbon** ~ A desktop home for your coding agents](<https://carbonhq.sh/>)
--   [**Forge** ~ An agentic issue tracking workspace](<https://app.forgenow.tech/>)
+-   [**Forge** ~ An agentic issue tracking workspace](<https://forgenow.tech/>)
 -   [**Researchie** ~ Agentic research forms](<https://survey.matthieu-pm.chatgpt.site/>)
 
 ## Skills for agents
@@ -1924,7 +1924,7 @@ Release status and boundaries matter: the repository records a macOS beta releas
 
 ## Forge
 
-Website: https://app.forgenow.tech/
+Website: https://forgenow.tech/
 
 ### Product and audience
 

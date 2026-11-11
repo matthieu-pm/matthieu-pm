@@ -56,7 +56,7 @@ const projects: {
   {
     name: "Forge",
     description: "An agentic issue tracking workspace",
-    href: "https://app.forgenow.tech/",
+    href: "https://forgenow.tech/",
     logo: "/logos/forge.svg",
     video: "/videos/forge.mp4?v=6",
     stack: ["tanstack", "neon", "typescript"],
