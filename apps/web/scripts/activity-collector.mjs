@@ -18,11 +18,34 @@ import process from "node:process"
 import { createInterface } from "node:readline"
 import { DatabaseSync } from "node:sqlite"
 import { fileURLToPath } from "node:url"
-import { promisify } from "node:util"
+import { parseEnv, promisify } from "node:util"
 import ts from "typescript"
 import { activityDetailsSchema } from "../lib/activity-details.ts"
 
 const run = promisify(execFile)
+
+export async function uploadEnvironment(envFile, env = process.env) {
+  let token = env.BLOB_READ_WRITE_TOKEN
+  if (!token) {
+    try {
+      token = parseEnv(await readFile(envFile, "utf8")).BLOB_READ_WRITE_TOKEN
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error
+    }
+  }
+  if (!token)
+    throw new Error(
+      "Activity uploads require BLOB_READ_WRITE_TOKEN in the environment or project .env.local"
+    )
+  // A process-level RW token prevents the CLI from selecting expired .env.local OIDC credentials.
+  return {
+    ...env,
+    BLOB_READ_WRITE_TOKEN: token,
+    VERCEL_OIDC_TOKEN: "",
+    BLOB_STORE_ID: "",
+  }
+}
+
 const home = homedir()
 const webRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..")
 const projectRoot = resolve(webRoot, "../..")
@@ -546,7 +569,7 @@ async function main() {
         ],
         {
           cwd: projectRoot,
-          env: { ...process.env, VERCEL_OIDC_TOKEN: "", BLOB_STORE_ID: "" },
+          env: await uploadEnvironment(join(projectRoot, ".env.local")),
           timeout: 60000,
           maxBuffer: 1024 * 1024,
         }

@@ -8,8 +8,44 @@ import {
   extractPatchCount,
   parseGitLog,
   readAIFile,
+  uploadEnvironment,
   weekKey,
 } from "./activity-collector.mjs"
+
+test("background uploads use the persistent token despite expired local OIDC credentials", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "activity-upload-test-"))
+  const envFile = join(directory, ".env.local")
+  try {
+    await writeFile(
+      envFile,
+      'BLOB_READ_WRITE_TOKEN="persistent-token"\nVERCEL_OIDC_TOKEN="expired-token"\nBLOB_STORE_ID="store_activity"\n'
+    )
+    const env = await uploadEnvironment(envFile, { PATH: "/usr/bin" })
+    assert.equal(env.BLOB_READ_WRITE_TOKEN, "persistent-token")
+    assert.equal(env.VERCEL_OIDC_TOKEN, "")
+    assert.equal(env.BLOB_STORE_ID, "")
+    assert.equal(env.PATH, "/usr/bin")
+    const override = await uploadEnvironment(envFile, {
+      BLOB_READ_WRITE_TOKEN: "environment-token",
+      VERCEL_OIDC_TOKEN: "another-expired-token",
+      BLOB_STORE_ID: "store_other",
+    })
+    assert.equal(override.BLOB_READ_WRITE_TOKEN, "environment-token")
+    assert.equal(override.VERCEL_OIDC_TOKEN, "")
+    assert.equal(override.BLOB_STORE_ID, "")
+    await writeFile(envFile, 'VERCEL_OIDC_TOKEN="expired-token"\n')
+    await assert.rejects(uploadEnvironment(envFile, {}), /BLOB_READ_WRITE_TOKEN/)
+    await rm(envFile)
+    assert.equal(
+      (await uploadEnvironment(envFile, { BLOB_READ_WRITE_TOKEN: "provided" }))
+        .BLOB_READ_WRITE_TOKEN,
+      "provided"
+    )
+    await assert.rejects(uploadEnvironment(envFile, {}), /BLOB_READ_WRITE_TOKEN/)
+  } finally {
+    await rm(directory, { recursive: true, force: true })
+  }
+})
 
 test("uses Paris calendar weeks, including Sunday night and year boundaries", () => {
   assert.equal(weekKey("2026-11-07T23:30:00Z"), "2026-11-08")
