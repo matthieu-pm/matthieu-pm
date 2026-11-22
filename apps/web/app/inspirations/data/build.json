@@ -18,6 +18,13 @@
         "preview": null
       },
       {
+        "description": "Desktop workspace for running coding agents and reviewing their changes.",
+        "href": "https://carbonhq.sh/",
+        "icon": "/logos/carbon.svg",
+        "name": "Carbon",
+        "preview": "/inspirations/catalogues/carbon-preview.webp"
+      },
+      {
         "description": "AI-first code editor for rapid development.",
         "href": "https://cursor.com/",
         "icon": "/inspirations/catalogues/8162672184c6cd7b.webp",

@@ -314,6 +314,7 @@ Interface design canvases, tokens, and layout systems.
 
 - [Figma](<https://figma.com/>): Collaborative interface design and prototyping platform.
 - [Paper](<https://paper.design/>): HTML and CSS design canvas with AI agent integration.
+- [Carbon](<https://carbonhq.sh/>): Visual workspace for designing interfaces alongside coding agents.
 - [Framer](<https://framer.com/>): Visual canvas designing and publishing websites.
 - [make.design](<https://make.design/>): AI generator turning prompts into polished designs.
 - [Penpot](<https://penpot.app/>): Open-source web design platform supporting SVG.
@@ -587,6 +588,7 @@ Modern code editors, runtimes, and local tooling.
 
 - [Claude Code](<https://claude.com/claude-code>): Agentic coding tool inside your terminal.
 - [Codex](<https://openai.com/codex/>): OpenAI coding agent for building, debugging, and reviewing code.
+- [Carbon](<https://carbonhq.sh/>): Desktop workspace for running coding agents and reviewing their changes.
 - [Cursor](<https://cursor.com/>): AI-first code editor for rapid development.
 - [Zed](<https://zed.dev/>): High-performance code editor built for low latency.
 - [v0](<https://v0.app/>): Generative AI translating prompts into shadcn code.

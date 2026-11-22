@@ -641,6 +641,13 @@
         "preview": "/inspirations/catalogues/paper-preview.webp"
       },
       {
+        "description": "Visual workspace for designing interfaces alongside coding agents.",
+        "href": "https://carbonhq.sh/",
+        "icon": "/logos/carbon.svg",
+        "name": "Carbon",
+        "preview": "/inspirations/catalogues/carbon-preview.webp"
+      },
+      {
         "description": "Visual canvas designing and publishing websites.",
         "href": "https://framer.com/",
         "icon": "/inspirations/68c270cc7fd0ce0e.png",
