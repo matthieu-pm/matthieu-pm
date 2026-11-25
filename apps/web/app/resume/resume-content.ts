@@ -52,7 +52,7 @@ export const education: ResumeEntry[] = [
     subtitle: "MSc Product Management & UX Design",
     date: "2025 – 2027",
     logos: ["/logos/skema-shield.webp", "/logos/polimi.webp"],
-    tags: ["Product Management", "UX Design"],
+    tags: [],
     details: [],
   },
   {
@@ -60,7 +60,7 @@ export const education: ResumeEntry[] = [
     subtitle: "DESMI · Specialized Degree in International Management",
     date: "2025 – 2027",
     logos: ["/logos/skema-shield.webp", "/logos/soochow.webp"],
-    tags: ["International Management"],
+    tags: [],
     details: [],
   },
   {
@@ -68,7 +68,7 @@ export const education: ResumeEntry[] = [
     subtitle: "Bachelor’s in Digital Project Management",
     date: "2021 – 2024",
     logos: ["/logos/iim-digital-school.webp"],
-    tags: ["Digital Project Management"],
+    tags: [],
     details: [],
   },
 ]
