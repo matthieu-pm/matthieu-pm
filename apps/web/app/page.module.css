@@ -5,9 +5,6 @@
   --faint: var(--site-line);
   --soft: var(--site-soft);
   --section-gap: 32px;
-  --font-weight-body: 300;
-  --font-weight-medium: 350;
-  --font-weight-bold: 400;
   --sky-height: 170px;
   --sky-end: calc(var(--sky-height) + 64px);
 

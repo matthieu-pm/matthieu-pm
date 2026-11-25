@@ -1,5 +1,8 @@
 :root {
   color-scheme: light;
+  --font-weight-body: 300;
+  --font-weight-medium: 350;
+  --font-weight-bold: 400;
   --site-canvas: #fcfcfc;
   --site-ink: #1f1f1f;
   --site-muted: #6b6b6b;

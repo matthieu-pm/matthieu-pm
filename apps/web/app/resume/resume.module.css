@@ -8,10 +8,10 @@
   padding-inline: 24px;
   background: var(--site-canvas);
   color: var(--site-ink);
-  font:
-    15px/1.55 var(--font-sans),
-    system-ui,
-    sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: var(--font-weight-body);
+  line-height: 1.55;
 }
 
 :global(.dark) .page {
@@ -59,7 +59,7 @@
 
 .back {
   justify-self: start;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   text-decoration: none;
 }
 
@@ -91,7 +91,7 @@
   padding: 5px 9px;
   border: 1px solid var(--site-line);
   background: var(--site-surface);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   text-decoration: none;
   white-space: nowrap;
 }
@@ -128,7 +128,7 @@
 .identity h1,
 .section h2 {
   margin: 0;
-  font-weight: 570;
+  font-weight: var(--font-weight-medium);
   letter-spacing: -0.045em;
   line-height: 1.08;
 }
@@ -163,6 +163,10 @@
 .projectLink {
   color: var(--accent);
   text-decoration-color: color-mix(in srgb, var(--accent) 42%, transparent);
+}
+
+.contact a {
+  font-weight: var(--font-weight-bold);
 }
 
 .contact a:hover,
@@ -283,7 +287,7 @@ summary.rowHeading:hover {
 
 .rowTitle {
   font-size: 17px;
-  font-weight: 550;
+  font-weight: var(--font-weight-medium);
   letter-spacing: -0.018em;
   line-height: 1.32;
 }
@@ -359,6 +363,7 @@ summary.rowHeading:hover {
 .projectLink {
   margin-top: 9px;
   font-size: 13px;
+  font-weight: var(--font-weight-medium);
 }
 
 .certifications {
@@ -368,7 +373,7 @@ summary.rowHeading:hover {
 .certifications h3 {
   margin: 0 0 8px;
   font-size: 15px;
-  font-weight: 550;
+  font-weight: var(--font-weight-medium);
 }
 
 .certifications ul {
