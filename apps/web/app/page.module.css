@@ -68,6 +68,20 @@
   min-width: 0;
 }
 
+.resumeLink {
+  flex: 0 0 auto;
+  padding-block: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration-color: var(--faint);
+  text-underline-offset: 3px;
+}
+
+.resumeLink:hover {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+}
+
 .identity h1 {
   font-size: 16px;
   font-weight: var(--font-weight-medium);

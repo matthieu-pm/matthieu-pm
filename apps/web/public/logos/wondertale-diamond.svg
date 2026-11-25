@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="62 53 1712 1230">
+  <defs>
+    <mask id="facets">
+      <rect x="62" y="53" width="1712" height="1230" fill="#fff" />
+      <path d="M294 183 600 573 918 306 1236 573 1541 183 M62 503 600 573 918 1282 1236 573 1774 503" fill="none" stroke="#000" stroke-width="9" stroke-linejoin="round" />
+    </mask>
+  </defs>
+  <path d="M64 492 294 183C350 89 393 77 490 69 691 51 1145 47 1344 65 1442 73 1486 89 1541 183L1770 484C1778 496 1773 511 1763 521L1013 1233C962 1281 948 1282 918 1282S873 1281 824 1234L73 521C64 512 60 503 64 492Z" fill="#1e48eb" mask="url(#facets)" />
+</svg>

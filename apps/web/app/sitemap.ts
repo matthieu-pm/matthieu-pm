@@ -7,6 +7,11 @@ import { publishedContent } from "@/lib/site-content"
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
+      url: `${siteConfig.url}/resume`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${siteConfig.url}/archive/building-day-by-day`,
       changeFrequency: "daily",
       priority: 0.6,
