@@ -69,12 +69,10 @@ function LogoTile({ src }: { src: string }) {
 function ResumeRow({
   entry,
   symbol,
-  open,
   children,
 }: {
   entry: ResumeEntry
   symbol?: ReactNode
-  open?: boolean
   children?: ReactNode
 }) {
   const heading = (
@@ -107,7 +105,7 @@ function ResumeRow({
   }
 
   return (
-    <details className={styles.row} open={open}>
+    <details className={styles.row} open>
       <summary className={styles.rowHeading}>
         {heading}
         <HugeiconsIcon
@@ -227,8 +225,8 @@ export default function ResumePage() {
           aria-labelledby="work-title"
         >
           <h2 id="work-title">Experience</h2>
-          {experience.map((entry, index) => (
-            <ResumeRow key={entry.title} entry={entry} open={index === 0} />
+          {experience.map((entry) => (
+            <ResumeRow key={entry.title} entry={entry} />
           ))}
         </section>
 
@@ -250,7 +248,6 @@ export default function ResumePage() {
                 ),
                 details: projectHighlights[project.name] ?? [],
               }}
-              open
               symbol={
                 !project.logo && (
                   <InspirationsOrb
