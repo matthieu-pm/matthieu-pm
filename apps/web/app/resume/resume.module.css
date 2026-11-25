@@ -396,10 +396,45 @@ summary.rowHeading:hover {
   margin-left: 4px;
 }
 
+.stackList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 2px;
+  margin: 0;
+  padding: 12px var(--gutter);
+  list-style: none;
+}
+
+.stackLink {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 6px;
+}
+
+.stackLink:hover {
+  background: var(--site-soft);
+}
+
+.stackIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+:global(.dark) .stackIcon:is(
+    [src^="/logos/technologies/"],
+    [src="/logos/github.svg"]
+  ) {
+  filter: invert(1);
+}
+
 .footer {
   display: flex;
   justify-content: flex-end;
   padding: 16px var(--gutter) 28px;
+  border-top: 1px solid var(--site-line);
   color: var(--site-muted);
   font-size: 13px;
 }

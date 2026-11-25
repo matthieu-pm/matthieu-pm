@@ -12,6 +12,7 @@ import Link from "next/link"
 import type { ReactNode } from "react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { projects, technologies } from "@/lib/portfolio-projects"
+import stack from "../inspirations/data/stack.json"
 import { InspirationsOrb } from "../inspirations/inspirations-orb"
 import { siteConfig } from "../site-config"
 import {
@@ -43,8 +44,9 @@ export const metadata: Metadata = {
 
 const sections = [
   { id: "experience", title: "Experience" },
-  { id: "education", title: "Education" },
   { id: "projects", title: "Projects" },
+  { id: "stack", title: "Stack" },
+  { id: "education", title: "Education" },
 ]
 
 function LogoTile({ src }: { src: string }) {
@@ -137,7 +139,7 @@ export default function ResumePage() {
               size={17}
               aria-hidden="true"
             />
-            Portfolio
+            Back
           </Link>
           <nav className={styles.sectionNav} aria-label="Résumé sections">
             {sections.map(({ id, title }) => (
@@ -230,31 +232,6 @@ export default function ResumePage() {
         </section>
 
         <section
-          className={`${styles.section} ${styles.education}`}
-          id="education"
-          aria-labelledby="education-title"
-        >
-          <h2 id="education-title">Education</h2>
-          {education.map((entry) => (
-            <ResumeRow key={entry.title} entry={entry} />
-          ))}
-          <div className={styles.certifications}>
-            <h3>Certifications</h3>
-            <ul>
-              {certifications.map(({ title, issuer, date, logo }) => (
-                <li key={title}>
-                  <LogoTile src={logo} />
-                  <span>
-                    {title} <span className={styles.issuer}>{issuer}</span>
-                  </span>
-                  <time dateTime={date}>{date}</time>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        <section
           className={styles.section}
           id="projects"
           aria-labelledby="project-title"
@@ -293,6 +270,60 @@ export default function ResumePage() {
               </Link>
             </ResumeRow>
           ))}
+        </section>
+
+        <section
+          className={styles.section}
+          id="stack"
+          aria-labelledby="stack-title"
+        >
+          <h2 id="stack-title">My stack</h2>
+          <ul className={styles.stackList}>
+            {stack.map(({ href, icon, name }) => (
+              <li key={href}>
+                <a
+                  className={styles.stackLink}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  title={name}
+                >
+                  <Image
+                    className={styles.stackIcon}
+                    src={icon}
+                    alt={name}
+                    width={24}
+                    height={24}
+                  />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section
+          className={`${styles.section} ${styles.education}`}
+          id="education"
+          aria-labelledby="education-title"
+        >
+          <h2 id="education-title">Education</h2>
+          {education.map((entry) => (
+            <ResumeRow key={entry.title} entry={entry} />
+          ))}
+          <div className={styles.certifications}>
+            <h3>Certifications</h3>
+            <ul>
+              {certifications.map(({ title, issuer, date, logo }) => (
+                <li key={title}>
+                  <LogoTile src={logo} />
+                  <span>
+                    {title} <span className={styles.issuer}>{issuer}</span>
+                  </span>
+                  <time dateTime={date}>{date}</time>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
 
         <footer className={styles.footer}>

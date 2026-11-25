@@ -56,11 +56,11 @@
     "preview": "/inspirations/catalogues/2ce8d32185df2fb7.webp"
   },
   {
-    "name": "GitLab",
+    "name": "GitHub",
     "description": "Git repositories, code review, and continuous integration.",
-    "href": "https://about.gitlab.com/",
-    "icon": "/logos/gitlab.svg",
-    "preview": "/inspirations/stack/gitlab-preview.webp"
+    "href": "https://github.com/",
+    "icon": "/logos/github.svg",
+    "preview": null
   },
   {
     "name": "Bun",
