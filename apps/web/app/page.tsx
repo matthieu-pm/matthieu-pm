@@ -5,6 +5,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { ActivityBarSkeleton } from "./activity-bar"
 import { CodingActivity } from "./coding-activity"
 import { EmailCopy } from "./email-copy"
+import { HeroSky } from "./hero-sky"
 import { InspirationsOrb } from "./inspirations/inspirations-orb"
 import { ProjectVideoLink } from "./project-video-link"
 import styles from "./page.module.css"
@@ -97,6 +98,7 @@ const articles = [
 export default function Page() {
   return (
     <main className={styles.page}>
+      <HeroSky />
       <header className={styles.identity}>
         <div className={styles.avatar}>
           <Image

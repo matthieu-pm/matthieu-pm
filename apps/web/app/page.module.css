@@ -8,7 +8,10 @@
   --font-weight-body: 300;
   --font-weight-medium: 350;
   --font-weight-bold: 400;
+  --sky-height: clamp(260px, 29vw, 360px);
 
+  position: relative;
+  isolation: isolate;
   min-height: 100svh;
   background: var(--paper);
   color: var(--ink);
@@ -16,12 +19,46 @@
   font-size: 15px;
   font-weight: var(--font-weight-body);
   line-height: 1.5;
-  padding: 48px 24px 96px;
+  padding: calc(var(--sky-height) + 24px) 24px 96px;
 }
 
-.page > * {
+.page > :not(.heroSky) {
   width: min(100%, 644px);
   margin-inline: auto;
+}
+
+.heroSky {
+  --sky-fade-height: 80px;
+
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 auto;
+  height: calc(var(--sky-height) + var(--sky-fade-height));
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 75% 22%, #bde5f8 0%, transparent 60%),
+    linear-gradient(158deg, #79bce5, #a8d9f3 57%, #dfedf8);
+  mask-image: linear-gradient(
+    to bottom,
+    #000 calc(var(--sky-height) - 100px),
+    rgb(0 0 0 / 28%) calc(var(--sky-height) - 28px),
+    rgb(0 0 0 / 5%) var(--sky-height),
+    transparent 100%
+  );
+}
+
+:global(.dark) .heroSky {
+  background:
+    radial-gradient(ellipse at 76% 25%, #213a59 0%, transparent 58%),
+    linear-gradient(156deg, #111e36, #18314d 60%, #1a293c);
+}
+
+.heroSky canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .identity {
@@ -577,8 +614,9 @@
 
   .page {
     --section-gap: 32px;
+    --sky-height: clamp(185px, 59vw, 240px);
 
-    padding: 24px 24px 48px;
+    padding-bottom: 48px;
   }
 
   .projectRow {
