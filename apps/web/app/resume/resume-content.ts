@@ -16,9 +16,9 @@ export const experience: ResumeEntry[] = [
     logos: ["/logos/wondertale-diamond.svg"],
     tags: ["Product Design", "Client Delivery", "UX Research"],
     details: [
-      "Managed 14 client projects in Linear, with 98% delivered on time.",
-      "Designed CMS-backed websites in Webflow and Framer that increased conversion rates by 29%.",
-      "Collected customer feedback and wrote documentation for post-launch support.",
+      "Helped clients bring in $3M in combined revenue and funding through conversion-focused websites and app prototypes.",
+      "Conducted user research that informed changes and helped lift overall NPS by 2.4 points.",
+      "Partnered with clients’ product, marketing, and engineering teams on design and delivery.",
     ],
   },
   {
