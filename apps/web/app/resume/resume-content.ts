@@ -44,6 +44,17 @@ export const experience: ResumeEntry[] = [
       "Led visual identity and website design for the launch of the Ernestine subsidiary.",
     ],
   },
+  {
+    title: "LDV Esport",
+    subtitle: "Head Coach",
+    date: "Sep 2021 – Sep 2024",
+    logos: ["/logos/ldv-esport.webp"],
+    tags: [],
+    details: [
+      "Won three university championships with the League of Legends team from 2022 to 2024.",
+      "Led player recruitment and coaching for the League of Legends division.",
+    ],
+  },
 ]
 
 export const education: ResumeEntry[] = [

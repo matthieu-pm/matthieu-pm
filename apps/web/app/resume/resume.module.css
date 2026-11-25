@@ -262,6 +262,10 @@ summary.rowHeading:hover {
   object-fit: contain;
 }
 
+.brandLogo[src*="ldv-esport.webp"] {
+  border-radius: 50%;
+}
+
 :global(.dark) .brandLogo:is(
     [src$="/atrium.svg"],
     [src$="/carbon.svg"],
