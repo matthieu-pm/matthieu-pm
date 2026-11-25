@@ -35,8 +35,10 @@
   pointer-events: none;
   mask-image: linear-gradient(
     to bottom,
-    #000 calc(var(--sky-height) - 60px),
-    rgb(0 0 0 / 13%) calc(var(--sky-height) + 24px),
+    #000 calc(var(--sky-height) - 88px),
+    rgb(0 0 0 / 66%) calc(var(--sky-height) - 32px),
+    rgb(0 0 0 / 18%) calc(var(--sky-height) + 16px),
+    rgb(0 0 0 / 5%) calc(var(--sky-height) + 40px),
     transparent var(--sky-end)
   );
 }
