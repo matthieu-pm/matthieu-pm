@@ -8,7 +8,8 @@
   --font-weight-body: 300;
   --font-weight-medium: 350;
   --font-weight-bold: 400;
-  --sky-height: 240px;
+  --sky-height: 170px;
+  --sky-end: calc(var(--sky-height) + 64px);
 
   position: relative;
   isolation: isolate;
@@ -19,7 +20,7 @@
   font-size: 15px;
   font-weight: var(--font-weight-body);
   line-height: 1.5;
-  padding: calc(var(--sky-height) + 24px) 24px 96px;
+  padding: calc(var(--sky-end) + 16px) 24px 96px;
 }
 
 .page > :not(.heroSky) {
@@ -35,14 +36,14 @@
   mask-image: linear-gradient(
     to bottom,
     #000 calc(var(--sky-height) - 60px),
-    rgb(0 0 0 / 13%) calc(var(--sky-height) + 40px),
-    transparent calc(var(--sky-height) + 80px)
+    rgb(0 0 0 / 13%) calc(var(--sky-height) + 24px),
+    transparent var(--sky-end)
   );
 }
 
 @media (min-width: 768px) {
   .page {
-    --sky-height: 360px;
+    --sky-height: 270px;
   }
 }
 
