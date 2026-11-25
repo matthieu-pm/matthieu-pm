@@ -412,7 +412,7 @@ summary.rowHeading:hover {
 
 .stackLink {
   display: grid;
-  width: 36px;
+  width: 34px;
   height: 36px;
   place-items: center;
   border-radius: 6px;
@@ -430,7 +430,8 @@ summary.rowHeading:hover {
 
 :global(.dark) .stackIcon:is(
     [src^="/logos/technologies/"],
-    [src="/logos/github.svg"]
+    [src="/logos/github.svg"],
+    [src*="attio-icon.webp"]
   ) {
   filter: invert(1);
 }

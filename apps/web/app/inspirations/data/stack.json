@@ -42,9 +42,23 @@
     "preview": "/inspirations/catalogues/cd158c9610f21373.webp"
   },
   {
+    "name": "Clay",
+    "description": "Data enrichment and workflow automation for go-to-market teams.",
+    "href": "https://www.clay.com/",
+    "icon": "/inspirations/stack/clay-icon.webp",
+    "preview": null
+  },
+  {
+    "name": "Attio",
+    "description": "A CRM for managing customer relationships and revenue workflows.",
+    "href": "https://attio.com/",
+    "icon": "/inspirations/stack/attio-icon.webp",
+    "preview": null
+  },
+  {
     "description": "OpenAI coding agent for building, debugging, and reviewing code.",
     "href": "https://openai.com/codex/",
-    "icon": "/inspirations/catalogues/codex-icon.webp",
+    "icon": "/inspirations/stack/codex-app-icon.webp",
     "name": "Codex",
     "preview": "/inspirations/stack/codex-preview.webp"
   },
@@ -146,7 +160,7 @@
     "name": "Notion",
     "description": "A workspace for notes, documents, and projects.",
     "href": "https://www.notion.com/",
-    "icon": "/inspirations/stack/notion-icon.webp",
+    "icon": "/logos/notion.svg",
     "preview": "/inspirations/stack/notion-preview.webp"
   }
 ]

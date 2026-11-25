@@ -50,7 +50,7 @@ const sections = [
   { id: "education", title: "Education" },
 ]
 
-const resumeStack = stack.filter(({ name }) => name !== "Codex")
+const resumeStack = stack.filter(({ name }) => name !== "tldraw")
 
 function LogoTile({ src }: { src: string }) {
   return (
