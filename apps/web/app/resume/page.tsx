@@ -5,6 +5,7 @@ import {
   Download01Icon,
 } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
+import { GeistMono } from "geist/font/mono"
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -127,7 +128,7 @@ function ResumeRow({
 
 export default function ResumePage() {
   return (
-    <main className={styles.page} id="top">
+    <main className={`${styles.page} ${GeistMono.variable}`} id="top">
       <div className={styles.frame}>
         <header className={styles.topbar}>
           <Link className={styles.back} href="/">

@@ -262,10 +262,6 @@ summary.rowHeading:hover {
   object-fit: contain;
 }
 
-.brandLogo[src*="iim-digital-school.webp"] {
-  object-view-box: inset(8% 16% 11% 3%);
-}
-
 :global(.dark) .brandLogo:is(
     [src$="/atrium.svg"],
     [src$="/carbon.svg"],
@@ -301,7 +297,7 @@ summary.rowHeading:hover {
 .date,
 .tags,
 .certifications time {
-  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-family: var(--font-geist-mono, monospace);
   font-size: 12px;
 }
 

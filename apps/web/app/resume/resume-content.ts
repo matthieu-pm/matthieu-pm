@@ -67,7 +67,7 @@ export const education: ResumeEntry[] = [
     title: "IIM Digital School",
     subtitle: "Bachelor’s in Digital Project Management",
     date: "2021 – 2024",
-    logos: ["/logos/iim-digital-school.webp"],
+    logos: ["/logos/iim-de-vinci.webp"],
     tags: [],
     details: [],
   },
