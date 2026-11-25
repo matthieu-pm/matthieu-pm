@@ -1,0 +1,40 @@
+export declare const MOST_PUSH = 70;
+type Gust = Readonly<{
+    x: number;
+    y: number;
+    age: number;
+    lanes: Float64Array;
+}>;
+type Pointer = Readonly<{
+    x: number;
+    y: number;
+    t: number;
+    on: boolean;
+}>;
+export type Air = {
+    readonly columns: number;
+    readonly rows: number;
+    readonly cellWidth: number;
+    readonly cellHeight: number;
+    readonly vx: Float32Array;
+    readonly vy: Float32Array;
+    readonly dx: Float32Array;
+    readonly dy: Float32Array;
+    readonly glow: Float32Array;
+    readonly spare: Float32Array;
+    pointer: Pointer;
+    gusts: readonly Gust[];
+    puffs: number;
+    stirred: boolean;
+    lively: boolean;
+};
+export declare const createAir: (columns: number, rows: number, cellWidth: number, cellHeight: number) => Air;
+export declare const fitAir: (air: Air, columns: number, rows: number, cellWidth: number, cellHeight: number) => Air;
+export declare const blow: (air: Air, x: number, y: number, t: number) => void;
+export declare const calm: (air: Air) => void;
+export declare const puff: (air: Air, x: number, y: number) => void;
+export declare const lanesOf: (seed: number) => Float64Array;
+export declare const laneAt: (lanes: Float64Array, angle: number) => number;
+export declare const stepAir: (air: Air, dt: number) => void;
+export declare const isSeenAt: (air: Air, k: number) => boolean;
+export {};

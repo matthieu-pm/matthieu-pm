@@ -1,0 +1,80 @@
+import { type Air } from "./air.ts";
+import { type Look, type SkyCells, type SkyTheme } from "./cells.ts";
+export declare const sine: (a: number) => number;
+export type Grid = Readonly<{
+    width: number;
+    height: number;
+    dpr: number;
+    pixelWidth: number;
+    pixelHeight: number;
+    cellWidth: number;
+    cellHeight: number;
+    columns: number;
+    rows: number;
+    originX: number;
+    skyOffset: number;
+    columnLeft: Int32Array;
+    columnWidth: Int32Array;
+    rowTop: Int32Array;
+    rowHeight: Int32Array;
+    faintFrom: number;
+    faintRow: number;
+}>;
+export type CellSize = Readonly<{
+    width: number;
+    height: number;
+}>;
+export declare const layoutGrid: (width: number, height: number, dpr: number, skyWidth: number, cell: CellSize, faintFrom: number) => Grid;
+export declare const TURNS = 3;
+export declare const EVERY_ROW = -1;
+export declare const UNDRAWN = -2;
+export type Stars = Readonly<{
+    stars: number;
+    star: readonly number[];
+    glow: readonly number[];
+    sparkle: boolean;
+}>;
+export declare const NIGHT: Stars;
+export declare const NO_STARS: Stars;
+export declare const isStarAt: (column: number, row: number, share: number) => boolean;
+export declare const TICK = 0.09;
+export declare const MOST: {
+    big: number;
+    small: number;
+};
+export declare const TINTS: (readonly [number, number, number])[];
+type Step = readonly (readonly [number, number, number])[];
+type Sparkle = Readonly<{
+    steps: readonly Step[];
+    age: number;
+    column: number;
+    row: number;
+    tint: number;
+}>;
+export type Sparkles = {
+    readonly columns: number;
+    readonly rows: number;
+    readonly code: Int16Array;
+    readonly tint: Uint8Array;
+    readonly touched: Uint8Array;
+    readonly touchedRows: Uint8Array;
+    pool: readonly Sparkle[];
+    owed: number;
+};
+export declare const createSparkles: (columns: number, rows: number) => Sparkles;
+export declare const stepSparkles: (sp: Sparkles, dt: number, rows: number, isStar: (column: number, row: number) => boolean, random: () => number) => void;
+export type Frame = Readonly<{
+    colours: Uint8ClampedArray;
+    tiles: Uint8ClampedArray;
+    shown: Int16Array;
+    changed: Int32Array;
+    breath: Float32Array;
+    look: Look;
+    night: Stars;
+    sparkles: Sparkles | undefined;
+}>;
+export declare const breathing: (columns: number, rows: number) => Float32Array;
+export declare const createFrame: (grid: Grid, colours: Uint8ClampedArray, tiles: Uint8ClampedArray, night: Stars) => Frame;
+export declare const streak: (vx: number, vy: number, glow: number) => number;
+export declare const shadeFrame: (grid: Grid, cells: SkyCells, air: Air, frame: Frame, t: number, theme: SkyTheme, half: number, every: number, turn: number) => number;
+export {};
