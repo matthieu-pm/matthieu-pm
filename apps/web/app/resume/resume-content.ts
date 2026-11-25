@@ -12,7 +12,7 @@ export const experience: ResumeEntry[] = [
   {
     title: "Wondertale",
     subtitle: "Co-founder · Product Designer",
-    date: "Founded Oct 2024",
+    date: "Oct 2024 – Dec 2026",
     logos: ["/logos/wondertale-diamond.svg"],
     tags: ["Product Design", "Client Delivery", "UX Research"],
     details: [
