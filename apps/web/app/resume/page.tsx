@@ -181,8 +181,10 @@ export default function ResumePage() {
           </div>
           <p className={styles.intro}>
             I build AI products and work across product management, UX design,
-            and growth. I’m open to Product Manager and Design Engineer roles
-            starting June 2027.
+            and growth.
+            <br />
+            I’m open to Product Manager and Design Engineer roles starting June
+            2027.
           </p>
           <div className={styles.contact}>
             <a href="mailto:matthieu.duchatellier@gmail.com">
