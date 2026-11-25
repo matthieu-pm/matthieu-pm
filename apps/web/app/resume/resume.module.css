@@ -437,7 +437,9 @@ summary.rowHeading:hover {
 
 .footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
+  gap: 8px 16px;
   padding: 16px var(--gutter) 28px;
   border-top: 1px solid var(--site-line);
   color: var(--site-muted);

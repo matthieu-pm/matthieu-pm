@@ -27,6 +27,7 @@ import styles from "./resume.module.css"
 const title = `Résumé · ${siteConfig.name}`
 const description =
   "Experience, education, and selected projects from Matthieu Duchatellier, product manager and design engineer."
+const resumePdfPath = "/english-resume-matthieu-duchatellier.pdf"
 
 export const metadata: Metadata = {
   title,
@@ -149,11 +150,7 @@ export default function ResumePage() {
             ))}
           </nav>
           <div className={styles.topActions}>
-            <a
-              className={styles.download}
-              href="/english-resume-matthieu-duchatellier.pdf"
-              download
-            >
+            <a className={styles.download} href={resumePdfPath} download>
               <HugeiconsIcon
                 icon={Download01Icon}
                 size={17}
@@ -329,6 +326,9 @@ export default function ResumePage() {
         </section>
 
         <footer className={styles.footer}>
+          <a href={resumePdfPath} download>
+            Download résumé
+          </a>
           <a href="#top">Back to top</a>
         </footer>
       </div>
