@@ -229,7 +229,7 @@ export default function ResumePage() {
         </section>
 
         <section
-          className={styles.section}
+          className={`${styles.section} ${styles.education}`}
           id="education"
           aria-labelledby="education-title"
         >

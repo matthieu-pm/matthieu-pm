@@ -37,7 +37,7 @@ export const experience: ResumeEntry[] = [
     title: "Avico",
     subtitle: "Marketing Manager · Internship & work-study",
     date: "May 2023 – Sep 2024",
-    logos: ["/logos/avico-icon.webp"],
+    logos: ["/logos/avico-plane-cutout.webp"],
     tags: ["Content Strategy", "Social Analytics", "Web Design"],
     details: [
       "Grew Avico’s LinkedIn following by 12% and generated 240,000 impressions for Privajet.",

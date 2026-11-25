@@ -230,8 +230,15 @@ summary.rowHeading:hover {
 }
 
 .rowLogos {
+  --logo-stack-gap: 4px;
+
   display: grid;
-  gap: 4px;
+  gap: var(--logo-stack-gap);
+}
+
+.education .rowLogos {
+  min-height: calc(2 * var(--logo-tile-size) + var(--logo-stack-gap));
+  align-content: start;
 }
 
 .rowIcon {
@@ -257,10 +264,6 @@ summary.rowHeading:hover {
 
 .brandLogo[src*="iim-digital-school.webp"] {
   object-view-box: inset(8% 16% 11% 3%);
-}
-
-.brandLogo[src*="avico-icon.webp"] {
-  filter: brightness(2.2);
 }
 
 :global(.dark) .brandLogo:is(
