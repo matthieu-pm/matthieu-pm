@@ -50,6 +50,8 @@ const sections = [
   { id: "education", title: "Education" },
 ]
 
+const resumeStack = stack.filter(({ name }) => name !== "Codex")
+
 function LogoTile({ src }: { src: string }) {
   return (
     <span className={styles.rowIcon}>
@@ -278,7 +280,7 @@ export default function ResumePage() {
         >
           <h2 id="stack-title">My stack</h2>
           <ul className={styles.stackList}>
-            {stack.map(({ href, icon, name }) => (
+            {resumeStack.map(({ href, icon, name }) => (
               <li key={href}>
                 <a
                   className={styles.stackLink}
