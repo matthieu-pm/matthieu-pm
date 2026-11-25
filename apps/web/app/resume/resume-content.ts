@@ -49,7 +49,7 @@ export const experience: ResumeEntry[] = [
     subtitle: "Head Coach · Volunteer",
     date: "Sep 2021 – Sep 2024",
     logos: ["/logos/ldv-esport.webp"],
-    tags: ["Coaching", "Recruitment", "League of Legends"],
+    tags: ["Coaching", "Recruitment", "Leadership"],
     details: [
       "Won three university championships with the League of Legends team from 2022 to 2024.",
       "Led player recruitment and coaching for the League of Legends division.",
