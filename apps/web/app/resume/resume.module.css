@@ -90,11 +90,15 @@
   min-height: 36px;
   padding: 5px 9px;
   border: 1px solid var(--site-line);
-  border-radius: 5px;
   background: var(--site-surface);
   font-weight: 500;
   text-decoration: none;
   white-space: nowrap;
+}
+
+.download,
+.download:focus-visible {
+  border-radius: 8px;
 }
 
 .download:hover {
@@ -205,6 +209,10 @@
   border-bottom: 1px solid var(--site-line);
 }
 
+.section:has(+ .section) > :is(.row, .rowHeading):last-child {
+  border-bottom: 0;
+}
+
 summary.rowHeading {
   cursor: pointer;
 }
@@ -231,19 +239,37 @@ summary.rowHeading:hover {
   width: var(--logo-tile-size);
   height: var(--logo-tile-size);
   place-items: center;
-  border: 1px solid var(--site-line);
-  border-radius: 5px;
-  background: var(--site-surface);
 }
 
-.brandTile {
-  background: #fff;
+.collectionLogo {
+  translate: -0.5px 1px;
+}
+
+.collectionLogo[data-ready="true"] {
+  translate: 0 2.5px;
 }
 
 .brandLogo {
-  width: calc(var(--logo-tile-size) - 6px);
-  height: calc(var(--logo-tile-size) - 6px);
+  width: var(--logo-tile-size);
+  height: var(--logo-tile-size);
   object-fit: contain;
+}
+
+.brandLogo[src*="iim-digital-school.webp"] {
+  object-view-box: inset(8% 16% 11% 3%);
+}
+
+:global(.dark) .brandLogo[src*="avico-icon.webp"] {
+  filter: brightness(2.2);
+}
+
+:global(.dark) .brandLogo:is(
+    [src$="/atrium.svg"],
+    [src$="/carbon.svg"],
+    [src$="/forge.svg"],
+    [src$="/xllence-logo.svg"]
+  ) {
+  filter: invert(1);
 }
 
 .rowCopy,
@@ -292,7 +318,7 @@ summary.rowHeading:hover {
 .tags > span {
   padding: 1px 6px;
   border: 1px solid var(--site-line);
-  border-radius: 3px;
+  border-radius: 5px;
   background: var(--site-soft);
   line-height: 1.4;
 }
@@ -309,9 +335,8 @@ summary.rowHeading:hover {
 }
 
 .rowDetails {
-  margin: 0 var(--gutter) 15px calc(var(--gutter) + 15px);
-  padding: 0 0 0 29px;
-  border-left: 1px solid var(--site-line);
+  margin: 0 var(--gutter) 15px
+    calc(var(--gutter) + var(--logo-tile-size) + var(--logo-gap));
   font-size: 14px;
 }
 
@@ -421,11 +446,6 @@ summary.rowHeading:hover {
   .date + span {
     padding-left: 0;
     border-left: 0;
-  }
-
-  .rowDetails {
-    margin-left: calc(var(--gutter) + 14px);
-    padding-left: 24px;
   }
 }
 

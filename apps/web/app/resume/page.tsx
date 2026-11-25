@@ -48,12 +48,12 @@ const sections = [
 
 function LogoTile({ src }: { src: string }) {
   return (
-    <span className={`${styles.rowIcon} ${styles.brandTile}`}>
+    <span className={styles.rowIcon}>
       <Image
         className={styles.brandLogo}
         src={src}
-        width={26}
-        height={26}
+        width={32}
+        height={32}
         alt=""
       />
     </span>
@@ -274,7 +274,11 @@ export default function ResumePage() {
               open
               symbol={
                 !project.logo && (
-                  <InspirationsOrb size={26} interactive={false} />
+                  <InspirationsOrb
+                    className={styles.collectionLogo}
+                    size={26}
+                    interactive={false}
+                  />
                 )
               }
             >
