@@ -14,7 +14,7 @@ export const experience: ResumeEntry[] = [
     subtitle: "Co-founder · Product Designer",
     date: "Founded Oct 2024",
     logos: ["/logos/wondertale-diamond.svg"],
-    tags: ["Product Design", "Client Delivery", "Webflow", "Framer"],
+    tags: ["Product Design", "Client Delivery", "UX Research"],
     details: [
       "Managed 14 client projects in Linear, with 98% delivered on time.",
       "Designed CMS-backed websites in Webflow and Framer that increased conversion rates by 29%.",
