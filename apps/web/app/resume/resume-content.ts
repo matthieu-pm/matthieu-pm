@@ -28,9 +28,9 @@ export const experience: ResumeEntry[] = [
     logos: ["/logos/xllence-logo.svg"],
     tags: ["Growth", "SEO", "Automation", "UX Research"],
     details: [
-      "Led SEO content work across subsidiaries, generating average traffic growth of 210%.",
-      "Automated marketing tasks in Zapier to save four hours a week.",
-      "Designed an AI-assisted blog scheduling and writing workflow that saved six hours a week.",
+      "Led an SEO content initiative across subsidiaries, growing traffic by 210% on average.",
+      "Turned recurring marketing tasks into reusable Zapier workflows, saving four hours a week.",
+      "Designed an AI-assisted workflow for drafting and scheduling blog posts, saving six hours a week.",
     ],
   },
   {
