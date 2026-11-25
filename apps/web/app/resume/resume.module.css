@@ -259,7 +259,7 @@ summary.rowHeading:hover {
   object-view-box: inset(8% 16% 11% 3%);
 }
 
-:global(.dark) .brandLogo[src*="avico-icon.webp"] {
+.brandLogo[src*="avico-icon.webp"] {
   filter: brightness(2.2);
 }
 
