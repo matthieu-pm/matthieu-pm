@@ -16,7 +16,7 @@ export const experience: ResumeEntry[] = [
     logos: ["/logos/wondertale-diamond.svg"],
     tags: ["Product Design", "Client Delivery", "UX Research"],
     details: [
-      "Helped clients bring in $3M in combined revenue and funding through conversion-focused websites and app prototypes.",
+      "Helped clients bring in $3M in revenue and funding through websites and app prototypes.",
       "Conducted user research that informed changes and helped lift overall NPS by 2.4 points.",
       "Partnered with clients’ product, marketing, and engineering teams on design and delivery.",
     ],
