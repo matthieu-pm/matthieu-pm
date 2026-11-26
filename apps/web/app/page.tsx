@@ -61,9 +61,6 @@ export default function Page() {
           <h1>Matthieu Duchatellier</h1>
           <p>Product Manager · Design Engineer</p>
         </div>
-        <Link className={styles.resumeLink} href="/resume">
-          Résumé
-        </Link>
         <ThemeToggle />
       </header>
 
@@ -321,6 +318,7 @@ export default function Page() {
             >
               Medium
             </a>
+            <Link href="/resume">Résumé</Link>
             <Link href="/mcp">MCP</Link>
             <a href="/llms.txt">llms.txt</a>
           </nav>
