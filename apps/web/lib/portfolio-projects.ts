@@ -39,7 +39,7 @@ export const projects: {
     description: "A desktop home for your coding agents",
     href: "https://carbonhq.sh",
     logo: "/logos/carbon.svg",
-    video: "/videos/carbon.mp4",
+    video: "/videos/carbon.mp4?v=2",
     stack: ["rust", "typescript", "tauri"],
   },
   {
